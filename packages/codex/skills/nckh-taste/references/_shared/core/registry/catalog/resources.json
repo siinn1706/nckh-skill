@@ -163,37 +163,87 @@
       "source_kind": "copied-upstream"
     },
     {
-      "resource_id": "R-vi-wikisource-passages",
+      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
       "consumers": [
         "nckh-write",
         "nckh-taste"
       ],
-      "path": "core/profiles/resources/vi-wikisource.jsonl",
+      "copied_vs_reauthored": "normalized-with-lineage",
+      "dependency": "required",
+      "domain": "language-literary",
+      "expected_artifact": "bounded Vietnamese prose and verse passage records with parent/child source anchors",
       "format": "jsonl",
-      "reader": "scripts/search-resource.py",
+      "genre": "prose-verse-samples",
+      "limitations": [
+        "Wikisource page-level CC BY-SA terms and the underlying-work public-domain rationale remain separate jurisdiction-specific questions.",
+        "Only records with actual_passage=true are packaged; the six raw API/HTML snapshots remain in staging."
+      ],
+      "locale": "vi",
+      "path": "core/profiles/resources/vi-wikisource.jsonl",
       "producer": "bounded normalized projection of the three staged Wikisource child passage records; catalog roots are excluded",
+      "reader": "scripts/search-resource.py",
+      "release_state": "experimental-local",
       "requires": [
         "core/registry/catalog/resources.json",
         "core/profiles/resources/wikisource-rights.md"
       ],
-      "dependency": "required",
+      "resource_id": "R-vi-wikisource-passages",
+      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts",
       "source": {
-        "repository": "vi.wikisource.org",
-        "version": "oldid-179899+oldid-19383+oldid-71961",
-        "version_kind": "mediawiki-oldid",
         "as_of": "2026-10-03",
         "license": "CC-BY-SA-4.0",
         "license_kind": "owned-rights-record",
         "license_path": "core/profiles/resources/wikisource-rights.md",
-        "license_sha256": "41f9ceeda447546ec7a73b2e74b9bb4fc777c191f2a9a100239f1d65610e4fa4",
+        "license_sha256": "46dcbba2f8888ad342b0b03644888eb211dbd1d8f51d85c9b2e029ffe6482935",
+        "lineage": [
+          {
+            "kind": "source-response",
+            "locator": "https://vi.wikisource.org/w/api.php?action=parse&oldid=179899&prop=wikitext%7Ctext%7Cdisplaytitle&format=json&formatversion=2",
+            "operation": "API JSON child response selected for actual passage; markup normalized without spelling edits",
+            "sha256": "0542592b40dbcc5d70f1f7ed3048f8b66729e4850c0dcca123a0cd5984d57352"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://vi.wikisource.org/w/index.php?title=T%C3%A0i_m%E1%BA%A1ng_t%C6%B0%C6%A1ng_%C4%91%E1%BB%91%2FCu%E1%BB%91n_th%E1%BB%A9_nh%E1%BA%A5t&oldid=179899",
+            "operation": "Rendered child HTML visible-text extraction with whitespace and paragraph boundaries preserved",
+            "sha256": "4073c3e913d5433d8e553bca68bad2b53ff421add7a12196f582fc310cb0c15f"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://vi.wikisource.org/w/api.php?action=parse&oldid=19383&prop=wikitext%7Ctext%7Cdisplaytitle&format=json&formatversion=2",
+            "operation": "API JSON child response selected for actual passage; markup normalized without spelling edits",
+            "sha256": "f52fbe45efebb62659384352ae8151bf3aa19d048b45418b17cdf39f9c977c1a"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://vi.wikisource.org/w/index.php?title=Th%E1%BA%A7y_tr%C3%B2_trong_kh%C3%A1m%2FI&oldid=19383",
+            "operation": "Rendered child HTML visible-text extraction with whitespace and paragraph boundaries preserved",
+            "sha256": "5220e82099a8fa6a0beced7f660c14afdbeba9d79893c5fac6dbf627ccfa7661"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://vi.wikisource.org/w/api.php?action=parse&oldid=71961&prop=wikitext%7Ctext%7Cdisplaytitle&format=json&formatversion=2",
+            "operation": "API JSON child response selected for actual passage; markup normalized without spelling edits",
+            "sha256": "a2962b4d7906ca59637321dc6471951ccd33838a0fbd0cd58652a0f64e2db965"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u_%28b%E1%BA%A3n_Tr%C6%B0%C6%A1ng_V%C4%A9nh_K%C3%BD_1911%29%2FT%C3%BAy_Ki%E1%BB%81u_thi_t%E1%BA%ADp&oldid=71961",
+            "operation": "Rendered child HTML visible-text extraction with whitespace and verse boundaries preserved",
+            "sha256": "28666363a4d0038911b50d0abff3dba65245e830e25ea1cd885e65a894d52483"
+          }
+        ],
         "notice_path": "core/profiles/resources/wikisource-rights.md",
-        "notice_sha256": "41f9ceeda447546ec7a73b2e74b9bb4fc777c191f2a9a100239f1d65610e4fa4",
+        "notice_sha256": "46dcbba2f8888ad342b0b03644888eb211dbd1d8f51d85c9b2e029ffe6482935",
         "redistribution": "permitted-with-notices",
-        "rights_scope": "redistributable",
+        "repository": "vi.wikisource.org",
+        "retrieval_timezone": "Asia/Saigon",
+        "retrieved_at": "2026-10-03",
         "review_reference": "plans/reports/acquisition-261003-real-sources.md",
-        "upstream_path": "https://vi.wikisource.org/w/index.php?title=T%C3%A0i_m%E1%BA%A1ng_t%C6%B0%C6%A1ng_%C4%91%E1%BB%91%2FCu%E1%BB%91n_th%E1%BB%A9_nh%E1%BA%A5t&oldid=179899",
-        "upstream_license_path": "https://foundation.wikimedia.org/wiki/Legal%3AText_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License/en",
+        "rights_scope": "redistributable",
         "sha256": "36d52fcd6a97ed5d8376ab5c1862c39404359e4843944362c8b396945470492f",
+        "upstream_license_path": "https://foundation.wikimedia.org/wiki/Legal%3AText_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License/en",
+        "upstream_path": "https://vi.wikisource.org/w/index.php?title=T%C3%A0i_m%E1%BA%A1ng_t%C6%B0%C6%A1ng_%C4%91%E1%BB%91%2FCu%E1%BB%91n_th%E1%BB%A9_nh%E1%BA%A5t&oldid=179899",
         "upstream_sha256": "0542592b40dbcc5d70f1f7ed3048f8b66729e4850c0dcca123a0cd5984d57352",
         "upstream_sha256s": [
           "0542592b40dbcc5d70f1f7ed3048f8b66729e4850c0dcca123a0cd5984d57352",
@@ -203,339 +253,289 @@
           "a2962b4d7906ca59637321dc6471951ccd33838a0fbd0cd58652a0f64e2db965",
           "28666363a4d0038911b50d0abff3dba65245e830e25ea1cd885e65a894d52483"
         ],
-        "retrieved_at": "2026-10-03",
-        "retrieval_timezone": "Asia/Saigon",
-        "lineage": [
-          {
-            "kind": "source-response",
-            "locator": "https://vi.wikisource.org/w/api.php?action=parse&oldid=179899&prop=wikitext%7Ctext%7Cdisplaytitle&format=json&formatversion=2",
-            "sha256": "0542592b40dbcc5d70f1f7ed3048f8b66729e4850c0dcca123a0cd5984d57352",
-            "operation": "API JSON child response selected for actual passage; markup normalized without spelling edits"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://vi.wikisource.org/w/index.php?title=T%C3%A0i_m%E1%BA%A1ng_t%C6%B0%C6%A1ng_%C4%91%E1%BB%91%2FCu%E1%BB%91n_th%E1%BB%A9_nh%E1%BA%A5t&oldid=179899",
-            "sha256": "4073c3e913d5433d8e553bca68bad2b53ff421add7a12196f582fc310cb0c15f",
-            "operation": "Rendered child HTML visible-text extraction with whitespace and paragraph boundaries preserved"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://vi.wikisource.org/w/api.php?action=parse&oldid=19383&prop=wikitext%7Ctext%7Cdisplaytitle&format=json&formatversion=2",
-            "sha256": "f52fbe45efebb62659384352ae8151bf3aa19d048b45418b17cdf39f9c977c1a",
-            "operation": "API JSON child response selected for actual passage; markup normalized without spelling edits"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://vi.wikisource.org/w/index.php?title=Th%E1%BA%A7y_tr%C3%B2_trong_kh%C3%A1m%2FI&oldid=19383",
-            "sha256": "5220e82099a8fa6a0beced7f660c14afdbeba9d79893c5fac6dbf627ccfa7661",
-            "operation": "Rendered child HTML visible-text extraction with whitespace and paragraph boundaries preserved"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://vi.wikisource.org/w/api.php?action=parse&oldid=71961&prop=wikitext%7Ctext%7Cdisplaytitle&format=json&formatversion=2",
-            "sha256": "a2962b4d7906ca59637321dc6471951ccd33838a0fbd0cd58652a0f64e2db965",
-            "operation": "API JSON child response selected for actual passage; markup normalized without spelling edits"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://vi.wikisource.org/w/index.php?title=Truy%E1%BB%87n_Ki%E1%BB%81u_%28b%E1%BA%A3n_Tr%C6%B0%C6%A1ng_V%C4%A9nh_K%C3%BD_1911%29%2FT%C3%BAy_Ki%E1%BB%81u_thi_t%E1%BA%ADp&oldid=71961",
-            "sha256": "28666363a4d0038911b50d0abff3dba65245e830e25ea1cd885e65a894d52483",
-            "operation": "Rendered child HTML visible-text extraction with whitespace and verse boundaries preserved"
-          }
-        ]
+        "version": "oldid-179899+oldid-19383+oldid-71961",
+        "version_kind": "mediawiki-oldid"
       },
-      "source_kind": "retrieved-snapshot",
-      "copied_vs_reauthored": "normalized-with-lineage",
-      "release_state": "experimental-local",
-      "domain": "language-literary",
-      "locale": "vi",
-      "genre": "prose-verse-samples",
-      "expected_artifact": "bounded Vietnamese prose and verse passage records with parent/child source anchors",
-      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
-      "limitations": [
-        "Wikisource page-level CC BY-SA terms and the underlying-work public-domain rationale remain separate jurisdiction-specific questions.",
-        "Only records with actual_passage=true are packaged; the six raw API/HTML snapshots remain in staging."
-      ],
-      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts"
+      "source_kind": "retrieved-snapshot"
     },
     {
-      "resource_id": "R-pmc-scientific",
+      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
       "consumers": [
         "nckh-write",
         "nckh-evidence",
         "nckh-method"
       ],
-      "path": "core/profiles/resources/pmc-scientific.jsonl",
+      "copied_vs_reauthored": "normalized-with-lineage",
+      "dependency": "required",
+      "domain": "scientific-writing",
+      "expected_artifact": "bounded article-level CC BY scientific text projections with PMCID and DOI anchors",
       "format": "jsonl",
-      "reader": "scripts/search-resource.py",
+      "genre": "scientific-research-article",
+      "limitations": [
+        "The projection is bounded and does not represent full article XML.",
+        "Article-level CC BY 4.0 evidence does not generalize to all PMC content or establish peer review or scientific validity."
+      ],
+      "locale": "en",
+      "path": "core/profiles/resources/pmc-scientific.jsonl",
       "producer": "bounded normalized projection of two Europe PMC JATS/XML snapshots; XML remains in staging",
+      "reader": "scripts/search-resource.py",
+      "release_state": "experimental-local",
       "requires": [
         "core/registry/catalog/resources.json",
         "core/profiles/resources/pmc-rights.md"
       ],
-      "dependency": "required",
+      "resource_id": "R-pmc-scientific",
+      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts",
       "source": {
-        "repository": "Europe PMC",
-        "version": "PMC13623134+PMC13623154",
-        "version_kind": "pmcid-snapshot",
         "as_of": "2026-10-03",
         "license": "CC-BY-4.0",
         "license_kind": "owned-rights-record",
         "license_path": "core/profiles/resources/pmc-rights.md",
-        "license_sha256": "bc5b60966d872fe96dfbc49a38e1009170a2117796e9147021373f5b5a57d979",
+        "license_sha256": "2e91491eaddcd9869c2fd181d4e3cb6738734dcbc055285108b7bdcb9a135660",
+        "lineage": [
+          {
+            "kind": "source-response",
+            "locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13623134/fullTextXML",
+            "operation": "JATS/XML article snapshot parsed to title, abstract and bounded body excerpt",
+            "sha256": "14988d37144b0315a4ef272f45b204568400a0fe33ee4e0905dc4c397f52ee06"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13623154/fullTextXML",
+            "operation": "JATS/XML article snapshot parsed to title, abstract and bounded body excerpt",
+            "sha256": "135e35ecbac31f8a2429ce25426d2564c3a87aa66f4f2ebaf3fd1bd15114c69c"
+          }
+        ],
         "notice_path": "core/profiles/resources/pmc-rights.md",
-        "notice_sha256": "bc5b60966d872fe96dfbc49a38e1009170a2117796e9147021373f5b5a57d979",
+        "notice_sha256": "2e91491eaddcd9869c2fd181d4e3cb6738734dcbc055285108b7bdcb9a135660",
         "redistribution": "permitted-with-notices",
-        "rights_scope": "redistributable",
+        "repository": "Europe PMC",
+        "retrieval_timezone": "Asia/Saigon",
+        "retrieved_at": "2026-10-03",
         "review_reference": "plans/reports/acquisition-261003-real-sources.md",
-        "upstream_path": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13623134/",
-        "upstream_license_path": "https://creativecommons.org/licenses/by/4.0/",
+        "rights_scope": "redistributable",
         "sha256": "b2dadda901d4ca37ea8124aca1f7f282f9adbee4582638bc5f334a4a389eeb45",
+        "upstream_license_path": "https://creativecommons.org/licenses/by/4.0/",
+        "upstream_path": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13623134/",
         "upstream_sha256": "14988d37144b0315a4ef272f45b204568400a0fe33ee4e0905dc4c397f52ee06",
         "upstream_sha256s": [
           "14988d37144b0315a4ef272f45b204568400a0fe33ee4e0905dc4c397f52ee06",
           "135e35ecbac31f8a2429ce25426d2564c3a87aa66f4f2ebaf3fd1bd15114c69c"
         ],
-        "retrieved_at": "2026-10-03",
-        "retrieval_timezone": "Asia/Saigon",
-        "lineage": [
-          {
-            "kind": "source-response",
-            "locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13623134/fullTextXML",
-            "sha256": "14988d37144b0315a4ef272f45b204568400a0fe33ee4e0905dc4c397f52ee06",
-            "operation": "JATS/XML article snapshot parsed to title, abstract and bounded body excerpt"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13623154/fullTextXML",
-            "sha256": "135e35ecbac31f8a2429ce25426d2564c3a87aa66f4f2ebaf3fd1bd15114c69c",
-            "operation": "JATS/XML article snapshot parsed to title, abstract and bounded body excerpt"
-          }
-        ]
+        "version": "PMC13623134+PMC13623154",
+        "version_kind": "pmcid-snapshot"
       },
-      "source_kind": "retrieved-snapshot",
-      "copied_vs_reauthored": "normalized-with-lineage",
-      "release_state": "experimental-local",
-      "domain": "scientific-writing",
-      "locale": "en",
-      "genre": "scientific-research-article",
-      "expected_artifact": "bounded article-level CC BY scientific text projections with PMCID and DOI anchors",
-      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
-      "limitations": [
-        "The projection is bounded and does not represent full article XML.",
-        "Article-level CC BY 4.0 evidence does not generalize to all PMC content or establish peer review or scientific validity."
-      ],
-      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts"
+      "source_kind": "retrieved-snapshot"
     },
     {
-      "resource_id": "R-worldbank-vietnam-population",
+      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
       "consumers": [
         "nckh-visuals",
         "nckh-analytics",
         "nckh-method"
       ],
-      "path": "core/profiles/resources/worldbank-series.jsonl",
-      "format": "jsonl",
-      "reader": "scripts/search-resource.py",
-      "producer": "field-preserving projection of one dated World Bank API response; raw JSON remains in staging",
-      "requires": [
-        "core/registry/catalog/resources.json",
-        "core/profiles/resources/worldbank-rights.md"
-      ],
-      "dependency": "required",
-      "source": {
-        "repository": "World Bank",
-        "version": "SP.POP.TOTL:2000-2025@2026-07-13",
-        "version_kind": "api-snapshot",
-        "as_of": "2026-10-03",
-        "license": "CC-BY-4.0",
-        "license_kind": "owned-rights-record",
-        "license_path": "core/profiles/resources/worldbank-rights.md",
-        "license_sha256": "ea51d41b42f8fca82fa0c350622f156f8f921abf2204db4dc7b83980c072e7cd",
-        "notice_path": "core/profiles/resources/worldbank-rights.md",
-        "notice_sha256": "ea51d41b42f8fca82fa0c350622f156f8f921abf2204db4dc7b83980c072e7cd",
-        "redistribution": "permitted-with-notices",
-        "rights_scope": "redistributable",
-        "review_reference": "plans/reports/acquisition-261003-real-sources.md",
-        "upstream_path": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
-        "upstream_license_path": "https://data.worldbank.org/summary-terms-of-use",
-        "sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
-        "upstream_sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781",
-        "upstream_sha256s": [
-          "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
-        ],
-        "retrieved_at": "2026-10-03",
-        "retrieval_timezone": "Asia/Saigon",
-        "lineage": [
-          {
-            "kind": "source-response",
-            "locator": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
-            "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781",
-            "operation": "API response projected field-for-field; values and blank unit preserved"
-          }
-        ]
-      },
-      "source_kind": "retrieved-snapshot",
       "copied_vs_reauthored": "normalized-with-lineage",
-      "release_state": "experimental-local",
+      "dependency": "required",
       "domain": "chart-measurement",
-      "locale": "und",
-      "genre": "indicator-time-series",
       "expected_artifact": "field-preserving Vietnam population indicator time-series projection",
-      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
+      "format": "jsonl",
+      "genre": "indicator-time-series",
       "limitations": [
         "This is a dated snapshot and provider values may be revised.",
         "The source unit field is blank and remains blank; no unit, causal interpretation or population representativeness is invented."
       ],
-      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts"
+      "locale": "und",
+      "path": "core/profiles/resources/worldbank-series.jsonl",
+      "producer": "field-preserving projection of one dated World Bank API response; raw JSON remains in staging",
+      "reader": "scripts/search-resource.py",
+      "release_state": "experimental-local",
+      "requires": [
+        "core/registry/catalog/resources.json",
+        "core/profiles/resources/worldbank-rights.md"
+      ],
+      "resource_id": "R-worldbank-vietnam-population",
+      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts",
+      "source": {
+        "as_of": "2026-10-03",
+        "license": "CC-BY-4.0",
+        "license_kind": "owned-rights-record",
+        "license_path": "core/profiles/resources/worldbank-rights.md",
+        "license_sha256": "e44f97747f7318dd25d9d939db15c8f4dcf4b18bfd8dab0405d2af25b261451c",
+        "lineage": [
+          {
+            "kind": "source-response",
+            "locator": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
+            "operation": "API response projected field-for-field; values and blank unit preserved",
+            "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+          }
+        ],
+        "notice_path": "core/profiles/resources/worldbank-rights.md",
+        "notice_sha256": "e44f97747f7318dd25d9d939db15c8f4dcf4b18bfd8dab0405d2af25b261451c",
+        "redistribution": "permitted-with-notices",
+        "repository": "World Bank",
+        "retrieval_timezone": "Asia/Saigon",
+        "retrieved_at": "2026-10-03",
+        "review_reference": "plans/reports/acquisition-261003-real-sources.md",
+        "rights_scope": "redistributable",
+        "sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
+        "upstream_license_path": "https://data.worldbank.org/summary-terms-of-use",
+        "upstream_path": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
+        "upstream_sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781",
+        "upstream_sha256s": [
+          "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+        ],
+        "version": "SP.POP.TOTL:2000-2025@2026-07-13",
+        "version_kind": "api-snapshot"
+      },
+      "source_kind": "retrieved-snapshot"
     },
     {
-      "resource_id": "R-uci-bank-marketing",
+      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
       "consumers": [
         "nckh-market-research",
         "nckh-marketing-plan",
         "nckh-campaign",
         "nckh-analytics"
       ],
-      "path": "core/profiles/resources/uci-bank-marketing.jsonl",
+      "copied_vs_reauthored": "normalized-with-lineage",
+      "dependency": "required",
+      "domain": "marketing-analytics",
+      "expected_artifact": "bounded first-ten-row Bank Marketing response sample with all 17 columns",
       "format": "jsonl",
-      "reader": "scripts/search-resource.py",
+      "genre": "campaign-response-tabular",
+      "limitations": [
+        "The ten-row sample is not representative and cannot establish campaign lift, forecast performance or population response rates.",
+        "duration is post-contact and can leak the target in prospective prediction."
+      ],
+      "locale": "und",
+      "path": "core/profiles/resources/uci-bank-marketing.jsonl",
       "producer": "ZIP extraction and semicolon-delimited bank.csv parse selecting the first ten rows; archives remain in staging",
+      "reader": "scripts/search-resource.py",
+      "release_state": "experimental-local",
       "requires": [
         "core/registry/catalog/resources.json",
         "core/profiles/resources/uci-rights.md"
       ],
-      "dependency": "required",
+      "resource_id": "R-uci-bank-marketing",
+      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts",
       "source": {
-        "repository": "UCI Machine Learning Repository",
-        "version": "10.24432/C5K306",
-        "version_kind": "dataset-archive",
         "as_of": "2026-10-03",
         "license": "CC-BY-4.0",
         "license_kind": "owned-rights-record",
         "license_path": "core/profiles/resources/uci-rights.md",
         "license_sha256": "1da0584a1daf4fc1cc01e9d2028067d1a0c930f451cce7fef3b5753ef40bd096",
+        "lineage": [
+          {
+            "kind": "archive-member",
+            "locator": "https://archive.ics.uci.edu/static/public/222/bank%2Bmarketing.zip",
+            "operation": "Official outer archive extracted to the nested dataset archive",
+            "sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4"
+          },
+          {
+            "kind": "archive-member",
+            "locator": "https://archive.ics.uci.edu/static/public/222/bank.zip",
+            "operation": "Nested archive extracted and bank.csv parsed with its semicolon delimiter; first ten rows selected",
+            "sha256": "99d7e8eb12401ed278b793984423915411ea8df099e1795f9fefe254f513fe5e"
+          }
+        ],
         "notice_path": "core/profiles/resources/uci-rights.md",
         "notice_sha256": "1da0584a1daf4fc1cc01e9d2028067d1a0c930f451cce7fef3b5753ef40bd096",
         "redistribution": "permitted-with-notices",
-        "rights_scope": "redistributable",
+        "repository": "UCI Machine Learning Repository",
+        "retrieval_timezone": "Asia/Saigon",
+        "retrieved_at": "2026-10-03",
         "review_reference": "plans/reports/acquisition-261003-real-sources.md",
-        "upstream_path": "https://archive.ics.uci.edu/dataset/222/bank",
-        "upstream_license_path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "rights_scope": "redistributable",
         "sha256": "647a774b9fb4545d6bc652114910df53677fbe993a00c268c16d4f50b03fe123",
+        "upstream_license_path": "https://creativecommons.org/licenses/by/4.0/legalcode",
+        "upstream_path": "https://archive.ics.uci.edu/dataset/222/bank",
         "upstream_sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4",
         "upstream_sha256s": [
           "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4",
           "99d7e8eb12401ed278b793984423915411ea8df099e1795f9fefe254f513fe5e"
         ],
-        "retrieved_at": "2026-10-03",
-        "retrieval_timezone": "Asia/Saigon",
-        "lineage": [
-          {
-            "kind": "archive-member",
-            "locator": "https://archive.ics.uci.edu/static/public/222/bank%2Bmarketing.zip",
-            "sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4",
-            "operation": "Official outer archive extracted to the nested dataset archive"
-          },
-          {
-            "kind": "archive-member",
-            "locator": "https://archive.ics.uci.edu/static/public/222/bank.zip",
-            "sha256": "99d7e8eb12401ed278b793984423915411ea8df099e1795f9fefe254f513fe5e",
-            "operation": "Nested archive extracted and bank.csv parsed with its semicolon delimiter; first ten rows selected"
-          }
-        ]
+        "version": "10.24432/C5K306",
+        "version_kind": "dataset-archive"
       },
-      "source_kind": "retrieved-snapshot",
-      "copied_vs_reauthored": "normalized-with-lineage",
-      "release_state": "experimental-local",
-      "domain": "marketing-analytics",
-      "locale": "und",
-      "genre": "campaign-response-tabular",
-      "expected_artifact": "bounded first-ten-row Bank Marketing response sample with all 17 columns",
-      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
-      "limitations": [
-        "The ten-row sample is not representative and cannot establish campaign lift, forecast performance or population response rates.",
-        "duration is post-contact and can leak the target in prospective prediction."
-      ],
-      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts"
+      "source_kind": "retrieved-snapshot"
     },
     {
-      "resource_id": "R-django-sqlmigrate-fixtures",
+      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
       "consumers": [
         "nckh-code-review",
         "nckh-fix",
         "nckh-test"
       ],
-      "path": "core/profiles/resources/swe-bench-reference.jsonl",
+      "copied_vs_reauthored": "normalized-with-lineage",
+      "dependency": "required",
+      "domain": "engineering-task",
+      "expected_artifact": "bounded JSONL with two BSD-licensed Django fixture contents and task locators only",
       "format": "jsonl",
-      "reader": "scripts/search-resource.py",
+      "genre": "code-review-fixture",
+      "limitations": [
+        "The issue body, problem statement, benchmark patch, test patch, dataset row bytes and ticket HTML are not packaged.",
+        "The BSD-3-Clause evidence applies only to the two Django fixture files at the pinned base commit; this is not a benchmark release or runtime test result."
+      ],
+      "locale": "en",
+      "path": "core/profiles/resources/swe-bench-reference.jsonl",
       "producer": "normalized package projection containing only the two verified Django fixture files and non-private task locators",
+      "reader": "scripts/search-resource.py",
+      "release_state": "experimental-local",
       "requires": [
         "core/registry/catalog/resources.json",
         "core/profiles/resources/swe-bench-rights.md",
         "core/profiles/resources/swe-bench-notice.md"
       ],
-      "dependency": "required",
+      "resource_id": "R-django-sqlmigrate-fixtures",
+      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts",
       "source": {
-        "repository": "django/django",
-        "version": "02cd16a7a04529c726e5bb5a13d5979119f25c7d",
-        "version_kind": "git-commit",
         "as_of": "2026-10-03",
         "license": "BSD-3-Clause",
         "license_kind": "verbatim-upstream",
         "license_path": "core/profiles/resources/swe-bench-rights.md",
         "license_sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
+        "lineage": [
+          {
+            "kind": "source-response",
+            "locator": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/django/core/management/commands/sqlmigrate.py",
+            "operation": "Upstream fixture copied byte-for-byte into the JSONL content field",
+            "sha256": "6ca06cab795d7b1f1247c1a1327ac0ec54bc9295c68e3cbc95ac7f10be817371"
+          },
+          {
+            "kind": "source-response",
+            "locator": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/tests/migrations/test_commands.py",
+            "operation": "Upstream fixture copied byte-for-byte into the JSONL content field",
+            "sha256": "c69753ae276a6815faf1abdd0f78d6ab4770d65ec8ba1f38698d73e34832c81a"
+          },
+          {
+            "kind": "rights-evidence",
+            "locator": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/LICENSE",
+            "operation": "Full BSD 3-Clause license copied verbatim into the package rights file",
+            "sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
+            "upstream_sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669"
+          }
+        ],
         "notice_path": "core/profiles/resources/swe-bench-notice.md",
         "notice_sha256": "635acff745ff0f7a181088745159f737cec450d1faaacf9dbc5fa0f16746d9eb",
         "redistribution": "permitted-with-notices",
-        "rights_scope": "redistributable",
+        "repository": "django/django",
+        "retrieval_timezone": "Asia/Saigon",
+        "retrieved_at": "2026-10-03",
         "review_reference": "plans/reports/acquisition-261003-real-sources.md",
-        "upstream_path": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/django/core/management/commands/sqlmigrate.py",
-        "upstream_license_path": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/LICENSE",
+        "rights_scope": "redistributable",
         "sha256": "e81048922d196fd302555f192d289d51d82449b0ae724fc05cb2e2b4bfeb90cf",
+        "upstream_license_path": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/LICENSE",
+        "upstream_path": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/django/core/management/commands/sqlmigrate.py",
         "upstream_sha256": "6ca06cab795d7b1f1247c1a1327ac0ec54bc9295c68e3cbc95ac7f10be817371",
         "upstream_sha256s": [
           "6ca06cab795d7b1f1247c1a1327ac0ec54bc9295c68e3cbc95ac7f10be817371",
           "c69753ae276a6815faf1abdd0f78d6ab4770d65ec8ba1f38698d73e34832c81a",
           "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669"
         ],
-        "retrieved_at": "2026-10-03",
-        "retrieval_timezone": "Asia/Saigon",
-        "lineage": [
-          {
-            "kind": "source-response",
-            "locator": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/django/core/management/commands/sqlmigrate.py",
-            "sha256": "6ca06cab795d7b1f1247c1a1327ac0ec54bc9295c68e3cbc95ac7f10be817371",
-            "operation": "Upstream fixture copied byte-for-byte into the JSONL content field"
-          },
-          {
-            "kind": "source-response",
-            "locator": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/tests/migrations/test_commands.py",
-            "sha256": "c69753ae276a6815faf1abdd0f78d6ab4770d65ec8ba1f38698d73e34832c81a",
-            "operation": "Upstream fixture copied byte-for-byte into the JSONL content field"
-          },
-          {
-            "kind": "rights-evidence",
-            "locator": "https://raw.githubusercontent.com/django/django/02cd16a7a04529c726e5bb5a13d5979119f25c7d/LICENSE",
-            "sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
-            "operation": "Full BSD 3-Clause license copied verbatim into the package rights file",
-            "upstream_sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669"
-          }
-        ]
+        "version": "02cd16a7a04529c726e5bb5a13d5979119f25c7d",
+        "version_kind": "git-commit"
       },
-      "source_kind": "retrieved-snapshot",
-      "copied_vs_reauthored": "normalized-with-lineage",
-      "release_state": "experimental-local",
-      "domain": "engineering-task",
-      "locale": "en",
-      "genre": "code-review-fixture",
-      "expected_artifact": "bounded JSONL with two BSD-licensed Django fixture contents and task locators only",
-      "acceptance": "resource hash, rights, raw lineage, context and observed JSONL read pass; semantic, native and human acceptance remain pending",
-      "limitations": [
-        "The issue body, problem statement, benchmark patch, test patch, dataset row bytes and ticket HTML are not packaged.",
-        "The BSD-3-Clause evidence applies only to the two Django fixture files at the pinned base commit; this is not a benchmark release or runtime test result."
-      ],
-      "rollback": "restore the prior registry and rights/resource bytes together while retaining staged raw and derived attempts"
+      "source_kind": "retrieved-snapshot"
     }
   ],
   "schema_version": 1

@@ -13,16 +13,16 @@ cầu trong công việc.
 
 ## Phạm vi bản công khai
 
-Repository này chứa các package **experimental r25**, được xuất ở chế độ
-**`resource-access off`**. Bản công khai giữ đủ skill, hợp đồng dùng nguồn, reader
-và công cụ cài đặt; người dùng cung cấp tài liệu hoặc dữ liệu đầu vào của mình.
-Các mẫu văn bản, bài báo và dữ liệu sao chép đi kèm bản dùng cá nhân được giữ
-ngoài bản công khai vì quyền tái phân phối chưa được chốt đầy đủ.
+Repository này chứa các package **experimental r26**, được xuất ở chế độ
+**`resource-access on`**. Tài nguyên đi kèm luôn được bật trong các package phân
+phối: đủ 37 skill, 9 nhóm tài nguyên, reader, giấy phép, ghi công và công cụ cài
+đặt. Skill chọn phần tham khảo phù hợp với công việc; người dùng vẫn có thể cung
+cấp tài liệu hoặc dữ liệu riêng.
 
 Mỗi package có manifest và source lock để kiểm tra đúng phiên bản và tính toàn
 vẹn. Các trường quyền và qualification trong bản ghi gốc được giữ nguyên;
-repository này là bản chia sẻ instructions và công cụ, chưa phải bản stable đã
-được kiểm định đầy đủ. Xem [phạm vi và quyền](docs/public-edition.md).
+repository này là bản chia sẻ instructions, tài nguyên và công cụ, chưa phải bản
+stable đã được kiểm định đầy đủ. Xem [phạm vi và quyền](docs/public-edition.md).
 
 ## Cấu trúc
 
@@ -86,10 +86,11 @@ Lấy `INSTALL_ID` từ biên nhận cài đặt. Update có kiểm tra candidat
 ## Dùng skill
 
 Chọn `nckh-*` phù hợp, nêu đầu ra cần có, cung cấp tài liệu hoặc dữ liệu, ngôn ngữ
-và giới hạn công việc. Với bản công khai này, giữ resource access ở chế độ **off**;
-khi gọi reader lookup, truyền `--resource-access off`. Reader sẽ ghi nhận tài
-nguyên đi kèm bị tắt. Các URL và hash trong registry là thông tin nguồn gốc,
-không có nghĩa dữ liệu mẫu đã được phân phối trong repository.
+và giới hạn công việc. Các package phân phối luôn giữ resource access ở chế độ **on**;
+khi gọi reader lookup, truyền `--resource-access on` hoặc dùng mặc định `on`.
+Reader đọc nguồn đã đóng gói, kiểm tra hash và trả lại record phù hợp cùng nguồn
+và giới hạn sử dụng. Nếu tài nguyên bị thiếu hoặc sai hash, xử lý lỗi đó; không
+tự chuyển package sang `off`.
 
 Biểu đồ, sơ đồ và ảnh cần công cụ tạo/render tương ứng của môi trường. Skill
 không tự cung cấp dịch vụ tạo ảnh hoặc chứng nhận file chỉnh sửa được.
