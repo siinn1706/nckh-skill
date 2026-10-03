@@ -1,0 +1,96 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "enum": [
+        "research",
+        "engineer",
+        "marketing"
+      ]
+    },
+    "language": {
+      "enum": [
+        "vi",
+        "en",
+        "bilingual"
+      ]
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "acceptance": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "authorization_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "private_store": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "plan-only",
+        "auto",
+        "interactive"
+      ]
+    },
+    "venue_profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "glossary_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protected_regions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "outcome",
+    "domain",
+    "language",
+    "scope",
+    "constraints",
+    "non_goals",
+    "acceptance",
+    "mode"
+  ]
+}

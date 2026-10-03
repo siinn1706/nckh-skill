@@ -1,0 +1,129 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "authorized",
+        "running",
+        "checking",
+        "ready-for-review",
+        "accepted",
+        "waiting-human",
+        "blocked",
+        "failed",
+        "timeout-unknown"
+      ]
+    },
+    "mode": {
+      "enum": [
+        "auto",
+        "interactive"
+      ]
+    },
+    "scope_hash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authorization_reference": {},
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required": {
+            "type": "boolean"
+          },
+          "status": {
+            "enum": [
+              "pass",
+              "fail",
+              "pending",
+              "stale",
+              "not-applicable"
+            ]
+          },
+          "revision": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_reference": {
+            "type": "string",
+            "minLength": 1
+          },
+          "previous_evidence": {},
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "required",
+          "status",
+          "revision"
+        ]
+      }
+    },
+    "attempts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "handle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "receipt_reference": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "handle",
+          "status"
+        ]
+      }
+    },
+    "review": {},
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "status",
+    "mode",
+    "scope_hash",
+    "revision",
+    "authorization_reference",
+    "gates",
+    "attempts",
+    "review",
+    "history"
+  ]
+}

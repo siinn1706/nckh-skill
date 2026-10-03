@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "value": {
+      "type": "string",
+      "minLength": 1
+    },
+    "locator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "page",
+            "line",
+            "section",
+            "table",
+            "figure",
+            "timestamp",
+            "paragraph"
+          ]
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "kind",
+        "value"
+      ]
+    },
+    "context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ocr": {
+      "enum": [
+        "not-applicable",
+        "unverified",
+        "visual-checked"
+      ]
+    },
+    "visual_check_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "edition": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "source_id",
+    "source_sha256",
+    "value",
+    "locator",
+    "context",
+    "ocr"
+  ]
+}

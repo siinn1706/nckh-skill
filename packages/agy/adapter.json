@@ -1,0 +1,69 @@
+{
+  "agent_encoding": "Markdown; documented aliases inherit/flash/pro; no assumed arbitrary ID",
+  "agent_global_root": ".gemini/config/agents",
+  "agent_root": ".agents/agents",
+  "as_of": "2026-10-01 Asia/Saigon",
+  "auto_policy": {
+    "blanket_bypass_flags": [],
+    "egress": "current human grant only",
+    "external_irreversible": "ask-or-deny",
+    "mandatory_human_gates": "preserved",
+    "permission_mode": "preserve host policy",
+    "sandbox": "preserve host sandbox",
+    "workflow_pauses": "disabled for authorized reversible phases"
+  },
+  "compatibility_project": [
+    ".agents/skills"
+  ],
+  "evidence_state": "docs-only",
+  "hooks": {
+    "coverage": "unverified",
+    "enforcement": "host permissions; no hook guarantee",
+    "state": "not-installed"
+  },
+  "id": "agy",
+  "label": "Antigravity",
+  "model_control": {
+    "allow_core_vendor_ids": false,
+    "effective": "unknown",
+    "requested": "distinct from effective",
+    "state": "unverified"
+  },
+  "native_qualification": "unverified",
+  "plugin": {
+    "copied": false,
+    "enabled": false,
+    "projected": false,
+    "registered": false,
+    "session_only": false,
+    "state": "unverified",
+    "tested": false,
+    "trusted": false
+  },
+  "revision": "1",
+  "schema_version": 1,
+  "skill_representation": "shared-neutral",
+  "sources": [
+    "https://www.antigravity.google/docs/skills?tab=ide",
+    "https://www.antigravity.google/docs/subagents?tab=cli"
+  ],
+  "surfaces": {
+    "agy-cli": {
+      "global": ".gemini/antigravity-cli/skills",
+      "invocation": "TUI slash skill or /skills; headless dispatch unverified",
+      "project": ".agents/skills",
+      "version": "1.2.13"
+    },
+    "agy-ide": {
+      "global": ".gemini/config/skills",
+      "invocation": "native skill discovery; menu invocation unverified",
+      "project": ".agents/skills",
+      "version": "unknown"
+    }
+  },
+  "symlink_qualification": {
+    "Linux": "unverified",
+    "Windows": "unverified",
+    "macOS": "unverified"
+  }
+}

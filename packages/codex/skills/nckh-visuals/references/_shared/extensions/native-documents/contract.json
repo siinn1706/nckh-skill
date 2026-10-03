@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "id": "native-documents",
+  "capability": "editable-deck/chart/diagram/artwork",
+  "status": "unavailable",
+  "dependencies": [],
+  "rights": "owned",
+  "permissions": [
+    "selected engine availability",
+    "data/asset rights",
+    "provider/egress if selected"
+  ],
+  "engine_binding": null,
+  "runtime_binding": {
+    "scope": "project-task",
+    "format": "svg",
+    "schema": "core/contracts/visual-engine-binding.schema.json",
+    "checker": "scripts/check-visual-engine.py",
+    "capabilities": ["svg-render"]
+  },
+  "acceptance": [
+    "native editability",
+    "actual open/render",
+    "source-to-mark truth",
+    "accessibility",
+    "final hash-bound QA",
+    "scientific meaning"
+  ]
+}

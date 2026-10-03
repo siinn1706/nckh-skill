@@ -1,0 +1,74 @@
+{
+  "agent_encoding": "TOML; model/model_reasoning_effort; native precedence needs actual receipt",
+  "agent_root": ".codex/agents",
+  "as_of": "2026-10-01 Asia/Saigon",
+  "auto_policy": {
+    "blanket_bypass_flags": [],
+    "egress": "current human grant only",
+    "external_irreversible": "ask-or-deny",
+    "mandatory_human_gates": "preserved",
+    "permission_mode": "preserve host policy",
+    "sandbox": "preserve host sandbox",
+    "workflow_pauses": "disabled for authorized reversible phases"
+  },
+  "compatibility_project": [
+    ".agents/skills"
+  ],
+  "evidence_state": "docs-only",
+  "hooks": {
+    "coverage": "unverified",
+    "enforcement": "host permissions; no hook guarantee",
+    "state": "not-installed"
+  },
+  "id": "codex",
+  "label": "Codex",
+  "model_control": {
+    "allow_core_vendor_ids": false,
+    "effective": "unknown",
+    "requested": "distinct from effective",
+    "state": "unverified"
+  },
+  "native_qualification": "unverified",
+  "plugin": {
+    "copied": false,
+    "enabled": false,
+    "projected": false,
+    "registered": false,
+    "session_only": false,
+    "state": "unverified",
+    "tested": false,
+    "trusted": false
+  },
+  "revision": "1",
+  "schema_version": 1,
+  "skill_representation": "shared-neutral",
+  "sources": [
+    "https://learn.chatgpt.com/docs/build-skills",
+    "https://learn.chatgpt.com/docs/agent-configuration/subagents"
+  ],
+  "surfaces": {
+    "codex-cli": {
+      "global": ".agents/skills",
+      "invocation": "/skills or $NAME",
+      "project": ".agents/skills",
+      "version": "0.154.0"
+    },
+    "codex-desktop": {
+      "global": ".agents/skills",
+      "invocation": "native slash menu or $NAME",
+      "project": ".agents/skills",
+      "version": "unknown"
+    },
+    "codex-ide": {
+      "global": ".agents/skills",
+      "invocation": "/skills or $NAME",
+      "project": ".agents/skills",
+      "version": "unknown"
+    }
+  },
+  "symlink_qualification": {
+    "Linux": "unverified",
+    "Windows": "unverified",
+    "macOS": "unverified"
+  }
+}

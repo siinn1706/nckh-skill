@@ -1,0 +1,659 @@
+{
+  "schema_version": 1,
+  "revision": "1",
+  "skills": [
+    {
+      "id": "nckh-plan",
+      "kit": "core",
+      "path": "skills/core/nckh-plan",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-plan:positive",
+        "nckh-plan:negative",
+        "nckh-plan:outcome",
+        "nckh-plan:failure"
+      ],
+      "source_lock_id": "original:nckh-plan"
+    },
+    {
+      "id": "nckh-cook",
+      "kit": "core",
+      "path": "skills/core/nckh-cook",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-cook:positive",
+        "nckh-cook:negative",
+        "nckh-cook:outcome",
+        "nckh-cook:failure"
+      ],
+      "source_lock_id": "original:nckh-cook"
+    },
+    {
+      "id": "nckh-review",
+      "kit": "core",
+      "path": "skills/core/nckh-review",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-review:positive",
+        "nckh-review:negative",
+        "nckh-review:outcome",
+        "nckh-review:failure"
+      ],
+      "source_lock_id": "original:nckh-review"
+    },
+    {
+      "id": "nckh-handoff",
+      "kit": "core",
+      "path": "skills/core/nckh-handoff",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-handoff:positive",
+        "nckh-handoff:negative",
+        "nckh-handoff:outcome",
+        "nckh-handoff:failure"
+      ],
+      "source_lock_id": "original:nckh-handoff"
+    },
+    {
+      "id": "nckh-research",
+      "kit": "core",
+      "path": "skills/core/nckh-research",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-research:positive",
+        "nckh-research:negative",
+        "nckh-research:outcome",
+        "nckh-research:failure"
+      ],
+      "source_lock_id": "original:nckh-research"
+    },
+    {
+      "id": "nckh-evidence",
+      "kit": "core",
+      "path": "skills/core/nckh-evidence",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-evidence:positive",
+        "nckh-evidence:negative",
+        "nckh-evidence:outcome",
+        "nckh-evidence:failure"
+      ],
+      "source_lock_id": "original:nckh-evidence"
+    },
+    {
+      "id": "nckh-method",
+      "kit": "core",
+      "path": "skills/core/nckh-method",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-method:positive",
+        "nckh-method:negative",
+        "nckh-method:outcome",
+        "nckh-method:failure"
+      ],
+      "source_lock_id": "original:nckh-method"
+    },
+    {
+      "id": "nckh-write",
+      "kit": "core",
+      "path": "skills/core/nckh-write",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-write:positive",
+        "nckh-write:negative",
+        "nckh-write:outcome",
+        "nckh-write:failure"
+      ],
+      "source_lock_id": "original:nckh-write"
+    },
+    {
+      "id": "nckh-taste",
+      "kit": "core",
+      "path": "skills/core/nckh-taste",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-taste:positive",
+        "nckh-taste:negative",
+        "nckh-taste:outcome",
+        "nckh-taste:failure"
+      ],
+      "source_lock_id": "original:nckh-taste"
+    },
+    {
+      "id": "nckh-visuals",
+      "kit": "core",
+      "path": "skills/core/nckh-visuals",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-visuals:positive",
+        "nckh-visuals:negative",
+        "nckh-visuals:outcome",
+        "nckh-visuals:failure"
+      ],
+      "source_lock_id": "original:nckh-visuals"
+    },
+    {
+      "id": "nckh-scout",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-scout",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-scout:positive",
+        "nckh-scout:negative",
+        "nckh-scout:outcome",
+        "nckh-scout:failure"
+      ],
+      "source_lock_id": "original:nckh-scout"
+    },
+    {
+      "id": "nckh-debug",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-debug",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-debug:positive",
+        "nckh-debug:negative",
+        "nckh-debug:outcome",
+        "nckh-debug:failure"
+      ],
+      "source_lock_id": "original:nckh-debug"
+    },
+    {
+      "id": "nckh-fix",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-fix",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-fix:positive",
+        "nckh-fix:negative",
+        "nckh-fix:outcome",
+        "nckh-fix:failure"
+      ],
+      "source_lock_id": "original:nckh-fix"
+    },
+    {
+      "id": "nckh-test",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-test",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-test:positive",
+        "nckh-test:negative",
+        "nckh-test:outcome",
+        "nckh-test:failure"
+      ],
+      "source_lock_id": "original:nckh-test"
+    },
+    {
+      "id": "nckh-code-review",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-code-review",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-code-review:positive",
+        "nckh-code-review:negative",
+        "nckh-code-review:outcome",
+        "nckh-code-review:failure"
+      ],
+      "source_lock_id": "original:nckh-code-review"
+    },
+    {
+      "id": "nckh-security",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-security",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-security:positive",
+        "nckh-security:negative",
+        "nckh-security:outcome",
+        "nckh-security:failure"
+      ],
+      "source_lock_id": "original:nckh-security"
+    },
+    {
+      "id": "nckh-context",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-context",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-context:positive",
+        "nckh-context:negative",
+        "nckh-context:outcome",
+        "nckh-context:failure"
+      ],
+      "source_lock_id": "original:nckh-context"
+    },
+    {
+      "id": "nckh-docs",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-docs",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-docs:positive",
+        "nckh-docs:negative",
+        "nckh-docs:outcome",
+        "nckh-docs:failure"
+      ],
+      "source_lock_id": "original:nckh-docs"
+    },
+    {
+      "id": "nckh-frontend",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-frontend",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-frontend:positive",
+        "nckh-frontend:negative",
+        "nckh-frontend:outcome",
+        "nckh-frontend:failure"
+      ],
+      "source_lock_id": "original:nckh-frontend"
+    },
+    {
+      "id": "nckh-backend",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-backend",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-backend:positive",
+        "nckh-backend:negative",
+        "nckh-backend:outcome",
+        "nckh-backend:failure"
+      ],
+      "source_lock_id": "original:nckh-backend"
+    },
+    {
+      "id": "nckh-data",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-data",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-data:positive",
+        "nckh-data:negative",
+        "nckh-data:outcome",
+        "nckh-data:failure"
+      ],
+      "source_lock_id": "original:nckh-data"
+    },
+    {
+      "id": "nckh-devops",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-devops",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-devops:positive",
+        "nckh-devops:negative",
+        "nckh-devops:outcome",
+        "nckh-devops:failure"
+      ],
+      "source_lock_id": "original:nckh-devops"
+    },
+    {
+      "id": "nckh-git",
+      "kit": "engineer",
+      "path": "skills/engineer/nckh-git",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-git:positive",
+        "nckh-git:negative",
+        "nckh-git:outcome",
+        "nckh-git:failure"
+      ],
+      "source_lock_id": "original:nckh-git"
+    },
+    {
+      "id": "nckh-xia",
+      "kit": "tooling",
+      "path": "skills/tooling/nckh-xia",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-xia:positive",
+        "nckh-xia:negative",
+        "nckh-xia:outcome",
+        "nckh-xia:failure"
+      ],
+      "source_lock_id": "original:nckh-xia"
+    },
+    {
+      "id": "nckh-market-research",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-market-research",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-market-research:positive",
+        "nckh-market-research:negative",
+        "nckh-market-research:outcome",
+        "nckh-market-research:failure"
+      ],
+      "source_lock_id": "original:nckh-market-research"
+    },
+    {
+      "id": "nckh-brand",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-brand",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-brand:positive",
+        "nckh-brand:negative",
+        "nckh-brand:outcome",
+        "nckh-brand:failure"
+      ],
+      "source_lock_id": "original:nckh-brand"
+    },
+    {
+      "id": "nckh-marketing-plan",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-marketing-plan",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-marketing-plan:positive",
+        "nckh-marketing-plan:negative",
+        "nckh-marketing-plan:outcome",
+        "nckh-marketing-plan:failure"
+      ],
+      "source_lock_id": "original:nckh-marketing-plan"
+    },
+    {
+      "id": "nckh-campaign",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-campaign",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-campaign:positive",
+        "nckh-campaign:negative",
+        "nckh-campaign:outcome",
+        "nckh-campaign:failure"
+      ],
+      "source_lock_id": "original:nckh-campaign"
+    },
+    {
+      "id": "nckh-launch",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-launch",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-launch:positive",
+        "nckh-launch:negative",
+        "nckh-launch:outcome",
+        "nckh-launch:failure"
+      ],
+      "source_lock_id": "original:nckh-launch"
+    },
+    {
+      "id": "nckh-content",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-content",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-content:positive",
+        "nckh-content:negative",
+        "nckh-content:outcome",
+        "nckh-content:failure"
+      ],
+      "source_lock_id": "original:nckh-content"
+    },
+    {
+      "id": "nckh-copy",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-copy",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-copy:positive",
+        "nckh-copy:negative",
+        "nckh-copy:outcome",
+        "nckh-copy:failure"
+      ],
+      "source_lock_id": "original:nckh-copy"
+    },
+    {
+      "id": "nckh-seo",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-seo",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-seo:positive",
+        "nckh-seo:negative",
+        "nckh-seo:outcome",
+        "nckh-seo:failure"
+      ],
+      "source_lock_id": "original:nckh-seo"
+    },
+    {
+      "id": "nckh-email",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-email",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-email:positive",
+        "nckh-email:negative",
+        "nckh-email:outcome",
+        "nckh-email:failure"
+      ],
+      "source_lock_id": "original:nckh-email"
+    },
+    {
+      "id": "nckh-social",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-social",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-social:positive",
+        "nckh-social:negative",
+        "nckh-social:outcome",
+        "nckh-social:failure"
+      ],
+      "source_lock_id": "original:nckh-social"
+    },
+    {
+      "id": "nckh-analytics",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-analytics",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-analytics:positive",
+        "nckh-analytics:negative",
+        "nckh-analytics:outcome",
+        "nckh-analytics:failure"
+      ],
+      "source_lock_id": "original:nckh-analytics"
+    },
+    {
+      "id": "nckh-cro",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-cro",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-cro:positive",
+        "nckh-cro:negative",
+        "nckh-cro:outcome",
+        "nckh-cro:failure"
+      ],
+      "source_lock_id": "original:nckh-cro"
+    },
+    {
+      "id": "nckh-experiment",
+      "kit": "marketing",
+      "path": "skills/marketing/nckh-experiment",
+      "status": "experimental",
+      "dependencies": [
+        "nckh-plan",
+        "nckh-cook",
+        "nckh-review",
+        "nckh-handoff"
+      ],
+      "eval_ids": [
+        "nckh-experiment:positive",
+        "nckh-experiment:negative",
+        "nckh-experiment:outcome",
+        "nckh-experiment:failure"
+      ],
+      "source_lock_id": "original:nckh-experiment"
+    }
+  ]
+}

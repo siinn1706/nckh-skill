@@ -1,0 +1,1240 @@
+{
+  "schema_version": 1,
+  "id": "nckh-personal-use-acceptance",
+  "revision": "2026-10-03",
+  "lane": "personal-use",
+  "catalog_revision": "1",
+  "catalog_status": "experimental",
+  "verdicts": [
+    "pass",
+    "fail",
+    "pending",
+    "not-applicable"
+  ],
+  "common": {
+    "gates": [
+      {
+        "id": "identity-route",
+        "required_for_personal_use": true,
+        "check": "Correct skill identity, family, trigger, scope and revision; route a negative or near-miss to rejection, defer or owner handoff."
+      },
+      {
+        "id": "positive-behavior",
+        "required_for_personal_use": true,
+        "check": "Use a realistic task and expected observable output; record the actual artifact or explain why it was not produced."
+      },
+      {
+        "id": "output-facts",
+        "required_for_personal_use": true,
+        "check": "Preserve artifact readability, claims, numbers, units, modality, citations, provenance, rights and uncertainty; do not turn a structural check into quality proof."
+      },
+      {
+        "id": "authority-side-effects",
+        "required_for_personal_use": true,
+        "check": "Do not call providers, upload, publish, spend, deploy, migrate, change traffic or cross human/domain/rights authority without the matching grant; report the boundary as pending when unavailable."
+      },
+      {
+        "id": "receipt-feedback",
+        "required_for_personal_use": true,
+        "check": "Record revision, artifact and input hashes, route/model/tool evidence when observed, verdict, limits and owner feedback; preserve failed or unknown attempts."
+      }
+    ],
+    "hard_gate_policy": "Identity, negative route, facts/authority, artifact and provenance are hard checks. Taste, polish, latency, cost and human/domain/native review may remain pending in personal-use when the limitation is explicit.",
+    "threshold_policy": "No universal percentage is supplied by the sources. The owner chooses any personal-use decision rule and records it with the receipt."
+  },
+  "personal_use": {
+    "owner_final": true,
+    "owner_role": "project owner",
+    "external_reviewer_required": false,
+    "protected_holdout_required": false,
+    "absent_feedback_status": "pending-personal-review",
+    "feedback_binding": [
+      "artifact_hash",
+      "input_hashes",
+      "revision"
+    ],
+    "feedback_mismatch": "fail-closed",
+    "fabricated_pass_forbidden": true,
+    "owner_feedback_fields": [
+      "revision",
+      "artifact_hash",
+      "input_hashes",
+      "verdict",
+      "feedback_reference",
+      "comment"
+    ]
+  },
+  "qualification_boundary": {
+    "catalog_status_remains": "experimental",
+    "stable_scientific_protocol": "evals/protocols/qualification.json",
+    "protocol_mutation": "forbidden",
+    "personal_use_does_not_certify": [
+      "stable",
+      "scientific",
+      "human-gold",
+      "native",
+      "provider",
+      "venue"
+    ]
+  },
+  "sources": {
+    "AS-FMT": {
+      "title": "Agent Skills Specification",
+      "urls": [
+        "https://agentskills.io/specification"
+      ],
+      "citation": "[Agent Skills Specification](https://agentskills.io/specification), current page, truy cập 03/10/2026",
+      "applicability": "Skill tối thiểu là thư mục có `SKILL.md`; frontmatter bắt buộc `name`, `description`, giới hạn tên và mô tả trigger; scripts/references/assets là tùy chọn; progressive disclosure là cấu trúc khuyến nghị.",
+      "limitations": "Đây là format contract, không phải quality, security, truthfulness hay distribution standard. `allowed-tools` vẫn được ghi là experimental và client support có thể khác nhau.",
+      "retrieved_on": "2026-10-03"
+    },
+    "AS-EVAL": {
+      "title": "Evaluating skill output quality",
+      "urls": [
+        "https://agentskills.io/skill-creation/evaluating-skills"
+      ],
+      "citation": "[Evaluating skill output quality](https://agentskills.io/skill-creation/evaluating-skills), current page, truy cập 03/10/2026",
+      "applicability": "Case gồm prompt, expected output và input tùy chọn; nên có phrasing đa dạng, edge case, clean context; chạy with-skill và baseline/old-skill; assertion phải observable; mechanical checks dùng script; style/feel cần human review; grade phải chỉ ra evidence; lặp theo iteration.",
+      "limitations": "Không có universal threshold hoặc claim rằng baseline delta là causal/scientific proof.",
+      "retrieved_on": "2026-10-03"
+    },
+    "AS-DESIGN": {
+      "title": "Best practices for skill creators",
+      "urls": [
+        "https://agentskills.io/skill-creation/best-practices"
+      ],
+      "citation": "[Best practices for skill creators](https://agentskills.io/skill-creation/best-practices), current page, truy cập 03/10/2026",
+      "applicability": "Bắt đầu từ real expertise/artifacts, refine bằng real execution, giữ coherent unit, moderate detail, progressive disclosure, defaults và procedures.",
+      "limitations": "Đây là authoring guidance; mức chi tiết, model behavior và trigger accuracy vẫn phải đo trong client thật.",
+      "retrieved_on": "2026-10-03"
+    },
+    "AS-CLIENT": {
+      "title": "Anthropic Agent Skills overview",
+      "urls": [
+        "https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview"
+      ],
+      "citation": "[Anthropic Agent Skills overview](https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview), current page, truy cập 03/10/2026",
+      "applicability": "Skill load theo ba tầng metadata → instructions → resources; metadata dùng cho discovery; skill có thể compose và tự kích hoạt khi phù hợp trong Claude.",
+      "limitations": "Product/VM/auto-trigger của Anthropic không phải hành vi bắt buộc của mọi client; không suy ra NCKH native acceptance từ tài liệu sản phẩm.",
+      "retrieved_on": "2026-10-03"
+    },
+    "AS-WAZA": {
+      "title": "Microsoft Waza",
+      "urls": [
+        "https://github.com/microsoft/waza"
+      ],
+      "citation": "[Microsoft Waza](https://github.com/microsoft/waza), repository/documentation current as-of truy cập 03/10/2026",
+      "applicability": "Một implementation chính thức của Microsoft bổ sung spec coverage, task fixtures, graders, baseline/model comparison, snapshots/replay và adversarial packs.",
+      "limitations": "Đây là tool implementation, không phải normative Agent Skills spec; provider/model/CLI có thể đổi. Dùng để lấy pattern observable, không dùng như world-best ranking.",
+      "retrieved_on": "2026-10-03"
+    },
+    "RES-EQUATOR": {
+      "title": "EQUATOR: reporting guideline là gì",
+      "urls": [
+        "https://www.equator-network.org/about-us/what-is-a-reporting-guideline/",
+        "https://www.equator-network.org/library/equator-network-reporting-guideline-manual/"
+      ],
+      "citation": "[EQUATOR: reporting guideline là gì](https://www.equator-network.org/about-us/what-is-a-reporting-guideline/), và [toolkit chọn guideline](https://www.equator-network.org/library/equator-network-reporting-guideline-manual/), truy cập 03/10/2026",
+      "applicability": "Guideline là checklist/flow/structured text cho **một loại nghiên cứu cụ thể**, có methodology rõ; dùng để report completeness/transparency, không phải chứng nhận study quality.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "RES-PRISMA": {
+      "title": "PRISMA 2020",
+      "urls": [
+        "https://www.prisma-statement.org/home",
+        "https://www.prisma-statement.org/prisma-2020"
+      ],
+      "citation": "[PRISMA 2020](https://www.prisma-statement.org/prisma-2020), [home/scope](https://www.prisma-statement.org/home), current site truy cập 03/10/2026",
+      "applicability": "Systematic review phải giữ question/objective, search sources/date, strategy, selection, data items, risk of bias, synthesis, limitations; không áp PRISMA cho mọi narrative/engineering research. PRISMA có extension theo loại review.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "PUB-ICMJE": {
+      "title": "ICMJE AI in publishing",
+      "urls": [
+        "https://www.icmje.org/recommendations/browse/artificial-intelligence/",
+        "https://www.icmje.org/recommendations/browse/manuscript-preparation/preparing-for-submission.html"
+      ],
+      "citation": "[ICMJE AI in publishing](https://www.icmje.org/recommendations/browse/artificial-intelligence/) và [manuscript/references](https://www.icmje.org/recommendations/browse/manuscript-preparation/preparing-for-submission.html), Recommendations updated January 2026",
+      "applicability": "Human chịu trách nhiệm accuracy; không đưa AI làm author/primary source; disclose tool/purpose; xác minh references bằng source thư mục hoặc source gốc; giữ retraction status và không upload manuscript khi confidentiality chưa bảo đảm. Phạm vi chính là medical publishing.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "PUB-COPE": {
+      "title": "COPE Retraction Guidelines, v2 November 2019",
+      "urls": [
+        "https://members.publicationethics.org/sites/default/files/retraction-guidelines-cope.pdf"
+      ],
+      "citation": "[COPE Retraction Guidelines, v2 November 2019](https://members.publicationethics.org/sites/default/files/retraction-guidelines-cope.pdf), truy cập 03/10/2026",
+      "applicability": "Phân biệt correction/retraction; notice phải identify publication, reason, issuer, link và giữ wording factual/objective. Chủ yếu journal article nhưng có thể áp cho preprint/other published documents theo bối cảnh.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "PUB-CROSSREF": {
+      "title": "Crossref version control, corrections and retractions",
+      "urls": [
+        "https://www.crossref.org/documentation/principles-practices/best-practices/versioning/"
+      ],
+      "citation": "[Crossref version control, corrections and retractions](https://www.crossref.org/documentation/principles-practices/best-practices/versioning/), page last updated 13/08/2025",
+      "applicability": "Không overwrite bản gốc khi thay đổi có ý nghĩa; giữ relation/version/update notice và metadata; traceability/identifiability là acceptance evidence.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "STAT-ASA": {
+      "title": "ASA Statement on Statistical Significance and P-Values",
+      "urls": [
+        "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf",
+        "https://www.amstat.org/policy-and-advocacy/asa-board-statements"
+      ],
+      "citation": "[ASA Statement on Statistical Significance and P-Values](https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf), 2016; [ASA Board Statements](https://www.amstat.org/policy-and-advocacy/asa-board-statements), truy cập 03/10/2026",
+      "applicability": "p-value không đo effect size, importance hay probability hypothesis đúng; không quyết định chỉ bởi ngưỡng p; inference cần full reporting/transparency và uncertainty.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "STAT-DORA": {
+      "title": "DORA Guidance on responsible use of quantitative indicators",
+      "urls": [
+        "https://sfdora.org/resource/guidance-on-the-responsible-use-of-quantitative-indicators-in-research-assessment/"
+      ],
+      "citation": "[DORA Guidance on responsible use of quantitative indicators](https://sfdora.org/resource/guidance-on-the-responsible-use-of-quantitative-indicators-in-research-assessment/), 2024",
+      "applicability": "Metrics phải clear, transparent, specific, contextual, fair; journal metric/rank không thay article-level method/evidence.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "STYLE-ADVISORY": {
+      "title": "Purdue paraphrasing",
+      "urls": [
+        "https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html",
+        "https://writingcenter.unc.edu/tips-and-tools/passive-voice/",
+        "https://www.phrasebank.manchester.ac.uk/using-cautious-language/"
+      ],
+      "citation": "[Purdue paraphrasing](https://owl.purdue.edu/owl/research_and_citation/using_research/quoting_paraphrasing_and_summarizing/paraphrasing.html), [UNC passive voice](https://writingcenter.unc.edu/tips-and-tools/passive-voice/), [Manchester cautious language](https://www.phrasebank.manchester.ac.uk/using-cautious-language/), truy cập 03/10/2026",
+      "applicability": "Có thể dùng làm heuristic cho paraphrase/citation, active/passive và modality. Đây là hướng dẫn sư phạm, không phải law/peer review/native-gold.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "VIS-NATURE": {
+      "title": "Nature Portfolio image integrity",
+      "urls": [
+        "https://www.nature.com/npjimaging/editorial-policies/image-integrity"
+      ],
+      "citation": "[Nature Portfolio image integrity](https://www.nature.com/npjimaging/editorial-policies/image-integrity), page truy cập 03/10/2026",
+      "applicability": "Giữ raw/unprocessed data và metadata; ghi acquisition/software/settings/processing; không làm thay đổi scientific meaning; có thể bị yêu cầu unprocessed files. Chỉ áp đúng Nature title/venue khi policy hiện hành đã được đọc.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "PUB-IEEE": {
+      "title": "IEEE Author Center Ethical Requirements",
+      "urls": [
+        "https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/ethical-requirements/"
+      ],
+      "citation": "[IEEE Author Center Ethical Requirements](https://journals.ieeeauthorcenter.ieee.org/become-an-ieee-journal-author/publishing-ethics/ethical-requirements/), current page truy cập 03/10/2026",
+      "applicability": "Cite source của text/idea/data/graphic/table; cấm fabrication/falsification và image adjustment làm đổi meaning; policy AI/venue cụ thể phải được kiểm riêng. Dùng cho publication/visual integrity khi task thực sự thuộc IEEE hoặc policy tương ứng.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "VIS-WCAG": {
+      "title": "WCAG 2.2",
+      "urls": [
+        "https://www.w3.org/press-releases/2025/wcag22-iso-pas/",
+        "https://www.w3.org/TR/WCAG22/"
+      ],
+      "citation": "[WCAG 2.2](https://www.w3.org/TR/WCAG22/), W3C Recommendation 12/12/2024; [W3C announcement ISO/IEC 40500:2025](https://www.w3.org/press-releases/2025/wcag22-iso-pas/)",
+      "applicability": "Conformance theo full page và level A/AA/AAA; yêu cầu scale, labels, contrast, keyboard, alternatives theo success criteria; không tuyên bố AAA mặc định.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "VIS-ARIA": {
+      "title": "WAI-ARIA 1.2",
+      "urls": [
+        "https://www.w3.org/TR/wai-aria-1.2/",
+        "https://www.w3.org/WAI/ARIA/apg/"
+      ],
+      "citation": "[WAI-ARIA 1.2](https://www.w3.org/TR/wai-aria-1.2/) Recommendation 06/06/2023; [ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/) truy cập 03/10/2026",
+      "applicability": "Dùng native semantics khi có; role/state/property phải khớp hành vi keyboard/accessibility tree; ARIA sai có thể misrepresent UI.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "VIS-PERF": {
+      "title": "Core Web Vitals",
+      "urls": [
+        "https://web.dev/articles/vitals"
+      ],
+      "citation": "[Core Web Vitals](https://web.dev/articles/vitals), current guidance truy cập 03/10/2026",
+      "applicability": "Với web, đo field data; current recommended 75th-percentile thresholds là LCP ≤2.5 s, INP ≤200 ms, CLS ≤0.1. Đây là web performance guidance, không phải generic skill-quality threshold.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-SSDF": {
+      "title": "NIST SP 800-218 SSDF v1.1",
+      "urls": [
+        "https://csrc.nist.gov/pubs/sp/800/218/final"
+      ],
+      "citation": "[NIST SP 800-218 SSDF v1.1](https://csrc.nist.gov/pubs/sp/800/218/final), 02/2022",
+      "applicability": "Secure practices phải tích hợp vào SDLC: protected design/code, testing/verification, vulnerability response và root-cause prevention. Không phải security guarantee.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-TEST": {
+      "title": "ISO/IEC/IEEE 29119-1:2022",
+      "urls": [
+        "https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso-iec-ieee%3A29119%3A-1%3Aed-2%3Av1%3Aen"
+      ],
+      "citation": "[ISO/IEC/IEEE 29119-1:2022](https://www.iso.org/obp/ui?_escaped_fragment_=iso%3Astd%3Aiso-iec-ieee%3A29119%3A-1%3Aed-2%3Av1%3Aen)",
+      "applicability": "Testing có risk-based concepts, planning/design/execution/defect communication; normative conformance nằm ở parts 2–4 và phải ghi tailoring nếu claim conformance.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-ASVS": {
+      "title": "OWASP ASVS 5.0.0",
+      "urls": [
+        "https://owasp.org/projects/asvs"
+      ],
+      "citation": "[OWASP ASVS 5.0.0](https://owasp.org/projects/asvs), current stable listed by OWASP, truy cập 03/10/2026",
+      "applicability": "Dùng requirement-level verification cho web security controls; scanner score không thay threat model/repro/mitigation.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-HTTP": {
+      "title": "RFC 9110 HTTP Semantics",
+      "urls": [
+        "https://www.rfc-editor.org/rfc/rfc9110.html",
+        "https://www.rfc-editor.org/rfc/rfc9457.html"
+      ],
+      "citation": "[RFC 9110 HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html), Standards Track 06/2022; [RFC 9457 Problem Details](https://www.rfc-editor.org/rfc/rfc9457.html), 07/2023",
+      "applicability": "API phải giữ method/status/content semantics và error detail machine-readable; response shape không tự chứng minh business correctness.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-OAS": {
+      "title": "OpenAPI Specification 3.1",
+      "urls": [
+        "https://spec.openapis.org/oas/v3.1"
+      ],
+      "citation": "[OpenAPI Specification 3.1](https://spec.openapis.org/oas/v3.1), latest 3.1.x page truy cập 03/10/2026",
+      "applicability": "Interface/schema/parameters/responses/security phải inspect được; OpenAPI mô tả contract, không chứng minh implementation/live compatibility.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-DATA": {
+      "title": "W3C Data on the Web Best Practices",
+      "urls": [
+        "https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/07/89/78914.html",
+        "https://www.w3.org/TR/dwbp/"
+      ],
+      "citation": "[W3C Data on the Web Best Practices](https://www.w3.org/TR/dwbp/), W3C Recommendation; [ISO/IEC 11179-1:2023](https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/07/89/78914.html)",
+      "applicability": "Metadata, stable identifiers, provenance, license, quality, version và machine-readable formats phải được giữ; metadata registry giúp định nghĩa data elements; không suy ra data validity từ schema.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-SLSA": {
+      "title": "SLSA Specification v1.2",
+      "urls": [
+        "https://slsa.dev/spec/v1.2/"
+      ],
+      "citation": "[SLSA Specification v1.2](https://slsa.dev/spec/v1.2/), current released version truy cập 03/10/2026",
+      "applicability": "Provenance phải mô tả builder/process/inputs/outputs và downstream verifier phải so expected values; provenance tồn tại không tự chứng minh secure build.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "ENG-GIT": {
+      "title": "Pro Git: branching workflows",
+      "urls": [
+        "https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows"
+      ],
+      "citation": "[Pro Git: branching workflows](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows), 2nd ed, truy cập 03/10/2026",
+      "applicability": "Topic branch, review trước merge, test before promotion và preserve history là workflow guidance; Git không cấp quyền commit/push/reset thay user.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-ISO": {
+      "title": "ISO 20252:2026",
+      "urls": [
+        "https://committee.iso.org/home/tc225",
+        "https://www.iso.org/standard/88881.html"
+      ],
+      "citation": "[ISO 20252:2026](https://www.iso.org/standard/88881.html), Edition 4, published 09/2026; [ISO/TC 225](https://committee.iso.org/home/tc225)",
+      "applicability": "Chuẩn mới cho market/opinion/social research, insights và data analytics; không áp direct marketing. Yêu cầu/thuật ngữ đầy đủ là copyrighted/paid, nên chỉ claim public-scope alignment cho tới khi có bản tiêu chuẩn được phép dùng.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-FTC": {
+      "title": "FTC Advertising and Marketing",
+      "urls": [
+        "https://www.ftc.gov/business-guidance/advertising-marketing",
+        "https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation"
+      ],
+      "citation": "[FTC Advertising and Marketing](https://www.ftc.gov/business-guidance/advertising-marketing), current page truy cập 03/10/2026; [Advertising substantiation policy](https://www.ftc.gov/legal-library/browse/ftc-policy-statement-regarding-advertising-substantiation)",
+      "applicability": "Claim quảng cáo phải truthful, non-deceptive, evidence-based và có reasonable basis trước khi chạy; testimonial phải phản ánh trải nghiệm thật và material connection phải disclose. Đây là legal guidance của Mỹ.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-CANSPAM": {
+      "title": "FTC CAN-SPAM compliance guide",
+      "urls": [
+        "https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business"
+      ],
+      "citation": "[FTC CAN-SPAM compliance guide](https://www.ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business), current page truy cập 03/10/2026",
+      "applicability": "Header/subject/advertisement identification, physical address, opt-out và honor request là checks cho commercial email tại Mỹ.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-PECR": {
+      "title": "ICO electronic-mail marketing guidance",
+      "urls": [
+        "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/",
+        "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/"
+      ],
+      "citation": "[ICO electronic-mail marketing guidance](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/), updated 28/04/2026; [consent checklist](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-direct-marketing-using-electronic-mail/how-do-we-comply-with-the-pecr-electronic-mail-marketing-rules/)",
+      "applicability": "Consent phải specific/informed/affirmative; record consent and suppression. Đây là UK PECR/UK GDPR guidance, không thay Vietnamese law.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-SEO": {
+      "title": "Google Search Essentials",
+      "urls": [
+        "https://developers.google.com/search/docs/essentials",
+        "https://developers.google.com/search/docs/fundamentals/seo-starter-guide"
+      ],
+      "citation": "[Google Search Essentials](https://developers.google.com/search/docs/essentials), last updated 10/12/2025; [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide)",
+      "applicability": "Technical eligibility, spam policy, helpful people-first content, crawlable links, titles/alt text/structured data; Google explicitly does not guarantee crawling/indexing/ranking.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-ANALYTICS": {
+      "title": "GA4 dimensions and metrics",
+      "urls": [
+        "https://developers.google.com/analytics/devguides/collection/protocol/ga4/validating-events",
+        "https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema"
+      ],
+      "citation": "[GA4 dimensions and metrics](https://developers.google.com/analytics/devguides/reporting/data/v1/api-schema), [event validation](https://developers.google.com/analytics/devguides/collection/protocol/ga4/validating-events), current docs truy cập 03/10/2026",
+      "applicability": "Metric phải có definition/denominator; event schema cần validate; sampling, approximation, thresholding và freshness phải được disclose. GA4 metric is platform-specific, not causal truth.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "MKT-EXP": {
+      "title": "Microsoft Research: trustworthy experimentation, pre-experiment",
+      "urls": [
+        "https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf",
+        "https://www.microsoft.com/en-us/research/?p=680556",
+        "https://www.microsoft.com/en-us/research/?p=720145"
+      ],
+      "citation": "[Microsoft Research: trustworthy experimentation, pre-experiment](https://www.microsoft.com/en-us/research/?p=680556) (31/07/2020) và [during-experiment](https://www.microsoft.com/en-us/research/?p=720145) (25/01/2021); [ASA p-values](https://www.amstat.org/asa/files/pdfs/p-valuestatement.pdf)",
+      "applicability": "Hypothesis falsifiable, randomization unit, power/sample plan, data-quality/OEC/feature/guardrail metrics, early monitoring without peeking misuse, and uncertainty reporting. Microsoft posts are practice guidance, not an international standard.",
+      "limitations": "The source table records applicability/support but has no separate adoption-risk column; apply only the stated source scope and do not infer universal compliance.",
+      "retrieved_on": "2026-10-03"
+    },
+    "AI-RISK": {
+      "title": "NIST AI Risk Management Framework",
+      "urls": [
+        "https://www.nist.gov/itl/ai-risk-management-framework"
+      ],
+      "citation": "[NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework), AI RMF 1.0 phát hành 26/01/2023; trang hiện ghi framework đang được revision, truy cập 03/10/2026",
+      "applicability": "Dùng các function Govern/Map/Measure/Manage để ghi owner, scope, risk, evidence, residual risk và kiểm soát theo vòng đời; tài liệu và logging giúp minh bạch, review và accountability. Đây là nguồn hỗ trợ cho risk/authority receipt của kit.",
+      "limitations": "NIST AI RMF là voluntary framework, không cấp quyền gọi tool, không định nghĩa permission model hay universal pass threshold. Explicit grant, side-effect stop và routing của NCKH là local contract.",
+      "retrieved_on": "2026-10-03"
+    },
+    "AI-HUMAN": {
+      "title": "NIST AI RMF Core",
+      "urls": [
+        "https://agentskills.io/skill-creation/evaluating-skills",
+        "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+      ],
+      "citation": "[NIST AI RMF Core](https://airc.nist.gov/airmf-resources/airmf/5-sec-core/) và [Agent Skills evaluation guidance](https://agentskills.io/skill-creation/evaluating-skills), current pages truy cập 03/10/2026",
+      "applicability": "Giữ vai trò và trách nhiệm human/AI, dùng human feedback cho thuộc tính khó tự động chấm, ghi evidence/uncertainty và không để model output thay domain, native, scientific hoặc owner acceptance.",
+      "limitations": "NIST không biến human review thành một tỷ lệ bắt buộc; Agent Skills guidance không phải peer review/scientific qualification. Human/domain/native gates vẫn theo qualification nội bộ và có thể `pending` trong self-use.",
+      "retrieved_on": "2026-10-03"
+    }
+  },
+  "skills": {
+    "nckh-plan": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-plan:positive",
+        "nckh-plan:negative",
+        "nckh-plan:outcome",
+        "nckh-plan:failure"
+      ],
+      "criteria": {
+        "positive": "brief mơ hồ được chuyển thành outcome, scope, non-goal, dependencies và phase plan.",
+        "negative": "yêu cầu implement/cook/deploy nhưng skill phải dừng ở plan hoặc handoff.",
+        "failure_or_output": "Có `plan.md` index và phase detail; claim/assumption/unknown được tách; không gọi structure validation là behavioral success.",
+        "authority": "Không provider/paid/external write; không phát minh input."
+      },
+      "source_ids": [
+        "AS-EVAL",
+        "AS-DESIGN",
+        "AI-RISK",
+        "RES-EQUATOR"
+      ]
+    },
+    "nckh-cook": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-cook:positive",
+        "nckh-cook:negative",
+        "nckh-cook:outcome",
+        "nckh-cook:failure"
+      ],
+      "criteria": {
+        "positive": "phase đã được grant được thực thi theo state/validate/fix/test/review.",
+        "negative": "plan-only hoặc thiếu grant phải preview/stop; không tự mở scope.",
+        "failure_or_output": "Receipt giữ command/action, exit, files, failure và rollback; output là kết quả thật, không fake fixture.",
+        "authority": "Stop tại provider, publish, payment, deploy, irreversible hoặc human gate chưa grant."
+      },
+      "source_ids": [
+        "AS-EVAL",
+        "ENG-SSDF",
+        "AI-RISK"
+      ]
+    },
+    "nckh-review": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-review:positive",
+        "nckh-review:negative",
+        "nckh-review:outcome",
+        "nckh-review:failure"
+      ],
+      "criteria": {
+        "positive": "artifact/diff được đánh giá theo matrix severity/evidence/owner/recommendation.",
+        "negative": "review không được tự sửa, gọi model critique là peer review, hay accept thay human/domain reviewer.",
+        "failure_or_output": "Mỗi finding có locator và required edit; pass/fail/pending/not-applicable riêng theo technical/agent/native/human.",
+        "authority": "Không aggregate khi required gate pending; human/scientific claims vẫn pending khi thiếu reviewer."
+      },
+      "source_ids": [
+        "AS-EVAL",
+        "AI-HUMAN",
+        "PUB-ICMJE"
+      ]
+    },
+    "nckh-handoff": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-handoff:positive",
+        "nckh-handoff:negative",
+        "nckh-handoff:outcome",
+        "nckh-handoff:failure"
+      ],
+      "criteria": {
+        "positive": "tạo state bền gồm scope, revision, artifacts, checks, open gates, next action.",
+        "negative": "thiếu evidence hoặc chưa accept phải bàn giao pending, không viết “done”.",
+        "failure_or_output": "Manifest/hash/path/owner/next step đọc lại được; resume không mất failed attempts.",
+        "authority": "Không accept thay người, không spawn/message/publish mặc định."
+      },
+      "source_ids": [
+        "AS-FMT",
+        "AS-EVAL",
+        "ENG-SLSA"
+      ]
+    },
+    "nckh-research": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-research:positive",
+        "nckh-research:negative",
+        "nckh-research:outcome",
+        "nckh-research:failure"
+      ],
+      "criteria": {
+        "positive": "search/screen/synthesis theo query, date, inclusion/exclusion và mode đã chọn.",
+        "negative": "prompt đòi novelty/result nhưng không có source; không tự mở systematic mode.",
+        "failure_or_output": "Search log, reader/source cards, exact locators, counterevidence, source status và bounded synthesis; unknown giữ nguyên.",
+        "authority": "Public access không đồng nghĩa redistribution; source rights và venue/year/article type phải rõ."
+      },
+      "source_ids": [
+        "RES-EQUATOR",
+        "RES-PRISMA",
+        "PUB-ICMJE",
+        "PUB-CROSSREF"
+      ]
+    },
+    "nckh-evidence": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-evidence:positive",
+        "nckh-evidence:negative",
+        "nckh-evidence:outcome",
+        "nckh-evidence:failure"
+      ],
+      "criteria": {
+        "positive": "claim/quote/DOI/citation được xác minh identity, source, locator, version và support.",
+        "negative": "DOI/title/rank/abstract/metadata không được dùng làm semantic proof; claim không có source phải `pending`.",
+        "failure_or_output": "Giữ original context, quote exact, correction/retraction, confidence/status và counterevidence; không sửa source record.",
+        "authority": "Không upload confidential manuscript; retracted source chỉ cite để thảo luận retraction với wording phù hợp."
+      },
+      "source_ids": [
+        "PUB-ICMJE",
+        "PUB-COPE",
+        "PUB-CROSSREF",
+        "STAT-DORA"
+      ]
+    },
+    "nckh-method": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-method:positive",
+        "nckh-method:negative",
+        "nckh-method:outcome",
+        "nckh-method:failure"
+      ],
+      "criteria": {
+        "positive": "question/design/protocol có variables, assumptions, comparison axes, limitations.",
+        "negative": "yêu cầu invent result, chạy experiment hay thay ethics/domain signoff phải dừng.",
+        "failure_or_output": "Method/argument outline không chứa result giả; study design và reporting guideline được gắn đúng loại.",
+        "authority": "Không gọi checklist là study validity; domain/ethics authority là input ngoài skill."
+      },
+      "source_ids": [
+        "RES-EQUATOR",
+        "RES-PRISMA",
+        "STAT-ASA",
+        "AI-HUMAN"
+      ]
+    },
+    "nckh-write": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-write:positive",
+        "nckh-write:negative",
+        "nckh-write:outcome",
+        "nckh-write:failure"
+      ],
+      "criteria": {
+        "positive": "draft/polish/VI↔EN theo brief, giữ terminology và certainty.",
+        "negative": "invent citation, đổi association thành causality, xóa limitation hoặc rewrite protected region phải fail/defer.",
+        "failure_or_output": "Minimal diff/source-linked diff; numbers, units, negation, names, citations, modality và protected text unchanged; factual delta có evidence.",
+        "authority": "AI disclosure/permission theo venue; không coi fluency là scientific validity."
+      },
+      "source_ids": [
+        "PUB-ICMJE",
+        "PUB-IEEE",
+        "STYLE-ADVISORY",
+        "STAT-ASA"
+      ]
+    },
+    "nckh-taste": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-taste:positive",
+        "nckh-taste:negative",
+        "nckh-taste:outcome",
+        "nckh-taste:failure"
+      ],
+      "criteria": {
+        "positive": "critique có vị trí, register, rhythm, vocabulary, audience/genre và owner preference.",
+        "negative": "không AI detector, ban-word absolute, fake native gold hoặc scientific verdict.",
+        "failure_or_output": "Suggestions cụ thể, tách defect khỏi subjective choice; full rewrite chỉ khi được phép; VI/EN profiles không trộn.",
+        "authority": "Owner có thể tự review trong self-use; thiếu corpus/reader/domain thì verdict taste/domain `pending`."
+      },
+      "source_ids": [
+        "AS-EVAL",
+        "STYLE-ADVISORY",
+        "AI-HUMAN"
+      ]
+    },
+    "nckh-visuals": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-visuals:positive",
+        "nckh-visuals:negative",
+        "nckh-visuals:outcome",
+        "nckh-visuals:failure"
+      ],
+      "criteria": {
+        "positive": "storyboard/chart/diagram/slide map source → mark/label/arrow và output medium.",
+        "negative": "không tạo data/measurement, nhận raster là editable, hoặc gọi render/export pass khi chưa inspect.",
+        "failure_or_output": "Axes/units/denominators/uncertainty/caption/alt/reading order đúng; source native mở được, objects editable, render gắn cùng hash và QA receipt.",
+        "authority": "Asset/AI/venue rights và exact policy phải được clear; image processing giữ meaning."
+      },
+      "source_ids": [
+        "VIS-NATURE",
+        "PUB-IEEE",
+        "VIS-WCAG",
+        "VIS-ARIA"
+      ]
+    },
+    "nckh-scout": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-scout:positive",
+        "nckh-scout:negative",
+        "nckh-scout:outcome",
+        "nckh-scout:failure"
+      ],
+      "criteria": {
+        "positive": "locate owner, symbol, dependency, caller và flow bằng path/line evidence.",
+        "negative": "không thiết kế/sửa từ tên file đoán.",
+        "failure_or_output": "Source map liệt kê verified path, caller và unknown; không claim runtime behavior khi chỉ đọc static.",
+        "authority": "Read-only mặc định, không external write."
+      },
+      "source_ids": [
+        "AS-EVAL",
+        "ENG-SSDF"
+      ]
+    },
+    "nckh-debug": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-debug:positive",
+        "nckh-debug:negative",
+        "nckh-debug:outcome",
+        "nckh-debug:failure"
+      ],
+      "criteria": {
+        "positive": "symptom được reproduce, trace, counter-hypothesis và cause evidence.",
+        "negative": "diagnose-only không patch; không đổi code chỉ vì stack trace đoán.",
+        "failure_or_output": "Repro command/env/observed failure/limits; failed test giữ nguyên.",
+        "authority": "Không production mutation, secrets hoặc paid provider; process trace phải thuộc scope."
+      },
+      "source_ids": [
+        "ENG-TEST",
+        "ENG-SSDF",
+        "AS-EVAL"
+      ]
+    },
+    "nckh-fix": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-fix:positive",
+        "nckh-fix:negative",
+        "nckh-fix:outcome",
+        "nckh-fix:failure"
+      ],
+      "criteria": {
+        "positive": "patch gắn cause đã chứng minh và có regression evidence.",
+        "negative": "không refactor unrelated, disable failing test, hoặc che lỗi.",
+        "failure_or_output": "Diff narrow, before/after test, failure/rollback, dirty-tree preservation.",
+        "authority": "Backup/permission trước data change; không commit/push mặc định."
+      },
+      "source_ids": [
+        "ENG-SSDF",
+        "ENG-TEST",
+        "ENG-GIT"
+      ]
+    },
+    "nckh-test": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-test:positive",
+        "nckh-test:negative",
+        "nckh-test:outcome",
+        "nckh-test:failure"
+      ],
+      "criteria": {
+        "positive": "test design/chạy theo touched contract, receipt có scope/env/result.",
+        "negative": "không mock success, synthetic fixture thành live acceptance, unit pass thành integration/live proof.",
+        "failure_or_output": "Test assertions observable; output/failure/timeout/unknown cleanup giữ đúng; broaden only when shared contract changes.",
+        "authority": "Không gọi live/paid/external data nếu chưa grant."
+      },
+      "source_ids": [
+        "AS-EVAL",
+        "ENG-TEST",
+        "AI-RISK"
+      ]
+    },
+    "nckh-code-review": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-code-review:positive",
+        "nckh-code-review:negative",
+        "nckh-code-review:outcome",
+        "nckh-code-review:failure"
+      ],
+      "criteria": {
+        "positive": "diff/public contract review tìm actionable issue theo severity/evidence.",
+        "negative": "review-only không sửa code, không style churn/merge/publish.",
+        "failure_or_output": "Finding có file/line, impact, repro/why, required edit; no finding cũng có inspected scope.",
+        "authority": "Không biến scanner/LLM score thành security guarantee; code owner quyết định merge."
+      },
+      "source_ids": [
+        "ENG-SSDF",
+        "ENG-ASVS",
+        "ENG-OAS"
+      ]
+    },
+    "nckh-security": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-security:positive",
+        "nckh-security:negative",
+        "nckh-security:outcome",
+        "nckh-security:failure"
+      ],
+      "criteria": {
+        "positive": "asset/threat/trust boundary/repro/mitigation được lập.",
+        "negative": "không pentest ngoài quyền, upload secret, hoặc claim secure vì scanner score.",
+        "failure_or_output": "Threat model, evidence, residual risk, mitigation verification và fail-closed limits.",
+        "authority": "Credentials/production/external target cần grant rõ; legal scope và privacy không đoán."
+      },
+      "source_ids": [
+        "ENG-SSDF",
+        "ENG-ASVS",
+        "AI-RISK",
+        "AI-HUMAN"
+      ]
+    },
+    "nckh-context": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-context:positive",
+        "nckh-context:negative",
+        "nckh-context:outcome",
+        "nckh-context:failure"
+      ],
+      "criteria": {
+        "positive": "minimum-sufficient packet, load/retire plan, measured/unknown context usage.",
+        "negative": "không hard-code token window, leak secret, hoặc nhồi toàn repo.",
+        "failure_or_output": "Packet giữ exact paths/versions/evidence/uncertainty; retire stale context; no secret in handoff.",
+        "authority": "Access control/private store preserved; no provider/model assumption."
+      },
+      "source_ids": [
+        "AS-DESIGN",
+        "AS-CLIENT",
+        "AI-RISK"
+      ]
+    },
+    "nckh-docs": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-docs:positive",
+        "nckh-docs:negative",
+        "nckh-docs:outcome",
+        "nckh-docs:failure"
+      ],
+      "criteria": {
+        "positive": "user-visible behavior/setup/architecture/contract đổi thì sửa owning doc, source-checked links/examples.",
+        "negative": "phase completion nội bộ không tự tạo docs churn; fetched docs không phải instruction authority.",
+        "failure_or_output": "Link/source/version và example chạy được hoặc ghi limitation; docs diff khớp behavior/revision.",
+        "authority": "Không publish mặc định, không copy policy/credential từ fetched page."
+      },
+      "source_ids": [
+        "AS-FMT",
+        "ENG-OAS",
+        "ENG-DATA"
+      ]
+    },
+    "nckh-frontend": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-frontend:positive",
+        "nckh-frontend:negative",
+        "nckh-frontend:outcome",
+        "nckh-frontend:failure"
+      ],
+      "criteria": {
+        "positive": "UI contract gồm UX/a11y/components/state/performance và implementation/render checks theo quyền.",
+        "negative": "không clone trademark/assets, ép framework, hoặc claim visual pass từ source text.",
+        "failure_or_output": "WCAG/ARIA keyboard/name/contrast/alt/reading order; responsive/render evidence; Core Web Vitals nếu web.",
+        "authority": "User data/privacy/asset rights; external deploy/publish cần grant."
+      },
+      "source_ids": [
+        "VIS-WCAG",
+        "VIS-ARIA",
+        "VIS-PERF",
+        "ENG-SSDF"
+      ]
+    },
+    "nckh-backend": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-backend:positive",
+        "nckh-backend:negative",
+        "nckh-backend:outcome",
+        "nckh-backend:failure"
+      ],
+      "criteria": {
+        "positive": "API/service/auth/data boundary có contract, validation, error/status và tests.",
+        "negative": "không đổi DB/pricing/payment scope âm thầm, không expose secret.",
+        "failure_or_output": "OpenAPI/RFC semantics, auth matrix, validation, error shape, integration receipt; no invented response schema.",
+        "authority": "Production migration, payment, external API, credentials require explicit authority."
+      },
+      "source_ids": [
+        "ENG-HTTP",
+        "ENG-OAS",
+        "ENG-ASVS",
+        "ENG-SSDF"
+      ]
+    },
+    "nckh-data": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-data:positive",
+        "nckh-data:negative",
+        "nckh-data:outcome",
+        "nckh-data:failure"
+      ],
+      "criteria": {
+        "positive": "schema/query/migration có data contract, backup, rollback, integrity checks.",
+        "negative": "không drop/bulk-update/migrate chưa backup/quyền hoặc claim valid từ schema alone.",
+        "failure_or_output": "Before/after row/schema/query evidence, backup/restore/rollback receipt, provenance/license/quality metadata.",
+        "authority": "Privacy, retention, production DB và destructive action cần grant."
+      },
+      "source_ids": [
+        "ENG-DATA",
+        "ENG-SSDF",
+        "ENG-TEST",
+        "ENG-OAS"
+      ]
+    },
+    "nckh-devops": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-devops:positive",
+        "nckh-devops:negative",
+        "nckh-devops:outcome",
+        "nckh-devops:failure"
+      ],
+      "criteria": {
+        "positive": "reproducible build/env, rollout/health/rollback route được mô tả và kiểm.",
+        "negative": "token có sẵn không đủ để deploy/cloud mutation.",
+        "failure_or_output": "Build artifact/hash, inputs, builder/process, health/rollback/timeout/cleanup; failed deploy visible.",
+        "authority": "External mutation, secrets, DNS/cloud resource require grant; no “production-ready” from local build."
+      },
+      "source_ids": [
+        "ENG-SSDF",
+        "ENG-SLSA",
+        "AI-RISK"
+      ]
+    },
+    "nckh-git": {
+      "kit": "engineer",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-git:positive",
+        "nckh-git:negative",
+        "nckh-git:outcome",
+        "nckh-git:failure"
+      ],
+      "criteria": {
+        "positive": "narrow diff/status/branch/commit/PR operation được user yêu cầu.",
+        "negative": "không auto-commit/push/publish/reset/checkout over dirty edits.",
+        "failure_or_output": "Exact diff, status, branch/ref, commit identity and preserved dirty tree; no invented clean state.",
+        "authority": "User owns dirty tree; remote write and irreversible history action explicit."
+      },
+      "source_ids": [
+        "ENG-GIT",
+        "ENG-SLSA"
+      ]
+    },
+    "nckh-xia": {
+      "kit": "tooling",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-xia:positive",
+        "nckh-xia:negative",
+        "nckh-xia:outcome",
+        "nckh-xia:failure"
+      ],
+      "criteria": {
+        "positive": "source repo được extract/compare/adapt theo manifest và decision matrix.",
+        "negative": "compare-only không tự tạo plan/code; unknown license/dependency phải stop; không clone full repo/install mặc định.",
+        "failure_or_output": "Source URL/revision/hash/license, anatomy, dependencies, disposition, local fit, rollback và report/plan; distinguish observed vs inferred.",
+        "authority": "License, third-party assets, supply-chain provenance và package boundaries phải clear trước port."
+      },
+      "source_ids": [
+        "AS-FMT",
+        "ENG-SLSA",
+        "ENG-DATA"
+      ]
+    },
+    "nckh-market-research": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-market-research:positive",
+        "nckh-market-research:negative",
+        "nckh-market-research:outcome",
+        "nckh-market-research:failure"
+      ],
+      "criteria": {
+        "positive": "sourced market/customer/competitor map có sample/date/method.",
+        "negative": "không bịa market size, quote, customer insight hoặc scrape private data.",
+        "failure_or_output": "Source identity, geography/time, sample/unknowns, comparison axes và conflict ledger; fact vs inference tách.",
+        "authority": "Privacy, consent, source terms; no direct marketing scope expansion."
+      },
+      "source_ids": [
+        "MKT-ISO",
+        "MKT-FTC",
+        "PUB-CROSSREF"
+      ]
+    },
+    "nckh-brand": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-brand:positive",
+        "nckh-brand:negative",
+        "nckh-brand:outcome",
+        "nckh-brand:failure"
+      ],
+      "criteria": {
+        "positive": "audience, positioning, message hierarchy, voice và design brief.",
+        "negative": "không tự tạo final logo/asset, legal clearance hoặc trademark claim.",
+        "failure_or_output": "Brief đủ audience/locale/voice/constraints; claims traceable; options có rationale, không giả human preference.",
+        "authority": "Rights/trademark/legal owner; no publish/asset production without grant."
+      },
+      "source_ids": [
+        "MKT-FTC",
+        "MKT-ISO",
+        "AI-HUMAN"
+      ]
+    },
+    "nckh-marketing-plan": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-marketing-plan:positive",
+        "nckh-marketing-plan:negative",
+        "nckh-marketing-plan:outcome",
+        "nckh-marketing-plan:failure"
+      ],
+      "criteria": {
+        "positive": "strategy có goal/hypothesis/channel/KPI/budget decision/measurement constraints.",
+        "negative": "không cấp spend, chạy campaign hoặc biến plan thành deploy.",
+        "failure_or_output": "KPI definition/denominator, assumptions, dependencies, risk and rollback/comms; no invented forecast.",
+        "authority": "Owner approves budget/audience/claims; external spend remains gate."
+      },
+      "source_ids": [
+        "MKT-ISO",
+        "MKT-FTC",
+        "MKT-EXP",
+        "AI-RISK"
+      ]
+    },
+    "nckh-campaign": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-campaign:positive",
+        "nckh-campaign:negative",
+        "nckh-campaign:outcome",
+        "nckh-campaign:failure"
+      ],
+      "criteria": {
+        "positive": "brief đã có được chuyển thành channel/content schedule, task, asset acceptance và measurement.",
+        "negative": "không run ads, tăng budget hoặc publish auto.",
+        "failure_or_output": "Per-channel artifact, source/rights, dates/timezone, KPI/owner/status; no implied live execution.",
+        "authority": "Consent, rights, ad policy and spend approval; vendor/platform mutation blocked."
+      },
+      "source_ids": [
+        "MKT-FTC",
+        "MKT-CANSPAM",
+        "MKT-PECR"
+      ]
+    },
+    "nckh-launch": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-launch:positive",
+        "nckh-launch:negative",
+        "nckh-launch:outcome",
+        "nckh-launch:failure"
+      ],
+      "criteria": {
+        "positive": "GTM sequence có readiness, audience, rollout/rollback/comms.",
+        "negative": "không deploy product hoặc send notice mặc định.",
+        "failure_or_output": "Launch checklist identifies product/release revision, dependencies, owners, rollback and unresolved gates.",
+        "authority": "External publish/deploy/comms require approval; technical readiness does not equal market/legal readiness."
+      },
+      "source_ids": [
+        "MKT-ISO",
+        "MKT-FTC",
+        "ENG-SSDF"
+      ]
+    },
+    "nckh-content": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-content:positive",
+        "nckh-content:negative",
+        "nckh-content:outcome",
+        "nckh-content:failure"
+      ],
+      "criteria": {
+        "positive": "content strategy/editorial pillars, intent, calendar, briefs, reuse/provenance.",
+        "negative": "không rewrite/publish all copy from a strategy request.",
+        "failure_or_output": "Audience/locale/channel/claims/rights and content lifecycle; source and refresh date; no copied corpus without rights.",
+        "authority": "Privacy, license, publication route and owner approval."
+      },
+      "source_ids": [
+        "MKT-SEO",
+        "MKT-FTC",
+        "MKT-ISO"
+      ]
+    },
+    "nckh-copy": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-copy:positive",
+        "nckh-copy:negative",
+        "nckh-copy:outcome",
+        "nckh-copy:failure"
+      ],
+      "criteria": {
+        "positive": "claim-grounded variants, CTA, tone and revisions theo brief.",
+        "negative": "fake testimonial/scarcity/result, unsupported statistic, or fact drift must fail.",
+        "failure_or_output": "Claim ledger maps each objective claim to source; distinguish subjective copy from factual support; variant diff preserved.",
+        "authority": "FTC/CAP/jurisdiction, consent and legal review for regulated claims."
+      },
+      "source_ids": [
+        "MKT-FTC",
+        "MKT-CANSPAM",
+        "STYLE-ADVISORY"
+      ]
+    },
+    "nckh-seo": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-seo:positive",
+        "nckh-seo:negative",
+        "nckh-seo:outcome",
+        "nckh-seo:failure"
+      ],
+      "criteria": {
+        "positive": "search intent/crawl/index/on-page audit with prioritized fixes and observed URLs.",
+        "negative": "no rank guarantee, keyword stuffing, cloaking or exploit.",
+        "failure_or_output": "Evidence from crawl/Search Console/source; titles, links, text/alt/structured data and noindex/robots impact recorded.",
+        "authority": "No DNS/robots/publish changes without grant; Google guidance is vendor-specific and ranking never guaranteed."
+      },
+      "source_ids": [
+        "MKT-SEO",
+        "VIS-WCAG",
+        "MKT-ANALYTICS"
+      ]
+    },
+    "nckh-email": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-email:positive",
+        "nckh-email:negative",
+        "nckh-email:outcome",
+        "nckh-email:failure"
+      ],
+      "criteria": {
+        "positive": "lifecycle sequence/artifact with segments/assumptions/copy/suppression.",
+        "negative": "no send or upload contacts from a draft request.",
+        "failure_or_output": "Subject/header/body/CTA/opt-out/address, consent record and suppression path; no hidden transactional/commercial reclassification.",
+        "authority": "CAN-SPAM/PECR/other jurisdiction and data controller approval; delivery adapter optional."
+      },
+      "source_ids": [
+        "MKT-CANSPAM",
+        "MKT-PECR",
+        "MKT-FTC"
+      ]
+    },
+    "nckh-social": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-social:positive",
+        "nckh-social:negative",
+        "nckh-social:outcome",
+        "nckh-social:failure"
+      ],
+      "criteria": {
+        "positive": "platform-scoped drafts/calendar/moderation plan with source/rights.",
+        "negative": "no post/follow/DM, fake organic evidence or engagement manipulation.",
+        "failure_or_output": "Platform, locale, dates, hashtags/claims, disclosure, asset rights and moderation escalation are inspectable.",
+        "authority": "Account access, consent, platform policy and external publication require grant."
+      },
+      "source_ids": [
+        "MKT-FTC",
+        "MKT-PECR",
+        "MKT-ISO"
+      ]
+    },
+    "nckh-analytics": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-analytics:positive",
+        "nckh-analytics:negative",
+        "nckh-analytics:outcome",
+        "nckh-analytics:failure"
+      ],
+      "criteria": {
+        "positive": "KPI/funnel/campaign readout with definitions and data-quality checks.",
+        "negative": "no fabricated numbers, causal lift or attribution from correlation.",
+        "failure_or_output": "Denominator, window, sampling/threshold/freshness, event validation and uncertainty retained; descriptive vs causal wording separated.",
+        "authority": "Personal data access and causal/inferential signoff; GA4 definitions do not generalize to every platform."
+      },
+      "source_ids": [
+        "MKT-ANALYTICS",
+        "STAT-ASA",
+        "STAT-DORA",
+        "MKT-EXP"
+      ]
+    },
+    "nckh-cro": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-cro:positive",
+        "nckh-cro:negative",
+        "nckh-cro:outcome",
+        "nckh-cro:failure"
+      ],
+      "criteria": {
+        "positive": "page/form/onboarding friction diagnosis with prioritized hypotheses and UX evidence.",
+        "negative": "no uplift guarantee or live test launch.",
+        "failure_or_output": "Funnel step, observed evidence, hypothesis, metric/guardrail and implementation owner; WCAG/accessibility issues separated from conversion claims.",
+        "authority": "No traffic/budget/publish mutation; hypothesis passes to experiment owner."
+      },
+      "source_ids": [
+        "VIS-WCAG",
+        "MKT-SEO",
+        "MKT-EXP"
+      ]
+    },
+    "nckh-experiment": {
+      "kit": "marketing",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-experiment:positive",
+        "nckh-experiment:negative",
+        "nckh-experiment:outcome",
+        "nckh-experiment:failure"
+      ],
+      "criteria": {
+        "positive": "A/B design/readout with unit/randomization, success/guardrail/data-quality metrics, power/sample/stopping plan and uncertainty.",
+        "negative": "no live traffic/budget change, peeking claim or causal language from observational data.",
+        "failure_or_output": "Treatment/control, assignment, exposure, denominator, SRM/data-quality checks, effect/uncertainty, duration and limits; no invented results.",
+        "authority": "Owner approval, privacy/ethics, telemetry and experiment platform; local design does not imply run."
+      },
+      "source_ids": [
+        "MKT-EXP",
+        "STAT-ASA",
+        "MKT-ANALYTICS",
+        "AI-RISK"
+      ]
+    }
+  }
+}

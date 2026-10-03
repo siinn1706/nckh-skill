@@ -1,0 +1,62 @@
+{
+  "agent_encoding": "Markdown frontmatter; model/effort support model-specific",
+  "agent_root": ".claude/agents",
+  "as_of": "2026-10-01 Asia/Saigon",
+  "auto_policy": {
+    "blanket_bypass_flags": [],
+    "egress": "current human grant only",
+    "external_irreversible": "ask-or-deny",
+    "mandatory_human_gates": "preserved",
+    "permission_mode": "preserve host policy",
+    "sandbox": "preserve host sandbox",
+    "workflow_pauses": "disabled for authorized reversible phases"
+  },
+  "compatibility_project": [
+    ".claude/skills"
+  ],
+  "evidence_state": "docs-only",
+  "hooks": {
+    "coverage": "unverified",
+    "enforcement": "host permissions; no hook guarantee",
+    "state": "not-installed"
+  },
+  "id": "claude",
+  "label": "Claude Code",
+  "model_control": {
+    "allow_core_vendor_ids": false,
+    "effective": "unknown",
+    "requested": "distinct from effective",
+    "state": "unverified"
+  },
+  "native_qualification": "unverified",
+  "plugin": {
+    "copied": false,
+    "enabled": false,
+    "projected": false,
+    "registered": false,
+    "session_only": false,
+    "state": "unverified",
+    "tested": false,
+    "trusted": false
+  },
+  "revision": "1",
+  "schema_version": 1,
+  "skill_representation": "shared-neutral",
+  "sources": [
+    "https://code.claude.com/docs/en/skills",
+    "https://code.claude.com/docs/en/sub-agents"
+  ],
+  "surfaces": {
+    "claude-code": {
+      "global": ".claude/skills",
+      "invocation": "/NAME",
+      "project": ".claude/skills",
+      "version": "2.1.272"
+    }
+  },
+  "symlink_qualification": {
+    "Linux": "unverified",
+    "Windows": "unverified",
+    "macOS": "unverified"
+  }
+}

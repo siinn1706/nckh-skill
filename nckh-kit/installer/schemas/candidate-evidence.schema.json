@@ -1,0 +1,17 @@
+{
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "evidence_class", "closure_hashes", "source_lock_hashes", "affected_skills", "checks", "qualification"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "evidence_class": {"enum": ["static", "deterministic", "agent-behavior", "native", "synthetic-fixture"]},
+    "closure_hashes": {"type": "object"},
+    "source_lock_hashes": {"type": "object"},
+    "affected_skills": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^nckh-[a-z0-9]+(-[a-z0-9]+)*$"}},
+    "checks": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "result", "receipt", "receipt_sha256"],
+      "properties": {"id": {"type": "string", "minLength": 1}, "result": {"const": "pass"}, "receipt": {"type": "string", "minLength": 1}, "receipt_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}}
+    }},
+    "qualification": {"enum": ["pending", "accepted-for-scope"]}
+  }
+}

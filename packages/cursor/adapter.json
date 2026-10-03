@@ -1,0 +1,71 @@
+{
+  "agent_encoding": "Markdown; model string/native parameters; effort encoding needs capability evidence",
+  "agent_root": ".cursor/agents",
+  "as_of": "2026-10-01 Asia/Saigon",
+  "auto_policy": {
+    "blanket_bypass_flags": [],
+    "egress": "current human grant only",
+    "external_irreversible": "ask-or-deny",
+    "mandatory_human_gates": "preserved",
+    "permission_mode": "preserve host policy",
+    "sandbox": "preserve host sandbox",
+    "workflow_pauses": "disabled for authorized reversible phases"
+  },
+  "compatibility_project": [
+    ".cursor/skills",
+    ".agents/skills",
+    ".claude/skills",
+    ".codex/skills"
+  ],
+  "evidence_state": "docs-only",
+  "hooks": {
+    "coverage": "unverified",
+    "enforcement": "host permissions; no hook guarantee",
+    "state": "not-installed"
+  },
+  "id": "cursor",
+  "label": "Cursor",
+  "model_control": {
+    "allow_core_vendor_ids": false,
+    "effective": "unknown",
+    "requested": "distinct from effective",
+    "state": "unverified"
+  },
+  "native_qualification": "unverified",
+  "plugin": {
+    "copied": false,
+    "enabled": false,
+    "projected": false,
+    "registered": false,
+    "session_only": false,
+    "state": "unverified",
+    "tested": false,
+    "trusted": false
+  },
+  "revision": "1",
+  "schema_version": 1,
+  "skill_representation": "shared-neutral",
+  "sources": [
+    "https://prod.cursor.com/docs/skills",
+    "https://prod.cursor.com/docs/subagents"
+  ],
+  "surfaces": {
+    "cursor-cli": {
+      "global": ".cursor/skills",
+      "invocation": "Agent CLI skill selection; headless dispatch unverified",
+      "project": ".cursor/skills",
+      "version": "unknown"
+    },
+    "cursor-ide": {
+      "global": ".cursor/skills",
+      "invocation": "/NAME in Agent chat",
+      "project": ".cursor/skills",
+      "version": "3.22.12-unrefreshed"
+    }
+  },
+  "symlink_qualification": {
+    "Linux": "unverified",
+    "Windows": "unverified",
+    "macOS": "unverified"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "object", "additionalProperties": false,
+  "required": ["schema_version", "evidence_class", "input_class", "scope", "status", "command", "exit_status", "closure_hashes", "source_lock_hashes", "affected_skills", "limitations"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "evidence_class": {"enum": ["static", "deterministic", "agent-behavior", "native"]},
+    "input_class": {"enum": ["synthetic-fixture", "owned-source", "rights-cleared-corpus"]},
+    "scope": {"type": "string", "minLength": 1}, "status": {"const": "pass"},
+    "command": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "exit_status": {"const": 0},
+    "closure_hashes": {"type": "object"}, "source_lock_hashes": {"type": "object"},
+    "affected_skills": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  }
+}

@@ -1,0 +1,3559 @@
+{
+  "adapter_revision": "1",
+  "agents": [
+    {
+      "description": "Locate narrow source owners and report verified paths; no edits or architecture decisions.",
+      "id": "nckh-explorer",
+      "instructions_path": "native/roles/nckh-explorer.md",
+      "path": "native/agents/nckh-explorer.md",
+      "read_only": true,
+      "role": "explorer",
+      "sha256": "581beb9153f79708a5e3918d6469f5c5e0ce8c3029c0a8ffb215c0da22b7e355",
+      "tier": "fast"
+    },
+    {
+      "description": "Resolve consequential method/design trade-offs; plan without implementation.",
+      "id": "nckh-planner",
+      "instructions_path": "native/roles/nckh-planner.md",
+      "path": "native/agents/nckh-planner.md",
+      "read_only": true,
+      "role": "planner",
+      "sha256": "7317063e5607b299e71e7c6238a13da6064d7633bd943ecc3a3862ee3d854e07",
+      "tier": "deep"
+    },
+    {
+      "description": "Read bounded sources and record evidence/counterevidence; use deep when synthesis needs it.",
+      "id": "nckh-researcher",
+      "instructions_path": "native/roles/nckh-researcher.md",
+      "path": "native/agents/nckh-researcher.md",
+      "read_only": true,
+      "role": "researcher",
+      "sha256": "5c582d633403667b6b419e3ba9e93ac13efdec0866d5f0eb1ee4308cdccd572b",
+      "tier": "worker"
+    },
+    {
+      "description": "Create assigned artifacts from frozen brief/evidence; preserve other owners' edits.",
+      "id": "nckh-maker",
+      "instructions_path": "native/roles/nckh-maker.md",
+      "path": "native/agents/nckh-maker.md",
+      "read_only": false,
+      "role": "maker",
+      "sha256": "bf659bb065a19e4257507bcabddfe02d2f80745d9eed19766cca9a2d0622bdcd",
+      "tier": "worker"
+    },
+    {
+      "description": "Review raw artifacts in fresh context; use deep for public-contract/security risk.",
+      "id": "nckh-reviewer",
+      "instructions_path": "native/roles/nckh-reviewer.md",
+      "path": "native/agents/nckh-reviewer.md",
+      "read_only": true,
+      "role": "reviewer",
+      "sha256": "e481149bb0720ecaaf3bbcaa2da13a796008ad6c64ad595d770321872bb65e02",
+      "tier": "deep"
+    },
+    {
+      "description": "Critique language-specific style without changing facts or replacing human taste.",
+      "id": "nckh-taste-critic",
+      "instructions_path": "native/roles/nckh-taste-critic.md",
+      "path": "native/agents/nckh-taste-critic.md",
+      "read_only": true,
+      "role": "taste-critic",
+      "sha256": "b2ab59780a2be8d9af7ded8d6934e0d6039084ed9e950565548062773beab032",
+      "tier": "worker"
+    }
+  ],
+  "closure_hash": "b1ce127f2770528213bf8de5321e9ecdff05d0edf704461a67cb3f67dc59274e",
+  "files": [
+    {
+      "path": "adapter.json",
+      "rights": "owned-local-package",
+      "sha256": "9f69977297e06f61559a3cea170321f431c99d12e8d0d12c6d188d05a236e775",
+      "source_path": "adapters/agy/adapter.json",
+      "source_sha256": "1b55b91c222445e914b158c11e93762ae4e1c732c1bf3f1f8034abbe76f558db"
+    },
+    {
+      "path": "native/agents/nckh-explorer.md",
+      "rights": "owned-local-package",
+      "sha256": "581beb9153f79708a5e3918d6469f5c5e0ce8c3029c0a8ffb215c0da22b7e355",
+      "source_path": "agents/explorer.md",
+      "source_sha256": "14678d53a69bb7235f5e5787c5a29104d21c21694bcd73f4d9e22b8e5cc23226"
+    },
+    {
+      "path": "native/agents/nckh-maker.md",
+      "rights": "owned-local-package",
+      "sha256": "bf659bb065a19e4257507bcabddfe02d2f80745d9eed19766cca9a2d0622bdcd",
+      "source_path": "agents/maker.md",
+      "source_sha256": "3529ae1612512c280801620e77f131bc2ae9d2dad6f6ecbc6b0fdea4c31628fa"
+    },
+    {
+      "path": "native/agents/nckh-planner.md",
+      "rights": "owned-local-package",
+      "sha256": "7317063e5607b299e71e7c6238a13da6064d7633bd943ecc3a3862ee3d854e07",
+      "source_path": "agents/planner.md",
+      "source_sha256": "fea994813fb6cef6a41313eee1870badbb21d65108e40edc729b2425aa63b1ee"
+    },
+    {
+      "path": "native/agents/nckh-researcher.md",
+      "rights": "owned-local-package",
+      "sha256": "5c582d633403667b6b419e3ba9e93ac13efdec0866d5f0eb1ee4308cdccd572b",
+      "source_path": "agents/researcher.md",
+      "source_sha256": "82f81a763532da0bd319dadb0ef5a02ef776657f68b6aeeeb43474fe375d56fe"
+    },
+    {
+      "path": "native/agents/nckh-reviewer.md",
+      "rights": "owned-local-package",
+      "sha256": "e481149bb0720ecaaf3bbcaa2da13a796008ad6c64ad595d770321872bb65e02",
+      "source_path": "agents/reviewer.md",
+      "source_sha256": "59acd248a4855ab2167cf7698e2f43ac004ebdcac875f174678973801b18b657"
+    },
+    {
+      "path": "native/agents/nckh-taste-critic.md",
+      "rights": "owned-local-package",
+      "sha256": "b2ab59780a2be8d9af7ded8d6934e0d6039084ed9e950565548062773beab032",
+      "source_path": "agents/taste-critic.md",
+      "source_sha256": "2e8030a39f3c3ce2298d6b7e8e6803327a1f2d12db3e34ce30bc7ba34db07107"
+    },
+    {
+      "path": "native/roles/nckh-explorer.md",
+      "rights": "owned-local-package",
+      "sha256": "dafb043b6965aac7026a73f4949011fb23f8f8745a11cc1a67b115945a1c11e4",
+      "source_path": "agents/explorer.md",
+      "source_sha256": "14678d53a69bb7235f5e5787c5a29104d21c21694bcd73f4d9e22b8e5cc23226"
+    },
+    {
+      "path": "native/roles/nckh-maker.md",
+      "rights": "owned-local-package",
+      "sha256": "d0e14a55880832a74d88b00752e6c91f8b6424c5803b564eaec5a63eac72b122",
+      "source_path": "agents/maker.md",
+      "source_sha256": "3529ae1612512c280801620e77f131bc2ae9d2dad6f6ecbc6b0fdea4c31628fa"
+    },
+    {
+      "path": "native/roles/nckh-planner.md",
+      "rights": "owned-local-package",
+      "sha256": "0b3ba790e93af6ea6f8004acc2aa0989de85c6f41c239c018a8830a7b58aabfc",
+      "source_path": "agents/planner.md",
+      "source_sha256": "fea994813fb6cef6a41313eee1870badbb21d65108e40edc729b2425aa63b1ee"
+    },
+    {
+      "path": "native/roles/nckh-researcher.md",
+      "rights": "owned-local-package",
+      "sha256": "a90d859b69db515ec6d5f62884cbdd77eca25b3cd49bde85390b7a5edb4eef98",
+      "source_path": "agents/researcher.md",
+      "source_sha256": "82f81a763532da0bd319dadb0ef5a02ef776657f68b6aeeeb43474fe375d56fe"
+    },
+    {
+      "path": "native/roles/nckh-reviewer.md",
+      "rights": "owned-local-package",
+      "sha256": "736ae8317d3b17f511b66a020434030a19a0476313edf3490460857b2fd21b6f",
+      "source_path": "agents/reviewer.md",
+      "source_sha256": "59acd248a4855ab2167cf7698e2f43ac004ebdcac875f174678973801b18b657"
+    },
+    {
+      "path": "native/roles/nckh-taste-critic.md",
+      "rights": "owned-local-package",
+      "sha256": "e28ebe6b6b5b602f36040601ff2f1922e26ca4cf9702731666442e6ef1b53631",
+      "source_path": "agents/taste-critic.md",
+      "source_sha256": "2e8030a39f3c3ce2298d6b7e8e6803327a1f2d12db3e34ce30bc7ba34db07107"
+    },
+    {
+      "path": "skills/nckh-analytics/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "3e5fb89f94e92b3623224c88067869f5a7d3cf6cca1ea8f48003387e853d1a87",
+      "source_path": "skills/marketing/nckh-analytics/SKILL.md",
+      "source_sha256": "e9b77412a2a46b9bc060ea720aa8fe633037fe18212a76dd3363fab341665a31"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-analytics/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-analytics/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "91f39fd607ac0b3547dc92a1703f8b108158381d9e7ab1a11525005655bc3ab7",
+      "source_path": "skills/marketing/nckh-analytics/references/resource-lookup.md",
+      "source_sha256": "3a33bfa2575481136a611f414d0f6511d900702ee4fec6165a30ff4113a696c6"
+    },
+    {
+      "path": "skills/nckh-backend/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "6fecd89d6309d6fc22c619b4c8eef33e25c9d6c6213025752d5f3d64c4854910",
+      "source_path": "skills/engineer/nckh-backend/SKILL.md",
+      "source_sha256": "59c95972c543f2126e298b901ac655aa54f51d484c88eb24a93d7679af3e24bf"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-backend/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-brand/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "b598660a62fb15c2e4ea2a92b4bf12e84492e5be67fe0dfe5649724dd7ea2f3b",
+      "source_path": "skills/marketing/nckh-brand/SKILL.md",
+      "source_sha256": "1cdd1d04e565261cd08de1c0ea90fc85f5f63516160329e58bda94ac8c3fe928"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-brand/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-campaign/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "a2a564bb34811ae947244dec54b21b0b068e5e768466b61a5e1aee3d46bd886f",
+      "source_path": "skills/marketing/nckh-campaign/SKILL.md",
+      "source_sha256": "4d54c1e5553312e585b35418e902b2475a84d5ff3523e24727b3038d33e52ada"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-campaign/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-campaign/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "94ab0baa5efd13c977d5447598ff5f3a8c5d45694b97d95bf3920ffe4f4c2a24",
+      "source_path": "skills/marketing/nckh-campaign/references/resource-lookup.md",
+      "source_sha256": "646d43295a76dc204c5fcc05b96a894f1a2246351648b0e6fb4d33b76e2a04ff"
+    },
+    {
+      "path": "skills/nckh-code-review/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "c55b1eca29d8b21ecd76f096f7c2e7d2a7f70aa67ea9eb2108363b3f2ae1cd9f",
+      "source_path": "skills/engineer/nckh-code-review/SKILL.md",
+      "source_sha256": "0e9e9448f6e35b132fcfba8a242cdf487a18aa5657fb848a68b941a7f9df6780"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-code-review/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-code-review/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "3a3471b4f1c14df032ee84447b95ec9b7c78925e3ffd093d6c63ef278bd4e1f8",
+      "source_path": "skills/engineer/nckh-code-review/references/resource-lookup.md",
+      "source_sha256": "41d3aad2388bc4103ed26cbe01c9547a39d49a8eb7a4014eb91cbd042692fbce"
+    },
+    {
+      "path": "skills/nckh-content/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "56d21dd7dffaadf18c2d4581b6e68c33f278d2209323f6ceef531d362ca1f163",
+      "source_path": "skills/marketing/nckh-content/SKILL.md",
+      "source_sha256": "eb7c292e78b80e6773dc40d8a33830ab3bae18a3a942d9db63ed2ffed36d8de9"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-content/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-context/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "4c26b1f46e46d28a0d844af6bab0738c5dfc2c1987b68f079931e700a016247c",
+      "source_path": "skills/engineer/nckh-context/SKILL.md",
+      "source_sha256": "052cb185f2c7ccf11fa6a1af316e35f3a90669b5e98f1909dab7ad41841bc518"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-context/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-cook/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "32326e15522f85a0c960cab24ed1a306f2569ea1d9b4e216b3d6676ca4e17983",
+      "source_path": "skills/core/nckh-cook/SKILL.md",
+      "source_sha256": "47099fa5e2ca46c243ca63cf3d31cee6c5522884b92b0dbe01b8c6a425185e39"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/contracts/receipt.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "d7d087b5c8fc50f327e42fa0cc63ed8b5f4a7c97a2ed29a55876098e40c01334",
+      "source_path": "core/contracts/receipt.schema.json",
+      "source_sha256": "d7d087b5c8fc50f327e42fa0cc63ed8b5f4a7c97a2ed29a55876098e40c01334"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/contracts/task-state.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "6c47afc6b2442f42c71afc7a155e083ea8f60944f5bdc8747f5774163389cb1e",
+      "source_path": "core/contracts/task-state.schema.json",
+      "source_sha256": "6c47afc6b2442f42c71afc7a155e083ea8f60944f5bdc8747f5774163389cb1e"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-cook/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-copy/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "40a76cd7e2199329642d931f4f0d0625d7304eda5811e9f95c70214d71dd2f9a",
+      "source_path": "skills/marketing/nckh-copy/SKILL.md",
+      "source_sha256": "9c0f79d48fd747e4253c6041a65b40cc4460dacc98bffaafc31abc1aac6ea714"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-copy/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-cro/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "04c164b7ecd942fa7ac1d068004445800295fbc414992ae3dc4372196f705273",
+      "source_path": "skills/marketing/nckh-cro/SKILL.md",
+      "source_sha256": "bb67857cb3a4640032e86b63ed89d88528bd441afec672b6ca51affda81ac910"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-cro/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-data/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "48c66a8a0efbbe2c1c30a94bd2db85265ba3e4254d95e11ec417a8686b323f46",
+      "source_path": "skills/engineer/nckh-data/SKILL.md",
+      "source_sha256": "16965d4c8e57df73ef32f558b7ecfa00f6455cf90f088a83669f898dba192a90"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-data/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-debug/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "ca27b18c2de4d0927a60ee0a47e4560f9aee3d5ac6efdf4ce70fe8288096e8b4",
+      "source_path": "skills/engineer/nckh-debug/SKILL.md",
+      "source_sha256": "850abfcefd42fcc778d4afd7a11f71b1b12b3947a7bdf6452da792d15706cf51"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-debug/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-devops/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "027823f75f72a0e56c871c1377a48f827feeecaab2743a8432a0becb7d637884",
+      "source_path": "skills/engineer/nckh-devops/SKILL.md",
+      "source_sha256": "6898fc2f526f53a89b44853a63efa614d498dfbe97984c1b6a63f0e3980be35f"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-devops/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-docs/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "759175f14687390f3dfbe62c6d57c15d6d75130b76b5b74d6249bc9dc6b6a341",
+      "source_path": "skills/engineer/nckh-docs/SKILL.md",
+      "source_sha256": "f2745f7f8bffed204ac14be298f7745ceeb19193401536532b077a33f72495bf"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-docs/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-email/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "d258917d5e88ac432be69c5771cab69bed1132e218f7d3db4b3093c6fa341dbe",
+      "source_path": "skills/marketing/nckh-email/SKILL.md",
+      "source_sha256": "14864d13670cba7c77dc88ab185f0918d9cb3411effe3766fea3b3ea5ec62b1d"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-email/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-evidence/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "5a5792f6791acd75e92a79e9d6b47b28a2838c09e6038ca24ac24e9b127acebe",
+      "source_path": "skills/core/nckh-evidence/SKILL.md",
+      "source_sha256": "7987e1b26929c2be7ff6b7f3fe7d75dcad7d725001a55009755c09a4750d0c6d"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/contracts/evidence.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fd4afe1f01dee5b427d4a55efc6e01de78da6b2b7fdf95678ad353dc227f8a07",
+      "source_path": "core/contracts/evidence.schema.json",
+      "source_sha256": "fd4afe1f01dee5b427d4a55efc6e01de78da6b2b7fdf95678ad353dc227f8a07"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/contracts/source.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "7dca59199c443a99bf0b4a57bf34c9706ea930f6b9a87b8b042c1116e7cd3ae7",
+      "source_path": "core/contracts/source.schema.json",
+      "source_sha256": "7dca59199c443a99bf0b4a57bf34c9706ea930f6b9a87b8b042c1116e7cd3ae7"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-evidence/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-evidence/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "30e860043e8f6b18110e8b663d8dff886b496c8e1ee3dd31d486fb019002714f",
+      "source_path": "skills/core/nckh-evidence/references/resource-lookup.md",
+      "source_sha256": "39c7d146d3f5873f435150e1c396873af41273c8ea80bc66316c3d9450dd694e"
+    },
+    {
+      "path": "skills/nckh-evidence/references/verdicts-and-locators.md",
+      "rights": "owned-local-package",
+      "sha256": "ea36979c8dd81f934e6f61a2e2a0a4b95ef5be5e2f13ff3e6a6113d15a7ac0b1",
+      "source_path": "skills/core/nckh-evidence/references/verdicts-and-locators.md",
+      "source_sha256": "ea36979c8dd81f934e6f61a2e2a0a4b95ef5be5e2f13ff3e6a6113d15a7ac0b1"
+    },
+    {
+      "path": "skills/nckh-experiment/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "83dfbcf3c492d71a06540b01a6a5cf07da92618050698d82672686941e2a29a5",
+      "source_path": "skills/marketing/nckh-experiment/SKILL.md",
+      "source_sha256": "cdc4b37aba5d5e68e69a4ecc7bbd7444ade4faa4111b7609ba6cdb978fde1c81"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-experiment/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-fix/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "21d5796f49ee3faab36dc20ff0f7a5d72bc99cb36acf69a9aa06fe26869ceab2",
+      "source_path": "skills/engineer/nckh-fix/SKILL.md",
+      "source_sha256": "3a31865711cb5e1240aee14bdd2c003e12d1fe976cab2efd3bc44e300d5d5dfd"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-fix/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-fix/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "13b3f707a8bebf080ea96b38fa9ab58ed92d895b7059179051ae75675491c85d",
+      "source_path": "skills/engineer/nckh-fix/references/resource-lookup.md",
+      "source_sha256": "72ef53ba086c814601e5dabf060a29e015ba39f70f6ef817c2e18ae69115db1f"
+    },
+    {
+      "path": "skills/nckh-frontend/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "bb34a68eb45f45feff41d7242cac4d7e390c9859ed764a00086afecbc7c2a526",
+      "source_path": "skills/engineer/nckh-frontend/SKILL.md",
+      "source_sha256": "3a596e0eaa6652687900161eb4a8a52442e14e203dcb5863b9874400d9c741ec"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-frontend/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-frontend/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "0d649c2e5bcce069b97966dba780930809d375ebeaa1d968c61264596119c58b",
+      "source_path": "skills/engineer/nckh-frontend/references/resource-lookup.md",
+      "source_sha256": "8b76bc7d2241b651ea32f8e0da3e9bf110897e1186a599ec2c037f26169c9094"
+    },
+    {
+      "path": "skills/nckh-git/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "afd331200a258acf42ded421e6fd44aef70f033a810a36a357c9bcb15df8f018",
+      "source_path": "skills/engineer/nckh-git/SKILL.md",
+      "source_sha256": "c901460524a6562317624b247576df2ef2863ba5af1e6a4d2ee4dd3fb1137188"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-git/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-handoff/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "e17ad6a2da50dd4613ea0c4245a4b8b1be7cbbd122884f59ffd4f05e33e20608",
+      "source_path": "skills/core/nckh-handoff/SKILL.md",
+      "source_sha256": "89569f8697fe5f94d183d21516e2e9fd54af0cb7836cc78c05acd5105b750289"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/contracts/receipt.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "d7d087b5c8fc50f327e42fa0cc63ed8b5f4a7c97a2ed29a55876098e40c01334",
+      "source_path": "core/contracts/receipt.schema.json",
+      "source_sha256": "d7d087b5c8fc50f327e42fa0cc63ed8b5f4a7c97a2ed29a55876098e40c01334"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/contracts/task-state.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "6c47afc6b2442f42c71afc7a155e083ea8f60944f5bdc8747f5774163389cb1e",
+      "source_path": "core/contracts/task-state.schema.json",
+      "source_sha256": "6c47afc6b2442f42c71afc7a155e083ea8f60944f5bdc8747f5774163389cb1e"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-handoff/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-launch/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "400843c85968be01dde9f94a6bfe2bc60c61bf132a0f015fda682cd1ae23a6de",
+      "source_path": "skills/marketing/nckh-launch/SKILL.md",
+      "source_sha256": "a07697a12e0cd39b4cbabfb402b035101983ab194ac8c82a8ba9b9b4b609b1e6"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-launch/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-market-research/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "d04a05620f143ecae06be5816cdb9a9c50cb37484eeb1fa4f3dfd17ac2899fd9",
+      "source_path": "skills/marketing/nckh-market-research/SKILL.md",
+      "source_sha256": "c69f0026b21d584a18feeb49020a0a07cb954f3ed90d0da622c303d5a9b59cba"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-market-research/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-market-research/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "a17bf671d1e4f9027542c83e46e9150279b4f83741e08f3df2daebff5a978b33",
+      "source_path": "skills/marketing/nckh-market-research/references/resource-lookup.md",
+      "source_sha256": "078dadf4b830966599058228c9e1c2e12ddd4f6eed4c26115e557c51fb632874"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "1e1ea966156e21f2b94d71b621d9423aa6eacbe085a250dacf6f4071c382d8c0",
+      "source_path": "skills/marketing/nckh-marketing-plan/SKILL.md",
+      "source_sha256": "a16eb71c002ae30df5f5e50d4803e3e88fb5fbec872b5fc585a578f082c0f76b"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-marketing-plan/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "64f66212c06bf313f82caab8ce2898a2cee1300f45fd239231f01f3fc294d8f3",
+      "source_path": "skills/marketing/nckh-marketing-plan/references/resource-lookup.md",
+      "source_sha256": "31aa0ed6ce2a5052556001da417e2460a0cfa6147a89797744e5d13ce2aa6f13"
+    },
+    {
+      "path": "skills/nckh-method/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "ae178ddc63ce9ba3a8e1c06e321089c7d2819a77a7f58b7fa5b92915b51752d1",
+      "source_path": "skills/core/nckh-method/SKILL.md",
+      "source_sha256": "f1edb47a7e5750d901699828fd0000fab6b9dc7aed44336f8427d4c7ba20124a"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-method/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-method/references/method-and-argument.md",
+      "rights": "owned-local-package",
+      "sha256": "c63f2b2f40960613a9795b99a1086227150da4a1c9df17213881ed21f221dcca",
+      "source_path": "skills/core/nckh-method/references/method-and-argument.md",
+      "source_sha256": "c63f2b2f40960613a9795b99a1086227150da4a1c9df17213881ed21f221dcca"
+    },
+    {
+      "path": "skills/nckh-method/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "b587e12d767b7727affaa22f472821f6e3469dff45379be1ff8ee0749936f1be",
+      "source_path": "skills/core/nckh-method/references/resource-lookup.md",
+      "source_sha256": "c82b285a44dd23d0cd2ef3209812d5913ca287e109443c0a60316a8ab76b18e0"
+    },
+    {
+      "path": "skills/nckh-plan/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "c953ab24ae562a3caf36bd84a701fabbf28cb725439e5624bf6e60721a1c6ca2",
+      "source_path": "skills/core/nckh-plan/SKILL.md",
+      "source_sha256": "4d8f02f0017f499fc4744e090790b3e3f663a8182e8fe9f453881937a1665574"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-plan/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-research/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "3af025ec83bf09d06e93ec77108a8aff750d112f31f6250c8b2b85f1e8a81a5b",
+      "source_path": "skills/core/nckh-research/SKILL.md",
+      "source_sha256": "360584948b4119704fe987fe895b3efef8ef8f401614f66e2b7af787a9f944fd"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/contracts/evidence.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fd4afe1f01dee5b427d4a55efc6e01de78da6b2b7fdf95678ad353dc227f8a07",
+      "source_path": "core/contracts/evidence.schema.json",
+      "source_sha256": "fd4afe1f01dee5b427d4a55efc6e01de78da6b2b7fdf95678ad353dc227f8a07"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/contracts/source.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "7dca59199c443a99bf0b4a57bf34c9706ea930f6b9a87b8b042c1116e7cd3ae7",
+      "source_path": "core/contracts/source.schema.json",
+      "source_sha256": "7dca59199c443a99bf0b4a57bf34c9706ea930f6b9a87b8b042c1116e7cd3ae7"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-research/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-research/references/review-modes.md",
+      "rights": "owned-local-package",
+      "sha256": "48f5180a55d6cd68fa861f6c9958e04cc772b168edc7b181c618a881cf9fd9cf",
+      "source_path": "skills/core/nckh-research/references/review-modes.md",
+      "source_sha256": "48f5180a55d6cd68fa861f6c9958e04cc772b168edc7b181c618a881cf9fd9cf"
+    },
+    {
+      "path": "skills/nckh-review/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "931d67869ca5698020a9b8e3d7a243d96d7b2eb415b2e617fdee71fddde38b52",
+      "source_path": "skills/core/nckh-review/SKILL.md",
+      "source_sha256": "f99beb2e6af07beb7c7166e5010762f707d3b7a079bb3af1d67efc4aa9cb2e32"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-review/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-scout/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "5a7e6f07520b8ad16acf1b2bda646fa4d986693998600b1e355b2202132b107a",
+      "source_path": "skills/engineer/nckh-scout/SKILL.md",
+      "source_sha256": "76def7364baed4fa14e7cd7d900e819169f5650f9a276234636ff26a11d3bd0d"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-scout/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-security/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "5e4fdb8ca8677efd63f69ae019b96e0f6a62deb53f526975ce8daf9a212b5f80",
+      "source_path": "skills/engineer/nckh-security/SKILL.md",
+      "source_sha256": "a1b495fbda97ab4e4e066373144b7893aef568505c4844af2b56c793e6bce6d5"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-security/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-seo/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "155075d2ffff6354d9a86d3fd448797a2b1472053c22941cbb118f49a063e27b",
+      "source_path": "skills/marketing/nckh-seo/SKILL.md",
+      "source_sha256": "cc903d9bca976d8e8f560da97c5b5a5f5e9871faf6cc8902081a2b875a2c3b7a"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-seo/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-social/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "1cef80d4b313b458e145627af031b3378968513b42a1c016c3cafd7beb7789f3",
+      "source_path": "skills/marketing/nckh-social/SKILL.md",
+      "source_sha256": "deb4225186c075e42cdc256790421cbcc589a30747f42b6cd0171a0e3c762938"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/contracts/claim.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e",
+      "source_path": "core/contracts/claim.schema.json",
+      "source_sha256": "e0ae41b13c3502e89f97992fd6335278ced76ea4b11c7a28a74e5c2c31fa811e"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-social/references/_shared/extensions/providers/marketing/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f",
+      "source_path": "extensions/providers/marketing/contract.json",
+      "source_sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+    },
+    {
+      "path": "skills/nckh-taste/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "c8228e48cd208d30dfe63101844a8c6efd3d63cc0c20539b05d31b70541fffb9",
+      "source_path": "skills/core/nckh-taste/SKILL.md",
+      "source_sha256": "1c17d6441e661e4653e3effd7a6db64090e0cf6e0b5d36b77344837007058181"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/profiles/style/en.md",
+      "rights": "owned-local-package",
+      "sha256": "0a9dfd3ce4b3ce37b5cd6404019135d74669c445e27042fad22a37a30ea4519b",
+      "source_path": "core/profiles/style/en.md",
+      "source_sha256": "0a9dfd3ce4b3ce37b5cd6404019135d74669c445e27042fad22a37a30ea4519b"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/profiles/style/vi.md",
+      "rights": "owned-local-package",
+      "sha256": "9867a0d24649aad9c334a51ba81777358c871060e09d6a3b8953d84ddcb8c8d2",
+      "source_path": "core/profiles/style/vi.md",
+      "source_sha256": "9867a0d24649aad9c334a51ba81777358c871060e09d6a3b8953d84ddcb8c8d2"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-taste/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-taste/references/human-taste.md",
+      "rights": "owned-local-package",
+      "sha256": "a9b95dc0dc493a8a6ede7414805adb54e7e00340e62a1a127304f5d9d4bc398e",
+      "source_path": "skills/core/nckh-taste/references/human-taste.md",
+      "source_sha256": "a9b95dc0dc493a8a6ede7414805adb54e7e00340e62a1a127304f5d9d4bc398e"
+    },
+    {
+      "path": "skills/nckh-taste/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "4597423a9ca2d454fc3204ae0c015d02ad2bdd1ce5d7ec829509c39aad70fc34",
+      "source_path": "skills/core/nckh-taste/references/resource-lookup.md",
+      "source_sha256": "79ebd1a0b8db96ecf8942b9a31d0745712b9a249d355d3ecb6098902d5e99bfa"
+    },
+    {
+      "path": "skills/nckh-test/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "bd6193209b211eeb3242674b1d39ba17146cdabfab58355461ed78da853d85cd",
+      "source_path": "skills/engineer/nckh-test/SKILL.md",
+      "source_sha256": "1b646196deb5838d86e91f306a58105a0dd670e6d960853a6656efd7b6502165"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/core/workflows/review-and-handoff.md",
+      "rights": "owned-local-package",
+      "sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a",
+      "source_path": "core/workflows/review-and-handoff.md",
+      "source_sha256": "91e10985995b8f6897a6605dcdd92b0e8c421637115c7c1ac7da9b25275f4a6a"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-test/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-test/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "d28dc2c1d747d7b15ca71abeed708452ad8f589b9b73f4793eb73066b179a1f3",
+      "source_path": "skills/engineer/nckh-test/references/resource-lookup.md",
+      "source_sha256": "87094db9907f5362d3587c0e8337cffdebf5e3a38e606a3c5e5a3eae67e0585d"
+    },
+    {
+      "path": "skills/nckh-visuals/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "0c64a56ea0d4a029c0017030d757da7d62450e7e73034ee4b524a834c6fe6dda",
+      "source_path": "skills/core/nckh-visuals/SKILL.md",
+      "source_sha256": "cf4ddad0701a379251eaa8083c871a8bd7bd6aa63d51e1affba52b8285a6e852"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/contracts/extension.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "1e662a40066e8a75407465bc679af49fc187e824910c66a15631d7d5a84f38fb",
+      "source_path": "core/contracts/extension.schema.json",
+      "source_sha256": "1e662a40066e8a75407465bc679af49fc187e824910c66a15631d7d5a84f38fb"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/contracts/visual-engine-binding.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "6e90158950747dc2ea85777c69addec93a4f9b57d20f6199414e87ae864eea32",
+      "source_path": "core/contracts/visual-engine-binding.schema.json",
+      "source_sha256": "6e90158950747dc2ea85777c69addec93a4f9b57d20f6199414e87ae864eea32"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/schema.py",
+      "rights": "owned-local-package",
+      "sha256": "6d0d60c0ec5d9a1741bf498ee2bf06a63ac688045d35317ba77e03705874edac",
+      "source_path": "core/schema.py",
+      "source_sha256": "6d0d60c0ec5d9a1741bf498ee2bf06a63ac688045d35317ba77e03705874edac"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/extensions/native-documents/contract.json",
+      "rights": "owned-local-package",
+      "sha256": "3fe3be8522e319e68e1f5210e25d3993b1be25239e2c9d2ddc9c067efb5db9df",
+      "source_path": "extensions/native-documents/contract.json",
+      "source_sha256": "3fe3be8522e319e68e1f5210e25d3993b1be25239e2c9d2ddc9c067efb5db9df"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/scripts/check-visual-engine.py",
+      "rights": "owned-local-package",
+      "sha256": "605f7434652d5110208291dfde5b782e6a6facbc3eefb16977d1c9595c6fb256",
+      "source_path": "scripts/check-visual-engine.py",
+      "source_sha256": "605f7434652d5110208291dfde5b782e6a6facbc3eefb16977d1c9595c6fb256"
+    },
+    {
+      "path": "skills/nckh-visuals/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-visuals/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "284911584d8b3231edba077de5cfa1fad0a5c72f1e9bb7d76961e0d4ff07c19b",
+      "source_path": "skills/core/nckh-visuals/references/resource-lookup.md",
+      "source_sha256": "3cdf397cd4c6be0618baf6d7584dce5e7493846761813fb70eecaf849e2dfc18"
+    },
+    {
+      "path": "skills/nckh-visuals/references/visual-acceptance.md",
+      "rights": "owned-local-package",
+      "sha256": "8534b32f46de72461e7e195257abf7772cca26788c678da884f87e1ae442ce49",
+      "source_path": "skills/core/nckh-visuals/references/visual-acceptance.md",
+      "source_sha256": "8534b32f46de72461e7e195257abf7772cca26788c678da884f87e1ae442ce49"
+    },
+    {
+      "path": "skills/nckh-write/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "a6f0dd3927c1030805fb65171f01538fefbc1487f6160eda287aae1694bf6181",
+      "source_path": "skills/core/nckh-write/SKILL.md",
+      "source_sha256": "c549bea6981aece7f87f5d14288c51136b0b370a27411a0d8d2114ea6ef25ca8"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/contracts/brief.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768",
+      "source_path": "core/contracts/brief.schema.json",
+      "source_sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/contracts/resource-provenance.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2",
+      "source_path": "core/contracts/resource-provenance.schema.json",
+      "source_sha256": "ea7bcd2bcb20ae9cf693e236e5ae1966ec97453a2324e60d8f59948ecb2d24f2"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/contracts/resource-registry.schema.json",
+      "rights": "owned-local-package",
+      "sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f",
+      "source_path": "core/contracts/resource-registry.schema.json",
+      "source_sha256": "fa85ed77c5a367f4e7100ad02fcbe1b955b77c7d4891d0e8f39713c54811154f"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/profiles/style/en.md",
+      "rights": "owned-local-package",
+      "sha256": "0a9dfd3ce4b3ce37b5cd6404019135d74669c445e27042fad22a37a30ea4519b",
+      "source_path": "core/profiles/style/en.md",
+      "source_sha256": "0a9dfd3ce4b3ce37b5cd6404019135d74669c445e27042fad22a37a30ea4519b"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/profiles/style/vi.md",
+      "rights": "owned-local-package",
+      "sha256": "9867a0d24649aad9c334a51ba81777358c871060e09d6a3b8953d84ddcb8c8d2",
+      "source_path": "core/profiles/style/vi.md",
+      "source_sha256": "9867a0d24649aad9c334a51ba81777358c871060e09d6a3b8953d84ddcb8c8d2"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/registry/catalog/resources.json",
+      "rights": "owned-local-package",
+      "sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b",
+      "source_path": "core/registry/catalog/resources.json",
+      "source_sha256": "08280a57da31f62d88666b4dcca5f6b31589d73f0544c5751ba4632f1cd1ad9b"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/core/state.py",
+      "rights": "owned-local-package",
+      "sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c",
+      "source_path": "core/state.py",
+      "source_sha256": "6ff3f0d2c3a3669a001993ad73c4e5cff13c3c9766b178e767e11df1112b6d6c"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/docs/contracts.md",
+      "rights": "owned-local-package",
+      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c",
+      "source_path": "docs/contracts.md",
+      "source_sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+    },
+    {
+      "path": "skills/nckh-write/references/_shared/scripts/search-resource.py",
+      "rights": "owned-local-package",
+      "sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb",
+      "source_path": "scripts/search-resource.py",
+      "source_sha256": "e8eb4cb75cc3220f41f85502cd40fa93fd7e258f6629b0e2588367c1165fdffb"
+    },
+    {
+      "path": "skills/nckh-write/references/fidelity-and-glossary.md",
+      "rights": "owned-local-package",
+      "sha256": "e3ef9efc7844b0b6fadf9d0f947f5468aa2d453dedc57d0d2a471ed8a9e561b0",
+      "source_path": "skills/core/nckh-write/references/fidelity-and-glossary.md",
+      "source_sha256": "e3ef9efc7844b0b6fadf9d0f947f5468aa2d453dedc57d0d2a471ed8a9e561b0"
+    },
+    {
+      "path": "skills/nckh-write/references/resource-lookup.md",
+      "rights": "owned-local-package",
+      "sha256": "6aea1f1ce33b2f9d0aafae3d90df20af913b38446682270717507ba4b0c18b6c",
+      "source_path": "skills/core/nckh-write/references/resource-lookup.md",
+      "source_sha256": "7887399cb33804e0c5a6283e86938adbffb22b030c3ab183ee740ded9f5ac960"
+    },
+    {
+      "path": "skills/nckh-xia/SKILL.md",
+      "rights": "owned-local-package",
+      "sha256": "65c2a33eb2513a70dc4dae176bdc4a91bc971e900780cecb5e134f8a6736adfd",
+      "source_path": "skills/tooling/nckh-xia/SKILL.md",
+      "source_sha256": "497d63f8eb9f5ddc9fe88aa0860af62c02503d63439446f6236e333f99b25d9a"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/policies/acceptance-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c",
+      "source_path": "core/policies/acceptance-policy.md",
+      "source_sha256": "759303007dbb35b919e3767128d3bb3fef07c9821f52113959da73465e98141c"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/policies/authorization-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21",
+      "source_path": "core/policies/authorization-policy.md",
+      "source_sha256": "2acd9b1fce80c8545edb866313a4e1e172d5b002ed1851a21ff36eff4c5f1f21"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/policies/evidence-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea",
+      "source_path": "core/policies/evidence-policy.md",
+      "source_sha256": "1d698d443e57b7ba6e1be8fe5b0d5bab4fdf514006838e18d80f011367a53cea"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/policies/preservation-policy.md",
+      "rights": "owned-local-package",
+      "sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0",
+      "source_path": "core/policies/preservation-policy.md",
+      "source_sha256": "6c1704d13e54a39a2d913172c30f053427f28d36e436519f6a17b1f4c244ddd0"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/profiles/acceptance/personal-use.json",
+      "rights": "owned-local-package",
+      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341",
+      "source_path": "core/profiles/acceptance/personal-use.json",
+      "source_sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/workflows/execution.md",
+      "rights": "owned-local-package",
+      "sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f",
+      "source_path": "core/workflows/execution.md",
+      "source_sha256": "043d23dfc1cfc071d420b84a325759eb227b5fb3ee5f2f15535c7f25a32c897f"
+    },
+    {
+      "path": "skills/nckh-xia/references/_shared/core/workflows/model-and-context.md",
+      "rights": "owned-local-package",
+      "sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f",
+      "source_path": "core/workflows/model-and-context.md",
+      "source_sha256": "4ea0f35662d1171ecc3333ec194a615492626d25eff5573e30da3caa8ca8b28f"
+    },
+    {
+      "path": "skills/nckh-xia/references/source-disposition.md",
+      "rights": "owned-local-package",
+      "sha256": "c2ca59f3aac804d4b570314628b61525a7acb9298690b2bbc7adc4d33894ea88",
+      "source_path": "skills/tooling/nckh-xia/references/source-disposition.md",
+      "source_sha256": "c2ca59f3aac804d4b570314628b61525a7acb9298690b2bbc7adc4d33894ea88"
+    },
+    {
+      "path": "source-lock.json",
+      "rights": "owned-local-package",
+      "sha256": "570458f6d49e0653b72bedd6819afccf88a3b612ce3f5fa7d55202784db68cf4",
+      "source_path": "core/registry/source-lock/source-lock.json",
+      "source_sha256": "570458f6d49e0653b72bedd6819afccf88a3b612ce3f5fa7d55202784db68cf4"
+    }
+  ],
+  "host": "agy",
+  "kits": [
+    "core",
+    "engineer",
+    "marketing"
+  ],
+  "native_qualification": "unverified",
+  "package_version": "0.1.0-experimental",
+  "plugin": {
+    "agents_projected": false,
+    "copied": false,
+    "enabled": false,
+    "manifest_path": "not-projected",
+    "native_qualification": "unverified",
+    "projected": false,
+    "registered": false,
+    "session_only": false,
+    "tested": false,
+    "trusted": false
+  },
+  "release_rights": "local-package-only",
+  "representation": "shared-neutral",
+  "resource_access": "off",
+  "resources": [],
+  "schema_version": 2,
+  "skills": [
+    {
+      "id": "nckh-analytics",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "41dae2c90373a609a5f7e7cf2f9a9483b6ba51955c7a7a91f0617f035d43f784"
+    },
+    {
+      "id": "nckh-backend",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "639ff3626eb63dae9200039388d3e4285c2f906dbbfaae150a0a2565864c2c14"
+    },
+    {
+      "id": "nckh-brand",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "c672d3bc869ddd456ed83c982634d431f6032f2fe4379ce6f2d527da6cba91ba"
+    },
+    {
+      "id": "nckh-campaign",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "d584dd2e6f4d3ecb81e17b58302e183fa38a41b04fbe32024b8d31ceab09c177"
+    },
+    {
+      "id": "nckh-code-review",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "01988bc0784846125861ec63386f47289152021924d32201a7fd8296c64f2e6a"
+    },
+    {
+      "id": "nckh-content",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "0d547368954db4520181aba7bf2727c3494fc0361452be89e4c2e15a0339987b"
+    },
+    {
+      "id": "nckh-context",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "af655dc0ceac176862fdc3511688aafaacf2713f34deff264b1cbfbeea31e440"
+    },
+    {
+      "id": "nckh-cook",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "3aede5baa97c40f84e5d401cd7f6800b59d491d8b1ffc87ca126fc7677488a17"
+    },
+    {
+      "id": "nckh-copy",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "b49d2b1dd5d418fd90d7c729ab96fd57399752e6bda35a4b74581a0753ab6db8"
+    },
+    {
+      "id": "nckh-cro",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "97c2675c7723fca23e085da235977b2a0b392719c5751276c75f4b32564acb5e"
+    },
+    {
+      "id": "nckh-data",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "48cf922ece6c2dd12dd5a0ac9e64004594334ac8a8b2f62e373544392042804c"
+    },
+    {
+      "id": "nckh-debug",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "0a4acb0d0d00ee525f16fb9b1fa3138640cfd242fb49fc2ec8a9b7196f9cbed0"
+    },
+    {
+      "id": "nckh-devops",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "505038449ea1be7c0e805efe36485c3499834c95a91c472c0687448f03c74d78"
+    },
+    {
+      "id": "nckh-docs",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "1a73fdb3b6fa863b9e16f4e412c56b361eeb86934a22cd606f95ded1a48feab0"
+    },
+    {
+      "id": "nckh-email",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "11f6f6f14479e27197051e90eb592beeb4d7862c4de27e803b5aca38707695df"
+    },
+    {
+      "id": "nckh-evidence",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "8c10cb4ea34ac6353103897c128d98d76f6c47aa7d40ddff89cb850b5d813b46"
+    },
+    {
+      "id": "nckh-experiment",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "39de1f317ce447091f6f5ec38e428d1758441891bfc76975cff2337e337945a7"
+    },
+    {
+      "id": "nckh-fix",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "e6470519ed637b31990cc1081a9b42416559a62daa4d0ebae914ec5da2dd05fb"
+    },
+    {
+      "id": "nckh-frontend",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "0c9b66869ca0bd5d034ad4a79cdb00a8cb9a0f00857fc6aa4dfc63a279e29d41"
+    },
+    {
+      "id": "nckh-git",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "f46fbb0cfc527e9265ec2789c62c692792e77dceb8e1f36dde0b94c0f93dcae1"
+    },
+    {
+      "id": "nckh-handoff",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "c20e5e3c0574d9a32d9af5da1a17d7e2fbbae76668bbbf9846d2282f9b0ad80b"
+    },
+    {
+      "id": "nckh-launch",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "1ba6b235f38536ad8abda0e1e0f006a91750774d7917aaa7852a53fc3ebf6089"
+    },
+    {
+      "id": "nckh-market-research",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "ac91f7b77b383d8f55ad33422518eafd1791b9d2d41632924f136e97d9c9746b"
+    },
+    {
+      "id": "nckh-marketing-plan",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "17079ed6e0c066ebec2136cdb82e882cc5946fc88dd43f0f2b1165123a166326"
+    },
+    {
+      "id": "nckh-method",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "f57c21c26237ea75fbfa2709dad549947d33592e8ab8967c3748c0a8568189de"
+    },
+    {
+      "id": "nckh-plan",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "50f7ffb7420141283213461701bba71e5e0a21d27ce7441df3317562e8c60773"
+    },
+    {
+      "id": "nckh-research",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "3e8097eb799e313d111568877a0c2241d9be48316c5b410621027f2eaffd9471"
+    },
+    {
+      "id": "nckh-review",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "263e37b4792445cf5934b4043ade8d761c89a17633de1dd21f5e7ba6c9678f89"
+    },
+    {
+      "id": "nckh-scout",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "8ba5be54bba40ce36639d6dec387788480efeee9fa9285b704eb9e34cc8b0896"
+    },
+    {
+      "id": "nckh-security",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "72f9951e592f814e717783d30e03f4a52b189bfd5dd75c89fe646eb11b2efb38"
+    },
+    {
+      "id": "nckh-seo",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "9cb6c923892ef433595d92cb12502ece54d472884b57ac64d12ea31057faec4a"
+    },
+    {
+      "id": "nckh-social",
+      "kit": "marketing",
+      "status": "experimental",
+      "tree_hash": "5bb599d3c8868487364a6e96accf5fb8dd231d41bff83d3fb3e96d9cca43f562"
+    },
+    {
+      "id": "nckh-taste",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "53f516bb91e56e5298f77b10b0351aeab6bce50a8c29ac51745103d808dea05e"
+    },
+    {
+      "id": "nckh-test",
+      "kit": "engineer",
+      "status": "experimental",
+      "tree_hash": "66f87c77a8f2df26a369a480230ddb50529ab486beb504a174d6b367dc9a7e40"
+    },
+    {
+      "id": "nckh-visuals",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "d7946086a012bc7a95b01b2cd07d9235f966568bd5eeeedbc4ebc265920d81bc"
+    },
+    {
+      "id": "nckh-write",
+      "kit": "core",
+      "status": "experimental",
+      "tree_hash": "0d428bbcdd0d5000df43fa6bb6c60f307b34d17e3f11895d4e16ed2ab2522ddf"
+    },
+    {
+      "id": "nckh-xia",
+      "kit": "tooling",
+      "status": "experimental",
+      "tree_hash": "8157d1f01f93736ab9fe5f9779bc6f5f8d0f792e3b735fa8fe8d80368e3f1429"
+    }
+  ],
+  "source_lock_hash": "adc6422394da5a833e1059d922b27c5658eb6699b2ab950568a557d48d71968c"
+}
