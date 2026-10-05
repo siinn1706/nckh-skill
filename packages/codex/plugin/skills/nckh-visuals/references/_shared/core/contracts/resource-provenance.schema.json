@@ -1,0 +1,169 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "type": "string"
+    },
+    "artifact_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "copied_vs_reauthored": {
+      "enum": [
+        "verbatim-upstream",
+        "normalized-with-lineage",
+        "metadata-only-reference"
+      ]
+    },
+    "license": {
+      "enum": [
+        "MIT",
+        "Apache-2.0",
+        "BSD-3-Clause",
+        "CC-BY-4.0",
+        "CC-BY-SA-4.0"
+      ]
+    },
+    "license_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "license_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "notice_path": {
+      "type": "string"
+    },
+    "notice_sha256": {
+      "pattern": "^([a-f0-9]{64})?$",
+      "type": "string"
+    },
+    "redistribution": {
+      "enum": [
+        "permitted-with-notices",
+        "reference-only"
+      ]
+    },
+    "repository": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "review_reference": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_kind": {
+      "enum": [
+        "copied-upstream",
+        "retrieved-snapshot"
+      ]
+    },
+    "upstream_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "upstream_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "upstream_sha256s": {
+      "items": {
+        "pattern": "^[a-f0-9]{64}$",
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "version": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "version_kind": {
+      "enum": [
+        "git-commit",
+        "mediawiki-oldid",
+        "pmcid-snapshot",
+        "api-snapshot",
+        "dataset-archive",
+        "swe-bench-task",
+        "normalized-bundle",
+        "reference-snapshot"
+      ]
+    },
+    "rights_scope": {
+      "enum": [
+        "redistributable",
+        "reference-only"
+      ]
+    },
+    "retrieved_at": {
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}(?:T[0-9]{2}:[0-9]{2}:[0-9]{2}(?:\\.[0-9]+)?(?:Z|[+-][0-9]{2}:[0-9]{2}))?$",
+      "type": "string"
+    },
+    "retrieval_timezone": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "lineage": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "source-response",
+              "rights-evidence",
+              "selection-query",
+              "archive-member",
+              "metadata"
+            ]
+          },
+          "locator": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "operation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "path": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          },
+          "upstream_sha256": {
+            "pattern": "^[a-f0-9]{64}$",
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind",
+          "locator",
+          "sha256"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "repository",
+    "version",
+    "as_of",
+    "license",
+    "license_path",
+    "license_sha256",
+    "notice_path",
+    "notice_sha256",
+    "redistribution",
+    "review_reference",
+    "source_kind",
+    "upstream_path",
+    "upstream_sha256"
+  ],
+  "type": "object"
+}

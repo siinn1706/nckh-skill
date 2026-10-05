@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": "1",
+  "revision": "2",
   "skills": [
     {
       "id": "nckh-plan",
@@ -105,7 +105,10 @@
       "kit": "core",
       "path": "skills/core/nckh-write",
       "status": "experimental",
-      "dependencies": [],
+      "dependencies": [
+        "nckh-humanwrite",
+        "nckh-paperwrite"
+      ],
       "eval_ids": [
         "nckh-write:positive",
         "nckh-write:negative",
@@ -654,6 +657,34 @@
         "nckh-experiment:failure"
       ],
       "source_lock_id": "original:nckh-experiment"
+    },
+    {
+      "id": "nckh-humanwrite",
+      "kit": "core",
+      "path": "skills/core/nckh-humanwrite",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-humanwrite:positive",
+        "nckh-humanwrite:negative",
+        "nckh-humanwrite:outcome",
+        "nckh-humanwrite:failure"
+      ],
+      "source_lock_id": "original:nckh-humanwrite"
+    },
+    {
+      "id": "nckh-paperwrite",
+      "kit": "core",
+      "path": "skills/core/nckh-paperwrite",
+      "status": "experimental",
+      "dependencies": [],
+      "eval_ids": [
+        "nckh-paperwrite:positive",
+        "nckh-paperwrite:negative",
+        "nckh-paperwrite:outcome",
+        "nckh-paperwrite:failure"
+      ],
+      "source_lock_id": "original:nckh-paperwrite"
     }
   ]
 }

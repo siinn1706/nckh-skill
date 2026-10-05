@@ -2,7 +2,12 @@
 
 Chart: actual dataset/provenance, transformations, units/denominators, source-to-mark map.
 Mechanism: source for each node/arrow, direction/uncertainty, inferred edges labeled.
-Artwork: illustrative label and asset/generation provenance, no measurement claims.
+Research illustration: illustrative/non-evidentiary label and provenance, no measurement claims; branding/logo/banner/generic artwork is outside this route.
+
+Derived/computational/simulation charts bind actual code, model/version/parameters,
+source/transform/output and completed run hashes. Label them not observed measurements;
+missing run/uncertainty/labels is pending. Purpose and source-to-mark preflight are
+independent from engine receipt integrity and scientific/native/human acceptance.
 Slides: narrative, native editable elements, typography/layout, alt text and licenses.
 
 Required independent checks: source truth, rights, native editability, render/layout,

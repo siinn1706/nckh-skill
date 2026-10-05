@@ -1,0 +1,71 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "type": {
+      "enum": [
+        "fact",
+        "interpretation",
+        "hypothesis",
+        "value-judgment"
+      ]
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "verdict": {
+      "enum": [
+        "supported",
+        "contradicted",
+        "insufficient",
+        "unverified"
+      ]
+    },
+    "allowed_certainty": {
+      "type": "string",
+      "minLength": 1
+    },
+    "counterevidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "profile_revision": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "statement",
+    "type",
+    "scope",
+    "evidence_ids",
+    "verdict",
+    "allowed_certainty",
+    "counterevidence_ids",
+    "profile_revision"
+  ]
+}

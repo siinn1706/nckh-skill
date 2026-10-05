@@ -47,7 +47,7 @@
     },
     "core/acceptance.py": {
       "rights": "owned-local-package",
-      "sha256": "8ff7c468271f11ac36e7bd73c448c54ac08f141572ede28a5466e7f0d9867c16"
+      "sha256": "2aa4542b5d0b06688dbe3e5979b4506368196804d6fdceef60a4922f64f9f112"
     },
     "core/agent_runs.py": {
       "rights": "owned-local-package",
@@ -55,15 +55,15 @@
     },
     "core/build.py": {
       "rights": "owned-local-package",
-      "sha256": "f9ffefa298d731a8eb8393e25215922879595d3e2852ccc4876f5efcea70395b"
+      "sha256": "07807c32d584d706702108ccaf112765a27231e997ab2b2919316c70a55890f4"
     },
     "core/contracts/brief.schema.json": {
       "rights": "owned-local-package",
-      "sha256": "3951c24322d351b6856f738f2f973de775913ad05ec94803e4640c45cb7e9768"
+      "sha256": "efc8df6f644ded8701ac20ed14e7791ca61bc4eec5102b0884e26206ffaae58c"
     },
     "core/contracts/catalog.schema.json": {
       "rights": "owned-local-package",
-      "sha256": "4c5a769deab05cd8eecc5a71cdd6f3d81537ab33a3b7aa8a52b846069ed45ad6"
+      "sha256": "1d9271fe2a14e601609a20d412d4a86cb09d54330f03f8a81f0931dba121e8a6"
     },
     "core/contracts/claim.schema.json": {
       "rights": "owned-local-package",
@@ -80,6 +80,14 @@
     "core/contracts/extension.schema.json": {
       "rights": "owned-local-package",
       "sha256": "1e662a40066e8a75407465bc679af49fc187e824910c66a15631d7d5a84f38fb"
+    },
+    "core/contracts/hook-decision.schema.json": {
+      "rights": "owned-local-package",
+      "sha256": "aed8bb1da275311c6226604e53970420430a379b7a562a2264109242c3e8d2c5"
+    },
+    "core/contracts/hook-event.schema.json": {
+      "rights": "owned-local-package",
+      "sha256": "2a19ff0b01bbd2614ab5737305ca64083ee0cc6739d22955da94f5ca34c51274"
     },
     "core/contracts/model-resolution.schema.json": {
       "rights": "owned-local-package",
@@ -125,13 +133,25 @@
       "rights": "owned-local-package",
       "sha256": "6e90158950747dc2ea85777c69addec93a4f9b57d20f6199414e87ae864eea32"
     },
+    "core/contracts/writer-invocation-matrix.schema.json": {
+      "rights": "owned-local-package",
+      "sha256": "4cdeccd9b687f79d21744dc519f18b992f46e6c49abbce95478f1e42de8876b4"
+    },
     "core/evaluation.py": {
       "rights": "owned-local-package",
-      "sha256": "a67c4c25e87ac6ddd9af2a40ca728c07f021e3afcdd748319cdcef466f85e6bb"
+      "sha256": "0b90358eb22cb9c06f93e46e524006ed85a591db2a145f46a35a68de82b6dcf8"
     },
     "core/guards.py": {
       "rights": "owned-local-package",
-      "sha256": "54d5b49afe31274cb2a121eadcfa976584c32e6b8a5dafd3846fdc6f03933d39"
+      "sha256": "afc34d6e70f0d6ce31b8863f4644ccffb3a6c4ed0e4033eaa0b0f7a3b2366369"
+    },
+    "core/hook_config.py": {
+      "rights": "owned-local-package",
+      "sha256": "f1c6c65554fbe47bceceaf9fd11017a6694bce6ab9e0fdddc7395b2a459b9abf"
+    },
+    "core/hook_policy.py": {
+      "rights": "owned-local-package",
+      "sha256": "12f1ed853529215f854b0f6575ccb5f05f8da33e174e237bbca0a84ca86bb9de"
     },
     "core/install.py": {
       "rights": "owned-local-package",
@@ -147,7 +167,7 @@
     },
     "core/paths.py": {
       "rights": "owned-local-package",
-      "sha256": "368ec10d42cd907c16e250cb0228aa780bd3165667bb0d75b8d3b7356e40987c"
+      "sha256": "403750482c2bcf4df1a794fe91fd85c85e6c160194378a447838ca112c76032b"
     },
     "core/policies/acceptance-policy.md": {
       "rights": "owned-local-package",
@@ -171,7 +191,7 @@
     },
     "core/profiles/acceptance/personal-use.json": {
       "rights": "owned-local-package",
-      "sha256": "627ebaf58c97212e790ed794739767cff710a552a40e3231c24d86bf0d979341"
+      "sha256": "a919cb948cb10a72ca014233190ad4b16ff8369374644ca8ab5d9de588f31ee1"
     },
     "core/profiles/models/profiles.json": {
       "rights": "owned-local-package",
@@ -638,17 +658,25 @@
       "rights": "owned-local-package",
       "sha256": "9867a0d24649aad9c334a51ba81777358c871060e09d6a3b8953d84ddcb8c8d2"
     },
+    "core/profiles/style/writer-language.md": {
+      "rights": "owned-local-package",
+      "sha256": "e42af076f6bb4f8726d88307c8c6ca10d575daa1f1fb33580761c489aa91d635"
+    },
+    "core/profiles/style/writer-resources.md": {
+      "rights": "owned-local-package",
+      "sha256": "cfdc6088c4cc0790e1742ebb18096fd55234b259cd671ecc6599e54dd79e1cf5"
+    },
     "core/profiles/venue/isolation.md": {
       "rights": "owned-local-package",
       "sha256": "8fbc0817875dcde4049561d7de6a5c1ee54db90e8a3bdd9b6445552afca3aa15"
     },
     "core/registry/catalog/resources.json": {
       "rights": "owned-local-package",
-      "sha256": "dbb6c347dc411efc84a7e4b880a955d825e6d464d23407947a052c6038844da5"
+      "sha256": "503ec57cefc9b994b1792915182fec0129de4d9803799397079798ba2b0ae9fa"
     },
     "core/registry/catalog/skills.json": {
       "rights": "owned-local-package",
-      "sha256": "1e782ec5397a57144c17195b131192849933b5295d57e658577d536bfb4ff86b"
+      "sha256": "49a56c8a8bc7e97f80d14298f81048ea11f800390285386a7e0ca23a00472250"
     },
     "core/registry/compatibility/matrix.json": {
       "rights": "owned-local-package",
@@ -680,7 +708,7 @@
     },
     "docs/contracts.md": {
       "rights": "owned-local-package",
-      "sha256": "67854498a02689fe5b07543497a4c8d3a7d317b3820405625afae385e54efa9c"
+      "sha256": "264b66d06a1fa28cec053fbe96784c69a74348c8dfa86653303a97cfc5c6ef68"
     },
     "docs/engineer.md": {
       "rights": "owned-local-package",
@@ -688,11 +716,11 @@
     },
     "docs/index.md": {
       "rights": "owned-local-package",
-      "sha256": "a9c7af65edde580a26a0f93ec0bd4aa7d2c8d927c4aa5639ab287c85a2faaca2"
+      "sha256": "9e583349d6adb0fe7060fc9aff2cc96114dc68ba96bd15ab9a49ed59c519a08a"
     },
     "docs/installation.md": {
       "rights": "owned-local-package",
-      "sha256": "fcba50dbf8aa949341a694906d93b30feae44fa5a21825f1b233d19ba595fed5"
+      "sha256": "4ebfa5d09117ab16baa14150d6e547952d5adaf0c3d2a4f745803fce63009698"
     },
     "docs/marketing.md": {
       "rights": "owned-local-package",
@@ -704,11 +732,11 @@
     },
     "docs/personal-use.md": {
       "rights": "owned-local-package",
-      "sha256": "f294b62012772c4ee0ede22886177350fb23fe8fff94be17c412b587ce179455"
+      "sha256": "c0eac4623ad132a693af1bf7c3717cfa5f90f3b39aa4b8f6da9931a22d2042cb"
     },
     "docs/qualification.md": {
       "rights": "owned-local-package",
-      "sha256": "d303632881f94a871aba7e1644d5787c14d15966d966b4c8260ba6ec906f5e9c"
+      "sha256": "56bfa2a1c17d92d817b22fb448efe8d858decc9ff813492c55998efdb82440c2"
     },
     "docs/release-checklist.md": {
       "rights": "owned-local-package",
@@ -716,11 +744,11 @@
     },
     "docs/research-and-writing.md": {
       "rights": "owned-local-package",
-      "sha256": "b91a067fbdd193cd5e23be2604f61b58d16965640adccbf43b30afef01c9f919"
+      "sha256": "96b5e7bfbe261acafd8cec7e43cb86421754e99a428be1ac2e2f2dff51c44158"
     },
     "docs/runtime-support.md": {
       "rights": "owned-local-package",
-      "sha256": "e31afdd33f993d3591b4477d984f0ca2899329379d95ef245e1ced470c74b7e5"
+      "sha256": "6486b35aac52fe3d359f9d3a2841b1efec0a5e42e18b5522b4e01f66aded7402"
     },
     "evals/baselines/baselines.json": {
       "rights": "owned-local-package",
@@ -846,9 +874,17 @@
       "rights": "owned-local-package",
       "sha256": "6e07104eb5e1497c5a477e4083e7d94e8b2980db8505de84dda59b1148cccc9c"
     },
+    "evals/cases/research-writing-visuals/nckh-humanwrite.json": {
+      "rights": "owned-local-package",
+      "sha256": "fcfa8d10985691d4dfb13d7b26e4f60069ecc836a232a06af28665c477a4eeca"
+    },
     "evals/cases/research-writing-visuals/nckh-method.json": {
       "rights": "owned-local-package",
       "sha256": "e88aaeebfafcc2a9cfadcc85ec3afa3c1c045df9d56eff2f3de794f32f782946"
+    },
+    "evals/cases/research-writing-visuals/nckh-paperwrite.json": {
+      "rights": "owned-local-package",
+      "sha256": "63af9860a943d1f6a0e7702874c35f0bade540b496917dd26c149af181a31d2d"
     },
     "evals/cases/research-writing-visuals/nckh-research.json": {
       "rights": "owned-local-package",
@@ -860,7 +896,7 @@
     },
     "evals/cases/research-writing-visuals/nckh-visuals.json": {
       "rights": "owned-local-package",
-      "sha256": "47f299edecbba0eb5121b2bb5156537a5a7f967c4f1910b8ff492541621ad724"
+      "sha256": "ca1da58fa1520b73b21c04b08b91f2413de638bf0e7a053dacf22148f379d7a8"
     },
     "evals/cases/research-writing-visuals/nckh-write.json": {
       "rights": "owned-local-package",
@@ -869,6 +905,10 @@
     "evals/cases/runtime/invocation-matrix.json": {
       "rights": "owned-local-package",
       "sha256": "1c1fead9837747cee710a0111e1d0666dbeb792ea6b04a51706fd68a570bcb44"
+    },
+    "evals/cases/runtime/writer-invocation-matrix.json": {
+      "rights": "owned-local-package",
+      "sha256": "aff8ca5a4f0ab0bef3d954ba1b3ed447b58814334cf52ed6890cb1fe5427298d"
     },
     "evals/cases/workflow/nckh-cook.json": {
       "rights": "owned-local-package",
@@ -916,7 +956,7 @@
     },
     "evals/run-evals.py": {
       "rights": "owned-local-package",
-      "sha256": "7cd9773f740a7de06ed7dc749cb835f831a18458ca009c75bb298e24be333a7e"
+      "sha256": "a50a2e1f0db2d17fd7b1bcdc3feab9e50c528ce8ae620e91a480d773484dbc5b"
     },
     "extensions/frameworks/contract.json": {
       "rights": "owned-local-package",
@@ -924,7 +964,7 @@
     },
     "extensions/native-documents/contract.json": {
       "rights": "owned-local-package",
-      "sha256": "3fe3be8522e319e68e1f5210e25d3993b1be25239e2c9d2ddc9c067efb5db9df"
+      "sha256": "6a29ea93ebeab259f4be60bd3e88e3d75a2aa2092bdd6546f280903cbd3d5c57"
     },
     "extensions/providers/engineer/contract.json": {
       "rights": "owned-local-package",
@@ -932,11 +972,59 @@
     },
     "extensions/providers/marketing/contract.json": {
       "rights": "owned-local-package",
-      "sha256": "929d27548f56ccab238087e14de4e9fbae8c54befadc087af031985e3165854f"
+      "sha256": "5345d0bfca0e1239a516bca682eec678123c1893b2da2939c73573b637a75345"
     },
     "extensions/upstream-agentkit/contract.json": {
       "rights": "owned-local-package",
       "sha256": "f6e62fae657a14ef6303995032041e09198f625424feff2a8809abf78cebe089"
+    },
+    "hooks/__init__.py": {
+      "rights": "owned-local-package",
+      "sha256": "0ed32360b8aff50bb85985d1d0085a85d7a460da288cbd8dd43914a55cabec09"
+    },
+    "hooks/codecs/__init__.py": {
+      "rights": "owned-local-package",
+      "sha256": "cfdfa4fe49740922efe250a04496f74904b93c5c830565ab7560087db6750ff2"
+    },
+    "hooks/codecs/agy.py": {
+      "rights": "owned-local-package",
+      "sha256": "fe4b6a884472091b1b58ecaed54b00e4e99e76749abba95bf4e9ee82966d57cf"
+    },
+    "hooks/codecs/claude.py": {
+      "rights": "owned-local-package",
+      "sha256": "4cd419dbde008218f05b0c73ee2adf6984c92906a223cb5dfa3f70e0e2965e9b"
+    },
+    "hooks/codecs/codex.py": {
+      "rights": "owned-local-package",
+      "sha256": "b4ac6af1ce42f59640e4db971ba30c618bc8e619bbf987ff485b3d8638049e5a"
+    },
+    "hooks/codecs/common.py": {
+      "rights": "owned-local-package",
+      "sha256": "b7b64be0e0d1ebff27112dfe770d97a29888c610b7ec0eac21973155210cf7df"
+    },
+    "hooks/codecs/cursor.py": {
+      "rights": "owned-local-package",
+      "sha256": "cfa817b4427cb96a8f61dbb6b945a587f8b98495737f48ce413c93723d471224"
+    },
+    "hooks/runner.py": {
+      "rights": "owned-local-package",
+      "sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b"
+    },
+    "hooks/templates/agy.json": {
+      "rights": "owned-local-package",
+      "sha256": "3567821aa74aea036e9f444244ac248f1545f8a0fd9db37c9e4d376b623cfc63"
+    },
+    "hooks/templates/claude.json": {
+      "rights": "owned-local-package",
+      "sha256": "96206d644bcaa6c7039a700d2ae8505de8547afc7912e15e488aad1c359cf2e1"
+    },
+    "hooks/templates/codex.json": {
+      "rights": "owned-local-package",
+      "sha256": "0867a357e0d88d369101c8609d31eb0f0cae17363b27eba2de6b54b8f9d77a6f"
+    },
+    "hooks/templates/cursor.json": {
+      "rights": "owned-local-package",
+      "sha256": "0d56a0f3338a1ed0bd0ec3411abb1619603a2166f333c4516a4751ee5568e7b5"
     },
     "installer/install.ps1": {
       "rights": "owned-local-package",
@@ -956,7 +1044,7 @@
     },
     "installer/schemas/bundle-v2.schema.json": {
       "rights": "owned-local-package",
-      "sha256": "8688d90f3f527ab941d411ac079fa0acf0506db118d293cf4eda19df91f6d346"
+      "sha256": "25d3f44563cf69f538a5728e392c6a8b31ffc9584ffa023ab8d6b77ece76ef12"
     },
     "installer/schemas/bundle.schema.json": {
       "rights": "owned-local-package",
@@ -986,9 +1074,17 @@
       "rights": "owned-local-package",
       "sha256": "8bf183f370f2124acc5dcea40be09158bc526170bb9b350d6704b58340a2a8cf"
     },
+    "scripts/configure-hooks.py": {
+      "rights": "owned-local-package",
+      "sha256": "5b092bd50f5953614611ac2c4bb5a73672265d8ff90f77d28dcebc2362484670"
+    },
     "scripts/freeze-source-lock.py": {
       "rights": "owned-local-package",
       "sha256": "004dfa5cc90a8de01c6590b1c4f9e3c75a5bf3b4be13bfc0f31680493bb8616d"
+    },
+    "scripts/hook-preflight.py": {
+      "rights": "owned-local-package",
+      "sha256": "c0350c0281b3c68f4459aae33b45ddf1e84d55889210bfa07d551028c1fc6cca"
     },
     "scripts/resource-smoke.py": {
       "rights": "owned-local-package",
@@ -1018,6 +1114,14 @@
       "rights": "owned-local-package",
       "sha256": "89569f8697fe5f94d183d21516e2e9fd54af0cb7836cc78c05acd5105b750289"
     },
+    "skills/core/nckh-humanwrite/SKILL.md": {
+      "rights": "owned-local-package",
+      "sha256": "fe04df80e106354ac364d25e4d2d4fed9440059f26addddcf6d2e9054ac65a16"
+    },
+    "skills/core/nckh-humanwrite/references/humanizer-adaptation.md": {
+      "rights": "owned-local-package",
+      "sha256": "34889a96ab62c8eefcf1d2557522c7bf31cae14b65eb587532a0cd2bb121ff45"
+    },
     "skills/core/nckh-method/SKILL.md": {
       "rights": "owned-local-package",
       "sha256": "f1edb47a7e5750d901699828fd0000fab6b9dc7aed44336f8427d4c7ba20124a"
@@ -1029,6 +1133,14 @@
     "skills/core/nckh-method/references/resource-lookup.md": {
       "rights": "owned-local-package",
       "sha256": "c82b285a44dd23d0cd2ef3209812d5913ca287e109443c0a60316a8ab76b18e0"
+    },
+    "skills/core/nckh-paperwrite/SKILL.md": {
+      "rights": "owned-local-package",
+      "sha256": "c2b01fb4980f965df0df4c7c367df7f3f40ddefb21f58cd5dfc7ab71a08a5e95"
+    },
+    "skills/core/nckh-paperwrite/references/paperwriting-policy.md": {
+      "rights": "owned-local-package",
+      "sha256": "2935cba8f6b1127d5c458959bca5b5bb31c95b27fdeff1ed13297015d8ddc170"
     },
     "skills/core/nckh-plan/SKILL.md": {
       "rights": "owned-local-package",
@@ -1060,19 +1172,23 @@
     },
     "skills/core/nckh-visuals/SKILL.md": {
       "rights": "owned-local-package",
-      "sha256": "cf4ddad0701a379251eaa8083c871a8bd7bd6aa63d51e1affba52b8285a6e852"
+      "sha256": "96ef4e5f666a1b627e381696388b23d788f0aa9443952ea161d0aa6ae1628a31"
     },
     "skills/core/nckh-visuals/references/resource-lookup.md": {
       "rights": "owned-local-package",
       "sha256": "3cdf397cd4c6be0618baf6d7584dce5e7493846761813fb70eecaf849e2dfc18"
     },
+    "skills/core/nckh-visuals/references/scientific-visual-qa.md": {
+      "rights": "owned-local-package",
+      "sha256": "2c0da589359fc4c74e03005368899ac63d1c2c58ba31aba843dcf96e151c7566"
+    },
     "skills/core/nckh-visuals/references/visual-acceptance.md": {
       "rights": "owned-local-package",
-      "sha256": "8534b32f46de72461e7e195257abf7772cca26788c678da884f87e1ae442ce49"
+      "sha256": "8c6415637e7d671ae5b6cb204cd78eddd40cf6e9172a8bd37a7d2c75626a2204"
     },
     "skills/core/nckh-write/SKILL.md": {
       "rights": "owned-local-package",
-      "sha256": "c549bea6981aece7f87f5d14288c51136b0b370a27411a0d8d2114ea6ef25ca8"
+      "sha256": "cbf5f543a63498a3fa286059921c171b535594468058fa5dc50c175f403e859b"
     },
     "skills/core/nckh-write/references/fidelity-and-glossary.md": {
       "rights": "owned-local-package",
@@ -1124,7 +1240,7 @@
     },
     "skills/engineer/nckh-frontend/SKILL.md": {
       "rights": "owned-local-package",
-      "sha256": "3a596e0eaa6652687900161eb4a8a52442e14e203dcb5863b9874400d9c741ec"
+      "sha256": "d79ea9bbe622d116cccb576dc274a84b1d2c2497c711669e3a0644add4e0e3f7"
     },
     "skills/engineer/nckh-frontend/references/resource-lookup.md": {
       "rights": "owned-local-package",
@@ -1152,7 +1268,7 @@
     },
     "skills/marketing/nckh-analytics/SKILL.md": {
       "rights": "owned-local-package",
-      "sha256": "e9b77412a2a46b9bc060ea720aa8fe633037fe18212a76dd3363fab341665a31"
+      "sha256": "69099492fa6128a1e05956db6f1670cb607918a02686317e39586962a4e85be5"
     },
     "skills/marketing/nckh-analytics/references/resource-lookup.md": {
       "rights": "owned-local-package",
@@ -1160,7 +1276,7 @@
     },
     "skills/marketing/nckh-brand/SKILL.md": {
       "rights": "owned-local-package",
-      "sha256": "1cdd1d04e565261cd08de1c0ea90fc85f5f63516160329e58bda94ac8c3fe928"
+      "sha256": "84c68e5f178cada44afb78e9f8f85f415594696be508ccb04cf4839d9f17316e"
     },
     "skills/marketing/nckh-campaign/SKILL.md": {
       "rights": "owned-local-package",
@@ -1172,7 +1288,7 @@
     },
     "skills/marketing/nckh-content/SKILL.md": {
       "rights": "owned-local-package",
-      "sha256": "eb7c292e78b80e6773dc40d8a33830ab3bae18a3a942d9db63ed2ffed36d8de9"
+      "sha256": "e31845e5ca021350729ec9be560f1f5718b4dc065f01804be1b51aeaa5aa43ab"
     },
     "skills/marketing/nckh-copy/SKILL.md": {
       "rights": "owned-local-package",
@@ -1236,7 +1352,7 @@
     },
     "tests/acceptance/test_profile.py": {
       "rights": "owned-local-package",
-      "sha256": "ed19b0c540ca55d5cde49b4c1a4ec823253f63adb1225d370277abb0f92f659e"
+      "sha256": "f6bbf456d8c2931bc79b6e761c256baa93b13b92f0c47c71d106a04ce97b8981"
     },
     "tests/build/__init__.py": {
       "rights": "owned-local-package",
@@ -1244,7 +1360,7 @@
     },
     "tests/build/test_closure.py": {
       "rights": "owned-local-package",
-      "sha256": "6789a8cfbb1122c00d5d5626336c38bb5c83042a5fc7e360a69250189025ab5e"
+      "sha256": "52a4d378daa39915bce69757708d9fe1f12a9893e9295fdad46f573ef6064587"
     },
     "tests/contracts/__init__.py": {
       "rights": "owned-local-package",
@@ -1274,6 +1390,30 @@
       "rights": "owned-local-package",
       "sha256": "2ee860313fb0de9fd2b882ccac660a5cca898c6c54caac0f42e4ede1d69b406b"
     },
+    "tests/evidence/test_visual_purpose.py": {
+      "rights": "owned-local-package",
+      "sha256": "3f0cbc432d2f761ea847d520d5ee926910260b69b9f5aed95ff8ceb2cee0dd50"
+    },
+    "tests/hooks/__init__.py": {
+      "rights": "owned-local-package",
+      "sha256": "745a83653baf9fb6f4bc0d4de04b814040b0d9506b5666b63a024c3584541614"
+    },
+    "tests/hooks/test_closure.py": {
+      "rights": "owned-local-package",
+      "sha256": "f4a2e891e4d95cf6fee658536e23fe8badb320a143f37bd4191cb61a53c741e4"
+    },
+    "tests/hooks/test_config.py": {
+      "rights": "owned-local-package",
+      "sha256": "45ccb862ff1ae01c466236b3112f2528ae96953d7f828fba8419256e0b21c120"
+    },
+    "tests/hooks/test_policy.py": {
+      "rights": "owned-local-package",
+      "sha256": "743647cd1eca5ae559e36633020aab461536bb2df5f26144e28a1cb6eeb8aceb"
+    },
+    "tests/hooks/test_runner.py": {
+      "rights": "owned-local-package",
+      "sha256": "88ab0ad274b34fc4d1f4b3895df70d1c4925880afc8e68ef82439392b5e21694"
+    },
     "tests/installer/__init__.py": {
       "rights": "owned-local-package",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -1284,7 +1424,7 @@
     },
     "tests/installer/test_transactions.py": {
       "rights": "owned-local-package",
-      "sha256": "2f80e32b426c7aab9af42b8ea1a79252ef6744466306f0df2374a57b97276822"
+      "sha256": "51208e68f8fd3f86f3a5ea5fa0e27365d0abec8f5a3b227d6b52d4193639dfd9"
     },
     "tests/marketing/__init__.py": {
       "rights": "owned-local-package",
@@ -1304,11 +1444,15 @@
     },
     "tests/release/test_qualification.py": {
       "rights": "owned-local-package",
-      "sha256": "1a7e651f8fb60c7e20758920559ec4e5a6cf54e1ec7f8a775e1cb347b80f7083"
+      "sha256": "a768c3e05d47f462105e0ab7b84f1303ea55014c568e5c1e9f19c851d329f752"
     },
     "tests/release/test_runner.py": {
       "rights": "owned-local-package",
       "sha256": "660bc34ca6e851cfbb8b6ad634f773a7c141cd82ad251a29e6b86a63f9e41801"
+    },
+    "tests/release/test_writer_matrix.py": {
+      "rights": "owned-local-package",
+      "sha256": "bf9201f3f9dbaeff3d70b36ad721f87cf70078e35239619929c9fef4f95f405f"
     },
     "tests/resource/__init__.py": {
       "rights": "owned-local-package",
@@ -1334,6 +1478,10 @@
       "rights": "owned-local-package",
       "sha256": "ba1ad9fcc1632f56310de47952bbdaf81322bd2783316f2359519312ebf10af8"
     },
+    "tests/resource/test_writer_consumers.py": {
+      "rights": "owned-local-package",
+      "sha256": "bb03e273be54e25ba0a3fcf56774a7afb0885e77680702c1fc763cca96d8a093"
+    },
     "tests/runtime/__init__.py": {
       "rights": "owned-local-package",
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -1341,6 +1489,10 @@
     "tests/runtime/test_adapters.py": {
       "rights": "owned-local-package",
       "sha256": "27434cb190ceb93996d8f1a2eb85d8d61d41af32c089c7bdf8bc6e91c35c9601"
+    },
+    "tests/runtime/test_hook_adapters.py": {
+      "rights": "owned-local-package",
+      "sha256": "f7c5c4c8d0999ab2964a6592602fac54f8145116fdcc74dcf84324b738a55cc4"
     }
   },
   "inspirations": [
@@ -1374,8 +1526,8 @@
     }
   ],
   "origin": "original NCKH instructions and code from owner-approved design",
-  "previous_lock_hash": "adc6422394da5a833e1059d922b27c5658eb6699b2ab950568a557d48d71968c",
+  "previous_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
   "release_rights": "local-package-only",
-  "revision": "26",
+  "revision": "37",
   "schema_version": 2
 }

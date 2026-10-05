@@ -25,6 +25,8 @@ Output follows the brief's locale. Same-agent is the default. Use
 
 ## Workflow and boundaries
 
+Research visual handoffs use the shared research-purpose preflight: question/object/role/evidence and source-to-mark mappings are mandatory. Do not generate logos, banners, ads, thumbnails or generic artwork, including a research logo. Actual computation/simulation plots need verified run provenance and a non-observed label. This indirect route is instruction-only/manual/not-callable until its event/engine is qualified; missing or denied preflight stops generation. Drafting/analysis/UI inspection remains with this owner.
+
 Inspect the existing UI, design tokens, component boundaries and state/error flows. Reuse approved UX and the selected stack; do not force a framework or clone trademarked assets. A design-only/audit request stops at its requested artifact.
 
 Define task-relevant loading/empty/error/success states, responsive behavior, keyboard/focus/semantics, contrast and performance expectations. Build with the smallest existing patterns that meet the full brief.

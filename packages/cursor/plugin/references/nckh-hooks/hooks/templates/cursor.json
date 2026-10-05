@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "host": "cursor",
+  "enabled": false,
+  "mode": "advisory",
+  "registered": false,
+  "trusted": false,
+  "native_qualification": "unverified",
+  "config": {
+    "version": 1,
+    "hooks": {
+      "preToolUse": [
+        {
+          "type": "command",
+          "command": "NCKH_CONTROLLER_COMMAND",
+          "timeout": 20,
+          "failClosed": true
+        }
+      ]
+    }
+  }
+}

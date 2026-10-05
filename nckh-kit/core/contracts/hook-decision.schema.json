@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "decision": {
+      "enum": [
+        "allow",
+        "advisory",
+        "block",
+        "pending",
+        "manual"
+      ]
+    },
+    "reason_codes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9-]+$"
+      }
+    },
+    "evidence_class": {
+      "const": "deterministic"
+    },
+    "native_enforcement": {
+      "const": "unverified"
+    },
+    "semantic_fidelity": {
+      "const": "unverified"
+    },
+    "side_effects": {
+      "const": "none"
+    }
+  },
+  "required": [
+    "schema_version",
+    "decision",
+    "reason_codes",
+    "evidence_class",
+    "native_enforcement",
+    "semantic_fidelity",
+    "side_effects"
+  ]
+}

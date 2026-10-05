@@ -1,0 +1,62 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "phase": {
+      "enum": [
+        "preflight",
+        "pre-delivery",
+        "advisory",
+        "stop"
+      ]
+    },
+    "host": {
+      "enum": [
+        "claude",
+        "codex",
+        "cursor",
+        "agy"
+      ]
+    },
+    "tool": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_:.-]{0,160}$"
+    },
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "session_key": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "task_key": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "artifact_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "stop_active": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "schema_version",
+    "phase",
+    "host",
+    "tool",
+    "paths",
+    "session_key",
+    "task_key",
+    "artifact_sha256",
+    "stop_active"
+  ]
+}

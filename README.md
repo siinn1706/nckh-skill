@@ -1,21 +1,21 @@
 # nckh-skill
 
-Bộ **37 skill NCKH** cho nghiên cứu, viết, kỹ thuật và marketing, kèm sáu vai trò
+Bộ **39 skill NCKH** cho nghiên cứu, viết, kỹ thuật và marketing, kèm sáu vai trò
 agent tùy chọn. Hướng dẫn của skill bằng tiếng Anh; đầu ra theo ngôn ngữ được yêu
 cầu trong công việc.
 
 | Nhóm | Số skill |
 |---|---:|
-| Core | 10 |
+| Core | 12 |
 | Engineer | 13 |
 | Marketing | 13 |
 | Xia | 1 |
 
 ## Phạm vi bản công khai
 
-Repository này chứa các package **experimental r26**, được xuất ở chế độ
+Repository này chứa các package **experimental r37**, được xuất ở chế độ
 **`resource-access on`**. Tài nguyên đi kèm luôn được bật trong các package phân
-phối: đủ 37 skill, 9 nhóm tài nguyên, reader, giấy phép, ghi công và công cụ cài
+phối: đủ 39 skill, 9 nhóm tài nguyên, reader, giấy phép, ghi công và công cụ cài
 đặt. Skill chọn phần tham khảo phù hợp với công việc; người dùng vẫn có thể cung
 cấp tài liệu hoặc dữ liệu riêng.
 
@@ -33,7 +33,7 @@ stable đã được kiểm định đầy đủ. Xem [phạm vi và quyền](do
 - `nckh-kit/installer/`: công cụ preview, cài, cập nhật, doctor và gỡ theo ownership.
 - `nckh-kit/scripts/verify-public-package.py`: kiểm tra package trước khi dùng.
 
-Mỗi package chứa 37 thư mục skill và sáu agent tùy chọn. Các adapter là cấu hình
+Mỗi package chứa 39 thư mục skill và sáu agent tùy chọn. Các adapter là cấu hình
 được đóng gói; việc có package chưa xác nhận mọi phiên bản ứng dụng và hệ điều
 hành đã được kiểm tra thực tế.
 
@@ -94,3 +94,10 @@ tự chuyển package sang `off`.
 
 Biểu đồ, sơ đồ và ảnh cần công cụ tạo/render tương ứng của môi trường. Skill
 không tự cung cấp dịch vụ tạo ảnh hoặc chứng nhận file chỉnh sửa được.
+
+## Portable hooks
+
+Mỗi package r37 có runner, codec, template và công cụ preview/apply/remove hook
+trong `hooks/`. Hook mặc định chưa bật, đăng ký hoặc cấp trust. Hai skill viết
+mới là `nckh-humanwrite` và `nckh-paperwrite`.
+Xem [hướng dẫn hook](docs/portable-hooks.md).

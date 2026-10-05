@@ -1,0 +1,79 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "unavailable",
+        "unverified",
+        "observed"
+      ]
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "rights": {
+      "enum": [
+        "owned",
+        "cleared",
+        "unknown"
+      ]
+    },
+    "permissions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "engine_binding": {},
+    "runtime_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope": {"const": "project-task"},
+        "format": {"const": "svg"},
+        "schema": {"const": "core/contracts/visual-engine-binding.schema.json"},
+        "checker": {"const": "scripts/check-visual-engine.py"},
+        "capabilities": {"const": ["svg-render"]}
+      },
+      "required": ["scope", "format", "schema", "checker", "capabilities"]
+    },
+    "acceptance": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "receipt_reference": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "capability",
+    "status",
+    "dependencies",
+    "rights",
+    "permissions",
+    "acceptance"
+  ]
+}

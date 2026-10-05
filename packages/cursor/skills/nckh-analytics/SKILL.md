@@ -26,6 +26,8 @@ Scientific venue/ranking rules apply only when the task explicitly needs them.
 
 ## Workflow and boundaries
 
+Research visual handoffs use the shared research-purpose preflight: question/object/role/evidence and source-to-mark mappings are mandatory. Do not generate logos, banners, ads, thumbnails or generic artwork, including a research logo. Actual computation/simulation plots need verified run provenance and a non-observed label. This indirect route is instruction-only/manual/not-callable until its event/engine is qualified; missing or denied preflight stops generation. Drafting/analysis/UI inspection remains with this owner.
+
 Read actual data and its provenance/rights. Define events, population/unit, numerator/denominator, aggregation, time range/timezone, exclusions and missingness before computing metrics. Unknown/missing values are not zero.
 
 Check duplicates, instrumentation changes, selection, data completeness and incompatible windows. Preserve transformations and sample counts so the analysis is reproducible. Distinguish a dashboard number, estimate, observed rate and unsupported claim.

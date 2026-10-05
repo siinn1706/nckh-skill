@@ -1,13 +1,14 @@
 # Phạm vi và quyền của bản công khai
 
 Chủ sở hữu đã cho phép đưa bộ skill lên repository public `nckh-skill` ngày
-03/10/2026. Bản cập nhật ngày 04/10/2026 được tạo từ source lock revision 26, dùng chế độ đóng gói
+03/10/2026. Bản cập nhật ngày 06/10/2026 được chủ sở hữu cho phép đăng cùng data và hook,
+được tạo từ source lock revision 37, dùng chế độ đóng gói
 `resource-access on` theo yêu cầu của chủ sở hữu. Các package phân phối luôn bật
 tài nguyên; verifier từ chối package bị chuyển sang `off` hoặc thiếu tài nguyên.
 
 ## Nội dung được phân phối
 
-- Bốn package tự chứa instructions và references cho 37 skill.
+- Bốn package tự chứa instructions và references cho 39 skill.
 - Chín nhóm tài nguyên cùng reader, giấy phép, ghi công và provenance đi kèm.
 - Sáu agent tùy chọn với cấu hình kế thừa model của ứng dụng.
 - Manifest, source lock và adapter của từng package.
@@ -15,7 +16,7 @@ tài nguyên; verifier từ chối package bị chuyển sang `off` hoặc thi�
   gates và rollback.
 - Script kiểm tra package và hướng dẫn dùng bản công khai.
 
-Mỗi manifest khai báo `resource_access: on`, bật đủ 9 nhóm tài nguyên qua 21
+Mỗi manifest khai báo `resource_access: on`, bật đủ 9 nhóm tài nguyên qua 27
 binding giữa tài nguyên và skill sử dụng. Verifier kiểm tra file, hash, giấy
 phép, reference closure và binding thực tế. Reader mặc định dùng `on` và trả lại
 nguồn/record cụ thể; lỗi đọc hoặc sai hash cần được xử lý tại nguồn lỗi.
@@ -47,7 +48,7 @@ Các chức năng build/freeze còn nằm trong module verifier nguyên bản kh
 entrypoint được cung cấp cho bản này.
 
 Các nhãn `experimental`, `native_qualification: unverified` và
-`release_rights: local-package-only` trong bản ghi máy của r26 được giữ nguyên.
+`release_rights: local-package-only` trong bản ghi máy của r37 được giữ nguyên.
 Quyền chia sẻ instructions và công cụ trong repository được chủ sở hữu cấp cho
 bản public này; các nhãn lịch sử không cấp giấy phép tái phân phối tài nguyên
 upstream. Việc upload không tự hoàn tất stable/scientific/human qualification.
@@ -55,3 +56,9 @@ upstream. Việc upload không tự hoàn tất stable/scientific/human qualific
 Repository không gán giấy phép MIT hoặc Apache chung cho toàn bộ instructions
 và mã tự viết. Thông tin giấy phép upstream trong metadata chỉ áp dụng cho nội
 dung tương ứng; người sử dụng cần xác định quyền của dữ liệu tự cung cấp.
+
+## Hook đóng gói
+
+Bốn package có hook runner, codec/template theo ứng dụng, manual checker và công
+cụ cấu hình cùng dependency được pin. Hook và plugin projection chưa kích hoạt.
+Xem [hướng dẫn hook](portable-hooks.md).

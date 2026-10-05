@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "host": "claude",
+  "enabled": false,
+  "mode": "advisory",
+  "registered": false,
+  "trusted": false,
+  "native_qualification": "unverified",
+  "config": {
+    "hooks": {
+      "PreToolUse": [
+        {
+          "matcher": ".*",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "NCKH_CONTROLLER_COMMAND",
+              "timeout": 5
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

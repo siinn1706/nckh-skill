@@ -1,6 +1,7 @@
 ---
 name: nckh-write
-description: "Draft, revise, polish or translate Vietnamese/English prose from supplied facts and evidence. Use minimal diff, task terminology and factual-delta checks; no invented citations."
+description: "Compatibility route for Vietnamese/English drafting, polishing or translation. Route by requested action to humanwrite or paperwrite while preserving locale, facts and legacy bilingual requests."
+argument-hint: "<action and prose/evidence brief> [--en|--vi]"
 metadata:
   version: "0.1.0"
   status: experimental
@@ -22,6 +23,15 @@ Read the route-specific references below when their mode applies. Output languag
 follows the brief; keep same-agent execution unless delegation has a recorded benefit.
 
 ## Workflow and boundaries
+
+Normalize the [writer language contract](references/_shared/core/profiles/style/writer-language.md)
+before drafting. Route polish/translate to [humanwrite](references/_shared/skills/core/nckh-humanwrite/SKILL.md),
+including paper paragraphs; route scientific outline/section/argument/reporting/
+revision-response to [paperwrite](references/_shared/skills/core/nckh-paperwrite/SKILL.md). Decide from the
+requested action and supplied evidence, not the word "paper". Keep legacy general
+prose drafting here when neither specialized action applies. Carry the original
+`--en`/`--vi` flags and normalized target through the handoff. Both flags conflict
+with no artifact mutation; ambiguous no-flag locale needs one clarification.
 
 Select VI, EN, bilingual or vi-to-en/en-to-vi from the brief. Read the matching language/genre profile. Preserve the user's chosen thesis, terminology, protected regions and citations; apply a minimal diff for polishing rather than rebuilding the manuscript.
 

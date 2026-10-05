@@ -14,8 +14,8 @@ from core.schema import ContractError
 def main():
     catalog = load_json(ROOT / "core/registry/catalog/skills.json")
     expected = {row["id"] for row in catalog["skills"]}
-    if len(expected) != 37:
-        raise ContractError("public catalog must contain 37 unique skills")
+    if len(expected) != 39:
+        raise ContractError("public catalog must contain 39 unique skills")
     summaries = []
     for host in ("claude", "codex", "cursor", "agy"):
         bundle = ROOT.parent / "packages" / host
@@ -39,11 +39,17 @@ def main():
             raise ContractError("enabled public resource inventory differs from registry")
         if {row["id"] for row in manifest["skills"]} != expected:
             raise ContractError("public package skill inventory differs from catalog")
-        if load_json(bundle / "source-lock.json")["revision"] != "26":
+        if load_json(bundle / "source-lock.json")["revision"] != "37":
             raise ContractError("unexpected public source revision")
+        hooks = manifest.get("hooks", {})
+        if (hooks.get("state") != "packaged-inactive"
+                or any(hooks.get(key) is not False for key in ("enabled", "registered", "trusted"))):
+            raise ContractError("public hooks must be packaged and inactive")
         summaries.append({"host": host, "skills": len(expected),
                           "agents": len(manifest["agents"]), "resource_access": "on",
                           "resource_types": len(resource_ids), "resource_bindings": len(actual),
+                          "hook_members": len(hooks["members"]),
+                          "hook_state": hooks["state"], "source_revision": "37",
                           "closure_hash": manifest["closure_hash"]})
     print(json.dumps({"status": "pass", "packages": summaries}, indent=2))
     return 0

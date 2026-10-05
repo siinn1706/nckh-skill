@@ -26,6 +26,8 @@ Scientific venue/ranking rules apply only when the task explicitly needs them.
 
 ## Workflow and boundaries
 
+Research visual handoffs use the shared research-purpose preflight: question/object/role/evidence and source-to-mark mappings are mandatory. Do not generate logos, banners, ads, thumbnails or generic artwork, including a research logo. Actual computation/simulation plots need verified run provenance and a non-observed label. This indirect route is instruction-only/manual/not-callable until its event/engine is qualified; missing or denied preflight stops generation. Drafting/analysis/UI inspection remains with this owner.
+
 Inspect existing audience/brand decisions and preserve them. Build positioning from supported customer/problem/offering evidence, distinguishing product facts from proposed messaging. Specify audience, promise, reasons to believe, voice/register and message hierarchy.
 
 Design brief belongs here: define purpose, usage contexts, identity principles, palette/type constraints, accessibility, deliverables, asset/rights requirements and concrete review criteria. Creative direction can present bounded alternatives without fabricating customer preference data.

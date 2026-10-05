@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "host": "agy",
+  "enabled": false,
+  "mode": "advisory",
+  "registered": false,
+  "trusted": false,
+  "native_qualification": "unverified",
+  "config": {
+    "nckh": {
+      "enabled": false,
+      "PreToolUse": [
+        {
+          "matcher": ".*",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "NCKH_CONTROLLER_COMMAND",
+              "timeout": 5
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

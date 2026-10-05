@@ -8,7 +8,8 @@
   "permissions": [
     "selected engine availability",
     "data/asset rights",
-    "provider/egress if selected"
+    "provider/egress if selected",
+    "research visual purpose/mark preflight before generation; instruction-only until native verification"
   ],
   "engine_binding": null,
   "runtime_binding": {
@@ -16,7 +17,9 @@
     "format": "svg",
     "schema": "core/contracts/visual-engine-binding.schema.json",
     "checker": "scripts/check-visual-engine.py",
-    "capabilities": ["svg-render"]
+    "capabilities": [
+      "svg-render"
+    ]
   },
   "acceptance": [
     "native editability",

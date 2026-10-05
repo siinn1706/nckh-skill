@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "id": "nckh-personal-use-acceptance",
-  "revision": "2026-10-03",
+  "revision": "2026-10-04",
   "lane": "personal-use",
-  "catalog_revision": "1",
+  "catalog_revision": "2",
   "catalog_status": "experimental",
   "verdicts": [
     "pass",
@@ -1234,6 +1234,50 @@
         "STAT-ASA",
         "MKT-ANALYTICS",
         "AI-RISK"
+      ]
+    },
+    "nckh-humanwrite": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-humanwrite:positive",
+        "nckh-humanwrite:negative",
+        "nckh-humanwrite:outcome",
+        "nckh-humanwrite:failure"
+      ],
+      "criteria": {
+        "positive": "Polish/translate VI or EN with minimal diff, contextual Humanizer policy, correct language normalization and source locale.",
+        "negative": "Reject scientific authoring or new literature verification; no task execution before a bounded owner handoff.",
+        "failure_or_output": "Artifact plus factual-delta/evidence gates; conflicting flags, protected-field changes or unsupported certainty stop acceptance without side effects.",
+        "authority": "AI disclosure/permission theo venue; không coi fluency là scientific validity."
+      },
+      "source_ids": [
+        "PUB-ICMJE",
+        "PUB-IEEE",
+        "STYLE-ADVISORY",
+        "STAT-ASA"
+      ]
+    },
+    "nckh-paperwrite": {
+      "kit": "core",
+      "catalog_status": "experimental",
+      "eval_ids": [
+        "nckh-paperwrite:positive",
+        "nckh-paperwrite:negative",
+        "nckh-paperwrite:outcome",
+        "nckh-paperwrite:failure"
+      ],
+      "criteria": {
+        "positive": "Outline/section/argument/reporting/revision-response from existing evidence, genre and exact venue context.",
+        "negative": "Reject prose-only polish/translation and missing-result invention; no task execution before the owner handoff.",
+        "failure_or_output": "Artifact plus factual-delta/evidence gates; conflicting flags, protected-field changes or unsupported certainty stop acceptance without side effects.",
+        "authority": "AI disclosure/permission theo venue; không coi fluency là scientific validity."
+      },
+      "source_ids": [
+        "PUB-ICMJE",
+        "PUB-IEEE",
+        "STYLE-ADVISORY",
+        "STAT-ASA"
       ]
     }
   }
