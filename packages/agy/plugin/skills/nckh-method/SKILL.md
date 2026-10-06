@@ -34,5 +34,8 @@ Return a protocol/outline with explicit test or review oracles and required huma
 ## References
 
 - [Method checklist](references/method-and-argument.md)
+- [Scientific protocol](references/research-protocol.md)
+- [Causal claim and identification boundaries](references/causal-inference.md)
 - [Brief schema](references/_shared/core/contracts/brief.schema.json)
 - [Scoped resource lookup](references/resource-lookup.md)
+- [Reproducible experiment graph](references/reproducibility.md)

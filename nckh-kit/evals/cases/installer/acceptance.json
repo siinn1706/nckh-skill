@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "revision": "1",
+  "status": "not-run",
+  "evidence_class": "native-and-os-protocol",
+  "input_provenance": "Original acceptance scenarios; isolated synthetic homes and owner-authorized native scopes.",
+  "input_rights": "owned",
+  "authorization": "Freeze exact paths, host/OS/version, cost ceiling, process ownership and cleanup before native writes or model calls.",
+  "os_tracks": [
+    {"os": "Windows", "copy": "not-run", "symlink": "unverified", "receipt_reference": null},
+    {"os": "macOS", "copy": "not-run", "symlink": "unverified", "receipt_reference": null},
+    {"os": "Linux", "copy": "not-run", "symlink": "unverified", "receipt_reference": null}
+  ],
+  "record_fields": ["case_id", "scope", "surface", "host_version", "os_version", "shell_version", "source_lock_hash", "closure_hash", "pre_install_hashes", "preview_reference", "grant_reference", "actual_output_reference", "exit_status", "processes_started", "cleanup_reference", "result", "limitations"],
+  "cases": [
+    {"id": "prerequisite-absence", "scenario": "Run each entry wrapper with a controlled process PATH that has neither supported Python nor a launcher, then with Python below 3.11.", "oracle": "Explicit prerequisite error before any target/state write; no download, elevation or service.", "status": "not-run"},
+    {"id": "wizard-review", "scenario": "Choose surface, kits, project/global, copy/symlink and model profile in an authorized terminal, inspect the complete preview, then cancel.", "oracle": "All five choices and final transaction are reviewable; cancel leaves target/state content unchanged.", "status": "not-run"},
+    {"id": "preview-and-entry-parity", "scenario": "Compare Python, PowerShell and POSIX JSON/exit results with explicit identical choices and Unicode/space paths.", "oracle": "Equivalent plans and errors; dry-run and doctor are read-only; no silent global scope.", "status": "not-run"},
+    {"id": "owned-install-noop", "scenario": "Commit an exact approved copy transaction and rerun it on the same surface/OS.", "oracle": "Verified closure and ownership; second run changes no content/config; native discovery has a separate observed receipt.", "status": "not-run"},
+    {"id": "edited-content-update", "scenario": "Edit one owned skill/native agent; try install, update without accepted receipts, stale receipts, keep-edited and explicit reviewed replacement.", "oracle": "Edits remain intact unless exact replacement is granted; pending/fixture-only or changed receipts cannot promote an update.", "status": "not-run"},
+    {"id": "interruption-recovery", "scenario": "Interrupt only an owned installer process after recorded staging/backup/partial writes, then rerun; repeat with a later user edit and missing backup.", "oracle": "Kernel lock releases; journal rollback restores only safe owned changes, preserves conflicts and requires fresh preview. No staged-write resume is claimed.", "status": "not-run"},
+    {"id": "concurrency-and-visibility", "scenario": "Run approved operations against shared physical roots and different compatibility roots, including nested duplicate definitions.", "oracle": "Serialization or explicit conflict before write; no duplicate definition accepted without native proof; unrelated processes are untouched.", "status": "not-run"},
+    {"id": "native-model-configuration", "scenario": "Preview observed eligible per-agent model/effort mappings and unknown/unsupported/overridden mappings, then execute only the separately granted native case.", "oracle": "Requested/resolved/configured/effective are distinct; unsupported custom/effort fails; actual effective settings require host evidence; parent global config is preserved.", "status": "not-run"},
+    {"id": "paths-permissions-and-links", "scenario": "Exercise denied target permissions, cross-device state, traversal/junction/link escapes and qualified/unqualified symlinks in the authorized OS lab.", "oracle": "Unsafe or unqualified actions stop before destructive writes; approved symlink artifacts remain immutable/available; permissions and ownership are preserved.", "status": "not-run"},
+    {"id": "uninstall-and-cleanup", "scenario": "Uninstall an approved owned transaction with shared consumers and later edits; compare baseline hashes and reconcile recorded processes/files.", "oracle": "Only unchanged owned content is removed; shared/edited data, credentials and host roots survive; cleanup has an actual receipt and unresolved residue is reported.", "status": "not-run"}
+  ],
+  "limitations": ["These are frozen scenarios, not executed results.", "Windows unit fixtures and PowerShell forwarding checks do not qualify a native host or macOS/Linux.", "Do not stop unknown processes or modify global PATH, ACLs, runtime settings or installed user data to manufacture a pass."]
+}

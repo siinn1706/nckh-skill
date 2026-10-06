@@ -1,0 +1,139 @@
+{
+  "schema_version": 1,
+  "kind": "research-domain-scenarios",
+  "evidence_class": "static",
+  "scenarios": [
+    {
+      "id": "scientific-dataset",
+      "requested_owner": "nckh-dataset",
+      "expected_owner": "nckh-dataset",
+      "scenario": "Curate a rights-cleared scientific cohort and frozen sample membership.",
+      "expected_route": "execute-own-scope",
+      "oracle": "Expected owner nckh-dataset; use its domain contract. Proceed only within the task grant.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "database-migration",
+      "requested_owner": "nckh-dataset",
+      "expected_owner": "nckh-data",
+      "scenario": "Change a relational schema and prepare a database migration.",
+      "expected_route": "reject-and-handoff-no-execution",
+      "oracle": "Expected owner nckh-data; use its domain contract. Reject this nominated owner and hand off; do not execute the other task.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "scientific-split-from-db",
+      "requested_owner": "nckh-data",
+      "expected_owner": "nckh-dataset",
+      "scenario": "Design scientific incident/entity/time partitions for exported observations.",
+      "expected_route": "reject-and-handoff-no-execution",
+      "oracle": "Expected owner nckh-dataset; use its domain contract. Reject this nominated owner and hand off; do not execute the other task.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "scientific-estimand",
+      "requested_owner": "nckh-statistics",
+      "expected_owner": "nckh-statistics",
+      "scenario": "Specify an independent scientific unit, estimand and dependence-aware uncertainty.",
+      "expected_route": "execute-own-scope",
+      "oracle": "Expected owner nckh-statistics; use its domain contract. Proceed only within the task grant.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "funnel-kpi",
+      "requested_owner": "nckh-statistics",
+      "expected_owner": "nckh-analytics",
+      "scenario": "Analyze campaign funnel conversion and KPI traffic.",
+      "expected_route": "reject-and-handoff-no-execution",
+      "oracle": "Expected owner nckh-analytics; use its domain contract. Reject this nominated owner and hand off; do not execute the other task.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "marketing-ab-test",
+      "requested_owner": "nckh-statistics",
+      "expected_owner": "nckh-experiment",
+      "scenario": "Design a marketing landing-page A/B experiment.",
+      "expected_route": "reject-and-handoff-no-execution",
+      "oracle": "Expected owner nckh-experiment; use its domain contract. Reject this nominated owner and hand off; do not execute the other task.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "signal-normalization",
+      "requested_owner": "nckh-telemetry",
+      "expected_owner": "nckh-telemetry",
+      "scenario": "Map telemetry signal units, timestamps, correlation and sampling quality.",
+      "expected_route": "execute-own-scope",
+      "oracle": "Expected owner nckh-telemetry; use its domain contract. Proceed only within the task grant.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "incident-cause-ranking",
+      "requested_owner": "nckh-telemetry",
+      "expected_owner": "nckh-aiops",
+      "scenario": "Evaluate incident cause ranking with gold, tie and failure policies.",
+      "expected_route": "reject-and-handoff-no-execution",
+      "oracle": "Expected owner nckh-aiops; use its domain contract. Reject this nominated owner and hand off; do not execute the other task.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "failing-code-test",
+      "requested_owner": "nckh-telemetry",
+      "expected_owner": "nckh-debug",
+      "scenario": "Diagnose an implementation defect from a failing software test.",
+      "expected_route": "reject-and-handoff-no-execution",
+      "oracle": "Expected owner nckh-debug; use its domain contract. Reject this nominated owner and hand off; do not execute the other task.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "scientific-protocol",
+      "requested_owner": "nckh-method",
+      "expected_owner": "nckh-method",
+      "scenario": "Freeze a scientific question, protocol, baselines and stopping policy.",
+      "expected_route": "execute-own-scope",
+      "oracle": "Expected owner nckh-method; use its domain contract. Proceed only within the task grant.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "authorized-local-attempt",
+      "requested_owner": "nckh-cook",
+      "expected_owner": "nckh-cook",
+      "scenario": "Execute an already authorized local frozen experiment through an owned observable process.",
+      "expected_route": "execute-own-scope",
+      "oracle": "Expected owner nckh-cook; use its domain contract. Proceed only within the task grant.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    },
+    {
+      "id": "research-environment",
+      "requested_owner": "nckh-devops",
+      "expected_owner": "nckh-devops",
+      "scenario": "Record an authorized research environment, limits and process cleanup route.",
+      "expected_route": "execute-own-scope",
+      "oracle": "Expected owner nckh-devops; use its domain contract. Proceed only within the task grant.",
+      "no_side_effect_oracle": "No DB mutation, provider, install, native activation, process launch or external write from a routing declaration; actual execution requires its task grant.",
+      "status": "not-run",
+      "receipt_reference": null
+    }
+  ]
+}

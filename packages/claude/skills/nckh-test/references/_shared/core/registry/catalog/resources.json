@@ -542,6 +542,506 @@
         "version_kind": "git-commit"
       },
       "source_kind": "retrieved-snapshot"
+    },
+    {
+      "resource_id": "R-statistical-recipes",
+      "path": "core/profiles/resources/statistical-recipes.jsonl",
+      "source_kind": "owned-reference",
+      "copied_vs_reauthored": "reauthored-with-sources",
+      "owned_provenance": {
+        "schema_version": 1,
+        "source_kind": "owned-reference",
+        "copied_vs_reauthored": "reauthored-with-sources",
+        "artifact_sha256": "f009560f2fb6eed8628a214a6a09ff9e9fc11b8be03f00d3a647a0c1f266f29b",
+        "authoring_version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "authoring_disposition": "original-summary-no-upstream-bytes",
+        "release_rights": "local-package-only",
+        "record_ids": [
+          "paired-case-difference",
+          "nested-observations",
+          "dependent-forecast-errors"
+        ],
+        "rights_record": {
+          "path": "core/profiles/resources/research-packs-rights.md",
+          "sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9"
+        },
+        "attribution_record": {
+          "path": "core/profiles/resources/research-packs-attribution.md",
+          "sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375"
+        },
+        "contributions": [
+          {
+            "source_id": "kd-assumptions",
+            "locator": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+            "version_kind": "archive-snapshot",
+            "version_or_snapshot": "selected-archive-bytes@2026-10-06",
+            "upstream_commit": null,
+            "unknown_reason": "ZIP source lacks Git metadata; branch name is not a commit",
+            "observed_hash": "6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073",
+            "as_of": "2026-10-06",
+            "license": "MIT selected path; no source bytes packaged",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://github.com/K-Dense-AI/scientific-agent-skills",
+            "transformation": "concept-only-own-text",
+            "applicability": "Method reference; task design and scientific acceptance remain separate",
+            "record_ids": [
+              "paired-case-difference",
+              "nested-observations",
+              "dependent-forecast-errors"
+            ]
+          },
+          {
+            "source_id": "nature-units",
+            "locator": "https://github.com/Yuan1z0825/nature-skills/blob/main/skills/nature-statistics/references/common-failure-modes.md",
+            "version_kind": "archive-snapshot",
+            "version_or_snapshot": "selected-archive-bytes@2026-10-06",
+            "upstream_commit": null,
+            "unknown_reason": "ZIP source lacks Git metadata; branch name is not a commit",
+            "observed_hash": "e4db4cbcc5c2c64bbe40e54a0686986e1c540c0e7530fd3ed2902da92968876b",
+            "as_of": "2026-10-06",
+            "license": "Apache-2.0 selected path; no source bytes packaged",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://github.com/Yuan1z0825/nature-skills",
+            "transformation": "concept-only-own-text",
+            "applicability": "Method reference; task design and scientific acceptance remain separate",
+            "record_ids": [
+              "paired-case-difference",
+              "nested-observations",
+              "dependent-forecast-errors"
+            ]
+          }
+        ]
+      },
+      "format": "jsonl",
+      "reader": "scripts/search-resource.py",
+      "consumers": [
+        "nckh-statistics",
+        "nckh-method"
+      ],
+      "domain": "scientific-statistics",
+      "locale": "en",
+      "genre": "analysis-recipe",
+      "producer": "Original scoped summaries from reviewed hash-bound contribution snapshots",
+      "dependency": "required",
+      "requires": [
+        "core/registry/catalog/resources.json",
+        "core/profiles/resources/research-packs-rights.md",
+        "core/profiles/resources/research-packs-attribution.md"
+      ],
+      "expected_artifact": "unit/assumption/estimator/uncertainty analysis-plan selection",
+      "acceptance": "Actual typed/context/rights/hash/bounded-reader checks; scientific/owner/native acceptance separate",
+      "release_state": "experimental-local",
+      "rollback": "Restore reviewed owned closure and registry together, retaining all snapshots and failed attempts",
+      "source": {
+        "repository": "nckh-kit-owned-research-references",
+        "version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "license": "owned-local-package",
+        "license_path": "core/profiles/resources/research-packs-rights.md",
+        "license_sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9",
+        "notice_path": "core/profiles/resources/research-packs-attribution.md",
+        "notice_sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375",
+        "redistribution": "local-package-only",
+        "review_reference": "docs/contracts.md",
+        "sha256": "f009560f2fb6eed8628a214a6a09ff9e9fc11b8be03f00d3a647a0c1f266f29b",
+        "version_kind": "owned-authored",
+        "rights_scope": "local-package-only",
+        "license_kind": "owned-rights-record"
+      }
+    },
+    {
+      "resource_id": "R-telemetry-dictionary",
+      "path": "core/profiles/resources/telemetry-dictionary.jsonl",
+      "source_kind": "owned-reference",
+      "copied_vs_reauthored": "reauthored-with-sources",
+      "owned_provenance": {
+        "schema_version": 1,
+        "source_kind": "owned-reference",
+        "copied_vs_reauthored": "reauthored-with-sources",
+        "artifact_sha256": "532dfc7427d0dc1349a3c3c2134bd9de4076a741e5950c854c0527331d9bdb34",
+        "authoring_version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "authoring_disposition": "original-summary-no-upstream-bytes",
+        "release_rights": "local-package-only",
+        "record_ids": [
+          "log-event-observation-time",
+          "cumulative-counter",
+          "trace-resource-join"
+        ],
+        "rights_record": {
+          "path": "core/profiles/resources/research-packs-rights.md",
+          "sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9"
+        },
+        "attribution_record": {
+          "path": "core/profiles/resources/research-packs-attribution.md",
+          "sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375"
+        },
+        "contributions": [
+          {
+            "source_id": "otel-conventions",
+            "locator": "https://opentelemetry.io/docs/specs/semconv/index.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:46:45.697786+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot only; no commit resolved; raw bytes retained privately in run",
+            "observed_hash": "5873cc067becb452c7a8e952d93d0ed3edec37ce4784c24ef49710d34e5e84a8",
+            "as_of": "2026-10-06",
+            "license": "CC-BY-4.0 documentation",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://opentelemetry.io/docs/specs/semconv/index.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "log-event-observation-time",
+              "cumulative-counter",
+              "trace-resource-join"
+            ]
+          },
+          {
+            "source_id": "otel-logs",
+            "locator": "https://opentelemetry.io/docs/specs/otel/logs/data-model/index.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:47:40.026693+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot; commit not resolved",
+            "observed_hash": "0433fda4686e7c2374844ed956752097ca26260841c50fb92204cc072f590b4a",
+            "as_of": "2026-10-06",
+            "license": "CC-BY-4.0 documentation",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://opentelemetry.io/docs/specs/otel/logs/data-model/index.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "log-event-observation-time",
+              "trace-resource-join"
+            ]
+          },
+          {
+            "source_id": "otel-metrics",
+            "locator": "https://opentelemetry.io/docs/specs/otel/metrics/data-model/index.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:46:46.537135+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot only; no commit resolved; raw bytes retained privately in run",
+            "observed_hash": "d7b231976a8c06334d9201946d179d58a5f4b956b2a4027ce86676e8c4a38a91",
+            "as_of": "2026-10-06",
+            "license": "CC-BY-4.0 documentation",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://opentelemetry.io/docs/specs/otel/metrics/data-model/index.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "cumulative-counter"
+            ]
+          },
+          {
+            "source_id": "otel-traces",
+            "locator": "https://opentelemetry.io/docs/specs/otel/trace/api/index.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:47:41.579735+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot; commit not resolved",
+            "observed_hash": "f59f909d3a4623d0e308e8398a302303721fbadc6ee77516738ad3d44151f634",
+            "as_of": "2026-10-06",
+            "license": "CC-BY-4.0 documentation",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://opentelemetry.io/docs/specs/otel/trace/api/index.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "trace-resource-join"
+            ]
+          }
+        ]
+      },
+      "format": "jsonl",
+      "reader": "scripts/search-resource.py",
+      "consumers": [
+        "nckh-telemetry"
+      ],
+      "domain": "observability-research",
+      "locale": "en",
+      "genre": "telemetry-field-reference",
+      "producer": "Original scoped summaries from reviewed hash-bound contribution snapshots",
+      "dependency": "required",
+      "requires": [
+        "core/registry/catalog/resources.json",
+        "core/profiles/resources/research-packs-rights.md",
+        "core/profiles/resources/research-packs-attribution.md"
+      ],
+      "expected_artifact": "signal/unit/time/resource/correlation mapping checklist",
+      "acceptance": "Actual typed/context/rights/hash/bounded-reader checks; scientific/owner/native acceptance separate",
+      "release_state": "experimental-local",
+      "rollback": "Restore reviewed owned closure and registry together, retaining all snapshots and failed attempts",
+      "source": {
+        "repository": "nckh-kit-owned-research-references",
+        "version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "license": "owned-local-package",
+        "license_path": "core/profiles/resources/research-packs-rights.md",
+        "license_sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9",
+        "notice_path": "core/profiles/resources/research-packs-attribution.md",
+        "notice_sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375",
+        "redistribution": "local-package-only",
+        "review_reference": "docs/contracts.md",
+        "sha256": "532dfc7427d0dc1349a3c3c2134bd9de4076a741e5950c854c0527331d9bdb34",
+        "version_kind": "owned-authored",
+        "rights_scope": "local-package-only",
+        "license_kind": "owned-rights-record"
+      }
+    },
+    {
+      "resource_id": "R-aiops-benchmark-cards",
+      "path": "core/profiles/resources/aiops-benchmark-cards.jsonl",
+      "source_kind": "owned-reference",
+      "copied_vs_reauthored": "reauthored-with-sources",
+      "owned_provenance": {
+        "schema_version": 1,
+        "source_kind": "owned-reference",
+        "copied_vs_reauthored": "reauthored-with-sources",
+        "artifact_sha256": "712960f5a1b1ed86457180a463a083e7c9eb0c89305b32b2c5e7923905310859",
+        "authoring_version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "authoring_disposition": "original-summary-no-upstream-bytes",
+        "release_rights": "local-package-only",
+        "record_ids": [
+          "rcaeval-re1-ob",
+          "rcaeval-re2-ss",
+          "aiopslab-interactive"
+        ],
+        "rights_record": {
+          "path": "core/profiles/resources/research-packs-rights.md",
+          "sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9"
+        },
+        "attribution_record": {
+          "path": "core/profiles/resources/research-packs-attribution.md",
+          "sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375"
+        },
+        "contributions": [
+          {
+            "source_id": "aiopslab-readme",
+            "locator": "https://raw.githubusercontent.com/microsoft/AIOpsLab/main/README.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:46:44.707754+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot only; no commit resolved; raw bytes retained privately in run",
+            "observed_hash": "02a7d09401d464e432e73101420c8cabd0fa4a6dd8544cca380522af8a83717a",
+            "as_of": "2026-10-06",
+            "license": "Root MIT with NOTICE; application submodules and runtime rights separate",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://raw.githubusercontent.com/microsoft/AIOpsLab/main/README.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "aiopslab-interactive"
+            ]
+          },
+          {
+            "source_id": "rcaeval-readme",
+            "locator": "https://raw.githubusercontent.com/phamquiluan/RCAEval/main/README.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:46:44.241935+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot only; no commit resolved; raw bytes retained privately in run",
+            "observed_hash": "25a354ef13f5adf8b2869d67a832958a8a31a6b7b95cf011e060f34ab28c98a9",
+            "as_of": "2026-10-06",
+            "license": "Root MIT; component/data rights require separate review; CausalRCA/RUN unresolved",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://raw.githubusercontent.com/phamquiluan/RCAEval/main/README.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "rcaeval-re1-ob",
+              "rcaeval-re2-ss"
+            ]
+          }
+        ]
+      },
+      "format": "jsonl",
+      "reader": "scripts/search-resource.py",
+      "consumers": [
+        "nckh-aiops",
+        "nckh-dataset"
+      ],
+      "domain": "aiops-research",
+      "locale": "en",
+      "genre": "benchmark-reference",
+      "producer": "Original scoped summaries from reviewed hash-bound contribution snapshots",
+      "dependency": "required",
+      "requires": [
+        "core/registry/catalog/resources.json",
+        "core/profiles/resources/research-packs-rights.md",
+        "core/profiles/resources/research-packs-attribution.md"
+      ],
+      "expected_artifact": "exact benchmark/task/modalities/labels/rights/split card selection",
+      "acceptance": "Actual typed/context/rights/hash/bounded-reader checks; scientific/owner/native acceptance separate",
+      "release_state": "experimental-local",
+      "rollback": "Restore reviewed owned closure and registry together, retaining all snapshots and failed attempts",
+      "source": {
+        "repository": "nckh-kit-owned-research-references",
+        "version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "license": "owned-local-package",
+        "license_path": "core/profiles/resources/research-packs-rights.md",
+        "license_sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9",
+        "notice_path": "core/profiles/resources/research-packs-attribution.md",
+        "notice_sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375",
+        "redistribution": "local-package-only",
+        "review_reference": "docs/contracts.md",
+        "sha256": "712960f5a1b1ed86457180a463a083e7c9eb0c89305b32b2c5e7923905310859",
+        "version_kind": "owned-authored",
+        "rights_scope": "local-package-only",
+        "license_kind": "owned-rights-record"
+      }
+    },
+    {
+      "resource_id": "R-aiops-evaluation-recipes",
+      "path": "core/profiles/resources/aiops-evaluation-recipes.jsonl",
+      "source_kind": "owned-reference",
+      "copied_vs_reauthored": "reauthored-with-sources",
+      "owned_provenance": {
+        "schema_version": 1,
+        "source_kind": "owned-reference",
+        "copied_vs_reauthored": "reauthored-with-sources",
+        "artifact_sha256": "8858fb0b7a8500404469c4138c7de299605e69c567fd36b6c676cf6831f6dfb4",
+        "authoring_version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "authoring_disposition": "original-summary-no-upstream-bytes",
+        "release_rights": "local-package-only",
+        "record_ids": [
+          "rca-ranking",
+          "anomaly-events",
+          "chronological-forecast",
+          "retrieval-relevance",
+          "agent-trials"
+        ],
+        "rights_record": {
+          "path": "core/profiles/resources/research-packs-rights.md",
+          "sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9"
+        },
+        "attribution_record": {
+          "path": "core/profiles/resources/research-packs-attribution.md",
+          "sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375"
+        },
+        "contributions": [
+          {
+            "source_id": "aiopslab-readme",
+            "locator": "https://raw.githubusercontent.com/microsoft/AIOpsLab/main/README.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:46:44.707754+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot only; no commit resolved; raw bytes retained privately in run",
+            "observed_hash": "02a7d09401d464e432e73101420c8cabd0fa4a6dd8544cca380522af8a83717a",
+            "as_of": "2026-10-06",
+            "license": "Root MIT with NOTICE; application submodules and runtime rights separate",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://raw.githubusercontent.com/microsoft/AIOpsLab/main/README.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "agent-trials"
+            ]
+          },
+          {
+            "source_id": "kd-assumptions",
+            "locator": "https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+            "version_kind": "archive-snapshot",
+            "version_or_snapshot": "selected-archive-bytes@2026-10-06",
+            "upstream_commit": null,
+            "unknown_reason": "ZIP source lacks Git metadata; branch name is not a commit",
+            "observed_hash": "6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073",
+            "as_of": "2026-10-06",
+            "license": "MIT selected path; no source bytes packaged",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://github.com/K-Dense-AI/scientific-agent-skills",
+            "transformation": "concept-only-own-text",
+            "applicability": "Method reference; task design and scientific acceptance remain separate",
+            "record_ids": [
+              "chronological-forecast",
+              "retrieval-relevance"
+            ]
+          },
+          {
+            "source_id": "nature-units",
+            "locator": "https://github.com/Yuan1z0825/nature-skills/blob/main/skills/nature-statistics/references/common-failure-modes.md",
+            "version_kind": "archive-snapshot",
+            "version_or_snapshot": "selected-archive-bytes@2026-10-06",
+            "upstream_commit": null,
+            "unknown_reason": "ZIP source lacks Git metadata; branch name is not a commit",
+            "observed_hash": "e4db4cbcc5c2c64bbe40e54a0686986e1c540c0e7530fd3ed2902da92968876b",
+            "as_of": "2026-10-06",
+            "license": "Apache-2.0 selected path; no source bytes packaged",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://github.com/Yuan1z0825/nature-skills",
+            "transformation": "concept-only-own-text",
+            "applicability": "Method reference; task design and scientific acceptance remain separate",
+            "record_ids": [
+              "rca-ranking",
+              "anomaly-events",
+              "chronological-forecast",
+              "retrieval-relevance",
+              "agent-trials"
+            ]
+          },
+          {
+            "source_id": "rcaeval-readme",
+            "locator": "https://raw.githubusercontent.com/phamquiluan/RCAEval/main/README.md",
+            "version_kind": "web-snapshot",
+            "version_or_snapshot": "2026-10-06T02:46:44.241935+00:00",
+            "upstream_commit": null,
+            "unknown_reason": "web snapshot only; no commit resolved; raw bytes retained privately in run",
+            "observed_hash": "25a354ef13f5adf8b2869d67a832958a8a31a6b7b95cf011e060f34ab28c98a9",
+            "as_of": "2026-10-06",
+            "license": "Root MIT; component/data rights require separate review; CausalRCA/RUN unresolved",
+            "rights_scope": "metadata-reference",
+            "attribution": "https://raw.githubusercontent.com/phamquiluan/RCAEval/main/README.md",
+            "transformation": "concept-only-own-text",
+            "applicability": "Snapshot metadata only; no upstream code/data/runtime imported",
+            "record_ids": [
+              "rca-ranking",
+              "anomaly-events"
+            ]
+          }
+        ]
+      },
+      "format": "jsonl",
+      "reader": "scripts/search-resource.py",
+      "consumers": [
+        "nckh-aiops",
+        "nckh-statistics",
+        "nckh-method"
+      ],
+      "domain": "aiops-research",
+      "locale": "en",
+      "genre": "evaluation-recipe",
+      "producer": "Original scoped summaries from reviewed hash-bound contribution snapshots",
+      "dependency": "required",
+      "requires": [
+        "core/registry/catalog/resources.json",
+        "core/profiles/resources/research-packs-rights.md",
+        "core/profiles/resources/research-packs-attribution.md"
+      ],
+      "expected_artifact": "task baseline/metric/tie/failure/leakage protocol selection",
+      "acceptance": "Actual typed/context/rights/hash/bounded-reader checks; scientific/owner/native acceptance separate",
+      "release_state": "experimental-local",
+      "rollback": "Restore reviewed owned closure and registry together, retaining all snapshots and failed attempts",
+      "source": {
+        "repository": "nckh-kit-owned-research-references",
+        "version": "research-references-v1",
+        "as_of": "2026-10-06",
+        "license": "owned-local-package",
+        "license_path": "core/profiles/resources/research-packs-rights.md",
+        "license_sha256": "2dbc882e1497b4ad242b62f4e54e79795c38b85c5c9f9e5e185c2e566a7f41d9",
+        "notice_path": "core/profiles/resources/research-packs-attribution.md",
+        "notice_sha256": "7f3d6036faa5ed1bc0fdcdd90b8b35460a12d3f432880d1fe2208825d9ae2375",
+        "redistribution": "local-package-only",
+        "review_reference": "docs/contracts.md",
+        "sha256": "8858fb0b7a8500404469c4138c7de299605e69c567fd36b6c676cf6831f6dfb4",
+        "version_kind": "owned-authored",
+        "rights_scope": "local-package-only",
+        "license_kind": "owned-rights-record"
+      }
     }
   ],
   "schema_version": 1

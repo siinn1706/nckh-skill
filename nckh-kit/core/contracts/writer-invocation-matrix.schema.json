@@ -1,0 +1,293 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "evidence_class": {
+      "const": "static"
+    },
+    "native_cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "writer": {
+            "enum": [
+              "nckh-humanwrite",
+              "nckh-paperwrite"
+            ]
+          },
+          "expected_owner": {
+            "enum": [
+              "nckh-humanwrite",
+              "nckh-paperwrite"
+            ]
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entrypoint": {
+            "type": "string",
+            "minLength": 1
+          },
+          "args": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "input_locale": {
+            "enum": [
+              "en",
+              "vi",
+              "bilingual",
+              "mixed"
+            ]
+          },
+          "output_locale": {
+            "enum": [
+              "en",
+              "vi",
+              "bilingual",
+              null
+            ]
+          },
+          "resource_locale": {
+            "enum": [
+              "en",
+              "vi"
+            ]
+          },
+          "expected_route": {
+            "type": "string",
+            "minLength": 1
+          },
+          "protected_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "no_side_effect_oracle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "not-run",
+              "not-callable",
+              "pass",
+              "fail",
+              "pending",
+              "completed-unreviewed"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "receipt_reference": {},
+          "receipt_sha256": {},
+          "observed_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "host": {
+            "type": "string",
+            "minLength": 1
+          },
+          "surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "invocation": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "writer",
+          "expected_owner",
+          "action",
+          "entrypoint",
+          "args",
+          "input_locale",
+          "output_locale",
+          "resource_locale",
+          "expected_route",
+          "protected_fields",
+          "no_side_effect_oracle",
+          "status",
+          "reason",
+          "receipt_reference",
+          "receipt_sha256",
+          "observed_version",
+          "id",
+          "host",
+          "surface",
+          "invocation"
+        ]
+      },
+      "minItems": 256
+    },
+    "scenario_cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "writer": {
+            "enum": [
+              "nckh-humanwrite",
+              "nckh-paperwrite"
+            ]
+          },
+          "expected_owner": {
+            "enum": [
+              "nckh-humanwrite",
+              "nckh-paperwrite"
+            ]
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entrypoint": {
+            "type": "string",
+            "minLength": 1
+          },
+          "args": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "input_locale": {
+            "enum": [
+              "en",
+              "vi",
+              "bilingual",
+              "mixed"
+            ]
+          },
+          "output_locale": {
+            "enum": [
+              "en",
+              "vi",
+              "bilingual",
+              null
+            ]
+          },
+          "resource_locale": {
+            "enum": [
+              "en",
+              "vi"
+            ]
+          },
+          "expected_route": {
+            "type": "string",
+            "minLength": 1
+          },
+          "protected_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "no_side_effect_oracle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "not-run",
+              "not-callable",
+              "pass",
+              "fail",
+              "pending",
+              "completed-unreviewed"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "receipt_reference": {},
+          "receipt_sha256": {},
+          "observed_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "host": {
+            "type": "string",
+            "minLength": 1
+          },
+          "surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "invocation": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scenario": {
+            "enum": [
+              "output-en",
+              "output-vi",
+              "conflicting-flags",
+              "no-flag-explicit-target",
+              "no-flag-brief",
+              "no-flag-draft",
+              "no-flag-ambiguous",
+              "cross-language-fidelity",
+              "english-resource-vi-output",
+              "bilingual-compatibility"
+            ]
+          }
+        },
+        "required": [
+          "writer",
+          "expected_owner",
+          "action",
+          "entrypoint",
+          "args",
+          "input_locale",
+          "output_locale",
+          "resource_locale",
+          "expected_route",
+          "protected_fields",
+          "no_side_effect_oracle",
+          "status",
+          "reason",
+          "receipt_reference",
+          "receipt_sha256",
+          "observed_version",
+          "id",
+          "host",
+          "surface",
+          "invocation",
+          "scenario"
+        ]
+      },
+      "minItems": 20
+    }
+  },
+  "required": [
+    "schema_version",
+    "evidence_class",
+    "native_cases",
+    "scenario_cases"
+  ]
+}

@@ -35,3 +35,4 @@ For diagnosis-only work return the cause, evidence and focused options without m
 
 - [Execution/authority modes](references/_shared/core/workflows/execution.md)
 - [Review/handoff](references/_shared/core/workflows/review-and-handoff.md)
+- [Scientific task evaluation](references/_shared/skills/core/nckh-aiops/references/benchmark-protocols.md): code diagnosis does not establish incident RCA or benchmark efficacy.

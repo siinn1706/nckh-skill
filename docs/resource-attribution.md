@@ -1,6 +1,6 @@
 # Ghi công tài nguyên đi kèm
 
-Bốn package r26 giữ `resource-access on`, cùng chín nhóm tài nguyên đã đăng ký.
+Bốn package r41 giữ `resource-access on`, cùng mười ba nhóm tài nguyên đã đăng ký.
 Mỗi skill sử dụng tài nguyên có bản sao giấy phép/notice trong references của
 chính skill đó. Bảng dưới liên kết đến một bản trong package Codex; các package
 Claude, Cursor và Antigravity giữ cùng tài nguyên và notices theo manifest.
@@ -39,3 +39,15 @@ phép upstream chỉ áp dụng cho phần nội dung được xác định tron
 Manifest và source lock giữ hash, provenance và các nhãn qualification gốc.
 Xem [phạm vi bản công khai](public-edition.md) để phân biệt quyền chia sẻ và
 kết quả kiểm tra tính toàn vẹn với qualification còn mở.
+
+
+## Bốn pack tham khảo tự biên soạn
+
+Statistical recipes, telemetry fields, AIOps benchmark cards và evaluation
+recipes có 14 record, với tám binding đến consumer. Registry giữ metadata
+nguồn, snapshot hash, phạm vi áp dụng và provenance của từng pack.
+Xem [rights record](../nckh-kit/core/profiles/resources/research-packs-rights.md),
+[attribution](../nckh-kit/core/profiles/resources/research-packs-attribution.md)
+và [resource registry](../nckh-kit/core/registry/catalog/resources.json).
+Quyền chia sẻ source/data do chủ sở hữu cấp cho lần xuất bản này được ghi tại
+[phạm vi bản công khai](public-edition.md); nhãn quyền lịch sử vẫn được giữ nguyên.

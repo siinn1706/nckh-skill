@@ -54,3 +54,4 @@ boundaries.
 - [Review/handoff](references/_shared/core/workflows/review-and-handoff.md)
 - [State schema](references/_shared/core/contracts/task-state.schema.json)
 - [Receipt schema](references/_shared/core/contracts/receipt.schema.json)
+- [Authorized research attempts](references/research-experiments.md)

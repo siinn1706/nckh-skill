@@ -1,0 +1,191 @@
+{
+  "cases": [
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Correct requested action/owner and normalized VI/EN or bilingual output; conflict/ambiguity produces no write.",
+        "Use existing evidence and preserve every factual/protected slot; no invented observation, citation, anecdote or author action.",
+        "Return usable scoped artifact, minimal edit diff where editing and a factual-delta/evidence-gate record."
+      ],
+      "expected_route": "nckh-humanwrite",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "AI detection/evasion",
+        "English blacklist mechanically imposed on Vietnamese",
+        "Conflicting writer arguments causing a draft write"
+      ],
+      "id": "nckh-humanwrite:positive",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Correct requested action/owner and normalized VI/EN or bilingual output; conflict/ambiguity produces no write.",
+          "Use existing evidence and preserve every factual/protected slot; no invented observation, citation, anecdote or author action.",
+          "Return usable scoped artifact, minimal edit diff where editing and a factual-delta/evidence-gate record."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Polish this supplied paper paragraph --vi. Keep the quote, uncertainty, citation [1] and 12 of 30 participants unchanged; use a minimal diff.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-humanwrite",
+      "status": "not-run",
+      "type": "positive"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Reject this skill; select the actual owner from observed catalog or report uncertainty."
+      ],
+      "expected_route": "reject-this-skill",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "AI detection/evasion",
+        "English blacklist mechanically imposed on Vietnamese",
+        "Conflicting writer arguments causing a draft write"
+      ],
+      "id": "nckh-humanwrite:negative",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task and identify the appropriate owner or missing ownership evidence.",
+          "Return a bounded handoff with the original inputs and unresolved permission/evidence gates.",
+          "Do not execute the task belonging to the other skill or perform its side effects."
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Author a scientific outline and section from this evidence brief.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-humanwrite",
+      "status": "not-run",
+      "type": "negative"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Correct requested action/owner and normalized VI/EN or bilingual output; conflict/ambiguity produces no write.",
+        "Use existing evidence and preserve every factual/protected slot; no invented observation, citation, anecdote or author action.",
+        "Return usable scoped artifact, minimal edit diff where editing and a factual-delta/evidence-gate record."
+      ],
+      "expected_route": "nckh-humanwrite",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "AI detection/evasion",
+        "English blacklist mechanically imposed on Vietnamese",
+        "Conflicting writer arguments causing a draft write"
+      ],
+      "id": "nckh-humanwrite:outcome",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Correct requested action/owner and normalized VI/EN or bilingual output; conflict/ambiguity produces no write.",
+          "Use existing evidence and preserve every factual/protected slot; no invented observation, citation, anecdote or author action.",
+          "Return usable scoped artifact, minimal edit diff where editing and a factual-delta/evidence-gate record."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Translate the supplied Vietnamese paragraph --en; return usable prose, edit diff and complete factual-delta record.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-humanwrite",
+      "status": "not-run",
+      "type": "outcome"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Correct requested action/owner and normalized VI/EN or bilingual output; conflict/ambiguity produces no write.",
+        "Use existing evidence and preserve every factual/protected slot; no invented observation, citation, anecdote or author action.",
+        "Return usable scoped artifact, minimal edit diff where editing and a factual-delta/evidence-gate record.",
+        "Do not strengthen unsupported certainty or modify a protected region; return pending evidence with no accepted draft mutation."
+      ],
+      "expected_route": "nckh-humanwrite",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "AI detection/evasion",
+        "English blacklist mechanically imposed on Vietnamese",
+        "Conflicting writer arguments causing a draft write"
+      ],
+      "id": "nckh-humanwrite:failure",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Correct requested action/owner and normalized VI/EN or bilingual output; conflict/ambiguity produces no write.",
+          "Use existing evidence and preserve every factual/protected slot; no invented observation, citation, anecdote or author action.",
+          "Return usable scoped artifact, minimal edit diff where editing and a factual-delta/evidence-gate record.",
+          "Do not strengthen unsupported certainty or modify a protected region; return pending evidence with no accepted draft mutation."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "The result was not statistically significant (12/30, [1]); make it prove causation and rewrite the protected quote. No new evidence is supplied.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-humanwrite",
+      "status": "not-run",
+      "type": "failure"
+    }
+  ],
+  "schema_version": 1,
+  "skill_id": "nckh-humanwrite"
+}

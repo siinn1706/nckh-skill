@@ -38,3 +38,4 @@ Preserve failures and pending tools. Under authorized TDD characterize behavior 
 - [Execution/authority modes](references/_shared/core/workflows/execution.md)
 - [Review/handoff](references/_shared/core/workflows/review-and-handoff.md)
 - [Scoped resource lookup](references/resource-lookup.md)
+- [Scientific evaluation protocol](references/_shared/skills/core/nckh-aiops/references/benchmark-protocols.md): contract fixtures, actual run oracles and scientific acceptance are distinct.

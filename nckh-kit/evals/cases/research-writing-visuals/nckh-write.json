@@ -1,0 +1,177 @@
+{
+  "cases": [
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Requested prose is usable and preserves protected regions/glossary.",
+        "Factual dimensions and certainty remain faithful or unresolved deltas are gated.",
+        "No source/citation is invented and no unnecessary search occurs."
+      ],
+      "expected_route": "nckh-write",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-write:positive",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Requested prose is usable and preserves protected regions/glossary.",
+          "Factual dimensions and certainty remain faithful or unresolved deltas are gated.",
+          "No source/citation is invented and no unnecessary search occurs."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Polish this Vietnamese research paragraph, preserve all facts and quoted text.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-write",
+      "status": "not-run",
+      "type": "positive"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Reject this skill; select the actual owner from observed catalog or report uncertainty."
+      ],
+      "expected_route": "reject-this-skill",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-write:negative",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task and identify the appropriate owner or missing ownership evidence.",
+          "Return a bounded handoff with the original inputs and unresolved permission/evidence gates.",
+          "Do not execute the task belonging to the other skill or perform its side effects."
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Search and verify new literature for the claim.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-write",
+      "status": "not-run",
+      "type": "negative"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Requested prose is usable and preserves protected regions/glossary.",
+        "Factual dimensions and certainty remain faithful or unresolved deltas are gated.",
+        "No source/citation is invented and no unnecessary search occurs."
+      ],
+      "expected_route": "nckh-write",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-write:outcome",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Requested prose is usable and preserves protected regions/glossary.",
+          "Factual dimensions and certainty remain faithful or unresolved deltas are gated.",
+          "No source/citation is invented and no unnecessary search occurs."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Polish this Vietnamese research paragraph, preserve all facts and quoted text.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-write",
+      "status": "not-run",
+      "type": "outcome"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Requested prose is usable and preserves protected regions/glossary.",
+        "Factual dimensions and certainty remain faithful or unresolved deltas are gated.",
+        "No source/citation is invented and no unnecessary search occurs."
+      ],
+      "expected_route": "nckh-write",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-write:failure",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Requested prose is usable and preserves protected regions/glossary.",
+          "Factual dimensions and certainty remain faithful or unresolved deltas are gated.",
+          "No source/citation is invented and no unnecessary search occurs."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Translate a negated, uncertain result with a denominator; a requested stronger causal sentence lacks evidence.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-write",
+      "status": "not-run",
+      "type": "failure"
+    }
+  ],
+  "schema_version": 1,
+  "skill_id": "nckh-write"
+}

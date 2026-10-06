@@ -37,3 +37,4 @@ For an authorized rollout verify health and rollback with actual observations. K
 
 - [Execution/authority modes](references/_shared/core/workflows/execution.md)
 - [Review/handoff](references/_shared/core/workflows/review-and-handoff.md)
+- [Research environment](references/research-environment.md)

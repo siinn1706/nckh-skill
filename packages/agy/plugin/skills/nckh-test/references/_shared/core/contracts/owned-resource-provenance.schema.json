@@ -1,0 +1,173 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "source_kind": {
+      "const": "owned-reference"
+    },
+    "copied_vs_reauthored": {
+      "const": "reauthored-with-sources"
+    },
+    "artifact_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "authoring_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "authoring_disposition": {
+      "const": "original-summary-no-upstream-bytes"
+    },
+    "release_rights": {
+      "const": "local-package-only"
+    },
+    "record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "rights_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "attribution_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "contributions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "version_kind": {
+            "enum": [
+              "git-commit",
+              "archive-snapshot",
+              "web-snapshot"
+            ]
+          },
+          "version_or_snapshot": {
+            "type": "string",
+            "minLength": 1
+          },
+          "upstream_commit": {
+            "description": "Verified 40 hex commit or null with unknown_reason."
+          },
+          "unknown_reason": {
+            "type": "string"
+          },
+          "observed_hash": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "as_of": {
+            "type": "string",
+            "minLength": 1
+          },
+          "license": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rights_scope": {
+            "const": "metadata-reference"
+          },
+          "attribution": {
+            "type": "string",
+            "minLength": 1
+          },
+          "transformation": {
+            "const": "concept-only-own-text"
+          },
+          "applicability": {
+            "type": "string",
+            "minLength": 1
+          },
+          "record_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "source_id",
+          "locator",
+          "version_kind",
+          "version_or_snapshot",
+          "upstream_commit",
+          "unknown_reason",
+          "observed_hash",
+          "as_of",
+          "license",
+          "rights_scope",
+          "attribution",
+          "transformation",
+          "applicability",
+          "record_ids"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "source_kind",
+    "copied_vs_reauthored",
+    "artifact_sha256",
+    "authoring_version",
+    "as_of",
+    "authoring_disposition",
+    "release_rights",
+    "record_ids",
+    "rights_record",
+    "attribution_record",
+    "contributions"
+  ]
+}

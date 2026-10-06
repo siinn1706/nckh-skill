@@ -1,21 +1,21 @@
 # nckh-skill
 
-Bộ **39 skill NCKH** cho nghiên cứu, viết, kỹ thuật và marketing, kèm sáu vai trò
+Bộ **43 skill NCKH** cho nghiên cứu, viết, kỹ thuật và marketing, kèm sáu vai trò
 agent tùy chọn. Hướng dẫn của skill bằng tiếng Anh; đầu ra theo ngôn ngữ được yêu
 cầu trong công việc.
 
 | Nhóm | Số skill |
 |---|---:|
-| Core | 12 |
+| Core | 16 |
 | Engineer | 13 |
 | Marketing | 13 |
 | Xia | 1 |
 
 ## Phạm vi bản công khai
 
-Repository này chứa các package **experimental r38**, được xuất ở chế độ
+Repository này chứa các package **experimental r41**, được xuất ở chế độ
 **`resource-access on`**. Tài nguyên đi kèm luôn được bật trong các package phân
-phối: đủ 39 skill, 9 nhóm tài nguyên, reader, giấy phép, ghi công và công cụ cài
+phối: đủ 43 skill, 13 nhóm tài nguyên, reader, giấy phép, ghi công và công cụ cài
 đặt. Skill chọn phần tham khảo phù hợp với công việc; người dùng vẫn có thể cung
 cấp tài liệu hoặc dữ liệu riêng.
 
@@ -31,9 +31,9 @@ stable đã được kiểm định đầy đủ. Xem [phạm vi và quyền](do
 - `packages/cursor/`: package cho Cursor CLI và IDE.
 - `packages/agy/`: package cho Antigravity CLI và IDE.
 - `nckh-kit/installer/`: công cụ preview, cài, cập nhật, doctor và gỡ theo ownership.
-- `nckh-kit/scripts/verify-public-package.py`: kiểm tra package trước khi dùng.
+- `scripts/verify-public-package.py`: kiểm tra package trước khi dùng.
 
-Mỗi package chứa 39 thư mục skill và sáu agent tùy chọn. Các adapter là cấu hình
+Mỗi package chứa 43 thư mục skill và sáu agent tùy chọn. Các adapter là cấu hình
 được đóng gói; việc có package chưa xác nhận mọi phiên bản ứng dụng và hệ điều
 hành đã được kiểm tra thực tế.
 
@@ -45,14 +45,14 @@ hành đã được kiểm tra thực tế.
 Chạy từ thư mục repository:
 
 ```text
-python nckh-kit/scripts/verify-public-package.py
+python scripts/verify-public-package.py
 python nckh-kit/installer/nckh-installer.py list-skills
 ```
 
 Ví dụ preview cài đủ ba nhóm vào một project dùng Codex desktop:
 
 ```text
-python nckh-kit/installer/nckh-installer.py install --package packages --runtime codex-desktop --scope project --project PATH_TO_PROJECT --kits core engineer marketing --mode copy --models balanced --dry-run
+python nckh-kit/installer/nckh-installer.py install --package packages --runtime codex-desktop --scope project --project PATH_TO_PROJECT --kits core engineer marketing --mode copy --models balanced --with-agents --hooks advisory --dry-run
 ```
 
 Thay `PATH_TO_PROJECT` bằng đường dẫn project thực. Đọc preview, giải quyết các
@@ -97,7 +97,7 @@ không tự cung cấp dịch vụ tạo ảnh hoặc chứng nhận file chỉn
 
 ## Portable hooks
 
-Mỗi package r38 có runner, codec, template và công cụ preview/apply/remove hook
+Mỗi package r41 có runner, codec, template và công cụ preview/apply/remove hook
 trong `hooks/`. Cài hoặc cập nhật ở scope project mặc định đăng ký hook ở chế độ
 **nhắc/kiểm tra (advisory), không chặn thao tác hoặc lệnh shell**. Thêm
 `--hooks off` để bỏ qua cấu hình hook. Cài skill global cần `--hooks off` vì hook
@@ -105,3 +105,22 @@ có context và ownership riêng theo project. Host vẫn quản lý quyền và
 Hai skill viết
 mới là `nckh-humanwrite` và `nckh-paperwrite`.
 Xem [hướng dẫn hook](docs/portable-hooks.md).
+
+
+## Source đầy đủ và rebuild
+
+`nckh-kit/` chứa đầy đủ source được pin ở r41: skills, agents, adapters,
+contracts, policies, workflows, profiles, data, hooks, installer, scripts,
+test và protocol/case đánh giá. Bốn package có thêm plugin projection;
+ứng dụng quản lý việc đăng ký, enable và trust plugin.
+
+```text
+python nckh-kit/scripts/build-artifacts.py --all --plugin --resource-access on --check
+python nckh-kit/scripts/build-artifacts.py --all --plugin --resource-access on --output dist
+```
+
+Output build phải chưa tồn tại hoặc rỗng. Data nguồn dùng để rebuild nằm trong
+`nckh-kit/core/profiles/resources/`, cùng registry, provenance, license và notices.
+Bốn skill nghiên cứu mới là `nckh-dataset`, `nckh-statistics`, `nckh-telemetry`
+và `nckh-aiops`. Xem [tài liệu kit](nckh-kit/docs/index.md) và
+[ghi công data](docs/resource-attribution.md).

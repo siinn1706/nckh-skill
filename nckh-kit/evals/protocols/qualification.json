@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "revision": "1",
+  "development_max_rounds": 3,
+  "freeze": {
+    "case_ids_frozen": true,
+    "metrics": [
+      "raw pass/fail/pending counts",
+      "routing confusion",
+      "accepted unsupported claims",
+      "factual fidelity",
+      "spawn count/benefit",
+      "requested/resolved/effective model",
+      "latency",
+      "tokens/cost coverage",
+      "human edit minutes"
+    ],
+    "sample_rights": "pending",
+    "reviewers": "pending",
+    "quality_thresholds": "pending",
+    "paid_budget": "not-authorized",
+    "acceptable_economics": "pending"
+  },
+  "human_inputs": {
+    "status": "pending",
+    "reason": "User confirmed no VI/EN corpus or human/domain reviewers on 2026-10-01."
+  },
+  "split": {
+    "by": [
+      "document",
+      "author",
+      "topic",
+      "claim-family"
+    ],
+    "labels_location": "authorized private store",
+    "blindness": "unverified",
+    "exposure_moves_to": "development",
+    "holdout_runs": 1
+  },
+  "baselines": [
+    "no-skill",
+    "relevant permitted upstream",
+    "nckh-same-agent",
+    "nckh-selective-delegation"
+  ],
+  "forbidden": [
+    "provider/human run before its freeze and grant",
+    "inventing human labels",
+    "tuning on protected holdout",
+    "weakening cases to pass"
+  ]
+}

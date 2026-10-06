@@ -1,0 +1,616 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "stage": {
+      "enum": [
+        "plan",
+        "readout"
+      ]
+    },
+    "protocol": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "estimand": {
+      "type": "string",
+      "minLength": 1
+    },
+    "population": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unit": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mapping_field": {
+          "enum": [
+            "sample_id",
+            "entity_id",
+            "incident_id",
+            "group_id"
+          ]
+        },
+        "observation_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "independent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "independent_n": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nesting": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "observation_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "independent_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "observation_id",
+              "independent_id"
+            ]
+          }
+        },
+        "independence_evidence": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "mapping_field",
+        "observation_ids",
+        "independent_ids",
+        "independent_n",
+        "nesting",
+        "independence_evidence"
+      ]
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "enum": [
+              "dataset",
+              "split"
+            ]
+          },
+          "reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ]
+          }
+        },
+        "required": [
+          "kind",
+          "reference"
+        ]
+      }
+    },
+    "design": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "claim_type": {
+          "enum": [
+            "descriptive",
+            "predictive",
+            "associational",
+            "causal",
+            "simulation"
+          ]
+        },
+        "dependence": {
+          "enum": [
+            "independent",
+            "clustered",
+            "temporal",
+            "clustered-temporal",
+            "unknown"
+          ]
+        },
+        "identification_evidence": {
+          "type": "string"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "claim_type",
+        "dependence",
+        "identification_evidence",
+        "rationale"
+      ]
+    },
+    "estimator": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "required_assumptions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "name",
+        "required_assumptions",
+        "rationale"
+      ]
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requirement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "pending",
+              "assessed",
+              "violated",
+              "not-applicable"
+            ]
+          },
+          "evidence_or_reason": {
+            "type": "string"
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "requirement",
+          "status",
+          "evidence_or_reason",
+          "limitations"
+        ]
+      }
+    },
+    "effect": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "metric": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contrast": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "metric",
+        "contrast",
+        "scale"
+      ]
+    },
+    "missingness": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "policy",
+        "rationale"
+      ]
+    },
+    "uncertainty": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "replications": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "computed",
+            "not-applicable",
+            "failed"
+          ]
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method",
+        "unit",
+        "replications",
+        "status",
+        "reason"
+      ]
+    },
+    "multiplicity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "family": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "family",
+        "policy",
+        "rationale"
+      ]
+    },
+    "comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": {
+          "enum": [
+            "none",
+            "paired",
+            "unpaired"
+          ]
+        },
+        "baseline_units": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "candidate_units": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "mode",
+        "baseline_units",
+        "candidate_units",
+        "reason"
+      ]
+    },
+    "stopping": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "frozen_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "amendments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "reason": {
+                "type": "string",
+                "minLength": 1
+              },
+              "previous_rule": {
+                "type": "string",
+                "minLength": 1
+              },
+              "new_rule": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "at",
+              "reason",
+              "previous_rule",
+              "new_rule"
+            ]
+          }
+        }
+      },
+      "required": [
+        "rule",
+        "frozen_at",
+        "amendments"
+      ]
+    },
+    "seed": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "specified",
+            "not-applicable"
+          ]
+        },
+        "value": {
+          "description": "Integer when specified, otherwise null; owner validates."
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "reason"
+      ]
+    },
+    "denominators": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "total": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "completed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "failed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missing": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "total",
+        "completed",
+        "failed",
+        "missing"
+      ]
+    },
+    "runs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ]
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ]
+      }
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "planned",
+            "computed",
+            "failed"
+          ]
+        },
+        "estimate": {
+          "description": "Finite number or null, validated by owner."
+        },
+        "standard_error": {
+          "description": "Finite number or null, validated by owner."
+        },
+        "interval_lower": {
+          "description": "Finite number or null, validated by owner."
+        },
+        "interval_upper": {
+          "description": "Finite number or null, validated by owner."
+        }
+      },
+      "required": [
+        "status",
+        "estimate",
+        "standard_error",
+        "interval_lower",
+        "interval_upper"
+      ]
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "stage",
+    "protocol",
+    "question",
+    "estimand",
+    "population",
+    "unit",
+    "inputs",
+    "design",
+    "estimator",
+    "assumptions",
+    "effect",
+    "missingness",
+    "uncertainty",
+    "multiplicity",
+    "comparison",
+    "stopping",
+    "seed",
+    "denominators",
+    "runs",
+    "outputs",
+    "result",
+    "failures",
+    "limitations"
+  ],
+  "title": "Scientific statistical analysis plan or actual bound readout"
+}

@@ -12,6 +12,11 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.dont_write_bytecode = True
+sys.path.insert(0, str(ROOT))
+from core.owned_resources import read_pack, validate_owned_source
+from core.research_io import ArtifactReader, ResearchLimits
+from core.schema import validate_record
 LICENSES = {"MIT", "Apache-2.0", "BSD-3-Clause", "CC-BY-4.0", "CC-BY-SA-4.0"}
 SNAPSHOT_KINDS = {"git-commit", "mediawiki-oldid", "pmcid-snapshot", "api-snapshot",
                   "dataset-archive", "swe-bench-task", "normalized-bundle",
@@ -62,17 +67,28 @@ def member(root, relative):
     return path
 
 
-def _verified_bytes(root, relative, expected_hash, error):
-    data = member(root, relative).read_bytes()
+def _verified_bytes(root, relative, expected_hash, error, reader=None):
+    member(root, relative)
+    data = (reader or ArtifactReader(root)).binding({"path": relative, "sha256": expected_hash})
     if digest(data) != expected_hash:
         raise ValueError(error)
     return data
 
 
-def _verify_source(resource, root):
+def _verify_source(resource, root, reader=None):
+    reader = reader or ArtifactReader(root)
     source = resource["source"]
     kind = resource["source_kind"]
     mode = resource.get("copied_vs_reauthored", "verbatim-upstream")
+    if kind == "owned-reference":
+        validate_owned_source(resource)
+        for dependency in resource["requires"]:
+            member(root, dependency)
+        for ref in (resource["owned_provenance"]["rights_record"], resource["owned_provenance"]["attribution_record"]):
+            _verified_bytes(root, ref["path"], ref["sha256"], "owned notice drift", reader)
+        return _verified_bytes(root, resource["path"], source["sha256"], "authored artifact drift", reader)
+    if "owned_provenance" in resource or not {"upstream_path", "upstream_license_path"} <= source.keys():
+        raise ValueError("legacy resource cannot hide its upstream provenance")
     if mode not in {"verbatim-upstream", "normalized-with-lineage", "metadata-only-reference"}:
         raise ValueError("unknown resource transformation")
     if source["license"] not in LICENSES:
@@ -117,18 +133,21 @@ def _verify_source(resource, root):
         member(root, dependency)
     for path_key, hash_key in [("license_path", "license_sha256"), ("notice_path", "notice_sha256")]:
         if source[path_key]:
-            _verified_bytes(root, source[path_key], source[hash_key], "resource license/attribution drift")
+            _verified_bytes(root, source[path_key], source[hash_key], "resource license/attribution drift", reader)
     for lineage in source.get("lineage", []):
         if lineage.get("path"):
             if lineage["path"] not in resource["requires"]:
                 raise ValueError("lineage path is not an explicit resource dependency")
-            _verified_bytes(root, lineage["path"], lineage["sha256"], "resource lineage drift")
+            _verified_bytes(root, lineage["path"], lineage["sha256"], "resource lineage drift", reader)
     data = _verified_bytes(root, resource["path"], source["sha256"],
-                           "resource hash differs from reviewed source")
+                           "resource hash differs from reviewed source", reader)
     return data
 
 
 def _source_provenance(resource, source, locator, record_hash, transform):
+    if resource["source_kind"] == "owned-reference":
+        return {**resource["owned_provenance"], "resource_id": resource["resource_id"], "record_sha256": record_hash,
+                "transformation": transform, "limitations": resource.get("limitations", [])}
     upstreams = source.get("upstream_sha256s", [source.get("upstream_sha256", source["sha256"])])
     return {
         "resource_id": resource["resource_id"],
@@ -170,9 +189,9 @@ def _base_result(resource_id, consumer, query, domain, locale, genre):
             "human_acceptance": "not-evaluated"}
 
 
-def _jsonl_records(resource, source, data, query):
+def _jsonl_records(resource, source, data, query, reader=None):
     try:
-        rows = [strict_json(line) for line in data.decode("utf-8-sig").splitlines() if line.strip()]
+        rows = [(reader.parse(line) if reader else strict_json(line)) for line in data.decode("utf-8-sig").splitlines() if line.strip()]
     except (UnicodeDecodeError, json.JSONDecodeError) as error:
         raise ValueError("JSONL snapshot is not valid UTF-8 JSONL") from error
     records = []
@@ -205,14 +224,24 @@ def _jsonl_records(resource, source, data, query):
 
 def lookup(resource_id, consumer, *, query="", domain, locale="en", genre,
            study_design=None, protocol=False, ai=False, llm=False, venue=None, stage=None,
-           year=None, track=None, article_type=None, resource_access="on", root=ROOT):
+           year=None, track=None, article_type=None, resource_access="on", root=ROOT, limits=None):
     if resource_access == "off":
-        return {"schema_version": 2, "status": "resource-disabled", "resource_id": resource_id,
+        result = {"schema_version": 2, "status": "resource-disabled", "resource_id": resource_id,
                 "consumer": consumer, "resource_read": False, "records": [],
                 "evidence_class": "resource-access-treatment", "human_acceptance": "not-evaluated"}
+        ArtifactReader(root, limits).output(result)
+        return result
     if resource_access != "on":
         raise ValueError("unknown resource treatment")
-    catalog = strict_json(member(root, "core/registry/catalog/resources.json").read_text(encoding="utf-8"))
+    if len(query.encode("utf-8")) > 4096 or len(query.casefold().split()) > 64:
+        raise ValueError("selector query exceeds trusted token/byte limits")
+    member(root, "core/registry/catalog/resources.json")
+    reader = ArtifactReader(root, limits)
+    skills = validate_record("catalog", reader.json("core/registry/catalog/skills.json"))["skills"]
+    identities = [row["id"] for row in skills]
+    if len(identities) != len(set(identities)) or consumer not in identities:
+        raise ValueError("resource consumer is absent from current exact catalog")
+    catalog = validate_record("resource-registry", reader.json("core/registry/catalog/resources.json"))
     selected = [row for row in catalog["resources"] if row["resource_id"] == resource_id]
     if len(selected) != 1:
         raise ValueError("resource ID missing or duplicated")
@@ -226,14 +255,20 @@ def lookup(resource_id, consumer, *, query="", domain, locale="en", genre,
                            *resource.get("limitations", [])]
     if domain != resource["domain"]:
         result["warnings"].append("No applicable record for this domain.")
+        reader.output(result)
         return result
     source = resource["source"]
-    data = _verify_source(resource, root)
+    data = _verify_source(resource, root, reader)
     result.update({"resource_read": True, "resource_sha256": digest(data),
                    "reader_sha256": digest(Path(__file__).read_bytes()),
                    "context": {"venue": venue, "stage": stage, "year": year, "track": track,
                                "article_type": article_type}})
-    if resource_id == "R-reporting-lookup":
+    if resource["source_kind"] == "owned-reference":
+        rows = read_pack(resource, root, reader=reader)
+        tokens = query.casefold().split()
+        result["records"] = [_record(resource, source, row["id"], row, row["id"], "typed-authored-reference-selection")
+            for row in rows if consumer in row["consumer"] and all(token in json.dumps(row, sort_keys=True).casefold() for token in tokens)]
+    elif resource_id == "R-reporting-lookup":
         text = data.decode("utf-8-sig")
         records = strict_json(text)["guidelines"]
         rows = [(row["id"], row) for row in records
@@ -269,10 +304,11 @@ def lookup(resource_id, consumer, *, query="", domain, locale="en", genre,
                                        "UTF-8-markdown-read")]
         result["warnings"].append("Optional English writing advice; no compulsory sentence length, punctuation rule or universal venue policy. This is not a prose corpus or human gold.")
     elif resource["format"] == "jsonl":
-        result["records"] = _jsonl_records(resource, source, data, query)
+        result["records"] = _jsonl_records(resource, source, data, query, reader)
     else:
         raise ValueError("resource has no reviewed reader")
     result["status"] = "matched" if result["records"] else "no-applicable-record"
+    reader.output(result)
     return result
 
 
@@ -297,7 +333,8 @@ def main():
     args = vars(parser.parse_args())
     args.pop("json")
     try:
-        print(json.dumps(lookup(**args), ensure_ascii=False, indent=2))
+        result = lookup(**args)
+        sys.stdout.write(ArtifactReader(ROOT).output(result, newline=True).decode("utf-8"))
         return 0
     except (ValueError, OSError, KeyError, TypeError) as error:
         print(json.dumps({"status": "fail", "error": str(error), "resource_read": False}, ensure_ascii=False), file=sys.stderr)

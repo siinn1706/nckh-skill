@@ -1,0 +1,184 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "cases": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evaluator": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "evidence_class": {
+            "const": "agent-behavior"
+          },
+          "expected_delegation": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "expected_outcome": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "expected_route": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "expected_tier": {
+            "enum": [
+              "fast",
+              "worker",
+              "deep"
+            ]
+          },
+          "forbidden_actions": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "input_language": {
+            "enum": [
+              "vi",
+              "en",
+              "bilingual"
+            ]
+          },
+          "input_provenance": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "input_rights": {
+            "enum": [
+              "owned",
+              "cleared"
+            ]
+          },
+          "oracle": {
+            "additionalProperties": false,
+            "properties": {
+              "acceptance": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              },
+              "route": {
+                "additionalProperties": false,
+                "properties": {
+                  "expected": {
+                    "const": "reject-this-skill"
+                  },
+                  "owner": {
+                    "const": "explicit-handoff"
+                  },
+                  "task_execution": {
+                    "const": "forbidden"
+                  }
+                },
+                "required": [
+                  "expected",
+                  "owner",
+                  "task_execution"
+                ],
+                "type": "object"
+              },
+              "trace": {
+                "items": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "minItems": 1,
+                "type": "array"
+              }
+            },
+            "required": [
+              "acceptance",
+              "trace"
+            ],
+            "type": "object"
+          },
+          "prompt": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "receipt_reference": {},
+          "schema_version": {
+            "const": 1
+          },
+          "skill_id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "not-run",
+              "pending",
+              "pass",
+              "fail",
+              "failed",
+              "completed-unreviewed",
+              "timeout-unknown"
+            ]
+          },
+          "type": {
+            "enum": [
+              "positive",
+              "negative",
+              "outcome",
+              "failure"
+            ]
+          }
+        },
+        "required": [
+          "schema_version",
+          "id",
+          "skill_id",
+          "type",
+          "evidence_class",
+          "status",
+          "input_provenance",
+          "input_rights",
+          "input_language",
+          "prompt",
+          "expected_route",
+          "expected_outcome",
+          "forbidden_actions",
+          "expected_tier",
+          "expected_delegation",
+          "evaluator",
+          "oracle",
+          "receipt_reference"
+        ],
+        "type": "object"
+      },
+      "minItems": 4,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "skill_id": {
+      "minLength": 1,
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "skill_id",
+    "cases"
+  ],
+  "type": "object"
+}

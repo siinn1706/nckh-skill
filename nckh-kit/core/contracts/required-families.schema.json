@@ -1,0 +1,99 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "families": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "evaluator": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "id": {
+            "enum": [
+              "simple-polish-repair",
+              "routing-conflicts",
+              "deep-method",
+              "same-model-delegation",
+              "model-precedence",
+              "plan-xia-only",
+              "auto-phases",
+              "interactive-feedback",
+              "source-traps",
+              "new-fact-polish",
+              "scope-profile-change",
+              "engineer-authority",
+              "marketing-authority",
+              "install-matrix",
+              "installer-faults",
+              "hook-bypass",
+              "stale-artifact",
+              "holdout-exposure",
+              "unknown-telemetry"
+            ]
+          },
+          "input_rights": {
+            "enum": [
+              "owned",
+              "cleared"
+            ]
+          },
+          "oracle": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "provenance": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "receipt_reference": {},
+          "scenario": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "skills": {
+            "items": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "minItems": 1,
+            "type": "array"
+          },
+          "status": {
+            "enum": [
+              "not-run",
+              "pending",
+              "pass",
+              "fail",
+              "failed",
+              "completed-unreviewed",
+              "timeout-unknown"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "scenario",
+          "skills",
+          "status",
+          "input_rights",
+          "provenance",
+          "oracle",
+          "evaluator",
+          "receipt_reference"
+        ],
+        "type": "object"
+      },
+      "minItems": 19,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "families"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,44 @@
+---
+name: nckh-analytics
+description: "Analyze actual KPI, funnel or campaign data with definitions, denominators, time range and quality checks. Correlation alone is not causal lift or attribution."
+metadata:
+  version: "0.1.0"
+  status: experimental
+---
+
+# nckh-analytics
+
+## Inputs and owned output
+
+Inputs: Authorized dataset/provenance, KPI definitions, units/time range and analysis question.
+
+Output: Reproducible descriptive analysis, denominators/quality limits and bounded implications.
+
+## Required contracts
+
+Read [Authorization](../../../core/policies/authorization-policy.md),
+[Evidence](../../../core/policies/evidence-policy.md),
+[Preservation](../../../core/policies/preservation-policy.md) and
+[Acceptance](../../../core/policies/acceptance-policy.md) before work.
+Output follows the brief's locale. Same-agent is the default; use
+[model/context policy](../../../core/workflows/model-and-context.md) before delegation.
+Scientific venue/ranking rules apply only when the task explicitly needs them.
+
+## Workflow and boundaries
+
+Research visual handoffs use the shared research-purpose preflight: question/object/role/evidence and source-to-mark mappings are mandatory. Do not generate logos, banners, ads, thumbnails or generic artwork, including a research logo. Actual computation/simulation plots need verified run provenance and a non-observed label. This indirect route is instruction-only/manual/not-callable until its event/engine is qualified; missing or denied preflight stops generation. Drafting/analysis/UI inspection remains with this owner.
+
+Read actual data and its provenance/rights. Define events, population/unit, numerator/denominator, aggregation, time range/timezone, exclusions and missingness before computing metrics. Unknown/missing values are not zero.
+
+Check duplicates, instrumentation changes, selection, data completeness and incompatible windows. Preserve transformations and sample counts so the analysis is reproducible. Distinguish a dashboard number, estimate, observed rate and unsupported claim.
+
+Describe trends/associations with uncertainty and relevant counterevidence. Do not infer causal uplift, channel attribution or randomized effects from correlation. Experiment owns causal design/readout requirements.
+
+Return actual findings, data-quality limits and next measurement steps. No invented results, hidden data upload or unauthorized live tracking changes; private datasets stay out of source/dist.
+
+## References
+
+- [Brief schema](../../../core/contracts/brief.schema.json)
+- [Claim schema](../../../core/contracts/claim.schema.json)
+- [Provider boundaries](../../../extensions/providers/marketing/contract.json)
+- [Scoped resource lookup](references/resource-lookup.md)

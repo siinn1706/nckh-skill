@@ -1,0 +1,177 @@
+{
+  "cases": [
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Review mode and scope match the actual protocol/search.",
+        "Reader cards preserve locators/access/edition and counterevidence.",
+        "No novelty/result claim exceeds the observed search or text."
+      ],
+      "expected_route": "nckh-research",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-research:positive",
+      "input_language": "vi",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Review mode and scope match the actual protocol/search.",
+          "Reader cards preserve locators/access/edition and counterevidence.",
+          "No novelty/result claim exceeds the observed search or text."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Thực hiện scoping review về câu hỏi này, ghi queries và lý do loại bài.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-research",
+      "status": "not-run",
+      "type": "positive"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Reject this skill; select the actual owner from observed catalog or report uncertainty."
+      ],
+      "expected_route": "reject-this-skill",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-research:negative",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task and identify the appropriate owner or missing ownership evidence.",
+          "Return a bounded handoff with the original inputs and unresolved permission/evidence gates.",
+          "Do not execute the task belonging to the other skill or perform its side effects."
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Polish this supplied paragraph without adding claims.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-research",
+      "status": "not-run",
+      "type": "negative"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Review mode and scope match the actual protocol/search.",
+        "Reader cards preserve locators/access/edition and counterevidence.",
+        "No novelty/result claim exceeds the observed search or text."
+      ],
+      "expected_route": "nckh-research",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-research:outcome",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Review mode and scope match the actual protocol/search.",
+          "Reader cards preserve locators/access/edition and counterevidence.",
+          "No novelty/result claim exceeds the observed search or text."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Thực hiện scoping review về câu hỏi này, ghi queries và lý do loại bài.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-research",
+      "status": "not-run",
+      "type": "outcome"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Review mode and scope match the actual protocol/search.",
+        "Reader cards preserve locators/access/edition and counterevidence.",
+        "No novelty/result claim exceeds the observed search or text."
+      ],
+      "expected_route": "nckh-research",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-research:failure",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Review mode and scope match the actual protocol/search.",
+          "Reader cards preserve locators/access/edition and counterevidence.",
+          "No novelty/result claim exceeds the observed search or text."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Only an abstract is accessible; a candidate DOI is real but the requested numerical result is not visible.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-research",
+      "status": "not-run",
+      "type": "failure"
+    }
+  ],
+  "schema_version": 1,
+  "skill_id": "nckh-research"
+}

@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "enum": [
+        "venue",
+        "style",
+        "glossary"
+      ]
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "locale": {
+      "type": "string",
+      "minLength": 1
+    },
+    "venue_type": {
+      "enum": [
+        "journal",
+        "conference",
+        "other"
+      ]
+    },
+    "venue_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "year": {
+      "type": "string",
+      "minLength": 1
+    },
+    "track": {
+      "type": "string",
+      "minLength": 1
+    },
+    "article_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rules_source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rights": {
+      "enum": [
+        "owned",
+        "cleared",
+        "unknown"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "kind",
+    "revision",
+    "sha256",
+    "rules_source_ids",
+    "as_of"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "revision": "1",
+  "default_agent": "same-agent",
+  "tiers": [
+    "fast",
+    "worker",
+    "deep",
+    "inherit"
+  ],
+  "profiles": {
+    "auto": "Observed capabilities and accepted task-quality evidence.",
+    "cost-optimized": "Least costly eligible model only with measured cost and quality-floor evidence.",
+    "balanced": "Fast lookup, worker production, deep difficult design/review.",
+    "quality-first": "Increase reasoning where risk needs it; no routine fan-out.",
+    "custom": "Preserve owner mappings per host; validate encoding, effort and availability."
+  },
+  "vendor_models": {},
+  "effective_settings": "unknown",
+  "availability": "unverified"
+}

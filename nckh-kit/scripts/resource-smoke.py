@@ -45,7 +45,7 @@ def smoke(bundle, cwd):
             catalog = json.loads(contained(bundle, registry_path).read_text(encoding="utf-8"))
             row = next((item for item in catalog["resources"]
                         if item["resource_id"] == resource["resource_id"]), None)
-            if row is None or row["format"] != "jsonl" or row["source_kind"] != "retrieved-snapshot":
+            if row is None or row["format"] != "jsonl" or row["source_kind"] not in {"retrieved-snapshot", "owned-reference"}:
                 raise ContractError("selected resource has no reviewed smoke context")
             context = ["--domain", row["domain"], "--genre", row["genre"], "--locale", row["locale"]]
         else:

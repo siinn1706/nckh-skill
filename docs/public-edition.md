@@ -2,28 +2,28 @@
 
 Chủ sở hữu đã cho phép đưa bộ skill lên repository public `nckh-skill` ngày
 03/10/2026. Bản cập nhật ngày 06/10/2026 được chủ sở hữu cho phép đăng cùng data và hook,
-được tạo từ source lock revision 38, dùng chế độ đóng gói
+được tạo từ source lock revision 41, dùng chế độ đóng gói
 `resource-access on` theo yêu cầu của chủ sở hữu. Các package phân phối luôn bật
 tài nguyên; verifier từ chối package bị chuyển sang `off` hoặc thiếu tài nguyên.
 
 ## Nội dung được phân phối
 
-- Bốn package tự chứa instructions và references cho 39 skill.
-- Chín nhóm tài nguyên cùng reader, giấy phép, ghi công và provenance đi kèm.
+- Bốn package tự chứa instructions và references cho 43 skill.
+- Mười ba nhóm tài nguyên cùng reader, giấy phép, ghi công và provenance đi kèm.
 - Sáu agent tùy chọn với cấu hình kế thừa model của ứng dụng.
 - Manifest, source lock và adapter của từng package.
 - Phần công cụ cài đặt và schema cần để giữ preview, ownership, doctor, update
   gates và rollback.
 - Script kiểm tra package và hướng dẫn dùng bản công khai.
 
-Mỗi manifest khai báo `resource_access: on`, bật đủ 9 nhóm tài nguyên qua 27
+Mỗi manifest khai báo `resource_access: on`, bật đủ 13 nhóm tài nguyên qua 35
 binding giữa tài nguyên và skill sử dụng. Verifier kiểm tra file, hash, giấy
 phép, reference closure và binding thực tế. Reader mặc định dùng `on` và trả lại
 nguồn/record cụ thể; lỗi đọc hoặc sai hash cần được xử lý tại nguồn lỗi.
 
 Source acquisition thô, bản build thử, cache, dữ liệu cài đặt local, prompt,
 model transcript, kết quả đánh giá và các plan của workspace được giữ ngoài
-repository. Chỉ các resource đã đăng ký trong gói mới được phân phối.
+repository. Các resource đã đăng ký cùng source, test fixture và protocol/case đánh giá được phân phối; raw trace và kết quả chạy riêng vẫn nằm ngoài repository.
 
 | Nhóm tài nguyên | Giấy phép/nguồn quyền |
 |---|---|
@@ -43,12 +43,10 @@ diện hoặc scientific acceptance của toàn bộ domain.
 ## Giới hạn
 
 Bản công khai chứa package có tài nguyên đi kèm và hỗ trợ dữ liệu đầu vào do
-người dùng cung cấp. Nó không chứa toàn bộ development source để rebuild kit.
-Các chức năng build/freeze còn nằm trong module verifier nguyên bản không phải
-entrypoint được cung cấp cho bản này.
+người dùng cung cấp. Nó chứa toàn bộ source được pin để rebuild kit, kèm scripts build/freeze, test và protocol/case đánh giá. Công cụ verifier public nằm riêng tại `scripts/verify-public-package.py` để giữ inventory source lock đúng. Rebuild mặc định bật resources; chế độ off trong source chỉ phục vụ so sánh nội bộ.
 
 Các nhãn `experimental`, `native_qualification: unverified` và
-`release_rights: local-package-only` trong bản ghi máy của r38 được giữ nguyên.
+`release_rights: local-package-only` trong bản ghi máy của r41 được giữ nguyên.
 Quyền chia sẻ instructions và công cụ trong repository được chủ sở hữu cấp cho
 bản public này; các nhãn lịch sử không cấp giấy phép tái phân phối tài nguyên
 upstream. Việc upload không tự hoàn tất stable/scientific/human qualification.
@@ -64,3 +62,19 @@ cụ cấu hình cùng dependency được pin. Installer mặc định kích ho
 cho project khi xác nhận cài/cập nhật. Artifact chưa được cài vẫn ghi trạng thái
 chưa đăng ký/kích hoạt, cùng `install_default: advisory`. Plugin projection chưa kích hoạt.
 Xem [hướng dẫn hook](portable-hooks.md).
+
+
+## Data nghiên cứu bổ sung và quyền chia sẻ source
+
+Bản công khai r41 thêm bốn pack do chủ sở hữu tự biên soạn, gồm 14 record:
+statistical recipes (3), telemetry fields (3), AIOps benchmark cards (3) và
+evaluation recipes (5). Tám binding bổ sung thuộc registry. Pack chứa bản tóm
+tắt và tham khảo có nguồn; dataset/pilot, gold labels, predictions và kết quả
+đo thực tế thuộc từng project.
+
+Chủ sở hữu cho phép xuất bản toàn bộ source kit và data cần thiết ngày
+06/10/2026. Quyền chia sẻ này bổ sung cho phạm vi local ghi trong source lock
+và rights record lịch sử, không thay hash hoặc gán giấy phép MIT/Apache cho
+mã, instructions hay pack tự biên soạn. Các giấy phép và attribution upstream
+tiếp tục áp dụng cho nội dung tương ứng. Xem
+[ghi công tài nguyên](resource-attribution.md).

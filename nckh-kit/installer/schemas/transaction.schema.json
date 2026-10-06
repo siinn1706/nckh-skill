@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["staging", "committing", "committed", "rolled-back", "rollback-conflict"]},
+    "roots": {"type": "array", "items": {"type": "string"}},
+    "changes": {"type": "array", "items": {"type": "object"}},
+    "index_before": {"type": "object"}
+    ,"operation": {"enum": ["install", "update", "config-models", "uninstall"]}
+    ,"recovery_conflicts": {"type": "array", "items": {"type": "object"}}
+  },
+  "required": ["schema_version", "id", "status", "roots", "changes", "index_before"]
+}

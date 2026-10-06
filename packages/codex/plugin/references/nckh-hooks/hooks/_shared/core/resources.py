@@ -7,6 +7,8 @@ from pathlib import Path
 
 from core.paths import contained, digest_file, unique_paths
 from core.schema import ContractError, validate_record
+from core.owned_resources import read_pack, validate_owned_provenance, validate_owned_source
+from core.research_io import ArtifactReader
 
 
 REGISTRY_PATH = "core/registry/catalog/resources.json"
@@ -16,7 +18,7 @@ LICENSES = {"MIT", "Apache-2.0", "BSD-3-Clause", "CC-BY-4.0", "CC-BY-SA-4.0"}
 VERSION_KINDS = {"git-commit", "mediawiki-oldid", "pmcid-snapshot", "api-snapshot",
                  "dataset-archive", "swe-bench-task", "normalized-bundle",
                  "reference-snapshot"}
-COPY_MODES = {"verbatim-upstream", "normalized-with-lineage", "metadata-only-reference"}
+COPY_MODES = {"verbatim-upstream", "normalized-with-lineage", "metadata-only-reference", "reauthored-with-sources"}
 
 
 def _load_json(path):
@@ -46,10 +48,11 @@ def registry(root, *, check_files=True):
     path = contained(root, REGISTRY_PATH)
     if not path.exists():
         return {"schema_version": 1, "resources": []}
-    record = validate_record("resource-registry", _load_json(path))
+    reader = ArtifactReader(root)
+    record = validate_record("resource-registry", reader.json(REGISTRY_PATH))
     unique_paths(r["resource_id"] for r in record["resources"])
     unique_paths(r["path"] for r in record["resources"])
-    catalog = _load_json(contained(root, "core/registry/catalog/skills.json"))
+    catalog = reader.json("core/registry/catalog/skills.json")
     identities = {row["id"] for row in catalog["skills"]}
     resource_paths = {row["path"] for row in record["resources"]}
     for resource in record["resources"]:
@@ -61,6 +64,7 @@ def registry(root, *, check_files=True):
         members = [resource["path"], resource["reader"], *resource["requires"]]
         unique_paths(members)
         source = resource["source"]
+        _validate_source(resource)
         documented = {source["license_path"], source["notice_path"],
                       *(item["path"] for item in source.get("lineage", []) if item.get("path"))}
         for relative in members:
@@ -71,12 +75,11 @@ def registry(root, *, check_files=True):
             target = contained(root, relative)
             if check_files and not target.is_file():
                 raise ContractError(f"resource member missing: {relative}")
-        _validate_source(resource)
         if check_files:
-            if digest_file(contained(root, resource["path"])) != source["sha256"]:
-                raise ContractError("resource differs from reviewed source bytes")
-            if digest_file(contained(root, source["license_path"])) != source["license_sha256"]:
-                raise ContractError("resource license drift")
+            reader.binding({"path": resource["path"], "sha256": source["sha256"]})
+            reader.binding({"path": source["license_path"], "sha256": source["license_sha256"]})
+            if resource["source_kind"] == "owned-reference":
+                read_pack(resource, root, reader=reader)
         if source["license_path"] not in resource["requires"]:
             raise ContractError("resource license must be an explicit dependency")
         if source["notice_path"]:
@@ -138,6 +141,9 @@ def resource_provenance(root):
     provenance = {}
     for resource in registry(root)["resources"]:
         source = resource["source"]
+        if resource["source_kind"] == "owned-reference":
+            provenance[resource["path"]] = resource["owned_provenance"]
+            continue
         lineage = source.get("lineage", [])
         mode = resource.get("copied_vs_reauthored", "verbatim-upstream")
         upstreams = source.get("upstream_sha256s", [])
@@ -163,6 +169,18 @@ def verify_provenance(root, relative, pin, files, *, check_files=False):
     if pin.get("rights") == "owned-local-package":
         if set(pin) != {"sha256", "rights"}:
             raise ContractError("owned content cannot conceal third-party provenance")
+        return
+    if pin.get("rights") == "owned-reference":
+        if set(pin) != {"sha256", "rights", "provenance"}:
+            raise ContractError("owned reference requires explicit contribution provenance")
+        provenance = validate_owned_provenance(pin["provenance"], pin["sha256"])
+        for ref in (provenance["rights_record"], provenance["attribution_record"]):
+            contained(root, ref["path"])
+            if files.get(ref["path"], {}).get("sha256") != ref["sha256"] or files[ref["path"]].get("rights") != "owned-local-package":
+                raise ContractError("owned reference notice must bind actual original owned bytes")
+            if check_files and digest_file(contained(root, ref["path"])) != ref["sha256"]:
+                raise ContractError("owned reference rights/attribution drift")
+        contained(root, relative)
         return
     if set(pin) != {"sha256", "rights", "provenance"} or pin["rights"] != "copied-upstream":
         raise ContractError("unknown copied content rights record")
@@ -232,6 +250,13 @@ def _validate_source(resource):
     source = resource["source"]
     kind = resource["source_kind"]
     mode = resource["copied_vs_reauthored"]
+    if kind == "owned-reference":
+        validate_owned_source(resource)
+        return
+    if "owned_provenance" in resource or mode == "reauthored-with-sources":
+        raise ContractError("legacy copied/snapshot source cannot be relabeled as authored")
+    if not {"upstream_path", "upstream_license_path"} <= source.keys():
+        raise ContractError("legacy resource requires original upstream path/license")
     if mode not in COPY_MODES:
         raise ContractError("unknown resource transformation")
     if source["license"] not in LICENSES:

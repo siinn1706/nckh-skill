@@ -1,5 +1,12 @@
 # Scoped resource lookup
 
+For scientific analysis, select `R-statistical-recipes` with domain
+`scientific-statistics` and genre `analysis-recipe`, or
+`R-aiops-evaluation-recipes` with domain `aiops-research` and genre
+`evaluation-recipe`; consumer `nckh-method`, locale `en`. Query the actual task
+terms. These are original local reference metadata with per-contribution hashes,
+not measured results, copied upstream procedures or a scientific signoff.
+
 Load only the reference matching the current task. The [standalone reader](_shared/scripts/search-resource.py) consumes the [pinned resource catalog](_shared/core/registry/catalog/resources.json). Read the [resource rights contract](_shared/docs/contracts.md) and run from an extracted skill through its relocated reader path.
 
 - `R-reporting-lookup`: domain `clinical-health`, locale `en`, genre `reporting-reference`. Output: source-keyed applicable reporting-guideline selection.

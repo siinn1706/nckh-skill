@@ -1,8 +1,8 @@
-# Hook trong package r38
+# Hook trong package r41
 
 Mỗi package cho Claude, Codex, Cursor và Antigravity có thư mục `hooks/`, bao gồm
 runner, codec của ứng dụng, template, manual checker và công cụ cấu hình.
-Dependency và hash nằm trong manifest cùng source lock revision 38. Bản xuất
+Dependency và hash nằm trong manifest cùng source lock revision 41. Bản xuất
 plugin giữ cùng closure tại `plugin/references/nckh-hooks/`.
 
 Khi cài/cập nhật vào project, installer mặc định đăng ký hook ở chế độ

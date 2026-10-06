@@ -1,0 +1,12 @@
+# Research pack contributions
+
+Original summaries authored for this local experimental NCKH kit on 2026-10-06. Upstream commits for ZIP/web snapshots are unknown. Exact snapshot hashes and row bindings are recorded in the resource registry; raw snapshots stay outside the package.
+
+- kd-assumptions: https://github.com/K-Dense-AI/scientific-agent-skills/blob/main/skills/statistical-analysis/references/assumptions_and_diagnostics.md — MIT selected path; no source bytes packaged; SHA-256 `6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073`. Concept-only own text; no upstream bytes packaged.
+- nature-units: https://github.com/Yuan1z0825/nature-skills/blob/main/skills/nature-statistics/references/common-failure-modes.md — Apache-2.0 selected path; no source bytes packaged; SHA-256 `e4db4cbcc5c2c64bbe40e54a0686986e1c540c0e7530fd3ed2902da92968876b`. Concept-only own text; no upstream bytes packaged.
+- otel-conventions: https://opentelemetry.io/docs/specs/semconv/index.md — CC-BY-4.0 documentation; SHA-256 `5873cc067becb452c7a8e952d93d0ed3edec37ce4784c24ef49710d34e5e84a8`. Concept-only own text; no upstream bytes packaged.
+- otel-metrics: https://opentelemetry.io/docs/specs/otel/metrics/data-model/index.md — CC-BY-4.0 documentation; SHA-256 `d7b231976a8c06334d9201946d179d58a5f4b956b2a4027ce86676e8c4a38a91`. Concept-only own text; no upstream bytes packaged.
+- otel-logs: https://opentelemetry.io/docs/specs/otel/logs/data-model/index.md — CC-BY-4.0 documentation; SHA-256 `0433fda4686e7c2374844ed956752097ca26260841c50fb92204cc072f590b4a`. Concept-only own text; no upstream bytes packaged.
+- otel-traces: https://opentelemetry.io/docs/specs/otel/trace/api/index.md — CC-BY-4.0 documentation; SHA-256 `f59f909d3a4623d0e308e8398a302303721fbadc6ee77516738ad3d44151f634`. Concept-only own text; no upstream bytes packaged.
+- rcaeval-readme: https://raw.githubusercontent.com/phamquiluan/RCAEval/main/README.md — Root MIT; component/data rights require separate review; CausalRCA/RUN unresolved; SHA-256 `25a354ef13f5adf8b2869d67a832958a8a31a6b7b95cf011e060f34ab28c98a9`. Concept-only own text; no upstream bytes packaged.
+- aiopslab-readme: https://raw.githubusercontent.com/microsoft/AIOpsLab/main/README.md — Root MIT with NOTICE; application submodules and runtime rights separate; SHA-256 `02a7d09401d464e432e73101420c8cabd0fa4a6dd8544cca380522af8a83717a`. Concept-only own text; no upstream bytes packaged.

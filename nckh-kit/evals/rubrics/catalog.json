@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "revision": "1",
+  "status": "proposal",
+  "reviewer_approval": "pending",
+  "thresholds": null,
+  "rubrics": [
+    {"id": "outcome", "path": "outcome.md", "reviewer": "task owner or independent domain reviewer"},
+    {"id": "vi-taste", "path": "vi-taste.md", "reviewer": "Vietnamese reader and owner for personal preference"},
+    {"id": "en-fidelity", "path": "en-fidelity.md", "reviewer": "English reader competent in the source domain"},
+    {"id": "domain", "path": "domain.md", "reviewer": "reviewer competent in the task domain"},
+    {"id": "scientific-visuals", "path": "scientific-visuals.md", "reviewer": "domain reviewer and native artifact reviewer"}
+  ],
+  "record_fields": ["task_scope", "artifact_hash", "source_revision", "rubric_revision", "sample_rights_reference", "reviewer_role", "private_reviewer_reference", "blindness", "split", "criterion", "verdict", "located_evidence", "required_edit", "uncertainty", "reviewed_at"],
+  "verdicts": ["pass", "fail", "pending", "not-applicable"],
+  "limitations": ["Original proposed criteria; no human approval or labels exist.", "Thresholds, sample coverage and required reviewer roles must be frozen before qualification.", "A model critique or an empty review record cannot establish human gold."]
+}

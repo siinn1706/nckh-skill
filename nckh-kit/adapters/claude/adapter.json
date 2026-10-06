@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "claude",
+  "revision": "1",
+  "as_of": "2026-10-01 Asia/Saigon",
+  "label": "Claude Code",
+  "surfaces": {
+    "claude-code": {
+      "project": ".claude/skills",
+      "global": ".claude/skills",
+      "invocation": "/NAME",
+      "version": "2.1.272"
+    }
+  },
+  "compatibility_project": [
+    ".claude/skills"
+  ],
+  "agent_root": ".claude/agents",
+  "agent_encoding": "Markdown frontmatter; model/effort support model-specific",
+  "sources": [
+    "https://code.claude.com/docs/en/skills",
+    "https://code.claude.com/docs/en/sub-agents"
+  ],
+  "evidence_state": "docs-only",
+  "native_qualification": "unverified",
+  "skill_representation": "shared-neutral",
+  "auto_policy": {
+    "workflow_pauses": "disabled for authorized reversible phases",
+    "permission_mode": "preserve host policy",
+    "sandbox": "preserve host sandbox",
+    "egress": "current human grant only",
+    "external_irreversible": "ask-or-deny",
+    "blanket_bypass_flags": [],
+    "mandatory_human_gates": "preserved"
+  },
+  "model_control": {
+    "state": "unverified",
+    "requested": "distinct from effective",
+    "effective": "unknown",
+    "allow_core_vendor_ids": false
+  },
+  "hooks": {
+    "state": "not-installed",
+    "enforcement": "host permissions; no hook guarantee",
+    "coverage": "unverified"
+  },
+  "plugin": {
+    "state": "unverified",
+    "projected": false,
+    "copied": false,
+    "registered": false,
+    "enabled": false,
+    "trusted": false,
+    "session_only": false,
+    "tested": false
+  },
+  "symlink_qualification": {
+    "Windows": "unverified",
+    "macOS": "unverified",
+    "Linux": "unverified"
+  }
+}

@@ -36,5 +36,6 @@ Stop with sourced synthesis and unresolved checks; do not invent sources/results
 ## References
 
 - [Review modes](references/review-modes.md)
+- [Software/AIOps search and appraisal](references/software-research-review.md)
 - [Source schema](references/_shared/core/contracts/source.schema.json)
 - [Evidence schema](references/_shared/core/contracts/evidence.schema.json)

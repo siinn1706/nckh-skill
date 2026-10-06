@@ -1,0 +1,286 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attempt_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "manifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "required": [
+          "path",
+          "sha256"
+        ]
+      }
+    },
+    "argv": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "cwd": {
+      "type": "string",
+      "minLength": 1
+    },
+    "environment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "started_at": {
+      "description": "Null or value checked by owning semantic validator"
+    },
+    "ended_at": {
+      "description": "Null or value checked by owning semantic validator"
+    },
+    "timezone": {
+      "type": "string",
+      "minLength": 1
+    },
+    "exit_code": {
+      "description": "Null or value checked by owning semantic validator"
+    },
+    "status": {
+      "enum": [
+        "scheduled",
+        "running",
+        "completed-unreviewed",
+        "failed",
+        "cancelled"
+      ]
+    },
+    "process": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pid": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "parent_pid": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "identity_started_at": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "cleanup": {
+          "enum": [
+            "not-started",
+            "running",
+            "exited",
+            "unknown"
+          ]
+        },
+        "evidence": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "pid",
+        "parent_pid",
+        "identity_started_at",
+        "cleanup",
+        "evidence"
+      ]
+    },
+    "stdout": {
+      "description": "Null or value checked by owning semantic validator"
+    },
+    "stderr": {
+      "description": "Null or value checked by owning semantic validator"
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "predictions",
+              "metrics",
+              "statistics",
+              "oracle",
+              "readout"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "reference",
+          "kind",
+          "count"
+        ]
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "wall_seconds": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "cpu_seconds": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "peak_memory_bytes": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "provider_cost": {
+          "description": "Null or value checked by owning semantic validator"
+        },
+        "coverage": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "wall_seconds",
+        "cpu_seconds",
+        "peak_memory_bytes",
+        "provider_cost",
+        "coverage"
+      ]
+    },
+    "output_semantics": {
+      "enum": [
+        "computed-from-observed-data",
+        "simulation"
+      ]
+    },
+    "failure_reason": {
+      "type": "string"
+    },
+    "deviation_reason": {
+      "type": "string"
+    },
+    "reconciliation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "pending",
+            "reaped",
+            "not-started"
+          ]
+        },
+        "observed_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "observed_at",
+        "reason"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "task_id",
+    "run_id",
+    "attempt_id",
+    "manifest",
+    "inputs",
+    "argv",
+    "cwd",
+    "environment",
+    "started_at",
+    "ended_at",
+    "timezone",
+    "exit_code",
+    "status",
+    "process",
+    "stdout",
+    "stderr",
+    "outputs",
+    "resources",
+    "output_semantics",
+    "failure_reason",
+    "deviation_reason",
+    "reconciliation"
+  ]
+}

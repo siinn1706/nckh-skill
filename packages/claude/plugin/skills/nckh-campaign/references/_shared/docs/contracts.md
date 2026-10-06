@@ -1,6 +1,6 @@
 # Contract ownership
 
-This experimental kit implements the approved 39-identity design. Instructions are
+This experimental kit implements the approved 43-identity design. Instructions are
 English; artifacts follow the brief's Vietnamese/English/bilingual locale.
 [Version-1 schemas](../core/contracts/brief.schema.json) reject unknown fields/versions.
 The stdlib validator implements type, properties, required, additionalProperties,
@@ -63,3 +63,11 @@ source/version/hash/as-of/license/locator and keeps the packaged artifact hash
 separate from every raw upstream hash. A successful lookup is source/package
 evidence only; it does not establish native-host behavior, owner taste, human
 gold, scientific validity, causal uplift or public redistribution clearance.
+
+## Authored research reference packs
+
+Four original typed JSONL packs contain 14 bounded records: statistical recipes (3), telemetry field references (3), AIOps benchmark cards (3), and evaluation recipes (5). The registry owns eight exact consumer bindings. No raw acquisition, pilot data, private labels, predictions or measured results enter these packs.
+
+[Owned contribution provenance](../core/contracts/owned-resource-provenance.schema.json) records original-summary disposition, actual artifact hash, exact record/source membership, source snapshot hashes, unknown-commit reasons and original [local rights](../core/profiles/resources/research-packs-rights.md)/[attribution](../core/profiles/resources/research-packs-attribution.md). `owned-reference`/`reauthored-with-sources` pins remain local-package-only; upstream license metadata does not relicense the authored work. Copied and retrieved legacy variants retain their own strict dispatch.
+
+The [bounded reader](../scripts/search-resource.py) validates current catalog identity and exact context before resource reads. Query, input/aggregate/record/depth and actual serialized-output caps are controller-owned; duplicate/nonfinite/private/unknown fields fail. OFF works with absent registry/data files. Package verification preserves historical hook closures and requires complete new helper closures when their pins exist. Local reads establish source behavior; relocated package acceptance follows source freeze and independent review.

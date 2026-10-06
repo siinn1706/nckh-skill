@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "agy",
+  "revision": "1",
+  "as_of": "2026-10-01 Asia/Saigon",
+  "label": "Antigravity",
+  "surfaces": {
+    "agy-cli": {
+      "project": ".agents/skills",
+      "global": ".gemini/antigravity-cli/skills",
+      "invocation": "TUI slash skill or /skills; headless dispatch unverified",
+      "version": "1.2.13"
+    },
+    "agy-ide": {
+      "project": ".agents/skills",
+      "global": ".gemini/config/skills",
+      "invocation": "native skill discovery; menu invocation unverified",
+      "version": "unknown"
+    }
+  },
+  "compatibility_project": [
+    ".agents/skills"
+  ],
+  "agent_root": ".agents/agents",
+  "agent_encoding": "Markdown; documented aliases inherit/flash/pro; no assumed arbitrary ID",
+  "sources": [
+    "https://www.antigravity.google/docs/skills?tab=ide",
+    "https://www.antigravity.google/docs/subagents?tab=cli"
+  ],
+  "evidence_state": "docs-only",
+  "native_qualification": "unverified",
+  "skill_representation": "shared-neutral",
+  "auto_policy": {
+    "workflow_pauses": "disabled for authorized reversible phases",
+    "permission_mode": "preserve host policy",
+    "sandbox": "preserve host sandbox",
+    "egress": "current human grant only",
+    "external_irreversible": "ask-or-deny",
+    "blanket_bypass_flags": [],
+    "mandatory_human_gates": "preserved"
+  },
+  "model_control": {
+    "state": "unverified",
+    "requested": "distinct from effective",
+    "effective": "unknown",
+    "allow_core_vendor_ids": false
+  },
+  "hooks": {
+    "state": "not-installed",
+    "enforcement": "host permissions; no hook guarantee",
+    "coverage": "unverified"
+  },
+  "plugin": {
+    "state": "unverified",
+    "projected": false,
+    "copied": false,
+    "registered": false,
+    "enabled": false,
+    "trusted": false,
+    "session_only": false,
+    "tested": false
+  },
+  "symlink_qualification": {
+    "Windows": "unverified",
+    "macOS": "unverified",
+    "Linux": "unverified"
+  },
+  "agent_global_root": ".gemini/config/agents"
+}

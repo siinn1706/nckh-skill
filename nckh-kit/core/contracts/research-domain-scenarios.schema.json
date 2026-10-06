@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "const": "research-domain-scenarios"
+    },
+    "evidence_class": {
+      "const": "static"
+    },
+    "scenarios": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "requested_owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scenario": {
+            "type": "string",
+            "minLength": 1
+          },
+          "oracle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "no_side_effect_oracle": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected_route": {
+            "enum": [
+              "execute-own-scope",
+              "reject-and-handoff-no-execution"
+            ]
+          },
+          "status": {
+            "const": "not-run"
+          },
+          "receipt_reference": {
+            "const": null
+          }
+        },
+        "required": [
+          "id",
+          "requested_owner",
+          "expected_owner",
+          "scenario",
+          "oracle",
+          "no_side_effect_oracle",
+          "expected_route",
+          "status",
+          "receipt_reference"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "evidence_class",
+    "scenarios"
+  ]
+}

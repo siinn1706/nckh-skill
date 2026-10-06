@@ -12,7 +12,8 @@ from core.paths import (atomic_json, contained, digest_bytes, digest_file,
                         digest_record, no_links, skill_id, temporary_tree, unique_paths)
 from core.schema import ContractError, validate, validate_record
 from core.resources import (REGISTRY_PATH, registry, resource_edges, resource_members,
-                            resource_provenance, verify_provenance)
+                            resource_provenance, verify_provenance, _validate_source)
+from core.owned_resources import read_pack
 
 
 LINK = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
@@ -32,7 +33,7 @@ BASE_IDENTITIES = frozenset({
     "nckh-copy", "nckh-seo", "nckh-email", "nckh-social", "nckh-analytics",
     "nckh-cro", "nckh-experiment",
 })
-APPROVED_IDENTITIES = BASE_IDENTITIES | {"nckh-humanwrite", "nckh-paperwrite"}
+APPROVED_IDENTITIES = BASE_IDENTITIES | {"nckh-humanwrite", "nckh-paperwrite", "nckh-dataset", "nckh-statistics", "nckh-telemetry", "nckh-aiops"}
 
 # Every local import and contract needed by the three isolated hook entrypoints.
 HOOK_SHARED_SOURCES = (
@@ -43,7 +44,19 @@ HOOK_SHARED_SOURCES = (
     "core/contracts/catalog.schema.json", "core/contracts/resource-registry.schema.json",
     "core/contracts/resource-provenance.schema.json", "installer/schemas/bundle.schema.json",
     "installer/schemas/bundle-v2.schema.json",
+    "core/owned_resources.py", "core/research_io.py", "core/contracts/owned-resource-provenance.schema.json",
 )
+
+SCRIPT_REQUIREMENTS = {
+    "scripts/search-resource.py": ["core/__init__.py", "core/owned_resources.py", "core/research_io.py", "core/schema.py", "core/paths.py",
+                                   "core/contracts/owned-resource-provenance.schema.json", "core/contracts/resource-registry.schema.json",
+                                   "core/contracts/catalog.schema.json", "core/registry/catalog/skills.json"],
+    "scripts/check-research-artifacts.py": ["core/__init__.py", "core/experiments.py", "core/aiops.py", "core/statistics.py",
+        "core/datasets.py", "core/telemetry.py", "core/research_io.py", "core/paths.py", "core/schema.py",
+        "core/contracts/experiment-manifest.schema.json", "core/contracts/research-run-receipt.schema.json",
+        "core/contracts/aiops-evaluation.schema.json", "core/contracts/statistical-analysis.schema.json",
+        "core/contracts/dataset-manifest.schema.json", "core/contracts/split-manifest.schema.json", "core/contracts/telemetry-manifest.schema.json"],
+}
 
 
 def hook_source_mapping(host):
@@ -102,6 +115,12 @@ def _verify_hooks(manifest, lock, records):
     if manifest["schema_version"] != 2 or not has_source or hook["host"] != manifest["host"]:
         raise ContractError("hook closure host/version/source mismatch")
     mapping = hook_source_mapping(manifest["host"])
+    additions = {"core/owned_resources.py", "core/research_io.py", "core/contracts/owned-resource-provenance.schema.json"}
+    present = additions & lock["files"].keys()
+    if present and present != additions:
+        raise ContractError("partial authored-resource hook helper inventory")
+    if not present:
+        mapping = {target: source for target, source in mapping.items() if source not in additions}
     if (len(hook["members"]) != len(mapping) or set(hook["members"]) != set(mapping)
             or hook["entrypoint"] != "hooks/runner.py" or hook["manual_entrypoint"] != "hooks/hook-preflight.py"
             or hook["config_entrypoint"] != "hooks/configure-hooks.py"
@@ -126,8 +145,8 @@ def _verify_hooks(manifest, lock, records):
 def validate_catalog(catalog):
     validate_record("catalog", catalog)
     entries = {row["id"]: row for row in catalog["skills"]}
-    if len(catalog["skills"]) != 39 or set(entries) != APPROVED_IDENTITIES:
-        raise ContractError("catalog requires the exact 37 baseline identities and two writers, without duplicates")
+    if len(catalog["skills"]) != 43 or set(entries) != APPROVED_IDENTITIES:
+        raise ContractError("catalog requires the exact 37 baseline identities, two writers and four research owners, without duplicates")
     return entries
 
 
@@ -173,7 +192,7 @@ def freeze_sources(root, inspirations=None):
     if inspirations is None:
         inspirations = previous.get("inspirations", []) if previous else []
     provenance = resource_provenance(root)
-    files = {rel: {"sha256": digest_file(contained(root, rel)), "rights": "copied-upstream" if rel in provenance else "owned-local-package",
+    files = {rel: {"sha256": digest_file(contained(root, rel)), "rights": ("owned-reference" if provenance[rel]["source_kind"] == "owned-reference" else "copied-upstream") if rel in provenance else "owned-local-package",
                    **({"provenance": provenance[rel]} if rel in provenance else {})}
              for rel in source_members(root)}
     if previous and previous["files"] == files and previous["inspirations"] == list(inspirations):
@@ -182,7 +201,7 @@ def freeze_sources(root, inspirations=None):
     result = {"schema_version": 2 if provenance or previous and previous["schema_version"] == 2 else 1,
               "revision": revision, "release_rights": "local-package-only",
               "origin": "original NCKH instructions and code from owner-approved design",
-              "copied_third_party_content": bool(provenance), "inspirations": list(inspirations),
+              "copied_third_party_content": any(row["rights"] == "copied-upstream" for row in files.values()), "inspirations": list(inspirations),
               "files": files}
     if previous:
         previous_hash = digest_record(previous)
@@ -205,7 +224,7 @@ def verify_source_lock(root):
         verify_provenance(root, rel, record, lock["files"], check_files=True)
         if digest_file(contained(root, rel)) != record["sha256"]:
             raise ContractError(f"source drift/rights unresolved: {rel}")
-    if {rel: pin["provenance"] for rel, pin in lock["files"].items() if pin["rights"] == "copied-upstream"} != resource_provenance(root):
+    if {rel: pin["provenance"] for rel, pin in lock["files"].items() if pin["rights"] in {"copied-upstream", "owned-reference"}} != resource_provenance(root):
         raise ContractError("source registry provenance differs from the frozen rights contract")
     return lock
 
@@ -256,7 +275,8 @@ def closure(root, initial, *, requires=None):
         if path in done:
             return
         active.add(path)
-        for relative in (requires or {}).get(path.relative_to(root).as_posix(), []):
+        relative_path = path.relative_to(root).as_posix()
+        for relative in [*SCRIPT_REQUIREMENTS.get(relative_path, []), *(requires or {}).get(relative_path, [])]:
             visit(contained(root, relative))
         if path.suffix == ".md":
             for href in LINK.findall(path.read_text(encoding="utf-8")):
@@ -508,6 +528,15 @@ def verify_bundle(bundle):
                 if provenance[path_key] and not any(r["source_path"] == provenance[path_key] and r["source_sha256"] == provenance[hash_key]
                                                    and r["path"].split("/")[:2] == record["path"].split("/")[:2] for r in records):
                     raise ContractError("copied content has no packaged license/attribution for this consumer")
+        elif record["rights"] == "owned-reference":
+            pin = lock["files"][record["source_path"]]
+            if record.get("provenance") != pin.get("provenance") or record["sha256"] != record["source_sha256"]:
+                raise ContractError("authored reference provenance/bytes differ from their original pin")
+            for ref in (record["provenance"]["rights_record"], record["provenance"]["attribution_record"]):
+                if not any(row["source_path"] == ref["path"] and row["source_sha256"] == ref["sha256"]
+                           and row["rights"] == "owned-local-package"
+                           and row["path"].split("/")[:2] == record["path"].split("/")[:2] for row in records):
+                    raise ContractError("authored reference lacks its original packaged notice for this consumer")
         elif "provenance" in record:
             raise ContractError("owned artifact cannot relabel copied bytes")
         if digest_file(path) != record["sha256"]:
@@ -588,14 +617,21 @@ def verify_bundle(bundle):
             config_path = next((p for p in resource["requires"] if file_map[p]["source_path"] == REGISTRY_PATH), None)
             if not config_path:
                 raise ContractError("resource binding has no pinned registry")
-            declared = load_json(contained(bundle, config_path))["resources"]
+            declared = validate_record("resource-registry", load_json(contained(bundle, config_path)))["resources"]
             match = [r for r in declared if r["resource_id"] == resource["resource_id"]]
             if len(match) != 1:
                 raise ContractError("resource binding differs from the declared registry")
             row = match[0]
+            _validate_source(row)
+            expected_rights = "owned-reference" if row["source_kind"] == "owned-reference" else "copied-upstream"
+            if expected_rights == "owned-reference":
+                if file_map[resource["path"]].get("provenance") != row["owned_provenance"]:
+                    raise ContractError("authored resource registry and exported provenance differ")
+                consumer_root = contained(bundle, "skills/" + resource["consumer"] + "/references/_shared")
+                read_pack(row, consumer_root)
             if (resource["consumer"] not in row["consumers"] or row["dependency"] != "required"
                     or resource["source_sha256"] != row["source"]["sha256"]
-                    or file_map[resource["path"]]["rights"] != "copied-upstream"
+                    or file_map[resource["path"]]["rights"] != expected_rights
                     or file_map[resource["path"]].get("provenance", {}).get("source_kind") != row["source_kind"]
                     or resource["format"] != row["format"]
                     or resource["expected_artifact"] != row["expected_artifact"]
@@ -612,7 +648,7 @@ def verify_bundle(bundle):
                         declared_bindings.add((row["resource_id"], identity))
         if manifest["resource_access"] == "on" and bindings != declared_bindings:
             raise ContractError("required resource consumer binding was omitted")
-        if manifest["resource_access"] == "off" and any(r["rights"] == "copied-upstream" for r in records):
+        if manifest["resource_access"] == "off" and any(r["rights"] in {"copied-upstream", "owned-reference"} for r in records):
             raise ContractError("resource-off bundle includes copied resource content")
     adapter = load_json(contained(bundle, "adapter.json"))
     if adapter.get("id") != manifest["host"] or adapter.get("revision") != manifest["adapter_revision"]:

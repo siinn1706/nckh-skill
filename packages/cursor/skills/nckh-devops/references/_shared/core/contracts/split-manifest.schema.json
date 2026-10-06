@@ -1,0 +1,293 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ]
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "independence_axes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "sample",
+          "group",
+          "entity",
+          "incident",
+          "time"
+        ]
+      }
+    },
+    "partitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "enum": [
+              "train",
+              "validation",
+              "test"
+            ]
+          },
+          "membership": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "required": [
+          "name",
+          "membership",
+          "count"
+        ]
+      }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "sample_id",
+          "reason"
+        ]
+      }
+    },
+    "temporal": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "required": {
+          "type": "boolean"
+        },
+        "embargo": {
+          "type": "number"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "required",
+        "embargo",
+        "reason"
+      ]
+    },
+    "fitting": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "preprocessing": {
+          "enum": [
+            "train",
+            "not-applicable"
+          ]
+        },
+        "threshold": {
+          "enum": [
+            "validation",
+            "not-applicable"
+          ]
+        },
+        "selection": {
+          "enum": [
+            "validation",
+            "not-applicable"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "preprocessing",
+        "threshold",
+        "selection",
+        "rationale"
+      ]
+    },
+    "features": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "sample_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "task": {
+            "enum": [
+              "forecasting",
+              "rca",
+              "anomaly",
+              "retrieval",
+              "agent"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "observation",
+              "gold-label"
+            ]
+          },
+          "available_at": {
+            "type": "number"
+          },
+          "decision_at": {
+            "type": "number"
+          },
+          "diagnostic_window_end": {
+            "type": "number"
+          },
+          "reason": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sample_id",
+          "task",
+          "kind",
+          "available_at",
+          "decision_at",
+          "diagnostic_window_end",
+          "reason"
+        ]
+      }
+    },
+    "holdout": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "access": {
+          "enum": [
+            "sealed",
+            "prior-access-disclosed",
+            "development"
+          ]
+        },
+        "owner": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reason": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "access",
+        "owner",
+        "reason"
+      ]
+    },
+    "frozen_at": {
+      "type": "string",
+      "minLength": 1
+    },
+    "amendments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "at": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "invalidated": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "at",
+          "reason",
+          "invalidated"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "task_id",
+    "dataset",
+    "purpose",
+    "independence_axes",
+    "partitions",
+    "exclusions",
+    "temporal",
+    "fitting",
+    "features",
+    "holdout",
+    "frozen_at",
+    "amendments"
+  ]
+}

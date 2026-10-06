@@ -1,0 +1,177 @@
+{
+  "cases": [
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Packet hashes match actual artifacts and clearly separates planned/observed/accepted.",
+        "Outstanding attempts and open gates have concrete next actions.",
+        "No messages or acceptance actions are performed."
+      ],
+      "expected_route": "nckh-handoff",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-handoff:positive",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Packet hashes match actual artifacts and clearly separates planned/observed/accepted.",
+          "Outstanding attempts and open gates have concrete next actions.",
+          "No messages or acceptance actions are performed."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Write a handoff for this incomplete task using its actual files and checks.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-handoff",
+      "status": "not-run",
+      "type": "positive"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Reject this skill; select the actual owner from observed catalog or report uncertainty."
+      ],
+      "expected_route": "reject-this-skill",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-handoff:negative",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task and identify the appropriate owner or missing ownership evidence.",
+          "Return a bounded handoff with the original inputs and unresolved permission/evidence gates.",
+          "Do not execute the task belonging to the other skill or perform its side effects."
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Review and repair the implementation within approved scope.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-handoff",
+      "status": "not-run",
+      "type": "negative"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Packet hashes match actual artifacts and clearly separates planned/observed/accepted.",
+        "Outstanding attempts and open gates have concrete next actions.",
+        "No messages or acceptance actions are performed."
+      ],
+      "expected_route": "nckh-handoff",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-handoff:outcome",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Packet hashes match actual artifacts and clearly separates planned/observed/accepted.",
+          "Outstanding attempts and open gates have concrete next actions.",
+          "No messages or acceptance actions are performed."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "Write a handoff for this incomplete task using its actual files and checks.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-handoff",
+      "status": "not-run",
+      "type": "outcome"
+    },
+    {
+      "evaluator": "independent agent-behavior reviewer; human/domain where required",
+      "evidence_class": "agent-behavior",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "expected_outcome": [
+        "Packet hashes match actual artifacts and clearly separates planned/observed/accepted.",
+        "Outstanding attempts and open gates have concrete next actions.",
+        "No messages or acceptance actions are performed."
+      ],
+      "expected_route": "nckh-handoff",
+      "expected_tier": "worker",
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "id": "nckh-handoff:failure",
+      "input_language": "en",
+      "input_provenance": "original synthetic development scenario",
+      "input_rights": "owned",
+      "oracle": {
+        "acceptance": [
+          "Packet hashes match actual artifacts and clearly separates planned/observed/accepted.",
+          "Outstanding attempts and open gates have concrete next actions.",
+          "No messages or acceptance actions are performed."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ]
+      },
+      "prompt": "The old receipt is pass but the output hash changed and an attempt handle is still timeout-unknown.",
+      "receipt_reference": null,
+      "schema_version": 1,
+      "skill_id": "nckh-handoff",
+      "status": "not-run",
+      "type": "failure"
+    }
+  ],
+  "schema_version": 1,
+  "skill_id": "nckh-handoff"
+}

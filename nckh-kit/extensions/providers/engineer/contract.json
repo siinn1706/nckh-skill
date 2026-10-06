@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "engineer-providers",
+  "capability": "auth/payment/browser/deployment",
+  "status": "unavailable",
+  "dependencies": [],
+  "rights": "owned",
+  "permissions": [
+    "exact target/scope",
+    "credential use",
+    "egress/external mutation"
+  ],
+  "engine_binding": null,
+  "acceptance": [
+    "actual response contract",
+    "bounded disposable run",
+    "owned cleanup",
+    "integration receipt"
+  ]
+}

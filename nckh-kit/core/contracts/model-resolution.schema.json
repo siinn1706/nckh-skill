@@ -1,0 +1,146 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "host": {
+      "type": "string",
+      "minLength": 1
+    },
+    "surface": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent_role": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_effort": {
+      "type": "string",
+      "minLength": 1
+    },
+    "native_encoding": {
+      "type": "string",
+      "minLength": 1
+    },
+    "config_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "owned_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "precedence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "as_of": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resolved_model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resolved_effort": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fallback_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "blocked_reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_effort": {
+      "type": "string",
+      "minLength": 1
+    },
+    "receipt_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "requested_tier": {
+      "enum": [
+        "fast",
+        "worker",
+        "deep",
+        "inherit"
+      ]
+    },
+    "allowed_billing_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "availability": {
+      "enum": [
+        "observed",
+        "docs-only",
+        "unverified",
+        "unsupported"
+      ]
+    },
+    "observation": {
+      "enum": [
+        "observed",
+        "docs-only",
+        "not-run"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "host",
+    "surface",
+    "version",
+    "agent_role",
+    "profile_revision",
+    "requested_model",
+    "requested_effort",
+    "native_encoding",
+    "config_path",
+    "owned_key",
+    "precedence",
+    "capability_reference",
+    "as_of",
+    "resolved_model",
+    "resolved_effort",
+    "fallback_reason",
+    "blocked_reason",
+    "effective_model",
+    "effective_effort",
+    "receipt_reference",
+    "requested_tier",
+    "allowed_billing_scope",
+    "availability",
+    "observation"
+  ]
+}

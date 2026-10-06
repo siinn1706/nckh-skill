@@ -1,0 +1,141 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "baselines": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "development_max_rounds": {
+      "const": 3
+    },
+    "forbidden": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "freeze": {
+      "additionalProperties": false,
+      "properties": {
+        "acceptable_economics": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "case_ids_frozen": {
+          "const": true
+        },
+        "metrics": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "paid_budget": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "quality_thresholds": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reviewers": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sample_rights": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "case_ids_frozen",
+        "metrics",
+        "sample_rights",
+        "reviewers",
+        "quality_thresholds",
+        "paid_budget",
+        "acceptable_economics"
+      ],
+      "type": "object"
+    },
+    "human_inputs": {
+      "additionalProperties": false,
+      "properties": {
+        "reason": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "reason"
+      ],
+      "type": "object"
+    },
+    "revision": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 1
+    },
+    "split": {
+      "additionalProperties": false,
+      "properties": {
+        "blindness": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "by": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "exposure_moves_to": {
+          "const": "development"
+        },
+        "holdout_runs": {
+          "const": 1
+        },
+        "labels_location": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "by",
+        "labels_location",
+        "blindness",
+        "exposure_moves_to",
+        "holdout_runs"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "revision",
+    "development_max_rounds",
+    "freeze",
+    "human_inputs",
+    "split",
+    "baselines",
+    "forbidden"
+  ],
+  "type": "object"
+}
