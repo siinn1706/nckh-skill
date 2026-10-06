@@ -39,9 +39,11 @@ def main():
             raise ContractError("enabled public resource inventory differs from registry")
         if {row["id"] for row in manifest["skills"]} != expected:
             raise ContractError("public package skill inventory differs from catalog")
-        if load_json(bundle / "source-lock.json")["revision"] != "37":
+        if load_json(bundle / "source-lock.json")["revision"] != "38":
             raise ContractError("unexpected public source revision")
         hooks = manifest.get("hooks", {})
+        if hooks.get("install_default") != "advisory":
+            raise ContractError("public project installation must default to advisory hooks")
         if (hooks.get("state") != "packaged-inactive"
                 or any(hooks.get(key) is not False for key in ("enabled", "registered", "trusted"))):
             raise ContractError("public hooks must be packaged and inactive")
@@ -49,7 +51,7 @@ def main():
                           "agents": len(manifest["agents"]), "resource_access": "on",
                           "resource_types": len(resource_ids), "resource_bindings": len(actual),
                           "hook_members": len(hooks["members"]),
-                          "hook_state": hooks["state"], "source_revision": "37",
+                          "hook_state": hooks["state"], "hook_install_default": hooks["install_default"], "source_revision": "38",
                           "closure_hash": manifest["closure_hash"]})
     print(json.dumps({"status": "pass", "packages": summaries}, indent=2))
     return 0

@@ -54,10 +54,19 @@ def load_context(project, reference):
     return strict_json(data), digest_bytes(data)
 
 
-def invoke(host, event_name, payload_bytes, *, project, context_reference):
+def invoke(host, event_name, payload_bytes, *, project, context_reference, mode="enforce"):
     if host not in HOSTS:
         raise ContractError("unknown hook host")
+    if mode not in {"advisory", "enforce"}:
+        raise ContractError("unknown hook mode")
     codec = importlib.import_module("hooks.codecs." + host)
+    def encode(decision):
+        wire_decision = dict(decision)
+        if mode == "advisory":
+            wire_decision["decision"] = "advisory"
+            wire, _ = codec.encode(event_name, wire_decision)
+            return wire, 0
+        return codec.encode(event_name, wire_decision)
     failure = {"schema_version": 1, "decision": "block", "reason_codes": ["hook-input-or-context-invalid"],
                "evidence_class": "deterministic", "native_enforcement": "unverified", "semantic_fidelity": "unverified", "side_effects": "none"}
     try:
@@ -88,19 +97,20 @@ def invoke(host, event_name, payload_bytes, *, project, context_reference):
             "event_hash": digest_record(event), "context_hash": context_hash, "artifact_sha256": event["artifact_sha256"],
             "session_key": event["session_key"], "task_key": event["task_key"], **decision,
             "status": "checked-unreviewed", "native_host_response": "unobserved"}
-        return codec.encode(event_name, decision), receipt
+        receipt["hook_mode"] = mode
+        return encode(decision), receipt
     except (ContractError, OSError, ValueError, KeyError, TypeError, RecursionError, OverflowError):
-        wire, code = codec.encode(event_name, failure)
-        return (wire, code if event_name in codec.EVENTS else 3), {
+        wire, code = encode(failure)
+        return (wire, code if mode == "advisory" or event_name in codec.EVENTS else 3), {
             **failure, "schema_version": 1, "host": host, "status": "degraded-failed",
-            "event_hash": digest_bytes(payload_bytes), "native_host_response": "unobserved"}
+            "event_hash": digest_bytes(payload_bytes), "native_host_response": "unobserved", "hook_mode": mode}
 
 
 def record_once(project, relative, receipt):
     directory = contained(project, relative)
     directory.mkdir(parents=True, exist_ok=True)
     identity = {name: receipt.get(name) for name in
-        ("host", "phase", "session_key", "task_key", "artifact_sha256", "reason_codes")}
+        ("host", "phase", "session_key", "task_key", "artifact_sha256", "reason_codes", "hook_mode")}
     if receipt.get("status") == "degraded-failed":
         identity.update(event_hash=receipt.get("event_hash"), failed_attempt=uuid.uuid4().hex)
     elif receipt.get("phase") != "stop":
@@ -126,17 +136,21 @@ def main():
     parser.add_argument("--event", required=True)
     parser.add_argument("--project", type=Path, required=True)
     parser.add_argument("--context", required=True, help="Controller-selected project-relative context, never supplied by event payload.")
+    parser.add_argument("--mode", choices=["advisory", "enforce"], default="enforce")
     parser.add_argument("--receipt-dir", help="Explicit owned project-relative receipt namespace.")
     args = parser.parse_args()
     payload = sys.stdin.buffer.read(MAX_EVENT_BYTES + 1)
-    (wire, code), receipt = invoke(args.host, args.event, payload, project=args.project, context_reference=args.context)
+    (wire, code), receipt = invoke(args.host, args.event, payload, project=args.project, context_reference=args.context, mode=args.mode)
     if args.receipt_dir:
         try:
             record_once(args.project, args.receipt_dir, receipt)
         except (ContractError, OSError):
             receipt["status"] = "degraded-failed"
             codec = importlib.import_module("hooks.codecs." + args.host)
-            wire, code = codec.encode(args.event, {"decision": "block", "reason_codes": ["hook-receipt-conflict"]})
+            wire, code = codec.encode(args.event, {"decision": "advisory" if args.mode == "advisory" else "block",
+                                                "reason_codes": ["hook-receipt-conflict"]})
+            if args.mode == "advisory":
+                code = 0
     print(json.dumps(wire, ensure_ascii=True))
     return code
 

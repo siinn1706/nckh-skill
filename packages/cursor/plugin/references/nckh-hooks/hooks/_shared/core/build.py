@@ -88,7 +88,8 @@ def _materialize_hooks(root, output, host, lock, files, include_plugin):
             "config_entrypoint": "hooks/configure-hooks.py", "codec": f"hooks/codecs/{host}.py",
             "template": f"hooks/templates/{host}.json", "members": sorted(mapping),
             "projection_root": projection, "state": "packaged-inactive", "mode": "advisory",
-            "enabled": False, "registered": False, "trusted": False, "native_qualification": "unverified"}
+            "enabled": False, "registered": False, "trusted": False, "native_qualification": "unverified",
+            "install_default": "advisory"}
 
 
 def _verify_hooks(manifest, lock, records):

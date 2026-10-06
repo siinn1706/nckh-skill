@@ -13,7 +13,7 @@ cầu trong công việc.
 
 ## Phạm vi bản công khai
 
-Repository này chứa các package **experimental r37**, được xuất ở chế độ
+Repository này chứa các package **experimental r38**, được xuất ở chế độ
 **`resource-access on`**. Tài nguyên đi kèm luôn được bật trong các package phân
 phối: đủ 39 skill, 9 nhóm tài nguyên, reader, giấy phép, ghi công và công cụ cài
 đặt. Skill chọn phần tham khảo phù hợp với công việc; người dùng vẫn có thể cung
@@ -71,7 +71,7 @@ xung đột nếu có, rồi chạy lại cùng lựa chọn, thay `--dry-run` b
 
 Thêm `--with-agents` nếu muốn cài sáu agent tùy chọn. Model mặc định kế thừa cấu
 hình của ứng dụng; profile `balanced` tự nó không xác nhận model hay effort thực
-sự được áp dụng. Cài đặt không gọi model hoặc tự bật hooks/plugin.
+sự được áp dụng. Cài đặt không gọi model hoặc tự bật plugin.
 
 Sau khi cài, dùng state directory của project để kiểm tra và preview gỡ:
 
@@ -97,7 +97,11 @@ không tự cung cấp dịch vụ tạo ảnh hoặc chứng nhận file chỉn
 
 ## Portable hooks
 
-Mỗi package r37 có runner, codec, template và công cụ preview/apply/remove hook
-trong `hooks/`. Hook mặc định chưa bật, đăng ký hoặc cấp trust. Hai skill viết
+Mỗi package r38 có runner, codec, template và công cụ preview/apply/remove hook
+trong `hooks/`. Cài hoặc cập nhật ở scope project mặc định đăng ký hook ở chế độ
+**nhắc/kiểm tra (advisory), không chặn thao tác hoặc lệnh shell**. Thêm
+`--hooks off` để bỏ qua cấu hình hook. Cài skill global cần `--hooks off` vì hook
+có context và ownership riêng theo project. Host vẫn quản lý quyền và trust.
+Hai skill viết
 mới là `nckh-humanwrite` và `nckh-paperwrite`.
 Xem [hướng dẫn hook](docs/portable-hooks.md).

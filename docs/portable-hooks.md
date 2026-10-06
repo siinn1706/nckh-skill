@@ -1,19 +1,27 @@
-# Hook trong package r37
+# Hook trong package r38
 
 Mỗi package cho Claude, Codex, Cursor và Antigravity có thư mục `hooks/`, bao gồm
 runner, codec của ứng dụng, template, manual checker và công cụ cấu hình.
-Dependency và hash nằm trong manifest cùng source lock revision 37. Bản xuất
+Dependency và hash nằm trong manifest cùng source lock revision 38. Bản xuất
 plugin giữ cùng closure tại `plugin/references/nckh-hooks/`.
 
-Hook mặc định có trạng thái `packaged-inactive`; `enabled`, `registered` và
-`trusted` đều là `false`. Upload lên GitHub không bật hook trong ứng dụng.
+Khi cài/cập nhật vào project, installer mặc định đăng ký hook ở chế độ
+**advisory: nhắc/kiểm tra, không chặn thao tác**. Các lỗi policy, thiếu context
+hoặc lỗi đọc dữ liệu vẫn được ghi nhận, nhưng không phát lệnh deny. Quyền thực
+thi và trust của ứng dụng được giữ nguyên.
+
+Thêm `--hooks off` để bỏ qua cấu hình hook. Với scope global, dùng `--hooks off`;
+hook được quản lý theo từng project. Artifact trên GitHub giữ `packaged-inactive`
+và `install_default: advisory`; trạng thái đã đăng ký chỉ được ghi sau khi cài.
+Việc gỡ skill và gỡ hook là hai giao dịch ownership riêng. Dùng công cụ cấu hình
+hook để preview/remove nếu muốn gỡ hook.
 
 ## Preview cấu hình
 
 Ví dụ với package Codex, chạy từ repository:
 
 ```text
-python -I packages/codex/hooks/configure-hooks.py preview --project PROJECT --host codex --package packages/codex --events PreToolUse --context CONTEXT --output PREVIEW.json
+python -I packages/codex/hooks/configure-hooks.py preview --project PROJECT --host codex --package packages/codex --mode advisory --events PreToolUse PostToolUse --context CONTEXT --output PREVIEW.json
 ```
 
 `PROJECT` là project đích. `CONTEXT` là đường dẫn JSON tương đối trong project,
@@ -35,8 +43,9 @@ và không thực thi command lấy từ event payload.
 
 ## Giới hạn kiểm tra
 
-Shell tools được map trả về `pending/shell-targets-unverifiable`; native pre-tool
-codec từ chối pending. Policy không suy ra toàn bộ đường dẫn và side effect của
+Shell tools được map trả về `pending/shell-targets-unverifiable`; advisory giữ
+chẩn đoán này và không chặn lệnh. Chế độ `enforce` riêng vẫn từ chối pending và
+cần bằng chứng native trước khi kích hoạt. Policy không suy ra toàn bộ đường dẫn và side effect của
 một shell command từ `path` hoặc `file_path`. Event/tool chưa được hỗ trợ giữ
 trạng thái manual/unverified. Có runner trong package chưa chứng minh host đã
 đăng ký hook, thực thi deny đúng hoặc hoàn tất qualification. Bản công khai vẫn

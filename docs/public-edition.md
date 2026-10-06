@@ -2,7 +2,7 @@
 
 Chủ sở hữu đã cho phép đưa bộ skill lên repository public `nckh-skill` ngày
 03/10/2026. Bản cập nhật ngày 06/10/2026 được chủ sở hữu cho phép đăng cùng data và hook,
-được tạo từ source lock revision 37, dùng chế độ đóng gói
+được tạo từ source lock revision 38, dùng chế độ đóng gói
 `resource-access on` theo yêu cầu của chủ sở hữu. Các package phân phối luôn bật
 tài nguyên; verifier từ chối package bị chuyển sang `off` hoặc thiếu tài nguyên.
 
@@ -48,7 +48,7 @@ Các chức năng build/freeze còn nằm trong module verifier nguyên bản kh
 entrypoint được cung cấp cho bản này.
 
 Các nhãn `experimental`, `native_qualification: unverified` và
-`release_rights: local-package-only` trong bản ghi máy của r37 được giữ nguyên.
+`release_rights: local-package-only` trong bản ghi máy của r38 được giữ nguyên.
 Quyền chia sẻ instructions và công cụ trong repository được chủ sở hữu cấp cho
 bản public này; các nhãn lịch sử không cấp giấy phép tái phân phối tài nguyên
 upstream. Việc upload không tự hoàn tất stable/scientific/human qualification.
@@ -60,5 +60,7 @@ dung tương ứng; người sử dụng cần xác định quyền của dữ l
 ## Hook đóng gói
 
 Bốn package có hook runner, codec/template theo ứng dụng, manual checker và công
-cụ cấu hình cùng dependency được pin. Hook và plugin projection chưa kích hoạt.
+cụ cấu hình cùng dependency được pin. Installer mặc định kích hoạt hook advisory
+cho project khi xác nhận cài/cập nhật. Artifact chưa được cài vẫn ghi trạng thái
+chưa đăng ký/kích hoạt, cùng `install_default: advisory`. Plugin projection chưa kích hoạt.
 Xem [hướng dẫn hook](portable-hooks.md).

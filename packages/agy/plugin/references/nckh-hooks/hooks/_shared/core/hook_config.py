@@ -90,6 +90,48 @@ def payload_from_bundle(package):
             "package_manifest_hash": digest_record(manifest)}
 
 
+def preview_install_hooks(targets, project, *, setting="advisory", scope="project"):
+    """Prepare independent owned hook transactions before skill installation."""
+    if setting == "off":
+        return []
+    if setting != "advisory":
+        raise ContractError("installer hooks must be advisory or off")
+    if scope != "project":
+        raise ContractError("automatic hooks require project scope; use --hooks off for global skills")
+    previews = []
+    seen = set()
+    for target in targets:
+        host = target["host"]
+        if host in seen:
+            continue
+        seen.add(host)
+        preview = preview_config(project, host, payload_from_bundle(Path(target["bundle"])),
+                                 events=EVENTS[host], surface=target["surface"], mode="advisory")
+        owned = _state(Path(project))[0]["configs"].get(host)
+        if owned and owned.get("mode", "enforce") != "advisory":
+            raise ContractError("existing enforcement hooks require an explicit mode change; no automatic downgrade")
+        previews.append(preview)
+    return previews
+
+
+def apply_install_hooks(previews, *, grant_reference):
+    results = []
+    for previous in previews:
+        _validate_parent(previous["resolved_parent"])
+        # Earlier host writes change shared ownership; recompute without widening
+        # the confirmed target config, context, interpreter or hook definitions.
+        fresh = preview_config(Path(previous["project"]), previous["host"], previous["payload"],
+            events=[row["event"] for row in previous["definitions"]],
+            context_reference=previous["context_reference"], surface=previous["surface"], mode="advisory")
+        for key in ("before_hash", "context_hash", "python_sha256", "after", "definitions"):
+            if fresh[key] != previous[key]:
+                raise ContractError("hook inputs changed after install preview; re-preview")
+        result = apply_config(fresh, approved_hash=digest_record(fresh), grant_reference=grant_reference)
+        results.append({"host": fresh["host"], "mode": "advisory", "status": result["status"],
+                        "configured_enabled": True, "native_qualification": "unverified", "trusted": False})
+    return results
+
+
 def _verify_payload(payload):
     root = no_links(payload["root"])
     if (payload["host"] not in TARGETS or not payload["members"] or len(payload["members"]) > 64
@@ -102,7 +144,7 @@ def _verify_payload(payload):
             raise ContractError("hook payload missing, changed or escaping")
 
 
-def _definition(host, event, argv):
+def _definition(host, event, argv, *, mode="enforce"):
     command = subprocess.list2cmdline(argv) if os.name == "nt" else shlex.join(argv)
     timeout = 20 if host == "cursor" and event == "preToolUse" else 5
     handler = {"type": "command", "command": command, "timeout": timeout}
@@ -111,7 +153,7 @@ def _definition(host, event, argv):
         handler["args"] = argv[1:]
     if host == "cursor":
         if event == "preToolUse":
-            handler["failClosed"] = True
+            handler["failClosed"] = mode == "enforce"
         if event == "stop":
             handler["loop_limit"] = 1
         return handler
@@ -134,12 +176,15 @@ def _entries(config, host, event, *, create=False):
 
 
 def preview_config(project, host, payload, *, action="apply", events=None,
-                   context_reference=".nckh-state/hooks/context/current.json", host_version="unverified", surface="unverified", python=None):
+                   context_reference=".nckh-state/hooks/context/current.json", host_version="unverified", surface="unverified", python=None,
+                   mode="enforce"):
     project = no_links(project).resolve()
     if not project.is_dir() or host not in TARGETS or action not in {"apply", "remove"}:
         raise ContractError("explicit existing project/host/action required")
     if surface != "unverified" and surface not in SURFACES[host]:
         raise ContractError("selected native surface differs from hook host")
+    if mode not in {"advisory", "enforce"}:
+        raise ContractError("unknown hook mode")
     _unfinished(project)
     _verify_payload(payload)
     if payload["host"] != host:
@@ -151,6 +196,8 @@ def preview_config(project, host, payload, *, action="apply", events=None,
         raise ContractError("unsupported Cursor hook version")
     index, index_hash = _state(project)
     owned = index["configs"].get(host)
+    if action == "remove" and owned:
+        mode = owned.get("mode", "enforce")
     updated = deepcopy(config)
     definitions = []
     if owned:
@@ -182,8 +229,8 @@ def preview_config(project, host, payload, *, action="apply", events=None,
         for event in selected:
             argv = [str(interpreter), "-I", str(contained(runtime, payload["runner"])), "--host", host,
                     "--event", event, "--project", str(project), "--context", context_reference,
-                    "--receipt-dir", f".nckh-state/hooks/events/{host}"]
-            definition = _definition(host, event, argv)
+                    "--receipt-dir", f".nckh-state/hooks/events/{host}", "--mode", mode]
+            definition = _definition(host, event, argv, mode=mode)
             entries = _entries(updated, host, event, create=True)
             if any(item == definition for item in entries):
                 raise ContractError("unknown ownership or duplicate project/plugin definition")
@@ -207,7 +254,7 @@ def preview_config(project, host, payload, *, action="apply", events=None,
         "before": config, "after": updated, "delete_config": delete_config, "definitions": definitions,
         "payload": payload, "runtime_relative": runtime_relative, "context_reference": context_reference,
         "context_hash": context_hash, "python_path": str(interpreter), "python_sha256": digest_file(interpreter),
-        "registered": False, "enabled": False, "trusted": False, "native_qualification": "unverified"}
+        "mode": mode, "registered": False, "enabled": False, "trusted": False, "native_qualification": "unverified"}
 
 
 def _references(data, runtime):
@@ -311,9 +358,13 @@ def recover_config(project, transaction_reference, *, approved_hash):
 def apply_config(preview, *, approved_hash, grant_reference=None, native_verified=False, fail_at=None):
     if approved_hash != digest_record(preview):
         raise ContractError("approved preview hash differs")
-    if preview["action"] == "apply" and (not grant_reference or not native_verified or preview["host_version"] == "unverified"
-            or preview["surface"] == "unverified" or preview["context_hash"] is None):
-        raise ContractError("activation requires separate grant, context and verified native event/version evidence")
+    mode = preview.get("mode", "enforce")
+    if preview["action"] == "apply":
+        if not grant_reference:
+            raise ContractError("activation requires a human grant")
+        if mode == "enforce" and (not native_verified or preview["host_version"] == "unverified"
+                or preview["surface"] == "unverified" or preview["context_hash"] is None):
+            raise ContractError("enforcement requires context and verified native event/version evidence")
     project = no_links(preview["project"]).resolve()
     if preview["target"] != TARGETS.get(preview["host"]) or str(contained(project, preview["target"])) != preview["config_path"]:
         raise ContractError("configuration target changed")
@@ -337,7 +388,7 @@ def apply_config(preview, *, approved_hash, grant_reference=None, native_verifie
         recomputed = preview_config(project, preview["host"], payload, action=preview["action"],
             events=[row["event"] for row in preview["definitions"]] if preview["action"] == "apply" else None,
             context_reference=preview["context_reference"], host_version=preview["host_version"],
-            surface=preview["surface"], python=preview["python_path"])
+            surface=preview["surface"], python=preview["python_path"], mode=mode)
         if digest_record(recomputed) != approved_hash:
             raise ContractError("preview operations/ownership changed; no write")
         config_after = None if preview["delete_config"] else _json_bytes(preview["after"])
@@ -347,7 +398,8 @@ def apply_config(preview, *, approved_hash, grant_reference=None, native_verifie
                 "members": payload["members"], "runtime_relative": preview["runtime_relative"],
                 "definitions": preview["definitions"], "created_config": old["created_config"] if old else before is None,
                 "installed_config_hash": _hash(config_after), "group_hash": digest_record(preview["after"].get("nckh")),
-                "registered": True, "enabled": True, "trusted": False, "native_qualification": "caller-evidence-required"}
+                "registered": True, "enabled": True, "trusted": False, "mode": mode,
+                "native_qualification": "unverified" if mode == "advisory" else "caller-evidence-required"}
         else:
             index["configs"].pop(preview["host"])
         index_after = _json_bytes(index)

@@ -51,6 +51,8 @@ def main():
     parser.add_argument("--package", type=Path)
     parser.add_argument("--action", choices=["apply", "remove"], default="apply", help="Action proposed by preview.")
     parser.add_argument("--events", nargs="+")
+    parser.add_argument("--mode", choices=["advisory", "enforce"], default="enforce",
+                        help="Advisory reports checks without denying tools; enforcement requires native evidence.")
     parser.add_argument("--context", default=".nckh-state/hooks/context/current.json")
     parser.add_argument("--host-version", default="unverified")
     parser.add_argument("--surface", default="unverified", help="Exact native surface to qualify; host alone does not cover every surface.")
@@ -74,12 +76,12 @@ def main():
         elif args.operation == "preview":
             payload = payload_from_bundle(args.package)
             result = preview_config(args.project, args.host, payload, action=args.action, events=args.events,
-                context_reference=args.context, host_version=args.host_version, surface=args.surface)
+                context_reference=args.context, host_version=args.host_version, surface=args.surface, mode=args.mode)
             result = {"preview": result, "preview_hash": digest_record(result)}
             if args.output:
                 atomic_json(args.output, result)
             result = {"preview_hash": result["preview_hash"], "preview": {key: result["preview"][key] for key in
-                ("action", "host", "host_version", "surface", "target", "runtime_relative", "registered", "enabled", "trusted", "native_qualification")},
+                ("action", "host", "host_version", "surface", "mode", "target", "runtime_relative", "registered", "enabled", "trusted", "native_qualification")},
                 "private_preview_saved": bool(args.output)}
         else:
             payload = payload_from_bundle(args.package)

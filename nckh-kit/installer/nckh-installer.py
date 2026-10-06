@@ -17,6 +17,7 @@ from core.install import (SURFACE_HOST, commit_install, doctor, install_identity
 from core.models import PROFILES
 from core.paths import atomic_json, contained
 from core.schema import ContractError
+from core.hook_config import apply_install_hooks, preview_install_hooks
 
 
 def choose(label, options):
@@ -52,6 +53,8 @@ def main(argv=None):
     parser.add_argument("--replace-skill", action="append", default=[], help="Explicit reviewed replacement of only this edited skill; --yes alone never overwrites edits.")
     parser.add_argument("--keep-edited", action="store_true")
     parser.add_argument("--with-agents", action="store_true", default=None, help="Preview optional native agent files; model settings use only observed per-host mappings.")
+    parser.add_argument("--hooks", choices=["advisory", "off"], default="advisory",
+                        help="Project install/update enables non-blocking checks by default; off skips hook configuration.")
     parser.add_argument("--dry-run", action="store_true", help="Read-only JSON transaction preview.")
     parser.add_argument("--yes", action="store_true", help="Confirm a conflict-free preview; does not bypass rights, trust or user edits.")
     args = parser.parse_args(argv)
@@ -107,14 +110,25 @@ def main(argv=None):
                             with_agents=bool(args.with_agents))
         if args.operation == "update" and plan["install_id"] not in read_index(state_dir)["installs"]:
             raise ContractError("update requires an existing owned install; use install for a new target")
+        hook_previews = (preview_install_hooks(targets, args.project, setting=args.hooks, scope=args.scope)
+                         if args.operation in {"install", "update"} and not plan["conflicts"] else [])
+        hook_summary = [{"host": row["host"], "target": row["target"], "mode": row["mode"],
+                         "events": [item["event"] for item in row["definitions"]],
+                         "native_qualification": "unverified"} for row in hook_previews]
         if args.dry_run:
-            print(json.dumps({"status": "preview", "transaction": plan}, ensure_ascii=False, indent=2))
+            print(json.dumps({"status": "preview", "transaction": plan, "hooks": hook_summary}, ensure_ascii=False, indent=2))
             return 4 if plan["conflicts"] else 0
         if not args.yes:
-            print(json.dumps({"transaction": plan}, ensure_ascii=False, indent=2), file=sys.stderr)
+            print(json.dumps({"transaction": plan, "hooks": hook_summary}, ensure_ascii=False, indent=2), file=sys.stderr)
             if not sys.stdin.isatty() or choose("6. Confirm this transaction", ["confirm", "cancel"]) != "confirm":
                 raise ContractError("transaction not confirmed")
         result = commit_install(plan, state_dir)
+        try:
+            result["hooks"] = apply_install_hooks(hook_previews, grant_reference="confirmed-installer-transaction")
+        except (ContractError, OSError, ValueError, KeyError) as error:
+            result.update(status="skills-installed-hooks-incomplete", hooks_error=str(error))
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+            return 4
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except (ContractError, OSError, ValueError, KeyError) as error:
