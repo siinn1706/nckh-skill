@@ -1,0 +1,39 @@
+{
+  "cause_evidence": "projects/claude/native-elevated-debug.log",
+  "changes": [
+    {
+      "after_sha256": "934b338eb280dd16f62ae63b38612e289525c1af8d2f83d9e3ee2643e3bc4294",
+      "before_sha256": "828f10c99f208ec52583801225266b823109b1d15b64e1f9846bad010eba516f",
+      "path": "core/hook_config.py"
+    },
+    {
+      "after_sha256": "45ccb862ff1ae01c466236b3112f2528ae96953d7f828fba8419256e0b21c120",
+      "before_sha256": "1f584d7b82ad1c1f027b2549d5235cf25378532c16486521d2b7d85dc08ddd87",
+      "path": "tests/hooks/test_config.py"
+    },
+    {
+      "after_sha256": "d0d16e2ff2354c6490861de8e2d763dbcf58e8ea04488fb45e0bbff598d42c49",
+      "before_sha256": "9bb7ebb0d67ed849ad94a1095f6079ec31931ab6192601070c5c0d0067ad2123",
+      "path": "docs/installation.md"
+    }
+  ],
+  "findings_remaining": [],
+  "focused_checks": "commands/focused-hooks-after-native-fix.json",
+  "independent_review": false,
+  "recorded_at": "2026-10-04T10:39:34.322146+00:00",
+  "repair_evidence": "projects/claude/native-exec-form-debug.log",
+  "reviewed_invariants": [
+    "controller-owned argument array",
+    "no event payload command execution",
+    "unchanged other-host encoding",
+    "arguments included in definition hashes and recursive reference checks",
+    "activation and conflict gates preserved"
+  ],
+  "reviewer": "root-inline-review",
+  "schema_version": 1,
+  "scope": [
+    "core/hook_config.py",
+    "tests/hooks/test_config.py",
+    "docs/installation.md"
+  ]
+}

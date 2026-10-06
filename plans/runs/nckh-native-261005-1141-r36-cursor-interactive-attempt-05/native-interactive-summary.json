@@ -1,0 +1,136 @@
+{
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-interactive-05/observations/interactive-public-read/sessionStart/07627ff6dcf04ee6ad6d3ebb210fa9da.json",
+      "receipt": {
+        "attempt": "interactive-public-read",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T04:41:17.050275+00:00",
+        "control_sha256": "76889cb0813be0d4b5333b47116ca8141bca7fa09131e219bef0f99a76981903",
+        "event": "sessionStart",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "is_background_agent",
+          "model",
+          "session_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "852616f24ede1003dfe2d0ca40724bde23305efff39bc8baf30c7620a242b019",
+        "input_size": 505,
+        "mode": "allow",
+        "native_model": "grok-4.7-xhigh",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {},
+        "native_session_hash": "27575055183f1bc81c360a9fb4ca9a0b0099999c9900f46fe6fff3b8d68c26b2",
+        "native_step_idx": null,
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 23380,
+        "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+        "parent_pid": 53880,
+        "reported_event": "sessionStart",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {
+          "additional_context": "writing-resource-advice-only"
+        },
+        "runner_pid": 54032,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T04:41:16.756113+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [],
+        "workspace_contains_selected_project": true
+      },
+      "sha256": "0f55b7a40ff12356cc302252bd6ccd4a4d431a68110b85dbf56fbe316b06a2bd"
+    }
+  ],
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/cleanup.json",
+    "sha256": "82f598b5566446180a788630f76e885769ef3778f37e8f1dedb23f93163ee6e6"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/definitions/interactive-public-read.json",
+    "sha256": "03edcd647bb883e2844b00435a48f8581b7258cb3196a6222ef3f0f5d7812e4a"
+  },
+  "effort_requested": "xhigh",
+  "fixture": {
+    "path": "oracles/r36-cursor-interactive-read-05.txt",
+    "sha256": "07974557b208de09f27c676ac6a62de89939617614fb85925e65614294e604a2",
+    "unchanged": true
+  },
+  "force_stop": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/process-stop-force.json",
+    "sha256": "3767ed91ca4c4bbc32beca6b5e5387a85cc912fd78c782e47592b736663e1afd"
+  },
+  "full_native_gate": "unchecked",
+  "graceful_stop": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/process-stop-graceful.json",
+    "sha256": "758d03e254a0bafc146cf19ee775d42fe3996a99e0d345291d480359932560da"
+  },
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns_verified": 0,
+  "native_model_label": "Grok 4.7 500K Extra High · MAX",
+  "native_permission_label": "Run Everything",
+  "native_prompt_submission": "not-observed",
+  "native_tool_attempt": "not-observed",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-interactive-05/policy-receipts/interactive-public-read/sessionStart/1e0aaf851d82e01cedebbbb50aaab0554c1110f0a57955a704d30149dd5be288.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "7c5aeb9093b3dab3a9c965805e5a21406884e12f734136af78c2e822f660156b",
+        "decision": "advisory",
+        "event_hash": "cdc1e10469bdf9d77f1b52b9238c7ca00cbfb3df9b81292a593859f8db4acfc8",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "aa17735ce3aace367441ac5b09868bb294adae4f3244ddc374bbe11bb42409b0",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "609cae8928f77d9cd1438986d28e9b652c4dd93c7e21a23031b7d46200e7e871"
+      },
+      "sha256": "2120f1dcb5449edb0636da184cad00cb68973694daa5ba19746d84d420124f5b"
+    }
+  ],
+  "prepared_model_turns": 1,
+  "process_cleanup": "owned-tree-force-stopped-after-graceful-refusal",
+  "process_tree": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/process-tree-before-turn.json",
+    "sha256": "9b0b180ca0e7bba5eab102cfbe59b4714ad97eafcf713ab228519c0538a800e0"
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "incomplete-interactive-prompt-submission-not-observed",
+  "surface": "cursor-cli-interactive-terminal",
+  "terminal": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/terminal-observations.json",
+    "sha256": "fe2a944e7ae54aa45e8da08ee43a2738185e9a1b2e1c1bcc4a509db26b470f9d"
+  },
+  "terminal_exit_code": 1,
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/finalize-interactive.py",
+    "sha256": "83b8c2c5b30ee8557e8130a3469046599ecd51158ea2940f6e64837849e59189"
+  }
+}

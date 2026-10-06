@@ -1,0 +1,72 @@
+{
+  "artifact_QA": "pending",
+  "backend_attestation": "not-observed",
+  "base_failure": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/native-failure-summary.json",
+    "sha256": "3f0a395514facc0875c4fb99b02b13961f3d89f0fa532e04b0c8bdfce939139c"
+  },
+  "billing": "not-observed",
+  "case_policy_receipts": 4,
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/cleanup.json",
+    "sha256": "349dcff4951ee96ca7877624b5b6c12fdcffacf301999f1931d589f02af743fd"
+  },
+  "cli_state_hash_after": "bf6ac14a23c246e9e16403c9bc959df010459f526710397245a8dcec2e64cff6",
+  "cli_state_hash_before": "0b764ba7c4d91cb5c30fefe5e6e1bdea26a422795444c25198d102f312ce4afb",
+  "cli_state_hash_unchanged": false,
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/definitions/session.json",
+    "sha256": "8597748c8465b1df90c3050285912eaccfbde5ca89b120eb701aca33278020a2"
+  },
+  "diagnostic_failure_timeout_seconds": 10,
+  "effort_requested": "xhigh",
+  "fault_origin": "none",
+  "fixture_unchanged": true,
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "historical_members_preserved": 582,
+  "model_final_marker_observed": true,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns": 1,
+  "native_failure_receipts": 0,
+  "native_pre_post_read_hash_matches": 2,
+  "native_tool_use_id": "not-retained",
+  "observation": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/timeout-observation.json",
+    "sha256": "d14809a721d082d1e7a58eff1768531084553e81840f30ecf6b6c955e830d6dc"
+  },
+  "other_packaged_timeout_seconds": 5,
+  "packaged_event_observer_invoked": false,
+  "preToolUse_timeout_seconds": 20,
+  "preparation": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/preparation.json",
+    "sha256": "2f3d95f11b8811ed960a30f4b348bb11003d6432089b8aa13821b3aacfcb5bd7"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/final-process-audit.json",
+    "sha256": "a158a950e4476629e442e8fe6381613d1323f4ad186081f9c433602b010a0b7b"
+  },
+  "prompt_submissions": 1,
+  "protected_global_configs_unchanged": true,
+  "raw_tool_return_content": "not-retained",
+  "requested_tool": "Read",
+  "scope": "one direct20s-preToolUse Read control; does not qualify mutation, all-event timing or host overhead cause",
+  "source_default_unchanged": true,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "startup_policy_receipts": 1,
+  "status": "verified-direct-preToolUse20s-read-pre-post-control",
+  "surface": "cursor-cli-interactive-terminal",
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/terminal-final-observation.json",
+    "sha256": "74c6473f647bae15760a55f42c399b83e7ebb8c1e1aacfb45731dfa35c1f5348"
+  },
+  "terminal_exit_code": 1,
+  "terminal_truncated": false,
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/verify-timeout-control.py",
+    "sha256": "9c66d90a3c7f03d1b29916339f97d15d22944cc050b9e351beaa5881dc1c7f08"
+  },
+  "version": "2026.09.15-d2fe57e"
+}

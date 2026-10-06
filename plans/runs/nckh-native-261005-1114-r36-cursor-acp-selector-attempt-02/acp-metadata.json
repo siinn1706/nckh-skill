@@ -1,0 +1,76 @@
+{
+  "command": [
+    "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\node.exe",
+    "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\index.js",
+    "--workspace",
+    "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+    "--model",
+    "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+    "--force",
+    "--trust",
+    "--sandbox",
+    "disabled",
+    "acp"
+  ],
+  "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "ended_at": "2026-10-05T04:11:13.881004+00:00",
+  "error": "Exact native model selector is unverified; no inference submitted",
+  "error_type": "RuntimeError",
+  "exit_code": 3221225786,
+  "global_direct_write": false,
+  "hook_registration": "not-performed",
+  "initialize": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+      "agentCapabilities": {
+        "loadSession": true,
+        "mcpCapabilities": {
+          "http": true,
+          "sse": true
+        },
+        "promptCapabilities": {
+          "audio": false,
+          "embeddedContext": false,
+          "image": true
+        },
+        "sessionCapabilities": {
+          "list": {}
+        }
+      },
+      "authMethods": [
+        {
+          "description": "Authenticate using existing Cursor login credentials. Run 'agent login' first if not logged in.",
+          "id": "cursor_login",
+          "name": "Cursor Login"
+        }
+      ],
+      "protocolVersion": 1
+    }
+  },
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns": 0,
+  "owner": "/root",
+  "pid": 48892,
+  "port": null,
+  "process_cleanup": "owned-process-group-closed",
+  "process_exited": true,
+  "protected_global_configs_unchanged": true,
+  "protected_global_hashes_after": {
+    "C:/Users/USER\\.cursor\\hooks.json": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9",
+    "C:/Users/USER\\.cursor\\mcp.json": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72",
+    "C:/Users/USER\\.cursor\\plugins\\installed_plugins.json": null,
+    "C:/Users/USER\\.cursor\\plugins\\settings.json": null
+  },
+  "protected_global_hashes_before": {
+    "C:/Users/USER\\.cursor\\hooks.json": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9",
+    "C:/Users/USER\\.cursor\\mcp.json": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72",
+    "C:/Users/USER\\.cursor\\plugins\\installed_plugins.json": null,
+    "C:/Users/USER\\.cursor\\plugins\\settings.json": null
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36,
+  "source_unchanged": true,
+  "started_at": "2026-10-05T04:11:04.833097+00:00",
+  "status": "failed-native-acp-metadata-no-inference"
+}

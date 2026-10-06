@@ -1,0 +1,42 @@
+{
+  "context_sha256": "d78b4f2f6b93cbfa27da6a65f477cfebbf88fa99263256e4b1b6e08106f630ed",
+  "control_sha256": "c4c1083ca5381e091b33ba08a2a6ed39102eac83f794415e58639eb722136889",
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/prepare-uncovered-search.py",
+    "sha256": "253ea57fe06ac76c8f9887642b6c4f25f66d0eba529f0f4b189097ba34385144"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/definitions/session.json",
+    "sha256": "392237ade0da1592b1d8358e923d32cdba720e1803faf4a738971b0a6b16deaf"
+  },
+  "effort": "xhigh",
+  "expected_native_tool": "Grep",
+  "failure_policy": "No identical prompt retry, oracle change, or source patch to hide missing/different tool callbacks",
+  "fault_origin": "none",
+  "fixture_sha256": "180232c8cf77fcf7afca2d8704c12b9093505b3c3b534ced7033f3c2a69cd2a9",
+  "global_direct_write": false,
+  "installed_update": "not-performed",
+  "marker": "NCKH_UNCOVERED_SEARCH_FINISHED_23",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_tools": 1,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "oracle": "Actual native Grep pre/post with matching nonempty ID, path, session/version and unchanged fixture; preflight manual/tool-route-uncovered and no native deny output; otherwise retain unqualified result",
+  "package": "C:/Users/USER\\.codex\\visualizations\\2026\\10\\04\\01a104fc-f969-7f43-b1e0-1a6774f0e0c8\\nckh-hooks-r37-1640-attempt-02\\extracted\\on-standalone\\cursor",
+  "port": null,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "prompt": "[removed: raw runtime content]",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/cursor-uncovered-runtime.py",
+    "sha256": "3f83be674c8209a59505214ec554301aba59afb7a0e50f6d4695e81ef94f9225"
+  },
+  "scope_limit": "Uncovered controller tool route is distinct from a natively unsupported event/tool; manual is not enforcement",
+  "selected_events": [
+    "preToolUse",
+    "postToolUse"
+  ],
+  "selected_relative": ".nckh-native-r37-cursor-uncovered-search-23/public/fixture.txt",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-one-native-uncovered-search-control"
+}

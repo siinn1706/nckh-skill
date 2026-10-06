@@ -1,0 +1,2294 @@
+{
+  "effort_requested": "xhigh",
+  "error": null,
+  "global_hooks": "existing configured native hooks remain enabled; no CLI isolation flag in observed help",
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_gate": "remaining events/tools/IDE surface remain pending",
+  "production_timing": "unqualified",
+  "results": [
+    {
+      "attempt": "allow-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\allow-01.json",
+        "sha256": "d2c2e58548c6fba1390410d7ec924c45cc0ed2b596a81dbe823f96a66431db33"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:33:03.896445+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "cc221360-2952-463f-ae63-6257af805427",
+          "path": "projects\\main\\observations\\allow-01\\postToolUse\\1ba73e008b8348ca9aafafb70b753500.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "860743522c263a0122f3d99b28db6c31025ea8ed3962b82d51ddb74277f5546d",
+          "started_at": "2026-10-04T18:33:03.435953+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:32:49.686041+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "cc221360-2952-463f-ae63-6257af805427",
+          "path": "projects\\main\\observations\\allow-01\\preToolUse\\6bd204b6dee44540bc23adf64596f069.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "91081cdf70aeb64f67803c6fa4fae0aa5960e27ee174a450e1e3008a9033ec2b",
+          "started_at": "2026-10-04T18:32:49.209401+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:32:31.312087+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\allow-01\\sessionStart\\5f9e5509f39d49a285b973875e234251.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "d89c81b202e6e4c45fa5e01c292200f8fcf6ecf839cd0977710bda3a4c4e1b0c",
+          "started_at": "2026-10-04T18:32:30.790105+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-allow-01.json",
+        "sha256": "c82a0d90e1e2337c9394dd50be5e65aa5915bb9db2b13aa79298c4b37b1edde3"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 14304,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4462,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-8c74bec9-18d4-415c-972b-46f8eb3c9070-0\nfc_12f2abf0-1cd8-9a29-b21e-83efce103a9c_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "allow",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\allow-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "allow",
+          "path": "projects\\main\\policy-receipts\\allow-01\\preToolUse\\b671a08e821d32a851706c02a496de0847278f57fcfa22c2b4943b6cea4a36cb.json",
+          "sha256": "a3cb60cf17109e36352aa6c81b68d007acbef1b9eee95fbebfd855e431bf3277"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "policy-deny-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\policy-deny-01.json",
+        "sha256": "34475b5a31cfcfdf64d52efc281b4aa43a79a0da240bddc58cfb843892efce81"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 0,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:33:55.559955+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "28a750c3-5976-47e8-a30f-a1f59c341483",
+          "path": "projects\\main\\observations\\policy-deny-01\\preToolUse\\5ca384e9d5c841be824eb98eb1ad986c.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "permission": "deny",
+            "user_message": "plan-only-mutation"
+          },
+          "sha256": "836cae0d55b65960f5648e6443d4708f25b38c365c45b3eceaee5084838473d8",
+          "started_at": "2026-10-04T18:33:54.297687+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:33:33.621289+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\policy-deny-01\\sessionStart\\646b60f9cb514205a8980f1fdeef24a8.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "d28871c6c395d4f6545529402153a0a6a82e20c42ad12522025f962e478ddb8a",
+          "started_at": "2026-10-04T18:33:33.167737+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-policy-deny-01.json",
+        "sha256": "b034f3ee9ca384c22ffc496fefbb4bfe0cd61ee6f018bada505dfba7f71cdfc5"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "rejected": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "isReadonly": false,
+              "reason": "plan-only-mutation\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "rejected"
+          ],
+          "tool_call_id": "call-3f91cc6d-ed89-44a7-ba9f-f8e3e5f17e81-0\nfc_a04aba27-8813-96ff-bd79-a5762c42a0dc_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "policy-deny",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": false,
+      "oracle_retained": null,
+      "oracle_sha256": null,
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\policy-deny-01\\preToolUse\\26288ff3cdae5468902c68345fd988c1c379ab03540befb4fd88398e1cf2af03.json",
+          "sha256": "436f23da5bd0496accc1933782dfd2218bb2dd7590c47a273c0d1f0243a28640"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "uncovered-tool-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\uncovered-tool-01.json",
+        "sha256": "8b07b37a26c0d26fb02f4ee9dec4f880bc60e4693048444760cad6fe83a2647a"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:34:59.555535+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "36fbb221-6654-4fbf-826c-cc65c52885ab",
+          "path": "projects\\main\\observations\\uncovered-tool-01\\postToolUse\\07139ed0044047b6a7d2e3577ee5a24f.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "746652d30d281e79d56609ab0cd477a31d2169128ffca36182357d4ef8ef5c8e",
+          "started_at": "2026-10-04T18:34:59.093314+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:34:45.825660+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "36fbb221-6654-4fbf-826c-cc65c52885ab",
+          "path": "projects\\main\\observations\\uncovered-tool-01\\preToolUse\\a11e2197fad244c69ee89f925e517c77.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "42cf0997ee89685ad7ef11ff759f5a0ef070340df98137418feaefa9b507d5e5",
+          "started_at": "2026-10-04T18:34:45.347743+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:34:29.818880+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\uncovered-tool-01\\sessionStart\\cf91c3b406eb43079e5ae43c21356435.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "8b432880fa1cba56099899e5df107a3e3d7a2df0cb8a5514781939a2015dbaea",
+          "started_at": "2026-10-04T18:34:29.387708+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-uncovered-tool-01.json",
+        "sha256": "8214840a6974958d770f18cfc4102dfaf868784f7c5826f4070ac0596bcb9eb3"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 13824,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 3840,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-178a9757-7a22-4b04-8d73-c5f3bc678c3d-0\nfc_79e5325f-bfdc-9e02-9b26-85ae9c99ce4e_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "uncovered-tool",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\uncovered-tool-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "manual",
+          "path": "projects\\main\\policy-receipts\\uncovered-tool-01\\preToolUse\\39e8344ba3252bb22db838abd4dca6642d5b1c144bdf033a80d87dfe1f68c355.json",
+          "sha256": "6be866735223bb2bb822d7f69166743b9cf4ed574f0a5e0ff62f425f17665386"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-malformed-input-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\sessionstart-malformed-input-01.json",
+        "sha256": "caaf5718a8d77370a37127f9a5699e5412c65271b343cef8fc0b4b9a94b900c8"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:36:00.193424+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "d54f718d-2f30-4a57-bce0-ccb2ad3ff44b",
+          "path": "projects\\main\\observations\\sessionstart-malformed-input-01\\postToolUse\\a336982b63d54cb3a470f8709306f99d.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "2d2beb434b6b0104c18dae04245e33df58a0d6d54fdc00462927b37c5e41a449",
+          "started_at": "2026-10-04T18:35:59.731469+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:35:47.031911+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "d54f718d-2f30-4a57-bce0-ccb2ad3ff44b",
+          "path": "projects\\main\\observations\\sessionstart-malformed-input-01\\preToolUse\\bf838405eb1d4840805f9589e3c63f77.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "85e1c445ec3ce889a888f60e38be1a18e56cc7dee680636c520a82a2a5701b30",
+          "started_at": "2026-10-04T18:35:46.581831+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:35:27.638246+00:00",
+          "event": "sessionStart",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\sessionstart-malformed-input-01\\sessionStart\\6f4cf89d7dbd4ffcbc797e2f75af275a.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "hook-input-or-context-invalid"
+          },
+          "sha256": "9560a1cfca91c32de6abcdd29e02dcaff16874f59cea82b9ccf7396a693b0629",
+          "started_at": "2026-10-04T18:35:27.196356+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-sessionstart-malformed-input-01.json",
+        "sha256": "2f22f71d468fed28643d0a13766565ea86c6dcbb6bc05f335ad5faf3a6451f5f"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 13234,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 3812,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-a291b8b9-2584-489c-8ffa-e7c9c8151bf6-0\nfc_d5db15a4-864d-9bd2-9223-e3ba8fd8e4c0_0"
+        }
+      ],
+      "event": "sessionStart",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "malformed-input",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\sessionstart-malformed-input-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\sessionstart-malformed-input-01\\sessionStart\\26a4037257350f6040c1b6d433fa9c52e96bec11d0ed2cb76af121ebf46a2aaf.json",
+          "sha256": "e0f27c434080c611485df6c6ff519eb71aab007e3a24dd76b549a860d9fe3f17"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-malformed-output-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\sessionstart-malformed-output-01.json",
+        "sha256": "7045bcfd007324c8d2d7d456443532e5b78bb99127b3b2078acdb9d3ef165928"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:36:56.229691+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "78209340-fb2e-410f-82b1-9f5c5db62554",
+          "path": "projects\\main\\observations\\sessionstart-malformed-output-01\\postToolUse\\a3265c9f407643cebb0ce474c87666b9.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "065a18ba3ecdc0be636a66aaa63ba08f4d898fbf531fbf103d966530c00d7cc1",
+          "started_at": "2026-10-04T18:36:55.755713+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:36:40.432908+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "78209340-fb2e-410f-82b1-9f5c5db62554",
+          "path": "projects\\main\\observations\\sessionstart-malformed-output-01\\preToolUse\\1c2ab0526c5c4b779839ff708d9f31b7.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "914aafc86345558f3245e92f5285be21196e5d46e0adef95428ebafcc6323099",
+          "started_at": "2026-10-04T18:36:39.821914+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": null,
+          "event": "sessionStart",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\sessionstart-malformed-output-01\\sessionStart\\bf3d141638c54a44b7bf7616ba09edcc.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "36137e6dac06c24f23bddeda69d0216b26ce8b8c1135a259308f34d3368b7997",
+          "started_at": "2026-10-04T18:36:25.824303+00:00",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-sessionstart-malformed-output-01.json",
+        "sha256": "577e18bdfc5c02ce9dab79fde407d4bba4347e5adc6fd8250cff8d795e5ebd58"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 16262,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4306,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-3f835595-14a8-4a5e-9fe3-65667e0c09a8-0\nfc_d9ef1eb6-b9e3-9eda-b534-5c5319d0972b_0"
+        }
+      ],
+      "event": "sessionStart",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "malformed-output",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\sessionstart-malformed-output-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [],
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-timeout-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\sessionstart-timeout-01.json",
+        "sha256": "2ba6ce7aa563e547d4aaefe496d8728da13e0177d498ded3f1ca7a5eb86385d5"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:37:55.842165+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "65ec56ae-23da-43b5-b082-9a901cf48163",
+          "path": "projects\\main\\observations\\sessionstart-timeout-01\\postToolUse\\6c8927e898574e9ea4bebe69065aca55.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "b526e3dce396b554a761d9726bf7bdc186f72c8623d19c40dfcb6fc915b16a4d",
+          "started_at": "2026-10-04T18:37:55.368793+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:37:41.898489+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "65ec56ae-23da-43b5-b082-9a901cf48163",
+          "path": "projects\\main\\observations\\sessionstart-timeout-01\\preToolUse\\0989586e24e54cac9d029ca02cc925e9.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "0b364723275cc9ab7085c1b152a99e5e1101ff39f2bef86954b86a24e167c357",
+          "started_at": "2026-10-04T18:37:41.440930+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:37:32.344622+00:00",
+          "event": "sessionStart",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\sessionstart-timeout-01\\sessionStart\\29401c96802740f5ba704d54a34e4713.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "fabfe6f986db8c0867d8e36c9ba4c525b624225db5056463d877c62dfbd24967",
+          "started_at": "2026-10-04T18:37:22.879093+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-sessionstart-timeout-01.json",
+        "sha256": "486c6c0ff2da1af27d747886960ea6e21ebc3885dbdd081a1faef8c15f0f6efc"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 13999,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4109,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-dd68fc04-9d04-4d81-b489-c6f53da75b47-0\nfc_d8126720-a02a-98c1-acd8-e1fa8ab85000_0"
+        }
+      ],
+      "event": "sessionStart",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "timeout",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\sessionstart-timeout-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "advisory",
+          "path": "projects\\main\\policy-receipts\\sessionstart-timeout-01\\sessionStart\\0f631629242d0a6960db00700ad81a6d118bd1365bdb1fbe7f8d2d4278483fa6.json",
+          "sha256": "b5117fd546c1d18d2a15b3f039eed15972e3d4d6c3888c6c7df2e05f4134ce40"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-crash-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\sessionstart-crash-01.json",
+        "sha256": "668e5e08d0313c666e0937651bc7e46f3f6d2619e1508982f409a30edac9dc40"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:38:53.235929+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "613c8477-bb9d-4c30-b349-e3de351cb4ba",
+          "path": "projects\\main\\observations\\sessionstart-crash-01\\postToolUse\\8bab8d04a3da4a6f8949817939e2daf2.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "0e56ea848c939ed0319501ab431023e32f0a3dfb19df071bef0799ee5c6b19f6",
+          "started_at": "2026-10-04T18:38:52.767289+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:38:39.736274+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "613c8477-bb9d-4c30-b349-e3de351cb4ba",
+          "path": "projects\\main\\observations\\sessionstart-crash-01\\preToolUse\\b922461f0ff048d3bc633cf6f1c54213.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "4103285cdb04fc33879cfb95744e828d013735b462f440c13b4792dc27bc4e68",
+          "started_at": "2026-10-04T18:38:39.256489+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": null,
+          "event": "sessionStart",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\sessionstart-crash-01\\sessionStart\\dff2bc773ca74682bc452909c2feb426.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "cd14f8f0453932763208df6f56fedf2de17bb73b8dc9dc3d09ede4415fdab9c7",
+          "started_at": "2026-10-04T18:38:23.630806+00:00",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-sessionstart-crash-01.json",
+        "sha256": "93112caa1d14fa5176d673f1e625db95bf23f7a28bf848347022c574728ad041"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 13601,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 3824,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-7ba9a170-9647-400f-94a5-3f5b23130819-0\nfc_4088e023-66aa-9b6b-abdd-afb467d7099b_0"
+        }
+      ],
+      "event": "sessionStart",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "crash",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\sessionstart-crash-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [],
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-unsupported-codec-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\sessionstart-unsupported-codec-01.json",
+        "sha256": "b1dbf375c9332298d6682119da762e713b1bb41c7f2efa27302f234faf365409"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:39:52.699352+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "a2f655c9-d6ed-40d4-8e6e-e86ebb2232a0",
+          "path": "projects\\main\\observations\\sessionstart-unsupported-codec-01\\postToolUse\\60b434ba801644c39a5a5f7a9fd46edc.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "bd6775e0fcde9c6ad34bbb62a72a857cedf72cf91ea5cc5a38e4a15edabce60a",
+          "started_at": "2026-10-04T18:39:52.211802+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:39:36.128549+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "a2f655c9-d6ed-40d4-8e6e-e86ebb2232a0",
+          "path": "projects\\main\\observations\\sessionstart-unsupported-codec-01\\preToolUse\\5428754c7c04411088ad2c47b17cf345.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "296c7eda3c5c993fda380fa56baaffa1d1a4bcbe3e6ec92a7bcd275e4ef654d8",
+          "started_at": "2026-10-04T18:39:35.646215+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:39:20.782558+00:00",
+          "event": "sessionStart",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\sessionstart-unsupported-codec-01\\sessionStart\\6fe1f6956b4b46d5bd3bd04cb3dfc001.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "eeb2aaecedafed21cd19c063b8b15dc1371b7b065e6e79261a9db54f02ae87f1",
+          "started_at": "2026-10-04T18:39:20.330522+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-sessionstart-unsupported-codec-01.json",
+        "sha256": "11432110da6fdcdc3fe5da6df4b4ac6c8f4dd7c60d3155524c84ae0726d168df"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 16655,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4697,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-994ae818-8749-451c-bd38-53ade0a384ab-0\nfc_349eee26-cd84-9d3d-8320-01e67c74ba10_0"
+        }
+      ],
+      "event": "sessionStart",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "unsupported-codec",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\sessionstart-unsupported-codec-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\sessionstart-unsupported-codec-01\\sessionStart\\6b9b6576690dddd91ef297e145ffcecf5c330c32bde16b7195b46d8d7f02101c.json",
+          "sha256": "f5b8e17cc33023e75dd65d7518044b229de40fec29283271f0c0644e90d4fca1"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-malformed-input-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\pretooluse-malformed-input-01.json",
+        "sha256": "80f23839659d4c9d076b6b6ad02988ce1e23d6409a0e8c0408c8ade9f782911a"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 0,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:40:38.071823+00:00",
+          "event": "preToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "2c707f02-303c-44b9-9361-3cde102d4407",
+          "path": "projects\\main\\observations\\pretooluse-malformed-input-01\\preToolUse\\4ed53fcf2135427680027cea14ba4381.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "permission": "deny",
+            "user_message": "hook-input-or-context-invalid"
+          },
+          "sha256": "8de5fa87266f1d6dacfde1a72221dbab9aaa1cb753b56af3aef19faf4335358c",
+          "started_at": "2026-10-04T18:40:37.514775+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:40:21.629925+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\pretooluse-malformed-input-01\\sessionStart\\e3cdab926d454e59a8598aef40269e04.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "88f6ee11d2f9efd4b50e319ea9d24e700b085a70b5f80f87dbfc4e10e517a50a",
+          "started_at": "2026-10-04T18:40:21.200088+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-pretooluse-malformed-input-01.json",
+        "sha256": "ca8f28d725c41c1aab0d16f445e09925f00fd6fa02bc0ba5070ce0246f956a19"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "rejected": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "isReadonly": false,
+              "reason": "hook-input-or-context-invalid\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "rejected"
+          ],
+          "tool_call_id": "call-7d575c4b-3b11-482f-815a-e38d3afc21ff-0\nfc_9ef3630c-e094-9994-914c-8a7ecc66979a_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "malformed-input",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": false,
+      "oracle_retained": null,
+      "oracle_sha256": null,
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\pretooluse-malformed-input-01\\preToolUse\\7581660b762fc8160a762479fadffcb35ea5a0676528d50bb1e6891968f11dfa.json",
+          "sha256": "e0f27c434080c611485df6c6ff519eb71aab007e3a24dd76b549a860d9fe3f17"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-malformed-output-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\pretooluse-malformed-output-01.json",
+        "sha256": "3a1cc36354626e89e28c2216ab92420655e37f412069e90753aec9ec14044e0d"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 0,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": null,
+          "event": "preToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "2f6d17a9-20f9-4b21-9e81-78d58b921648",
+          "path": "projects\\main\\observations\\pretooluse-malformed-output-01\\preToolUse\\fd58762b71f142f595b8db734376d01c.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "bbf2045de0f240bae20f05cc178dcb3941e7bd171fae538f844766a0a628f0ff",
+          "started_at": "2026-10-04T18:41:22.365635+00:00",
+          "status": "intentional-test-malformed-output"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:41:05.343737+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\pretooluse-malformed-output-01\\sessionStart\\e5bd3e8bcb4648708ae8314ab95dc64d.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "4256aea118ef59d06a986af92e48c5889331e6ee7e7e04cb28ed282eb9425255",
+          "started_at": "2026-10-04T18:41:04.867628+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-pretooluse-malformed-output-01.json",
+        "sha256": "c651e0c2e41f351c9ee5af7c2d58cc1288bd78d5c5f8df6969c24b9ce8f756eb"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "rejected": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "isReadonly": false,
+              "reason": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\cursor-native-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" returned invalid JSON.\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "rejected"
+          ],
+          "tool_call_id": "call-ae52b793-fa15-443b-bc9a-9870734a0bf3-0\nfc_9312e39f-c1d4-9e91-8daa-8569f741f090_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "malformed-output",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": false,
+      "oracle_retained": null,
+      "oracle_sha256": null,
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [],
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-timeout-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\pretooluse-timeout-01.json",
+        "sha256": "326c15c37dfbe7d66f5be1f8fc5e38b0e84bc296b81e909fc47a6fd4bc4b2bd4"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 0,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:42:25.154262+00:00",
+          "event": "preToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "50a4c69e-74da-4573-98f6-acd28db33b3d",
+          "path": "projects\\main\\observations\\pretooluse-timeout-01\\preToolUse\\42acfc3c01634f9bb0526c6fc8ceab96.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "73c91869bad573072cde0f62ad02ba6a22af919be60c98f00e08f1eb748ba95a",
+          "started_at": "2026-10-04T18:42:16.801493+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:41:58.157289+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\pretooluse-timeout-01\\sessionStart\\c4d1252826404026beaa63d6b6ba683f.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "f80322bb6326558a61725426e69795aea14a189e6f6c0d5cc2c46b41217d6970",
+          "started_at": "2026-10-04T18:41:57.735190+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-pretooluse-timeout-01.json",
+        "sha256": "71b0a373444de8d3e6e43df56f89f16169f9dbb3ca99405649d2ca6008a98e39"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "rejected": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "isReadonly": false,
+              "reason": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\cursor-native-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" execution failed: Hook script timed out after 2000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "rejected"
+          ],
+          "tool_call_id": "call-525b984c-4ce9-4450-9e91-ee207cf109a9-0\nfc_4f2e1c09-10e5-92e6-9b69-5ca08259ff1f_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "timeout",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": false,
+      "oracle_retained": null,
+      "oracle_sha256": null,
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "allow",
+          "path": "projects\\main\\policy-receipts\\pretooluse-timeout-01\\preToolUse\\a2a3c16e9723a4b9d46c2b991a39fd1931be22e9834fa19491078f11e9043cd4.json",
+          "sha256": "7d294daaee330dfae62ddca123242c08664d9406e42ee00e853e2ac4157346a5"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-crash-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\pretooluse-crash-01.json",
+        "sha256": "2ffa5cf65a9e398f885c58d910150780c3e855176b04ec21be1496c729f3b27a"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 0,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": null,
+          "event": "preToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "f5a416a3-25fb-40b2-be3b-0a29f60459e8",
+          "path": "projects\\main\\observations\\pretooluse-crash-01\\preToolUse\\a08f527081f245c4966602e1f8160cab.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "32db5420629e9650c4d80fe34ed405e260ba3e6904ef0d75a19483605440c677",
+          "started_at": "2026-10-04T18:43:00.697205+00:00",
+          "status": "intentional-test-crash-exit-17"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:42:46.336998+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\pretooluse-crash-01\\sessionStart\\e087c12c7069479994b1a06b9222c567.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "f33be308325e3db513528afd74210066b4e1f5afc9118a227b068422e761e588",
+          "started_at": "2026-10-04T18:42:45.881970+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-pretooluse-crash-01.json",
+        "sha256": "6f8eed247757f235b66cc7b32f1775c0e33a4731969035279ae8b7f6859499e5"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "rejected": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "isReadonly": false,
+              "reason": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\cursor-native-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" failed with exit code 17\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "rejected"
+          ],
+          "tool_call_id": "call-85ecbaa2-6808-4fea-8e20-fc23e0e3be65-0\nfc_f6484d8b-f400-9821-bd21-5dc9cf057300_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "crash",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": false,
+      "oracle_retained": null,
+      "oracle_sha256": null,
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [],
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-unsupported-codec-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\pretooluse-unsupported-codec-01.json",
+        "sha256": "fa3ccbc74b2a45c1ca500cf810203b74096888a0ebb0d7e21feecee0591b21d4"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 0,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:43:44.115219+00:00",
+          "event": "preToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "96387db5-b84f-457f-985d-a8e5ca527e1d",
+          "path": "projects\\main\\observations\\pretooluse-unsupported-codec-01\\preToolUse\\5090c89b569546d989c000f3f3606e5a.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "f786d6b79048c6d66a5f62c5265e09d24820651ee06f3a8fad28eb1b30ed1e99",
+          "started_at": "2026-10-04T18:43:43.619304+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:43:29.890833+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\pretooluse-unsupported-codec-01\\sessionStart\\4beb3aa88cb84249a4fce3d759e3057f.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "a49b2b9c2713525552f553c19bae74f2da9ad39d9224232587322fc1d7a465b8",
+          "started_at": "2026-10-04T18:43:29.460025+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-pretooluse-unsupported-codec-01.json",
+        "sha256": "bee2f95b13ff41fd40655b8321cb6d2e994fc5ebb8a09d64341c1090e2048a66"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "rejected": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "isReadonly": false,
+              "reason": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\cursor-native-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" failed with exit code 3\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "rejected"
+          ],
+          "tool_call_id": "call-37fc7b10-cb29-4c6a-a02f-90b7f6de8998-0\nfc_0423bd32-9c48-9951-a6b7-504ae67ce8f6_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "unsupported-codec",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": false,
+      "oracle_retained": null,
+      "oracle_sha256": null,
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\pretooluse-unsupported-codec-01\\preToolUse\\face3febba858083e28bee8de998dd762681e1a1bf869e78c0f61de91dd1f246.json",
+          "sha256": "eab9d8f276c140f981637c4a04505d1202bbbfadcafcc2ebb1f8427d93a3dde4"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-malformed-input-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\posttooluse-malformed-input-01.json",
+        "sha256": "3482a4acce4d2c36d17f6d70fbef0d7144d805f7a3de53228551063fc6e9a692"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:44:51.510529+00:00",
+          "event": "postToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "abaf9533-5230-480a-a87e-25a6e2bb6c39",
+          "path": "projects\\main\\observations\\posttooluse-malformed-input-01\\postToolUse\\6f5deaa66abf4388a71e9da7582081e3.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "hook-input-or-context-invalid"
+          },
+          "sha256": "ca1a5310e7ea9e1d68b1de36d63f857ea66903a36bbfd701a536170627404477",
+          "started_at": "2026-10-04T18:44:51.047384+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:44:33.094847+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "abaf9533-5230-480a-a87e-25a6e2bb6c39",
+          "path": "projects\\main\\observations\\posttooluse-malformed-input-01\\preToolUse\\db1e1ab2b4894b42892cfbb85a4b6cb5.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "f4e666d5751c7090dd2a91c72c185506336fb95edd8fe537e62c21c6d3f34f97",
+          "started_at": "2026-10-04T18:44:32.591451+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:44:13.825901+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\posttooluse-malformed-input-01\\sessionStart\\539773af179845af840bccf632162be3.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "5a1f6af5ce1abaae495ca1fe6910b281d5d7545079c37e1d256ae1ea061dd514",
+          "started_at": "2026-10-04T18:44:13.397481+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-posttooluse-malformed-input-01.json",
+        "sha256": "6d5d41cd7ac38a03e2bcd5994efcce8746310794ac9ea6ff5de136a75f899afd"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 17951,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4045,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-2756ef70-70e1-49ad-8226-fc123573a973-0\nfc_523e75e5-01ac-9bf6-9f5a-171ada7be132_0"
+        }
+      ],
+      "event": "postToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "malformed-input",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\posttooluse-malformed-input-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\posttooluse-malformed-input-01\\postToolUse\\7857714a775b35f7e8a673d8465965bb0d32baefb804d38b0faa56ff15e8228e.json",
+          "sha256": "e0f27c434080c611485df6c6ff519eb71aab007e3a24dd76b549a860d9fe3f17"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-malformed-output-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\posttooluse-malformed-output-01.json",
+        "sha256": "d0e70e1e7bf6011e6498c138476e4a2c81a2c4f9010aeb940efc1542e60373d9"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": null,
+          "event": "postToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "aa9aa83d-7ff8-4521-938f-c6ae5e74555a",
+          "path": "projects\\main\\observations\\posttooluse-malformed-output-01\\postToolUse\\c84d4314966e4931a14b27b5da6ddd0c.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "0f98deba4ec52b029eeef595e3517950ea6599ae07d5c6c1a094f9539d3f2750",
+          "started_at": "2026-10-04T18:45:47.988308+00:00",
+          "status": "intentional-test-malformed-output"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:45:32.641107+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "aa9aa83d-7ff8-4521-938f-c6ae5e74555a",
+          "path": "projects\\main\\observations\\posttooluse-malformed-output-01\\preToolUse\\68d431939da24d1b82c3cefcd6f9d19f.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "d4d5bfd313b91b6e5131ae2c1383d706aae31f5f8b6905767e453cab64f9c015",
+          "started_at": "2026-10-04T18:45:32.065190+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:45:17.527675+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\posttooluse-malformed-output-01\\sessionStart\\0bf26058e05c46af883cd547391a0972.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "12ebd0211538de5e75e2fee8ea2d717943c96087441921179bc39b4b36e78aad",
+          "started_at": "2026-10-04T18:45:16.902239+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-posttooluse-malformed-output-01.json",
+        "sha256": "dcb37b6035c3675d866e483a4dc42c3fb3418a810b2805f4228e8ed25aace683"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 16101,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4721,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-e78207bf-d644-43e7-bc84-f98c0e9b5a5f-0\nfc_072ac27f-139f-9540-8ab9-5d30c1200831_0"
+        }
+      ],
+      "event": "postToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "malformed-output",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\posttooluse-malformed-output-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [],
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-timeout-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\posttooluse-timeout-01.json",
+        "sha256": "8287f3895bdd1c6364d0a8dcc61b7326475ad000ede20845abb9bb5ba452e787"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:46:57.466253+00:00",
+          "event": "postToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "3a3b1aa0-f7e8-452c-b565-4ada02a138db",
+          "path": "projects\\main\\observations\\posttooluse-timeout-01\\postToolUse\\a54d7580cd9049d4b007dca3a1c81732.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "00019f3b2bf47c99cb66f2df84a50c970ade584bc7bca32d7720366e5bc2be7c",
+          "started_at": "2026-10-04T18:46:49.130640+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:46:31.118417+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "3a3b1aa0-f7e8-452c-b565-4ada02a138db",
+          "path": "projects\\main\\observations\\posttooluse-timeout-01\\preToolUse\\754484d321a74f898aa7182e20b14d7d.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "7779206c84420713e576c034904b31b550419facfb1154a7132a0c8cf134fadf",
+          "started_at": "2026-10-04T18:46:30.493071+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:46:15.097705+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\posttooluse-timeout-01\\sessionStart\\348a3d132c65452db41ada2dc2164886.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "508393d20ab24b21f5e23e4d8402f74caa581a0975367eecbf21cdc20094505f",
+          "started_at": "2026-10-04T18:46:14.624406+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-posttooluse-timeout-01.json",
+        "sha256": "b321cf259762c50718cb83f449387aaa7f9b76b69a233a9d9fa58baf14c61294"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 19635,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 3960,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-7153aa8d-9f39-463c-833d-9cd76e441782-0\nfc_37ad4144-40a5-96b8-9ca0-4ac45ed54a72_0"
+        }
+      ],
+      "event": "postToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "timeout",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\posttooluse-timeout-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "pending",
+          "path": "projects\\main\\policy-receipts\\posttooluse-timeout-01\\postToolUse\\4a009afdf0f1714415c2f8ccbc9eb0be21f197d1d4fada5921ccab0ce690821e.json",
+          "sha256": "572db2d55a2d248338dd40b345210d50b6ce57a9cc9e44a32750c82c5d63ebff"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-crash-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\posttooluse-crash-01.json",
+        "sha256": "297803ade9eb64852798d77961883c2d172fa08d6770301403111a80471b2cd6"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": null,
+          "event": "postToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "5d50297d-9252-44bf-9440-c96a192c11c5",
+          "path": "projects\\main\\observations\\posttooluse-crash-01\\postToolUse\\29afa54125d0421f8c05b036d42b4353.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "cf20b3c81366bb89eee98a0558f31b944e1004eae0304ebe9e0eaaace1ff7982",
+          "started_at": "2026-10-04T18:47:55.212366+00:00",
+          "status": "intentional-test-crash-exit-17"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:47:37.307621+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "5d50297d-9252-44bf-9440-c96a192c11c5",
+          "path": "projects\\main\\observations\\posttooluse-crash-01\\preToolUse\\49f18858e7914fc798405a9d99e159bb.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "43dfe04f6fb4ea7fc0e1ac0b9e784063b05c7a7403bb6f97b35e02fffef64d43",
+          "started_at": "2026-10-04T18:47:36.779133+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:47:17.008482+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\posttooluse-crash-01\\sessionStart\\3751263039a741f6bc7a0f7b61df80d6.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "ee7ff40762dc4d3ef61542872316f6497aa2f0f7f9a6b7de9197f3f1edddf053",
+          "started_at": "2026-10-04T18:47:16.524962+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-posttooluse-crash-01.json",
+        "sha256": "af048b2f46c370f282578c04467a3d8a86d231fa087d5e86ccb18fd8be2649e1"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 18807,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4630,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-2c4af078-0d92-49fb-a4dd-5e4d20e7bb71-0\nfc_f188fbec-7bdd-98e2-93b2-fd86d5dca32d_0"
+        }
+      ],
+      "event": "postToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "crash",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\posttooluse-crash-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [],
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-unsupported-codec-01",
+      "attempt_binding": {
+        "path": "projects\\main\\attempts\\posttooluse-unsupported-codec-01.json",
+        "sha256": "48f20c96fce6fdb7484c40a007a51402cd59063ce53a2ab86a046b4b2a54b017"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 1,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:49:01.585768+00:00",
+          "event": "postToolUse",
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "1a75e4ca-54bb-445d-ab9b-ab4885102c66",
+          "path": "projects\\main\\observations\\posttooluse-unsupported-codec-01\\postToolUse\\520bbf80d85a455c98e648a7d0f201f1.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "f78490ec4c114d93e4fd9202f3adf072a38e0a3193d3131beea81e48691b4c11",
+          "started_at": "2026-10-04T18:49:01.105514+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:48:40.747107+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "1a75e4ca-54bb-445d-ab9b-ab4885102c66",
+          "path": "projects\\main\\observations\\posttooluse-unsupported-codec-01\\preToolUse\\7d27793d4f7c4ccdac3cad40d40be6d0.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "16253f858d9274ffe7eb0ec47997d47e1d9c2374808150b398b011df1dc651c4",
+          "started_at": "2026-10-04T18:48:40.249695+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:48:22.219869+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\main\\observations\\posttooluse-unsupported-codec-01\\sessionStart\\3d8028ab6ea042eca41327102bdd0ab2.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "b1337a2b20d9c6e85a6e46a6cc7575adb5f5d3c4481fae090b4df07d58516a62",
+          "started_at": "2026-10-04T18:48:21.738081+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-posttooluse-unsupported-codec-01.json",
+        "sha256": "29f7283a1612f5fb4600add764fcf096c521973072247d05e8c9a099aa6f78cb"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 20936,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4603,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-58f5119b-ddc8-46df-a0b2-329d3ec88bbe-0\nfc_fe25a88c-4825-9c2a-a0dc-5a5d09d4b42a_0"
+        }
+      ],
+      "event": "postToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "unsupported-codec",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\posttooluse-unsupported-codec-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 1,
+      "selected_policy_receipts": [
+        {
+          "decision": "block",
+          "path": "projects\\main\\policy-receipts\\posttooluse-unsupported-codec-01\\postToolUse\\4d6c047131ee28f7d0ba3abf3ed7d631e58c0c444b5acf56344ce52a8bdfc500.json",
+          "sha256": "dd134cb47e8426bee7642ba205961b896f384a41db80890dce20016c26676974"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "duplicate-same-command-01",
+      "attempt_binding": {
+        "path": "projects\\duplicate-same-command\\attempts\\duplicate-same-command-01.json",
+        "sha256": "fefe938ba2f2ddea59077a62c9391c8c606a568e2bd983cedf969344bb963597"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 2,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:50:35.596832+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "0d9bdf60-8407-4b5c-83ec-823bfa3d3b9f",
+          "path": "projects\\duplicate-same-command\\observations\\duplicate-same-command-01\\postToolUse\\555f6fca7bbf471e836f21410fa25b07.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "3753cc3ad94a26ede6c578987edd27cd818a6a042a984da8e345783b3bd3580a",
+          "started_at": "2026-10-04T18:50:35.094104+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:50:22.770990+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "0d9bdf60-8407-4b5c-83ec-823bfa3d3b9f",
+          "path": "projects\\duplicate-same-command\\observations\\duplicate-same-command-01\\preToolUse\\6f4e237a9be645019f0db52e456ca7e9.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "88ae1096880c1ed47267c7d43730b3ac612e9233812008ef316fbff068b215c0",
+          "started_at": "2026-10-04T18:50:22.067158+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:50:19.406277+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "0d9bdf60-8407-4b5c-83ec-823bfa3d3b9f",
+          "path": "projects\\duplicate-same-command\\observations\\duplicate-same-command-01\\preToolUse\\e64fd3f0afe6468abe9e4384f6dea6ec.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "e1a049585adc3169283be0065bd4aa84b0736e465fc92e4e1bd17772b2e43399",
+          "started_at": "2026-10-04T18:50:18.881450+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:50:00.298447+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\duplicate-same-command\\observations\\duplicate-same-command-01\\sessionStart\\9f2a83bda0f44fb6be5053be00bfc316.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "b3086e0eef6ea6333722cae8e63a49e9de10707154c9505c4ecbf6224a3d4a77",
+          "started_at": "2026-10-04T18:49:59.800112+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-duplicate-same-command-01.json",
+        "sha256": "c490fa559b9fc0731c601bc25cf5881ba9e82babdbfa48e58a65a3faab498c8e"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 16293,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4506,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\duplicate-same-command"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-d74b69f7-df2a-45bb-8e91-4ce342b5eb90-0\nfc_1ccec209-1399-989a-8557-078e92ff9269_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "duplicate",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\duplicate-same-command\\oracles\\duplicate-same-command-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 2,
+      "selected_policy_receipts": [
+        {
+          "decision": "allow",
+          "path": "projects\\duplicate-same-command\\policy-receipts\\duplicate-same-command-01\\preToolUse\\99d37466ba353d37652474f7440a95be2e112b93d41ceba423284cfb8180f4fd.json",
+          "sha256": "b5e1332a942a16251e8a77e10815aaad10fbc986005426fc629d9e12871e7bbc"
+        }
+      ],
+      "status": "completed"
+    },
+    {
+      "attempt": "duplicate-distinct-command-01",
+      "attempt_binding": {
+        "path": "projects\\duplicate-distinct-command\\attempts\\duplicate-distinct-command-01.json",
+        "sha256": "4a0bd815e0e6b8caa08e61ea3a259f4c810b4e0e21e5d481dc412a32f03d0321"
+      },
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_counts": {
+        "beforeSubmitPrompt": 0,
+        "postToolUse": 1,
+        "preToolUse": 2,
+        "sessionStart": 1,
+        "stop": 0
+      },
+      "callbacks": [
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:52:13.225249+00:00",
+          "event": "postToolUse",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "74630d6f-c7e5-415e-9cee-0ab58862eb31",
+          "path": "projects\\duplicate-distinct-command\\observations\\duplicate-distinct-command-01\\postToolUse\\7d5cc5a4ab1e440fae7fba926ec61d74.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "artifact-final-bytes-missing-or-stale"
+          },
+          "sha256": "e7c0c20142aad378238934ff54f272779978639ba1dd36225312b1a2eca95b9d",
+          "started_at": "2026-10-04T18:52:12.740467+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "plugin",
+          "completed_at": "2026-10-04T18:51:54.187158+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "74630d6f-c7e5-415e-9cee-0ab58862eb31",
+          "path": "projects\\duplicate-distinct-command\\observations\\duplicate-distinct-command-01\\preToolUse\\7777cf1625a64eafa4641076b45f10a1.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "adacceef5b72886900f5c2c35d8f26154c0b458ba48ffa9191164ea0b84350b5",
+          "started_at": "2026-10-04T18:51:53.464020+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:51:51.463147+00:00",
+          "event": "preToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": "Shell",
+          "native_tool_use_id": "74630d6f-c7e5-415e-9cee-0ab58862eb31",
+          "path": "projects\\duplicate-distinct-command\\observations\\duplicate-distinct-command-01\\preToolUse\\ddef9497c10f48f0a3891a42e897ebd8.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "4cb628a0e1d5509fe1ad84a5619aad31cba92b55ef81653af40b2de6cf1cc8a6",
+          "started_at": "2026-10-04T18:51:50.942981+00:00",
+          "status": "completed"
+        },
+        {
+          "callback_source": "project",
+          "completed_at": "2026-10-04T18:51:34.669652+00:00",
+          "event": "sessionStart",
+          "fault_origin": "none",
+          "fault_selected": false,
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_tool_name": null,
+          "native_tool_use_id": null,
+          "path": "projects\\duplicate-distinct-command\\observations\\duplicate-distinct-command-01\\sessionStart\\4044c9a10def4b0bab5b110b058e4d2b.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "additional_context": "writing-resource-advice-only"
+          },
+          "sha256": "f204214fb0fd55a991aa61d2170bc23d0850636d0874e53a8fdcfea0a61009f5",
+          "started_at": "2026-10-04T18:51:34.186761+00:00",
+          "status": "completed"
+        }
+      ],
+      "command_binding": {
+        "path": "commands\\cursor-native-duplicate-distinct-command-01.json",
+        "sha256": "cd67c416f4772a3ed3feaffad8c3f6cd028338236a000b86cf55e2e0e5f82049"
+      },
+      "completed_tool_items": [
+        {
+          "kind": "shellToolCall",
+          "result": {
+            "isBackground": false,
+            "success": {
+              "command": "C:/Users/USER/AppData/Local/Programs/Python/Python312/python.exe -c \"from pathlib import Path; Path('oracle.txt').write_text('NCKH_NATIVE_ORACLE', encoding='utf8')\"",
+              "executionTime": 21911,
+              "exitCode": 0,
+              "interleavedOutput": "",
+              "localExecutionTimeMs": 4771,
+              "signal": "",
+              "stderr": "[removed: raw runtime content]",
+              "stdout": "[removed: raw runtime content]",
+              "workingDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\duplicate-distinct-command"
+            }
+          },
+          "result_keys": [
+            "isBackground",
+            "success"
+          ],
+          "tool_call_id": "call-bd6e07f2-5035-4105-b206-de2ba6a4a8e2-0\nfc_857bebc8-494e-9db5-a093-7ba57b3ac32b_0"
+        }
+      ],
+      "event": "preToolUse",
+      "exit_code": 0,
+      "invalid_stdout_lines": 0,
+      "mode": "duplicate",
+      "native_model_ids": [],
+      "native_versions": [
+        "2026.09.15-d2fe57e"
+      ],
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\duplicate-distinct-command\\oracles\\duplicate-distinct-command-01.txt",
+      "oracle_sha256": "be06b5252616264680482c7345f68ffaea5d6532c0e26b0fa3b5fede70af03bc",
+      "process_exited": true,
+      "selected_callback_count": 2,
+      "selected_policy_receipts": [
+        {
+          "decision": "allow",
+          "path": "projects\\duplicate-distinct-command\\policy-receipts\\duplicate-distinct-command-01\\preToolUse\\4262ed829a28a8fdfee3b094adfaa6e696ce939402165f1596f057a8b95e41d2.json",
+          "sha256": "b52f2875c3ae741fa79e632959e78474a6c9a6470ecd4f0378b1a3e32cac5789"
+        }
+      ],
+      "status": "completed"
+    }
+  ],
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "status": "recorded-native-cursor-events",
+  "surface": "cursor-cli-print",
+  "unobserved_events": [
+    "beforeSubmitPrompt",
+    "stop"
+  ]
+}

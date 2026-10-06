@@ -1,0 +1,27 @@
+{
+  "status": "pass-with-native-matrix-limitations",
+  "review_type": "controller-inline; no independent reviewer",
+  "verified_binding_count": 60,
+  "unique_binding_count": 55,
+  "findings": [],
+  "checks": [
+    "frozen oracle and prompt unchanged",
+    "actual native selected Write/denial and byte snapshots",
+    "test-only matcher scope explicit",
+    "historical source/failures/reports preserved",
+    "matching cleanup and union process audit",
+    "protected globals preserved",
+    "documents append-only with preimages",
+    "44/45 P3 active and index bookkeeping preserved"
+  ],
+  "limitations": [
+    "Read outside selected matcher",
+    "remaining host/event/tool/fault matrix unqualified",
+    "backend model attestation absent",
+    "terminal truncated; raw tool-return content not retained",
+    "scientific/stable/release gates separate"
+  ],
+  "source_changed": false,
+  "full_native_gate": "unchecked",
+  "report_sha256": "281693ddc29c1d33a444063e48c9ccd028ad3e47bfc4d1c146f979c14987ad44"
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "route": "current-app-native-codex-exec",
+  "requested_model": "gpt-6.1-sol",
+  "requested_effort": "low",
+  "effective_model": null,
+  "effective_effort": null,
+  "fallback": false,
+  "case_id": "real-source-worldbank-visual-01",
+  "skill": "nckh-visuals",
+  "command": [
+    "C:/Users/USER\\AppData\\Local\\OpenAI\\Codex\\bin\\be3fd7e5c1969ff6\\codex.exe",
+    "exec",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--model",
+    "gpt-6.1-sol",
+    "-c",
+    "model_reasoning_effort=\"low\"",
+    "--cd",
+    "C:/Users/USER\\Downloads\\test-skill",
+    "--json",
+    "--output-last-message",
+    "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\native\\app-gpt-6-1-sol-r25-visual-attempt-01\\gpt-6.1-sol\\real-source-worldbank-visual-01\\artifact.md",
+    "-"
+  ],
+  "project": "C:/Users/USER\\Downloads\\test-skill",
+  "instruction_authority_exception": "C:/Users/USER/.claude/rules/development-rules.md",
+  "installed_ownership_sha256": "4751266952d2c7fd6bd406900f51437a5c3cfc9895038933ff7b66f672f8b3c8",
+  "prompt_sha256": "c8bcc7527808b46e030e087d98aa291ad7f7912c658126a8e12d049433a9b6ce",
+  "started_at": "2026-10-03T11:04:59.499726+00:00",
+  "status": "completed-unreviewed",
+  "visual_binding": {
+    "path": "plans/evaluation/personal-use/visual-engine-probe-02/codex-binding.json",
+    "sha256": "e6ff8731f760fe7c59f5dc2694431bb8a30e186ced4689b2da9e3bc61c36e663"
+  },
+  "pid": 41416,
+  "exit_status": 0,
+  "seconds": 286.53100000001723,
+  "process_cleanup": "owned-process-group-closed",
+  "finished_at": "2026-10-03T11:09:46.040231+00:00",
+  "stderr_sha256": "2e9789c3f38119d32b0948b82034987b6367897f84a8833e8df86c5460eb65b7",
+  "events_sha256": "4710abed842aeb5e86c419a00a7d2c83d708e09217ca3eac2fdbed4b35fe0988",
+  "instruction_authority_reads": {
+    "status": "trace-inspected",
+    "reads": [
+      {
+        "path": "C:/Users/USER/.claude/rules/development-rules.md",
+        "trace_line": 8,
+        "command": "\"C:\\\\Program Files\\\\PowerShell\\\\7\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath 'C:/Users/USER\\\\.claude\\\\rules\\\\development-rules.md'; Get-Content -LiteralPath '.agents/skills/nckh-visuals/SKILL.md'\"",
+        "status": "completed",
+        "exit_code": 0
+      }
+    ]
+  },
+  "artifact_exists": true,
+  "artifact_sha256": "e4f37b5304af9a684b3acfb9fdc6a39c0ad3727c0113de777c72f353d9bc91a0",
+  "evidence_limits": [
+    "Native executable dispatch, not a main-window UI run.",
+    "Requested/configured model is separate from effective provider telemetry.",
+    "Successful process exit is unreviewed output, not an acceptance verdict."
+  ]
+}

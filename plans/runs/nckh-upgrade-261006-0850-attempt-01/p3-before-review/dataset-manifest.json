@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "worldbank-vnm-population",
+  "task_id": "vnm-population-chronological-forecast",
+  "stage": "curated",
+  "sources": [
+    {
+      "id": "worldbank-vnm-SP.POP.TOTL-2000-2025",
+      "locator": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
+      "version": "SP.POP.TOTL:2000-2025@2026-07-13",
+      "retrieved_at": "2026-10-03",
+      "rights": "redistributable",
+      "rights_reference": "pilot-data/rights.md",
+      "access": "public",
+      "archive_sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+    }
+  ],
+  "modalities": [
+    "tabular"
+  ],
+  "fields": [
+    {
+      "name": "sample_id",
+      "type": "string",
+      "unit": "",
+      "unknown_reason": "identifier",
+      "missing_tokens": [
+        null
+      ]
+    },
+    {
+      "name": "year",
+      "type": "integer",
+      "unit": "",
+      "unknown_reason": "calendar year index",
+      "missing_tokens": [
+        null
+      ]
+    },
+    {
+      "name": "value",
+      "type": "integer",
+      "unit": "",
+      "unknown_reason": "source unit field blank; not inferred",
+      "missing_tokens": [
+        null
+      ]
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "unit": "",
+      "unknown_reason": "preserved source metadata",
+      "missing_tokens": [
+        null
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "path": "pilot-data/raw.json",
+      "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+    }
+  ],
+  "normalized": [
+    {
+      "path": "pilot-data/normalized.json",
+      "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+    }
+  ],
+  "sample_index": [
+    {
+      "path": "pilot-data/samples.json",
+      "sha256": "4af92246bc7a8a221cafff538b25d09d8cddeb3f0331d52533347bf7668d72a7"
+    }
+  ],
+  "counts": {
+    "raw": 26,
+    "retained": 26,
+    "excluded": 0,
+    "quarantined": 0
+  },
+  "quarantine": [],
+  "missingness": [
+    {
+      "field": "sample_id",
+      "missing": 0,
+      "zero": 0,
+      "reason": ""
+    },
+    {
+      "field": "year",
+      "missing": 0,
+      "zero": 0,
+      "reason": ""
+    },
+    {
+      "field": "value",
+      "missing": 0,
+      "zero": 0,
+      "reason": ""
+    },
+    {
+      "field": "unit",
+      "missing": 0,
+      "zero": 0,
+      "reason": "blank unit is source metadata, not a missing numeric measurement"
+    }
+  ],
+  "transforms": [
+    {
+      "id": "projection",
+      "code": {
+        "path": "prepare-pilot-data.py",
+        "sha256": "9abc9e0ef907ea362dc12a86cc1eaf6733f8e440d21b451d8afa424a13e773c2"
+      },
+      "config": {
+        "path": "pilot-data/normalization-config.json",
+        "sha256": "b2e375afe938e42a66bc2fdc8cca89adc4dab3e2787d57cbbfe0f81660da334e"
+      },
+      "inputs": [
+        {
+          "path": "pilot-data/raw.json",
+          "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "pilot-data/normalized.json",
+          "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+        }
+      ],
+      "input_rows": 26,
+      "output_rows": 26,
+      "excluded_rows": 0,
+      "quarantined_rows": 0
+    }
+  ],
+  "labels": {
+    "access": "none",
+    "provenance": "",
+    "annotator": "",
+    "adjudication": "",
+    "references": [],
+    "feature_fields": [],
+    "reason": "observed target series, no incident/root-cause labels or human gold"
+  },
+  "release": {
+    "status": "local-only",
+    "limitations": [
+      "single country series; temporal dependence",
+      "dated retrospective values may be revised; no vintage publication-time claim",
+      "prior input access disclosed; development demonstration",
+      "blank source unit retained",
+      "scientific acceptance pending"
+    ]
+  }
+}

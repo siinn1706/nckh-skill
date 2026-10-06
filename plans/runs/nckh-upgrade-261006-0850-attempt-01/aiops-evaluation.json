@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "task_id": "vnm-population-chronological-forecast",
+  "stage": "protocol",
+  "task": "forecasting",
+  "benchmark": {
+    "source_id": "worldbank-vnm-SP.POP.TOTL-2000-2025",
+    "release": "SP.POP.TOTL:2000-2025@2026-07-13",
+    "suite": "development-demonstration",
+    "system": "single-country-population-series",
+    "rights": "redistributable",
+    "rights_reference": "pilot-data/rights.md",
+    "limitations": [
+      "not an incident benchmark",
+      "prior input access",
+      "retrospective snapshot without publication-vintage proof"
+    ]
+  },
+  "inputs": [
+    {
+      "kind": "dataset",
+      "reference": {
+        "path": "dataset-manifest.json",
+        "sha256": "b2e76f3ca9557e8fc51f989ab24155cdcb8168159d4fff90b26bd86635aa0faa"
+      }
+    },
+    {
+      "kind": "split",
+      "reference": {
+        "path": "split-manifest.json",
+        "sha256": "b9607bc6e0d38c40da0e4fbb70788b7c41d505d4d0c8d89383f59d8f8394cdec"
+      }
+    },
+    {
+      "kind": "telemetry",
+      "reference": {
+        "path": "telemetry-manifest.json",
+        "sha256": "ad10b0ab7aa214492dd6ce976f335934c6f84dec772da45ec78f90293ef9a398"
+      }
+    },
+    {
+      "kind": "analysis",
+      "reference": {
+        "path": "statistical-analysis.json",
+        "sha256": "854bf13486d4083a24c501dc872817d329f3aeddc2a201fdf23becfc6d54bbc3"
+      }
+    }
+  ],
+  "modalities": [
+    "tabular"
+  ],
+  "independent_unit": "one country-series; dependent yearly errors",
+  "sample_ids": [
+    "VNM:2023",
+    "VNM:2024",
+    "VNM:2025"
+  ],
+  "evaluation_partition": "test",
+  "gold": {
+    "access": "evaluation-only",
+    "kind": "observed target series, no human incident gold",
+    "references": [
+      {
+        "path": "pilot-data/normalized.json",
+        "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+      }
+    ],
+    "reason": "targets evaluated after each retrospective origin; no true vintage claim"
+  },
+  "baselines": [
+    {
+      "id": "naive",
+      "role": "baseline",
+      "input_policy": "same snapshot, observations strictly before target year",
+      "budget": 60,
+      "rationale": "fixed deterministic arithmetic; no tuning"
+    },
+    {
+      "id": "drift",
+      "role": "candidate",
+      "input_policy": "same snapshot, observations strictly before target year",
+      "budget": 60,
+      "rationale": "fixed deterministic arithmetic; no tuning"
+    }
+  ],
+  "fitting": {
+    "preprocessing": "not-applicable",
+    "threshold": "not-applicable",
+    "selection": "not-applicable"
+  },
+  "metrics": [
+    {
+      "id": "mae",
+      "unit": "source numerical scale; unit blank",
+      "denominator_policy": "completed-with-coverage",
+      "definition": "arithmetic mean absolute error per fixed baseline on three test target years; report all six outcome rows"
+    }
+  ],
+  "budget": {
+    "seconds": 60,
+    "attempts": 2,
+    "provider_calls": 0,
+    "egress": "none"
+  },
+  "stochastic": {
+    "applicability": "deterministic",
+    "seeds": [],
+    "repeats": 0,
+    "reason": "fixed arithmetic"
+  },
+  "policies": {
+    "ties": "not-applicable",
+    "unknown": "retain unknown outcome and coverage",
+    "no_answer": "retain failed/missing forecasts",
+    "no_relevant": "undefined-with-coverage",
+    "failures": "preserve every attempt; no success-only efficacy claim",
+    "availability": "preceding calendar-year index in retrospective snapshot, not observed historical release time"
+  },
+  "rca": [],
+  "anomaly": [],
+  "forecasting": [
+    {
+      "horizon": 1,
+      "origin_policy": "expanding historical origins; fixed algorithm with no model selection",
+      "value_field": "value",
+      "scale": "blank source unit preserved",
+      "aggregation": "MAE",
+      "covariates": [],
+      "pretraining_overlap": "not-applicable; no pretrained model"
+    }
+  ],
+  "retrieval": [],
+  "agent": [],
+  "predictions": [],
+  "results": [],
+  "runs": [],
+  "failures": [],
+  "limitations": [
+    "dated snapshot and blank units",
+    "prior input access; not blind heldout evaluation",
+    "one country series; no incident-system efficacy or identified cause",
+    "scientific/domain acceptance pending",
+    "no generalization, causal or system efficacy claim"
+  ]
+}

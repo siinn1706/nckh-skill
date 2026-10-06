@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "authority": "Direct user requests in this chat, scoped to test-skill",
+  "project": "C:/Users/USER/Downloads/test-skill",
+  "cursor": {
+    "allowed_model_labels": ["Grok 4.7 Extra High"],
+    "fallback_allowed": false,
+    "other_models_allowed": false,
+    "on_failure": "Preserve the actual failure; continue independent authorized work"
+  },
+  "antigravity": {
+    "requested_model_label": "Gemini 3.8 Flash High"
+  },
+  "current_application": {
+    "scope": "All models that actually dispatch in the current local application",
+    "inventory_is_availability_proof": false
+  },
+  "evidence": {
+    "separate_fields": ["requested_model", "observed_selected_model", "effective_model"],
+    "self_report_is_effective_telemetry": false,
+    "owner_review": "After usable delivery; missing feedback remains pending personal review"
+  }
+}

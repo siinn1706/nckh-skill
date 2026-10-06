@@ -1,0 +1,3338 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: */README.md, */LICENSE, */LICENSE.md, */LICENSE.txt, */COPYING
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+claudekit-engineer-main/LICENSE
+claudekit-engineer-main/README.md
+claudekit-marketing-main/LICENSE
+claudekit-marketing-main/README.md
+humanizer-main/LICENSE
+humanizer-main/README.md
+languagetool-master/README.md
+nature-skills-main/LICENSE
+nature-skills-main/README.md
+scientific-agent-skills-main/LICENSE.md
+scientific-agent-skills-main/README.md
+skills-main/README.md
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="claudekit-engineer-main/LICENSE">
+Copyright (c) 2024-2025 ClaudeKit. All Rights Reserved.
+
+This software and associated documentation files (the "Software") are proprietary
+and confidential. Unauthorized copying, modification, distribution, or use of this
+Software, via any medium, is strictly prohibited.
+
+The Software is licensed, not sold. You may only use the Software if you have
+purchased a valid license from ClaudeKit or have been granted explicit written
+permission by ClaudeKit.
+
+For licensing inquiries, please contact: support@claudekit.com
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</file>
+
+<file path="claudekit-engineer-main/README.md">
+# Claude Code Boilerplate
+
+A comprehensive boilerplate template for building professional software projects with **Claude Code**. This template provides a complete development environment with AI-powered agent orchestration, automated workflows, and intelligent project management.
+
+## What is Claude Code?
+
+**Claude Code** is Anthropic's official CLI tool that brings AI-powered development assistance directly to your terminal. It enables natural language interaction with your codebase and provides intelligent automation for common development tasks.
+
+- [Claude Code](https://claude.com/product/claude-code)
+- [Docs](https://docs.claude.com/en/docs/claude-code/overview)
+
+Additional provider support, including OpenCode, is handled by ClaudeKit CLI migration rather than bundled engineer-kit artifacts.
+
+## Related Projects & Directories
+
+- `claudekit` - Website of ClaudeKit
+  - Directory: `../claudekit`
+  - Repo: https://github.com/claudekit/claudekit
+- `claudekit-marketing` - Marketing Kit repository
+  - Directory: `../claudekit-marketing`
+  - Repo: https://github.com/claudekit/claudekit-marketing
+- `claudekit-cli` - CLI tool for quick project setup
+  - Directory: `../claudekit-cli`
+  - Repo: https://github.com/mrgoonie/claudekit-cli
+- `claudekit-docs` - Public documentation repository: https://docs.claudekit.cc
+  - Directory: `../claudekit-docs`
+  - Repo: https://github.com/claudekit/claudekit-docs
+
+## Key Benefits
+
+### 🚀 Accelerated Development
+- **AI-Powered Planning**: Automated technical planning and architecture design
+- **Intelligent Code Generation**: Context-aware code creation and modification
+- **Automated Testing**: Comprehensive test generation and execution
+- **Smart Documentation**: Synchronized docs that evolve with your code
+
+### 🎯 Enhanced Quality
+- **Multi-Agent Code Review**: Specialized agents for security, performance, and standards
+- **Automated Quality Assurance**: Continuous testing and validation
+- **Best Practices Enforcement**: Built-in adherence to coding standards
+- **Security-First Development**: Proactive security analysis and recommendations
+
+### 🏗️ Structured Workflow
+- **Agent Orchestration**: Coordinated AI agents working in parallel and sequential workflows
+- **Task Management**: Automated project tracking and progress monitoring
+- **Documentation Sync**: Always up-to-date technical documentation
+- **Clean Git Workflow**: Professional commit messages and branch management
+
+## Documentation
+
+### 📚 Core Documentation
+- **[Project Overview & PDR](./docs/project-overview-pdr.md)** - Comprehensive project overview, goals, features, and product development requirements
+- **[Codebase Summary](./docs/codebase-summary.md)** - High-level overview of project structure, technologies, and components
+- **[Code Standards](./docs/code-standards.md)** - Coding standards, naming conventions, and best practices
+- **[System Architecture](./docs/system-architecture.md)** - Detailed architecture documentation, component interactions, and data flow
+- **[Skills Reference](./guide/SKILLS.md)** - Complete guide to all available skills
+
+### 📖 Additional Resources
+- **[AI-facing Rules](./claude/rules/CLAUDE.md)** - Compact installed guidance with skill-owned on-demand references for task-specific workflows
+- **[CHANGELOG.md](./CHANGELOG.md)** - Version history and release notes
+- **[Windows Statusline Support](./docs/statusline-windows-support.md)** - Windows compatibility guide for Claude Code statusline
+- **[Statusline Architecture](./docs/statusline-architecture.md)** - Technical documentation for statusline implementation
+
+## Quick Start
+
+### Prerequisites
+- [Claude Code](https://code.claude.com/docs/en/setup) installed and configured
+- Git for version control
+- Node.js 18+ (or your preferred runtime)
+- Operating Systems: macOS 10.15+, Ubuntu 20.04+/Debian 10+, or Windows 10+ (with WSL 1, WSL 2, or Git for Windows)
+- Hardware: 4GB+ RAM
+
+### Setup your new project with ClaudeKit
+
+1. **Install ClaudeKit CLI**:
+   ```bash
+   npm install -g claudekit-cli
+   ```
+
+2. **Create your new project with ClaudeKit framework**:
+   ```bash
+   mkdir my-project
+   ck new --dir my-project --kit engineer
+   ```
+
+   **Note:** If you want to use the kit with your existing project:
+   ```bash
+   cd /path/to/project
+   ck init --kit engineer
+   ```
+
+   To target another provider later, run ClaudeKit CLI migration from the project root, for example:
+   ```bash
+   ck migrate -a opencode
+   ```
+
+3. **Start development**:
+   ```bash
+   # Begin with Claude Code
+   claude
+   # [YOLO mode - not recommended]
+   # claude --dangerously-skip-permissions
+
+   # now you can use these specific commands
+   /ck:plan "implement user authentication"
+   /ck:plan --deep "refactor the notification pipeline"
+   /ck:plan --tdd "refactor auth middleware safely"
+   /ck:cook "add database integration"
+   /ck:cook "refactor auth middleware" --tdd
+   ```
+
+📖 **Learn more from our docs:** [https://docs.claudekit.cc](https://docs.claudekit.cc)
+
+## Local Scripts (Usage)
+
+This repository is self-contained — run every command from this repo with no other checkout required.
+
+| Command | What it does |
+|---------|--------------|
+| `npm run lint` | Content lint for kit skills. Diff-based: violations on files changed vs the base ref are errors (exit 1); legacy/unchanged files are warnings (exit 0). Reuses the in-repo frontmatter validator. |
+| `npm test` | Hook/script unit tests (`node --test`) plus the chrome-profile Python check. |
+| `npm run test:eval` / `:e2e` / `:judge` / `:all` | Skill eval tiers (smoke / E2E / LLM-judge / full). |
+
+Lint severity uses `git diff --name-only <base>...HEAD`, where base is `LINT_BASE_REF` (set by CI) or `origin/dev` locally; if no base ref is available it degrades to warn-only.
+
+## Project Structure
+
+```
+├── .claude/                 # Claude Code configuration
+│   ├── agents/             # Claude Code agents
+│   ├── command-archive/    # Archived legacy command definitions
+│   ├── hooks/              # Claude Code hooks
+│   │   ├── .logs/          # Structured hook diagnostics (hook-log.jsonl)
+│   │   └── notifications/  # Multi-provider notification system
+│   ├── skills/             # Claude Code skills
+│   └── rules/              # Compact AI-facing rules installed by the CK CLI
+│       └── CLAUDE.md       # Always-loaded contract and lazy reference map
+├── docs/                   # Project documentation
+│   ├── codebase-summary.md # Auto-generated codebase overview
+│   ├── code-standards.md   # Development standards
+│   ├── project-overview-pdr.md # Product requirements
+│   └── development-roadmap.md  # Project roadmap
+├── plans/                  # Implementation plans and reports
+│   ├── templates/          # Plan templates
+│   └── reports/            # Agent-to-agent communication
+└── README.md              # This file
+```
+
+## The AI Agent Team
+
+This boilerplate includes 17+ specialized AI agents that work together to deliver high-quality software. Agents coordinate through file-based communication, enabling sequential chaining and parallel execution patterns.
+
+### 🎯 Core Development Agents
+
+#### **Planner Agent**
+- Researches technical approaches and best practices
+- Creates comprehensive implementation plans
+- Analyzes architectural trade-offs
+- Spawns multiple researcher agents for parallel investigation
+
+#### **Researcher Agent**
+- Investigates specific technologies and frameworks
+- Analyzes existing solutions and patterns
+- Provides technical recommendations
+- Supports the planner with detailed findings
+
+#### **Tester Agent**
+- Generates comprehensive test suites
+- Validates functionality and performance
+- Ensures cross-platform compatibility
+- Reports on test coverage and quality metrics
+
+### 🔍 Quality Assurance Agents
+
+#### **Code Reviewer Agent**
+- Performs automated code quality analysis
+- Enforces coding standards and conventions
+- Identifies security vulnerabilities
+- Provides improvement recommendations
+
+#### **Debugger Agent**
+- Analyzes application logs and error reports
+- Diagnoses performance bottlenecks
+- Investigates CI/CD pipeline issues
+- Provides root cause analysis
+
+### 📚 Documentation & Management Agents
+
+#### **Docs Manager Agent**
+- Maintains synchronized technical documentation
+- Updates API documentation automatically
+- Ensures documentation accuracy
+- Manages codebase summaries with repomix
+
+#### **Git Manager Agent**
+- Creates clean, conventional commit messages
+- Manages branching and merge strategies
+- Handles version control workflows
+- Ensures professional git history
+
+#### **Project Manager Agent**
+- Tracks development progress and milestones
+- Updates project roadmaps and timelines
+- Manages task completion verification
+- Maintains project health metrics
+
+### 🎨 Design & Content Agents
+
+#### **UI/UX Designer Agent**
+- Creates design specifications and prototypes
+- Develops visual components
+- Ensures design system consistency
+- Performs user experience analysis
+
+#### **Copywriter Agent**
+- Creates marketing and technical content
+- Optimizes copy for conversion
+- Develops documentation narratives
+- Enhances content clarity
+
+### 🔎 Specialized Agents
+
+#### **Scout Agent**
+- Performs parallel codebase exploration
+- Analyzes code patterns and structure
+- Identifies optimization opportunities
+- Maps component relationships
+
+#### **Database Admin Agent**
+- Manages database operations
+- Performs migrations and optimization
+- Ensures data integrity
+- Designs schema patterns
+
+#### **Journal Writer Agent**
+- Documents development decisions
+- Tracks technical explorations
+- Records lessons learned
+- Maintains decision history
+
+## Agent Orchestration Patterns
+
+### Sequential Chaining
+Use when tasks have dependencies:
+```bash
+# Planning → Implementation → Testing → Review
+/ck:plan "implement user dashboard"
+# For large refactors:
+/ck:plan --deep "untangle the dashboard data flow"
+/ck:plan --tdd "refactor dashboard state safely"
+# After planning, use the exact absolute-path handoff command emitted by plan:
+/ck:cook /absolute/path/to/plans/YYMMDD-HHMM-dashboard/plan.md
+# If planning used --tdd, preserve it on handoff:
+/ck:cook /absolute/path/to/plans/YYMMDD-HHMM-dashboard/plan.md --tdd
+# Cook already runs testing and code review as part of the workflow.
+
+# Alternative: Use /ck:cook for standalone implementation (plans internally)
+/ck:cook "implement user dashboard"
+/ck:cook "refactor dashboard state" --tdd
+```
+
+### Parallel Execution
+Use for independent tasks:
+```bash
+# Multiple researchers exploring different approaches
+planner agent spawns:
+- researcher (database options)
+- researcher (authentication methods)
+- researcher (UI frameworks)
+# All report back to planner simultaneously
+```
+
+### Context Management
+- Agents communicate through file system reports
+- Context is preserved between agent handoffs
+- Fresh context prevents conversation degradation
+- Essential information is documented in markdown
+
+## Development Workflow
+
+### 1. Feature Development
+```bash
+# Start with planning
+/ck:plan "add real-time notifications"
+/ck:plan --deep "refactor the notifications delivery pipeline"
+
+# Research phase (automatic)
+# Multiple researcher agents investigate approaches
+
+# Implementation
+/ck:cook "implement notification system"
+/ck:cook "refactor notification retries" --tdd
+
+# Cook includes testing and code review in the workflow.
+
+# Documentation update
+/ck:docs
+
+# Project tracking
+/ck:watzup  # Check project status
+```
+
+### 2. Bug Fixing
+```bash
+# Analyze the issue
+/ck:debug "investigate login failures"
+
+# Create fix plan
+/ck:plan "resolve authentication bug"
+
+# Implement solution
+/ck:fix "authentication issue"
+
+# Validate fix
+/ck:test
+```
+
+### 3. Documentation Management
+```bash
+# Update documentation
+/ck:docs
+
+# Generate codebase summary
+repomix  # Creates ./docs/codebase-summary.md
+
+# Review project status
+/ck:watzup
+```
+
+## Configuration Files
+
+### .claude/rules/CLAUDE.md
+Installed ClaudeKit Engineer instructions for Claude Code. Keep this file compact and project-agnostic; put local project behavior in a project-level `CLAUDE.md` or `docs/`.
+- Always-loaded contract
+- Lazy references to implementation, orchestration, docs, and review rules
+- Privacy hook response guidance
+
+### plans/templates/*.md
+Reusable templates for:
+- Feature implementation plans
+- Bug fix procedures
+- Refactoring strategies
+- Architecture decisions
+
+## Gemini Skills Configuration
+
+Multimodal capabilities (audio, video, image, vision, document/PDF processing) are now consolidated into a single skill that requires a Google Gemini API key:
+
+- **`ai-multimodal`** (`claude/skills/ai-multimodal/`) — analyze images/audio/video/PDFs via Gemini API, plus image/video/speech/music generation routing across Google (Imagen, Nano Banana, Veo), OpenRouter, and MiniMax.
+
+> Earlier versions of the engineer kit shipped per-modality skills (`gemini-audio`, `gemini-video-understanding`, `gemini-document-processing`, `gemini-image-gen`, `gemini-vision`). These were merged into `ai-multimodal` — those names no longer exist on disk.
+
+For image generation specifically, current Gemini/Imagen API models are paid-tier only. If you want an alternative routing path for image generation, `ai-multimodal` also supports `OPENROUTER_API_KEY` for OpenRouter-backed image models and `MINIMAX_API_KEY` for MiniMax.
+
+### API Key Setup
+
+The Gemini skills check for `GEMINI_API_KEY` in the following order (priority from highest to lowest):
+
+1. **Environment Variable** (Recommended for development)
+   ```bash
+   export GEMINI_API_KEY='your-api-key-here'
+   ```
+
+2. **Project Root `.env`** (Recommended for project-specific keys)
+   ```bash
+   # Create .env in project root
+   echo 'GEMINI_API_KEY=your-api-key-here' > .env
+   ```
+
+3. **`.claude/.env`** (For Claude-specific configuration)
+   ```bash
+   # Copy example and edit
+   cp .claude/.env.example .claude/.env
+   # Then edit .claude/.env and set your API key
+   ```
+
+4. **`.claude/skills/.env`** (For shared skills configuration)
+   ```bash
+   # Copy example and edit
+   cp .claude/skills/.env.example .claude/skills/.env
+   # Then edit .claude/skills/.env and set your API key
+   ```
+
+5. **Individual Skill Directory `.env`** (For skill-specific keys)
+   ```bash
+   # Example for ai-multimodal skill
+   cp .claude/skills/ai-multimodal/.env.example .claude/skills/ai-multimodal/.env
+   # Then edit and set your API key
+   ```
+
+### Getting Your API Key
+
+Get your free Gemini API key at: https://aistudio.google.com/apikey
+
+### Vertex AI Support
+
+To use Vertex AI instead of Google AI Studio:
+
+```bash
+# Enable Vertex AI
+export GEMINI_USE_VERTEX=true
+export VERTEX_PROJECT_ID=your-gcp-project-id
+export VERTEX_LOCATION=us-central1  # Optional, defaults to us-central1
+```
+
+Or in `.env` file:
+```
+GEMINI_USE_VERTEX=true
+VERTEX_PROJECT_ID=your-gcp-project-id
+VERTEX_LOCATION=us-central1
+```
+
+### Usage Examples
+
+```bash
+# Audio analysis
+claude "Analyze this audio file and summarize the key points: audio.mp3"
+
+# Video understanding
+claude "Describe what happens in this video: video.mp4"
+
+# Document processing
+claude "Extract all tables from this PDF: document.pdf"
+
+# Image generation
+claude "Generate an image of a serene mountain landscape"
+
+# Image analysis
+claude "What objects are in this image: photo.jpg"
+```
+
+## Model Context Protocol (MCP)
+
+✍️ Please read [my technical blog article about MCP here](https://faafospecialist.substack.com/p/claude-code-solution-to-use-mcp-servers).
+
+### Pre-requisites
+
+In ClaudeKit, you need to setup the MCP servers in `.claude/.mcp.json` file.
+
+Copy the example file:
+```bash
+mv .claude/.mcp.json.example .claude/.mcp.json
+```
+
+Then add your MCP servers, below are some examples:
+
+### [Context7](https://github.com/upstash/context7)
+```json
+{
+   "mcpServers": {
+      "context7": {
+         "command": "npx",
+         "args": ["-y", "@upstash/context7-mcp", "--api-key", "YOUR_API_KEY"],
+      }
+   }
+}
+```
+
+### [Human MCP](https://github.com/mrgoonie/human-mcp/)
+
+Human MCP is included in `.claude/.mcp.json.example`, but ClaudeKit disables it by default in `.claude/settings.json` because it requires a Gemini API key. To use it, set `GOOGLE_GEMINI_API_KEY` and remove `human-mcp` from `disabledMcpjsonServers`.
+
+```json
+{
+   "mcpServers": {
+      "human-mcp": {
+         "command": "npx",
+         "args": ["-y", "@goonnguyen/human-mcp@latest"],
+         "env": { "GOOGLE_GEMINI_API_KEY": "YOUR_API_KEY" }
+      }
+   }
+}
+```
+
+### [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+```json
+{
+   "mcpServers": {
+      "chrome-devtools": {
+         "command": "npx",
+         "args": ["-y", "chrome-devtools-mcp@latest"]
+      }
+   }
+}
+```
+
+### Chrome Profile Browser Workflow
+
+Use `ck:chrome-profile` when a task needs the user's actual Google Chrome profile. It opens URLs in the user's real Chrome profile, then the agent selects that tab through Chrome DevTools MCP.
+
+Use it when browser automation needs real cookies, account state, workspaces, tenants, or a specific Chrome profile:
+
+```bash
+bash .claude/skills/chrome-profile/scripts/install.sh
+chrome-profile doctor
+chrome-profile setup
+chrome-profile open --json work "https://github.com/your-org/your-repo/pulls"
+```
+
+If `doctor` reports no readable bridge, first try a live Chrome DevTools MCP page-list/read probe. The first Chrome DevTools MCP call may trigger Chrome's remote-control approval prompt; after the user approves, retry once before blocking. If both `doctor` and the live probe fail, set up one of these:
+
+1. Configure `chrome-devtools-mcp` with auto-connect, then restart the agent session and approve Chrome's remote-control prompt if shown.
+2. Or attach `chrome-devtools-mcp` to a Chrome remote-debugging endpoint:
+
+```json
+{
+   "mcpServers": {
+      "chrome-devtools": {
+         "command": "npx",
+         "args": ["-y", "chrome-devtools-mcp@latest", "--browserUrl", "http://127.0.0.1:9222"]
+      }
+   }
+}
+```
+
+Before choosing a browser tool, decide whether the task needs a specific real Chrome profile: cookies, login/account state, workspace, tenant, or isolated profile key. If it does not, use `ck:agent-browser`, `ck:web-testing`, project-native Playwright/Vitest/Cypress, or Chrome DevTools MCP normal navigation. If it does, do not use MCP `new_page` or raw `navigate_page` as the opening/navigation path. Use `chrome-profile open --json <key> <url>`, then select the page whose URL contains the returned `bind_selector` such as `cdp-open=<token>`. Verify the selected URL also contains `cdp-profile=<key>`. If a live MCP probe proves `doctor` is a false negative, add `--force` only for that launch.
+
+## Best Practices
+
+### Development Principles
+- **YAGNI**: You Aren't Gonna Need It - avoid over-engineering
+- **KISS**: Keep It Simple, Stupid - prefer simple solutions
+- **DRY**: Don't Repeat Yourself - eliminate code duplication
+
+### Code Quality
+- All code changes go through automated review
+- Comprehensive testing is mandatory
+- Security considerations are built-in
+- Performance optimization is continuous
+
+### Documentation
+- Documentation evolves with code changes
+- API docs are automatically updated
+- Architecture decisions are recorded
+- Codebase summaries are regularly refreshed
+
+### Git Workflow
+- Clean, conventional commit messages
+- Professional git history
+- No AI attribution in commits
+- Focused, atomic commits
+
+## Usage Examples
+
+### Starting a New Feature
+```bash
+# Research and plan
+claude "I need to implement user authentication with OAuth2"
+# Planner agent creates comprehensive plan
+
+# Follow the plan
+claude "Implement the authentication plan"
+# Implementation follows the detailed plan
+
+# Ensure quality
+claude "Review and test the authentication system"
+# Testing and code review agents validate the implementation
+```
+
+### Debugging Issues
+```bash
+# Investigate problem
+claude "Debug the slow database queries"
+# Debugger agent analyzes logs and performance
+
+# Create solution
+claude "Optimize the identified query performance issues"
+# Implementation follows debugging recommendations
+
+# Validate fix
+claude "Test query performance improvements"
+# Tester agent validates the optimization
+```
+
+### Project Maintenance
+```bash
+# Check project health
+claude "What's the current project status?"
+# Project manager provides comprehensive status
+
+# Update documentation
+claude "Sync documentation with recent changes"
+# Docs manager updates all relevant documentation
+
+# Plan next sprint
+claude "Plan the next development phase"
+# Planner creates detailed roadmap for upcoming work
+```
+
+## Advanced Features
+
+### Multi-Project Support
+- Manage multiple repositories simultaneously
+- Shared agent configurations across projects
+- Consistent development patterns
+
+### Custom Agent Creation
+- Define project-specific agents
+- Extend existing agent capabilities
+- Create domain-specific expertise
+
+### Integration Capabilities
+- **Multi-provider notifications** (Telegram, Discord, Slack) with smart throttling
+- GitHub Actions integration
+- CI/CD pipeline enhancement
+
+See `.claude/hooks/notifications/docs/` for setup guides.
+
+## Customization Guide
+
+### 1. Project Setup
+- Add or update a project-level `CLAUDE.md` only for project-specific overrides
+- Customize plan templates in `plans/templates/`
+
+### 2. Agent Specialization
+- Add domain-specific knowledge to agents
+- Create custom agents for unique requirements
+- Configure agent interaction patterns
+
+### 3. Workflow Optimization
+- Define project-specific commands
+- Create shortcuts for common tasks
+- Establish team coding standards
+
+## Contributing
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Follow the agent orchestration workflow
+4. Ensure all tests pass and documentation is updated
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Learn More
+
+### Claude Code Resources
+- [Claude Code Documentation](https://claude.ai/code)
+
+### Community
+- [ClaudeKit Community](https://claudekit.cc/discord)
+- [Discussion Forum](https://github.com/anthropic/claude-code/discussions)
+- [Example Projects](https://github.com/topics/claude-code)
+
+### Support
+- [Issue Tracker](https://github.com/anthropic/claude-code/issues)
+- [Feature Requests](https://github.com/anthropic/claude-code/discussions/categories/ideas)
+- [Documentation](https://docs.claude.ai/code)
+
+---
+
+**Start building with AI-powered development today!** This boilerplate provides everything you need to create professional software with intelligent agent assistance.
+</file>
+
+<file path="claudekit-marketing-main/LICENSE">
+Copyright (c) 2024-2025 ClaudeKit. All Rights Reserved.
+
+This software and associated documentation files (the "Software") are proprietary
+and confidential. Unauthorized copying, modification, distribution, or use of this
+Software, via any medium, is strictly prohibited.
+
+The Software is licensed, not sold. You may only use the Software if you have
+purchased a valid license from ClaudeKit or have been granted explicit written
+permission by ClaudeKit.
+
+For licensing inquiries, please contact: support@claudekit.com
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED,
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+</file>
+
+<file path="claudekit-marketing-main/README.md">
+# ClaudeKit Marketing
+
+AI-powered marketing automation toolkit built on Claude Code subagent orchestration. Enables autonomous workflows for content creation, campaign management, SEO optimization, and lead generation.
+
+**Status:** Phase 6 Complete (32 agents, 119 commands, 68 skills, 8 MCP integrations) | Production Ready
+**Pricing:** $99 standalone | $149 bundled with ClaudeKit Engineer
+
+## What is Claude Code?
+
+Claude Code is Anthropic's official CLI that orchestrates AI agents for intelligent task automation. Learn more at [Claude Code](https://claude.com/product/claude-code).
+
+## Quick Start
+
+### Prerequisites
+- Claude Code installed and configured
+- Git and 4GB+ RAM
+- macOS 10.15+, Ubuntu 20.04+, or Windows 10+ with WSL
+
+### Installation
+
+```bash
+npm install -g claudekit-cli
+ck new --dir my-project --kit marketing
+cd my-project
+claude
+```
+
+### Usage Examples
+
+```bash
+# Content creation
+/mkt:plan "Q1 content strategy"
+/mkt:content:good "landing page copy"
+/mkt:content:cro "optimize for conversions"
+
+# Campaign management
+/mkt:campaign:email "Black Friday sequence"
+/mkt:brainstorm "seasonal campaign ideas"
+
+# SEO & analysis
+/mkt:seo:keywords "target keyword research"
+/mkt:scout "analyze competitor pages"
+```
+
+**(*) Notes:** ClaudeKit Marketing has a `/mkt:` prefix in the commands to distinguish with ClaudeKit Engineer's commands.
+
+## Key Features
+
+- **32 Specialized Agents** - TOFU, MOFU, BOFU funnel stages + core & support roles
+- **119 Commands** - Content, campaigns, SEO, social, email, analytics, design, fixes
+- **68 Skills** - AI/multimodal, design, strategy, marketing, integrations
+- **8 MCP Integrations** - GA4, Google Ads, SendGrid, Discord, Slack, Resend, GSC, ReviewWeb
+- **6 Workflow Systems** - Campaign, content, sales, SEO, analytics, orchestration
+- **3 Automation Hooks** - Brand enforcement, campaign tracking, approvals
+- **Marketing Dashboard** - Full-stack Vue 3 app (32 components, 5 stores, production-ready)
+
+## Documentation
+
+- **[Project Overview & PDR](./docs/project-overview-pdr.md)** - Requirements and roadmap
+- **[Agent Catalog](./docs/agent-catalog.md)** - 32 agents by funnel stage
+- **[Skill Catalog](./docs/skill-catalog.md)** - 68 available skills
+- **[Command Catalog](./docs/command-catalog.md)** - 119 commands reference
+- **[Code Standards](./docs/code-standards.md)** - Development guidelines
+- **[System Architecture](./docs/system-architecture.md)** - Design and patterns
+- **[Design Guidelines](./docs/design-guidelines.md)** - Brand and visual standards
+- **[Project Roadmap](./docs/project-roadmap.md)** - Timeline and phases
+
+## Marketing Agents (32 Total)
+
+**TOFU (4):** Attraction Specialist, SEO Specialist, Lead Qualifier, Researcher
+**MOFU (5):** Email Wizard, Sale Enabler, Funnel Architect, Content Creator, Continuity Specialist
+**BOFU (1):** Upsell Maximizer
+**Core (5):** Copywriter, Content Reviewer, Campaign Debugger, Campaign Manager
+**Community (2):** Social Media Manager, Community Manager
+**Support (8):** Planner, Project Manager, Docs Manager, Git Manager, Journal Writer, Scout, Scout External, MCP Manager, UI/UX Designer, Code Reviewer, Debugger, Fullstack Developer
+**Infrastructure (2):** Analytics Analyst, Lead Qualifier (with MCP capabilities)
+
+## Project Structure
+
+```
+.claude/
+├── agents/          # 32 marketing agents
+├── commands/mkt/    # 119 slash commands (organized by category)
+├── skills/          # 68 skills (AI, marketing, design, development, utilities)
+├── workflows/       # 10 workflow definitions
+└── hooks/           # 10+ automation hooks
+
+docs/
+├── Core documentation (6 files)
+├── Reference catalogs (3 files)
+├── Brand & design (2 files)
+├── Integration guides (2 files)
+└── Strategic docs (2+ files)
+```
+
+## Marketing Dashboard
+
+Full-stack web application for campaign management and AI automation:
+
+- **Frontend:** Vue 3 + Vite (32 components, 5 Pinia stores)
+- **Backend:** Hono + SQLite (5 API routes, 18+ endpoints)
+- **Features:** Campaign Kanban, content library, asset gallery, AI enhancement, brand center
+- **Security:** API key auth, path traversal protection, XSS prevention
+- **Performance:** 62 KB gzipped (68% under 200 KB target)
+- **Status:** Production ready (88% test coverage)
+
+**Quick Start:**
+```bash
+cd .claude/skills/marketing-dashboard
+./start.sh              # Dev: localhost:5173 (frontend) + localhost:3457 (API)
+./build.sh && ./start-production.sh  # Production
+```
+
+## Environment Configuration
+
+Set up MCP integrations for advanced features:
+
+```bash
+cp .claude/.env.example .claude/.env
+
+# Required for integrations:
+CLAUDEKIT_API_KEY=...           # Grab it at https://claudekit.cc/account/api-keys
+GEMINI_API_KEY=...
+GA_ACCESS_TOKEN=...
+GOOGLE_ADS_DEVELOPER_TOKEN=...
+SENDGRID_API_KEY=...
+DISCORD_BOT_TOKEN=...
+SLACK_USER_TOKEN=...
+```
+
+See [MCP Setup Guide](./docs/mcp-setup-guide.md) for detailed instructions.
+
+## Best Practices
+
+- **Brand Consistency** - Use brand guidelines enforcement hooks
+- **Content Quality** - All outputs go through content reviewer
+- **Data-Driven** - Track metrics via GA4 integration
+- **Documentation** - Keep playbooks and learnings current
+- **Testing** - Use /plan variants for scenario testing
+
+## Contributing
+
+1. Fork the repository
+2. Create feature branch (`git checkout -b feature/name`)
+3. Follow code standards in [CLAUDE.md](./CLAUDE.md)
+4. Submit pull request
+
+## Related Projects
+
+- [ClaudeKit Website](https://github.com/claudekit/claudekit)
+- [ClaudeKit Engineer](https://github.com/claudekit/claudekit-engineer)
+- [ClaudeKit CLI](https://github.com/mrgoonie/claudekit-cli)
+- [ClaudeKit Docs](https://docs.claudekit.cc)
+
+## Support
+
+- **Documentation:** See `./docs` folder
+- **Issues:** GitHub Issues
+- **Community:** [ClaudeKit Discord](https://claudekit.cc/discord)
+
+## License
+
+Proprietary License - see [LICENSE](LICENSE) file for details. Contact support@claudekit.com for licensing inquiries.
+</file>
+
+<file path="humanizer-main/LICENSE">
+MIT License
+
+Copyright (c) 2025 Siqi Chen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</file>
+
+<file path="humanizer-main/README.md">
+# Humanizer
+
+[![GitHub stars](https://img.shields.io/github/stars/blader/humanizer?style=flat)](https://github.com/blader/humanizer/stargazers) [![skills.sh installs](https://skills.sh/b/blader/humanizer)](https://skills.sh/blader/humanizer)
+
+Humanizer makes AI-written text sound like a person wrote it, without changing what it says. It is built on Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), the guide Wikipedia editors use to catch AI-generated text, and it works in Claude Code, Codex, and any other agent that supports skills.
+
+**Before:**
+> I'm thrilled to announce that shared drafts are finally here! 🚀 For months, our own team was drowning in files named final_v7.docx — and we knew there had to be a better way. Now two people can edit the same doc at once, with every change appearing live for both of them. It's not just a feature; it's a whole new way to collaborate. Comments stay anchored to the exact sentence they reference, even as the text around them evolves. And the best part? It's available today on every plan, completely free. Let that sink in.
+
+**After:**
+> Shared drafts are out today. For months our own team passed around files named final_v7.docx, so we built a way for two people to edit the same doc at once, with each person's changes showing up live for the other. Comments stay pinned to the sentence they're about, even when the text around them changes. It's free on every plan.
+
+In a blind test, judges preferred Humanizer's rewrite over the original AI text 16 times out of 16 ([#229](https://github.com/blader/humanizer/issues/229)).
+
+Humanizer edits for human readers. Getting past AI detectors is not a goal, and detectors still flag most of its output.
+
+## The five strongest tells
+
+These are the most common signs of AI writing, and Humanizer rewrites any of them on sight:
+
+1. **Not X but Y:** "It's not just a feature, it's a shift."
+2. **One-line closers:** "Let that sink in."
+3. **Sayings that sound deep:** "At its core, what really matters is..."
+4. **A staged run-up:** "Here's the thing." "Honestly?"
+5. **Arguing with no one:** "I'm not saying X, but..."
+
+Humanizer checks for [26 patterns](#the-26-patterns) in all.
+
+## Installation
+
+Once installed, the skill answers to `/humanizer`.
+
+### Claude Code
+
+```text
+/plugin marketplace add blader/humanizer
+/plugin install humanizer@humanizer
+```
+
+The plugin answers to `/humanizer:humanizer`. It needs Claude Code 2.1.142 or newer; on older versions, use `npx skills add blader/humanizer --global --agent claude-code`.
+
+### Codex
+
+```bash
+npx skills add blader/humanizer --global --agent codex
+```
+
+### Claude.ai and Claude Desktop
+
+Download this repository as a ZIP (**Code → Download ZIP**) and upload it as a skill in Settings.
+
+### Other agents
+
+```bash
+npx skills add blader/humanizer --global --agent '*'
+```
+
+This installs Humanizer for every agent the Skills CLI supports, including Gemini CLI, GitHub Copilot, and Windsurf. Leave off `--global` in any command above to install it only in the current project. For an agent the Skills CLI does not know, copy `SKILL.md` into its skill folder.
+
+## Usage
+
+Call the skill directly:
+
+```
+/humanizer
+
+[paste your text here]
+```
+
+Or ask in plain language:
+
+```
+Please humanize this text: [your text]
+```
+
+To rewrite a file, give Humanizer its path:
+
+```
+Humanize the prose in docs/launch-post.md
+```
+
+### Match your voice
+
+If you want the rewrite to sound more like you, include a sample:
+
+```
+/humanizer
+
+Here's a sample of my writing for voice matching:
+[paste 2-3 paragraphs of your own writing]
+
+Now humanize this text:
+[paste AI text to humanize]
+```
+
+Humanizer follows the sample's rhythm, word choice, punctuation, and deliberate quirks, including dashes if you use them.
+
+## How it works
+
+A language model writes whatever is most likely to come next, so by default it makes the choice that fits the widest range of readers and subjects. A person chooses for one reader and one subject. Every tell Humanizer looks for is a form of that default choice: a sentence that signals importance instead of adding a fact, rhythm or formatting applied by rule, an ordinary fact dressed as a pivotal one, text left over from the chat, or a reply that re-explains what the reader already knows.
+
+> "LLMs use statistical algorithms to guess what should come next. The result tends toward the most statistically likely result that applies to the widest variety of cases."
+> Wikipedia, ["Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)
+
+Humanizer marks every tell it finds, strongest first. It drafts a rewrite without treating the original structure as fixed, checks the draft against the patterns and the original claims, and then writes the final version. It does not make things up. A name, number, date, quote, citation, or other factual detail must come from the source or the writer, and if a sentence needs a detail that is missing, Humanizer asks instead of inventing one.
+
+When you paste text, Humanizer shows its work: the first rewrite, a short critique of anything that still sounds artificial, and the final version. Point it at a file and it changes only the prose, leaving code, data, frontmatter, and link targets alone. Personal writing keeps the writer's opinions and quirks. Technical and reference prose stays neutral and plain.
+
+## The 26 patterns
+
+The patterns are numbered by strength and frequency. The first five justify an edit on a single sighting. Patterns marked *weak alone* count only when several tells share a passage, because a careful writer may use any one of them on purpose.
+
+### A. Staging instead of stating
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 1 | **Not X but Y** | "It's not just X, it's Y", "This doesn't mean X. It means Y." | State the point directly |
+| 2 | **One-line closers and dramatic fragments** | "That is the real win." after every section; "This shows the importance of..." after an example; "No prior. No nostalgia." | Cut the closer that repeats or explains the example; merge fragments into a specific claim |
+| 3 | **Sayings that sound deep** | "At its core, what matters is...", "Symmetry is the language of trust" | Replace the saying with the specific claim |
+| 4 | **Staged run-up before the point** | "Let's dive in", "Honestly? It depends..." | Remove the run-up and state the point |
+| 5 | **Arguing with no one** | "This isn't mainly about...", "A tempting approach would be..." | Remove the unraised objection or fake option; keep any real claim |
+
+### B. Rhythm by rule
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 6 | **Forced triads** | "innovation, inspiration, and insights"; three examples plus a lesson | Use the number of items the meaning needs |
+| 7 | **Repeated sentence openings** | "She noted... She noted... She filed..." | Merge the sentences or change the subject |
+| 8 | **Dashes as the universal connector** (*weak alone*) | "institutions—not the people—yet this continues—" | Use periods, commas, colons, or parentheses; match a sample that uses dashes |
+| 9 | **Stacked qualifiers** (*weak alone*) | "could potentially possibly be argued" | Keep only qualifiers the source supports |
+| 10 | **Hyphenated pairs everywhere** (*weak alone*) | "the report is high-quality" | Keep the hyphen before the noun or where the dictionary has one |
+| 11 | **Passive voice and missing subjects** (*weak alone*) | "No configuration file needed" | Name the actor when that helps |
+
+### C. Inflation and borrowed authority
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 12 | **Overused AI words** | "delve... testament... landscape... showcasing" | Use plain words |
+| 13 | **Inflated significance** | "marking a pivotal moment", "Despite challenges... continues to thrive", "The future looks bright" | Keep the fact and drop the significance; end on the last concrete fact |
+| 14 | **Vague connection or association** | "associated with the leadership of", "in connection with" | State the relationship the source gives |
+| 15 | **Shallow -ing riders** | "symbolizing... reflecting... showcasing..." | Keep only what the source supports |
+| 16 | **Sales language** | "nestled within the breathtaking region" | State what the thing is |
+| 17 | **Borrowed authority** | "Experts believe...", "cited in NYT, BBC, FT, and The Hindu" | Name a real source and what it said, or remove the claim or list |
+| 18 | **Avoiding is, are, and has** | "serves as... features... boasts" | "is... has" |
+
+### D. Formatting by rule
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 19 | **Bold as decoration** | "**OKRs**, **KPIs**"; "**Performance:** Performance improved" | Remove the bold; turn a labeled list into prose |
+| 20 | **Decorative headings** | "Strategic Negotiations And Partnerships", "🚀 Launch Phase:", "The decision, on one screen" | Sentence case; remove emojis and arrows; name what the section holds |
+| 21 | **Curly quotation marks** (*weak alone*) | `said “the project”` | `said "the project"` |
+
+### E. Leftovers from the chat and the draft
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 22 | **Chatbot residue** | "Great question! ... I hope this helps!" | Remove the wrapper and keep the content |
+| 23 | **Knowledge-limit disclaimers and guesses** | "While details are limited in available sources, it appears..." | State what the source shows, or remove the sentence |
+| 24 | **A heading repeated in the first sentence** | "## Performance" + "Speed matters." | Let the heading do the work |
+| 25 | **Writing about the document instead of its subject** | "This function was added to replace...", "compiled from...", "The table below compares..." | Describe the subject; state a convention only when the reader cannot see it |
+
+### F. Writing for the wrong reader
+
+| # | Pattern | Before | After |
+|---|---------|--------|-------|
+| 26 | **Re-explaining what the reader knows** | A reply that walks the diagnosis and proves the plan works before the decision | Lead with the decision; leave the diagnosis and the proof for the ticket that follows |
+
+## Full example
+
+**Before (AI-sounding):**
+> I recently spent five unforgettable days in Lisbon last October, and let me tell you — this city completely stole my heart. From the moment I checked into my charming hotel perched high in the historic Alfama district, I knew I was somewhere truly special.
+>
+> Yes, the famous hills are challenging — with countless stairs between my hotel and everything else, my legs certainly felt it! — but every climb rewards you with breathtaking, panoramic views that make it all worthwhile.
+>
+> No trip would be complete without riding the iconic Tram 28, a roughly forty-minute journey shared with plenty of fellow travelers eager to capture the magic. And the food? Simply divine. While the pastéis de nata at Pastéis de Belém are a beloved national treasure, my absolute favorite came from a hidden gem in Graça, still warm from the oven.
+>
+> But what truly makes Lisbon special isn't just the sights — it's the feeling. Wander just a block or two above the main squares and you'll discover a quieter, more authentic side of the city, inviting you to slow down and savor every moment.
+>
+> Of course, the must-see São Jorge Castle offers stunning views over the rooftops below. The queues can be long, but the experience is absolutely worth it for any history buff or curious traveler.
+>
+> Would I go back? Absolutely — next time in spring, and with better shoes! Lisbon isn't just a place to visit; it's a place to fall in love with, again and again. ✨
+
+**After:**
+> I spent five days in Lisbon last October. My hotel was up in Alfama, with a lot of stairs between it and everything else, and my legs felt every one of them. The views from the top were worth the climb.
+>
+> Everyone tells you to ride Tram 28, so I did. The trip took about forty minutes, and most of the car was other tourists taking pictures out the windows. The custard tarts at Pastéis de Belém are the famous ones, but my favorite came from a place in Graça, still warm from the oven.
+>
+> The part of Lisbon I liked best starts a block or two above the main squares, where the streets go quiet and nobody is in a hurry. São Jorge Castle has good views over the rooftops and a long queue to get them.
+>
+> I'd go back, in spring next time, and with better shoes.
+
+## Sources
+
+- [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) is the source for the pattern list.
+- [WikiProject AI Cleanup](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_AI_Cleanup) maintains the page.
+
+## Version history
+
+See [CHANGELOG.md](CHANGELOG.md).
+
+## License
+
+MIT
+
+If Humanizer helps you, a star helps other people find it.
+</file>
+
+<file path="languagetool-master/README.md">
+## LanguageTool
+
+**LanguageTool** is open-source proofreading software for English, Spanish, French, German,
+Portuguese, Polish, Dutch, and [more than 20 other languages](https://languagetool.org/languages/).
+It finds many errors that a simple spell checker cannot detect.
+
+* [LanguageTool Forum](https://forum.languagetool.org)
+
+* [How to run your own LanguageTool server](https://dev.languagetool.org/http-server)
+
+* [HTTP API documentation](https://languagetool.org/http-api/swagger-ui/#!/default/post_check)
+
+* [How to use our public server via HTTP](https://dev.languagetool.org/public-http-api)
+
+* [How to use LanguageTool from Java](https://dev.languagetool.org/java-api) ([Javadoc](https://languagetool.org/development/api/index.html?org/languagetool/JLanguageTool.html))
+
+For more information, please see our homepage, at [`languagetool.org`](https://languagetool.org),
+[this `README`](https://github.com/languagetool-org/languagetool/blob/master/languagetool-standalone/README.md),
+and [`CHANGES`](https://github.com/languagetool-org/languagetool/blob/master/languagetool-standalone/CHANGES.md).
+
+The LanguageTool core (this repo) is freely available under the LGPL 2.1 or later.
+
+## Docker
+
+Try one of the following projects for a community-contributed Docker file:
+
+`github.com`                                                                      | `hub.docker.com/r`
+----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------
+[`meyayl/docker-languagetool`](https://github.com/meyayl/docker-languagetool)     | [`meyay/languagetool`](https://hub.docker.com/r/meyay/languagetool)
+[`Erikvl87/docker-languagetool`](https://github.com/Erikvl87/docker-languagetool) | [`erikvl87/languagetool`](https://hub.docker.com/r/erikvl87/languagetool)
+[`silvio/docker-languagetool`](https://github.com/silvio/docker-languagetool)     | [`silviof/docker-languagetool`](https://hub.docker.com/r/silviof/docker-languagetool)
+
+## Contributions
+
+[The development overview](https://dev.languagetool.org/development-overview) describes
+how you can contribute error detection rules.
+
+For more technical details, see [our dev pages](https://dev.languagetool.org).
+
+## Scripted installation and building
+
+To install or build using a script, simply type:
+
+```sh
+#!/usr/bin/env sh
+curl -L https://raw.githubusercontent.com/languagetool-org/languagetool/master/install.sh | sudo bash $options
+```
+
+If you wish to have more options, download the `install.sh` script. Usage options follow:
+
+<blockquote>
+
+```HTML
+sudo bash install.sh <options>
+
+Usage: install.sh <option> <package>
+Options:
+   -h --help                   Show help
+   -b --build                  Builds packages from the bleeding edge development copy of LanguageTool
+   -c --command <command>      Specifies post-installation command to run (default gui when screen is detected)
+   -q --quiet                  Shut up LanguageTool installer! Only tell me important stuff!
+   -t --text <file>            Specifies what text to be spellchecked by LanguageTool command line (default spellcheck.txt)
+   -d --depth <value>          Specifies the depth to clone when building LanguageTool yourself (default 1).
+   -p --package <package>      Specifies package to install when building (default all)
+   -o --override <OS>          Override automatic OS detection with <OS>
+   -a --accept                 Accept the oracle license at http://java.com/license. Only run this if you have seen the license and agree to its terms!
+   -r --remove <all/partial>   Removes LanguageTool install. <all> uninstalls the dependencies that were auto-installed. (default partial)
+
+Packages(only if -b is specified):
+   standalone                  Installs standalone package
+   wikipedia                   Installs Wikipedia package
+   office-extension            Installs the LibreOffice/OpenOffice extension package
+
+Commands:
+   GUI                         Runs GUI version of LanguageTool
+   commandline                 Runs command line version of LanguageTool
+   server                      Runs server version of LanguageTool
+```
+
+</blockquote>
+
+## Alternate way to build from source
+
+Before start: you will need to clone from GitHub and install Java 17 and Apache Maven.
+
+Warning: a complete clone requires downloading more than 500 MiB and needs more than 1 500 MiB on disk.
+This can be reduced, if you only need the last few revisions of the master branch
+by creating a shallow clone:
+
+```sh
+#!/usr/bin/env sh
+git clone --depth 5 https://github.com/languagetool-org/languagetool.git
+```
+
+A shallow clone downloads less than 60 MiB, and needs less than 200 MiB on disk.
+
+In the root project folder, run:
+
+```sh
+#!/usr/bin/env sh
+mvn clean test
+```
+
+(Sometimes, you can skip Maven step for repeated builds.)
+
+```sh
+#!/usr/bin/env sh
+./build.sh languagetool-standalone package -DskipTests
+```
+
+Test the result in `languagetool-standalone/target/`.
+
+```sh
+#!/usr/bin/env sh
+./build.sh languagetool-wikipedia package -DskipTests
+```
+
+Test the result in `languagetool-wikipedia/target`.
+
+Now, you can use the bleeding edge development copy of LanguageTool `*.jar` files, be aware that it might contain regressions.
+
+### How to run under Mac M1 or M2
+
+1. Install Brew for Rosetta:
+
+   ```sh
+   #!/usr/bin/env sh
+   arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+   ```
+
+1. Install OpenJDK for Rosetta:
+
+   ```sh
+   #!/usr/bin/env sh
+   arch -x86_64 brew install openjdk
+   ```
+
+1. Install Maven for Rosetta:
+
+   ```sh
+   #!/usr/bin/env sh
+   arch -x86_64 brew install maven
+   ```
+
+1. Now, run the build scripts.
+
+### License
+
+Unless otherwise noted, this software – the LanguageTool core – is distributed under the LGPL; see
+[`COPYING.txt`](https://github.com/languagetool-org/languagetool/blob/master/COPYING.txt).
+</file>
+
+<file path="nature-skills-main/LICENSE">
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+</file>
+
+<file path="nature-skills-main/README.md">
+<div align="center">
+  <p>
+    <img src="assets/readme-banner-cn.png" alt="Nature Skills：面向全球学者的科研 Skill 库" width="100%">
+  </p>
+  <p>
+    <a href="LICENSE"><img alt="License" src="https://img.shields.io/badge/license-Apache--2.0-2ea44f"></a>
+    <a href="#5-安装"><img alt="Install" src="https://img.shields.io/badge/install-Claude%20Code%20%7C%20Codex%20%7C%20OpenClaw%20%7C%20OpenCode%20%7C%20Hermes-111827"></a>
+    <a href="#6-技能索引"><img alt="Skills" src="https://img.shields.io/badge/skills-19-0ea5e9"></a>
+    <a href="README_EN.md"><img alt="Language" src="https://img.shields.io/badge/language-中文%20%7C%20English-1f6feb"></a>
+  </p>
+  <p>
+    <a href="https://yuan1z0825.github.io/nature-skills/">在线网站</a>
+    · <a href="#5-安装">立即安装</a>
+    · <a href="#4-快速开始">快速开始</a>
+    · <a href="#6-技能索引">技能索引</a>
+    · <a href="docs/open-source-agent-frameworks.md">其他安装</a>
+    · <a href="#7-贡献与开发">贡献方式</a>
+    · <a href="README_EN.md">English</a>
+  </p>
+  <p>
+    <b>Nature Skills 网页版：内置 Nature Polishing（论文润色）与 Nature Figure（科研绘图）核心功能，访问地址 <a href="https://natureskills.cn">https://natureskills.cn</a></b>
+  </p>
+  <a href="https://natureskills.cn">
+    <img width="2559" height="1527" alt="Nature Skills 网页版预览" src="https://github.com/user-attachments/assets/d57703ab-7ccb-4652-8810-8af1bb032032" />
+  </a>
+
+</div>
+
+
+---
+
+`nature-skills` 面向全球 AI 学者收录可复用科研技能，强调真实问题解决、可验证工作流与可直接使用的科研产物。
+
+## 目录
+
+- [1. 项目发起人与运营信息](#1-项目发起人与运营信息)
+  - [1.1 创始人介绍](#11-创始人介绍)
+  - [1.2 自营 GPT / Claude 代充与成品号](#12-自营-gpt--claude-代充与成品号)
+  - [1.3 知识星球](#13-知识星球)
+  - [1.4 商务合作](#14-商务合作)
+- [2. Skills 主要开发者](#2-skills-主要开发者)
+- [3. 项目理念与社区](#3-项目理念与社区)
+- [4. 快速开始](#4-快速开始)
+- [5. 安装](#5-安装)
+  - [5.1 `npx skills` 安装方式](#51-npx-skills-安装方式)
+  - [5.2 Claude Code 安装方式](#52-claude-code-安装方式)
+  - [5.3 Codex 安装方式](#53-codex-安装方式)
+  - [5.4 Chatbox 安装与使用](#54-chatbox-安装与使用)
+  - [5.5 其他 Agent 场景](#55-其他-agent-场景)
+- [6. 技能索引](#6-技能索引)
+- [7. 贡献与开发](#7-贡献与开发)
+- [8. Star 历史](#8-star-历史)
+
+## 1. 项目发起人与运营信息
+
+### 1.1 创始人介绍
+
+大家好，我是 `nature-skills` 的创立者袁一哲。感谢大家持续关注本项目。我们在抖音更新了许多视频教程，大家可以根据名称检索查看，希望能够真正帮助到科研工作。
+
+### 1.2 自营 GPT / Claude 代充与成品号
+
+严格筛选渠道商，提供完全正规的充值渠道与服务。欢迎访问 **Nature AI 充值卡网（已上线plus一年代充，Pro5x，20x等等）**：
+
+<table>
+  <tr>
+    <td align="center" width="68%">
+      <a href="https://apiciyuan.top/">
+        <img src="assets/nature-ai-gpt-claude-service.png" alt="Nature AI GPT 与 Claude 代充及成品号服务" width="100%">
+      </a>
+      <br>
+      <strong>Nature AI 充值卡网</strong>
+      <br>
+      <a href="https://apiciyuan.top/">https://apiciyuan.top/</a>
+    </td>
+    <td align="center" width="32%">
+<img width="612" height="605" alt="image" src="https://github.com/user-attachments/assets/ece77cfa-420f-44e4-b8e2-73adc1e4bd43" />
+      扫码添加微信客服
+  </tr>
+</table>
+
+### 1.3 知识星球
+
+知识星球名称：**Nature Skills 以及背后的哲学**，以加入知识星球代替打赏。
+
+<img width="300" height="400" alt="Nature Skills 知识星球" src="https://github.com/user-attachments/assets/64e37909-0a48-4bfb-8471-c2aff971a0f6" />
+
+### 1.4 商务合作
+
+如有商务合作意向，欢迎发送邮件至 [natureskills2026@outlook.com](mailto:natureskills2026@outlook.com)。
+
+## 2. Skills 主要开发者
+
+| 开发者 | 项目角色 | 主要方向与贡献 | 主页与联系 |
+|---|---|---|---|
+| **袁一哲** | 创始人 / 维护者 | 项目发起、技能体系设计与社区运营 | — |
+| **马昕瑞** | 核心开发者 | 核心开发、架构维护 | [Gmail](mailto:travisma2233@gmail.com) |
+| **胡彬** | 主要贡献者 | Agentic Agent |[Email](mailto:mhoang12205@gmail.com) |
+
+## 3. 项目理念与社区
+
+### 3.1 自己的一些浅薄观点
+
+- 最近发现，我设计的 Nature Skills 被谷歌 DeepMind 关注并借鉴，他们参考了其中的引用体系、脚本思路以及技能设计哲学，推出了 Science Skills。说实话，这让我挺欣慰的——当国外的顶尖 AI 机构开始从我们的工作中汲取灵感时，说明中国开发者的原创思想正在被世界看见。这不是被复制的失落，而是中国力量在开源土壤里生根后，自然向外生长出的影响力。
+- 我们设计 Skills 的重心，从来不是要求每个人都来啃透这套思想，而是这套思想本身就具备被机器理解并复用的能力。你如果想创立一个全新的 Skill，或者把它适配到自己的专属领域，根本不需要从头学起——直接把 Nature Skills 的 GitHub 地址发给 Codex，它就能自动学习其中的设计精髓，帮你完成新 Skill 的创建和修改。这才是思想的真正解放：它不再依赖口口相传，而是通过 AI 直接流淌进每一个需要它的角落。
+- Nature Skills 真正的价值，或许并不在于那些具体的技能模块，而在于它悄悄推开了一扇新的大门——它让很多人第一次意识到，原来可以借助 Codex 或智能体来操控本地电脑做科研。我有幸见证并陪伴了许多人完成科研范式的转变。当他们惊叹“原来科研还可以这样去做”的那一刻，这种认知上的破壁和解放，远比 Skills 本身更让我觉得有意义。它不是一个工具的成功，而是一种新的思考方式开始在人群中蔓延。
+- 在当下，几乎所有实用的工具都可以被提炼为标准化流程，而标准化流程恰好可以封装成可复用技能。
+
+### 3.2 视频教程与社区
+
+<table>
+  <tr>
+    <td align="center">
+      <b>视频教程请关注抖音</b><br>
+      <img width="300" alt="抖音视频教程" src="https://github.com/user-attachments/assets/37d4b0b6-3d22-4492-bb01-c0d9bae5a9e0" />
+    </td>
+    <td align="center">
+      <b>Agent 科研交流群</b><br>
+      <img width="300" alt="Agent 科研交流群" src="https://github.com/user-attachments/assets/28d1886a-69be-46bc-a1cb-777d7510ddab" />
+    </td>
+    <td align="center">
+      <b>添加个人微信请备注来意</b><br>
+      <img width="300" alt="添加个人微信请备注来意" src="https://github.com/user-attachments/assets/88e6b293-bda3-4094-94f9-aff4aa5a8842" />
+    </td>
+  </tr>
+</table>
+
+## 4. 快速开始
+
+安装完成后，可以直接把论文、段落、审稿意见或任务描述交给 Agent。下面这些提示词可以直接复制使用：
+
+| 想做什么 | 直接这样说 |
+|---|---|
+| 读论文 / 中英文对照 | `把这篇 PDF 做成图文对应的中英文对照 Markdown reader。` |
+| 生成文献汇报 PPT | `把这篇论文做成中文组会汇报 PPT，保留关键图件和来源标注。` |
+| 润色或翻译论文段落 | `把这段中文改写成 Nature 风格英文，保持学术含义不变。` |
+| 写摘要、引言或讨论 | `根据这些结果和图件，帮我起草 Nature 风格的摘要和引言。` |
+| 预投稿审稿模拟 | `从 Nature 审稿人视角评估这篇稿件，给出三份互盲 reviewer reports；全部定稿后再综合。` |
+| 回复审稿意见 | `根据这封返修邮件，为每位互盲审稿人分别写逐点回复和 cover letter，并标出修改稿需要标红的位置。` |
+| 查文献、他引和引用者画像 | `整理这篇文章的引用数、严格他引数、DOI，并看引用者里有没有院士、Fellow 或领域大牛。` |
+| 做科研图或论文示意图 | `根据这段方法和结果，帮我生成投稿级科研图或论文示意图草稿。` |
+
+如果你不确定该用哪个技能，直接描述任务即可；如果已经知道技能名，可以在提示词中明确写“使用 `nature-reader`”或“使用 `nature-response`”。
+
+## 5. 安装
+
+`nature-skills` 是一组围绕 `SKILL.md` 组织的可复用技能包。`skills/` 下的每个顶层技能目录都是一个可安装单元，例如 `nature-*`；`nature-shared` 是供其他技能读取的共享支持包，默认不作为独立触发技能计入技能索引。
+
+### 5.1 `npx skills` 安装方式
+
+需要先安装 [Node.js 18 或更高版本](https://nodejs.org/)。无需全局安装 CLI；先查看仓库中可安装的技能名：
+
+```bash
+npx skills add Yuan1z0825/nature-skills --list
+```
+
+优先按当前任务选择需要的技能，并保留其共享依赖。只为当前项目安装时，省略 `--global`；需要跨项目使用时再加上它。例如：
+
+```bash
+npx skills add Yuan1z0825/nature-skills --agent codex --skill nature-figure --yes --copy
+```
+
+单独安装 `nature-reader`、`nature-paper2ppt`、`nature-polishing` 或 `nature-writing` 时，同时选择共享支持包：
+
+```bash
+npx skills add Yuan1z0825/nature-skills --global --agent codex \
+  --skill nature-reader --skill nature-shared --yes --copy
+```
+
+如果确实需要完整技能集，也可以全局安装到 Codex。全量选择包含 `nature-shared`：
+
+```bash
+npx skills add Yuan1z0825/nature-skills --global --agent codex --skill '*' --yes --copy
+```
+
+需要把全部技能安装到 CLI 支持的所有 agent 时，使用：
+
+```bash
+npx skills add Yuan1z0825/nature-skills --all
+```
+
+检查全局安装结果并更新：
+
+```bash
+npx skills list --global --agent codex --json
+npx skills update --global --yes
+```
+
+只更新一个技能，或只更新当前项目中的技能：
+
+```bash
+npx skills update nature-reader --global --yes
+npx skills update --project --yes
+```
+
+技能选择参数使用 `--list` 显示的 frontmatter 名称；例如目录 `nature-proposal-writer` 当前显示为 `researchwrite`。`npx skills` 管理的是技能文件，Python、R、浏览器或 MCP 等可选运行依赖仍需按下文说明单独配置。
+
+### 5.2 Claude Code 安装方式
+
+Claude Code 不能直接使用 `scripts/update-codex-skills.sh`，因为这个脚本只负责同步到 Codex 的 `~/.codex/skills/`。用于 Claude Code 时，推荐保留一个稳定的本地 clone，再用 subagent 或 slash command 指向真实的 `skills/*/SKILL.md`。这样不会破坏技能目录结构，也能继续读取 `references/`、`static/`、`manifest.yaml`、脚本、资产和 `skills/nature-shared/`。
+
+如果还没有安装 Claude Code：
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude
+```
+
+先把仓库 clone 到一个稳定路径：
+
+```bash
+mkdir -p ~/ai-skills
+cd ~/ai-skills
+git clone https://github.com/Yuan1z0825/nature-skills.git
+```
+
+推荐方式：为常用技能创建 Claude Code subagent wrapper。以 `nature-reader` 为例：
+
+```bash
+mkdir -p ~/.claude/agents
+cat > ~/.claude/agents/nature-reader.md <<'EOF'
+---
+name: nature-reader
+description: Use for Chinese-English paper reading, figure-aware translation, and source-grounded paper notes.
+---
+
+When invoked, first read `~/ai-skills/nature-skills/skills/nature-reader/SKILL.md` and follow it as the governing workflow.
+Read supporting files from `~/ai-skills/nature-skills/skills/nature-reader/` and `~/ai-skills/nature-skills/skills/nature-shared/` only when needed.
+Do not replace this skill with a generic paper-reading response.
+EOF
+```
+
+然后开启新的 Claude Code 会话，直接请求使用这个 subagent：
+
+```text
+Use the nature-reader subagent to turn this paper into a Chinese-English Markdown reader.
+```
+
+如果你更喜欢 slash command，也可以创建命令 wrapper：
+
+```bash
+mkdir -p ~/.claude/commands
+cat > ~/.claude/commands/nature-reader.md <<'EOF'
+Read `~/ai-skills/nature-skills/skills/nature-reader/SKILL.md` first and follow it strictly.
+Read directly needed supporting files from `~/ai-skills/nature-skills/skills/nature-reader/` and `~/ai-skills/nature-skills/skills/nature-shared/`.
+
+$ARGUMENTS
+EOF
+```
+
+在 Claude Code 中使用：
+
+```text
+/nature-reader 把这篇论文做成中英文对照的完整 Markdown reader。
+```
+
+安装其他技能时，把示例中的 `nature-reader` 换成对应目录名即可，例如 `nature-polishing`、`nature-writing`、`nature-reviewer`、`nature-response` 或 `nature-figure`。后续更新只需要：
+
+```bash
+cd ~/ai-skills/nature-skills
+git pull
+```
+
+只要 wrapper 仍然指向这个稳定 clone 路径，就不需要重复复制技能文件。
+
+**自动更新（可选）**
+
+如果你希望 Claude Code 每次开启会话时自动拉取上游更新，可以用 `scripts/autoupdate-skills.sh` 配合一个 `SessionStart` 钩子。
+
+这套方式把技能**直接复制**进 `~/.claude/skills/`（Claude Code 会自动发现该目录，技能以目录名直接加载），而不是使用上面的 wrapper。两种方式二选一即可。
+
+先保留一个**专用**的稳定 clone（只用于同步技能，请不要在里面做开发提交）：
+
+```bash
+mkdir -p ~/ai-skills
+git clone https://github.com/Yuan1z0825/nature-skills.git ~/ai-skills/nature-skills
+```
+
+首次安装，把技能复制进 Claude Code 的技能目录：
+
+```bash
+~/ai-skills/nature-skills/scripts/autoupdate-skills.sh --force
+```
+
+然后在 `~/.claude/settings.json` 里加一个 `SessionStart` 钩子（若已有 `hooks`，把这一项合并进去，不要整体覆盖）：
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$HOME/ai-skills/nature-skills/scripts/autoupdate-skills.sh",
+            "async": true,
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+`async: true` 让它在后台运行、不阻塞启动。脚本自带保护：默认 1 小时内不重复联网检查、断网或拉取失败自动跳过（`exit 0`，绝不卡住会话）、上游变化或安装目录发生漂移时重新同步、并且拒绝在有未提交改动的 clone 上强行前进。拉到的新版会在**下一次**开启会话时生效（当前会话的技能已经加载完毕）。每个安装目标使用独立日志，路径为 `~/.local/state/nature-skills/<目标目录编号>/autoupdate.log`。
+
+目标目录与检查频率都可配置：
+
+```bash
+# 默认同步到 ~/.claude/skills；用 --dest 指到别处，例如 Codex：
+~/ai-skills/nature-skills/scripts/autoupdate-skills.sh --dest ~/.codex/skills
+# 最多每小时联网检查一次；每次运行仍会校验本地安装：
+~/ai-skills/nature-skills/scripts/autoupdate-skills.sh --throttle 3600
+```
+
+### 5.3 Codex 安装方式
+
+需要安装或更新完整技能集时，可以使用仓库自带脚本。脚本会同步 `skills/` 下所有顶层技能目录，并在复制后做 `diff` 验证；它不会覆盖其他无关 Codex skills。只需要部分技能时，使用上面的 `npx skills` 按需安装方式。
+
+```bash
+git clone https://github.com/Yuan1z0825/nature-skills.git
+cd nature-skills
+scripts/update-codex-skills.sh --pull
+```
+
+如果已经 clone 过仓库：
+
+```bash
+cd nature-skills
+scripts/update-codex-skills.sh --pull
+```
+
+验证当前 Codex 安装是否和这个 checkout 一致：
+
+```bash
+scripts/update-codex-skills.sh --check
+```
+
+如果你长期用这个脚本更新，并希望清理上游已经删除的旧技能目录：
+
+```bash
+scripts/update-codex-skills.sh --pull --prune
+```
+
+`--prune` 只会删除以前由这个脚本记录过、但当前仓库已经不再包含的目录。第一次运行没有历史记录时，它不会猜测删除旧目录。
+
+也可以把仓库链接交给 Codex，让 Codex 执行安装脚本。推荐提示词：
+
+```text
+请从这个仓库安装 Codex skills：
+https://github.com/Yuan1z0825/nature-skills.git
+
+请 clone 仓库后运行 scripts/update-codex-skills.sh --pull。
+安装后再运行 scripts/update-codex-skills.sh --check 验证。
+请保留 skills/ 下的完整技能目录，不要只复制 SKILL.md。
+```
+
+如果只安装单个技能，请明确说明技能名：
+
+```text
+只安装这个仓库里的 nature-reader：
+https://github.com/Yuan1z0825/nature-skills.git
+
+如果该技能需要共享文件，也请一并安装 skills/nature-shared。
+```
+
+关键规则：保留完整目录结构。请复制或引用整个技能文件夹，而不是只复制 `SKILL.md`，因为许多技能依赖 `references/`、`static/`、`manifest.yaml`、脚本、资产或共享文件。
+
+安装脚本不会自动安装 Python 依赖。需要使用相关脚本或 MCP 服务时，再按需安装：
+
+```bash
+python -m pip install -r skills/nature-paper-to-patent/requirements.txt
+python -m pip install -r skills/nature-paper-to-patent/scripts/disclosure/requirements-cnipa.txt  # 可选：国知局公布公告检索
+python -m pip install -r skills/nature-academic-search/mcp-server/requirements.txt
+```
+
+如果启用 `nature-paper-to-patent` 的国知局公布公告检索，还需要执行 `python -m playwright install chromium`。
+
+`nature-academic-search` 的 MCP 服务还需要单独配置 `PUBMED_EMAIL`，Scopus / ScienceDirect 等可选 provider 需要使用本机凭据配置，不要把 API key 写入仓库文件。
+
+安装后，请开启一个新的 Codex 会话，然后自然描述任务，例如：
+
+```text
+把这篇论文做成中英文对照的完整 Markdown reader。
+```
+
+```text
+把这篇论文做成中文PPT。
+```
+
+如果你使用 OpenClaw、OpenCode、Hermes 等开源 agent / 编程框架，请看 [OpenClaw / OpenCode / Hermes 接入教程](docs/open-source-agent-frameworks.md)。
+
+**自动更新（可选）**
+
+Codex 支持全局 `SessionStart` hook。保留一个专用 clone 后，可以在每次启动或恢复 Codex 会话时检查更新，并把新版同步到 `~/.codex/skills/`。
+
+先创建专用 clone 并完成首次同步：
+
+```bash
+mkdir -p ~/.codex
+git clone https://github.com/Yuan1z0825/nature-skills.git ~/.codex/.nature-skills-src
+~/.codex/.nature-skills-src/scripts/autoupdate-skills.sh \
+  --dest ~/.codex/skills --force
+```
+
+然后创建或合并 `~/.codex/hooks.json`：
+
+```json
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/bin/bash \"$HOME/.codex/.nature-skills-src/scripts/autoupdate-skills.sh\" --dest \"$HOME/.codex/skills\"",
+            "timeout": 120,
+            "statusMessage": "Checking Nature Skills updates"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+若 `hooks.json` 中已有其他 hook，请合并 `SessionStart` 项，不要整体覆盖。首次启用或修改 hook 后，在 Codex 中运行 `/hooks` 检查并信任它。Codex 当前按同步方式执行 command hook，因此这里依靠脚本自带的 1 小时节流、60 秒网络保护和断网自动跳过，避免每次会话都重复联网或因更新失败阻断启动。即使上游版本未变化，脚本也会验证安装目录并在发现漂移时重新同步。
+
+每个安装目标使用独立日志，路径为 `~/.local/state/nature-skills/<目标目录编号>/autoupdate.log`。拉取到的新技能通常在下一次会话中完整生效。
+
+### 5.4 Chatbox 安装与使用
+
+[Chatbox](https://chatboxai.app/zh) 桌面版提供图形化 Skills 管理界面。请使用带有「设置 → 技能（Skills）」入口的版本；本节适用于桌面端。
+
+**从 GitHub 安装**
+
+1. 打开 Chatbox 的「设置 → 技能」，点击「从 GitHub 安装」。
+2. 粘贴 `https://github.com/Yuan1z0825/nature-skills`，点击「扫描」。
+3. 勾选需要的技能，点击「安装已选」。初次体验可选择 `nature-polishing` 和 `nature-shared`；需要整套技能时可以「全选」。
+4. 在「已安装技能」中确认安装结果，并确认需要使用的技能已启用。
+
+`nature-shared` 是共享支持包。使用 `nature-polishing`、`nature-writing`、`nature-response`、`nature-reader` 或 `nature-paper2ppt` 等引用它的技能时，需要一并安装；它不作为独立任务调用。安装单个技能不会自动补齐其他技能依赖。列表可能显示技能的 frontmatter 名称，例如 `nature-proposal-writer` 显示为 `researchwrite`。
+
+**开始使用**
+
+新建对话，选择支持工具调用的模型，开启「智能体模式（Agent Mode）」。把待处理文本粘贴到对话中，并明确写出技能名。例如：
+
+```text
+请使用 nature-polishing，把下面这段中文改写为 Nature 风格英文。
+保持原有学术含义、数值和结论边界，列出主要修改及理由：
+
+[在这里粘贴论文段落]
+```
+
+需要读论文时，可安装 `nature-reader` 和 `nature-shared`，提供论文文件或可访问的本地路径，再请求：
+
+```text
+请使用 nature-reader，把这篇论文做成图文对应的中英文对照 Markdown reader，
+保留公式和来源锚点，并将产物保存到我指定的输出目录。
+```
+
+检查对话中的技能加载和工具执行记录，确认实际加载了所需技能。若未触发，先检查技能开关、智能体模式以及当前模型是否支持工具调用。
+
+**运行依赖与更新**
+
+Skills 安装的是指令和配套文件。Python/R、PDF/PPTX 工具、浏览器和 MCP 服务等运行依赖仍需按具体技能说明配置；涉及本地文件或脚本时，按 Chatbox 提示授权所需目录和命令。生成图片等外部服务需要对应服务的凭据。安装成功不代表这些外部能力已配置完成。
+
+在技能的操作菜单中可「检查更新」并按提示更新；有共享依赖时也要检查 `nature-shared`。如果 GitHub 扫描或下载失败，可从本仓库的「Code → Download ZIP」下载并解压，点击 Chatbox 的「打开技能文件夹」，将所需的完整技能目录及 `nature-shared` 放到该文件夹的同一级，然后刷新技能列表并启用。保留 `references/`、`static/`、脚本和资产；不要只复制 `SKILL.md`。手动复制时，目录名应与 `SKILL.md` 中的 `name` 一致（例如将 `nature-proposal-writer` 目录命名为 `researchwrite`）。手动复制的技能需要手动更新。
+
+### 5.5 其他 Agent 场景
+
+OpenClaw、OpenCode、Hermes 的具体接入方式见 [OpenClaw / OpenCode / Hermes 接入教程](docs/open-source-agent-frameworks.md)。
+
+用于其他 agent 时，建议保留一个稳定的仓库 clone，再创建轻量 subagent、slash command 或 custom prompt wrapper，指向真实的 `skills/*/SKILL.md`，并保留 `skills/nature-shared/`。
+
+手动或其他 agent 使用时：
+
+1. 将完整技能目录复制到你的 prompt library 或项目中。
+2. 保留 `SKILL.md`、`manifest.yaml`、`static/`、`references/`、脚本、资产和需要的 `skills/nature-shared/` 文件。
+3. 如目标 agent 有自己的格式要求，可调整 frontmatter 和正文结构。
+
+## 6. 技能索引
+
+当前 `skills/` 下包含以下可触发技能；`skills/nature-shared/` 是共享内容目录，不计入技能索引。点击技能名或“详情页”可以进入每个 skill 的单独说明页面。
+
+| 技能 | 状态 | 用途 | 触发词 | 详情页 |
+|-------|--------|---------|-----------------|--------|
+| [`nature-figure`](skills/nature-figure/README.md) | Stable | 面向 Nature / 高影响力期刊的 Python 或 R 投稿级科研图工作流，包含 Results 级多面板证据架构、渲染时子图对齐门、最终 PDF 自动文字/图形碰撞审计、第三方 figures4papers 参考示例、原创模板和 OpenRouter GPT Image 2 论文示意图草稿 | “Nature figure”, “投稿级图片”, “publication plot”, “scientific figure”, “figures4papers”, “论文示意图”, “GPT Image 2” | [详情](skills/nature-figure/README.md) |
+| [`nature-polishing`](skills/nature-polishing/README.md) | Stable | 将学术文本润色、重构或翻译为 Nature 风格英文，并扫描全文术语、单位、数值精度和声称漂移 | “Nature style”, “润色”, “academic writing”, “论文英文” | [详情](skills/nature-polishing/README.md) |
+| [`nature-writing`](skills/nature-writing/README.md) | Draft | 起草 Nature 风格手稿章节，并重建论文论证 | “Nature writing”, “写摘要”, “写引言”, “manuscript draft”, “论文写作” | [详情](skills/nature-writing/README.md) |
+| [`nature-reviewer`](skills/nature-reviewer/README.md) | Draft | 从审稿人视角模拟 Nature 风格评审，输出三份互盲 reviewer reports、分级 Major/Minor 意见，并检查手稿内部一致性 | “Nature reviewer”, “预投稿评审”, “reviewer report”, “审稿人视角评估” | [详情](skills/nature-reviewer/README.md) |
+| [`nature-citation`](skills/nature-citation/README.md) | Beta | 检索严格限定在 Nature / CNS 系列的支撑文献，并导出 ENW、RIS 或 Zotero RDF | “Nature citation”, “CNS citation”, “分段引用”, “支撑文献”, “Zotero RDF” | [详情](skills/nature-citation/README.md) |
+| [`nature-data`](skills/nature-data/README.md) | Draft | 准备 Data Availability statement、数据仓储方案和 FAIR 检查 | “Data Availability”, “数据可用性”, “repository”, “FAIR metadata” | [详情](skills/nature-data/README.md) |
+| [`nature-statistics`](skills/nature-statistics/README.md) | Draft | 审查、改写或起草统计报告，覆盖实验单位、重复数、p 值、多重比较、效应量、置信区间、图注统计和跨章节数值一致性 | “Nature statistics”, “统计审查”, “statistical analysis”, “p value”, “sample size”, “replicates”, “multiple comparisons”, “图注统计”, “统计分析小节” | [详情](skills/nature-statistics/README.md) |
+| [`nature-reader`](skills/nature-reader/README.md) | Beta | 生成带来源锚点、图文对应、公式渲染和中英文对照的全文 Markdown reader | “nature reader”, “全文 Markdown”, “原文对照”, “图文对应”, “公式渲染”, “全文翻译” | [详情](skills/nature-reader/README.md) |
+| [`nature-paper-card`](skills/nature-paper-card/README.md) | Beta | 精读单篇论文并生成有来源约束的 01–16 节 Paper Card，覆盖方法逻辑、实验—结论证据链、结论边界、批判性分析和可检验研究想法 | “nature paper card”, “论文精读”, “Paper Card”, “证据链”, “结论边界” | [详情](skills/nature-paper-card/README.md) |
+| [`nature-response`](skills/nature-response/README.md) | Beta | 解析返修邮件，为互盲审稿人分别生成独立回复，并提供 cover letter、标红稿、LaTeX 模板和返修包一致性检查 | “response to reviewers”, “rebuttal letter”, “cover letter”, “major revision”, “返修邮件”, “审稿意见回复”, “修回信”, “LaTeX 模板” | [详情](skills/nature-response/README.md) |
+| [`nature-paper2ppt`](skills/nature-paper2ppt/README.md) | Beta | 从科研论文生成中文 PPTX 文献汇报 deck | “paper PPT”, “journal club”, “paper to slides”, “论文汇报” | [详情](skills/nature-paper2ppt/README.md) |
+| [`nature-image2ppt`](skills/nature-image2ppt/README.md) | Beta | 将幻灯片图片、扫描 PDF 和图片型 PPTX 重建为对象级可编辑 PowerPoint，并执行渲染 QA | “图片转可编辑PPT”, “截图还原PPT”, “扫描PDF转PPTX”, “image to editable PowerPoint” | [详情](skills/nature-image2ppt/README.md) |
+| [`nature-paper-to-patent`](skills/nature-paper-to-patent/README.md) | Beta | 从论文、技术报告或项目材料生成有证据约束的中国发明专利草稿，并支持专利点挖掘、查新和技术交底书迭代 | “paper to patent”, “Chinese patent”, “论文转专利”, “权利要求书”, “技术交底书”, “专利点” | [详情](skills/nature-paper-to-patent/README.md) |
+| [`nature-ref-verifier`](skills/nature-ref-verifier/README.md) | Stable | 参考文献多源交叉验证：逐字段对比作者/标题/年份/卷期/页码，标记卷年冲突、作者编造、页码偏差等 | “verify refs”, “校验文献”, “check references”, “文献验证”, “ref check” | [详情](skills/nature-ref-verifier/README.md) |
+| [`nature-academic-search`](skills/nature-academic-search/README.md) | Beta | 多源文献检索、引用核验、严格他引审计、文章引用指标表、高影响力引用者画像和参考文献管理 | “search papers”, “find articles”, “literature search”, “查文献”, “verify DOI”, “严格他引”, “文章引用表”, “引用我的文章的人有没有大牛” | [详情](skills/nature-academic-search/README.md) |
+| [`nature-downloader`](skills/nature-downloader/README.md) | Beta | 通过图书馆资源入口、Chrome 登录态和开放获取路径合法获取学术全文/PDF | “download papers”, “图书馆下载文献”, “CARSI”, “Web of Science”, “PDF 下载” | [详情](skills/nature-downloader/README.md) |
+| [`nature-literature-pipeline`](skills/nature-literature-pipeline/README.md) | Stable | 自动化文献发现管线：多源检索、六维评分、精读推送和本地归档 | “literature pipeline”, “每日文献”, “文献推送”, “daily literature push”, “cron” | [详情](skills/nature-literature-pipeline/README.md) |
+| [`nature-experiment-log`](skills/nature-experiment-log/README.md) | Draft | 标准化记录实验图片、语音和文字材料，生成带 YAML frontmatter 的 Obsidian 实验日志并归档原始材料 | “实验日志”, “记录实验”, “experiment log”, “Obsidian vault”, “飞书科研群” | [详情](skills/nature-experiment-log/README.md) |
+| [`nature-proposal-writer`](skills/nature-proposal-writer/README.md) | Beta | proposal-first 科研写作状态机，先建立证据、论证和章节契约，再起草或审查文本 | “researchwrite”, “proposal”, “开题报告”, “研究方案”, “科研写作 QA” | [详情](skills/nature-proposal-writer/README.md) |
+
+## 7. 贡献与开发
+
+### 7.1 共享设计原则
+
+所有技能都遵守以下原则：
+
+1. **优先使用一手来源**：规则基于已发表 Nature 内容、官方期刊指南或明确的本地来源，而不是泛泛审美偏好。
+2. **显式胜过隐式**：每条规则都应说明理由，而不是只给断言。
+3. **感知章节与任务上下文**：学术写作、图件、引用和回复都依赖上下文；不同论文部分使用不同逻辑。
+4. **输出优先**：每个技能都应返回能直接使用的产物，例如可粘贴文本、`.svg`、`.pptx`、`.docx` 或具体建议。
+5. **可扩展**：每个技能自包含在自己的目录中，新增技能不应要求修改既有技能。
+
+### 7.2 仓库目录结构
+
+```text
+skills/
+├── nature-shared/              # 当技能引用 ../nature-shared 时需要保留
+├── nature-<topic>/
+│   ├── README.md
+│   ├── README_EN.md
+│   ├── SKILL.md
+│   ├── manifest.yaml     # router-style 技能会包含
+│   ├── static/           # router-style 技能会包含
+│   └── references/...
+└── nature-proposal-writer/
+    ├── README.md
+    ├── README_EN.md
+    ├── SKILL.md
+    ├── scripts/...
+    ├── templates/...
+    └── references/...
+```
+
+### 7.3 新增技能流程
+
+向本仓库添加技能时，请按以下流程：
+
+**1. 创建技能目录**
+
+```text
+skills/nature-<topic>/
+```
+
+**2. 添加必需文件**
+
+| 文件 | 是否必需 | 用途 |
+|------|----------|------|
+| `SKILL.md` | 必需 | frontmatter（`name`、`description`）+ 规则 + 工作流；触发后由 agent 加载 |
+| `README.md` | 必需 | 面向人的中文说明文档 |
+| `README_EN.md` | 必需 | 与中文详情页配套的英文说明文档 |
+| `references/*.md` | 复杂技能推荐 | 模块化规则文件，例如 API、设计理论、教程、图表类型等 |
+
+**3. 编写中英文 README**
+
+每个新增技能都必须同时提供 `README.md` 和 `README_EN.md`。README 是面向人的技能入口页，不是 `SKILL.md` 的重复版，也不是安装手册。它的目标是让用户在 30 秒内判断：这个 skill 能不能解决我的问题、我要给它什么、它会产出什么、边界在哪里。
+
+基本规则：
+
+- 中文 README 和英文 README 必须一一镜像：标题数量一致、顺序一致、信息点一致；英文页不要写成另一套独立模板。
+- 顶部固定为技能名、语言切换链接和一句定位说明。
+- 默认使用下面的基础结构；只有确实需要时才插入可选章节。
+- 不要在单个 skill README 中重复仓库安装教程、作者信息、变更日志、开发过程、完整文件树或大段内部实现细节。
+- 复杂规则、API 参数、长教程、脚本说明和模板索引应放进 `references/`、`static/`、`scripts/` 或 `SKILL.md`，README 只保留路标。
+- 如果技能有视觉资产，可以放一个小型预览表；不要把 README 变成大型图库或长篇技术手册。
+
+中文 README 基础结构：
+
+```markdown
+# `nature-<topic>` 技能
+
+[English](README_EN.md)
+
+一句话说明这个技能的定位、主要任务和使用边界。
+
+## 适合用它做什么
+## 典型请求
+## 你需要提供
+## 产出
+## 边界
+## 相关技能
+```
+
+英文 README 必须对应为：
+
+```markdown
+# `nature-<topic>` Skill
+
+[中文说明](README.md)
+
+One sentence describing the skill's role, main task, and usage boundary.
+
+## What To Use It For
+## Typical Requests
+## What You Need To Provide
+## Outputs
+## Boundaries
+## Related Skills
+```
+
+可选章节必须中英文同步插入，并保持相同顺序。常见可选章节包括：
+
+| 中文章节 | 英文章节 | 使用场景 |
+|----------|----------|----------|
+| `## 工作方式` | `## Workflow` | 需要解释核心流程或路由方式 |
+| `## 运行和依赖` | `## Runtime and Dependencies` | 有脚本、MCP、API key、本地配置或外部依赖 |
+| `## 示例预览` | `## Example Preview` | 有少量图件、截图或可视化资产值得展示 |
+| `## 内置参考` | `## Built-In References` | 需要指向 `references/`、`assets/` 或 demo |
+| `## 方法来源` | `## Method Sources` | 写作、审查或分析规则来自特定来源 |
+| `## 三种模式` | `## Three Modes` | 技能有清晰的 compose/revise/hybrid 等模式 |
+| `## 与 ... 的关系` | `## Relationship With ...` | 容易和另一个技能混淆，需要说明分工 |
+
+提交前至少做这些 README 检查：
+
+```bash
+python scripts/validate-readmes.py
+git diff --check
+for d in skills/nature-*; do
+  [ -f "$d/README.md" ] && [ -f "$d/README_EN.md" ] || continue
+  rg -q '^\[English\]\(README_EN\.md\)$' "$d/README.md"
+  rg -q '^\[中文说明\]\(README\.md\)$' "$d/README_EN.md"
+  test "$(rg -c '^## ' "$d/README.md")" = "$(rg -c '^## ' "$d/README_EN.md")"
+done
+```
+
+**4. 录制使用教程**
+
+提交 PR 时，请同时录制一个简短的使用教程，说明这个 skill 解决什么问题、如何触发、需要什么输入，以及会产出什么结果。可以在 PR 描述中附上视频、录屏链接或可公开访问的教程地址。
+
+**5. 配置 `SKILL.md` frontmatter**
+
+```yaml
+---
+name: nature-<topic>
+description: >-
+  用一句话说明这个技能做什么、什么时候触发、主要输出格式和核心使用场景。
+---
+```
+
+**6. 更新技能索引**
+
+在上方 [技能索引](#6-技能索引) 表格中添加一行：
+
+```markdown
+| [`nature-<topic>`](skills/nature-<topic>/README.md) | Draft / Stable | 一句话用途 | 触发词 | [详情](skills/nature-<topic>/README.md) |
+```
+
+**7. 设置状态标签**
+
+| 标签 | 含义 |
+|-------|------|
+| `Draft` | 规则已定义，但尚未在真实案例上测试 |
+| `Beta` | 已在示例上测试，仍可能存在边界问题 |
+| `Stable` | 已在真实学术内容上验证，规则相对稳定 |
+
+---
+
+## 8. Star 历史
+
+[![Star History Chart](assets/star-history-20260928T025427Z.svg)](https://star-history.com/#Yuan1z0825/nature-skills&Date)
+</file>
+
+<file path="scientific-agent-skills-main/LICENSE.md">
+MIT License
+
+Copyright (c) 2025 K-Dense Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+</file>
+
+<file path="scientific-agent-skills-main/README.md">
+# Scientific Agent Skills
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
+[![arXiv](https://img.shields.io/badge/arXiv-2609.00065-b31b1b.svg)](https://arxiv.org/abs/2609.00065)
+[![Version](https://img.shields.io/badge/Version-2.72.0-blue.svg)](pyproject.toml)
+[![Skills](https://img.shields.io/badge/Skills-177-brightgreen.svg)](#-whats-included)
+[![Databases](https://img.shields.io/badge/Databases-100%2B-orange.svg)](#-whats-included)
+[![Agent Skills](https://img.shields.io/badge/Standard-Agent_Skills-blueviolet.svg)](https://agentskills.io/)
+[![Agent Plugins](https://img.shields.io/badge/Standard-Agent_Plugins-0A7A72.svg)](https://agent-plugins.org/)
+[![Security Scan](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/security-scan.yml/badge.svg)](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/security-scan.yml)
+[![Skill Tests](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/skill-tests.yml/badge.svg)](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/skill-tests.yml)
+[![Works with](https://img.shields.io/badge/Works_with-Cursor_|_Claude_Code_|_Codex_|_Google_Antigravity-blue.svg)](#-getting-started)
+[![X](https://img.shields.io/badge/Follow_on_X-%40k__dense__ai-000000?logo=x)](https://x.com/k_dense_ai)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-K--Dense_Inc.-0A66C2?logo=linkedin)](https://www.linkedin.com/company/k-dense-inc)
+[![YouTube](https://img.shields.io/badge/YouTube-K--Dense_Inc.-FF0000?logo=youtube)](https://www.youtube.com/@K-Dense-Inc)
+[![Reddit](https://img.shields.io/badge/Reddit-u%2F--k--dense---FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/user/-k-dense-/)
+
+> **🔔 Claude Scientific Skills is now Scientific Agent Skills.** Same skills, broader compatibility — now works with any AI agent that supports the open [Agent Skills](https://agentskills.io/) standard, not just Claude.
+
+> **New: [K-Dense BYOK](https://github.com/K-Dense-AI/k-dense-byok)** — A free, open-source AI co-scientist that runs on your desktop, powered by Scientific Agent Skills. Bring your own API keys, pick from 40+ models, and get a full research workspace with web search, file handling, 100+ scientific databases, and access to all 177 skills in this repo. Your data stays on your computer, and you can optionally scale to cloud compute via [Modal](https://modal.com/) for heavy workloads. [Get started here.](https://github.com/K-Dense-AI/k-dense-byok)
+
+> **🎥 Webinar recording — [Getting Started with K-Dense BYOK](https://youtu.be/Du3BIE48DKc?si=9dPpETKSc2PeQbvU)**
+> A hands-on walkthrough of [K-Dense BYOK](https://github.com/K-Dense-AI/k-dense-byok), our free, open-source AI co-scientist that runs locally on your own machine and is powered by Scientific Agent Skills. We cover how to set it up, bring your own API keys, and run real research workflows with these skills. No prior technical experience needed. **[Watch the recording →](https://youtu.be/Du3BIE48DKc?si=9dPpETKSc2PeQbvU)**
+
+> **Stay up to date:** Follow K-Dense on [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), [YouTube](https://www.youtube.com/@K-Dense-Inc), and [Reddit](https://www.reddit.com/user/-k-dense-/) for new skills, release announcements, walkthroughs, research workflow demos, and examples you can use with your own AI agent.
+
+> **📄 Paper:** Scientific Agent Skills is described in [*Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents*](https://arxiv.org/abs/2609.00065) (arXiv:2609.00065). If you use these skills in your research, please [cite the paper](#-citation).
+
+A collection of **177 scientific and research skills** for AI agents, created by [K-Dense](https://k-dense.ai). The skills cover biology, chemistry, medicine, physics, engineering, Earth science, data analysis, and scientific communication. Each provides guidance for a specific package, data source, or workflow, including the scientific conventions and validation checks needed to use it.
+
+The collection follows the open [Agent Skills](https://agentskills.io/) standard and works with **Cursor, Claude Code, Codex, Google Antigravity, and other compatible hosts**. It is also a portable [Agent Plugins](https://agent-plugins.org/) package (`plugin.json` + `skills/`), so clients that support that standard can load the collection as one plugin. Browse the [illustrated skill guides](docs/skill-guides/README.md), [skill categories](#-available-skills), or [complete catalog](docs/skills.md) to choose the skills relevant to your work.
+
+> ⭐ **Help make AI for science easier to discover:** If Scientific Agent Skills saves you time, teaches your agent a workflow, or helps your lab move faster, please [star this repository](https://github.com/K-Dense-AI/scientific-agent-skills). A star is a public signal that these open, reusable research skills are worth maintaining: it helps scientists, engineers, and open-source contributors find the project, shows which agent-skill standards are gaining real adoption, and gives us a clear reason to keep expanding the collection for the community.
+
+---
+
+These skills enable your AI agent to seamlessly work with specialized scientific libraries, databases, and tools across multiple scientific domains. While the agent can use any Python package or API on its own, these explicitly defined skills provide curated documentation and examples that make it significantly stronger and more reliable for the workflows below:
+- 🧬 Bioinformatics & Genomics - Sequence analysis, single-cell RNA-seq, pooled CRISPR screens, primer design, amplicon microbiomes, variant annotation, phylogenetics
+- 🧪 Cheminformatics & Drug Discovery - Molecular property prediction, virtual screening, ADMET analysis, molecular docking, lead optimization, calibrated 1D NMR processing
+- 🔬 Proteomics & Mass Spectrometry - LC-MS/MS processing, peptide identification, spectral matching, protein quantification
+- 🏥 Clinical Research & Evidence Workflows - Clinical trials, pharmacogenomics, variant evidence review, pharmacokinetic/pharmacodynamic modelling and dose-regimen evaluation, aggregate decision-support evaluation, source-bound draft report structures, and formatting of clinician-authored treatment decisions
+- 🧠 Healthcare AI & Biosignal Research - EHR and model research, physiological signal analysis, and retrospective validation—not patient-specific diagnosis, treatment, alarms, or deployment decisions
+- 🐭 Preclinical Research & Animal Welfare - Multivariate severity scoring and humane-endpoint forecasting for laboratory animal studies, for 3Rs/refinement analysis and EU Directive 2010/63/EU reporting—an aid to severity assessment, never a decision rule
+- 🖼️ Microscopy, Medical Imaging & Digital Pathology - Quantitative fluorescence microscopy, privacy-aware DICOM processing, research-only whole-slide image analysis, computational pathology, and radiology data workflows
+- 🧠 Neuroscience & Electrophysiology - BIDS datasets, NWB conversion and clock alignment, extracellular recordings, and physiological signals
+- 🤖 Machine Learning & AI - Deep learning, reinforcement learning, time series analysis, model interpretability, Bayesian methods
+- 🔮 Materials Science & Chemistry - Crystal structure analysis, CALPHAD phase equilibria, metabolic modeling, computational chemistry
+- 🌌 Physics & Astronomy - Astronomical data analysis, coordinate transformations, cosmological calculations, symbolic mathematics, physics computations
+- ⚙️ Engineering & Simulation - Battery cycling models, chemical kinetics and ignition delay, fluid dynamics, lab hardware CAD and custom-part fabrication, discrete-event simulation, process optimization
+- 📊 Data Analysis & Visualization - Statistical analysis, network analysis, time series, publication-quality figures, large-scale data processing, EDA
+- 🌊 Chemical Oceanography - Seawater carbonate chemistry, ocean acidification, mineral saturation, and measurement uncertainty
+- 🌍 Geospatial Science & Remote Sensing - Satellite imagery processing, GIS analysis, spatial statistics, terrain analysis, machine learning for Earth observation
+- 🧪 Laboratory Automation - Liquid handling protocols, lab equipment control, workflow automation, LIMS integration
+- 📚 Scientific Communication - Evidence-traceable writing, confidential authorized peer review, literature synthesis, document processing, macro-free PPTX posters, slides, schematics, and citation management
+- 🔬 Multi-omics & Systems Biology - Multi-modal data integration, pathway analysis, carbon-13 metabolic flux inference, biochemical kinetic models
+- 🧬 Protein Engineering & Design - Protein language models, structure prediction, cryo-EM refinement, sequence design, function annotation
+- 🧰 Agent Platforms & Infrastructure - Build on Pi with SDK, RPC, extensions, custom providers/models, packages, TUI components, and session tooling
+- 🎓 Research Methodology - Evidence-bounded candidate hypotheses, scientific brainstorming, critical thinking, grant writing, and qualitative low-stakes evaluation of scholarly works
+- ⚖️ Regulatory & Standards - Draft evidence-preparation artifacts for ISO management-system and laboratory standards, plus analytical method validation, verification, and transfer under ICH/USP/CLSI frameworks—prepared for qualified review, never a certification, accreditation, or method-release decision
+
+**Transform your AI coding agent into an 'AI Scientist' on your desktop!**
+
+> 🎬 **New to Scientific Agent Skills?** Watch our [Getting Started with Scientific Agent Skills](https://youtu.be/ZxbnDaD_FVg) video for a quick walkthrough.
+
+### 🎥 More tutorials
+
+Recorded walkthroughs of these skills on real research tasks, from the [K-Dense YouTube channel](https://www.youtube.com/@K-Dense-Inc):
+
+| Video | What it covers |
+|-------|----------------|
+| [Skills 101: Build Your Own Scientific Agent Skill](https://youtu.be/lVZbHiwzMEg) | Writing, testing, and packaging a new skill from scratch |
+| [Literature Review and Hypothesis Generation](https://youtu.be/wKJp8y4ZyiM) | Searching the literature and generating grounded hypotheses |
+| [Draft and Budget an Experimental Protocol](https://youtu.be/Yz2L5s_M_34) | Turning a planned experiment into a costed, written protocol |
+| [Draft Responses to Reviewer Comments](https://youtu.be/0MmU-Pmtg1o) | Building a point-by-point rebuttal from reviewer feedback |
+| [Can AI Reproduce a Nature Medicine Paper?](https://youtu.be/4WTCK9kSfdk) | An end-to-end reproduction attempt on a published analysis |
+
+---
+
+## 📦 What's Included
+
+This repository provides **177 scientific and research skills** organized into the following categories:
+
+- **100+ Scientific & Financial Databases** - The [Database Lookup](skills/database-lookup/SKILL.md) skill documents 80 databases with public, registered, or licensed access (PubChem, ChEMBL, UniProt, COSMIC, ClinicalTrials.gov, FRED, USPTO, and more), including endpoint selection, pagination, and provenance. Dedicated skills cover DepMap, Imaging Data Commons, PrimeKG, NCATS ARAX, U.S. Treasury Fiscal Data, Hugging Science, OneKGPd, Genomic Intelligence, and AlphaGenome. Multi-database packages such as BioServices, Biopython, and gget add further coverage
+- **70+ Optimized Python Package Skills** - Explicitly defined, version-aware workflows for RDKit, Scanpy, PyTorch Lightning, scikit-learn, PyTDC, PathML, pydicom, NeuroKit2, PufferLib, QuTiP, GeoPandas, pymatgen, BioPython, Qiskit, Molecular Dynamics (OpenMM/MDAnalysis), and others. The agent can still use *any* Python package; these skills provide stronger, safer guidance for the packages listed
+- **9 Scientific Integration Skills** - Explicitly defined skills for Benchling, DNAnexus, LatchBio, OMERO, Protocols.io, Open Notebook, Ginkgo Cloud Lab, LabArchives, and Opentrons. Again, the agent is not limited to these — any API or platform reachable from Python is fair game; these skills are the optimized, pre-documented paths
+- **30+ Analysis & Communication Tools** - Literature review, evidence-traceable scientific writing, confidential peer review, document processing, Paperclip (full-text papers, FDA/PMDA/EMA filings, and trial registries with line-pinned citations), Paperzilla, Exa Search, macro-free PPTX posters, slides, schematics, infographics, Mermaid diagrams, and more
+- **10+ Research & Clinical Tools** - Evidence-bounded hypothesis generation, grant writing, aggregate clinical decision-support research, clinician-authored treatment-plan formatting, PK/PD modelling and simulation (NCA, population PK, exposure-response, bioequivalence, first-in-human dose), BIDS, ISO standards-readiness evidence preparation (ISO 13485, ISO 14971, ISO/IEC 17025, ISO 15189), analytical method validation and transfer (ICH Q2(R2)/Q14, ICH M10, USP, CLSI EP), scenario analysis, and workflow-derived skill drafting with Autoskill
+
+Every skill has a `SKILL.md` with its purpose, workflow, and version metadata. Depending on the workflow, it also includes code examples, reference documentation, executable helpers, or templates. Skills with bundled `scripts/` have a corresponding test suite under `tests/<skill-name>/` and a dependency entry in [`tests/skill-requirements.toml`](tests/skill-requirements.toml).
+
+### What's new in 2.72.0
+
+The `docx`, `pdf`, `pptx`, and `xlsx` document skills, which were vendored from [anthropics/skills](https://github.com/anthropics/skills) under Anthropic's own license, are no longer bundled. The collection now has **177 skills**; install those four from Anthropic's repository if you rely on them. [Scientific Slides](skills/scientific-slides/SKILL.md) now builds PowerPoint decks with PptxGenJS or python-pptx and reviews them through LibreOffice and its own rendering and validation scripts.
+
+### What's new in 2.71.0
+
+This update refreshes all **181 skills**, including package and API guidance, dependency requirements, reference documentation, and validation workflows. Highlights include:
+
+- **Database retrieval:** [Database Lookup](skills/database-lookup/SKILL.md) now catalogs 80 sources, with access requirements, retrieval contracts, and provenance checks.
+- **Package compatibility:** Updated documented baselines include [PathML 3.0.8](skills/pathml/SKILL.md), [GeoPandas 1.2.0](skills/geopandas/SKILL.md), and [build123d 0.13.0 for lab hardware CAD](skills/lab-hardware-cad/SKILL.md). [PufferLib](skills/pufferlib/SKILL.md) distinguishes native 5.0, PyPI 3.0.0, and historical 4.0 workflows.
+- **Image generation and agent tooling:** [Generate Image](skills/generate-image/SKILL.md) uses the OpenRouter Image API with model discovery and request validation. [Pi Agent](skills/pi-agent/SKILL.md) documents Pi 0.99.2, native MCP, and updated ecosystem packages.
+- **RNA-seq workflow boundaries:** [Bulk RNA-seq](skills/bulk-rnaseq/SKILL.md) prepares reads and validated counts for a [PyDESeq2](skills/pydeseq2/SKILL.md) handoff; [Pathway Enrichment](skills/pathway-enrichment/SKILL.md) covers downstream enrichment.
+
+Each skill records its own compatibility requirements and validation scope. Check those details before reusing an older workflow; local tests, live-service checks, and illustrative examples have different coverage.
+
+### Recently added workflows
+
+| Research task | Skills | Workflow focus |
+|---|---|---|
+| Design and analyze assays | [Primer Design](skills/primer-design/SKILL.md), [FlowKit](skills/flowkit/SKILL.md), [MAGeCK](skills/mageck/SKILL.md), [CellProfiler](skills/cellprofiler/SKILL.md) | PCR specificity screening, cytometry compensation and gating, pooled CRISPR contrasts, and microscopy segmentation QC |
+| Process spectra and model metabolism | [nmrglue](skills/nmrglue/SKILL.md), [13C Metabolic Flux](skills/13c-metabolic-flux/SKILL.md), [Tellurium](skills/tellurium/SKILL.md) | Calibrated 1D NMR, isotope-tracing inference with identifiability checks, and reproducible biochemical simulations |
+| Reconstruct structures and preserve neural data | [RELION](skills/relion/SKILL.md), [NWB Conversion](skills/nwb-conversion/SKILL.md) | Cryo-EM half-map validation and two-photon imaging/behavior conversion with clock alignment |
+| Analyze microbiomes and seawater chemistry | [QIIME 2 Amplicon](skills/qiime2-amplicon/SKILL.md), [Marine Carbonate Chemistry](skills/marine-carbonate-chemistry/SKILL.md) | Paired-end 16S processing with read-retention checks, carbonate speciation, and measurement uncertainty |
+| Simulate energy and materials systems | [PyBaMM](skills/pybamm/SKILL.md), [Cantera](skills/cantera/SKILL.md), [pycalphad](skills/pycalphad/SKILL.md) | Battery cycling, ignition delay, and alloy phase equilibria with numerical checks and input provenance |
+
+---
+
+## 📋 Table of Contents
+
+- [What's Included](#-whats-included)
+- [What's New in 2.72.0](#whats-new-in-2720)
+- [Recently Added Workflows](#recently-added-workflows)
+- [Why Use This?](#-why-use-this)
+- [Getting Started](#-getting-started)
+- [Security Disclaimer](#%EF%B8%8F-security-disclaimer)
+- [Support Open Source](#%EF%B8%8F-support-the-open-source-community)
+- [Prerequisites](#%EF%B8%8F-prerequisites)
+- [Quick Examples](#-quick-examples)
+- [Use Cases](#-use-cases)
+- [Available Skills](#-available-skills)
+- [From the Blog](#-from-the-blog)
+- [Contributing](#-contributing)
+- [Troubleshooting](#-troubleshooting)
+- [FAQ](#-faq)
+- [Support](#-support)
+- [Citation](#-citation)
+- [License](#-license)
+
+---
+
+## 🚀 Why Use This?
+
+### ⚡ **Accelerate Your Research**
+- **Save Days of Work** - Skip API documentation research and integration setup
+- **Reviewed Starting Points** - Tested examples with explicit validation, provenance, and safety boundaries; verify them in the target environment
+- **Multi-Step Workflows** - Execute complex pipelines with a single prompt
+
+### 🎯 **Comprehensive Coverage**
+- **177 Skills** - Extensive coverage across all major scientific domains
+- **100+ Databases** - 80 databases documented by Database Lookup, plus dedicated data access skills and multi-database packages such as BioServices, Biopython, and gget
+- **70+ Optimized Python Package Skills** - Current, version-scoped guidance for packages including RDKit, Scanpy, PyTorch Lightning, scikit-learn, PyTDC, pydicom, PufferLib, QuTiP, GeoPandas, pymatgen, Qiskit, Molecular Dynamics (OpenMM/MDAnalysis), scVelo, and TimesFM (the agent can use any Python package; these are the pre-documented paths)
+
+### 🔧 **Easy Integration**
+- **Simple Setup** - Copy skills to your skills directory and start working
+- **Configured Discovery** - Compatible hosts can find and use relevant skills from their configured skill paths
+- **Well Documented** - Each skill includes examples, use cases, and best practices
+
+### 🌟 **Maintained & Supported**
+- **Regular Updates** - Continuously maintained and expanded by K-Dense team
+- **Validation in CI** - Relevant pull requests run the repository-wide structural checks and standard-library-only skill suites. Scientific dependencies are tested in separate environments; see [Testing](#testing) for the full validation workflow
+- **Community Driven** - Open source with active community contributions
+- **Enterprise Ready** - Commercial support available for advanced needs
+
+---
+
+## 🎯 Getting Started
+
+### Option 1: npx (supported hosts)
+
+Install Scientific Agent Skills with a single command:
+
+```bash
+npx skills add K-Dense-AI/scientific-agent-skills
+```
+
+This is a common standards-based installer for supported Agent Skills hosts, including current versions of **Claude Code**, **Claude Cowork**, **Codex**, **Gemini CLI**, **Google Antigravity**, and **Cursor**. Confirm installation paths and optional metadata behavior in your host's current documentation.
+
+### Option 2: GitHub CLI (`gh skill`)
+
+If you use the [GitHub CLI](https://cli.github.com/) (v2.90.0+), you can install skills with [`gh skill`](https://github.blog/changelog/2026-04-16-manage-agent-skills-with-github-cli/):
+
+```bash
+# Browse and install interactively
+gh skill install K-Dense-AI/scientific-agent-skills
+
+# Install a specific skill directly
+gh skill install K-Dense-AI/scientific-agent-skills scanpy
+
+# Target a specific agent host
+gh skill install K-Dense-AI/scientific-agent-skills --agent cursor
+gh skill install K-Dense-AI/scientific-agent-skills --agent claude-code
+gh skill install K-Dense-AI/scientific-agent-skills --agent codex
+gh skill install K-Dense-AI/scientific-agent-skills --agent gemini
+```
+
+`gh skill` automatically installs to the correct directory for your agent host and records provenance metadata for supply chain integrity.
+
+#### Version pinning
+
+Pin to a specific release tag or commit SHA for reproducible installs:
+
+```bash
+# Pin to a release tag
+gh skill install K-Dense-AI/scientific-agent-skills --pin v2.71.0
+
+# Pin to a commit SHA
+gh skill install K-Dense-AI/scientific-agent-skills --pin abc123def
+```
+
+#### Keeping skills up to date
+
+```bash
+# Check for updates interactively
+gh skill update
+
+# Update all installed skills
+gh skill update --all
+```
+
+### Option 3: Agent Plugins (Cursor, Codex, and other plugin clients)
+
+This repository is a valid [Agent Plugins](https://agent-plugins.org/) 1.0.0 package: root [`plugin.json`](plugin.json) plus Agent Skills under `skills/`. Clients that support the standard discover every immediate child of `skills/` that contains a `SKILL.md`.
+
+**Cursor** — symlink or copy the repo into the local plugins directory, then reload:
+
+```bash
+mkdir -p ~/.cursor/plugins/local
+ln -s "$(pwd)" ~/.cursor/plugins/local/scientific-agent-skills
+```
+
+Restart Cursor or run **Developer: Reload Window**, then confirm the plugin and its skills appear under **Customize**. See [Cursor plugins](https://cursor.com/docs/plugins).
+
+**Codex** — install from a local checkout (confirm the current CLI flag names in Codex docs):
+
+```bash
+codex plugins install .
+```
+
+Compatible clients (Cursor, Codex, GitHub Copilot, VS Code, Kiro, and others listed at [agent-plugins.org](https://agent-plugins.org/compatible-clients)) share the same package layout; installation UX stays client-specific.
+
+### Other Agent Skills hosts (OpenClaw, NemoClaw, Pi, Hermes, …)
+
+Agent hosts differ in install paths, discovery settings, and support for optional frontmatter fields. `npx skills add` (Option 1) commonly installs into the `~/.agents/skills/` convention, with project-scoped installs under `.agents/skills/`; confirm both paths against your host's current documentation. To install manually on a host configured to scan one of those locations:
+
+```bash
+git clone https://github.com/K-Dense-AI/scientific-agent-skills.git ~/.agents/skills/scientific-agent-skills   # user-level
+git clone https://github.com/K-Dense-AI/scientific-agent-skills.git .agents/skills/scientific-agent-skills      # project-level
+```
+
+For Hermes versions that support skill taps, add the repository as a tap:
+
+```bash
+hermes skills tap add K-Dense-AI/scientific-agent-skills
+```
+
+Every `SKILL.md` uses YAML frontmatter with a quoted `metadata.version`. Repository contributions must use block-style YAML; JSON-style flow mappings fail the reference validator. Optional host-specific configuration belongs under `metadata`, with host manifest blocks kept as nested mappings. See [AGENTS.md](AGENTS.md#frontmatter) for the complete rules. Hosts may interpret optional metadata and credential prompts differently, so verify behavior on the target host. Installing a topical subset keeps the available skill catalog focused on your work.
+
+> **NemoClaw note:** NemoClaw runs agents inside NVIDIA OpenShell with default-deny outbound networking. Skills are discovered and loaded normally, but any skill that needs the network — package installs via `uv`, or API calls (Exa, Parallel, Benchling, NCBI, Materials Project, …) — only works once the operator pre-approves the relevant domains in the OpenShell TUI.
+
+**That's it!** A compatible host can discover the skills from its configured paths and use them when relevant. You can also invoke any skill manually by mentioning the skill name in your prompt.
+
+---
+
+## ⚠️ Security Disclaimer
+
+> **Skills can execute code and influence your coding agent's behavior. Review what you install.**
+
+Agent Skills are powerful — they can instruct your AI agent to run arbitrary code, install packages, make network requests, and modify files on your system. A malicious or poorly written skill has the potential to steer your coding agent into harmful behavior.
+
+We take security seriously. All contributions go through a review process, and we run LLM-based security scans (via [Cisco AI Defense Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner)) on every skill in this repository. However, as a small team with a growing number of community contributions, we cannot guarantee that every skill has been exhaustively reviewed for all possible risks.
+
+**It is ultimately your responsibility to review the skills you install and decide which ones to trust.**
+
+We recommend the following:
+
+- **Do not install everything at once.** Only install the skills you actually need for your work. While installing the full collection was reasonable when K-Dense created and maintained every skill, the repository now includes many community contributions that we may not have reviewed as thoroughly.
+- **Read the `SKILL.md` before installing.** Each skill's documentation describes what it does, what packages it uses, and what external services it connects to. If something looks suspicious, don't install it.
+- **Check the contribution history.** Skills authored by K-Dense (`K-Dense-AI`) have been through our internal review process. Community-contributed skills have been reviewed to the best of our ability, but with limited resources.
+- **Run the security scanner yourself.** Before installing third-party skills, scan them locally:
+  ```bash
+  uv pip install cisco-ai-skill-scanner
+  skill-scanner scan /path/to/skill --use-behavioral
+  ```
+- **Report anything suspicious.** If you find a skill that looks malicious or behaves unexpectedly, please [open an issue](https://github.com/K-Dense-AI/scientific-agent-skills/issues) immediately so we can investigate.
+
+Skills are scanned weekly — incrementally, so unchanged skills carry their previous findings forward, with a full rescan of everything at least every 30 days and whenever the scanner or model changes — and the results are published to [docs/security-report.md](docs/security-report.md). See [SECURITY.md](SECURITY.md) for our security policy, what is in scope, how to report a vulnerability privately, and how to contest a scan finding. We try to address security gaps as they arise.
+
+---
+
+## ❤️ Support the Open Source Community
+
+Scientific Agent Skills is powered by **50+ incredible open source projects** maintained by dedicated developers and research communities worldwide. Projects like Biopython, Scanpy, RDKit, scikit-learn, PyTorch Lightning, and many others form the foundation of these skills.
+
+**If you find value in this repository, please consider supporting the projects that make it possible:**
+
+- ⭐ **Star their repositories** on GitHub
+- 💰 **Sponsor maintainers** via GitHub Sponsors or NumFOCUS
+- 📝 **Cite projects** in your publications
+- 💻 **Contribute** code, docs, or bug reports
+
+👉 **[View the full list of projects to support](docs/open-source-sponsors.md)**
+
+---
+
+## ⚙️ Prerequisites
+
+- **Python**: 3.13+ for repository tooling; individual skill dependencies may support broader Python ranges
+- **uv**: Python package manager (required for installing skill dependencies)
+- **Client**: Any agent that supports the [Agent Skills](https://agentskills.io/) standard (Cursor, Claude Code, Gemini CLI, Codex, Google Antigravity, etc.)
+- **System**: macOS, Linux, or Windows with WSL2
+- **Dependencies**: Follow each skill's `compatibility` field and setup instructions for packages, system tools, credentials, and network access. Installing the skill files does not install their dependencies
+
+Use a separate environment for each scientific workflow: some skills require different Python versions or incompatible package pins. `uv sync` installs the repository's development and validation tools, not every scientific package in the collection.
+
+### Installing uv
+
+The skills use `uv` as the package manager for installing Python dependencies. Install it using the instructions for your operating system:
+
+**macOS and Linux:**
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+**Windows:**
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
+**Alternative (via pip):**
+```bash
+pip install uv
+```
+
+After installation, verify it works by running:
+```bash
+uv --version
+```
+
+For more installation options and details, visit the [official uv documentation](https://docs.astral.sh/uv/).
+
+---
+
+## 💡 Quick Examples
+
+Once you've installed the skills, you can ask your AI agent to execute complex multi-step scientific workflows. Here are some example prompts:
+
+### 🧪 Drug Discovery Pipeline
+**Goal**: Prioritize EGFR inhibitor candidates for preclinical lung-cancer research
+
+**Prompt**:
+```
+Use available skills you have access to whenever possible. Query ChEMBL for EGFR inhibitors (IC50 < 50nM), analyze structure-activity relationships 
+with RDKit, generate improved analogs with datamol, perform virtual screening with DiffDock 
+against AlphaFold EGFR structure, search PubMed for resistance mechanisms, check COSMIC for 
+mutations, and create visualizations and a comprehensive report.
+```
+
+**Skills Used**: database-lookup, rdkit, datamol, diffdock, paper-lookup, scientific-visualization
+
+---
+
+### 🔬 Single-Cell RNA-seq Analysis
+**Goal**: Comprehensive analysis of 10X Genomics data with public data integration
+
+**Prompt**:
+```
+Use available skills you have access to whenever possible. Load 10X dataset with Scanpy, perform QC and doublet removal, integrate with Cellxgene 
+Census data, identify cell types using NCBI Gene markers, run differential expression with 
+PyDESeq2, infer gene regulatory networks with Arboreto, enrich pathways via Reactome/KEGG, 
+and identify therapeutic targets with Open Targets.
+```
+
+**Skills Used**: scanpy, cellxgene-census, database-lookup, pydeseq2, arboreto
+
+---
+
+### 🧬 Multi-Omics Biomarker Discovery
+**Goal**: Integrate RNA-seq, proteomics, and metabolomics to predict patient outcomes
+
+**Prompt**:
+```
+Use available skills you have access to whenever possible. Analyze RNA-seq with PyDESeq2, process mass spec with pyOpenMS, integrate metabolites from 
+HMDB/Metabolomics Workbench, map proteins to pathways (UniProt/KEGG), find interactions via 
+STRING, correlate omics layers with statsmodels, build predictive model with scikit-learn, 
+and search ClinicalTrials.gov for relevant trials.
+```
+
+**Skills Used**: pydeseq2, pyopenms, database-lookup, statsmodels, scikit-learn
+
+---
+
+### 🎯 Virtual Screening Campaign
+**Goal**: Discover allosteric modulators for protein-protein interactions
+
+**Prompt**:
+```
+Use available skills you have access to whenever possible. Retrieve AlphaFold structures, identify interaction interface with BioPython, search ZINC 
+for allosteric candidates (MW 300-500, logP 2-4), filter with RDKit, dock with DiffDock, 
+rank with DeepChem, check PubChem suppliers, search USPTO patents, and optimize leads with 
+MedChem/molfeat.
+```
+
+**Skills Used**: database-lookup, biopython, rdkit, diffdock, deepchem, medchem, molfeat
+
+---
+
+### 🏥 Research Variant Evidence Review
+**Goal**: Annotate a synthetic or properly de-identified VCF for hereditary-cancer research and qualified review
+
+**Prompt**:
+```
+Use available skills you have access to whenever possible. Work only with authorized synthetic
+or de-identified data. Parse the VCF with pysam, annotate variants with Ensembl VEP, retrieve
+ClinVar/COSMIC/NCBI Gene/UniProt evidence, and verify literature sources. Build an evidence-
+traceable research summary with scientific-writing. If clinical-reports is used, create only a
+visibly marked draft structure from a verified source-fact manifest for qualified review; do not
+diagnose, assess individual risk, recommend treatment, or determine trial eligibility.
+```
+
+**Skills Used**: pysam, database-lookup, paper-lookup, scientific-writing, clinical-reports
+
+---
+
+### 🌐 Systems Biology Network Analysis
+**Goal**: Analyze gene regulatory networks from RNA-seq data
+
+**Prompt**:
+```
+Use available skills you have access to whenever possible. Query NCBI Gene for annotations, retrieve sequences from UniProt, identify interactions via 
+STRING, map to Reactome/KEGG pathways, analyze topology with Torch Geometric, reconstruct 
+GRNs with Arboreto, assess druggability with Open Targets, model with PyMC, visualize 
+networks, and search GEO for similar patterns.
+```
+
+**Skills Used**: database-lookup, torch-geometric, arboreto, pymc, networkx, scientific-visualization
+
+> 📖 **Want more examples?** Check out [docs/examples.md](docs/examples.md) for comprehensive workflow examples and detailed use cases across all scientific domains.
+
+---
+
+## 🔬 Use Cases
+
+### 🧪 Drug Discovery & Medicinal Chemistry
+- **Virtual Screening**: Screen millions of compounds from PubChem/ZINC against protein targets
+- **Lead Optimization**: Analyze structure-activity relationships with RDKit, generate analogs with datamol
+- **ADMET Prediction**: Predict absorption, distribution, metabolism, excretion, and toxicity with DeepChem
+- **Molecular Docking**: Predict binding poses with DiffDock and rescore poses with affinity-oriented tools
+- **Bioactivity Mining**: Query ChEMBL for known inhibitors and analyze SAR patterns
+
+### 🧬 Bioinformatics & Genomics
+- **Sequence Analysis**: Process DNA/RNA/protein sequences with BioPython and pysam
+- **Single-Cell Analysis**: Analyze 10X Genomics data with Scanpy, identify cell types, infer GRNs with Arboreto
+- **Variant Annotation**: Annotate research VCF files with Ensembl VEP and retrieve ClinVar evidence for qualified interpretation
+- **Variant Database Management**: Build scalable VCF databases with TileDB-VCF for incremental sample addition, efficient population-scale queries, and compressed storage of genomic variant data
+- **Population Genomics**: Query variants, cohort sample IDs, and relatedness in the 3,202-person GRCh38 1000 Genomes cohort with OneKGPd
+- **Regulatory Sequence Models**: Run hosted Genomic Intelligence promoter, splice, enhancer, chromatin, expression, and gene-annotation predictions for research—not clinical or diagnostic decisions
+- **Variant Effect Prediction**: Look up AlphaGenome Atlas AVI scores, Phred ranks, feature attributions, and per-tissue track effects for any GRCh38 SNV, or score variants and run in silico mutagenesis with the AlphaGenome model — for research prioritisation, not diagnosis
+- **Pathogen Surveillance**: Track which viral lineages are circulating now and how fast they are growing (SARS-CoV-2, influenza including H5N1, RSV, mpox, measles, dengue) through the GenSpectrum LAPIS API, with reporting lag measured rather than assumed
+- **Gene Discovery**: Query NCBI Gene, UniProt, and Ensembl for comprehensive gene information
+- **Network Analysis**: Identify protein-protein interactions via STRING, map to pathways (KEGG, Reactome)
+
+### 🏥 Clinical Research & Evidence Workflows
+- **Clinical Trials**: Analyze aggregate trial landscapes and protocol criteria without deciding individual eligibility
+- **Variant Evidence Review**: Annotate authorized research data with ClinVar, COSMIC, and ClinPGx; qualified professionals retain interpretation responsibility
+- **Drug Safety Research**: Query FDA databases for aggregate adverse-event, interaction, and recall evidence
+- **Clinical Pharmacology**: Derive exposure metrics from concentration-time data, fit compartmental and population PK models, relate exposure to effect, and evaluate dosing regimens, bioequivalence, and first-in-human dose
+- **Full-Text Evidence Retrieval**: Search and read papers, regulatory filings, and trial records end to end with Paperclip, returning citations pinned to line numbers rather than to abstracts
+- **Decision-Support Evaluation**: Prepare synthetic or aggregate evaluation, evidence-profile, privacy, and governance artifacts—not live clinical decisions
+- **Clinician-Authored Documentation**: Structure verified source-bound report drafts and format treatment decisions already made by authorized licensed professionals
+
+### 🔬 Multi-Omics & Systems Biology
+- **Multi-Omics Integration**: Combine RNA-seq, proteomics, and metabolomics data
+- **Pathway Analysis**: Enrich differentially expressed genes in KEGG/Reactome pathways
+- **Network Biology**: Reconstruct gene regulatory networks, identify hub genes
+- **Biomarker Discovery**: Integrate multi-omics layers to predict patient outcomes
+
+### 📊 Data Analysis & Visualization
+- **Statistical Analysis**: Perform hypothesis testing, power analysis, and experimental design
+- **Publication Figures**: Create publication-quality visualizations with matplotlib and seaborn
+- **Network Visualization**: Visualize biological networks with NetworkX
+- **Report Generation**: Produce evidence-traceable research reports with Scientific Writing and document tools; Clinical Reports outputs remain visibly marked drafts built only from verified synthetic, de-identified, or aggregate source facts
+
+### 🧪 Laboratory Automation
+- **Protocol Design**: Author and simulate Opentrons or PyLabRobot protocols before trained-operator review
+- **LIMS/ELN Integration**: Prepare scoped Benchling and LabArchives operations with explicit authorization for remote writes
+- **Workflow Automation**: Validate and simulate multi-step laboratory workflows offline; physical execution stays behind equipment-specific operator safety gates
+- **Custom Lab Hardware Fabrication**: Pre-flight STEP files, then quote CNC-machined or 3D-printed parts on Fictiv with DFM feedback and lead-time options relayed back; nothing is ordered without explicit approval of the exact total
+
+---
+
+## 📚 Available Skills
+
+This repository contains **177 scientific and research skills** organized across multiple domains. Each skill provides comprehensive documentation, code examples, and best practices for working with scientific libraries, databases, and tools.
+
+### Skill Categories
+
+> **Note:** The Python package and integration skills listed below are *explicitly defined* skills — curated with documentation, examples, and best practices for stronger, more reliable performance. They are not a ceiling: the agent can install and use *any* Python package or call *any* API, even without a dedicated skill. The skills listed simply make common workflows faster and more dependable.
+
+Categories overlap: a skill may appear in more than one domain, so the category counts do not sum to the 177 unique skills.
+
+Package versions below identify the baselines documented by the skills. Follow each linked `SKILL.md` for its complete dependency stack, runtime requirements, and validation scope.
+
+#### 🧬 **Bioinformatics & Genomics** (32 skills)
+- RNA-seq preparation: [Bulk RNA-seq](skills/bulk-rnaseq/SKILL.md) (FASTQ and quantification workflows, sample/reference QC, and validated gene-level counts for a PyDESeq2 handoff)
+- Sequence analysis: BioPython, pysam, scikit-bio, BioServices
+- PCR assay design: [Primer Design](skills/primer-design/SKILL.md) (Primer3 candidates, thermodynamics, variant masking, tails, and bounded local or BLAST-assisted specificity screening)
+- Single-cell analysis: Scanpy, AnnData, scvi-tools, scVelo (RNA velocity), Arboreto, Cellxgene Census
+- Genomic tools: gget, current geniml/Gtars interval workflows, deepTools, Polars-Bio, Zarr, TileDB-VCF
+- Flow cytometry: FlowIO (FCS input/output), [FlowKit](skills/flowkit/SKILL.md) (compensation, transforms, hierarchical gating, and FlowJo workspace analysis)
+- Coordinate hygiene: Genomic Coordinates (convert intervals across BED/GFF/GTF/VCF/SAM/WIG conventions, normalise variant representations, and catch 0-based vs 1-based and assembly/contig-naming mismatches before they corrupt an analysis)
+- Population and sequence intelligence: OneKGPd (individual-level 1000 Genomes cohort queries) and Genomic Intelligence (hosted regulatory/gene-expression predictions; research only)
+- Variant effect prediction: AlphaGenome (DeepMind's AlphaGenome Atlas of precomputed effects for every GRCh38 SNV — AVI score with Phred rank and 18 SHAP feature attributions, plus raw and quantile scores across 9,440 RNA-seq, DNase, ATAC, ChIP, CAGE, splicing and contact-map tracks — and on-demand model scoring, in silico mutagenesis and REF-vs-ALT track prediction for human and mouse; research only, not clinical)
+- Differential expression: PyDESeq2
+- Pooled CRISPR screens: [MAGeCK](skills/mageck/SKILL.md) (guide counting, replicate QC, explicit contrasts, and gene hit ranking)
+- Amplicon microbiomes: [QIIME 2 Amplicon](skills/qiime2-amplicon/SKILL.md) (paired-end 16S import, primer trimming, denoising, taxonomy, and read-retention checks)
+- Functional enrichment: Pathway Enrichment (ORA, GSEA/preranked, ssGSEA via gseapy + g:Profiler; GO, KEGG, Reactome, WikiPathways, MSigDB)
+- Phylogenetics: ETE Toolkit, Phylogenetics (MAFFT, IQ-TREE 2, FastTree)
+- Microbiome foundation models: Waypoint (Outpost Bio's open Waypoint-6m/45m/170m checkpoints, the Atlas 539k-sample MGnify pretraining corpus, and the eight-task Compass benchmark — embedding, fine-tuning, benchmarking, and pretraining on taxonomic abundance profiles, with MetaPhlAn/Kraken2/QIIME 2 conversion)
+
+#### 🧪 **Cheminformatics & Drug Discovery** (11 skills)
+- Molecular manipulation: RDKit, Datamol, Molfeat
+- NMR processing: [nmrglue](skills/nmrglue/SKILL.md) (calibrated 1D FIDs, phase/baseline correction, peak candidates, and signed integration)
+- Deep learning: DeepChem, TorchDrug
+- Docking & screening: DiffDock
+- Molecular dynamics: OpenMM + MDAnalysis (MD simulation & trajectory analysis)
+- Cloud quantum chemistry: Rowan (pKa, docking, cofolding)
+- Drug-likeness: MedChem
+- Benchmarks: PyTDC 1.1.15 on its verified CPython 3.11 compatibility stack
+
+#### 🔬 **Proteomics & Mass Spectrometry** (2 skills)
+- Spectral processing: matchms, pyOpenMS
+
+#### 🏥 **Clinical Research & Evidence Workflows** (8 skills)
+- Clinical databases: via Database Lookup (ClinicalTrials.gov, ClinVar, ClinPGx, COSMIC, FDA, cBioPortal, Monarch, and more)
+- Clinical pharmacology: PK/PD Modeling (non-compartmental analysis, compartmental and population PK, exposure-response and Emax, TMDD, PBPK orientation, bioequivalence including RSABE/ABEL, allometric scaling and first-in-human dose, DDI prediction under ICH M12, concentration-QTc, and Bayesian therapeutic drug monitoring — stdlib + numpy/scipy, no proprietary estimation software invoked)
+- Cancer genomics: DepMap (cancer dependency scores, drug sensitivity)
+- Cancer imaging: Imaging Data Commons (NCI radiology & pathology datasets via idc-index)
+- Healthcare AI research: PyHealth
+- Decision-support research: local, aggregate or synthetic Clinical Decision Support evaluation and governance artifacts only
+- Clinical documentation: source-bound Clinical Reports drafts and formatting of verified clinician-authored decisions with Treatment Plans; neither skill diagnoses or recommends care
+
+#### 🐭 **Preclinical Research & Animal Welfare** (1 skill)
+- Severity assessment: RELSA Severity Assessment (multivariate RELSA scores from body weight, temperature, clinical/nesting scores, biomarkers, activity, heart rate, burrowing and wheel running; ARIMA humane-endpoint forecasting with 95% prediction intervals; KDE-derived attention and danger zones for 3Rs/refinement and EU Directive 2010/63/EU severity reporting) — an aid to severity assessment, never a decision rule
+
+#### 🖼️ **Microscopy, Medical Imaging & Digital Pathology** (5 skills)
+- DICOM processing: pydicom 3.0.2 with privacy-first local preflight and no diagnostic or de-identification-compliance claims
+- Whole slide imaging: histolab and research-only [PathML 3.0.8](skills/pathml/SKILL.md)
+- Quantitative microscopy: [CellProfiler](skills/cellprofiler/SKILL.md) (reusable nuclei-measurement pipeline, channel manifests, segmentation overlays, and measurement checks)
+- Virtual spatial transcriptomics: noncommercial DeepSpot-M for transcriptome-wide spatial gene expression from 224x224 H&E tiles
+
+#### 🧠 **Neuroscience & Electrophysiology** (4 skills)
+- Data standards: BIDS (Brain Imaging Data Structure for neuroscience and biomedical datasets; pairs with DataLad for retrieval — OpenNeuro at github.com/OpenNeuroDatasets and DANDI at github.com/dandisets publish their holdings as DataLad datasets — and for BIDS-App runs under recorded provenance, with BEP028 the extension proposal for provenance records in derivatives)
+- Neural recordings: Neuropixels-Analysis (extracellular spikes, silicon probes, spike sorting)
+- Data conversion: [NWB Conversion](skills/nwb-conversion/SKILL.md) (two-photon TIFF and behavioral positions, clock alignment, round-trip preservation, and NWB validation)
+- Physiological signals: NeuroKit2 0.2.13 for reproducible research workflows—not diagnosis, monitoring decisions, or medical-device validation
+
+#### 🤖 **Machine Learning & AI** (14 core skills)
+- Deep learning: PyTorch Lightning, Transformers, Stable Baselines3, and [PufferLib](skills/pufferlib/SKILL.md) workflows for native 5.0, published 3.0.0, and pinned historical 4.0
+- Classical ML: scikit-learn, scikit-survival 0.28, and SHAP
+- Time series: aeon, TimesFM (Google's zero-shot foundation model for univariate forecasting)
+- Bayesian methods: PyMC
+- Optimization: PyMOO
+- Graph ML: Torch Geometric
+- Dimensionality reduction: UMAP-learn
+- Statistical modeling: statsmodels
+
+#### 🔮 **Materials Science, Chemistry & Physics** (8 skills)
+- Materials: current split pymatgen wrapper/core plus explicitly bounded Materials Project queries
+- Alloy thermodynamics: [pycalphad](skills/pycalphad/SKILL.md) (TDB-driven phase equilibria, phase fractions, composition checks, and database provenance)
+- Metabolic modeling: COBRApy
+- Astronomy: Astropy
+- Quantum computing: Cirq, PennyLane, Qiskit, [QuTiP 5.3.1](skills/qutip/SKILL.md)
+
+#### ⚙️ **Engineering & Simulation** (9 skills)
+- Lab hardware CAD: parametric [build123d 0.13.0 workflows](skills/lab-hardware-cad/SKILL.md) for microfluidic chips and molds, optomechanical mounts, microplate and cuvette adapters, and behavior rigs, with interface checks and multi-view renders
+- Custom-part fabrication: Fictiv (browser-driven CNC, 3D printing, sheet metal, urethane casting and molding quotes, DFM review, lead-time and region tiers, and checkout, with CAD pre-flight checks and an explicit approval gate before any order, quote request or share)
+- Numerical computing: [MATLAB and GNU Octave](skills/matlab/SKILL.md) planning/review workflows, with R2026b documentation, an explicit R2026a Python-integration baseline, and GNU Octave 11.3.0
+- Computational fluid dynamics: bounded FluidSim 0.9 simulations with numerical-validity and HPC checks
+- Experimental flow measurement: OpenPIV (velocity fields from PIV image pairs, interrogation-window cross-correlation, spurious-vector validation, vorticity/strain-rate/turbulence statistics)
+- Discrete-event simulation: SimPy 4.1.2 with replication, warm-up, and output-analysis guidance
+- Chemical kinetics: [Cantera](skills/cantera/SKILL.md) (homogeneous ignition delay, mechanism snapshots, numerical refinement, and conservation checks)
+- Battery experiments: [PyBaMM](skills/pybamm/SKILL.md) (charge/discharge protocols, parameter provenance, numerical checks, and measured-curve comparisons)
+- Symbolic math: SymPy
+
+#### 🌊 **Chemical Oceanography** (1 skill)
+
+- [Marine Carbonate Chemistry](skills/marine-carbonate-chemistry/SKILL.md): paired seawater measurements with PyCO2SYS, carbonate speciation, pH-scale handling, lab-to-in-situ corrections, aragonite/calcite saturation, and uncertainty propagation
+
+#### 📊 **Data Analysis & Visualization** (18 skills)
+- Visualization: Matplotlib, Seaborn, Scientific Visualization
+- Geospatial analysis: [GeoPandas 1.2.0](skills/geopandas/SKILL.md) and GeoMaster (remote sensing, GIS, satellite imagery, and spatial ML)
+- Data processing: Dask, Polars, Vaex
+- Network analysis: NetworkX
+- Document processing: LiteParse (local PDF/document parsing with bounding boxes and OCR) and MarkItDown
+- Infographics: Infographics (AI-powered professional infographic creation)
+- Diagrams: Markdown & Mermaid Writing (text-based diagrams as default documentation standard)
+- Exploratory data analysis: bounded local EDA for explicitly supported formats, with unknown formats failing closed
+- Statistical analysis: Statistical Analysis workflows
+- Units and measurement uncertainty: Uncertainty & Units (pint dimensional checking, GUM uncertainty budgets, Type A/B evaluation, coverage factors and expanded uncertainty, Monte Carlo propagation, CODATA constants)
+- Experimental design: Experimental Design (randomization, blocking, factorial/fractional-factorial DOE, crossover, cluster, sequential designs; pyDOE3)
+- Statistical power: Statistical Power (sample-size & power for t-tests, ANOVA, proportions, correlation, regression — closed-form plus simulation-based for GLMs, mixed models, and cluster designs)
+
+#### 🧪 **Laboratory Automation** (6 skills)
+- Liquid handling: offline-first PyLabRobot planning/simulation and Opentrons authoring, with physical execution behind explicit operator safety gates
+- Cloud lab: Ginkgo Cloud Lab (protein expression & purification across cell-free/E. coli/Pichia, IVT RNA synthesis, thermal shift and Echo-MS assays, SPR onboarding, fluorescent pixel art via autonomous RAC infrastructure)
+- Protocol management: bounded protocols.io reads across documented v3/v4 endpoints and non-executing write plans
+- LIMS/ELN integration: Benchling and the separate LabArchives legacy ELN and Inventory v1 APIs
+
+#### 🔬 **Multi-omics & Systems Biology** (5 skills)
+- Pathway analysis: via Database Lookup (KEGG, Reactome, STRING) and PrimeKG
+- Data management: LaminDB
+- Biochemical dynamics: [Tellurium](skills/tellurium/SKILL.md) (kinetic models, time-course simulations, perturbations, and reproducible model exchange)
+- Carbon-13 metabolic flux inference: [13C Metabolic Flux](skills/13c-metabolic-flux/SKILL.md) (validated atom maps, steady-state isotope simulation, constrained fitting, and flux-identifiability profiles)
+
+#### 🧬 **Protein Engineering & Design** (5 skills)
+- Protein language models: ESM
+- Experimental structure reconstruction: [RELION](skills/relion/SKILL.md) (extracted-particle refinement, optics/STAR validation, and half-map/FSC checks)
+- Glycoengineering: Glycoengineering (N/O-glycosylation prediction, therapeutic antibody optimization)
+- Cloud laboratory platform: Adaptyv (automated protein testing and validation)
+- Cloud structure & design platform: Tamarind (managed-GPU access to AlphaFold, Boltz, Chai, ESMFold, RFdiffusion, ProteinMPNN, BoltzGen, antibody/nanobody design, DiffDock/Vina docking, binding affinity, and MSA generation via REST API or MCP)
+
+#### 📚 **Scientific Communication** (23 skills)
+- Literature: Paper Lookup (PubMed, PMC, bioRxiv, medRxiv, arXiv, OpenAlex, Crossref, Semantic Scholar, CORE, Unpaywall), Literature Review, Paperzilla
+- Full-text corpus access: Paperclip (read-only virtual filesystem over ~11M full-text papers, 217K+ FDA/PMDA/EMA regulatory documents, clinical trial registries, and UniProt/PDB/ChEMBL entries — source-scoped semantic search, corpus-wide grep, SQL metadata queries, map/reduce reading across many papers, figure vision analysis, and line-pinned citations)
+- Advanced paper search: BGPT Paper Search (25+ structured fields per paper — methods, results, sample sizes, quality scores — from full text, not just abstracts)
+- Web intelligence: Parallel Web (web search, URL/PDF extraction, deep research, structured enrichment, entity discovery, and recurring monitoring), Exa Search, and Research Lookup
+- Research notebooks: Open Notebook (self-hosted NotebookLM alternative — PDFs, videos, audio, web pages; 16+ AI providers; multi-speaker podcast generation)
+- Writing: evidence-traceable Scientific Writing and local, confidential, authorized Peer Review
+- Document processing: LiteParse and MarkItDown
+- Publishing and paper workflows: Venue Templates
+- Presentations: Scientific Slides, LaTeX Posters, and macro-free PPTX Posters generated from author-approved local manifests
+- Diagrams: Scientific Schematics, Markdown & Mermaid Writing
+- Infographics: Infographics (10 types, 8 styles, colorblind-safe palettes)
+- Citations: Citation Management, pyzotero
+- Illustration: [Generate Image](skills/generate-image/SKILL.md) (generation, editing, and compositing through the OpenRouter Image API, with model discovery, capability checks, and dry runs)
+
+#### 🔬 **Scientific Databases & Data Access** (13 skills → 100+ databases total)
+> [Database Lookup](skills/database-lookup/SKILL.md) documents 80 databases with public, registered, or licensed access across scientific and financial domains, with retrieval contracts, pagination/count reconciliation, and endpoint provenance. Dedicated skills cover specialized data platforms. Multi-database packages such as BioServices, Biopython, and gget add further coverage.
+- Unified access: Database Lookup (80 databases spanning chemistry, genomics, clinical, pathways, patents, economics, and more — PubChem, ChEMBL, UniProt, PDB, AlphaFold, KEGG, Reactome, STRING, ClinVar, COSMIC, ClinicalTrials.gov, FDA, FRED, USPTO, SEC EDGAR, and dozens more — with auditable filters and provenance)
+- Cancer genomics: DepMap (cancer cell line dependencies, drug sensitivity, gene effect profiles)
+- Public germline variant evidence: [Folklore Variant Evidence](skills/folklore-variant-evidence/SKILL.md) (ClinGen gene-disease validity assertions and source-linked evidence for one supported GRCh38 variant, with explicit ambiguity handling and related literature for qualified professional review)
+- Cancer imaging: Imaging Data Commons (NCI radiology & pathology datasets via idc-index)
+- Knowledge graph: PrimeKG (precision medicine knowledge graph — genes, drugs, diseases, phenotypes)
+- Biomedical knowledge graph search: [NCATS ARAX](skills/ncats-arax/) (bounded, Biolink-constrained one-hop and endpoint-pinned two-hop queries over knowledge graphs with up to five explicitly selected NCATS Translator providers, with provenance preservation)
+- Fiscal data: U.S. Treasury Fiscal Data (national debt, Treasury statements, auctions, exchange rates)
+- Scientific ML resource catalog: Hugging Science (curated index of datasets, models, blog posts, and interactive Spaces across 17 scientific domains — astronomy, biology, chemistry, climate, genomics, materials science, medicine, physics, scientific reasoning, and more — with usage patterns for `datasets`, `transformers`, and `gradio_client`)
+- Individual-level population genomics: OneKGPd (3,202-person high-coverage 1000 Genomes cohort queries)
+- Hosted regulatory genomics: Genomic Intelligence (promoter, splice, enhancer, chromatin, expression, and gene-annotation predictions for research use)
+- Precomputed variant effects: AlphaGenome (Atlas lookups for every GRCh38 SNV with AVI, Phred, SHAP feature attributions, and per-track scores; on-demand AlphaGenome model scoring for indels, mouse, and custom scorers; Atlas website deep links)
+- Ontology identifiers: Ontology Term Resolution (resolve free-text tissue, cell-type, disease, phenotype, assay, chemical, organism, and developmental-stage labels to term IDs and validate CURIEs against EBI OLS4, for GEO/ENA/BioSamples/CELLxGENE/HCA/ISA-Tab metadata)
+- Live pathogen surveillance: Pathogen Variant Surveillance (which viral lineages are circulating now, how fast they are growing, and what mutations they carry — SARS-CoV-2, influenza including H5N1, RSV, mpox, measles, dengue and more through the GenSpectrum LAPIS API, with lineage names resolved against the live pango-designation nomenclature and reporting lag measured rather than assumed)
+
+#### 🔧 **Infrastructure & Platforms** (12 skills)
+- Cloud compute: Modal
+- Data distribution and provenance: DataLad (clone and fetch OpenNeuro, DANDI and registry.datalad.org datasets over git-annex, capture re-executable provenance with datalad run/rerun and containers-run, publish to siblings)
+- GPU acceleration: Optimize for GPU (CuPy, Numba CUDA, Warp, cuDF, cuML, cuGraph, KvikIO, cuCIM, cuxfilter, cuVS, cuSpatial, RAFT)
+- Genomics platforms: DNAnexus, LatchBio
+- Workflow engines: Nextflow (build/run/debug Nextflow & nf-core pipelines — DSL2 modules, executors/containers, HPC/cloud scaling) and pacsomatic (operator toolkit for the nf-core/pacsomatic tumor-normal somatic variant-calling workflow)
+- Microscopy: OMERO
+- Automation: Opentrons
+- Resource detection: Get Available Resources on request or before a clearly resource-sensitive local workload; redacted and without stress tests
+- Workflow mining: Autoskill (local screenpipe-based repeated workflow detection and skill drafting)
+- Agent platform development: [Pi Agent](skills/pi-agent/SKILL.md) (Pi 0.99.2 terminal harness, SDK, RPC/JSONL, native MCP, extensions, providers/models, packages, TUI components, and session tooling)
+
+#### 🎓 **Research Methodology & Planning** (13 skills)
+- Ideation: evidence-aware Scientific Brainstorming and non-scoring Hypothesis Generation that keeps hypotheses labeled as candidates
+- Text-dataset hypothesis software: HypoGeniC/HypoRefine produces candidate textual patterns and task-prediction statistics, not validated scientific hypotheses
+- Autonomous optimization: Arbor (Hypothesis Tree Refinement — iteratively improve a code/model/agent-harness/data artifact against a dev evaluator while a held-out test gate guards against overfitting)
+- Critical analysis: Scientific Critical Thinking and qualitative, low-stakes Scholar Evaluation of works—never ranking people or supporting consequential decisions
+- Scenario analysis: What-If Oracle (4–6 branch possibility exploration, contingency planning, decision stress-testing)
+- Multi-perspective deliberation: Consciousness Council (diverse expert viewpoints, devil's advocate analysis)
+- Cognitive profiling: DHDNA Profiler (extract thinking patterns and cognitive signatures from any text)
+- Funding: Research Grants
+- Discovery: Research Lookup, Paper Lookup (10 academic databases)
+- Market analysis: evidence-traceable Market Research Reports with assumption-led sizing and forecast sensitivity
+
+#### ⚖️ **Regulatory & Standards** (2 skills)
+- Standards readiness: draft evidence-preparation artifacts for ISO 13485 (medical device QMS), ISO 14971 (device risk management), ISO/IEC 17025 (testing and calibration laboratories), and ISO 15189 (medical laboratories), with per-standard process domains selected by a `--standard` profile
+- Analytical method validation: plan, evaluate, and document validation, verification, and transfer of analytical procedures (HPLC, LC-MS/MS, GC, CE, ICP-MS, dissolution, qNMR, qPCR, NIR, ligand-binding and cell-based assays) under whichever framework governs — ICH Q2(R2)/Q14 and ICH M10 encoded from their openly licensed text, with USP `<1220>`/`<1225>`/`<1226>`, the CLSI EP series, and ISO/IEC 17025 cited by designation and scope only; stdlib-only statistics, no network access
+- Assurance-lane separation: keeps ISO certification, laboratory accreditation, FDA QMSR inspection, CLIA certification, MDSAP, and EU MDR/IVDR evidence boundaries distinct—laboratories are accredited rather than certified, and ISO 15189 accreditation does not satisfy CLIA
+- Never a compliance, audit, assessment, certification, accreditation, or method-release decision; qualified RA/QA, legal, laboratory-director, assessor, and certification-body review is required
+
+> 📖 **For complete details on all skills**, see [docs/skills.md](docs/skills.md)
+
+> 💡 **Looking for practical examples?** Check out [docs/examples.md](docs/examples.md) for comprehensive workflow examples across all scientific domains.
+
+---
+
+## 📝 From the Blog
+
+Deep dives, benchmarks, and guides from the [K-Dense blog](https://www.k-dense.ai/blog) that are directly relevant to using the skills in this repository.
+
+### Start here
+
+- **[Agent Skills: The Final Piece for AI-Powered Scientific Research](https://www.k-dense.ai/blog/agent-skills-final-piece-for-ai-powered-research)** — What Agent Skills are, why curated domain guidance beats raw model capability, and an introduction to this repository.
+- **[K-Dense Web vs Scientific Agent Skills: Why We Built Both (And Which One You Should Use)](https://www.k-dense.ai/blog/k-dense-web-vs-scientific-agent-skills)** — When the open-source skills are the right tool, and when a hosted platform with managed compute makes more sense.
+- **[AI Co-Scientists, Answered: 20 Questions from a Live Session with a University Research Center](https://www.k-dense.ai/blog/ai-co-scientists-answered-20-questions)** — Practical questions from a research center evaluating AI co-scientists: what stays open source and MIT-licensed, how local and desktop deployments work, how data is handled, and how to choose between the hosted platform and the BYOK setup that runs these skills.
+- **[How to Use Multica for Scientific Research](https://www.k-dense.ai/blog/multica-scientific-research)** — A self-hosted Multica workspace plus a curated subset of these skills: clinical-trial and variant analyses, literature review, weekly autopilots, and a second-model audit, with each skill imported from `skills/<name>/`.
+
+### Skill benchmarks and deep dives
+
+- **[The Silent 97%: Introducing the waypoint-bio Agent Skill](https://www.k-dense.ai/blog/introducing-waypoint-agent-skill)** — [waypoint-bio](skills/waypoint-bio/) against silent data loss: an unconverted MetaPhlAn table keeps 3% of abundance mass and still returns a valid embedding; skill-equipped agents won 16 to 0 on matched pairs.
+- **[The Millimetre Problem: Introducing the lab-hardware-cad Agent Skill](https://www.k-dense.ai/blog/lab-hardware-cad-skill)** — [lab-hardware-cad](skills/lab-hardware-cad/) over 98 geometry-scored runs: the skill arm produced parametric, regenerable models in 49 of 49 cases (baseline 0 of 49) and named the missing Y-maze standard instead of inventing one.
+- **[One Skill, 78 Databases: Why We Didn't Build 78 Skills](https://www.k-dense.ai/blog/database-lookup-one-skill-78-databases)** — The design rationale behind [database-lookup](skills/database-lookup/): consolidation cut always-on context cost by 13.9x while holding routing accuracy across five models.
+- **[Can an AI Agent Run Your Mass Spec Pipeline? Benchmarking the PyOpenMS Skill](https://www.k-dense.ai/blog/benchmarking-pyopenms-skill-mass-spectrometry)** — A 250-run study of [pyopenms](skills/pyopenms/): 100% task success with the skill versus 96% without, 92% fewer pyOpenMS API errors, and 10% lower cost.
+- **[Beyond RDKit: Benchmarking the Rowan Agent Skill Against Experiment](https://www.k-dense.ai/blog/benchmarking-rowan-skill-chemistry)** — [rowan](skills/rowan/) compared against RDKit and experimental data: pKa MAE 0.23 (R² 0.986), logD₇.₄ MAE 1.15, and 0.19 Å RMSD docking pose recovery for roughly $0.52 of compute.
+- **[GPU-Accelerate Your Science: 58x Average Speedup with a Single Skill](https://www.k-dense.ai/blog/optimize-for-gpu-skill)** — [optimize-for-gpu](skills/optimize-for-gpu/) rewriting CPU-bound Python across 12 libraries, with speedups ranging from 1.7x to 492x.
+- **[Towards Smarter Scientific Search: Exa Joins the Scientific Agent Skills Library](https://www.k-dense.ai/blog/towards-smarter-scientific-search-exa-scientific-agent-skills)** — What [exa-search](skills/exa-search/) adds: neural semantic search and URL extraction tuned for scholarly discovery instead of keyword matching.
+- **[Benchmarking Nano Banana 2 Lite for Scientific Image Generation](https://www.k-dense.ai/blog/benchmarking-nano-banana-2-lite-scientific-image-model)** — A 240-image comparison of scientific-diagram models, useful when choosing a backend for [generate-image](skills/generate-image/): 3.8 s median latency for Nano Banana 2 Lite against 49 s for GPT Image 2, with a quality tradeoff.
+- **[Benchmarking NVIDIA BioNeMo Agent Toolkit Skills for NIM microservices](https://www.k-dense.ai/blog/benchmarking-nvidia-bionemo-nim-skill)** — A separate NVIDIA skill set rather than one of these, but the findings generalize: skills help most with routing to non-obvious endpoints and with weak-model reliability, and do not improve the underlying scientific model's accuracy.
+
+### Why the workflow layer matters
+
+- **[The Model Is No Longer the Bottleneck](https://www.k-dense.ai/blog/the-model-is-no-longer-the-bottleneck)** — The case for why a repository like this one exists: frontier models now match specialized scientific software on raw capability (±0.079 ppm on NMR hydrogen shift prediction), so the limiting factor has moved to the workflow around the model — data access, code execution, verification, and auditable output.
+- **[The AI Co-Scientist Is Here. The Bottleneck Is Verification.](https://www.k-dense.ai/blog/ai-co-scientist-verification-bottleneck)** — A 10-point checklist for evaluating a research agent, built around exposing sources, code, data provenance, and intermediate work rather than a polished final answer — the same reasoning behind the provenance and retrieval-contract requirements in skills like [database-lookup](skills/database-lookup/) and [scientific-writing](skills/scientific-writing/).
+- **[Reproduction, Not Generation, Is AI's Killer App for Science](https://www.k-dense.ai/blog/reproduction-not-generation-ai-for-science)** — Why re-running published analyses is the highest-value use of an agent: 78% of papers and 93% of individual analysis tasks reproduced across a 221-study benchmark, because a reproduction can be checked against known numbers while a generated claim cannot.
+- **[Introducing K-Bench 01: Nine Frontier Models, 178 Real Scientific Tasks, and a Lot of Confident Wrong Answers](https://www.k-dense.ai/blog/introducing-k-bench-01-internal-benchmark)** — Nine frontier models on 178 real user tasks, with overclaiming in 40% of runs. Useful calibration for what to check when an agent reports success, and context for the verification boundaries written into the clinical, regulatory, and research-methodology skills above.
+
+### Security and safe deployment
+
+- **[Security in the Science Agent Era: What Every Lab Needs to Know Before Installing Skills](https://www.k-dense.ai/blog/skill-security-before-you-install)** — The practical review checklist behind this repo's [Security Disclaimer](#%EF%B8%8F-security-disclaimer): read the full `SKILL.md` and `scripts/`, scan before installing, and pin versions instead of tracking a branch.
+- **[The Sandboxed AI Scientist: Pairing NVIDIA OpenShell with Scientific Agent Skills](https://www.k-dense.ai/blog/sandboxed-ai-scientist-openshell-skills)** — Running these skills inside a policy-governed sandbox; see also the NemoClaw note in [Getting Started](#-getting-started).
+
+### Complementary open-source projects
+
+- **[Introducing Science Superpowers: Scientific Discipline for Your Research Agent](https://www.k-dense.ai/blog/introducing-science-superpowers)** — Hypothesis pre-registration, reproducible workflows, and verification-before-claims that wrap around these skills to guard against p-hacking and HARKing.
+- **[Your AI Assistant Reasons Like a Generalist. Science Needs a Specialist.](https://www.k-dense.ai/blog/introducing-scientific-agents)** — 503 open-source `AGENTS.md` profiles supplying the "how to think" layer alongside the "what to do" procedures in these skills.
+- **[Introducing mimeo and 80+ Mimeographs](https://www.k-dense.ai/blog/introducing-mimeo-and-mimeographs)** — Generate your own `SKILL.md` / `AGENTS.md` expert profiles by distilling how a given practitioner reasons.
+- **[Agentic Data Scientist: An Open Source AI That Actually Does the Analysis](https://www.k-dense.ai/blog/agentic-data-scientist-open-source)** — A multi-agent planning, execution, and validation harness that loads these skills for end-to-end data-science workflows.
+- **[Karpathy: An Open Source Agentic Machine Learning Engineer](https://www.k-dense.ai/blog/karpathy-agentic-ml-engineer)** — An autonomous ML-training agent built to consume Scientific Agent Skills for preprocessing through hyperparameter search.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to expand and improve this scientific skills repository!
+
+Read [AGENTS.md](AGENTS.md) before creating or changing a skill, and see [CONTRIBUTING.md](CONTRIBUTING.md) for the detailed workflow and pull request process. Contributions should focus on a scientific package, database, platform, or research workflow; broad coding, infrastructure, and routing skills are outside the repository's scope.
+
+### Ways to Contribute
+
+✨ **Add New Skills**
+- Create skills for additional scientific packages or databases
+- Add integrations for scientific platforms and tools
+
+📚 **Improve Existing Skills**
+- Enhance documentation with more examples and use cases
+- Add new workflows and reference materials
+- Improve code examples and scripts
+- Fix bugs or update outdated information
+
+🐛 **Report Issues**
+- Submit bug reports with detailed reproduction steps
+- Suggest improvements or new features
+
+### How to Contribute
+
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-skill`)
+3. **Follow** [CONTRIBUTING.md](CONTRIBUTING.md) and the existing directory structure
+4. **Ensure** all new skills include valid `SKILL.md` files with required frontmatter and `metadata.version`
+5. **Test** your examples and workflows thoroughly, and add a suite under `tests/<skill-name>/` if your skill ships `scripts/`
+6. **Commit** your changes (`git commit -m 'Add amazing skill'`)
+7. **Push** to your branch (`git push origin feature/amazing-skill`)
+8. **Submit** a pull request with a clear description of your changes
+
+### Contribution Guidelines
+
+✅ **Adhere to the [Agent Skills Specification](https://agentskills.io/specification)** — Every skill must follow the official spec (valid `SKILL.md` frontmatter, naming conventions, directory structure)  
+✅ Include a quoted `metadata.version` value in every `SKILL.md`  
+✅ Increment `metadata.version` when updating an existing skill  
+✅ Maintain consistency with existing skill documentation format  
+✅ Ensure all code examples are tested and functional  
+✅ Follow scientific best practices in examples and workflows  
+✅ Update relevant documentation when adding new capabilities  
+✅ Provide clear comments and docstrings in code  
+✅ Include references to official documentation
+
+### Testing
+
+Every skill that ships `scripts/` must have a test suite under `tests/<skill-name>/` and an entry in [`tests/skill-requirements.toml`](tests/skill-requirements.toml). The `tests/_meta` guard checks this coverage and the shared structural contract: frontmatter, document length, local links, script syntax, bytecode, and hardcoded local paths. It also validates `plugin.json` against the bundled Agent Plugins schema and checks that its version matches `pyproject.toml`. CLI `--help` and worked-example execution checks belong to the individual skill suites.
+
+```bash
+# Install repository development and validation tools
+uv sync
+
+# Structural contract and coverage guard — seconds, no scientific packages needed
+uv run python -m pytest tests/_meta -q
+
+# Validate one skill's Agent Skills frontmatter
+uv run skills-ref validate skills/<skill-name>
+
+# One skill's suite in the current environment
+uv run --with pytest python -m pytest tests/<skill-name> -q
+
+# One skill with its declared packages and Python version
+uv run python tests/run_all.py --isolated <skill-name>
+
+# Every suite, each in its own throwaway environment
+uv run python tests/run_all.py --isolated
+```
+
+Run one skill per pytest process: different skills reuse module names such as `_common`, so collecting several suites together can import the wrong module. `tests/run_all.py` handles process isolation; `--isolated` also provides each skill's declared dependency environment. A suite run in the current environment may skip checks when required packages are absent.
+
+The [Skill Tests](https://github.com/K-Dense-AI/scientific-agent-skills/actions/workflows/skill-tests.yml) workflow runs the contract and standard-library-only suites for relevant pull requests and pushes to `main`, and can be triggered manually. The full scientific dependency sweep is not run in CI; run it before a release or when changing the shared contract. Some skills need external runtimes or system tools; installation gaps are documented in [`tests/skill-requirements.toml`](tests/skill-requirements.toml).
+
+### Security Scanning
+
+All skills in this repository are security-scanned using [Cisco AI Defense Skill Scanner](https://github.com/cisco-ai-defense/skill-scanner), an open-source tool that detects prompt injection, data exfiltration, and malicious code patterns in Agent Skills.
+
+If you are contributing a new skill, we recommend running the scanner locally before submitting a pull request:
+
+```bash
+uv pip install cisco-ai-skill-scanner
+skill-scanner scan /path/to/your/skill --use-behavioral
+```
+
+> **Note:** A clean scan result reduces noise in review, but does not guarantee a skill is free of all risk. Contributed skills are also reviewed manually before merging.
+
+### Recognition
+
+Contributors are recognized in our community and may be featured in:
+- Repository contributors list
+- Special mentions in release notes
+- K-Dense community highlights
+
+Your contributions help make scientific computing more accessible and enable researchers to leverage AI tools more effectively!
+
+### Support Open Source
+
+This project builds on 50+ amazing open source projects. If you find value in these skills, please consider [supporting the projects we depend on](docs/open-source-sponsors.md).
+
+---
+
+## 🔧 Troubleshooting
+
+### Common Issues
+
+**Problem: Skills not loading**
+- Verify skill folders are in the correct directory (see [Getting Started](#-getting-started))
+- Each skill folder must contain a `SKILL.md` file
+- Restart your agent/IDE after copying skills
+- In Cursor, check Settings → Rules to confirm skills are discovered
+
+**Problem: Missing Python dependencies**
+- Solution: Check the specific `SKILL.md` file for required packages
+- Install dependencies: `uv pip install package-name`
+
+**Problem: API rate limits**
+- Solution: Many databases have rate limits. Review the specific database documentation
+- Consider implementing caching or batch requests
+
+**Problem: Authentication errors**
+- Solution: Some services require API keys. Check the `SKILL.md` for authentication setup
+- Verify your credentials and permissions
+
+**Problem: Outdated examples**
+- Solution: Report the issue via GitHub Issues
+- Check the official package documentation for updated syntax
+
+**Problem: `gh skill install` or docs link to `scientific-skills/` fails (v2.43.0+)**
+- As of v2.43.0, skills live under `skills/` (not `scientific-skills/`) to match the Agent Skills layout expected by GitHub CLI
+- Update manual copy paths, bookmarks, and citations from `scientific-skills/<name>` to `skills/<name>`
+- Re-run `gh skill install K-Dense-AI/scientific-agent-skills` after pulling the latest release
+
+---
+
+## ❓ FAQ
+
+### General Questions
+
+**Q: Is this free to use?**  
+A: Yes! This repository is MIT licensed. However, each individual skill has its own license specified in the `license` metadata field within its `SKILL.md` file—be sure to review and comply with those terms.
+
+**Q: Why are all skills grouped together instead of separate packages?**  
+A: We believe good science in the age of AI is inherently interdisciplinary. Bundling all skills together makes it trivial for you (and your agent) to bridge across fields—e.g., combining genomics, cheminformatics, clinical data, and machine learning in one workflow—without worrying about which individual skills to install or wire together.
+
+**Q: Can I use this for commercial projects?**  
+A: The repository itself is MIT licensed, which allows commercial use. However, individual skills may have different licenses—check the `license` field in each skill's `SKILL.md` file to ensure compliance with your intended use.
+
+**Q: Do all skills have the same license?**  
+A: No. Each skill has its own license specified in the `license` metadata field within its `SKILL.md` file. These licenses may differ from the repository's MIT License. Users are responsible for reviewing and adhering to the license terms of each individual skill they use.
+
+**Q: How often is this updated?**  
+A: We regularly update skills to reflect the latest versions of packages and APIs. Major updates are announced in release notes.
+
+**Q: Can I use this with other AI models?**  
+A: The core `SKILL.md` format follows the open [Agent Skills](https://agentskills.io/) standard. Installation paths, discovery, and optional metadata support vary by host and version, so confirm your target host's current documentation.
+
+### Installation & Setup
+
+**Q: Do I need all the Python packages installed?**  
+A: No. Install only the dependencies for the workflows you use, following each `SKILL.md`. Keep workflows with incompatible package or Python requirements in separate environments.
+
+**Q: What if a skill doesn't work?**  
+A: First check the [Troubleshooting](#-troubleshooting) section. If the issue persists, file an issue on GitHub with detailed reproduction steps.
+
+**Q: Do the skills work offline?**  
+A: Local analysis can work offline once its dependencies, reference data, and model files are available. Database queries, hosted models, and cloud platforms need network access; check the individual skill's requirements.
+
+### Contributing
+
+**Q: Can I contribute my own skills?**  
+A: Absolutely! We welcome contributions. See the [Contributing](#-contributing) section for guidelines and best practices.
+
+**Q: How do I report bugs or suggest features?**  
+A: Open an issue on GitHub with a clear description. For bugs, include reproduction steps and expected vs actual behavior.
+
+---
+
+## 💬 Support
+
+Need help? Here's how to get support:
+
+- 📖 **Documentation**: Check the relevant `SKILL.md` and `references/` folders
+- 🐛 **Bug Reports**: [Open an issue](https://github.com/K-Dense-AI/scientific-agent-skills/issues)
+- 💡 **Feature Requests**: [Submit a feature request](https://github.com/K-Dense-AI/scientific-agent-skills/issues/new)
+- 📣 **Updates and demos**: Follow [X](https://x.com/k_dense_ai), [LinkedIn](https://www.linkedin.com/company/k-dense-inc), [YouTube](https://www.youtube.com/@K-Dense-Inc), and [Reddit](https://www.reddit.com/user/-k-dense-/) to keep up with new skills, tutorials, and Scientific Agent Skills releases
+- 💼 **Enterprise Support**: Contact [K-Dense](https://k-dense.ai/) for commercial support
+
+---
+
+## 📖 Citation
+
+If you use Scientific Agent Skills in your research or project, please cite our paper:
+
+> Timothy Kassis, Vinayak Agarwal, Yuhuan He, Darshil Patel, and Aubrey M. Brueckner. **Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents.** arXiv:2609.00065, 2026. [https://arxiv.org/abs/2609.00065](https://arxiv.org/abs/2609.00065)
+
+When relevant, also cite the individual skill or skills that materially supported your work.
+
+GitHub's **Cite this repository** button, backed by [`CITATION.cff`](CITATION.cff), produces the same paper citation in APA or BibTeX.
+
+The paper citation helps others find the repository, understand the broader skill ecosystem used in your workflow, and credit the maintenance effort behind Scientific Agent Skills. Individual skill citations give more precise credit for the specific package, database, or workflow guidance your agent used.
+
+Recommended practice:
+- Always cite the **Scientific Agent Skills paper** using one of the formats below.
+- Also cite each individual skill that directly contributed to your analysis, code, figures, reports, or research workflow.
+- If a skill wraps or documents an external package, database, or platform, cite that upstream project too when your field's norms require it.
+
+### Paper Citation
+
+#### BibTeX
+```bibtex
+@misc{kassis2026scientificagentskills,
+  title         = {Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents},
+  author        = {Kassis, Timothy and Agarwal, Vinayak and He, Yuhuan and Patel, Darshil and Brueckner, Aubrey M.},
+  year          = {2026},
+  eprint        = {2609.00065},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2609.00065}
+}
+```
+
+#### APA
+```
+Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent Skills: A library of procedural knowledge for research agents. arXiv. https://arxiv.org/abs/2609.00065
+```
+
+#### MLA
+```
+Kassis, Timothy, et al. "Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents." arXiv, 2026, arxiv.org/abs/2609.00065.
+```
+
+#### Plain Text
+```
+Kassis, T., Agarwal, V., He, Y., Patel, D., & Brueckner, A. M. (2026). Scientific Agent Skills: A Library of Procedural Knowledge for Research Agents. arXiv:2609.00065. https://arxiv.org/abs/2609.00065
+```
+
+### Software Citation
+
+If you also need to cite a specific version of the repository itself (for example, to pin the exact skill set an analysis ran against), add a software citation alongside the paper and record the release tag or commit you used:
+
+```bibtex
+@software{scientific_agent_skills_2026,
+  author = {{K-Dense Inc.}},
+  title = {Scientific Agent Skills: A Comprehensive Collection of Scientific Tools for AI Agents},
+  year = {2026},
+  url = {https://github.com/K-Dense-AI/scientific-agent-skills},
+  note = {177 skills covering databases, packages, integrations, and analysis tools}
+}
+```
+
+### Individual Skill Citation
+
+When citing a specific skill, include the skill name, version from `metadata.version` in that skill's `SKILL.md`, and the direct skill URL. For example:
+
+```bibtex
+@software{scientific_agent_skills_astropy_2026,
+  author = {{K-Dense Inc.}},
+  title = {Astropy Skill for Scientific Agent Skills},
+  year = {2026},
+  url = {https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/astropy},
+  note = {Version 1.5, part of Scientific Agent Skills}
+}
+```
+
+Plain text format:
+
+```text
+Astropy skill for Scientific Agent Skills, version 1.5.
+K-Dense Inc. (2026).
+https://github.com/K-Dense-AI/scientific-agent-skills/tree/main/skills/astropy
+```
+
+We appreciate acknowledgment in publications, presentations, or projects that benefit from these skills.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+**Copyright © 2026 K-Dense Inc.** ([k-dense.ai](https://k-dense.ai/))
+
+### Key Points:
+- ✅ **Free for any use** (commercial and noncommercial)
+- ✅ **Open source** - modify, distribute, and use freely
+- ✅ **Permissive** - minimal restrictions on reuse
+- ⚠️ **No warranty** - provided "as is" without warranty of any kind
+
+See [LICENSE.md](LICENSE.md) for full terms.
+
+### Individual Skill Licenses
+
+> ⚠️ **Important**: Each skill has its own license specified in the `license` metadata field within its `SKILL.md` file. These licenses may differ from the repository's MIT License and may include additional terms or restrictions. **Users are responsible for reviewing and adhering to the license terms of each individual skill they use.**
+</file>
+
+<file path="skills-main/README.md">
+> **Note:** This repository contains Anthropic's implementation of skills for Claude. For information about the Agent Skills standard, see [agentskills.io](http://agentskills.io).
+
+[![skills.sh](https://skills.sh/b/anthropics/skills)](https://skills.sh/anthropics/skills)
+
+# Skills
+Skills are folders of instructions, scripts, and resources that Claude loads dynamically to improve performance on specialized tasks. Skills teach Claude how to complete specific tasks in a repeatable way, whether that's creating documents with your company's brand guidelines, analyzing data using your organization's specific workflows, or automating personal tasks.
+
+For more information, check out:
+- [What are skills?](https://support.claude.com/en/articles/12512176-what-are-skills)
+- [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude)
+- [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills)
+- [Equipping agents for the real world with Agent Skills](https://anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills)
+
+# About This Repository
+
+This repository contains skills that demonstrate what's possible with Claude's skills system. These skills range from creative applications (art, music, design) to technical tasks (testing web apps, MCP server generation) to enterprise workflows (communications, branding, etc.).
+
+Each skill is self-contained in its own folder with a `SKILL.md` file containing the instructions and metadata that Claude uses. Browse through these skills to get inspiration for your own skills or to understand different patterns and approaches.
+
+Many skills in this repo are open source (Apache 2.0). We've also included the document creation & editing skills that power [Claude's document capabilities](https://www.anthropic.com/news/create-files) under the hood in the [`skills/docx`](./skills/docx), [`skills/pdf`](./skills/pdf), [`skills/pptx`](./skills/pptx), and [`skills/xlsx`](./skills/xlsx) subfolders. These are source-available, not open source, but we wanted to share these with developers as a reference for more complex skills that are actively used in a production AI application.
+
+## Disclaimer
+
+**These skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.
+
+# Skill Sets
+- [./skills](./skills): Skill examples for Creative & Design, Development & Technical, Enterprise & Communication, and Document Skills
+- [./spec](./spec): The Agent Skills specification
+- [./template](./template): Skill template
+
+# Try in Claude Code, Claude.ai, and the API
+
+## Claude Code
+You can register this repository as a Claude Code Plugin marketplace by running the following command in Claude Code:
+```
+/plugin marketplace add anthropics/skills
+```
+
+Then, to install a specific set of skills:
+1. Select `Browse and install plugins`
+2. Select `anthropic-agent-skills`
+3. Select `document-skills` or `example-skills`
+4. Select `Install now`
+
+Alternatively, directly install either Plugin via:
+```
+/plugin install document-skills@anthropic-agent-skills
+/plugin install example-skills@anthropic-agent-skills
+```
+
+After installing the plugin, you can use the skill by just mentioning it. For instance, if you install the `document-skills` plugin from the marketplace, you can ask Claude Code to do something like: "Use the PDF skill to extract the form fields from `path/to/some-file.pdf`"
+
+## Claude.ai
+
+These example skills are all already available to paid plans in Claude.ai. 
+
+To use any skill from this repository or upload custom skills, follow the instructions in [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude#h_a4222fa77b).
+
+## Claude API
+
+You can use Anthropic's pre-built skills, and upload custom skills, via the Claude API. See the [Skills API Quickstart](https://docs.claude.com/en/api/skills-guide#creating-a-skill) for more.
+
+# Creating a Basic Skill
+
+Skills are simple to create - just a folder with a `SKILL.md` file containing YAML frontmatter and instructions. You can use the **template-skill** in this repository as a starting point:
+
+```markdown
+---
+name: my-skill-name
+description: A clear description of what this skill does and when to use it
+---
+
+# My Skill Name
+
+[Add your instructions here that Claude will follow when this skill is active]
+
+## Examples
+- Example usage 1
+- Example usage 2
+
+## Guidelines
+- Guideline 1
+- Guideline 2
+```
+
+The frontmatter requires only two fields:
+- `name` - A unique identifier for your skill (lowercase, hyphens for spaces)
+- `description` - A complete description of what the skill does and when to use it
+
+The markdown content below contains the instructions, examples, and guidelines that Claude will follow. For more details, see [How to create custom skills](https://support.claude.com/en/articles/12512198-creating-custom-skills).
+
+# Partner Skills
+
+Skills are a great way to teach Claude how to get better at using specific pieces of software. As we see awesome example skills from partners, we may highlight some of them here:
+
+- **Notion** - [Notion Skills for Claude](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0)
+</file>
+
+</files>

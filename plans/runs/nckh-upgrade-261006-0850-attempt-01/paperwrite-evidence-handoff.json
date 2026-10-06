@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "task_id": "vnm-population-chronological-forecast",
+  "evidence": [
+    {
+      "path": "statistical-readout.json",
+      "sha256": "f07390a914c8dc0cebb058d9323847bf0bf3bee7beea45a4c280317966660be8"
+    },
+    {
+      "path": "aiops-readout.json",
+      "sha256": "68efda097347d71a5d313a59805b125ed85418390369f620a910ce8f483b6de1"
+    },
+    {
+      "path": "experiment-readout.json",
+      "sha256": "71f398d41205aa15cdfbbc40ab3fbcc15e2b2aa1759f7afb153ec47ad41d2c31"
+    },
+    {
+      "path": "cleanup.json",
+      "sha256": "9625c48a4361747d4b10640c2e195b1a34278f67d99e1a7756ec486f3fabd34c"
+    },
+    {
+      "path": "pilot-readout.md",
+      "sha256": "23217c5f4140fefd57623d4f855df78cf3ee1f3468c57a2a928121bd3b7b9e52"
+    },
+    {
+      "path": "p6-numerical-oracle.json",
+      "sha256": "8ac84abcbf5afd4783389a42706d31e451ed555ae7b4977f985187abc35bd647"
+    }
+  ],
+  "supported": "Descriptive arithmetic on one dated series and observed process/artifact integrity",
+  "unsupported": [
+    "blind holdout efficacy",
+    "generalization",
+    "causal identification",
+    "human/scientific/native signoff"
+  ],
+  "scientific_acceptance": "pending"
+}

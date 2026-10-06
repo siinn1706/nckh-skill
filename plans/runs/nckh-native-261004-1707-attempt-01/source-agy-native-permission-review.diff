@@ -1,0 +1,59 @@
+--- hooks/codecs/agy.py before
++++ hooks/codecs/agy.py after
+@@ -24,8 +24,10 @@
+ 
+ 
+ def encode(event_name, decision):
+-    if event_name == "PreToolUse" and decision["decision"] in {"block", "pending"}:
+-        return {"decision": "deny", "reason": "; ".join(decision["reason_codes"])}, 0
++    if event_name == "PreToolUse":
++        if decision["decision"] in {"block", "pending"}:
++            return {"decision": "deny", "reason": "; ".join(decision["reason_codes"])}, 0
++        return {"decision": "ask"}, 0
+     if event_name == "Stop":
+         return {"decision": "stop"}, 0
+     # No permissionOverrides, injected tool/user messages or forced continuation.
+--- tests/runtime/test_hook_adapters.py before
++++ tests/runtime/test_hook_adapters.py after
+@@ -5,10 +5,26 @@
+ 
+ from core.schema import ContractError
+ from tests.hooks.test_runner import payload
+-from core.paths import temporary_tree
++from core.paths import atomic_json, temporary_tree
++from hooks.runner import invoke
+ 
+ 
+ class HookAdapterTests(unittest.TestCase):
++    def test_agy_pretool_preserves_native_permission_checks(self):
++        with temporary_tree() as project:
++            context = {"schema_version": 1, "task_id": "native-permission-contract",
++                       "brief": {"mode": "auto"}, "allowed_operations": ["write"],
++                       "tool_operations": {"Write": "write"}}
++            for mapping, expected in [({"Write": "write"}, "allow"), ({}, "manual")]:
++                context["tool_operations"] = mapping
++                atomic_json(project / "context.json", context)
++                (wire, code), receipt = invoke("agy", "PreToolUse", json.dumps(payload(project, "agy")).encode(),
++                                               project=project, context_reference="context.json")
++                self.assertEqual(receipt["decision"], expected)
++                self.assertEqual(code, 0)
++                self.assertEqual(wire, {"decision": "ask"})
++                self.assertNotIn("permissionOverrides", wire)
++
+     def test_host_specific_denial_and_stop_shapes(self):
+         with temporary_tree() as project:
+             for host in ("claude", "codex", "cursor", "agy"):
+--- docs/installation.md before
++++ docs/installation.md after
+@@ -179,6 +179,11 @@
+ python -I EXTRACTED/hooks/configure-hooks.py remove --project PROJECT --host codex --package EXTRACTED --preview-file REMOVE.json --approved-hash HASH
+ ```
+ 
++AGY `PreToolUse` always requires a `decision`. Non-blocking policy returns `ask`
++to retain native permission checks and respect the host's Always Allow setting;
++`block` and `pending` return `deny`. The codec does not grant permission with
++`allow` or emit `permissionOverrides`.
++
+ Evidence must retain eight observed paths per selected event: allow, policy deny,
+ malformed input/output, timeout, crash, unsupported route and duplicate invocation.
+ Hashes check integrity and cannot authenticate a fabricated observation or grant.

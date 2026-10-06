@@ -1,0 +1,163 @@
+{
+  "attempt": "template-write-allow",
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "callbacks": [],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-allow.json",
+    "sha256": "19a8fb6a98374bd1007a116e26153e7a5385d34121067bfcc5697511d99c77a9"
+  },
+  "config_route": "inline sessionFlags; existing native-persisted workspace trust reused, no new key",
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "invalid_stdout_lines": 0,
+  "marker_exists": true,
+  "marker_relative": "oracles/r35-codex-template-allow.txt",
+  "marker_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "mode": "allow",
+  "model_requested": "gpt-5.6-luna",
+  "native_callbacks": [],
+  "native_frames": [
+    {
+      "thread_id": "01a10a21-f344-7782-8b1c-e7ab9ef1fe7f",
+      "type": "thread.started"
+    },
+    {
+      "item": {
+        "id": "item_0",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_1",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_2",
+        "message": "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "item": {
+        "id": "item_3",
+        "message": "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_4",
+        "text": "**Clarifying single patch application rule**",
+        "type": "reasoning"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "changes": [
+          {
+            "kind": "add",
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0658-r34-codex-file-attempt-01\\project-02\\oracles\\r35-codex-template-allow.txt"
+          }
+        ],
+        "id": "item_5",
+        "status": "in_progress",
+        "type": "file_change"
+      },
+      "type": "item.started"
+    },
+    {
+      "item": {
+        "changes": [
+          {
+            "kind": "add",
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0658-r34-codex-file-attempt-01\\project-02\\oracles\\r35-codex-template-allow.txt"
+          }
+        ],
+        "id": "item_5",
+        "status": "completed",
+        "type": "file_change"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_6",
+        "text": "ORACLE_ATTEMPT_FINISHED",
+        "type": "agent_message"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 26368,
+        "input_tokens": 53358,
+        "output_tokens": 117,
+        "reasoning_output_tokens": 48
+      }
+    }
+  ],
+  "permission_route": "dangerous native CLI flags",
+  "policy_receipts": [
+    {
+      "decision": "pending",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/PostToolUse/c7144650a8674861b4eb6293a18eb272907522674d995ed96b793747ad968a49.json",
+      "reason_codes": [
+        "artifact-final-bytes-missing-or-stale"
+      ],
+      "sha256": "0194706ec466aac73cafe990b69ebb2e0aeb3b0127b2a6c627f708cb258065e1"
+    },
+    {
+      "decision": "allow",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/PreToolUse/0bd1f50abea678a1743e8e528d0ceb97217e5ced382688f8d14fca9eb9b2b8ff.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "a5cf7d1f11251fac6c6272378d0224af8b9aa6e6e620cd0b19ca1103b9248435"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/SessionStart/aa385525cf9b8bc30942a0ca95ca8de3f2e28c1c8e54e6d521c49a5feecde886.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "b3e9335c821862f3a64315610e7e4d80d40a682440657ea2f8011c00eba379f2"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/Stop/e78e7762b75b7289eb378eb65bc40180e0877e69c185d32f3466caf2341576a0.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "a18a04c954157f392abe63b6d338c95251aef89b5a78f61567614edcc5e624d8"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/UserPromptSubmit/aa385525cf9b8bc30942a0ca95ca8de3f2e28c1c8e54e6d521c49a5feecde886.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "b3e9335c821862f3a64315610e7e4d80d40a682440657ea2f8011c00eba379f2"
+    }
+  ],
+  "process_exited": true,
+  "requested_native_tool": "apply_patch",
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed"
+}

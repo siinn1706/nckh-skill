@@ -1,0 +1,41 @@
+{
+  "root_pid": 27612,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T09:35:14.3271643Z",
+  "identity_checks": [
+    {
+      "pid": 27612,
+      "expected": "2026-10-05T09:21:51.371474Z",
+      "current": "2026-10-05T09:21:51.3714740Z"
+    },
+    {
+      "pid": 19092,
+      "expected": "2026-10-05T09:22:41.687041Z",
+      "current": "2026-10-05T09:22:41.6870410Z"
+    },
+    {
+      "pid": 8276,
+      "expected": "2026-10-05T09:22:41.826705Z",
+      "current": "2026-10-05T09:22:41.8267050Z"
+    },
+    {
+      "pid": 40948,
+      "expected": "2026-10-05T09:22:43.912635Z",
+      "current": "2026-10-05T09:22:43.9126350Z"
+    },
+    {
+      "pid": 28728,
+      "expected": "2026-10-05T09:22:43.953541Z",
+      "current": "2026-10-05T09:22:43.9535410Z"
+    }
+  ],
+  "method": "force-owned-tree-after-graceful-refusal",
+  "exit_code": 0,
+  "output": [
+    "SUCCESS: The process with PID 28728 (child process of PID 40948) has been terminated.",
+    "SUCCESS: The process with PID 40948 (child process of PID 8276) has been terminated.",
+    "SUCCESS: The process with PID 8276 (child process of PID 19092) has been terminated.",
+    "SUCCESS: The process with PID 19092 (child process of PID 27612) has been terminated.",
+    "SUCCESS: The process with PID 27612 (child process of PID 14968) has been terminated."
+  ]
+}

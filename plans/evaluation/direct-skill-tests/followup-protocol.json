@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-01T16:30:18.841769+00:00",
+  "round": 2,
+  "corpus_sha256": "bbb6d312df45c4bad75bef5b5e8b5a42202dfcf0122382ee59e51ce84c63de84",
+  "installed_revision": 14,
+  "source_changes": "none",
+  "timeout_seconds": null,
+  "persist_session": true,
+  "max_development_rounds": 3,
+  "first_round_evidence": "preserved",
+  "followups": [
+    {
+      "skill_id": "nckh-cook",
+      "case_types": [
+        "positive",
+        "outcome",
+        "negative",
+        "failure"
+      ],
+      "reason": "Interrupted first attempt at a fixed deadline; user removed task time limits. Complete the same four scenarios with no deadline.",
+      "project_catalog_scope": true
+    },
+    {
+      "skill_id": "nckh-brand",
+      "case_types": [
+        "outcome"
+      ],
+      "reason": "Resolve actual calculation provenance with retained complete native rollout; same original request/checks.",
+      "project_catalog_scope": true
+    },
+    {
+      "skill_id": "nckh-experiment",
+      "case_types": [
+        "positive",
+        "negative"
+      ],
+      "reason": "Resolve sample calculation provenance with retained complete native rollout; same original request/checks.",
+      "project_catalog_scope": true
+    },
+    {
+      "skill_id": "nckh-campaign",
+      "case_types": [
+        "negative"
+      ],
+      "reason": "Global AK owner chosen where frozen project owner expected; repeat same request/checks with explicit observed37-skill project-catalog scope.",
+      "project_catalog_scope": true
+    },
+    {
+      "skill_id": "nckh-marketing-plan",
+      "case_types": [
+        "negative"
+      ],
+      "reason": "Global AK security owner selected; repeat same request/checks with explicit observed project-catalog scope.",
+      "project_catalog_scope": true
+    }
+  ],
+  "unresolved_coverage": {
+    "nckh-cro:positive": "First-run noindex omission remains fail; no source-defect diagnosis supports changing its boundary or oracle."
+  },
+  "grading": "Controller inspects actual outputs/trace/artifacts against existing expected checks. No pass from exit0, no protected holdout/human/scientific acceptance.",
+  "planning_adjustment": "Before any follow-up dispatch, combine experiment positive/negative in one native session because receipt/workspace ownership is per skill/round. All diagnostic sessions explicitly use the observed project NCKH catalog. Requests/checks remain unchanged.",
+  "prior_draft_sha256": "9a43bcb22534e752a572f9f6ee2eacad2f1234bef99e1ec86d1872b4c9efa91b"
+}

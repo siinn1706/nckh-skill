@@ -1,0 +1,67 @@
+{
+  "global_deadline_seconds": null,
+  "installed_update": "not-performed",
+  "native_r37_retest": "pending",
+  "owner": "/root",
+  "port": null,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "source_unchanged": true,
+  "stages": [
+    {
+      "exit_status": 0,
+      "name": "deterministic",
+      "pid": 57420,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02/commands/pipeline-deterministic.json",
+      "seconds": 689.8279999999795,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "build",
+      "pid": 51588,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02/commands/pipeline-build.json",
+      "seconds": 1050.329000000027,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "archive",
+      "pid": 47272,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02/commands/pipeline-archive.json",
+      "seconds": 104.64100000000326,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "smoke",
+      "pid": 47036,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02/commands/pipeline-smoke.json",
+      "seconds": 407.4219999999623,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "preview",
+      "pid": 48584,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02/commands/pipeline-preview.json",
+      "seconds": 70.39000000001397,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "preservation",
+      "pid": 1436,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02/commands/pipeline-preservation.json",
+      "seconds": 14.40600000001723,
+      "status": "completed-unreviewed"
+    }
+  ],
+  "status": "completed-local-checks-native-retest-pending"
+}

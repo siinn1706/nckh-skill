@@ -1,0 +1,372 @@
+{
+  "attempt": "posttooluse-timeout-01",
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "observations\\posttooluse-timeout-01\\PostToolUse\\a39df563182e49f5a1cc27dc1deabadc.json",
+      "sha256": "e04f23c549f2ab26c446a277c0131e475870ea34bd774653b7ad338e659b8074"
+    },
+    {
+      "path": "observations\\posttooluse-timeout-01\\PreToolUse\\9f264f0ef2f84822a4558048741d8fd1.json",
+      "sha256": "272329220e212f4ad015c42c726aa0dfadf28a67a5bb1b57b441ea3af1d6cc2c"
+    },
+    {
+      "path": "observations\\posttooluse-timeout-01\\SessionStart\\0264111bf08c418bbe35f3fe567a46dc.json",
+      "sha256": "01798485783b243c5745d81ac5d7d3f0b31a4c15b67679273692d6fd27906bfc"
+    },
+    {
+      "path": "observations\\posttooluse-timeout-01\\Stop\\ae91f0c540554780b09153b45ab9d445.json",
+      "sha256": "75e772b4c1f8810f30382ba8a8053429a1668bd3987528a76ccd3922aff7d05a"
+    },
+    {
+      "path": "observations\\posttooluse-timeout-01\\UserPromptSubmit\\8f824f35e6eb46e38cf2f1d662a68338.json",
+      "sha256": "fef43430aaae7adbe756ef95e2fb18ff0bcbfd0aecc76ed5123f4d3c6cd450f9"
+    }
+  ],
+  "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-posttooluse-timeout-01.json",
+  "configuration_route": "only sessionFlags inline hooks; project remains untrusted; no global config or trust write",
+  "duplicate_kind": null,
+  "effort_requested": "medium",
+  "ended_at": "2026-10-04T18:17:47.915122+00:00",
+  "event": "PostToolUse",
+  "exit_code": 0,
+  "fault_origin": "controller-after-genuine-native-callback",
+  "invalid_stdout_lines": 0,
+  "marker_exists": true,
+  "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\posttooluse-timeout-01.txt",
+  "marker_preimage": "absent",
+  "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+  "mode": "timeout",
+  "model_requested": "gpt-5.6-luna",
+  "native_callbacks": [
+    {
+      "attempt": "posttooluse-timeout-01",
+      "event": "PostToolUse",
+      "fault_origin": "controller-after-genuine-callback",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_response",
+        "tool_use_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "7735fae93c5963bd7bfad0c7578b07910744ce658958e1e090411685835fbc8b",
+      "input_size": 677,
+      "mode": "timeout",
+      "native_command_sha256": "6460b3a3ac437344b688e7bc7b7271620f8e20bc780e6bd21caec4d33484592e",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "b395ad1de2108475c1a1d09741a570c57e6b634686410a050ae50d0efad3b194",
+      "native_tool_name": "Bash",
+      "native_tool_use_id": "exec-2b08e4a7-0906-44d6-b8c7-1c8b378d6b79",
+      "native_turn_id": "01a10822-a722-7cf0-bf6d-d871b8a4e771",
+      "observer_pid": 53972,
+      "parent_pid": 42908,
+      "reported_event": "PostToolUse",
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": true,
+      "started_at": "2026-10-04T18:17:41.983686+00:00",
+      "status": "intentional-test-sleep-eight-seconds",
+      "tool_input_fields": [
+        "command"
+      ]
+    },
+    {
+      "attempt": "posttooluse-timeout-01",
+      "completed_at": "2026-10-04T18:17:40.733360+00:00",
+      "event": "PreToolUse",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "3a1d8c2e9850ddedfe2c125a58d0f9fed190470769f36289485fbe8b8b068055",
+      "input_size": 657,
+      "mode": "allow",
+      "native_command_sha256": "6460b3a3ac437344b688e7bc7b7271620f8e20bc780e6bd21caec4d33484592e",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "b395ad1de2108475c1a1d09741a570c57e6b634686410a050ae50d0efad3b194",
+      "native_tool_name": "Bash",
+      "native_tool_use_id": "exec-2b08e4a7-0906-44d6-b8c7-1c8b378d6b79",
+      "native_turn_id": "01a10822-a722-7cf0-bf6d-d871b8a4e771",
+      "observer_pid": 59048,
+      "parent_pid": 13672,
+      "reported_event": "PreToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 31480,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:17:40.332857+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "tool_input_fields": [
+        "command"
+      ]
+    },
+    {
+      "attempt": "posttooluse-timeout-01",
+      "completed_at": "2026-10-04T18:17:32.327617+00:00",
+      "event": "SessionStart",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "source",
+        "transcript_path"
+      ],
+      "input_sha256": "be0f8b975729c1ff15c9c3418b7cd72072c3baf1df5e1808d0f6da612676242f",
+      "input_size": 305,
+      "mode": "allow",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "b395ad1de2108475c1a1d09741a570c57e6b634686410a050ae50d0efad3b194",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": null,
+      "observer_pid": 28916,
+      "parent_pid": 8236,
+      "reported_event": "SessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "writing-resource-advice-only",
+          "hookEventName": "SessionStart"
+        }
+      },
+      "runner_pid": 43616,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:17:31.924897+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fe7b7019656fd6c0a1bf0e387ff5655abf5a3bc6d18babc7cd127dcbd6f2cfa1",
+      "tool_input_fields": []
+    },
+    {
+      "attempt": "posttooluse-timeout-01",
+      "completed_at": "2026-10-04T18:17:47.271191+00:00",
+      "event": "Stop",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "last_assistant_message",
+        "model",
+        "permission_mode",
+        "session_id",
+        "stop_hook_active",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "616f71dc7475f53cade0fc2ffbd50978d4cd8a742fd2368d58af56c2a426aa65",
+      "input_size": 403,
+      "mode": "allow",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "b395ad1de2108475c1a1d09741a570c57e6b634686410a050ae50d0efad3b194",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": "01a10822-a722-7cf0-bf6d-d871b8a4e771",
+      "observer_pid": 57208,
+      "parent_pid": 33504,
+      "reported_event": "Stop",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 59064,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:17:46.884361+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "tool_input_fields": []
+    },
+    {
+      "attempt": "posttooluse-timeout-01",
+      "completed_at": "2026-10-04T18:17:33.584046+00:00",
+      "event": "UserPromptSubmit",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "prompt",
+        "session_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "5df520b584b31d7bf46c13c84922d7df2a50204c7a07d3c114f1439056bd7491",
+      "input_size": 838,
+      "mode": "allow",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "b395ad1de2108475c1a1d09741a570c57e6b634686410a050ae50d0efad3b194",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": "01a10822-a722-7cf0-bf6d-d871b8a4e771",
+      "observer_pid": 10800,
+      "parent_pid": 23736,
+      "reported_event": "UserPromptSubmit",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "writing-resource-advice-only",
+          "hookEventName": "UserPromptSubmit"
+        }
+      },
+      "runner_pid": 56284,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:17:33.081061+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b132d4385a1c73b9ab3925fdc245e6104a49c7ff4bfee37bf346f11fe0607937",
+      "tool_input_fields": []
+    }
+  ],
+  "native_json_frames": [
+    {
+      "thread_id": "01a10822-a635-7683-b0bc-c62da045585b",
+      "type": "thread.started"
+    },
+    {
+      "item": {
+        "id": "item_0",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_1",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_2",
+        "message": "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "item": {
+        "id": "item_3",
+        "message": "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_4",
+        "text": "**Planning single native shell execution**",
+        "type": "reasoning"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "aggregated_output": "",
+        "command": "\"C:\\\\Program Files\\\\PowerShell\\\\7\\\\pwsh.exe\" -Command \"Set-Content -LiteralPath 'C:/Users/USER\\\\Downloads\\\\test-skill\\\\plans\\\\runs\\\\nckh-native-261005-0052-r34-codex-attempt-01\\\\project\\\\oracles\\\\posttooluse-timeout-01.txt' -Value 'NCKH_NATIVE_TOOL_ORACLE' -Encoding utf8\"",
+        "exit_code": null,
+        "id": "item_5",
+        "status": "in_progress",
+        "type": "command_execution"
+      },
+      "type": "item.started"
+    },
+    {
+      "item": {
+        "aggregated_output": "",
+        "command": "\"C:\\\\Program Files\\\\PowerShell\\\\7\\\\pwsh.exe\" -Command \"Set-Content -LiteralPath 'C:/Users/USER\\\\Downloads\\\\test-skill\\\\plans\\\\runs\\\\nckh-native-261005-0052-r34-codex-attempt-01\\\\project\\\\oracles\\\\posttooluse-timeout-01.txt' -Value 'NCKH_NATIVE_TOOL_ORACLE' -Encoding utf8\"",
+        "exit_code": 0,
+        "id": "item_5",
+        "status": "completed",
+        "type": "command_execution"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_6",
+        "text": "ORACLE_ATTEMPT_FINISHED",
+        "type": "agent_message"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 52736,
+        "input_tokens": 53492,
+        "output_tokens": 212,
+        "reasoning_output_tokens": 29
+      }
+    }
+  ],
+  "oracle_command_sha256": "6460b3a3ac437344b688e7bc7b7271620f8e20bc780e6bd21caec4d33484592e",
+  "permission_route": "native CLI dangerous flags",
+  "policy_receipts": [
+    {
+      "decision": "allow",
+      "path": "policy-receipts\\posttooluse-timeout-01\\PreToolUse\\617becef9df7e92a15fb86a5faa939630ba913fae7f478fbedf8f673262b413c.json",
+      "sha256": "75de279a906040bb2bee6d374c7d31df6a2cbd2bbd547139b1060b809fa4f0db"
+    },
+    {
+      "decision": "advisory",
+      "path": "policy-receipts\\posttooluse-timeout-01\\SessionStart\\dd9ef560ac2d27aebf3b495adb9cd09474594c7c5fe4df31c0047fd86954728a.json",
+      "sha256": "b33ccae339dfa56825eba45c4198eb7fd3d9d3f7f97003e0698f6e8a6b8876ce"
+    },
+    {
+      "decision": "advisory",
+      "path": "policy-receipts\\posttooluse-timeout-01\\Stop\\9360484d17fb75732ec5fa23ea05b46914885709edf6f135aa8b2640bf07420f.json",
+      "sha256": "e8775157459fe91e35eebd31ef2f14230bb77d167a09bbbf43d91e6ab62a3119"
+    },
+    {
+      "decision": "advisory",
+      "path": "policy-receipts\\posttooluse-timeout-01\\UserPromptSubmit\\dd9ef560ac2d27aebf3b495adb9cd09474594c7c5fe4df31c0047fd86954728a.json",
+      "sha256": "b33ccae339dfa56825eba45c4198eb7fd3d9d3f7f97003e0698f6e8a6b8876ce"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "started_at": "2026-10-04T18:17:30.794529+00:00",
+  "status": "completed",
+  "stderr_sha256": "1362bd8d5c8f8773c76f363e562f4bfbf151cc82eee2d087ca1603541a124431"
+}

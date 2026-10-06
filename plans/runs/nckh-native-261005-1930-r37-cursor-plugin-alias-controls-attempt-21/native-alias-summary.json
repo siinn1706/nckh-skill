@@ -1,0 +1,119 @@
+{
+  "CLI_owned_state_fields": "not-inferred-from-hashes",
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/cleanup.json",
+    "sha256": "f5112c62f9d7bcd182c5ff44a1ecd5d66ee947794e92b8e91fd8e330cae18559"
+  },
+  "cli_owned_state_hash_changed": true,
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/definitions/session.json",
+    "sha256": "24e72e9989023e74f18c21c6fe2ee431f39774f1d80be2987de86a22913e60b7"
+  },
+  "effort_requested": "xhigh",
+  "event_results": [
+    {
+      "callback_count": 1,
+      "event": "beforeSubmitPrompt",
+      "native_pair_verified": false,
+      "single_policy_receipt_verified": false,
+      "source_counts": {
+        "plugin": 0,
+        "project": 1
+      },
+      "status": "alias-duplicate-unqualified"
+    },
+    {
+      "callback_count": 1,
+      "event": "stop",
+      "native_pair_verified": false,
+      "single_policy_receipt_verified": false,
+      "source_counts": {
+        "plugin": 0,
+        "project": 1
+      },
+      "status": "alias-duplicate-unqualified"
+    }
+  ],
+  "fault_origin": "none",
+  "final_marker_observed": true,
+  "frozen_hypothesis": {
+    "path": "plans/runs/nckh-native-261005-1923-r37-cursor-plugin-routing-inspection-attempt-20/routing-hypothesis.json",
+    "sha256": "e80420c556f4b5378d675fbc1f4dc56e7beeb8d8226084de7e8b2451ef118c3f"
+  },
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "handler_kind": "bounded project/plugin observers forwarding genuine payload to verified packaged runner",
+  "historical_members_preserved": 750,
+  "hypothesis_result": "No plugin callback observed for either alias in this invocation; cause remains unverified",
+  "inner_runner_timeout_seconds": 5,
+  "installed_update": "not-performed",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_prompt_retries": 0,
+  "model_turns": 1,
+  "native_callback_count": 3,
+  "native_tool_return_content": "not-applicable-no-selected-tool-callback",
+  "native_version": "2026.09.15-d2fe57e",
+  "original_case": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/case-alias.json",
+    "sha256": "2d715c2bfede3a66ffb794365e36d839c630994f7ca3b5b2fbb4462f7dc3e03b"
+  },
+  "original_case_status_retained": "native-plugin-alias-controls-partial",
+  "other_handler_timeout_seconds": 5,
+  "owner_acceptance": "exact-r29-VI-EN-only",
+  "plan_tasks": "44/45",
+  "plugin_kind": "minimal local compatibility control; nested UserPromptSubmit and Stop definitions",
+  "policy_receipt_count": 3,
+  "post_exit_cleanup_refusal": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/post-exit-cleanup-refusal.json",
+    "sha256": "c4df9b46768068a1f6152d5beab2d51ea43220554e33376a37400553577356e2"
+  },
+  "preflight_timeout_seconds": 20,
+  "preparation": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/preparation.json",
+    "sha256": "0a93827209768d5ff83d4830e8a9b9c8cbeac9c4afd114fa4d2178ef5d5475b2"
+  },
+  "preparation_observation_reconciliation": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/preparation-terminal-reconciliation.json",
+    "sha256": "0a33512108653cf8be7cf89380be456615a5712ccd9b358aa6e175f492f1f327"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/final-process-audit.json",
+    "sha256": "4dc6588d825a58bad3e72e7f6fd827f147439aa4c6b0f88c5d525adf08bd7f86"
+  },
+  "prompt_submissions": 1,
+  "protected_global_configs_unchanged": true,
+  "publication": "not-performed",
+  "qualified_duplicate_events": [],
+  "raw_terminal_truncated": true,
+  "removed_members": 28,
+  "requested_native_tools": 0,
+  "scientific_stable_release": "pending",
+  "scope_limit": "Missing callbacks do not establish unsupported behavior for all versions/surfaces; native19 is not regraded",
+  "selected_events": [
+    "beforeSubmitPrompt",
+    "stop"
+  ],
+  "selected_tool_callbacks": 0,
+  "session_start": "one-project-callback; plugin-sessionStart-not-configured-in-this-control",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "verified-native-alias-control-two-plugin-cells-unqualified",
+  "surface": "cursor-cli",
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/terminal-native-exit-poll-01.json",
+    "sha256": "0f2b8d6b1a6fdf33920add4b07ddfca35b1e5b6541341a826c0f9fbfe98f0650"
+  },
+  "terminal_exit_code": 0,
+  "terminal_wrapper_reconciliation": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/terminal-wrapper-reconciliation.json",
+    "sha256": "0c753b82115eb3f9fb1d545df1a0549a6c0302f4f7a583e3448332c4bba4cc8e"
+  },
+  "unqualified_duplicate_events": [
+    "beforeSubmitPrompt",
+    "stop"
+  ],
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/verify-alias-delivery.py",
+    "sha256": "b52319b759810c954a74ead0a8d69986fcdc16d1b3c681a7c7c1a3abc2002cc9"
+  }
+}

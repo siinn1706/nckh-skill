@@ -1,0 +1,81 @@
+{
+  "before_sha256": "3fe8f113ef0e7828497a447818dbf96206216b044ae9535cbcd651eb424ecb1f",
+  "cases": [
+    {
+      "attempt": "preToolUse-malformed-input",
+      "event": "preToolUse",
+      "index": 1,
+      "marker": "NCKH_PREFLIGHT_FAULT_FINISHED_17_1",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-input",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "preToolUse-malformed-output",
+      "event": "preToolUse",
+      "index": 2,
+      "marker": "NCKH_PREFLIGHT_FAULT_FINISHED_17_2",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-output",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "preToolUse-timeout",
+      "event": "preToolUse",
+      "index": 3,
+      "marker": "NCKH_PREFLIGHT_FAULT_FINISHED_17_3",
+      "maximum_prompt_submissions": 1,
+      "mode": "timeout",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "preToolUse-crash",
+      "event": "preToolUse",
+      "index": 4,
+      "marker": "NCKH_PREFLIGHT_FAULT_FINISHED_17_4",
+      "maximum_prompt_submissions": 1,
+      "mode": "crash",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "preToolUse-unsupported-codec",
+      "event": "preToolUse",
+      "index": 5,
+      "marker": "NCKH_PREFLIGHT_FAULT_FINISHED_17_5",
+      "maximum_prompt_submissions": 1,
+      "mode": "unsupported-codec",
+      "prompt": "[removed: raw runtime content]"
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/prepare-preflight-faults.py",
+    "sha256": "147b3a817089f8bdfd05980770f8ebd91fab511002ded89f64e3d5b3f37a4890"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/definitions/session.json",
+    "sha256": "118229d41b4d9156b5160d49ca9dad4c2361dc26888cb16d3f58dfb785d340c7"
+  },
+  "effort": "xhigh",
+  "fault_origin": "controller-injection-after-genuine-callback",
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "installed_update": "not-performed",
+  "maximum_model_turns": 5,
+  "maximum_prompt_submissions": 5,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "port": null,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "relative": "oracles/r37-cursor-preflight-fault-read-17.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/cursor-preflight-runtime.py",
+    "sha256": "1a2e943bbe21de11d0ff338f9b7b13842d5bd17074e117a884a30578bff9a547"
+  },
+  "runtime_parent": {
+    "path": "plans/runs/nckh-native-261005-1740-r37-cursor-private-mutation-attempt-16/cursor-private-runtime.py",
+    "sha256": "9b06a9e98f9a44ca81af0d05e6422fc836b3313d5a17a7ee4c8d68b60888ea75"
+  },
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-five-preflight-fault-cases",
+  "unsupported_scope": "selected codec injection; actual native unsupported tool/event remains separate"
+}

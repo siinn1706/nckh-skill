@@ -1,0 +1,38 @@
+{
+  "base_read_control": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/native-timeout-summary.json",
+    "sha256": "a30af75a093d0fe30f50050f1d84d598130cd2904f850b41acb8ebceed0ad82c"
+  },
+  "cases": [
+    {
+      "case": "allow",
+      "marker": "NCKH_DIRECT_MUTATION_ALLOWED_FINISHED_14",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_DIRECT20_ALLOWED_14\n",
+      "requested_native_tool_use_identities_maximum": 2
+    },
+    {
+      "case": "deny",
+      "marker": "NCKH_DIRECT_MUTATION_DENIED_FINISHED_14",
+      "mode": "plan-only",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_DIRECT20_DENIED_14\n",
+      "requested_native_tool_use_identities_maximum": 2
+    }
+  ],
+  "effort": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "maximum_model_turns": 2,
+  "maximum_prompt_submissions": 2,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "other_packaged_timeout_seconds": 5,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "preToolUse_timeout_seconds": 20,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "purpose": "verify direct20s public write effect and plan-only Write prevention before deciding a source timeout repair",
+  "relative": "oracles/r36-cursor-direct-mutation-control-14.txt",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36
+}

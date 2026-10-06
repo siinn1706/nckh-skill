@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "round": 2,
+  "skill_id": "nckh-xia",
+  "case_types": ["negative"],
+  "corpus_sha256": "bbb6d312df45c4bad75bef5b5e8b5a42202dfcf0122382ee59e51ce84c63de84",
+  "installed_revision": 14,
+  "source_changes": "none",
+  "reason": "Round 1 proposed nckh-fix but native auto-review denied reading its metadata as outside Xia scope. Preserve this pending first observation and check the same owner handoff under the already recorded observed project-catalog condition.",
+  "project_catalog_scope": true,
+  "persist_session": true,
+  "timeout_seconds": null,
+  "max_development_rounds": 3,
+  "authority": "Existing user grant for direct self-authored skill tests, unlimited budget, this project only; the suite wrapper already permits reading installed NCKH skill/reference files. No new authority or approval bypass.",
+  "unchanged": ["original request", "expected checks", "fixture bytes", "installed skill and source", "no execution of the handed-off repair"],
+  "changed_execution_condition": "Explicitly restrict owner selection to the observed 37-skill NCKH project catalog; retain complete native rollout.",
+  "first_attempt_reference": "private/round-1/nckh-xia/receipt.json",
+  "dispatch": ["run-native-suite.py", "--round", "2", "--lane", "diagnostic-c", "--persist-session", "--skills", "nckh-xia", "--case-types", "negative", "--project-catalog-scope"],
+  "grading": "Inspect actual owner metadata read and bounded handoff; no pass from exit 0 or file invariants. If review still denies the read, retain pending and report the limitation. No automatic retries."
+}

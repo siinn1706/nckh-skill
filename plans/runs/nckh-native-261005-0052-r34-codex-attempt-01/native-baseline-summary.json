@@ -1,0 +1,97 @@
+{
+  "configuration_route": "CLI sessionFlags; project hook file absent after first CLI comparison; no global trust write",
+  "effort": "medium",
+  "file_sensitive_duplicate_observation": "First CLI case with matching project file had two callbacks per event; same invocation after preserving/removing that file had one per event. This differential supports project+inline source multiplicity on this CLI route but does not attest persisted project trust or plugin support.",
+  "host_version": "0.154.0",
+  "model_requested": "gpt-5.6-luna",
+  "plugin_duplicate": "unobserved",
+  "results": [
+    {
+      "attempt": "cli-allow-02",
+      "attempt_sha256": "abd157eb7b971906ff76ecebf3a1946281255452ff9895933f0796d81c8d87f3",
+      "callback_counts": {
+        "PostToolUse": 2,
+        "PreToolUse": 2,
+        "SessionStart": 2,
+        "Stop": 2,
+        "UserPromptSubmit": 2
+      },
+      "completed_shell_items": [
+        {
+          "exit_code": 0,
+          "status": "completed"
+        }
+      ],
+      "marker_exists": true,
+      "mode": "allow",
+      "native_exit_code": 0,
+      "pretool_policy_receipts": 1,
+      "pretool_same_native_tool": true
+    },
+    {
+      "attempt": "cli-invocation-only-allow-03",
+      "attempt_sha256": "c624868ce61ba5fc12bbe01e3609b23987c8d77378047e03ca9379c8d2e74ac8",
+      "callback_counts": {
+        "PostToolUse": 1,
+        "PreToolUse": 1,
+        "SessionStart": 1,
+        "Stop": 1,
+        "UserPromptSubmit": 1
+      },
+      "completed_shell_items": [
+        {
+          "exit_code": 0,
+          "status": "completed"
+        }
+      ],
+      "marker_exists": true,
+      "mode": "allow",
+      "native_exit_code": 0,
+      "pretool_policy_receipts": 1,
+      "pretool_same_native_tool": true
+    },
+    {
+      "attempt": "cli-policy-deny-01",
+      "attempt_sha256": "eef68e9eb8334de4823435c6b3437e5a3d6ca9f1bd2cd3511eecbb750cfc4b68",
+      "callback_counts": {
+        "PostToolUse": 0,
+        "PreToolUse": 1,
+        "SessionStart": 1,
+        "Stop": 1,
+        "UserPromptSubmit": 1
+      },
+      "completed_shell_items": [],
+      "marker_exists": false,
+      "mode": "policy-deny",
+      "native_exit_code": 0,
+      "pretool_policy_receipts": 1,
+      "pretool_same_native_tool": true
+    },
+    {
+      "attempt": "cli-duplicate-01",
+      "attempt_sha256": "428bcc352fea3ecf263adb8691d1e28271ca61dfbc208c178b9024718a469ed7",
+      "callback_counts": {
+        "PostToolUse": 1,
+        "PreToolUse": 2,
+        "SessionStart": 1,
+        "Stop": 1,
+        "UserPromptSubmit": 1
+      },
+      "completed_shell_items": [
+        {
+          "exit_code": 0,
+          "status": "completed"
+        }
+      ],
+      "marker_exists": true,
+      "mode": "duplicate",
+      "native_exit_code": 0,
+      "pretool_policy_receipts": 1,
+      "pretool_same_native_tool": true
+    }
+  ],
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "status": "recorded-native-baselines",
+  "surface": "codex-cli-exec"
+}

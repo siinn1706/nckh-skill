@@ -1,0 +1,54 @@
+{
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/frozen-brief.json",
+    "sha256": "cfe83ba1c0cdd01142b585bd68d1256e6757843107de6a82a35af834ef422c1d"
+  },
+  "full_native_gate": "unchecked",
+  "results": [
+    {
+      "attempt": "replace-file-content-public",
+      "final_marker_observed": true,
+      "fixture_expected": true,
+      "native_expected": true,
+      "policy_expected": true,
+      "private": false,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/attempts/replace-file-content-public.json",
+        "sha256": "7097a732ef313d09da72c179b7972265b4a3be0a459ec2a76f67a2ebc8e2b6c7"
+      },
+      "status": "verified-direct-tool-control",
+      "tool": "replace_file_content"
+    },
+    {
+      "attempt": "replace-file-content-private",
+      "final_marker_observed": true,
+      "fixture_expected": true,
+      "native_expected": true,
+      "policy_expected": true,
+      "private": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/attempts/replace-file-content-private.json",
+        "sha256": "0d9c43ecdf18968bd1c09413cc5419be916ffe333965104ab50d1f867fc8e428"
+      },
+      "status": "verified-direct-tool-control",
+      "tool": "replace_file_content"
+    },
+    {
+      "attempt": "multi-replace-file-content-public",
+      "final_marker_observed": true,
+      "fixture_expected": false,
+      "native_expected": false,
+      "policy_expected": false,
+      "private": false,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/attempts/multi-replace-file-content-public.json",
+        "sha256": "0d27b3ee7afd00b3b5a1c4aa27500b18735017dd957e7df3af1e24a0882117ff"
+      },
+      "status": "failed-frozen-tool-oracle-retained",
+      "tool": "multi_replace_file_content"
+    }
+  ],
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "running"
+}

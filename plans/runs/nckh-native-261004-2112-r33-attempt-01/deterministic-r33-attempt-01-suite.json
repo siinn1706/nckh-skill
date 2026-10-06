@@ -1,0 +1,17 @@
+{
+  "errors": [
+    {
+      "test": "tests.hooks.test_runner.HookRunnerTests.test_concurrent_duplicate_receipts_and_failed_attempts_are_preserved",
+      "traceback": "Traceback (most recent call last):\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_runner.py\", line 78, in test_concurrent_duplicate_receipts_and_failed_attempts_are_preserved\n    results = list(pool.map(lambda _: record_once(self.project, \"receipts\", receipt), range(6)))\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 619, in result_iterator\n    yield _result_or_cancel(fs.pop())\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 317, in _result_or_cancel\n    return fut.result(timeout)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\concurrent\\futures\\thread.py\", line 59, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_runner.py\", line 78, in <lambda>\n    results = list(pool.map(lambda _: record_once(self.project, \"receipts\", receipt), range(6)))\n                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\hooks\\runner.py\", line 108, in record_once\n    path = contained(directory, key + \".json\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\core\\paths.py\", line 47, in contained\n    raise ContractError(f\"path escapes root: {relative}\")\ncore.schema.ContractError: path escapes root: bdbbab70f7a9a343c5d9793c9d5a3e244f04602b9b7fbf1662d1622281ad7451.json\n"
+    }
+  ],
+  "failures": [],
+  "skipped": [
+    {
+      "reason": "host does not permit a real symlink fixture: [WinError 1314] A required privilege is not held by the client: 'C:/Users/USER\\\\AppData\\\\Local\\\\Temp\\\\nckh-83fbdbe30c7f4f86ac6543d357b0181e\\\\probe\\\\input.svg' -> 'C:/Users/USER\\\\AppData\\\\Local\\\\Temp\\\\nckh-83fbdbe30c7f4f86ac6543d357b0181e\\\\probe\\\\linked.svg'",
+      "test": "tests.evidence.test_visual_engine_binding.VisualEngineBindingTests.test_symlink_observation_is_rejected"
+    }
+  ],
+  "successful": false,
+  "tests": 186
+}

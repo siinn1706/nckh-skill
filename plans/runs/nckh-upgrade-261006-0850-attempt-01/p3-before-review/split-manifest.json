@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "id": "chronological-vnm",
+  "task_id": "vnm-population-chronological-forecast",
+  "dataset": {
+    "path": "dataset-manifest.json",
+    "sha256": "81972050948371345f8ed1b56a62113d0fd21eaa036629bf2d05a2c7d65bd991"
+  },
+  "purpose": "development demonstration of fixed chronological forecasting",
+  "independence_axes": [
+    "sample",
+    "time"
+  ],
+  "partitions": [
+    {
+      "name": "train",
+      "membership": {
+        "path": "pilot-data/train.json",
+        "sha256": "f474d023b5876d03fb717313f55d78e5cb6066584de65e9666daa4ff6f062a81"
+      },
+      "count": 20
+    },
+    {
+      "name": "validation",
+      "membership": {
+        "path": "pilot-data/validation.json",
+        "sha256": "67b15d1dc839e8dcf6e5a0532ec211bf070599e266b1d14676e9584cac8a0052"
+      },
+      "count": 3
+    },
+    {
+      "name": "test",
+      "membership": {
+        "path": "pilot-data/test.json",
+        "sha256": "761cab192a019ffd25e9cba7403c02ffd14d2f714db43f421cfd9c7c14a9c5a9"
+      },
+      "count": 3
+    }
+  ],
+  "exclusions": [],
+  "temporal": {
+    "required": true,
+    "embargo": 0,
+    "reason": "annual target indices; retrospective snapshot, no release-vintage assertion"
+  },
+  "fitting": {
+    "preprocessing": "not-applicable",
+    "threshold": "not-applicable",
+    "selection": "not-applicable",
+    "rationale": "algorithms fixed; rolling origins use only preceding target-index observations, no tuning"
+  },
+  "features": [
+    {
+      "sample_id": "VNM:2020",
+      "task": "forecasting",
+      "kind": "observation",
+      "available_at": 2019,
+      "decision_at": 2019,
+      "diagnostic_window_end": 2019,
+      "reason": "retrospective preceding-year index, not asserted publication timestamp"
+    },
+    {
+      "sample_id": "VNM:2021",
+      "task": "forecasting",
+      "kind": "observation",
+      "available_at": 2020,
+      "decision_at": 2020,
+      "diagnostic_window_end": 2020,
+      "reason": "retrospective preceding-year index, not asserted publication timestamp"
+    },
+    {
+      "sample_id": "VNM:2022",
+      "task": "forecasting",
+      "kind": "observation",
+      "available_at": 2021,
+      "decision_at": 2021,
+      "diagnostic_window_end": 2021,
+      "reason": "retrospective preceding-year index, not asserted publication timestamp"
+    },
+    {
+      "sample_id": "VNM:2023",
+      "task": "forecasting",
+      "kind": "observation",
+      "available_at": 2022,
+      "decision_at": 2022,
+      "diagnostic_window_end": 2022,
+      "reason": "retrospective preceding-year index, not asserted publication timestamp"
+    },
+    {
+      "sample_id": "VNM:2024",
+      "task": "forecasting",
+      "kind": "observation",
+      "available_at": 2023,
+      "decision_at": 2023,
+      "diagnostic_window_end": 2023,
+      "reason": "retrospective preceding-year index, not asserted publication timestamp"
+    },
+    {
+      "sample_id": "VNM:2025",
+      "task": "forecasting",
+      "kind": "observation",
+      "available_at": 2024,
+      "decision_at": 2024,
+      "diagnostic_window_end": 2024,
+      "reason": "retrospective preceding-year index, not asserted publication timestamp"
+    }
+  ],
+  "holdout": {
+    "access": "prior-access-disclosed",
+    "owner": "controller",
+    "reason": "source already contains observed values; development demonstration, not blind heldout efficacy evaluation"
+  },
+  "frozen_at": "2026-10-06T02:24:12.881430+00:00",
+  "amendments": []
+}

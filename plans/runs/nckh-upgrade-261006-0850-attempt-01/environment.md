@@ -1,0 +1,25 @@
+# Observed pilot environment
+
+- observed_at: 2026-10-06T02:35:38.557098+00:00
+- os: Windows
+- release: 11
+- architecture: AMD64
+- python: 3.12.10
+- implementation: CPython
+- runtime_path: C:/Users/USER\AppData\Local\Programs\Python\Python312\python.exe
+- packages: stdlib only; no task package install
+- logical_cpu_count: 16
+- effective_cpu_quota: unknown; not exposed by observation
+- gpu: not-used
+- memory_limit: unknown; no imposed process quota observed
+- affinity: unknown; no affinity measurement
+- scheduler: unknown
+- workload: 26 source observations, fixed offline arithmetic
+- network: no pilot egress
+- provider: not-used
+- trusted_input_caps: {'file_bytes': 1048576, 'aggregate_bytes': 8388608, 'records': 1000, 'output_bytes': 1048576}
+- owned_background_processes: []
+- observer_pid: 18916
+- scope: environment observation before pilot; not a run receipt
+
+No benchmark/provider/cluster/fault workload was launched. CPU count is not effective entitlement. Actual pilot execution gets its own receipt.

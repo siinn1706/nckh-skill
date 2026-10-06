@@ -1,0 +1,39 @@
+{
+  "actual_filesystem_diagnostic": true,
+  "counts": {
+    "duplicate-suppressed": 309,
+    "error": 1,
+    "recorded": 62
+  },
+  "failures": [
+    {
+      "error": "path escapes root: 5314fa37743101f5fca28e8bea914aadc16aa217ff39a68c4d7a1f6c93fbbcf1.json",
+      "resolutions": [
+        {
+          "exists": false,
+          "input": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416\\receipts-61",
+          "resolved": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416\\receipts-61"
+        },
+        {
+          "exists": true,
+          "input": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416",
+          "resolved": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416"
+        },
+        {
+          "exists": false,
+          "input": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416\\receipts-61\\5314fa37743101f5fca28e8bea914aadc16aa217ff39a68c4d7a1f6c93fbbcf1.json",
+          "resolved": "\\\\?\\C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416\\receipts-61\\5314fa37743101f5fca28e8bea914aadc16aa217ff39a68c4d7a1f6c93fbbcf1.json"
+        },
+        {
+          "exists": true,
+          "input": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416\\receipts-61",
+          "resolved": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-f5825d9c8bb54dcbb91ef0a111ee2416\\receipts-61"
+        }
+      ],
+      "type": "ContractError"
+    }
+  ],
+  "instrumentation": "record actual Path.resolve return values; leave comparisons and record_once unchanged",
+  "seconds": 3.625,
+  "source_mutation": false
+}

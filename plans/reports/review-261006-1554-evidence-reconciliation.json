@@ -1,0 +1,144 @@
+{
+  "source_revision": "41",
+  "pins": 337,
+  "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+  "candidate_binding": "match",
+  "command_outputs": [
+    {
+      "name": "cases-validation",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "deterministic",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "reproducibility-standalone",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "reproducibility-plugin",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "build-on-standalone",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "build-on-plugin",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "build-off-standalone-internal",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "build-off-plugin-internal",
+      "output_hash": "match",
+      "exit": 0
+    },
+    {
+      "name": "extracted-qualification",
+      "output_hash": "match",
+      "exit": 0
+    }
+  ],
+  "persistent_bundles": [
+    {
+      "mode": "on-standalone",
+      "host": "claude",
+      "status": "pass"
+    },
+    {
+      "mode": "on-standalone",
+      "host": "codex",
+      "status": "pass"
+    },
+    {
+      "mode": "on-standalone",
+      "host": "cursor",
+      "status": "pass"
+    },
+    {
+      "mode": "on-standalone",
+      "host": "agy",
+      "status": "pass"
+    },
+    {
+      "mode": "on-plugin",
+      "host": "claude",
+      "status": "pass"
+    },
+    {
+      "mode": "on-plugin",
+      "host": "codex",
+      "status": "pass"
+    },
+    {
+      "mode": "on-plugin",
+      "host": "cursor",
+      "status": "pass"
+    },
+    {
+      "mode": "on-plugin",
+      "host": "agy",
+      "status": "pass"
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "claude",
+      "status": "pass"
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "codex",
+      "status": "pass"
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "cursor",
+      "status": "pass"
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "agy",
+      "status": "pass"
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "claude",
+      "status": "pass"
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "codex",
+      "status": "pass"
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "cursor",
+      "status": "pass"
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "agy",
+      "status": "pass"
+    }
+  ],
+  "historical_full_suite": {
+    "deterministic_tests": 311,
+    "deterministic_passed": 310,
+    "deterministic_skipped": 1,
+    "deterministic_duration_seconds": 914.791
+  },
+  "full_suite_rerun": false,
+  "strongest_configuration_applied": false,
+  "reason": "required native and acceptance gates remain unresolved"
+}

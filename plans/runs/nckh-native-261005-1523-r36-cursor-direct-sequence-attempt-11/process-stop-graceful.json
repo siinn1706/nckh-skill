@@ -1,0 +1,46 @@
+{
+  "root_pid": 19948,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T08:37:26.6750103Z",
+  "identity_checks": [
+    {
+      "pid": 19948,
+      "expected": "2026-10-05T08:30:01.678549Z",
+      "current": "2026-10-05T08:30:01.6785490Z"
+    },
+    {
+      "pid": 35124,
+      "expected": "2026-10-05T08:30:52.322315Z",
+      "current": "2026-10-05T08:30:52.3223150Z"
+    },
+    {
+      "pid": 36104,
+      "expected": "2026-10-05T08:30:52.507776Z",
+      "current": "2026-10-05T08:30:52.5077760Z"
+    },
+    {
+      "pid": 13016,
+      "expected": "2026-10-05T08:30:54.764194Z",
+      "current": "2026-10-05T08:30:54.7641940Z"
+    },
+    {
+      "pid": 51676,
+      "expected": "2026-10-05T08:30:54.805126Z",
+      "current": "2026-10-05T08:30:54.8051260Z"
+    }
+  ],
+  "method": "graceful-owned-tree-after-native-exit-request",
+  "exit_code": 128,
+  "output": [
+    "ERROR: The process with PID 51676 (child process of PID 13016) could not be terminated.",
+    "Reason: This process can only be terminated forcefully (with /F option).",
+    "ERROR: The process with PID 13016 (child process of PID 36104) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 36104 (child process of PID 35124) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 35124 (child process of PID 19948) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 19948 (child process of PID 32872) could not be terminated.",
+    "Reason: One or more child processes of this process were still running."
+  ]
+}

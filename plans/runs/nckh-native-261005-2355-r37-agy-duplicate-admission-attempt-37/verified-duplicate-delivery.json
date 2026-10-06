@@ -1,0 +1,98 @@
+{
+  "status": "verified-agy-five-event-duplicates-and-scoped-config-admission",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "model_turns": 2,
+  "model_retries": 0,
+  "results": [
+    {
+      "attempt": "project-plugin-duplicate",
+      "classification": "verified-five-event-project-plugin-duplicates-and-idempotent-receipts",
+      "conversation_id": "19e6b7d4-5777-406b-ac63-1eb6f611fb7b",
+      "native_tool_count": 1,
+      "native_step_index": 2,
+      "exact_revised_bytes": true,
+      "callback_counts": {
+        "NckhUnsupportedNativeEvent": 0,
+        "PostInvocation": 4,
+        "PostToolUse": 2,
+        "PreInvocation": 4,
+        "PreToolUse": 2,
+        "Stop": 2
+      },
+      "same_input_groups": 7,
+      "policy_receipt_count": 5,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/attempts/project-plugin-duplicate.json",
+        "sha256": "7dd9a092051d38e8b18af77333032ec6a7511ec9c6ab21f032ccae856ece8f21"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/definitions/project-plugin-duplicate.json",
+        "sha256": "25357aaaed1d3273bd79eeee12dcc009c246f38ba21cb267858dd591a802d720"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/commands/agy-tools-project-plugin-duplicate.json",
+        "sha256": "817c53ce261bef0a430f09bc9dcd5c1395253032854026fc78aff3911775f484"
+      }
+    },
+    {
+      "attempt": "unknown-config-event",
+      "classification": "native-config-admission-observed-unknown-event-execution-unqualified",
+      "conversation_id": "d32500b5-58c4-4059-9f39-581111d7b0ec",
+      "native_tool_count": 1,
+      "native_step_index": 2,
+      "exact_revised_bytes": true,
+      "callback_counts": {
+        "NckhUnsupportedNativeEvent": 0,
+        "PostInvocation": 2,
+        "PostToolUse": 1,
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "Stop": 1
+      },
+      "same_input_groups": 7,
+      "policy_receipt_count": 5,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/attempts/unknown-config-event.json",
+        "sha256": "ac21ab181b530e884b14a2cf76725030372f995e9ce6003606c2b1723cf17532"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/definitions/unknown-config-event.json",
+        "sha256": "fc335582a315506a9e40ea0e19da6f7885555d39b0cc2d031d8924031fdfb5c7"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/commands/agy-tools-unknown-config-event.json",
+        "sha256": "ae192ced3cb7358915af4c61a3a463fcf3493995c51b22bb3fbbfe99da3c4962"
+      }
+    }
+  ],
+  "instrumentation": "test observer; five-second outer/inner bounds; no fault injection",
+  "unsupported_event_scope": "unknown configured name accepted during one native turn, zero unknown callbacks; unknown native event delivery unqualified",
+  "full_native_gate": "unchecked",
+  "source_modified": false,
+  "global_plugin_install": false,
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/cleanup.json",
+    "sha256": "8ed5caffd5eb14ae90ba7de1734a9a2de331b544c96b57d03693d034d0d1e9c9"
+  },
+  "plugin_cleanup": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/plugin-cleanup.json",
+    "sha256": "8866650de339c1f98d3d4ec12ed173f7918b5865f56db17e42fa9b1cbd6704f9"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/process-final-audit.json",
+    "sha256": "51a4630334c05f2c19b7987253528da50238611f7a3365d90d6d919d6a9c15ca"
+  },
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/frozen-brief.json",
+    "sha256": "0c775a1f54aff91d9b476f2c1e78b989809fef61509cbd3bb60dc855ecdb6ccb"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/verify-duplicate-delivery.py",
+    "sha256": "8f40b8b4de3067cfc46969c911940cacc595d4f40a0d674df7f503a3d5771b18"
+  }
+}

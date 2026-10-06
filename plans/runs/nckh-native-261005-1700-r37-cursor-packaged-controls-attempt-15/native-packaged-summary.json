@@ -1,0 +1,76 @@
+{
+  "after_failure_logger_timeout_seconds": 10,
+  "allow_after_sha256": "161bfac78370186c35763f6b595ae411b07d7a9950e0cf70f9ab8cc017df4c59",
+  "allow_before_sha256": "33280328b2ce86d1557423aed843394f4b7cc4bdc10708dd4e7c93679ceb2a61",
+  "artifact_QA": "pending",
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "cases": [
+    {
+      "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/case-allow.json",
+      "sha256": "85b19f50774196b69892445b0a1791fa9c5e00853d0d801539162f5de44238e4"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/case-deny.json",
+      "sha256": "90d3122c287ec654fb2041a613f1249c9dec78a8c1e17c81379464765a841d09"
+    }
+  ],
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/cleanup.json",
+    "sha256": "61c33bc635987e5b014184e72c5005bdde0ed7967a002201629c886f4661e577"
+  },
+  "cli_state_hash_after": "c939d993c63aeb9e9a66d041e5b6793655cbc085e5aa3fbad8d9c22bfc93aa74",
+  "cli_state_hash_before": "f18bc8a4626bf1853da77c1296d9ce2e34d7b154ef0390c20b6837e423db9731",
+  "cli_state_hash_unchanged": false,
+  "controller_failures": [],
+  "controller_model_retries": 0,
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/definitions/session.json",
+    "sha256": "e571ed738c38b6c4a2cd5024851ca7d96927a1f21407573f31162a719dd56d8d"
+  },
+  "deny_after_sha256": "161bfac78370186c35763f6b595ae411b07d7a9950e0cf70f9ab8cc017df4c59",
+  "deny_before_sha256": "161bfac78370186c35763f6b595ae411b07d7a9950e0cf70f9ab8cc017df4c59",
+  "effort_requested": "xhigh",
+  "fault_origin": "none",
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "historical_members_preserved": 626,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns": 2,
+  "native_denied_tool_use_id": "call-07fa1d86-3f31-43e8-b641-0cff501cbdcb-3\nfc_12de6feb-b711-96e4-9880-614ef2058adc_0",
+  "other_packaged_timeout_seconds": 5,
+  "packaged_default_timing_used": true,
+  "packaged_event_observer_invoked": false,
+  "plan_only_Write_prevention": "native-permission_denied-plan-only-mutation; file-byte-identical",
+  "policy_native_ID_correlation": "neutral-event-hash binding; policy receipt itself omits native ID",
+  "preToolUse_timeout_seconds": 20,
+  "preparation": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/preparation.json",
+    "sha256": "0d2efdfe9397b39ed99204aed28c747f3d223b5f05b8bb0554ea4d40b5ead726"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/final-process-audit.json",
+    "sha256": "e600444dcfad2dd9f537612bd57b0cd139da75da6526dc6210f668beff094152"
+  },
+  "prompt_submissions": 2,
+  "protected_global_configs_unchanged": true,
+  "public_write": "exact-requested-bytes-observed",
+  "recording_failures": [],
+  "scope": "direct20s public Write allow and plan-only Write deny; does not qualify private mutation or full event/surface/version matrix",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_modified": false,
+  "source_revision": 37,
+  "status": "verified-fresh-r37-packaged-write-allow-and-plan-only-prevention",
+  "surface": "cursor-cli-interactive-terminal",
+  "terminal_capture_limitations": "allow terminal chunk truncated; retained native receipts/effects verified; deny limit recorded in case receipt",
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/terminal-final-observation.json",
+    "sha256": "25c2eac017c4e393e5152277f8d8abae5fd6371a196575e026591d11c687668d"
+  },
+  "terminal_exit_code": 1,
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/verify-packaged-delivery.py",
+    "sha256": "9b1063f089374e862ee2c337ef820a376d7cae333a552dc44bfc483063831a15"
+  },
+  "version": "2026.09.15-d2fe57e"
+}

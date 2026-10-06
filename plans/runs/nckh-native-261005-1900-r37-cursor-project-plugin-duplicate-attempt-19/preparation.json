@@ -1,0 +1,45 @@
+{
+  "context_sha256": "91928701c61e1cc7288c264dd51974bb04034eab0ebd59aeabb93724759cf0a5",
+  "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1900-r37-cursor-project-plugin-duplicate-attempt-19/prepare-duplicate-control.py",
+    "sha256": "42203e1cf3f67981e1850196e4a08c4ba9940bcae3d0b56ba9874d54d9250ed0"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1900-r37-cursor-project-plugin-duplicate-attempt-19/definitions/session.json",
+    "sha256": "3d0aeb1b9fd2c606cd93dd80955f95eaf5bc4f8a7a28562bfdb74fcacc5b3fe1"
+  },
+  "effort": "xhigh",
+  "events": [
+    "sessionStart",
+    "beforeSubmitPrompt",
+    "preToolUse",
+    "postToolUse",
+    "stop"
+  ],
+  "fault_origin": "none",
+  "fixture_before_sha256": "6caf65a2bcdbe57b1648e780cb23294effd77754cd23b54db03496a59081a670",
+  "fixture_origin": "controller-owned-synthetic-marker-only",
+  "global_direct_write": false,
+  "installed_update": "not-performed",
+  "marker": "NCKH_DUPLICATE_READ_FINISHED_19",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_tools": 1,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "official_format_source": "https://cursor.com/docs/reference/plugins",
+  "package": "C:/Users/USER\\.codex\\visualizations\\2026\\10\\04\\01a104fc-f969-7f43-b1e0-1a6774f0e0c8\\nckh-hooks-r37-1640-attempt-02\\extracted\\on-standalone\\cursor",
+  "plugin": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-duplicate-19\\plugin",
+  "plugin_route": "installed CLI --plugin-dir; native support must be observed",
+  "port": null,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "prompt": "[removed: raw runtime content]",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1900-r37-cursor-project-plugin-duplicate-attempt-19/cursor-duplicate-runtime.py",
+    "sha256": "59d3695040bc20cc12d0af7975aac837b22991e05fff66788a8555ac2089cb1d"
+  },
+  "selected_relative": "oracles/r37-cursor-duplicate-read-19.txt",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-one-native-project-plugin-duplicate-control"
+}

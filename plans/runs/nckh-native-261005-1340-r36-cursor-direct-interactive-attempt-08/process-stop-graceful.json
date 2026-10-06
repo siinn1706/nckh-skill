@@ -1,0 +1,45 @@
+{
+  "root_pid": 25244,
+  "timestamp_utc": "2026-10-05T07:08:26.4750271Z",
+  "identity_checks": [
+    {
+      "expected": "2026-10-05T06:43:23.5983150Z",
+      "pid": 25244,
+      "current": "2026-10-05T06:43:23.5983150Z"
+    },
+    {
+      "expected": "2026-10-05T06:44:16.5213290Z",
+      "pid": 49484,
+      "current": "2026-10-05T06:44:16.5213290Z"
+    },
+    {
+      "expected": "2026-10-05T06:44:16.6780800Z",
+      "pid": 23684,
+      "current": "2026-10-05T06:44:16.6780800Z"
+    },
+    {
+      "expected": "2026-10-05T06:44:18.7575230Z",
+      "pid": 57728,
+      "current": "2026-10-05T06:44:18.7575230Z"
+    },
+    {
+      "expected": "2026-10-05T06:44:18.7924820Z",
+      "pid": 54956,
+      "current": "2026-10-05T06:44:18.7924820Z"
+    }
+  ],
+  "method": "graceful-taskkill-after-native-exit-request",
+  "exit_code": 128,
+  "output": [
+    "ERROR: The process with PID 54956 (child process of PID 57728) could not be terminated.",
+    "Reason: This process can only be terminated forcefully (with /F option).",
+    "ERROR: The process with PID 57728 (child process of PID 23684) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 23684 (child process of PID 49484) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 49484 (child process of PID 25244) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 25244 (child process of PID 56464) could not be terminated.",
+    "Reason: One or more child processes of this process were still running."
+  ]
+}

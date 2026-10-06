@@ -1,0 +1,34 @@
+{
+  "cases": [
+    {
+      "case": "allow",
+      "marker": "NCKH_PACKAGED_ALLOWED_FINISHED_15",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_R37_ALLOWED_15\n",
+      "requested_native_tool_use_identities_maximum": 2
+    },
+    {
+      "case": "deny",
+      "marker": "NCKH_PACKAGED_DENIED_FINISHED_15",
+      "mode": "plan-only",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_R37_DENIED_15\n",
+      "requested_native_tool_use_identities_maximum": 2
+    }
+  ],
+  "effort": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "maximum_model_turns": 2,
+  "maximum_prompt_submissions": 2,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "other_packaged_timeout_seconds": 5,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "preToolUse_timeout_seconds": 20,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "purpose": "fresh-r37-packaged-default native public Write effect and plan-only preventive denial",
+  "relative": "oracles/r37-cursor-packaged-control-15.txt",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37
+}

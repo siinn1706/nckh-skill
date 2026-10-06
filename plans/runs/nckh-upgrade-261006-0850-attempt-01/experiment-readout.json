@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "task_id": "vnm-population-chronological-forecast",
+  "experiment_id": "offline-vnm-population-fixed-baselines",
+  "stage": "readout",
+  "frozen_at": "2026-10-06T03:11:03.899740+00:00",
+  "freeze": {
+    "path": "experiment-manifest.json",
+    "sha256": "8ad6731d9611f69ea6e13ae15fab33be3fb7550688458075c461e0e5875d4d03"
+  },
+  "protocol": {
+    "path": "research-protocol.md",
+    "sha256": "e0393f1595d6852b03ffc78aa4ee1146255db6cc8fbe3bde8b195bdc0131345e"
+  },
+  "inputs": [
+    {
+      "kind": "dataset",
+      "reference": {
+        "path": "dataset-manifest.json",
+        "sha256": "b2e76f3ca9557e8fc51f989ab24155cdcb8168159d4fff90b26bd86635aa0faa"
+      }
+    },
+    {
+      "kind": "split",
+      "reference": {
+        "path": "split-manifest.json",
+        "sha256": "b9607bc6e0d38c40da0e4fbb70788b7c41d505d4d0c8d89383f59d8f8394cdec"
+      }
+    },
+    {
+      "kind": "telemetry",
+      "reference": {
+        "path": "telemetry-manifest.json",
+        "sha256": "ad10b0ab7aa214492dd6ce976f335934c6f84dec772da45ec78f90293ef9a398"
+      }
+    },
+    {
+      "kind": "analysis",
+      "reference": {
+        "path": "statistical-analysis.json",
+        "sha256": "854bf13486d4083a24c501dc872817d329f3aeddc2a201fdf23becfc6d54bbc3"
+      }
+    },
+    {
+      "kind": "evaluation",
+      "reference": {
+        "path": "aiops-evaluation.json",
+        "sha256": "93bebe4af024f48b8b1fd2d8065b3d69166e8532fa4875be028820ba22414cc0"
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "pilot-code.py",
+      "sha256": "4afbbbb4c82ca5549558265094ee63ea204201e42a3496811e9e74f558bb495a"
+    },
+    {
+      "path": "record-pilot-attempt.py",
+      "sha256": "94532520ff11821edf7855c9ec17120d28a9063edf22ccf2aa9357ee3d886a51"
+    },
+    {
+      "path": "numerical-pilot-oracle.py",
+      "sha256": "58da4e99b151fb11f887340566c21f0c290157699b380fb225f2741a5bd4894b"
+    }
+  ],
+  "config": [
+    {
+      "path": "pilot-config.json",
+      "sha256": "36856fb984b6a7f979d2d12d3075e072f44c46377dbcf6e3429b0add683af643"
+    }
+  ],
+  "environment": {
+    "path": "environment-v2.json",
+    "sha256": "47d9d54bd8fc8512d08c7d8c9ccdad033137af22803a7adc58f7a2c27bcea490"
+  },
+  "artifacts": [
+    {
+      "path": "pilot-data/raw.json",
+      "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+    },
+    {
+      "path": "pilot-data/normalized.json",
+      "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+    },
+    {
+      "path": "pilot-data/samples.json",
+      "sha256": "4af92246bc7a8a221cafff538b25d09d8cddeb3f0331d52533347bf7668d72a7"
+    },
+    {
+      "path": "prepare-pilot-data.py",
+      "sha256": "16fcf9e4073feed0141e14b8709abb7f2a29690e63678dd79af7a59467133c8d"
+    },
+    {
+      "path": "pilot-data/normalization-config.json",
+      "sha256": "b2e375afe938e42a66bc2fdc8cca89adc4dab3e2787d57cbbfe0f81660da334e"
+    },
+    {
+      "path": "pilot-data/train.json",
+      "sha256": "f474d023b5876d03fb717313f55d78e5cb6066584de65e9666daa4ff6f062a81"
+    },
+    {
+      "path": "pilot-data/validation.json",
+      "sha256": "67b15d1dc839e8dcf6e5a0532ec211bf070599e266b1d14676e9584cac8a0052"
+    },
+    {
+      "path": "pilot-data/test.json",
+      "sha256": "761cab192a019ffd25e9cba7403c02ffd14d2f714db43f421cfd9c7c14a9c5a9"
+    },
+    {
+      "path": "pilot-data/rights.md",
+      "sha256": "e44f97747f7318dd25d9d939db15c8f4dcf4b18bfd8dab0405d2af25b261451c"
+    }
+  ],
+  "baselines": [
+    "naive",
+    "drift"
+  ],
+  "metrics": [
+    "mae"
+  ],
+  "oracles": [
+    "separate Fraction arithmetic over actual observed inputs"
+  ],
+  "output_semantics": "computed-from-observed-data",
+  "simulation": {
+    "applicability": "not-used",
+    "label": "",
+    "generator": "",
+    "parameters": [],
+    "seed": null,
+    "replications": 0,
+    "warmup": "",
+    "conservation": "",
+    "uncertainty": "",
+    "validity_limits": [
+      "No simulation or real-system effect claimed"
+    ]
+  },
+  "limits": {
+    "provider_calls": 0,
+    "egress": "none",
+    "attempts": 2,
+    "file_bytes": 1048576,
+    "aggregate_bytes": 8388608,
+    "records": 10000,
+    "output_bytes": 1048576
+  },
+  "grants": [
+    "User /goal ak-cook --auto for this project",
+    "P1 selected CC-BY-4.0 dated World Bank series; offline stdlib arithmetic only"
+  ],
+  "cleanup_route": "Supervisor-owned Popen handle communicates/reaps exact child; no persistent process or external side effects",
+  "amendments": [],
+  "expected_outputs": [
+    {
+      "kind": "predictions",
+      "path": "pilot-output/predictions.json"
+    },
+    {
+      "kind": "metrics",
+      "path": "pilot-output/metrics.json"
+    },
+    {
+      "kind": "statistics",
+      "path": "pilot-output/statistics.json"
+    }
+  ],
+  "receipts": [
+    {
+      "path": "receipts/pilot-attempt-01.json",
+      "sha256": "bf35052ed80b662083e794ea965afead685b59f3e4a3ce32b5c20730353c1281"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "pilot-output/predictions.json",
+      "sha256": "337ff2c2a109ac9fd63b0132a6af05bd188c13c378acb46dc4e17e6112a8b008"
+    },
+    {
+      "path": "pilot-output/metrics.json",
+      "sha256": "fbc7f64e92967866ad3b5001a7d3ebb6e51bca5e65cdfdbefcb272d1ece473ac"
+    },
+    {
+      "path": "pilot-output/statistics.json",
+      "sha256": "ae936940d5ccc7c28473ca19c6bb1e058ed51242de220a64ce62671d0322774a"
+    }
+  ],
+  "limitations": [
+    "one dependent country series",
+    "blank source units retained",
+    "prior access and retrospective source vintage disclosed",
+    "no blind holdout, incident efficacy, generalization or causal claim",
+    "native/provider/owner/scientific acceptance separate and pending"
+  ]
+}

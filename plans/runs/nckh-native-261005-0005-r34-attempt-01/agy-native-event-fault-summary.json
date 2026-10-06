@@ -1,0 +1,874 @@
+{
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "effect_timing": "post events run after the native tool; existing oracle is not evidence of a prevention failure",
+  "effort": "medium",
+  "error": null,
+  "fault_origin": "explicit controller injection after genuine host callback; not host-generated malformed events",
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_gate": "other host/surface gates remain open",
+  "permission_mode": "dangerously-skip-permissions",
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults",
+  "requested_events": [
+    "PreInvocation",
+    "PreToolUse",
+    "PostToolUse",
+    "PostInvocation",
+    "Stop"
+  ],
+  "requested_faults": [
+    "malformed-input",
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-codec"
+  ],
+  "results": [
+    {
+      "attempt": "pre-invocation-malformed-input-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-invocation-malformed-input-01.json",
+      "attempt_sha256": "477ee07424a9bd299607f8bfba2f231ee0acf5114094de41e937afcaf580ac2a",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-malformed-input-01\\PreInvocation\\9002ea4809a44d9eb4c680272bc44e10.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "6474b73c736d5b1b3c91c9e3513431584947c30840d8a94d8c04af433d15eb3c",
+          "status": "completed"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-malformed-input-01\\PreInvocation\\ef1c65841d484413b16fc69effee7043.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "dca85915f94ef99b8a9e6ca4f92d9f965514969d0a66841c696606152c3b2ca4",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-invocation-malformed-input-01.json",
+      "event": "PreInvocation",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\pre-invocation-malformed-input-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\pre-invocation-malformed-input-01\\PreInvocation\\4ba1a24604f47ea5e0eaa7c7790539c2c02703d36a19081ab9a73183fb4c2e7b.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        },
+        {
+          "path": "policy-receipts\\pre-invocation-malformed-input-01\\PreInvocation\\ec93753210857916df42ca819432e962bb7bfdb28bb91265003c06a420aada93.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "pre-invocation-malformed-output-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-invocation-malformed-output-01.json",
+      "attempt_sha256": "ca6ebe352112a5b3d7d9ff2fc27ddca5be6847eb9c5ab8c4b73e46039c275b75",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-malformed-output-01\\PreInvocation\\1944c4e663d0485aaee7dd1eb1a119a9.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "380b3ef810a1726501f44dfc44cbbf8337ff01899292c4b0886809bd9cc11d16",
+          "status": "intentional-test-malformed-output"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-malformed-output-01\\PreInvocation\\34e63948ea5148469dee9f05d510716c.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "96fc696ddaa3e831a5ce494bcd0eae1623c7751ea4af20ac13bfc8f248ebc008",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-invocation-malformed-output-01.json",
+      "event": "PreInvocation",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\pre-invocation-malformed-output-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "pre-invocation-timeout-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-invocation-timeout-01.json",
+      "attempt_sha256": "72fde99ae8d14d74e134cf3d938c6199e46277669c00eaabddb97942655c4428",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-timeout-01\\PreInvocation\\26178172097341e7829c1f92bd1c4a27.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "ad48c420ffba1495fd0af9e4e184532cefa8e9bb8a2bdb7476ad75f45b85cc00",
+          "status": "completed"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-timeout-01\\PreInvocation\\7b96add0b6a04e7ab63fcc401c4a3a39.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "1c9f49fb539b20993ea9f312b17ef8746d1a13fcaf01ed5061c4f97c5782f6a4",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-invocation-timeout-01.json",
+      "event": "PreInvocation",
+      "exit_code": 0,
+      "fault": "timeout",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\pre-invocation-timeout-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\pre-invocation-timeout-01\\PreInvocation\\d9735cc4f1f2653825b20412222de76ff70c228920bd7c9af33748bfd10e2ef2.json",
+          "sha256": "136ea07d2796ffc4ee559d06435a8f27c0cec1e3468cec8e4414161dc3701810"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "pre-invocation-crash-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-invocation-crash-01.json",
+      "attempt_sha256": "cb7a9e6c3495713769ca1014e776155fc812703f9a72410392c9ae9c0bc7e70a",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-crash-01\\PreInvocation\\6f504ace5c5d42e1b6800adb79572205.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "8f45393f296cc626e73d02c88f391819d765e03ffb41e670915bbfc892cb929e",
+          "status": "intentional-test-crash-exit-17"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-crash-01\\PreInvocation\\e911932db5b44c2aa17300d0205c87cf.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "2d3445864fee723b33387837b02f8e6d5ee6ff43a86e8a2ca1247fd2065ff426",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-invocation-crash-01.json",
+      "event": "PreInvocation",
+      "exit_code": 0,
+      "fault": "crash",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\pre-invocation-crash-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "pre-invocation-unsupported-codec-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-invocation-unsupported-codec-01.json",
+      "attempt_sha256": "7a76173bd64872d9cd59dfd71edb717ca4ac69902fc3f2f8d5cf08229a4b6e2f",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-unsupported-codec-01\\PreInvocation\\2da57825a307478c8a48e6c2d60042b4.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "06556e816fcafc145c3f27703393603062ff5a6d5e8610a8fc5a6e15bfd18a02",
+          "status": "completed"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-invocation-unsupported-codec-01\\PreInvocation\\c38298465f7d49c69758de908d624bc6.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "a145ab2cac8b5a8cd2f3786e490d375801d3d456ef21605c48e6d4b64dc9910b",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-invocation-unsupported-codec-01.json",
+      "event": "PreInvocation",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\pre-invocation-unsupported-codec-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\pre-invocation-unsupported-codec-01\\PreInvocation\\5ae23d4a0569017063ecb88c06ffc47f1c694afac6606afff48155543ef72c12.json",
+          "sha256": "74662548d81edcc5c147e8289b5fb70a965e2abf92a4ef50606f25464ad3079a"
+        },
+        {
+          "path": "policy-receipts\\pre-invocation-unsupported-codec-01\\PreInvocation\\e4f5dae19d24bd5873285f0a77e7c77084bd5d98e1f781252fea6bd048300b46.json",
+          "sha256": "9613b44d6c3d91f4af82ac00ad2842f3cf19bbe66598e1480cd8735ce14dc9ff"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "pre-tool-use-malformed-input-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-tool-use-malformed-input-01.json",
+      "attempt_sha256": "19e947010ad5067888b2e54bf8b28c62a5634b6ae189d787d3860fe257a119ef",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-tool-use-malformed-input-01\\PreToolUse\\dc90e77461ed44b9bf5804457d6fdeed.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "decision": "deny",
+            "reason": "hook-input-or-context-invalid"
+          },
+          "sha256": "638b783ab635491951b548a94e75f8ec71bc26ddbbd0b4f9f7327091ee7704b3",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-tool-use-malformed-input-01.json",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": false,
+      "oracle_retained": null,
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\pre-tool-use-malformed-input-01\\PreToolUse\\6b502330e12429cec7a56a7440297f3186d155ed94124d66cbacf5663286b91b.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "pre-tool-use-malformed-output-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-tool-use-malformed-output-01.json",
+      "attempt_sha256": "6fd103b4c45a97a6d97abfba9b08b1003e8180d86fd3c9d267efcb53f18bb470",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-tool-use-malformed-output-01\\PreToolUse\\6c8b72b0e87c4ba19430aaa7ac86bc8e.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "4d52e6a481ad8692c0391067991ca90c485e6cf3770b9fcc05116a24e703a891",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-tool-use-malformed-output-01.json",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": false,
+      "oracle_retained": null,
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "pre-tool-use-timeout-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-tool-use-timeout-01.json",
+      "attempt_sha256": "7a891e67a0365357a48e432a99706136ab55c5851ff00fe83f6f6d7bc90590d1",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-tool-use-timeout-01\\PreToolUse\\1e419a486fed440e99d97ddb10390968.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "decision": "ask"
+          },
+          "sha256": "a2e57311231c2aecfb7e788385944b72259a204080580efa0d3300c82546ccaf",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-tool-use-timeout-01.json",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "timeout",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": false,
+      "oracle_retained": null,
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\pre-tool-use-timeout-01\\PreToolUse\\385b233cb147a647c96efa11a5cd6ee9462e9c28f3d7d788824d1f2288d9e8f5.json",
+          "sha256": "c671792d46b11938e1e010cab8f6513a11982066f59af604d4eee5f2113b25e3"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "pre-tool-use-crash-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-tool-use-crash-01.json",
+      "attempt_sha256": "b97905fdb02cb2282571109262a382948a3a946bc1cbe134fd3161fb75fa4e0a",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-tool-use-crash-01\\PreToolUse\\8e085ea908514899aacafe0636f19e0a.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "d7b6bfd927d23b7747aae11cf45970194e969e461ad127cb5ea0b8584b9ff358",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-tool-use-crash-01.json",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "crash",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": false,
+      "oracle_retained": null,
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "pre-tool-use-unsupported-codec-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\pre-tool-use-unsupported-codec-01.json",
+      "attempt_sha256": "847b7f47213631bac1571505ccd1567f5c7288b93f55e484912552cee958ce33",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\pre-tool-use-unsupported-codec-01\\PreToolUse\\a91a8d507f714934b3b9c75e9c378385.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "de65fe83c8650c7f4485aa0c724241b8158e2787207b4d0c25c1d12a9247a043",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-pre-tool-use-unsupported-codec-01.json",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": false,
+      "oracle_retained": null,
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\pre-tool-use-unsupported-codec-01\\PreToolUse\\f217e6d71d85cd4b78b95bb764cc4d85ca4defe43ab43845c49a008ce2010290.json",
+          "sha256": "981fdeb8aa63c52b8ca979c1328571714891c83d32e99946c0ab31931daa48cf"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "post-tool-use-malformed-input-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-tool-use-malformed-input-01.json",
+      "attempt_sha256": "c7ee5992d1ddcc05a310946c08171ae398f19a638e780e8c73af81642a372eb8",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-tool-use-malformed-input-01\\PostToolUse\\ad0904f61f42438f8f37a09a3f9defbe.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "b2c08282f969633c46f9aaf306e0c096c3fb59eb771fd6ba904ae5d5a410ae1d",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-tool-use-malformed-input-01.json",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-tool-use-malformed-input-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\post-tool-use-malformed-input-01\\PostToolUse\\9151b6e4b260a4d85e99fe18f0582b09fff45a3725a7ec5e8e964c56d30ac87f.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "post-tool-use-malformed-output-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-tool-use-malformed-output-01.json",
+      "attempt_sha256": "3d7f76d33deb090723f073a130d8d4af06aa02f9a3c4ce545632443935e04b33",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-tool-use-malformed-output-01\\PostToolUse\\13ef31d49145452cb7aa72ffcbc0849b.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "dbe0aa0d1499005553016f5bf67d2a726a619392bdd8e3b44f9356d3613497c8",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-tool-use-malformed-output-01.json",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-tool-use-malformed-output-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "post-tool-use-timeout-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-tool-use-timeout-01.json",
+      "attempt_sha256": "3ef35743beb14f6f61e53840d559384e49154c87f66293307870abf784e572e0",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-tool-use-timeout-01\\PostToolUse\\d3d2349e6a0c4cdfbdeb78fe37716a4b.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "a159a82b8881b1b21d709299eb840892e60dfd4582eb847fa6a0e1c86bc1c263",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-tool-use-timeout-01.json",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "timeout",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-tool-use-timeout-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "post-tool-use-crash-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-tool-use-crash-01.json",
+      "attempt_sha256": "4cfd3333389d0923c2281fad708a91bb2f7a23f2acb3e0170ecc03201cd3cb07",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-tool-use-crash-01\\PostToolUse\\df00bf03c79d42ef902948f2051229ec.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "87a292cbfd04144d62ba8c921ef9a1b2e0b40a93c18d0c767ec04ec79bf5d016",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-tool-use-crash-01.json",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "crash",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-tool-use-crash-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "post-tool-use-unsupported-codec-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-tool-use-unsupported-codec-01.json",
+      "attempt_sha256": "324592102cfe33bbce7c9e52dd5231af5fedadc2535e7ac3e7acafc64e44157b",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-tool-use-unsupported-codec-01\\PostToolUse\\a23526603fcb4263a0e8d1b173568688.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "5bf019d7d9cb3d00b07051a9e81da074084bec95454e55ca632ac5d099d19735",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-tool-use-unsupported-codec-01.json",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-tool-use-unsupported-codec-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\post-tool-use-unsupported-codec-01\\PostToolUse\\2c38dc2d006f5bd829be1440a408bd817605578da92de3595a892fdc8dfe67be.json",
+          "sha256": "09e9a4af47f380ce281874dda202974f8ff211e197b99433f4a9da8084bfdf86"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "post-invocation-malformed-input-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-invocation-malformed-input-01.json",
+      "attempt_sha256": "c082fae7c1344ea2cc1169e3a0690b8b5495d06dc3645aa792d9cb28df58c2e1",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-malformed-input-01\\PostInvocation\\4324c338ac454841821d463d5aea753c.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "7ca4342f3d904cbbda57cb2a7d7944e4ac874c1ab7ae767a6668bb2b23a7d6f2",
+          "status": "completed"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-malformed-input-01\\PostInvocation\\7ae4266b8da94015807a33b4cbb406ec.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "1132e24b8def5921ae7cd94d8a532a5bb3ae55e21818656dbb4b7a55c7b60ef0",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-invocation-malformed-input-01.json",
+      "event": "PostInvocation",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-invocation-malformed-input-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\post-invocation-malformed-input-01\\PostInvocation\\a8d0e874f0bc55ef9fb58731536864b3c2f3a013c864d65d480a7531ba58396c.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        },
+        {
+          "path": "policy-receipts\\post-invocation-malformed-input-01\\PostInvocation\\fdd5ef7f459d21acabce6bb512e2a76ec43dc49e1406d2946b33b7963ef1f810.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "post-invocation-malformed-output-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-invocation-malformed-output-01.json",
+      "attempt_sha256": "a29441725b883ee6cc638dfbf90d1c760549726ab9e92f82aa53de76a2a51213",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-malformed-output-01\\PostInvocation\\7c70b68991e041f8ac859b0a10ec9c06.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "5c3b098cfb71b14ba13ef2b278db5aaaeae455fe4e63c6437f3e0015df8a724a",
+          "status": "intentional-test-malformed-output"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-malformed-output-01\\PostInvocation\\c40bcbe74891409c84ffa907d0d968a2.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "ff9939cf596712b5ac3539e020a6abce5739798cd7786d030cb99d51157d23bb",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-invocation-malformed-output-01.json",
+      "event": "PostInvocation",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-invocation-malformed-output-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "post-invocation-timeout-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-invocation-timeout-01.json",
+      "attempt_sha256": "b10a1d994a0302b7b9da53c9a5c3d8eea5d9d84523b683f2dfb0040bfffa1b9f",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-timeout-01\\PostInvocation\\2e7449551bd24a1488856f161bdbec15.json",
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "sha256": "340ba041971cd2f14c432d15a2fc6016b0abbce93f7190c88b0ed829527a89a9",
+          "status": "completed"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-timeout-01\\PostInvocation\\a058206503b744e797645cb70c773adf.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "b91c0731592a07351a33fd9d538a05a5b35ccc7cbe00875952a26a1051dc27a3",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-invocation-timeout-01.json",
+      "event": "PostInvocation",
+      "exit_code": 0,
+      "fault": "timeout",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-invocation-timeout-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\post-invocation-timeout-01\\PostInvocation\\1ca43899ba4fc565d4f825c2bd2ec5cb1f3dfa289441944ad0be28aba6e002ce.json",
+          "sha256": "0ec7543f0cfc7fa75bb2ee5f0cfa138be821d6ec12dc48cd9094421e166c9e19"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "post-invocation-crash-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-invocation-crash-01.json",
+      "attempt_sha256": "346df6e2711de2b1eda73059079e382448ececbfbf9d42b1a45e4e2b9a4cef28",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-crash-01\\PostInvocation\\3d1cf559728e4025be9132bdd12cb6c1.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "661ae4cb08e5f123f8290b30b69af57a1461cc1a026100b11985e16ad156b10d",
+          "status": "intentional-test-crash-exit-17"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-crash-01\\PostInvocation\\b8225abc997744a083394524134ce23d.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "005c2b8d48ef8ca4a09cc44a7c1308cd9fc53b55dbfd43f176e6c3c25204b6d2",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-invocation-crash-01.json",
+      "event": "PostInvocation",
+      "exit_code": 0,
+      "fault": "crash",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-invocation-crash-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "post-invocation-unsupported-codec-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\post-invocation-unsupported-codec-01.json",
+      "attempt_sha256": "538cd0c25efe5e8a917369514e919bdd9c7be24af2881a20b724318acf4f5e0d",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-unsupported-codec-01\\PostInvocation\\6b87f3bbb0e64f1b8a4f6c5b9fb75844.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "fcfc9c887906340d3d7f7de084c8be6ec213340c85c6598a7ca18c8ab1a3adc0",
+          "status": "completed"
+        },
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\post-invocation-unsupported-codec-01\\PostInvocation\\ac2d4fb05c4c4fdea92367df819b9a72.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "130e92efa1719f489b9fd5a1758e47961e1ed7fa2f83bd161c9cb72560437c6a",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-post-invocation-unsupported-codec-01.json",
+      "event": "PostInvocation",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\post-invocation-unsupported-codec-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\post-invocation-unsupported-codec-01\\PostInvocation\\3c7b77a27d44c9c50aa1c56ea244cdef60f72641ebbec087fd677b6443d3c9b6.json",
+          "sha256": "51261bee369006757e974090a40c50be4fd9f99930cf15d8a385920acd3a21e4"
+        },
+        {
+          "path": "policy-receipts\\post-invocation-unsupported-codec-01\\PostInvocation\\444e7edb22580e38db58f230a06202cc4b28d29c6ace397a86fab7c56a6ee057.json",
+          "sha256": "5afffd47970a64f0ef5e4c39469d0586bcee936b10f0a8e401f4b22474ebe3be"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 2
+    },
+    {
+      "attempt": "stop-malformed-input-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\stop-malformed-input-01.json",
+      "attempt_sha256": "b3dbc194a81495c76a5a39b2cdc8290d166cf46942164bd97b34c2cbb2928851",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\stop-malformed-input-01\\Stop\\aa6beaf31ff440fab5b1aab506ff63e7.json",
+          "runner_exit_code": 0,
+          "runner_output": {
+            "decision": "stop"
+          },
+          "sha256": "68dd3bc519343aeed3b9bb9e0f197421a03b851030da2d49448e33f8abf3fdd6",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-stop-malformed-input-01.json",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\stop-malformed-input-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\stop-malformed-input-01\\Stop\\ea7b4f70ff86470680e0e9a67b3a0a9dc54967f86a79d4f2e6aa04e1f4073299.json",
+          "sha256": "498bf3bed4c8804810eecd85d0f0d6eabf0729024af961aae64943719d45c0e9"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "stop-malformed-output-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\stop-malformed-output-01.json",
+      "attempt_sha256": "00987871a3b301c31f48402ded969db06ecf209ec306c0df027b50a431823b1a",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\stop-malformed-output-01\\Stop\\042f7ce48c954e35a70ee7a9e84d1a8a.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "b3315dc56b109c0e13695dd933f35781d0af0e2129781c73339c2a31255f3271",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-stop-malformed-output-01.json",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\stop-malformed-output-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "stop-timeout-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\stop-timeout-01.json",
+      "attempt_sha256": "8457f3b6e9b5f7bff4106c83b751c6d6ef091578ac44cbb1e1f5937b6e95026d",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\stop-timeout-01\\Stop\\7733fd8cb9ae48ec8f4a9752d13fbf4a.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "cac64e287c91250ca83ba55eeee29fa284c71a3ebc17970438fa03fc452c92b4",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-stop-timeout-01.json",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "timeout",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\stop-timeout-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "stop-crash-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\stop-crash-01.json",
+      "attempt_sha256": "830e81798b71fa6b7f8345251122a31d02f3a8eab7d54b2116d5b2464c94c70e",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\stop-crash-01\\Stop\\4fd8a7f24cd149bbbf30f130bdd526e3.json",
+          "runner_exit_code": null,
+          "runner_output": null,
+          "sha256": "e3f49d3baea30c9efe6533c20f7f645e9450e825d2a3eaa825b58a1a8bacf642",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-stop-crash-01.json",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "crash",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\stop-crash-01.txt",
+      "policy_receipts": [],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    },
+    {
+      "attempt": "stop-unsupported-codec-01",
+      "attempt_receipt": "projects\\agy-event-faults\\attempts\\stop-unsupported-codec-01.json",
+      "attempt_sha256": "2e5095517adfabd9e0d350f7de3ce6a66f23a6de8a73d40c12b908af23a6053a",
+      "callback_outcomes": [
+        {
+          "fault_origin": "controller-injection-after-genuine-callback",
+          "path": "observations\\stop-unsupported-codec-01\\Stop\\c9b2a01fde23485a977d21e016272559.json",
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "sha256": "54de3e21a46975991a87dd0287dca594ab188e18c1514a6928a3c65f094e2b29",
+          "status": "completed"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\commands\\agy-native-stop-unsupported-codec-01.json",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "invalid_stdout_lines": 0,
+      "native_command_status": "completed",
+      "oracle_created": true,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-event-faults\\oracles\\stop-unsupported-codec-01.txt",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\stop-unsupported-codec-01\\Stop\\0a0627760de811062cc937b985ce40f65d7f1b0c36e936a404c7903f1a5c3a2a.json",
+          "sha256": "00acc1323a85ddc312dc360a934e6fec96f7e453a3601afd7b7bc7e8eb63aea7"
+        }
+      ],
+      "process_exited": true,
+      "selected_event_observed": true,
+      "selected_native_callback_count": 1
+    }
+  ],
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "status": "recorded-genuine-callbacks"
+}

@@ -1,0 +1,746 @@
+{
+  "callbacks": [
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T12:07:39.994849+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "beforeSubmitPrompt",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "attachments",
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "prompt",
+          "session_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "855634ba978cc4fd44b364b752006545b93ba04c09133c0bd54b11d83954a3ca",
+        "input_size": 836,
+        "mode": "duplicate",
+        "native_model": "grok-4.7-xhigh",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {},
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 58100,
+        "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+        "parent_pid": 55488,
+        "reported_event": "beforeSubmitPrompt",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {},
+        "runner_pid": 5412,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:07:39.828274+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/beforeSubmitPrompt/f66631850cad4b168dd03700c3f6ffcf.json",
+      "sha256": "4423d7432b9a953f2183fd49572eec4c4b6a9a1d3bd7585474c25b2286e6bb22"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "plugin",
+        "completed_at": "2026-10-05T12:08:23.151232+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "postToolUse",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "duration",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_output",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "906694010f283f70dc99a3b0523aa30cc4686665beedd48e3980af66ad95356a",
+        "input_size": 1301,
+        "mode": "duplicate",
+        "native_model": "grok-4.7",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {
+          "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r37-cursor-duplicate-read-19.txt"
+        },
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": "Read",
+        "native_tool_use_id": "call-870204fe-e17c-44ba-9d7d-634b372576b7-0\nfc_c2198590-9b1e-96ec-8cee-4d497f1c1c03_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 21440,
+        "output_sha256": "d32ddcb9b15a1dd6b735d10410cfa25e504eea9242ce3656997ea63bb1d9153d",
+        "parent_pid": 58476,
+        "reported_event": "postToolUse",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {
+          "additional_context": "artifact-final-bytes-missing-or-stale"
+        },
+        "runner_pid": 39828,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:08:22.965880+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/postToolUse/03c22a2de76a41a18106e21bf0e61895.json",
+      "sha256": "6e1a4ac08b337ac02f9ccc5e84999bcbdaab91f5b57665dfd2aee1b04813a731"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T12:08:21.918772+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "postToolUse",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "duration",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_output",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "906694010f283f70dc99a3b0523aa30cc4686665beedd48e3980af66ad95356a",
+        "input_size": 1301,
+        "mode": "duplicate",
+        "native_model": "grok-4.7",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {
+          "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r37-cursor-duplicate-read-19.txt"
+        },
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": "Read",
+        "native_tool_use_id": "call-870204fe-e17c-44ba-9d7d-634b372576b7-0\nfc_c2198590-9b1e-96ec-8cee-4d497f1c1c03_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 33744,
+        "output_sha256": "d32ddcb9b15a1dd6b735d10410cfa25e504eea9242ce3656997ea63bb1d9153d",
+        "parent_pid": 50764,
+        "reported_event": "postToolUse",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {
+          "additional_context": "artifact-final-bytes-missing-or-stale"
+        },
+        "runner_pid": 49772,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:08:21.746825+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/postToolUse/ce73408a15ad463cbc8aa4fd9d17c3f5.json",
+      "sha256": "142a44dbbe084bc3d4101f7154e9389d0c061b3bdf8514a4eb56e71debbb0919"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T12:08:12.435242+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "preToolUse",
+        "fault_origin": "none",
+        "fault_selected": true,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "e33b55ec78796c19cf4a4c3af1310d79f73927c5a529136b652c10bf45dfc861",
+        "input_size": 786,
+        "mode": "duplicate",
+        "native_model": "grok-4.7",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {
+          "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r37-cursor-duplicate-read-19.txt"
+        },
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": "Read",
+        "native_tool_use_id": "call-870204fe-e17c-44ba-9d7d-634b372576b7-0\nfc_c2198590-9b1e-96ec-8cee-4d497f1c1c03_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 46716,
+        "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+        "parent_pid": 55104,
+        "reported_event": "preToolUse",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {},
+        "runner_pid": 23320,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:08:12.217235+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/preToolUse/994e36728d7a4ac1a4feba1a5a51ff7f.json",
+      "sha256": "288611b121e9a1e9a6159118d74aa51c3089568fa85f333d7d8ba6d961e14458"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "plugin",
+        "completed_at": "2026-10-05T12:08:13.891421+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "preToolUse",
+        "fault_origin": "none",
+        "fault_selected": true,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "e33b55ec78796c19cf4a4c3af1310d79f73927c5a529136b652c10bf45dfc861",
+        "input_size": 786,
+        "mode": "duplicate",
+        "native_model": "grok-4.7",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {
+          "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r37-cursor-duplicate-read-19.txt"
+        },
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": "Read",
+        "native_tool_use_id": "call-870204fe-e17c-44ba-9d7d-634b372576b7-0\nfc_c2198590-9b1e-96ec-8cee-4d497f1c1c03_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 12924,
+        "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+        "parent_pid": 32532,
+        "reported_event": "preToolUse",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {},
+        "runner_pid": 21060,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:08:13.628720+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/preToolUse/f7ddca37e7f0432c8d048b11256fb0d3.json",
+      "sha256": "f6a3785e3e5aa938d60907fb7647de37eed723b2b3e2e2cbbeb352fa5334dac9"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T12:03:09.020222+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "sessionStart",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "is_background_agent",
+          "model",
+          "session_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "06ed996a785d17831a5166e42650119be30304cf3c4c2900a32044191b67c03c",
+        "input_size": 505,
+        "mode": "duplicate",
+        "native_model": "grok-4.7-xhigh",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {},
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 33708,
+        "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+        "parent_pid": 5668,
+        "reported_event": "sessionStart",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {
+          "additional_context": "writing-resource-advice-only"
+        },
+        "runner_pid": 21620,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:03:08.808350+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/sessionStart/3b0d63616b394b819ebd5e88d6d87aab.json",
+      "sha256": "6930ab41eafa6b445443bdecdc3bcd0f71995858fdecaf2fc6173b308b05de3e"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "plugin",
+        "completed_at": "2026-10-05T12:03:11.570787+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "sessionStart",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "is_background_agent",
+          "model",
+          "session_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "06ed996a785d17831a5166e42650119be30304cf3c4c2900a32044191b67c03c",
+        "input_size": 505,
+        "mode": "duplicate",
+        "native_model": "grok-4.7-xhigh",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {},
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 20528,
+        "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+        "parent_pid": 32776,
+        "reported_event": "sessionStart",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {
+          "additional_context": "writing-resource-advice-only"
+        },
+        "runner_pid": 45796,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:03:11.299679+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/sessionStart/4972348822014f8c8bfb73ef14b43f11.json",
+      "sha256": "486a612c0b2738b6d71d2287c08ea7028f011094b88d88d286e41eca9bbb71ea"
+    },
+    {
+      "observation": {
+        "attempt": "duplicate-session",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T12:08:33.964447+00:00",
+        "control_sha256": "ce050d1891bb81c32e4f48f2c761913426017837d27bf31c54fb2282107b7565",
+        "event": "stop",
+        "fault_origin": "none",
+        "fault_selected": false,
+        "host": "cursor",
+        "input_fields": [
+          "cache_read_tokens",
+          "cache_write_tokens",
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "input_tokens",
+          "loop_count",
+          "model",
+          "output_tokens",
+          "session_id",
+          "status",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "e16ad66b1a67a2111d6a246d589a8a72e68047c641c2eb804ff13157b8bef806",
+        "input_size": 843,
+        "mode": "duplicate",
+        "native_model": "grok-4.7-xhigh",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {},
+        "native_session_hash": "82def898d24300ce89dccf6e0f89c0649193d25927f1fc8a8448743388cfc1eb",
+        "native_step_idx": null,
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 12856,
+        "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+        "parent_pid": 36152,
+        "reported_event": "stop",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {},
+        "runner_pid": 19556,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T12:08:33.783204+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [],
+        "workspace_contains_selected_project": true
+      },
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/stop/366001869058443dbe548fab829869f2.json",
+      "sha256": "22729c40c45c9bff6a984c77defaaf8f3acbfebc99984c0937f06dacdb687647"
+    }
+  ],
+  "control": {
+    "path": "plans/runs/nckh-native-261005-1900-r37-cursor-project-plugin-duplicate-attempt-19/control-duplicate.json",
+    "sha256": "db3d2dd526d2eb9bb2d307d928ba8f8a2c0a5d82cdd8412fd79115d9b3cb0718"
+  },
+  "events": [
+    {
+      "callback_count": 2,
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/sessionStart/3b0d63616b394b819ebd5e88d6d87aab.json",
+          "sha256": "6930ab41eafa6b445443bdecdc3bcd0f71995858fdecaf2fc6173b308b05de3e"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/sessionStart/4972348822014f8c8bfb73ef14b43f11.json",
+          "sha256": "486a612c0b2738b6d71d2287c08ea7028f011094b88d88d286e41eca9bbb71ea"
+        }
+      ],
+      "event": "sessionStart",
+      "native_pair_verified": true,
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/sessionStart/77eabc544f947e682450202763baae856393b9a6a99e0053a0a898e5771a4c9a.json",
+          "sha256": "09299f2c4a60b9b1b85627e40f30cb952a758cec1eef3858b02e6fc7ab5da94c"
+        }
+      ],
+      "single_policy_receipt_verified": true,
+      "source_counts": {
+        "plugin": 1,
+        "project": 1
+      },
+      "status": "verified-native-project-plugin-duplicate"
+    },
+    {
+      "callback_count": 1,
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/beforeSubmitPrompt/f66631850cad4b168dd03700c3f6ffcf.json",
+          "sha256": "4423d7432b9a953f2183fd49572eec4c4b6a9a1d3bd7585474c25b2286e6bb22"
+        }
+      ],
+      "event": "beforeSubmitPrompt",
+      "native_pair_verified": false,
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/beforeSubmitPrompt/77eabc544f947e682450202763baae856393b9a6a99e0053a0a898e5771a4c9a.json",
+          "sha256": "09299f2c4a60b9b1b85627e40f30cb952a758cec1eef3858b02e6fc7ab5da94c"
+        }
+      ],
+      "single_policy_receipt_verified": false,
+      "source_counts": {
+        "plugin": 0,
+        "project": 1
+      },
+      "status": "duplicate-invocation-unqualified"
+    },
+    {
+      "callback_count": 2,
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/preToolUse/994e36728d7a4ac1a4feba1a5a51ff7f.json",
+          "sha256": "288611b121e9a1e9a6159118d74aa51c3089568fa85f333d7d8ba6d961e14458"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/preToolUse/f7ddca37e7f0432c8d048b11256fb0d3.json",
+          "sha256": "f6a3785e3e5aa938d60907fb7647de37eed723b2b3e2e2cbbeb352fa5334dac9"
+        }
+      ],
+      "event": "preToolUse",
+      "native_pair_verified": true,
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/preToolUse/77cb79bc9eca36970a8f622369b443de43710d26e9d94078827c2a724ac78db3.json",
+          "sha256": "fa8aafb578c860b021b4bbee876ec1a9c7c1ad2a8dd24fee17b03741756ea845"
+        }
+      ],
+      "single_policy_receipt_verified": true,
+      "source_counts": {
+        "plugin": 1,
+        "project": 1
+      },
+      "status": "verified-native-project-plugin-duplicate"
+    },
+    {
+      "callback_count": 2,
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/postToolUse/03c22a2de76a41a18106e21bf0e61895.json",
+          "sha256": "6e1a4ac08b337ac02f9ccc5e84999bcbdaab91f5b57665dfd2aee1b04813a731"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/postToolUse/ce73408a15ad463cbc8aa4fd9d17c3f5.json",
+          "sha256": "142a44dbbe084bc3d4101f7154e9389d0c061b3bdf8514a4eb56e71debbb0919"
+        }
+      ],
+      "event": "postToolUse",
+      "native_pair_verified": true,
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/postToolUse/352b0c57782743431e5a3c5c6666a1dad50ed355b90b302a9991e6ca94fb9952.json",
+          "sha256": "a1ef79e7587d164df4bc5693a97eba159b4e474affa068b3411af29384c8e325"
+        }
+      ],
+      "single_policy_receipt_verified": true,
+      "source_counts": {
+        "plugin": 1,
+        "project": 1
+      },
+      "status": "verified-native-project-plugin-duplicate"
+    },
+    {
+      "callback_count": 1,
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/observations/duplicate-session/stop/366001869058443dbe548fab829869f2.json",
+          "sha256": "22729c40c45c9bff6a984c77defaaf8f3acbfebc99984c0937f06dacdb687647"
+        }
+      ],
+      "event": "stop",
+      "native_pair_verified": false,
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/stop/342c967617f285a931c27e599f76129d85735dd9da995b5151c37d559a2ddfff.json",
+          "sha256": "3b05e07f5bde7ee0b7ce79ebf251e7cb9cc72cab7692ec8a2bf53587d3731276"
+        }
+      ],
+      "single_policy_receipt_verified": false,
+      "source_counts": {
+        "plugin": 0,
+        "project": 1
+      },
+      "status": "duplicate-invocation-unqualified"
+    }
+  ],
+  "fault_origin": "none",
+  "final_marker_observed": true,
+  "fixture_unchanged": true,
+  "full_native_gate": "unchecked",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_prompt_retries": 0,
+  "native_owner": {
+    "path": "plans/runs/nckh-native-261005-1900-r37-cursor-project-plugin-duplicate-attempt-19/native-process-ownership.json",
+    "sha256": "95cd03397d755cc188089cae4b0a0aae1f64abdccd85cd002a55229c49b06907"
+  },
+  "native_tool_return_content": "not-retained",
+  "policies": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/beforeSubmitPrompt/77eabc544f947e682450202763baae856393b9a6a99e0053a0a898e5771a4c9a.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "91928701c61e1cc7288c264dd51974bb04034eab0ebd59aeabb93724759cf0a5",
+        "decision": "advisory",
+        "event_hash": "9964258e1a5e637f40ce23a5fc5b4520f608a5a864a822066b3d746971d0555d",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "95721006c05a74327a924d8875fabeee2b91812bfeab7afc9108807af9364ff8",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "fa5783211fd2684a6d9bdf553990769cc3ecec84f5b4a2ae816ce04de0d05e7f"
+      },
+      "sha256": "09299f2c4a60b9b1b85627e40f30cb952a758cec1eef3858b02e6fc7ab5da94c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/postToolUse/352b0c57782743431e5a3c5c6666a1dad50ed355b90b302a9991e6ca94fb9952.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "91928701c61e1cc7288c264dd51974bb04034eab0ebd59aeabb93724759cf0a5",
+        "decision": "pending",
+        "event_hash": "91ee0ff83b1729348b73316e1f4512438036c5f8af8c165fbf4f9552b8aea7c6",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "pre-delivery",
+        "reason_codes": [
+          "artifact-final-bytes-missing-or-stale"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "95721006c05a74327a924d8875fabeee2b91812bfeab7afc9108807af9364ff8",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "fa5783211fd2684a6d9bdf553990769cc3ecec84f5b4a2ae816ce04de0d05e7f"
+      },
+      "sha256": "a1ef79e7587d164df4bc5693a97eba159b4e474affa068b3411af29384c8e325"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/preToolUse/77cb79bc9eca36970a8f622369b443de43710d26e9d94078827c2a724ac78db3.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "91928701c61e1cc7288c264dd51974bb04034eab0ebd59aeabb93724759cf0a5",
+        "decision": "allow",
+        "event_hash": "12e43d8fbf5f09f04a5e146f21dc76c7dd41d9db8262f11d13391c1362462266",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "95721006c05a74327a924d8875fabeee2b91812bfeab7afc9108807af9364ff8",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "fa5783211fd2684a6d9bdf553990769cc3ecec84f5b4a2ae816ce04de0d05e7f"
+      },
+      "sha256": "fa8aafb578c860b021b4bbee876ec1a9c7c1ad2a8dd24fee17b03741756ea845"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/sessionStart/77eabc544f947e682450202763baae856393b9a6a99e0053a0a898e5771a4c9a.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "91928701c61e1cc7288c264dd51974bb04034eab0ebd59aeabb93724759cf0a5",
+        "decision": "advisory",
+        "event_hash": "9964258e1a5e637f40ce23a5fc5b4520f608a5a864a822066b3d746971d0555d",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "95721006c05a74327a924d8875fabeee2b91812bfeab7afc9108807af9364ff8",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "fa5783211fd2684a6d9bdf553990769cc3ecec84f5b4a2ae816ce04de0d05e7f"
+      },
+      "sha256": "09299f2c4a60b9b1b85627e40f30cb952a758cec1eef3858b02e6fc7ab5da94c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-duplicate-19/policy-receipts/duplicate-session/stop/342c967617f285a931c27e599f76129d85735dd9da995b5151c37d559a2ddfff.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "91928701c61e1cc7288c264dd51974bb04034eab0ebd59aeabb93724759cf0a5",
+        "decision": "advisory",
+        "event_hash": "36f4abc9bf5609e16684e2619a3f39de81cf92f8750f57520df8d6d5b2b9b3a2",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "95721006c05a74327a924d8875fabeee2b91812bfeab7afc9108807af9364ff8",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "fa5783211fd2684a6d9bdf553990769cc3ecec84f5b4a2ae816ce04de0d05e7f"
+      },
+      "sha256": "3b05e07f5bde7ee0b7ce79ebf251e7cb9cc72cab7692ec8a2bf53587d3731276"
+    }
+  ],
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "native-project-plugin-duplicate-partial",
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261005-1900-r37-cursor-project-plugin-duplicate-attempt-19/terminal-duplicate-poll-01.json",
+      "sha256": "52d45fb599b9bc251db7fbd3710d21d2533d5dae26859978ec484fb2b2c924b5"
+    }
+  ],
+  "terminal_truncated": true
+}

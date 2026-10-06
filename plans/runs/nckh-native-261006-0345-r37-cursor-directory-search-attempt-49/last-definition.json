@@ -1,0 +1,65 @@
+{
+  "config": {
+    "hooks": {
+      "beforeSubmitPrompt": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0345-r37-cursor-directory-search-attempt-49\\cursor-file-observer.py --host cursor --event beforeSubmitPrompt --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-directory-search-49 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "postToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0345-r37-cursor-directory-search-attempt-49\\cursor-file-observer.py --host cursor --event postToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-directory-search-49 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "preToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0345-r37-cursor-directory-search-attempt-49\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-directory-search-49 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "failClosed": true,
+          "timeout": 20,
+          "type": "command"
+        }
+      ],
+      "sessionStart": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0345-r37-cursor-directory-search-attempt-49\\cursor-file-observer.py --host cursor --event sessionStart --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-directory-search-49 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "stop": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0345-r37-cursor-directory-search-attempt-49\\cursor-file-observer.py --host cursor --event stop --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-directory-search-49 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "loop_limit": 1,
+          "timeout": 5,
+          "type": "command"
+        }
+      ]
+    },
+    "version": 1
+  },
+  "config_sha256": "a111eebd9895cdb582aa293d2df07a4c5d8a96fbfee7c4017aaf9454249914c4",
+  "definition_kind": "bounded-observer-forwarding-unchanged-packaged-runner",
+  "extra_configs": [
+    {
+      "path": ".nckh-native-r37-cursor-directory-search-49/public/fixture.txt",
+      "sha256": "89d9e81928bb42986618a8be2f63aeded09fb6dcc30ea16a42299d0f4f77a52d"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-directory-search-49/private/fixture.txt",
+      "sha256": "04cc617dcf9197c362c00eba4c40616131fde4421bef40468f516b9daa1bac31"
+    }
+  ],
+  "fault_origin": "none",
+  "inner_runner_timeout_seconds": 5,
+  "observer": {
+    "path": "plans/runs/nckh-native-261006-0345-r37-cursor-directory-search-attempt-49/cursor-file-observer.py",
+    "sha256": "559cbfb2f84c7f3b9577c822d220ceab9454103833d321e1b830b62de5dd0a79"
+  },
+  "other_handler_timeout_seconds": 5,
+  "preToolUse_timeout_seconds": 20,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb"
+}

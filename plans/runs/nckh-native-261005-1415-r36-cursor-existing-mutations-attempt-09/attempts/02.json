@@ -1,0 +1,147 @@
+{
+  "after_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+  "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+  "context": {
+    "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+    "context": {
+      "allowed_operations": [
+        "write",
+        "read"
+      ],
+      "brief": {
+        "mode": "plan-only"
+      },
+      "schema_version": 1,
+      "task_id": "native-cursor-existing-09-02",
+      "tool_operations": {
+        "Edit": "write",
+        "Read": "read",
+        "Shell": "write",
+        "StrReplace": "write",
+        "Write": "write"
+      }
+    },
+    "context_file_sha256": "7767d5bd21a39ab3f9e736fe1920ffff23389044453394346c85dbcf81f9e586",
+    "context_hash": "ffc73787312c10d24e45106940b617d88cdfb0e0aa5a940558917d9892fa4e90",
+    "expected": "unchanged",
+    "index": 2,
+    "kind": "Write",
+    "marker": "NCKH_EXISTING_FINISHED_02",
+    "mode": "plan-only",
+    "preimage": {
+      "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/2.txt",
+      "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+    },
+    "prompt": "[removed: raw runtime content]",
+    "receipt_preimage": [
+      "policy-receipts/20177ab0c0a9603437f2af223400f798d2b014a7be15589e28456fc34c2fd134.json",
+      "policy-receipts/485a310e99f70a9a04b48f23425180dfd63a10e087fba072d454c52f68c7876b.json",
+      "policy-receipts/9cf2855958284eec92301d258b69bc72b84133e2a143d35081349be9bd2f5888.json",
+      "policy-receipts/e6d286d541f7cbd61070579af6a8b0eb1361c9b782d2681c7157c86726276cf1.json"
+    ],
+    "relative": "oracles/r36-cursor-existing-plan-09.txt",
+    "selected_at": "2026-10-05T07:50:04.720906+00:00"
+  },
+  "expected": "unchanged",
+  "expected_effect_observed": true,
+  "index": 2,
+  "kind": "Write",
+  "marker": "NCKH_EXISTING_FINISHED_02",
+  "mode": "plan-only",
+  "model_final_marker_observed": true,
+  "observed_at": "2026-10-05T07:52:18.696264+00:00",
+  "observer_invoked": false,
+  "policies": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-existing-09/policy-receipts/a443852a480495c68c3aa40f955cb98d7b432552f927f6bf388c7b5eea9bbc56.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "7767d5bd21a39ab3f9e736fe1920ffff23389044453394346c85dbcf81f9e586",
+        "decision": "advisory",
+        "event_hash": "105a2c1217ed06a1deba17e8aefe1d1becb9aca4bb9f4b179f5c7e6365c64051",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "deb0b63994c7342b4a810ba519535973947590b8c2ce2544e8770d25c2cecc5f",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "6afac1566c4416a87366634d42e3b91757566ebf62341f3fa10dfba8c47cadc0"
+      },
+      "sha256": "5ca47a9eb975b51289d73184f475b28bad14be5260c69300ed9f3f72fb71e074"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-existing-09/policy-receipts/a9bef0019582b1125e2fc3dc1c090e0a597f8b2823f6d73daf16de66007d2a6f.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "7767d5bd21a39ab3f9e736fe1920ffff23389044453394346c85dbcf81f9e586",
+        "decision": "advisory",
+        "event_hash": "b29937ab0fb2398384276873fa5fd722d629312ad5ea24de9fbf489fcd6852d7",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "deb0b63994c7342b4a810ba519535973947590b8c2ce2544e8770d25c2cecc5f",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "6afac1566c4416a87366634d42e3b91757566ebf62341f3fa10dfba8c47cadc0"
+      },
+      "sha256": "a1bea2d4df009f2dba5cb3be34d9bd9fc5015f32ebc3d3caeda546d260a7a977"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-existing-09/policy-receipts/d17295f5b64ae36d9d0063bf0d968a279b8618c9fde5d09d4af117559ae25056.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "7767d5bd21a39ab3f9e736fe1920ffff23389044453394346c85dbcf81f9e586",
+        "decision": "allow",
+        "event_hash": "c5637bab4b528439cc47982f72d0ad24d4d01d2a349f1d5dbcb76a44a10ddc3d",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "deb0b63994c7342b4a810ba519535973947590b8c2ce2544e8770d25c2cecc5f",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "6afac1566c4416a87366634d42e3b91757566ebf62341f3fa10dfba8c47cadc0"
+      },
+      "sha256": "7aaffb0ee13c0d28c3671d8426f03f1f4fc29f4c8acf61e7cf80462b00b261af"
+    }
+  ],
+  "preflight_count": 1,
+  "preimage": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/2.txt",
+    "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+  },
+  "prompt": "[removed: raw runtime content]",
+  "ready_for_next_case": true,
+  "receipt_context_binding": "SHA256-of-exact-context-file-bytes",
+  "relative": "oracles/r36-cursor-existing-plan-09.txt",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36,
+  "stop_count": 1,
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/terminal/002-case-02.json",
+      "sha256": "a0c873e86e277209019d0f79b74777ca63b2a5dc9976ef28e45659398a5dbc16"
+    }
+  ],
+  "timeout_seconds": 5
+}

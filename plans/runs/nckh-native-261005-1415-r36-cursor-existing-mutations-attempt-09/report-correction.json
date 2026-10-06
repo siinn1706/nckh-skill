@@ -1,0 +1,94 @@
+{
+  "status": "verified-factual-prose-correction",
+  "recorded_at": "2026-10-05T07:44:29.028479+00:00",
+  "facts": [
+    {
+      "cleanup": {
+        "path": "plans/runs/nckh-native-261005-1257-r36-cursor-prompt-stop-faults-attempt-07/cleanup.json",
+        "sha256": "eb00b01e05d4539b116fb53368430e3c154a1b59976b4593f5f950d7df473daa"
+      },
+      "global_direct_write": false,
+      "protected_config_hashes_unchanged": true,
+      "cli_state_hash_before": "fc4adefc9e8db323ae84ac77049ae1dfb2f08ed1f5a58b6cc5b51ca39206af91",
+      "cli_state_hash_after": "e60abf4e20da00911ef6a550c34f814a23d50751b54d48139f7590a4a3331adc",
+      "cli_state_hash_equal": false,
+      "exact_changed_fields": "unknown-no-full-before-image"
+    },
+    {
+      "cleanup": {
+        "path": "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/cleanup.json",
+        "sha256": "b9cc383fc9be72b21b847c726c292c21da3a5289fc81770496db73bac713f3f5"
+      },
+      "global_direct_write": false,
+      "protected_config_hashes_unchanged": true,
+      "cli_state_hash_before": "e60abf4e20da00911ef6a550c34f814a23d50751b54d48139f7590a4a3331adc",
+      "cli_state_hash_after": "84a7c2170abfc5f2ea0f31db06ed78ba24c2bdd3489875f97150dab3d6c70022",
+      "cli_state_hash_equal": false,
+      "exact_changed_fields": "unknown-no-full-before-image"
+    }
+  ],
+  "documents": [
+    {
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/report-correction-preimages/2026-10-05-r36-cursor-prompt-stop-faults-and-direct-5s-observations.md",
+        "sha256": "5d2d4e52a062e5c45ff3df57409d3c179bec5d264620593dce4f0cc198d2b94b"
+      },
+      "corrected": {
+        "path": "plans/journals/2026-10-05-r36-cursor-prompt-stop-faults-and-direct-5s-observations.md",
+        "sha256": "c0cccc6e2f2ce8be77234cc8b4a16a62e46e49f2ac89de45233d547985144940"
+      }
+    },
+    {
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/report-correction-preimages/delivery-261005-1257-r36-cursor-prompt-stop-faults.md",
+        "sha256": "2929a34075c0843034b0701becea9654d18121e7e5db65a5d351231618f7c2e5"
+      },
+      "corrected": {
+        "path": "plans/reports/delivery-261005-1257-r36-cursor-prompt-stop-faults.md",
+        "sha256": "9af340517e4c2f38809b433e52f37ad8fd8c24119bf850c83f20d8462c4eba77"
+      }
+    },
+    {
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/report-correction-preimages/delivery-261005-1340-r36-cursor-direct-interactive.md",
+        "sha256": "dbefbad2265f638f4c5dee5ed17b4cae12714f394ef704322f121296b1449228"
+      },
+      "corrected": {
+        "path": "plans/reports/delivery-261005-1340-r36-cursor-direct-interactive.md",
+        "sha256": "8561fb804ad27d9638da28d36d70c51c4ab141b99a66d88cefd943ad10348046"
+      }
+    },
+    {
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/report-correction-preimages/phase-03-portable-hooks.md",
+        "sha256": "a7b93779c37c9b95f6f5c48372ce2a4542c04786f5b03fe4ccb23f09792225f7"
+      },
+      "corrected": {
+        "path": "plans/261004-0047-nckh-research-data-hooks-writing/phase-03-portable-hooks.md",
+        "sha256": "ccba0f87c62e486912b51dafd290365a8508166b43ec6805621a3958ce87802b"
+      }
+    },
+    {
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/report-correction-preimages/phase-04-integration-and-personal-acceptance.md",
+        "sha256": "566db29eb773d1aff821c0c6e03e8be2acc6992c1039d272286da2308704cb92"
+      },
+      "corrected": {
+        "path": "plans/261004-0047-nckh-research-data-hooks-writing/phase-04-integration-and-personal-acceptance.md",
+        "sha256": "6791ae93f6ed8add884c9bd86aef1a7e32709f6899344e418400103a39ee6cef"
+      }
+    }
+  ],
+  "previous_finalization": {
+    "path": "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/plan-finalization.json",
+    "sha256": "a7b838e8588f277eb90082a0ea5ecd362bee7bca5fdbc8221fc68f0f76f80c31"
+  },
+  "previous_document_bindings": "historical-stale-after-correction; refresh-in-new-reconciliation",
+  "source_modified": false,
+  "model_turns": 0,
+  "full_native_gate": "unchecked",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/reconcile-report-correction.py",
+    "sha256": "117d4d40bd8222aeb7e23c6d2ac2ad542c4c7f911558bad76fede0cac1b54794"
+  }
+}

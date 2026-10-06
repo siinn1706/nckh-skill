@@ -1,0 +1,42 @@
+{
+  "actual_diagnostic": "receipt-parent-resolution-diagnostic-01.json",
+  "changes": [
+    {
+      "after_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "before_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+      "path": "hooks/runner.py"
+    },
+    {
+      "after_sha256": "88ab0ad274b34fc4d1f4b3895df70d1c4925880afc8e68ef82439392b5e21694",
+      "before_sha256": "248fdd890e5b041539a09a72ab0589d3822ef98fb1c2bae885437025358926d4",
+      "path": "tests/hooks/test_runner.py"
+    }
+  ],
+  "concurrent_calls_per_group": 6,
+  "critical_open_findings": [],
+  "focused_after": "commands/receipt-parent-focused-after.json",
+  "focused_tests": 15,
+  "fresh_directory_groups": 150,
+  "full_failure": "deterministic-r33-attempt-01-suite.json",
+  "independent_review": false,
+  "preimages": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r33-attempt-01\\source-preimages-r33-receipt-parent",
+  "recorded_at": "2026-10-04T17:01:48.437901+00:00",
+  "repair": "create contained owned receipt directory before computing child containment",
+  "reviewer": "/root-inline",
+  "scope": [
+    "hooks/runner.py",
+    "tests/hooks/test_runner.py"
+  ],
+  "skill": "ak-code-review",
+  "stdlib_inspected": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\ntpath.py:realpath",
+  "unchanged_guards": [
+    "project containment",
+    "no links/junctions",
+    "atomic receipt write",
+    "kernel lock",
+    "duplicate suppression",
+    "separate failed receipts",
+    "timeouts and permission formats"
+  ],
+  "verified_cause": "Windows missing receipt parent created concurrently changes realpath errors and leaves extended path prefix on child only"
+}

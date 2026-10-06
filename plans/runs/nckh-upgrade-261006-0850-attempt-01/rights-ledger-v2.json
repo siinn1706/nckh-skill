@@ -1,0 +1,732 @@
+{
+  "schema_version": 1,
+  "selected_static_files": [
+    {
+      "path": "scientific-agent-skills-main/skills/hypothesis-generation/references/causal_inference_and_claims.md",
+      "sha256": "0162cd131dd12c6235a3b78c033c685abd80e98d5f40f9fb297b4d8104f85122",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "0162cd131dd12c6235a3b78c033c685abd80e98d5f40f9fb297b4d8104f85122",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/hypothesis-generation/references/preregistration_and_open_science.md",
+      "sha256": "33788e3cd4eeb62e80e9fb952e3bfb532320d373e7b00ed7c0a75b4200ccdbf4",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "33788e3cd4eeb62e80e9fb952e3bfb532320d373e7b00ed7c0a75b4200ccdbf4",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/hypothesis-generation/scripts/lint_causal_claims.py",
+      "sha256": "561186e71f7c0b573f7ba45ef0009460c1398048929ed55fad53a65cda56dafe",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "561186e71f7c0b573f7ba45ef0009460c1398048929ed55fad53a65cda56dafe",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/experimental-design/references/randomization_and_blocking.md",
+      "sha256": "fabcfae913397fb8c3018b959b67ddf8fe47322b40cbf4155d898fa11738e9ae",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "fabcfae913397fb8c3018b959b67ddf8fe47322b40cbf4155d898fa11738e9ae",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/statistical-analysis/references/reporting_standards.md",
+      "sha256": "0a30a1bec63231c94c9c285977acaa4218c50a34c8385857d18f62c61ac817b7",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "0a30a1bec63231c94c9c285977acaa4218c50a34c8385857d18f62c61ac817b7",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/statistical-analysis/references/assumptions_and_diagnostics.md",
+      "sha256": "6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "6e1ebc110c092845b93e5c6d28f38c8a990780105ba1865f0bd47c007620b073",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/statistical-power/references/simulation_based_power.md",
+      "sha256": "963fd56791e6db1bffb94efda7c9bef9c3195e3dec3e2a9918d17f3536ec150f",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "963fd56791e6db1bffb94efda7c9bef9c3195e3dec3e2a9918d17f3536ec150f",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/statistical-power/scripts/simulate_power.py",
+      "sha256": "bfbe75908ca071528b7b02aa1ed53949a7291f928f30634abe29b3ce23c564f4",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "bfbe75908ca071528b7b02aa1ed53949a7291f928f30634abe29b3ce23c564f4",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/aeon/references/anomaly_detection.md",
+      "sha256": "3ed8bde3b5d6d019fca2ea6e0ab1dd861a50cf5669deb9b4cbd185d0e21fe2fa",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "3ed8bde3b5d6d019fca2ea6e0ab1dd861a50cf5669deb9b4cbd185d0e21fe2fa",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/aeon/references/forecasting.md",
+      "sha256": "101b9408a2fc96d3e079144823ea4b2fac87ac30dba38f974c73d2b0a3dd6f98",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "101b9408a2fc96d3e079144823ea4b2fac87ac30dba38f974c73d2b0a3dd6f98",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/aeon/references/datasets_benchmarking.md",
+      "sha256": "940899664713b7aeccc70d478db85677102d65ad036c0714e63a0a65db138936",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "940899664713b7aeccc70d478db85677102d65ad036c0714e63a0a65db138936",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/scikit-learn/references/model_evaluation.md",
+      "sha256": "e6f581c0ce2abffaac2f0bafc1a7bfbe86ec18f8969c6e9b91cc732a12a5fea5",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "e6f581c0ce2abffaac2f0bafc1a7bfbe86ec18f8969c6e9b91cc732a12a5fea5",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/scikit-learn/references/pipelines_and_composition.md",
+      "sha256": "a1810cd67dc9141d962fa1972e11b06be6bd437213e10a563e5ec4256fb274a9",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "a1810cd67dc9141d962fa1972e11b06be6bd437213e10a563e5ec4256fb274a9",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/timesfm-forecasting/references/workflows.md",
+      "sha256": "fc702f51534461c7c1225287102366a1926cc2ee5e875205ddcfa875c615e5f7",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "fc702f51534461c7c1225287102366a1926cc2ee5e875205ddcfa875c615e5f7",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/timesfm-forecasting/references/examples_and_validation.md",
+      "sha256": "8f2a1c53328d59b7ed95351eaec556e4a0d907df2fed61de66890d671b042fd9",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "8f2a1c53328d59b7ed95351eaec556e4a0d907df2fed61de66890d671b042fd9",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/shap/references/theory.md",
+      "sha256": "103d0f50131649c63d6c0895a723d28f5fc175cb5ef923adec0655adc7a136dd",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "103d0f50131649c63d6c0895a723d28f5fc175cb5ef923adec0655adc7a136dd",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/arbor/references/htr-methodology.md",
+      "sha256": "9cc02ce21b7ae3ef3ae49fd1f3542a608c0700e1b2dcaa01ea6ed443f10d3f92",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "9cc02ce21b7ae3ef3ae49fd1f3542a608c0700e1b2dcaa01ea6ed443f10d3f92",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/arbor/scripts/tree.py",
+      "sha256": "100045de01ba20c5fa60785701444a000f57499b6dbe2715cabef6d76d6b8c1d",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "100045de01ba20c5fa60785701444a000f57499b6dbe2715cabef6d76d6b8c1d",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/get-available-resources/references/resource_semantics.md",
+      "sha256": "cb31d9340e5c7da72aac1728448de61e90ff9c6022735ab90976457f6d4dbd7c",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "cb31d9340e5c7da72aac1728448de61e90ff9c6022735ab90976457f6d4dbd7c",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/get-available-resources/scripts/plan_workload.py",
+      "sha256": "b89cfefe02422814b1b7df2942e1d4bafec24159c38b2765b869944bbe3a1a92",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "b89cfefe02422814b1b7df2942e1d4bafec24159c38b2765b869944bbe3a1a92",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/datalad/references/provenance.md",
+      "sha256": "d9e56071463c5c118800ff5a800dd58ae5de38d04fc465c119ae0c690fc1c542",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "d9e56071463c5c118800ff5a800dd58ae5de38d04fc465c119ae0c690fc1c542",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/simpy/references/simulation-methodology.md",
+      "sha256": "e25164d41106c13bed7845d8167e38acbded4d2073b58dee5613d95bd50fb9cf",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "e25164d41106c13bed7845d8167e38acbded4d2073b58dee5613d95bd50fb9cf",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/simpy/scripts/replication_runner.py",
+      "sha256": "4160eb858779df62171d4dbbf459bb003666e1995791b401b253dce47b9c56da",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "4160eb858779df62171d4dbbf459bb003666e1995791b401b253dce47b9c56da",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/exploratory-data-analysis/scripts/missingness_leakage_audit.py",
+      "sha256": "28458714e80ee31db636c0265ba21e1623ba27816d31e236fdc9b873a5b78ffc",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "28458714e80ee31db636c0265ba21e1623ba27816d31e236fdc9b873a5b78ffc",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/exploratory-data-analysis/scripts/_tabular.py",
+      "sha256": "5d1db825890dd035c30e51ac1c11aee56e1e1dca6ffd238ee87ae7d51d8df2f0",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "5d1db825890dd035c30e51ac1c11aee56e1e1dca6ffd238ee87ae7d51d8df2f0",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-statistics/references/common-failure-modes.md",
+      "sha256": "e4db4cbcc5c2c64bbe40e54a0686986e1c540c0e7530fd3ed2902da92968876b",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "e4db4cbcc5c2c64bbe40e54a0686986e1c540c0e7530fd3ed2902da92968876b",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-statistics/references/statistical-reporting.md",
+      "sha256": "4b014328e17cfb06369b6a14fd9eee0d47408d6484c8b9e520fcbe481cb87f3a",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "4b014328e17cfb06369b6a14fd9eee0d47408d6484c8b9e520fcbe481cb87f3a",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-experiment-log/templates/experiment-index.md",
+      "sha256": "0da44d318c84810aaf36343d92333d61735d2813a7392cfb0800d3014753552d",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "0da44d318c84810aaf36343d92333d61735d2813a7392cfb0800d3014753552d",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-experiment-log/templates/anomaly-log.md",
+      "sha256": "db2748355c7dda56388a48ab6961a3a97398f7aa17c6d8cef14841e3719cbfda",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "db2748355c7dda56388a48ab6961a3a97398f7aa17c6d8cef14841e3719cbfda",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-paper-card/references/evidence-and-provenance.md",
+      "sha256": "2731956e7c1b2e180eb4a6c13dd631c731b322dfe7d61e43d6fd4fb3e704e817",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "2731956e7c1b2e180eb4a6c13dd631c731b322dfe7d61e43d6fd4fb3e704e817",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-reviewer/references/forensic-consistency-audit.md",
+      "sha256": "300281ef87dce5073168246f2c6bd18e63e72950593f0403635cc12199f4230f",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "300281ef87dce5073168246f2c6bd18e63e72950593f0403635cc12199f4230f",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "nature-skills-main/skills/nature-data/references/fair-metadata-checklist.md",
+      "sha256": "396170bc77a8783bbe205e37f90d2d845d0653afc3252944c1b9e5cb10d250de",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "396170bc77a8783bbe205e37f90d2d845d0653afc3252944c1b9e5cb10d250de",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    },
+    {
+      "path": "scientific-agent-skills-main/skills/literature-review/references/core_workflow.md",
+      "sha256": "4d63f1087c98efeec7c7bf622bed6e0456a9c7c3defe584995917f2de6f2c601",
+      "evidence_kind": "static-file-content",
+      "executed": false,
+      "observed_sha256": "4d63f1087c98efeec7c7bf622bed6e0456a9c7c3defe584995917f2de6f2c601",
+      "integrity": "pass",
+      "disposition": "read-only reference; independently author bounded contracts; no script execution"
+    }
+  ],
+  "local_sources": [
+    {
+      "id": "scientific-agent-skills-main",
+      "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "version_kind": "local-archive-snapshot",
+      "commit": null,
+      "snapshot": "9fc9e9b2b02047c24952f52557b24a9a211408c75399c096a99285bdaa6b2418",
+      "root_license": "MIT; per-skill metadata can differ",
+      "root_license_does_not_clear_nested_components": true,
+      "anchors": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+          "observed_sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1"
+        }
+      ],
+      "adoption": "independently-authored-with-source-contributions; copied bytes require individual notice"
+    },
+    {
+      "id": "nature-skills-main",
+      "repository": "https://github.com/Yuan1z0825/nature-skills",
+      "version_kind": "local-archive-snapshot",
+      "commit": null,
+      "snapshot": "a686ecafb3351902bd37a422a53abb518f47dd05f5f4133464cccc4c895a7098",
+      "root_license": "Apache-2.0; selected per-skill licenses and nested notices require review",
+      "root_license_does_not_clear_nested_components": true,
+      "anchors": [
+        {
+          "path": "LICENSE",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "observed_sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+        }
+      ],
+      "adoption": "independently-authored-with-source-contributions; copied bytes require individual notice"
+    }
+  ],
+  "no_copy": [
+    "ClaudeKit proprietary/confidential source",
+    "unresolved office assets/prompts/code",
+    "CC-BY-NC-SA what-if-oracle",
+    "RCAEval CausalRCA/RUN unlicensed implementations"
+  ],
+  "primary_sources": [
+    {
+      "id": "RCAEval",
+      "locator": "https://github.com/phamquiluan/RCAEval",
+      "observed_at": "2026-10-06",
+      "purpose": "benchmark metadata",
+      "rights": "mixed licenses; per-component gate; no code/data acquired"
+    },
+    {
+      "id": "AIOpsLab",
+      "locator": "https://github.com/microsoft/AIOpsLab",
+      "observed_at": "2026-10-06",
+      "purpose": "environment/action/reset/cleanup method anatomy",
+      "rights": "MIT reference; no cluster/code execution"
+    },
+    {
+      "id": "OpenTelemetry",
+      "locator": "https://opentelemetry.io/docs/concepts/semantic-conventions/",
+      "observed_at": "2026-10-06",
+      "version": "1.44.0 observed in official docs navigation",
+      "purpose": "bounded field dictionary",
+      "rights": "reference-only until selected file/license/hash closure"
+    }
+  ],
+  "other_selected_sources": [
+    {
+      "selection_id": "E1",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-debug/references/log-and-ci-analysis.md",
+      "expected_sha256": "b33c7c8c3f436a1aec3d9842a8990ebff6b731674866d7dd4ff0c75d6020db73",
+      "observed_sha256": "b33c7c8c3f436a1aec3d9842a8990ebff6b731674866d7dd4ff0c75d6020db73",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: proprietary root",
+      "disposition": "independent design from public primary sources; no source transplant"
+    },
+    {
+      "selection_id": "E1",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-debug/references/investigation-methodology.md",
+      "expected_sha256": "21f56af62c3fa85124b5123a27a6d9cd681361a563d31febe4d19210f552b910",
+      "observed_sha256": "21f56af62c3fa85124b5123a27a6d9cd681361a563d31febe4d19210f552b910",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: proprietary root",
+      "disposition": "independent design from public primary sources; no source transplant"
+    },
+    {
+      "selection_id": "E1",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-debug/references/performance-diagnostics.md",
+      "expected_sha256": "be9bd0342d6bef3adba741217bcf03baa0e5781b18c7c70b07af2f7b343e7936",
+      "observed_sha256": "be9bd0342d6bef3adba741217bcf03baa0e5781b18c7c70b07af2f7b343e7936",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: proprietary root",
+      "disposition": "independent design from public primary sources; no source transplant"
+    },
+    {
+      "selection_id": "E2",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/devops/SKILL.md",
+      "expected_sha256": "f06350a7f5ccbcf25e1b3437418f5245bf73ccd09c2089d38331a8f91e068204",
+      "observed_sha256": "f06350a7f5ccbcf25e1b3437418f5245bf73ccd09c2089d38331a8f91e068204",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root proprietary vs devops MIT metadata and README MIT",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E2",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/devops/references/kubernetes-troubleshooting.md",
+      "expected_sha256": "5f5d950904dcb79bf926d6bcb41e3b60fc424cc60a9023ba1ca99e20ba8941e9",
+      "observed_sha256": "5f5d950904dcb79bf926d6bcb41e3b60fc424cc60a9023ba1ca99e20ba8941e9",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root proprietary vs devops MIT metadata and README MIT",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E2",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/devops/references/kubernetes-workflows.md",
+      "expected_sha256": "dafc947fbad553a3707ef9256093b800b44bc8131eca7ea332c705d31f6b85a2",
+      "observed_sha256": "dafc947fbad553a3707ef9256093b800b44bc8131eca7ea332c705d31f6b85a2",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root proprietary vs devops MIT metadata and README MIT",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E3",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-security/SKILL.md",
+      "expected_sha256": "4032dbdae97bd09ea6aa714e1b9e817c3ae65298ba962f6b3c09765c21ba754f",
+      "observed_sha256": "4032dbdae97bd09ea6aa714e1b9e817c3ae65298ba962f6b3c09765c21ba754f",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root rights despite MIT metadata attribution",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E3",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-code-review/SKILL.md",
+      "expected_sha256": "8f119c2bc03026b43a6f6fb7eb3618d2b76a3513b21d0841aaa1bcfec3cc3730",
+      "observed_sha256": "8f119c2bc03026b43a6f6fb7eb3618d2b76a3513b21d0841aaa1bcfec3cc3730",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root rights despite MIT metadata attribution",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E3",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/test/SKILL.md",
+      "expected_sha256": "ffe57be0ee45def18b13d533c047024791dc55ee4c67e5a1f84ed056120e5878",
+      "observed_sha256": "ffe57be0ee45def18b13d533c047024791dc55ee4c67e5a1f84ed056120e5878",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root rights despite MIT metadata attribution",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E3",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-scenario/SKILL.md",
+      "expected_sha256": "c6903426d984f73796888d35b4cb5b0635b8bc726bdeadf7742b821c22edf4cc",
+      "observed_sha256": "c6903426d984f73796888d35b4cb5b0635b8bc726bdeadf7742b821c22edf4cc",
+      "integrity": "pass",
+      "source_rights": "CONFLICT: root rights despite MIT metadata attribution",
+      "disposition": "independent public-source design"
+    },
+    {
+      "selection_id": "E4",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-loop/SKILL.md",
+      "expected_sha256": "df55428da56e69e0c45a0e0b2b57c01381650bba2ce2db6579953760d42e486e",
+      "observed_sha256": "df55428da56e69e0c45a0e0b2b57c01381650bba2ce2db6579953760d42e486e",
+      "integrity": "pass",
+      "source_rights": "CONFLICT root; single mechanical metric insufficient scientific evidence",
+      "disposition": "No adoption; scientific protocol independently designed if needed"
+    },
+    {
+      "selection_id": "E4",
+      "kit": "claudekit-engineer-main",
+      "path": "claude/skills/ck-autoresearch/SKILL.md",
+      "expected_sha256": "495ff79a8b79758ae034c6cb0ef9fec9c43d691f556711df46f6cf3fb57b5cd2",
+      "observed_sha256": "495ff79a8b79758ae034c6cb0ef9fec9c43d691f556711df46f6cf3fb57b5cd2",
+      "integrity": "pass",
+      "source_rights": "CONFLICT root; single mechanical metric insufficient scientific evidence",
+      "disposition": "No adoption; scientific protocol independently designed if needed"
+    },
+    {
+      "selection_id": "M1",
+      "kit": "claudekit-marketing-main",
+      "path": "claude/skills/ab-test-setup/SKILL.md",
+      "expected_sha256": "051f6845f97fda2bb42ae90df1d7162358ec1219ecee60c114b830a31f66c53a",
+      "observed_sha256": "051f6845f97fda2bb42ae90df1d7162358ec1219ecee60c114b830a31f66c53a",
+      "integrity": "pass",
+      "source_rights": "CONFLICT proprietary root",
+      "disposition": "no adoption"
+    },
+    {
+      "selection_id": "M1",
+      "kit": "claudekit-marketing-main",
+      "path": "claude/skills/analytics/SKILL.md",
+      "expected_sha256": "50bb87c767f9df286bf85bc839ee802fe442b979b486b4ff9ba75c645e82031b",
+      "observed_sha256": "50bb87c767f9df286bf85bc839ee802fe442b979b486b4ff9ba75c645e82031b",
+      "integrity": "pass",
+      "source_rights": "CONFLICT proprietary root",
+      "disposition": "no adoption"
+    },
+    {
+      "selection_id": "H1",
+      "kit": "humanizer-main",
+      "path": "SKILL.md",
+      "expected_sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "observed_sha256": "0612f1dfb1672b0ea9b97e139bf1f06cabe98d8b27424fe8ff01e1fb4cc99cad",
+      "integrity": "pass",
+      "source_rights": "MIT with retained notice; Wikipedia-origin fragments need provenance",
+      "disposition": "No duplicate work; retain owned selective behavior"
+    },
+    {
+      "selection_id": "H1",
+      "kit": "humanizer-main",
+      "path": "LICENSE",
+      "expected_sha256": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+      "observed_sha256": "4ac4810254ab36d45419141aeb8e69bf50652cfafe5b2dab947d06d44e5cbf96",
+      "integrity": "pass",
+      "source_rights": "MIT with retained notice; Wikipedia-origin fragments need provenance",
+      "disposition": "No duplicate work; retain owned selective behavior"
+    },
+    {
+      "selection_id": "L1",
+      "kit": "languagetool-master",
+      "path": "README.md",
+      "expected_sha256": "999c7c74959a7bef9b355b09f23146c144988eae5cfb6a23acc5e5674d5f4d7b",
+      "observed_sha256": "999c7c74959a7bef9b355b09f23146c144988eae5cfb6a23acc5e5674d5f4d7b",
+      "integrity": "pass",
+      "source_rights": "LGPL-2.1-or-later core; POM/COPYING warn resources differ",
+      "disposition": "Do not bundle Java/rules/dictionaries; future optional authorized English diagnostic"
+    },
+    {
+      "selection_id": "L1",
+      "kit": "languagetool-master",
+      "path": "pom.xml",
+      "expected_sha256": "c48e5d13fd465b280a27bf22ced4fc1c336aff2c26cd0dbdd1073c5c5815ff37",
+      "observed_sha256": "c48e5d13fd465b280a27bf22ced4fc1c336aff2c26cd0dbdd1073c5c5815ff37",
+      "integrity": "pass",
+      "source_rights": "LGPL-2.1-or-later core; POM/COPYING warn resources differ",
+      "disposition": "Do not bundle Java/rules/dictionaries; future optional authorized English diagnostic"
+    },
+    {
+      "selection_id": "L1",
+      "kit": "languagetool-master",
+      "path": "COPYING.txt",
+      "expected_sha256": "95a62130965bddc821631fcec03abe97246f9130f11a8be6f47579f8bc016fc8",
+      "observed_sha256": "95a62130965bddc821631fcec03abe97246f9130f11a8be6f47579f8bc016fc8",
+      "integrity": "pass",
+      "source_rights": "LGPL-2.1-or-later core; POM/COPYING warn resources differ",
+      "disposition": "Do not bundle Java/rules/dictionaries; future optional authorized English diagnostic"
+    },
+    {
+      "selection_id": "L1",
+      "kit": "languagetool-master",
+      "path": "languagetool-standalone/COPYING.txt",
+      "expected_sha256": "6cb151ab0b1fe9c2d4c367ff781755f4dec6a7129e2bb248b078d9eb0e12718b",
+      "observed_sha256": "6cb151ab0b1fe9c2d4c367ff781755f4dec6a7129e2bb248b078d9eb0e12718b",
+      "integrity": "pass",
+      "source_rights": "LGPL-2.1-or-later core; POM/COPYING warn resources differ",
+      "disposition": "Do not bundle Java/rules/dictionaries; future optional authorized English diagnostic"
+    },
+    {
+      "selection_id": "L1",
+      "kit": "languagetool-master",
+      "path": "languagetool-standalone/src/main/resources/third-party-licenses/README.txt",
+      "expected_sha256": "9a62eb98d6c79962adace7a8b41ae3f8cd8207a0675e5d3cb25ee2d8e6e629f6",
+      "observed_sha256": "9a62eb98d6c79962adace7a8b41ae3f8cd8207a0675e5d3cb25ee2d8e6e629f6",
+      "integrity": "pass",
+      "source_rights": "LGPL-2.1-or-later core; POM/COPYING warn resources differ",
+      "disposition": "Do not bundle Java/rules/dictionaries; future optional authorized English diagnostic"
+    },
+    {
+      "selection_id": "A1",
+      "kit": "skills-main",
+      "path": "skills/skill-creator/SKILL.md",
+      "expected_sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+      "observed_sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license; retain provenance/notices",
+      "disposition": "Adapt selected behavior; literal reuse only after exact Apache closure"
+    },
+    {
+      "selection_id": "A1",
+      "kit": "skills-main",
+      "path": "skills/skill-creator/scripts/aggregate_benchmark.py",
+      "expected_sha256": "123ef128ea5ccc01a4b1ac212ef5567f21e9c13d3d240609780beeb3200c49aa",
+      "observed_sha256": "123ef128ea5ccc01a4b1ac212ef5567f21e9c13d3d240609780beeb3200c49aa",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license; retain provenance/notices",
+      "disposition": "Adapt selected behavior; literal reuse only after exact Apache closure"
+    },
+    {
+      "selection_id": "A1",
+      "kit": "skills-main",
+      "path": "skills/skill-creator/references/schemas.md",
+      "expected_sha256": "8e8876180a8989b406a4d3edddf875b04cdfd5805cc8616686d552b11ce4455f",
+      "observed_sha256": "8e8876180a8989b406a4d3edddf875b04cdfd5805cc8616686d552b11ce4455f",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license; retain provenance/notices",
+      "disposition": "Adapt selected behavior; literal reuse only after exact Apache closure"
+    },
+    {
+      "selection_id": "A1",
+      "kit": "skills-main",
+      "path": "skills/skill-creator/LICENSE.txt",
+      "expected_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "observed_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license; retain provenance/notices",
+      "disposition": "Adapt selected behavior; literal reuse only after exact Apache closure"
+    },
+    {
+      "selection_id": "A2",
+      "kit": "skills-main",
+      "path": "skills/webapp-testing/SKILL.md",
+      "expected_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "observed_sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0; defects/authority block direct helper adoption",
+      "disposition": "Adapt intent; reject helper transplant"
+    },
+    {
+      "selection_id": "A2",
+      "kit": "skills-main",
+      "path": "skills/webapp-testing/scripts/with_server.py",
+      "expected_sha256": "b0dcf4918935b795f4eda9821579b9902119235ff4447f687a30286e7d0925fd",
+      "observed_sha256": "b0dcf4918935b795f4eda9821579b9902119235ff4447f687a30286e7d0925fd",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0; defects/authority block direct helper adoption",
+      "disposition": "Adapt intent; reject helper transplant"
+    },
+    {
+      "selection_id": "A2",
+      "kit": "skills-main",
+      "path": "skills/webapp-testing/LICENSE.txt",
+      "expected_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "observed_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0; defects/authority block direct helper adoption",
+      "disposition": "Adapt intent; reject helper transplant"
+    },
+    {
+      "selection_id": "A3",
+      "kit": "skills-main",
+      "path": "skills/mcp-builder/SKILL.md",
+      "expected_sha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
+      "observed_sha256": "0f4592dcb53cf2b5d6b7febee6b4152018b565551a1c29e3c612f57b218ab295",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license",
+      "disposition": "Selected behavior only if research actually needs live collection"
+    },
+    {
+      "selection_id": "A3",
+      "kit": "skills-main",
+      "path": "skills/mcp-builder/reference/mcp_best_practices.md",
+      "expected_sha256": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
+      "observed_sha256": "80fb4369a349447cf18ecdd7494fe7938b6065377e9f08c077cec411093a3007",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license",
+      "disposition": "Selected behavior only if research actually needs live collection"
+    },
+    {
+      "selection_id": "A3",
+      "kit": "skills-main",
+      "path": "skills/mcp-builder/LICENSE.txt",
+      "expected_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "observed_sha256": "bc6b3af2f331cbc7fb0da1344efb2cbe5877a31498b4d70dbc7000f3405a1362",
+      "integrity": "pass",
+      "source_rights": "Apache-2.0 path license",
+      "disposition": "Selected behavior only if research actually needs live collection"
+    },
+    {
+      "selection_id": "A4",
+      "kit": "skills-main",
+      "path": "skills/docx/LICENSE.txt",
+      "expected_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "observed_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "integrity": "pass",
+      "source_rights": "Quartet proprietary prohibits copy/derivative/distribution; coauthoring has no path license",
+      "disposition": "No copied prompts/code/assets; independent public formats/tools"
+    },
+    {
+      "selection_id": "A4",
+      "kit": "skills-main",
+      "path": "skills/pdf/LICENSE.txt",
+      "expected_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "observed_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "integrity": "pass",
+      "source_rights": "Quartet proprietary prohibits copy/derivative/distribution; coauthoring has no path license",
+      "disposition": "No copied prompts/code/assets; independent public formats/tools"
+    },
+    {
+      "selection_id": "A4",
+      "kit": "skills-main",
+      "path": "skills/pptx/LICENSE.txt",
+      "expected_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "observed_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "integrity": "pass",
+      "source_rights": "Quartet proprietary prohibits copy/derivative/distribution; coauthoring has no path license",
+      "disposition": "No copied prompts/code/assets; independent public formats/tools"
+    },
+    {
+      "selection_id": "A4",
+      "kit": "skills-main",
+      "path": "skills/xlsx/LICENSE.txt",
+      "expected_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "observed_sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+      "integrity": "pass",
+      "source_rights": "Quartet proprietary prohibits copy/derivative/distribution; coauthoring has no path license",
+      "disposition": "No copied prompts/code/assets; independent public formats/tools"
+    },
+    {
+      "selection_id": "A4",
+      "kit": "skills-main",
+      "path": "skills/doc-coauthoring/SKILL.md",
+      "expected_sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+      "observed_sha256": "2e47d78846faeea4a56e9809c52700087a15a2155a3f293a3efbaded81398ef4",
+      "integrity": "pass",
+      "source_rights": "Quartet proprietary prohibits copy/derivative/distribution; coauthoring has no path license",
+      "disposition": "No copied prompts/code/assets; independent public formats/tools"
+    }
+  ],
+  "previous_ledger_sha256": "fd2d67bb2f269103c0f4d22ac6bd00c44cb8917eec9dffbbf4393c73fce86947",
+  "pilot_rights": "existing local World Bank source/normalized snapshot/raw hash/notice verified; pilot-selection-v2.json"
+}

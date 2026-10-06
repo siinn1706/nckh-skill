@@ -1,0 +1,84 @@
+{
+  "base_runtime": {
+    "path": "plans/runs/nckh-native-261005-1257-r36-cursor-prompt-stop-faults-attempt-07/cursor-prompt-stop-runtime.py",
+    "sha256": "26041d7c2c1c11d75858dc3b29a6346df212fc879271b309ba1e7ba754bd127a"
+  },
+  "cases": [
+    {
+      "before_sha256": "4dadc6a4c1106286b6e23c4792753ea4f6986fcef98f108dcffeda7c59acd057",
+      "expected": "unchanged",
+      "index": 1,
+      "kind": "Read",
+      "marker": "NCKH_DIRECT_FINISHED_01",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "relative": "oracles/r36-cursor-direct-read-08.txt"
+    },
+    {
+      "before_sha256": null,
+      "expected": "exact-public-write",
+      "index": 2,
+      "kind": "Write",
+      "marker": "NCKH_DIRECT_FINISHED_02",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "relative": "oracles/r36-cursor-direct-write-08.txt"
+    },
+    {
+      "before_sha256": null,
+      "expected": "absent",
+      "index": 3,
+      "kind": "Write",
+      "marker": "NCKH_DIRECT_FINISHED_03",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "relative": "private/r36-cursor-direct-private-08.txt"
+    },
+    {
+      "before_sha256": null,
+      "expected": "absent",
+      "index": 4,
+      "kind": "Write",
+      "marker": "NCKH_DIRECT_FINISHED_04",
+      "mode": "plan-only",
+      "prompt": "[removed: raw runtime content]",
+      "relative": "oracles/r36-cursor-direct-plan-only-08.txt"
+    },
+    {
+      "before_sha256": null,
+      "expected": "absent",
+      "index": 5,
+      "kind": "Shell",
+      "marker": "NCKH_DIRECT_FINISHED_05",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "relative": "oracles/r36-cursor-direct-shell-08.txt"
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/prepare-direct-interactive.py",
+    "sha256": "979633f7a3d4f8329dbac5320e101044cb9c550597108c2b3801c4b7a22ba2ee"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/definitions/session.json",
+    "sha256": "0ab5ba9f14664e3b88a498d3146ab03c5e8ffabaebf495c87fbbb8b83b224f7b"
+  },
+  "effort_requested": "xhigh",
+  "fixture_sha256": "4dadc6a4c1106286b6e23c4792753ea4f6986fcef98f108dcffeda7c59acd057",
+  "input_protocol": "prompt-text-write-then-separate-carriage-return",
+  "maximum_model_turns": 5,
+  "maximum_prompt_submissions": 5,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "observer_invoked": false,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/cursor-direct-runtime.py",
+    "sha256": "6d1ec3854c7ac0e75143d7d1ef6174e51bad694f24273edbec4df14905112f91"
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-five-direct-interactive-turns",
+  "timeout_seconds": 5
+}

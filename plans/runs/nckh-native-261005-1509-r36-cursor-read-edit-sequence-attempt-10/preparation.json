@@ -1,0 +1,46 @@
+{
+  "base_runtime": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/cursor-existing-runtime.py",
+    "sha256": "96a51421fe171249244776a7b1e428ae149fa9dff24b96c965055d584a7a25ad"
+  },
+  "before_sha256": "b731e32d12f7245ff4309d3f4f5d5442f07765a5e4edd52f04999118a8ed45fd",
+  "brief": {
+    "path": "plans/runs/nckh-native-261005-1509-r36-cursor-read-edit-sequence-attempt-10/frozen-brief.json",
+    "sha256": "3cda9548cfe043fb0570b890760954994b14dd1410002ced6921e5e638e71277"
+  },
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1509-r36-cursor-read-edit-sequence-attempt-10/prepare-read-edit.py",
+    "sha256": "49f7483026790fa814a86fcc0286c3d23e1b4327dbbf6dc1ffcad7364c0d585f"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1509-r36-cursor-read-edit-sequence-attempt-10/definitions/session.json",
+    "sha256": "e5c46cded4db1accec560e9438f7572e798f6071e66375a8f530cc406d1f1356"
+  },
+  "effort_requested": "xhigh",
+  "fault_origin": "none",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "fixture_preimage": {
+    "path": "plans/runs/nckh-native-261005-1509-r36-cursor-read-edit-sequence-attempt-10/fixture-preimage.txt",
+    "sha256": "b731e32d12f7245ff4309d3f4f5d5442f07765a5e4edd52f04999118a8ed45fd"
+  },
+  "marker": "NCKH_READ_EDIT_FINISHED_10",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_tool_calls": 2,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "observer_invoked": true,
+  "outer_timeout_seconds": 20,
+  "packaged_runner_timeout_seconds": 5,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "prompt": "[removed: raw runtime content]",
+  "relative": "oracles/r36-cursor-read-edit-public-10.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1509-r36-cursor-read-edit-sequence-attempt-10/cursor-read-edit-runtime.py",
+    "sha256": "118ba664506c4aa151cc6769e90abfcd97c781858d8293600351394ceb9367b4"
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-one-read-then-edit-control"
+}

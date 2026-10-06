@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-10-06T03:23:41.324604+00:00",
+  "inputs": [
+    {
+      "path": "partition-supplement.py",
+      "sha256": "49e39f1ab1c53312d8e8c68c9d9a91d429f532c483d60e978cdd104cef7c2839"
+    },
+    {
+      "path": "research-protocol.md",
+      "sha256": "e0393f1595d6852b03ffc78aa4ee1146255db6cc8fbe3bde8b195bdc0131345e"
+    },
+    {
+      "path": "pilot-data/normalized.json",
+      "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+    },
+    {
+      "path": "split-manifest.json",
+      "sha256": "b9607bc6e0d38c40da0e4fbb70788b7c41d505d4d0c8d89383f59d8f8394cdec"
+    },
+    {
+      "path": "environment-v2.json",
+      "sha256": "47d9d54bd8fc8512d08c7d8c9ccdad033137af22803a7adc58f7a2c27bcea490"
+    }
+  ],
+  "reason": "Add missing descriptive train/validation partition reporting; original frozen graph and genuine test-only receipt remain unchanged",
+  "output": "partition-supplement-output.json",
+  "selection": "fixed baseline formulas and original train/validation/test year boundaries",
+  "no_history_policy": "unknown with explicit reason; no imputation",
+  "grants": "existing local stdlib offline pilot authority"
+}

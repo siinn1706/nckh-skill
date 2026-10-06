@@ -1,0 +1,22 @@
+{
+  "original_verifier": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/verify-grep-faults.py",
+    "sha256": "3b1e0bb90e7bcb4b3df8e3225903e70bc633251845f535aa4454f09bef47eb61"
+  },
+  "scoped_verifier": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/verify-grep-observations-with-monitor-gap.py",
+    "sha256": "6094d77af7cf8920dcea2a0a260c344b8b9d40f976acfa055478a415e3c3e316"
+  },
+  "original_file_modified": false,
+  "original_oracle": "failed-preserved",
+  "causal_evidence": [
+    "monitor-exit.json",
+    "original-verification-result.json",
+    "process-ownership-correction.json"
+  ],
+  "scoped_claim": "native callbacks, policy receipts, actual denial metadata, marker integrity and corrected scoped process exit",
+  "excluded_claim": "continuous monitor success, full original oracle, general historical zero-live claim",
+  "behavior_checks_changed": false,
+  "native_retry": false,
+  "source_kit_modified": false
+}

@@ -1,0 +1,87 @@
+{
+  "Stop_timeout_seconds": 5,
+  "config": {
+    "hooks": {
+      "beforeSubmitPrompt": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54\\cursor-file-observer.py --host cursor --event beforeSubmitPrompt --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-stop-controls-54 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "postToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54\\cursor-file-observer.py --host cursor --event postToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-stop-controls-54 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "matcher": "^Write$",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "preToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-stop-controls-54 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "failClosed": true,
+          "matcher": "^Write$",
+          "timeout": 20,
+          "type": "command"
+        }
+      ],
+      "sessionStart": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54\\cursor-file-observer.py --host cursor --event sessionStart --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-stop-controls-54 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "stop": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54\\cursor-file-observer.py --host cursor --event stop --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-stop-controls-54 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "loop_limit": 1,
+          "timeout": 5,
+          "type": "command"
+        }
+      ]
+    },
+    "version": 1
+  },
+  "config_sha256": "922c5a812a17d75605be2ecb204cc4a8403474502535179e92c4e0387b8dfd27",
+  "definition_kind": "bounded-Stop-after-Write-observations",
+  "extra_configs": [
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-allow.txt",
+      "sha256": "158bf0f191484d7acd2db71731bd08e566a28a30258e3df2f663a65bd852506c"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-policy-deny.txt",
+      "sha256": "f09d1fe6600d6db6acfde84c5c9c4af4097db4b673f49f5893c9711a7f65383c"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-malformed-input.txt",
+      "sha256": "1fe9274f4002da8ee670e97a600a1bf419e25c46ff6565c4fe316712355e6496"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-malformed-output.txt",
+      "sha256": "810690ee6d8177153e8e55b607e0c80261347d7b5f8cf4519dddd630a21bcd40"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-timeout.txt",
+      "sha256": "004cfe5443fee2a29cfe8765468b722b85978de052f35333d413248eb94fdfd2"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-crash.txt",
+      "sha256": "e881f1aeaf82845ea2c49f2e4b522693b5c2082b52b946ed5e3e1e946c7e92d0"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-stop-controls-54/public/stop-unsupported-codec.txt",
+      "sha256": "4e8731a3eb11b820f271d933c56c5891877ea144740f8f33b3081f38f77c087e"
+    }
+  ],
+  "injected_sleep_seconds": 8,
+  "inner_runner_timeout_seconds": 5,
+  "observer": {
+    "path": "plans/runs/nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54/cursor-file-observer.py",
+    "sha256": "96069b872b1c612d43f34e08a5c9de86a4e21f1c073ff49c395eedf6bf0fdc0f"
+  },
+  "selected_matcher": "^Write$",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb"
+}

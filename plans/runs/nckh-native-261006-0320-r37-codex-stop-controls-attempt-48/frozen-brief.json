@@ -1,0 +1,41 @@
+{
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "model": "gpt-5.6-luna",
+  "effort": "medium",
+  "surface": "codex-cli-exec",
+  "version": "0.154.0",
+  "event": "Stop",
+  "tool": "apply_patch",
+  "modes": [
+    "allow",
+    "policy-deny",
+    "malformed-input",
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-codec"
+  ],
+  "maximum_requested_model_turns": 7,
+  "maximum_requested_native_tools": 7,
+  "model_retries": 0,
+  "marker_bytes_hex": "4e434b485f4e41544956455f46494c455f4f5241434c450a",
+  "final_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+  "normal_policy_expected": "advisory/writing-resource-advice-only; Stop codec wire is empty object",
+  "deny_policy_expected": "block/bounded-input-exceeded from33 controller-owned empty reference records; Stop codec wire is empty object",
+  "oracle": "one exact native patch; matching pre/post identities; Stop observes already-present exact marker; retain message hash and repeat flag from actual input",
+  "fault_origin": "five controller injections after genuine native Stop callbacks; none for allow/policy-deny",
+  "outer_timeout_seconds": 5,
+  "inner_timeout_seconds": 5,
+  "injected_sleep_seconds": 8,
+  "whole_turn_deadline": null,
+  "trust_route": "reuse existing trusted project; inline invocation hook-trust bypass",
+  "global_direct_writes": false,
+  "new_trust_keys": "not-authorized",
+  "scientific_QA": "unverified; synthetic marker only",
+  "native_hook_notifications": "observe only what retained exec output exposes",
+  "controller": {
+    "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/run-stop-controls.py",
+    "sha256": "b2534c2b2a46c8a64e3b3d80aa5f6a1399d5fdf423096ea8e3b233eab63ab140"
+  }
+}

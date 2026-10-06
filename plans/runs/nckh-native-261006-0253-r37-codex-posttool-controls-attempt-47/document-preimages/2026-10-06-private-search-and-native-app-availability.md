@@ -1,0 +1,38 @@
+# Private search and native app availability
+
+Native39 delivery (historical evidence path: `../reports/delivery-261006-0110-r37-cursor-private-search.md`; unavailable in the cleaned checkout) binds the result and limits. An empty controller operation map does not bypass the private-path guard when the native payload exposes the exact file_path: protected paths are checked first. Public Grep manual behavior and this private denial are distinct observations.
+
+Use the existing user-selected CLI routes while the active Computer Use capability disables native apps. An empty API app inventory is not an OS-window absence claim. Keep direct IDE qualification open and retain earlier access/unlock/dangerous permissions. Native CLI /exit completed cleanly; final process union1038 has zero live owned identities. Source r37 unchanged; plan44/45/P3 active.
+
+
+## Codex native patch fault continuation
+
+Codex patch faults40 (historical evidence path: `../reports/delivery-261006-0125-r37-codex-patch-faults.md`; unavailable in the cleaned checkout) verifies five actual canonical add-file calls on GPT5.6Luna/medium: malformed input has no mutation; malformed output/timeout/crash/unsupported selected codec each permit a completed file change.24 callbacks/21 receipts, native exits0, cleanup26/preserved451/union1145 identities/zero live at native checkpoint. Inline invocation definitions, no new trust key/source change. Remaining native task stays unchecked/44 of45/P3 active.
+
+
+## Codex project/plugin route preparation
+
+Codex project/plugin proposal41 (historical evidence path: `../reports/proposal-261006-0135-r37-codex-plugin-cache-scope.md`; unavailable in the cleaned checkout) is verified inactive:33 proposal files,26 unchanged r37 payload files,18 Python files compiled in memory,10 Windows argv roundtrips; zero hook/model executions and no installation. Native help/schema confirms project/plugin source metadata and keyed plugin uninstall with local-cache removal. Cache authority outside workspace remains a separate plan gate; Windows PLUGIN_ROOT delivery requires a genuine callback before any model turn. Final process union1163 identities/zero live/no process stop. Full native task stays unchecked/44 of45/P3 active.
+
+
+## Cursor workspace route inspection
+
+Cursor workspace route42 (historical evidence path: `../reports/inspection-261006-0200-r37-cursor-workspace-plugin-route.md`; unavailable in the cleaned checkout) verifies a read-only observation of the same installed vendor hash:workspaceOpen/pluginPaths literals are in shared parser/response code; no native trigger/loading qualification, new CLI process or model prompt. Native19/21 missing prompt/stop plugin callbacks remain unqualified. Current pending scope (historical evidence path: `../runs/nckh-native-261006-0200-r37-cursor-workspace-route-inspection-attempt-42/native-continuation-todo.json`; unavailable in the cleaned checkout) records the explicit native41 cache-authority question awaiting a direct answer and the existing unanswered Claude model/effort selection. Full native task remains unchecked/44 of45/P3 active.
+
+
+## Cursor workspace native startup
+
+Cursor workspace startup43 (historical evidence path: `../reports/delivery-261006-0215-r37-cursor-workspace-startup.md`; unavailable in the cleaned checkout) verifies actual workspaceOpen pluginPaths loading and a project/plugin sessionStart pair with one idempotent receipt, zero model/tool requests. Native /exit and monitor exit0; cleanup32/preserved862/final union1393 identities/zero live. Prompt/stop/tool duplicate cells remain pending; native19/21 failures are preserved. Source r37 unchanged, full native task unchecked/44 of45/P3 active.
+
+
+## Cursor workspace duplicate continuation
+
+Cursor workspace duplicates44 (historical evidence path: `../reports/delivery-261006-0240-r37-cursor-workspace-duplicates.md`; unavailable in the cleaned checkout) records one model turn/one requested Write,11 callbacks/four project-plugin pairs/six receipts. Workspace/session/tool pairs occur; prompt/stop plugin callbacks remain absent. Associated Read shares the Write ID/path and stays manual; marker CRLF differs from frozen LF. All-five/byte oracle remains failed without regrading. Native and monitor exit0, cleanup32/preserved867/final union1803 identities/zero live. Source r37 unchanged; full native task unchecked/44 of45/P3 active.
+
+## Cursor genuine kit-unsupported event
+
+Cursor genuine kit-unsupported event45 (historical evidence path: `../reports/delivery-261006-0300-r37-cursor-workspace-unsupported-event.md`; unavailable in the cleaned checkout) verifies actual workspaceOpen input forwarded unchanged with the actual selector: runner exit3/degraded block, then native project/plugin sessionStart continues. Zero model/tool requests; four callbacks/two receipts,17 frozen checks matched. Known host event outside kit codec; unknown-host-event admission and mutation prevention remain unverified. Native/monitor exit0, cleanup33/preserved891/final union2008 zero live. Source r37 unchanged;44/45/P3 active.
+
+## AGY native tool-route inspection
+
+AGY tool-route inspection46 (historical evidence path: `../reports/inspection-261006-0330-r37-agy-tool-routes.md`; unavailable in the cleaned checkout) records four read-only native CLI1.2.17 commands/exit0 and16 registered agents. --agent is exposed; per-agent callable tool mapping/effective selection remains unqualified. Zero model/tool requests and hook activation; search35 failures retained. Final union2018 zero live/protected config hashes unchanged. Source r37 unchanged;44/45/P3 active.

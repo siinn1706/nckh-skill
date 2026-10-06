@@ -1,0 +1,313 @@
+{
+  "after_sha256": "07974557b208de09f27c676ac6a62de89939617614fb85925e65614294e604a2",
+  "attempt": "template-read-allow",
+  "backend_attestation": "not-observed",
+  "before_sha256": "07974557b208de09f27c676ac6a62de89939617614fb85925e65614294e604a2",
+  "billing": "not-observed",
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-0905-r35-cursor-template-controls-attempt-01/commands/cursor-file-template-read-allow.json",
+    "sha256": "631d4a9fb56ce92e008ca69d7e1651b2a680fb1bf0a04a6ee39923a9ea503881"
+  },
+  "completed_tool_calls": [
+    {
+      "call_id": "call-0697d0da-078d-464e-9c53-6f32d81c67a3-0\nfc_336c4825-6dec-918d-b880-85784aa05b47_0",
+      "model_call_id": "8808402a-f63a-4ccd-82b0-7c4184d83fc5-0-1vsb",
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "completed",
+      "timestamp_ms": 1791166052301,
+      "tool_call": {
+        "completedAtMs": "1791166052266",
+        "hookAdditionalContexts": [],
+        "readToolCall": {
+          "result": {
+            "error": {
+              "errorMessage": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r35-cursor-template-controls-01/context-allow.json --receipt-dir .nckh-native-r35-cursor-template-controls-01/policy-receipts/template-read-allow\" execution failed: Hook script timed out after 5000ms\n\nAgent note: Do not suggest workarounds to the blocked tool."
+            }
+          }
+        },
+        "startedAtMs": "1791166044886",
+        "toolCallId": "call-0697d0da-078d-464e-9c53-6f32d81c67a3-0\nfc_336c4825-6dec-918d-b880-85784aa05b47_0"
+      },
+      "type": "tool_call"
+    }
+  ],
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0905-r35-cursor-template-controls-attempt-01/definitions/template-read-allow.json",
+    "sha256": "587f07b0cf87e42b87ae892cf25baa4f7e09f47c5ead6aa4dcef1015e45520bd"
+  },
+  "effort_requested": "xhigh",
+  "exit_code": 0,
+  "fault_origin": "none",
+  "file_exists": true,
+  "invalid_stdout_lines": 0,
+  "kind": "Read",
+  "mode": "allow",
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_frames": [
+    {
+      "apiKeySource": "login",
+      "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+      "model": "Grok 4.7 500K Extra High",
+      "permissionMode": "default",
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "Use the native Read file tool exactly once in this authorized scratch project. Do not use shell/terminal, another tool, inspect other files, call agents, retry or work around denial. These files contain synthetic test markers only. After the one attempted call say ORACLE_ATTEMPT_FINISHED and stop. Read oracles/r35-cursor-direct-controls-read.txt",
+            "type": "text"
+          }
+        ],
+        "role": "user"
+      },
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "type": "user"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": "Reading the specified",
+      "timestamp_ms": 1791166039074,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " oracle file with the",
+      "timestamp_ms": 1791166039077,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " native Read tool. Then",
+      "timestamp_ms": 1791166039122,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " I will output ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791166039218,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " and stop.",
+      "timestamp_ms": 1791166039324,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "completed",
+      "timestamp_ms": 1791166044843,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "I'll read that oracle file once, then stop.",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "model_call_id": "8808402a-f63a-4ccd-82b0-7c4184d83fc5-0-1vsb",
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "timestamp_ms": 1791166044911,
+      "type": "assistant"
+    },
+    {
+      "call_id": "call-0697d0da-078d-464e-9c53-6f32d81c67a3-0\nfc_336c4825-6dec-918d-b880-85784aa05b47_0",
+      "model_call_id": "8808402a-f63a-4ccd-82b0-7c4184d83fc5-0-1vsb",
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "started",
+      "timestamp_ms": 1791166044911,
+      "tool_call": {
+        "hookAdditionalContexts": [],
+        "readToolCall": {
+          "args": {
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-direct-controls-read.txt"
+          }
+        },
+        "startedAtMs": "1791166044886",
+        "toolCallId": "call-0697d0da-078d-464e-9c53-6f32d81c67a3-0\nfc_336c4825-6dec-918d-b880-85784aa05b47_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "call_id": "call-0697d0da-078d-464e-9c53-6f32d81c67a3-0\nfc_336c4825-6dec-918d-b880-85784aa05b47_0",
+      "model_call_id": "8808402a-f63a-4ccd-82b0-7c4184d83fc5-0-1vsb",
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "completed",
+      "timestamp_ms": 1791166052301,
+      "tool_call": {
+        "completedAtMs": "1791166052266",
+        "hookAdditionalContexts": [],
+        "readToolCall": {
+          "result": {
+            "error": {
+              "errorMessage": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r35-cursor-template-controls-01/context-allow.json --receipt-dir .nckh-native-r35-cursor-template-controls-01/policy-receipts/template-read-allow\" execution failed: Hook script timed out after 5000ms\n\nAgent note: Do not suggest workarounds to the blocked tool."
+            }
+          }
+        },
+        "startedAtMs": "1791166044886",
+        "toolCallId": "call-0697d0da-078d-464e-9c53-6f32d81c67a3-0\nfc_336c4825-6dec-918d-b880-85784aa05b47_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": "I will read the requested",
+      "timestamp_ms": 1791166055794,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " file once and then ",
+      "timestamp_ms": 1791166056520,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": "stop.",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": "\n\nThe Read tool call",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " failed. I will output",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " and stop without retrying",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "delta",
+      "text": " or explaining.",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "completed",
+      "timestamp_ms": 1791166056521,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "ORACLE_ATTEMPT_FINISHED",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "type": "assistant"
+    },
+    {
+      "duration_api_ms": 23194,
+      "duration_ms": 23194,
+      "is_error": false,
+      "request_id": "8808402a-f63a-4ccd-82b0-7c4184d83fc5",
+      "result": "I'll read that oracle file once, then stop.ORACLE_ATTEMPT_FINISHED",
+      "session_id": "8b6951f4-a0e1-49e8-99dd-e551a316eafd",
+      "subtype": "success",
+      "type": "result",
+      "usage": {
+        "cacheReadTokens": 11136,
+        "cacheWriteTokens": 0,
+        "inputTokens": 55560,
+        "outputTokens": 941
+      }
+    }
+  ],
+  "observer_invoked": false,
+  "path": "oracles/r35-cursor-direct-controls-read.txt",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-template-controls-01/policy-receipts/template-read-allow/137260928cfa032a9f4311f64055394d54a9474ca23f639bc3af0ceb681c2e0d.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "d4cef0f771660efe51f94f0f24f67e34b983cc8269d8a894e072cd602dd208a8",
+        "decision": "allow",
+        "event_hash": "3ad98fa78b23b9ccd9a673db1146875266ca5934465df32c6978488441a3820a",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "8354bd002b00150375f5f8f52ea1325a84607df0f345268dcda6ef16d1dad535",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "26eca45e15465c3686963417f7d9a2fc14261c0e55d187f6ebf6ba5bd9499a61"
+      },
+      "sha256": "50560517624648d8fba914642cf9b6fafca71eb858844f6fe3037fb9cf80548a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-template-controls-01/policy-receipts/template-read-allow/2114c64fad71a85008e1b52136a41d00bea18176f1b02814463006de4061b87c.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "d4cef0f771660efe51f94f0f24f67e34b983cc8269d8a894e072cd602dd208a8",
+        "decision": "advisory",
+        "event_hash": "49359da1479770709dec2c605a2738406de03f59af714cc3727eb6660ea60121",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "8354bd002b00150375f5f8f52ea1325a84607df0f345268dcda6ef16d1dad535",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "26eca45e15465c3686963417f7d9a2fc14261c0e55d187f6ebf6ba5bd9499a61"
+      },
+      "sha256": "b6ecd4517179f0aeb0820ce6ec28b1704b98f9aeaabbd4776b3b745fcaab2361"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed",
+  "timeout_seconds": 5
+}

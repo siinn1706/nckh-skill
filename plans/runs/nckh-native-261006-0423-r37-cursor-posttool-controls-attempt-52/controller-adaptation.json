@@ -1,0 +1,33 @@
+{
+  "timestamp_utc": "2026-10-05T21:28:12.238354+00:00",
+  "source_runtime": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cursor-grep-runtime.py",
+    "sha256": "2452de5e4fef4fa463d866d29bee0d9f906ea721504f9098416de5600ed6ce71"
+  },
+  "source_observer": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cursor-file-observer.py",
+    "sha256": "559cbfb2f84c7f3b9577c822d220ceab9454103833d321e1b830b62de5dd0a79"
+  },
+  "source_process_helper": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/native-process-capture.py",
+    "sha256": "bec33357312be4d13447531e26aace3a91982b3b50e75590cf4f933efe9ccdfb"
+  },
+  "historical_helpers_modified": false,
+  "source_kit_modified": false,
+  "causal_scope": "r34 postToolUse Shell faults are not current-r37 direct Write/producer5s observations",
+  "changes": [
+    "select postToolUse/Write",
+    "seven public marker cases",
+    "prospective CRLF marker binding and callback-start hash",
+    "deny context selected only at postToolUse",
+    "8s sleeper against producer5s",
+    "temporal root/parent generation capture",
+    "bounded atomic-write retry",
+    "native callback self/runner creation timestamps"
+  ],
+  "newline_scope": "new frozen CRLF contract reflects observed Windows Write44; original LF oracle44 remains failed",
+  "controller": {
+    "path": "plans/runs/nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52/control-posttool.py",
+    "sha256": "4dcb45dba685f4997f5af705ba3ea2a13104c2f822b3f70ca3add828d7ed18a4"
+  }
+}

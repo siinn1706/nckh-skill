@@ -1,0 +1,109 @@
+{
+  "status": "verified-four-native-search-attempts-with-failed-oracles",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "model_turns": 4,
+  "model_retries": 0,
+  "results": [
+    {
+      "attempt": "find-by-name-public",
+      "tool": "find_by_name",
+      "private": false,
+      "conversation_id": "e91170e2-d5c6-4fb7-aab4-e9211825fbe2",
+      "observation": "model-only-no-native-tool",
+      "native_error": null,
+      "native_tool_count": 0,
+      "preflight_count": 0,
+      "pre_delivery_count": 0,
+      "fixture_unchanged": true,
+      "enforcement": "unqualified",
+      "original_oracle": "failed-frozen-tool-oracle-retained",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/find-by-name-public.json",
+        "sha256": "c0c46190ff0a4c9109da213892fab319ee7eaf991a97fac9fce601c4aa151fc8"
+      }
+    },
+    {
+      "attempt": "find-by-name-private",
+      "tool": "find_by_name",
+      "private": true,
+      "conversation_id": "e36d146d-58c1-4eef-9f15-ed6ec5e7f235",
+      "observation": "genuine-native-unknown-tool",
+      "native_error": "unknown tool: \"find_by_name\" — check spelling",
+      "native_tool_count": 1,
+      "preflight_count": 0,
+      "pre_delivery_count": 0,
+      "fixture_unchanged": true,
+      "enforcement": "unqualified",
+      "original_oracle": "failed-frozen-tool-oracle-retained",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/find-by-name-private.json",
+        "sha256": "54585e7213d914ff4fd0706959c8a736138983204c83d8d3d2bf184042505aa6"
+      }
+    },
+    {
+      "attempt": "grep-search-public",
+      "tool": "grep_search",
+      "private": false,
+      "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+      "observation": "model-only-no-native-tool",
+      "native_error": null,
+      "native_tool_count": 0,
+      "preflight_count": 0,
+      "pre_delivery_count": 0,
+      "fixture_unchanged": true,
+      "enforcement": "unqualified",
+      "original_oracle": "failed-frozen-tool-oracle-retained",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/grep-search-public.json",
+        "sha256": "16341f10feb9c0dd95318de3f1440f4f04d259cf57695ce6d5d8555eaf0229b3"
+      }
+    },
+    {
+      "attempt": "grep-search-private",
+      "tool": "grep_search",
+      "private": true,
+      "conversation_id": "b59bcac7-c85c-4a24-a272-a297230dbb10",
+      "observation": "model-only-no-native-tool",
+      "native_error": null,
+      "native_tool_count": 0,
+      "preflight_count": 0,
+      "pre_delivery_count": 0,
+      "fixture_unchanged": true,
+      "enforcement": "unqualified",
+      "original_oracle": "failed-frozen-tool-oracle-retained",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/grep-search-private.json",
+        "sha256": "c835b97b0cc987a7b737fc494a6292cc2a2c8e54c02fea512bb3705a2ec583e3"
+      }
+    }
+  ],
+  "genuine_unknown_tool_count": 1,
+  "model_only_count": 3,
+  "full_native_gate": "unchecked",
+  "source_modified": false,
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/native-tool-summary.json",
+    "sha256": "12857b039adbd2657791139cf30cbe04803b3361dd37a6333a6c7c2f338a2c74"
+  },
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/frozen-brief.json",
+    "sha256": "1305d519241c7787be151cc68175096c2366d92cad40e992aa261a01a5b36063"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/cleanup.json",
+    "sha256": "f93ababf75c1741c8a25bf1ca2a15d87f4e9fbeb8c05e4637122020d776f30fa"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/process-final-audit.json",
+    "sha256": "4a94481fcce0fc6087bf1ce41fcb1985808d4fcc608681cee7c2a940b355df83"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/verify-search-delivery.py",
+    "sha256": "acf4745f171747ea72664c6e9414640a5cf7df80fbd4d858645db480f6cef055"
+  }
+}

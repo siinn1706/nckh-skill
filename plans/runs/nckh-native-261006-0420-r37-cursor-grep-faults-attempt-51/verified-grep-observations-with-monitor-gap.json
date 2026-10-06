@@ -1,0 +1,273 @@
+{
+  "status": "verified-five-native-directory-Grep-observations-with-monitor-gap",
+  "timestamp_utc": "2026-10-05T21:09:53.359421+00:00",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "surface": "cursor-cli-interactive",
+  "version": "2026.09.15-d2fe57e",
+  "model_selection": "existing Grok4.7/500k/xhigh/fastfalse config and native startup display",
+  "backend_parameters_attestation": "not-observed",
+  "model_turns": 5,
+  "prompt_submissions": 5,
+  "actual_native_tool_requests": 5,
+  "native_Grep_ids": [
+    "call-91594fad-761e-455b-b62d-fbfff7f73ebe-0\nfc_17cab3cf-b232-992a-a7a8-bbb901aac0d1_0",
+    "call-5df2d5ea-9dbb-41e5-937f-3038a14968da-1\nfc_002a81bb-5064-95dc-81c3-4db2f28196b9_0",
+    "call-f70a6874-9a2d-495f-a621-5f2a6783158a-2\nfc_90f10a26-e605-96b9-b234-2bc0f634df0c_0",
+    "call-0230c8f8-cb1e-4c67-ab7a-5cd873ec5fc5-3\nfc_49d39372-372b-9a17-8e90-5c8d0131ece1_0",
+    "call-9d662727-1cc0-4991-8f75-2bd4f0182695-4\nfc_981b36e2-f2ae-9adc-a44e-d1481bd6e529_0"
+  ],
+  "callback_count": 21,
+  "policy_receipt_count": 14,
+  "results": [
+    {
+      "attempt": "grep-malformed-input",
+      "mode": "malformed-input",
+      "native_response": "permission_denied",
+      "native_tool_use_id": "call-91594fad-761e-455b-b62d-fbfff7f73ebe-0\nfc_17cab3cf-b232-992a-a7a8-bbb901aac0d1_0",
+      "scrubbed_native_error": "hook-input-or-context-invalid",
+      "selected_observer_status": "completed",
+      "selected_wire": {
+        "permission": "deny",
+        "user_message": "hook-input-or-context-invalid"
+      },
+      "selected_policy_receipts": 1,
+      "selected_policy_decision": "block",
+      "fixture_unchanged": true,
+      "successful_post_callbacks": 0,
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cases/grep-malformed-input.json",
+        "sha256": "8e2ea92bc3590809a23cfc286dabf3ae17314ef02173886a43b4e7780ae04f44"
+      },
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "late_receipt_does_not_override_native_failure": false
+    },
+    {
+      "attempt": "grep-malformed-output",
+      "mode": "malformed-output",
+      "native_response": "permission_denied",
+      "native_tool_use_id": "call-5df2d5ea-9dbb-41e5-937f-3038a14968da-1\nfc_002a81bb-5064-95dc-81c3-4db2f28196b9_0",
+      "scrubbed_native_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-grep-faults-51 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project\" returned invalid JSON.",
+      "selected_observer_status": "intentional-test-malformed-output",
+      "selected_wire": null,
+      "selected_policy_receipts": 0,
+      "selected_policy_decision": null,
+      "fixture_unchanged": true,
+      "successful_post_callbacks": 0,
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cases/grep-malformed-output.json",
+        "sha256": "84db635a72aacd701515fc71416d3d9aa664efa6d8d573c3892608e571ec4e5e"
+      },
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "late_receipt_does_not_override_native_failure": false
+    },
+    {
+      "attempt": "grep-timeout",
+      "mode": "timeout",
+      "native_response": "permission_denied",
+      "native_tool_use_id": "call-f70a6874-9a2d-495f-a621-5f2a6783158a-2\nfc_90f10a26-e605-96b9-b234-2bc0f634df0c_0",
+      "scrubbed_native_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-grep-faults-51 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project\" execution failed: Hook script timed out after 20000ms",
+      "selected_observer_status": "completed",
+      "selected_wire": {},
+      "selected_policy_receipts": 1,
+      "selected_policy_decision": "manual",
+      "fixture_unchanged": true,
+      "successful_post_callbacks": 0,
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cases/grep-timeout.json",
+        "sha256": "860fb534241e6a7cab539c2f5d88db4a993043dab45b46d270f095f6b39372ab"
+      },
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "late_receipt_does_not_override_native_failure": true
+    },
+    {
+      "attempt": "grep-crash",
+      "mode": "crash",
+      "native_response": "permission_denied",
+      "native_tool_use_id": "call-0230c8f8-cb1e-4c67-ab7a-5cd873ec5fc5-3\nfc_49d39372-372b-9a17-8e90-5c8d0131ece1_0",
+      "scrubbed_native_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-grep-faults-51 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project\" failed with exit code 17",
+      "selected_observer_status": "intentional-test-crash-exit-17",
+      "selected_wire": null,
+      "selected_policy_receipts": 0,
+      "selected_policy_decision": null,
+      "fixture_unchanged": true,
+      "successful_post_callbacks": 0,
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cases/grep-crash.json",
+        "sha256": "c9b1440ade0a94550c2be05061df06b96dea13d2ddc788ea08df277ac6875aa6"
+      },
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "late_receipt_does_not_override_native_failure": false
+    },
+    {
+      "attempt": "grep-unsupported-codec",
+      "mode": "unsupported-codec",
+      "native_response": "permission_denied",
+      "native_tool_use_id": "call-9d662727-1cc0-4991-8f75-2bd4f0182695-4\nfc_981b36e2-f2ae-9adc-a44e-d1481bd6e529_0",
+      "scrubbed_native_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-grep-faults-51 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project\" failed with exit code 3",
+      "selected_observer_status": "completed",
+      "selected_wire": {},
+      "selected_policy_receipts": 1,
+      "selected_policy_decision": "block",
+      "fixture_unchanged": true,
+      "successful_post_callbacks": 0,
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cases/grep-unsupported-codec.json",
+        "sha256": "3b006ef7d445b02d2cf5e10b0383053f6580c53adf150eb99fd883b58aad4e3a"
+      },
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "late_receipt_does_not_override_native_failure": false
+    }
+  ],
+  "normal_route_scope": "context operation map has no Grep; normal public directory route manual, as separately observed49",
+  "fault_scope": "five controller faults after genuine native preToolUse/Grep callbacks; native failure logger not injected",
+  "unsupported_event_scope": "codec selector injection only; genuine unknown-host-event remains unqualified",
+  "preToolUse_timeout_seconds": 20,
+  "injected_sleep_seconds": 24,
+  "inner_runner_timeout_seconds": 5,
+  "other_handler_timeout_seconds": 5,
+  "native_failure_diagnostic_timeout_seconds": 10,
+  "fixture_unchanged": true,
+  "successful_post_callbacks": 0,
+  "raw_native_tool_return_content": "not-retained; bounded failure metadata observed",
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-01-poll-01.json",
+      "sha256": "6e3294c02e1546c03ab87f53a2dc10277a83d2c4aa8c235c0c7671269a4730e6"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-01-prompt-submit.json",
+      "sha256": "8691198eabc4d4ef0cae93daf00857b55c448c7d0f4fe1dd28de86491d765da1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-01-prompt-text.json",
+      "sha256": "68e1af3e375232cecb6d7fa6e251d4f6048d2a63b577c20b169d04b9b093291c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-02-poll-01.json",
+      "sha256": "845551b45fedd3ec90e292b44bb8a8c9b8051ea1762967acca24a62edbcdfa23"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-02-prompt-submit.json",
+      "sha256": "1b41fcec667e3f5061793072243df83b644dc26ff89fb6be8b7a9ec64af1f2c0"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-02-prompt-text.json",
+      "sha256": "ff399f3bb92321974b8aa85b7d16d05dfce6a282703e315c578a99ce3e6ef21a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-03-prompt-submit.json",
+      "sha256": "cd4aa26bdae52871572180e9b46be17eee617db0567c29fd2ea892d37a640eea"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-03-prompt-text.json",
+      "sha256": "1c279938a1ee32b616af403698381d1f59fe5d4a9f4d78839a13e8aa7b959a68"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-03-recovery-poll.json",
+      "sha256": "1d82d5ff757eaabd80edb1f57d296ba85939a2ba6fe0da9186803e4e98ebebb9"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-04-poll-01.json",
+      "sha256": "1c7f462b48ac154827b07900d4f55b3b9e3da7f81e1ece38d9059717f5116d7a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-04-prompt-submit.json",
+      "sha256": "c3eeb7464f5d64d8dc5da6ec5e7b820f87b3ff1940f28266382f6e9607693d7a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-04-prompt-text.json",
+      "sha256": "d7d0bf502e4b6bf5e5101df7b4dae4ee03ef5f0f5facbd662e1981f5232974e2"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-05-poll-01.json",
+      "sha256": "389b40967ceb4c557c73167cdfc9ea31b698c39a5c08ad61aec32f6df27b64a9"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-05-prompt-submit.json",
+      "sha256": "4d9e49329d3667e694b613f8be7d7a6d33ad020fbbf2ac1349bae6dec4641e2b"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-05-prompt-text.json",
+      "sha256": "de4656703591e41c2cc22398c2b90da8b937d60fd3665b0b40a24b251eed7220"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-exit-poll-01.json",
+      "sha256": "d5c099c35184144d602355caaa0341a559396143673ced737731135989fc613d"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-exit-submit.json",
+      "sha256": "6d798920c939a3c615df896f6c40282b520c9063e5cf4b8bb013fd359dfa9b80"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-exit-text.json",
+      "sha256": "d32cd53708e378147148f2ec4c775ff53bb8a0fea41ec6a37f7583af19f64169"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/terminal-start.json",
+      "sha256": "904b1726e8ca0d0d289f88fa9a5306bfea696e167a69caf905468bc61feca345"
+    }
+  ],
+  "terminal_truncated": true,
+  "startup_callback": {
+    "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-grep-faults-51/observations/startup/sessionStart/79f59524d9624c709eec301dac225648.json",
+    "sha256": "c640db67d6141208a3efd14680a3584ac64a9b5f4ae7a2b7e42d349fdb200cd8"
+  },
+  "startup_receipt": {
+    "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-grep-faults-51/policy-receipts/startup/sessionStart/3034b1fd9991de9227c25413a8105a1db512595d825074b65ea262e11848ab98.json",
+    "sha256": "c163071334f4a55098ebd5a6acfb8313d9e41bf9da6b13ad665ad4bbe387681b"
+  },
+  "native_exit_code": 0,
+  "monitor_exit_code": 1,
+  "continuous_monitor_success": false,
+  "original_oracle": "failed and preserved; no regrading",
+  "original_verifier": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/verify-grep-faults.py",
+    "sha256": "3b1e0bb90e7bcb4b3df8e3225903e70bc633251845f535aa4454f09bef47eb61"
+  },
+  "original_verification": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/original-verification-result.json",
+    "sha256": "a6d50324a6f5b9748330e6dc68fa3340bd59f52027bd789b3a47c71311c3f9d3"
+  },
+  "monitor_failure": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/monitor-exit.json",
+    "sha256": "67f026920f04bf6dfef80d0c793a007baec5d125a9b7cb1b11e6f2010df159a1"
+  },
+  "process_ownership_correction": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/process-ownership-correction.json",
+    "sha256": "3b9e35ad743bd0844fce2a05d7f54666fa0b374e01bc2a6f1e9689b9a47f9475"
+  },
+  "continuous_capture_after_failure": "unverified",
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/cleanup.json",
+    "sha256": "d84687c93df8477b8cad25d33aa7c7affb5abfa904f273e0d0dccf529792ff81"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/process-final-audit.json",
+    "sha256": "1a5b37af499ae47782ded80e48ce3e9fc664050643c704c7975dbc98c14cd3a6"
+  },
+  "raw_process_union_identities": 2968,
+  "raw_precision_live_matches": 27,
+  "preexisting_applications_preserved": 27,
+  "current_scoped_owned_live": 0,
+  "current_temporally_valid_captured_identities": 358,
+  "process_stop_performed": false,
+  "historical_members_preserved": 938,
+  "removed_members": 27,
+  "protected_global_configs_unchanged": true,
+  "CLI_owned_state_hash_changed": true,
+  "CLI_changed_fields": "not-inferred",
+  "global_direct_writes": false,
+  "source_kit_modified": false,
+  "scientific_QA": "unverified",
+  "full_native_gate": "unchecked",
+  "review": "inline; no independent reviewer",
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/frozen-brief.json",
+    "sha256": "11bbde882bf9d681a4adea7f95775d57a8a291c63399ffc802c0f558430df3d5"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/verify-grep-observations-with-monitor-gap.py",
+    "sha256": "6094d77af7cf8920dcea2a0a260c344b8b9d40f976acfa055478a415e3c3e316"
+  }
+}

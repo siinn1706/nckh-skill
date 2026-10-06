@@ -1,0 +1,308 @@
+{
+  "previous_inventory": {
+    "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/migration-inventory.json",
+    "sha256": "68b0f934976cc7d56545a2e345c6197ac1b758ed9a241b0dfca41e7caa51b113"
+  },
+  "current_source_consumers": [
+    {
+      "path": "core/build.py",
+      "sha256": "bd8046619803d14060d8e9f87bc95c0d5dad408c4dfbc4203e8d468b4754a168",
+      "matches": [
+        {
+          "line": 36,
+          "text": "APPROVED_IDENTITIES = BASE_IDENTITIES | {\"nckh-humanwrite\", \"nckh-paperwrite\", \"nckh-dataset\", \"nckh-statistics\", \"nckh-telemetry\", \"nckh-aiops\"}"
+        },
+        {
+          "line": 50,
+          "text": "SCRIPT_REQUIREMENTS = {"
+        },
+        {
+          "line": 148,
+          "text": "if len(catalog[\"skills\"]) != 43 or set(entries) != APPROVED_IDENTITIES:"
+        },
+        {
+          "line": 195,
+          "text": "files = {rel: {\"sha256\": digest_file(contained(root, rel)), \"rights\": (\"owned-reference\" if provenance[rel][\"source_kind\"] == \"owned-reference\" else \"copied-upstream\") if rel in provenance else \"owned-local-package\","
+        },
+        {
+          "line": 204,
+          "text": "\"copied_third_party_content\": any(row[\"rights\"] == \"copied-upstream\" for row in files.values()), \"inspirations\": list(inspirations),"
+        },
+        {
+          "line": 227,
+          "text": "if {rel: pin[\"provenance\"] for rel, pin in lock[\"files\"].items() if pin[\"rights\"] in {\"copied-upstream\", \"owned-reference\"}} != resource_provenance(root):"
+        },
+        {
+          "line": 241,
+          "text": "copied = any(r.get(\"rights\") == \"copied-upstream\" for r in lock[\"files\"].values() if isinstance(r, dict))"
+        },
+        {
+          "line": 279,
+          "text": "for relative in [*SCRIPT_REQUIREMENTS.get(relative_path, []), *(requires or {}).get(relative_path, [])]:"
+        },
+        {
+          "line": 523,
+          "text": "if record[\"rights\"] == \"copied-upstream\":"
+        },
+        {
+          "line": 531,
+          "text": "elif record[\"rights\"] == \"owned-reference\":"
+        },
+        {
+          "line": 626,
+          "text": "expected_rights = \"owned-reference\" if row[\"source_kind\"] == \"owned-reference\" else \"copied-upstream\""
+        },
+        {
+          "line": 627,
+          "text": "if expected_rights == \"owned-reference\":"
+        },
+        {
+          "line": 651,
+          "text": "if manifest[\"resource_access\"] == \"off\" and any(r[\"rights\"] in {\"copied-upstream\", \"owned-reference\"} for r in records):"
+        }
+      ]
+    },
+    {
+      "path": "core/evaluation.py",
+      "sha256": "32fabca688c8030edbaec84869418c063dfb0e2913ab6a1213773f0b97dbae6e",
+      "matches": [
+        {
+          "line": 35,
+          "text": "def validate_research_matrix(record, identities):"
+        },
+        {
+          "line": 167,
+          "text": "research = validate_research_matrix(load_json(research_path), identities)"
+        },
+        {
+          "line": 181,
+          "text": "raise ContractError(\"exactly 172 approved base case IDs required\")"
+        }
+      ]
+    },
+    {
+      "path": "core/acceptance.py",
+      "sha256": "283a2395aeb81fb5740484fe1a851c36e9defd483d5acd0ccf7ac1c804037713",
+      "matches": [
+        {
+          "line": 13,
+          "text": "from core.build import APPROVED_IDENTITIES, load_json, validate_catalog"
+        },
+        {
+          "line": 77,
+          "text": "if not isinstance(skills, dict) or set(skills) != APPROVED_IDENTITIES:"
+        },
+        {
+          "line": 78,
+          "text": "raise ContractError(\"acceptance profile must contain the exact 43 approved skills\")"
+        }
+      ]
+    },
+    {
+      "path": "core/resources.py",
+      "sha256": "2b1ce1b0941f904777230eae88293392615fcbffd4dff7417b6b59fc0efd98eb",
+      "matches": [
+        {
+          "line": 81,
+          "text": "if resource[\"source_kind\"] == \"owned-reference\":"
+        },
+        {
+          "line": 144,
+          "text": "if resource[\"source_kind\"] == \"owned-reference\":"
+        },
+        {
+          "line": 173,
+          "text": "if pin.get(\"rights\") == \"owned-reference\":"
+        },
+        {
+          "line": 185,
+          "text": "if set(pin) != {\"sha256\", \"rights\", \"provenance\"} or pin[\"rights\"] != \"copied-upstream\":"
+        },
+        {
+          "line": 189,
+          "text": "if provenance[\"source_kind\"] == \"copied-upstream\" and ("
+        },
+        {
+          "line": 195,
+          "text": "if provenance[\"source_kind\"] == \"retrieved-snapshot\":"
+        },
+        {
+          "line": 229,
+          "text": "member.get(\"rights\") != \"copied-upstream\""
+        },
+        {
+          "line": 253,
+          "text": "if kind == \"owned-reference\":"
+        },
+        {
+          "line": 264,
+          "text": "if kind == \"copied-upstream\":"
+        },
+        {
+          "line": 271,
+          "text": "if kind != \"retrieved-snapshot\":"
+        }
+      ]
+    },
+    {
+      "path": "core/owned_resources.py",
+      "sha256": "5bb3e7051cd9298c68a34675c0963aac3f89e46c3b4b361a6cb951e0b6d2bc40",
+      "matches": []
+    },
+    {
+      "path": "core/research_io.py",
+      "sha256": "650e3130bac9e910b92ccde552c31b2a304c1887bc0b4b79fd4a75a68dcaebb4",
+      "matches": [
+        {
+          "line": 46,
+          "text": "def receipt_outputs(run, task_id, inputs):"
+        }
+      ]
+    },
+    {
+      "path": "scripts/search-resource.py",
+      "sha256": "8f7ba3cc69dc93b92aa32e8f7fb5a14e6dcf9bd7728abea2f1b2706b6a9a43c2",
+      "matches": [
+        {
+          "line": 82,
+          "text": "if kind == \"owned-reference\":"
+        },
+        {
+          "line": 95,
+          "text": "if kind == \"copied-upstream\":"
+        },
+        {
+          "line": 101,
+          "text": "elif kind == \"retrieved-snapshot\":"
+        },
+        {
+          "line": 147,
+          "text": "if resource[\"source_kind\"] == \"owned-reference\":"
+        },
+        {
+          "line": 265,
+          "text": "if resource[\"source_kind\"] == \"owned-reference\":"
+        }
+      ]
+    },
+    {
+      "path": "scripts/resource-smoke.py",
+      "sha256": "9e1747c242e5e20a174e4ea015ff898b66743cdc8b4d3f1602a015e628c2849a",
+      "matches": [
+        {
+          "line": 48,
+          "text": "if row is None or row[\"format\"] != \"jsonl\" or row[\"source_kind\"] not in {\"retrieved-snapshot\", \"owned-reference\"}:"
+        }
+      ]
+    },
+    {
+      "path": "scripts/check-research-artifacts.py",
+      "sha256": "c99ac88a8d4ffd0c84c569b8c42e1cf0f98d526dd0216ccbacfa867cc99aff75",
+      "matches": []
+    },
+    {
+      "path": "tests/release/test_qualification.py",
+      "sha256": "0931e6112f297aa2773765d02ef79131de60ce999e41f4d3096e68d9211c616b",
+      "matches": [
+        {
+          "line": 14,
+          "text": "self.assertEqual(result[\"identities\"], 43)"
+        },
+        {
+          "line": 15,
+          "text": "self.assertEqual(result[\"skill_cases\"], 172)"
+        },
+        {
+          "line": 49,
+          "text": "self.assertEqual(count, 43)"
+        }
+      ]
+    },
+    {
+      "path": "tests/acceptance/test_profile.py",
+      "sha256": "5bd44239efbf0d7363ec27bdfb55af8ad1fc29c853512bc6fccc3dde32eeb858",
+      "matches": [
+        {
+          "line": 9,
+          "text": "from core.build import APPROVED_IDENTITIES, closure, load_json, validate_catalog"
+        },
+        {
+          "line": 23,
+          "text": "self.assertEqual(len(self.profile[\"skills\"]), 43)"
+        },
+        {
+          "line": 51,
+          "text": "self.assertEqual(set(self.profile[\"skills\"]), APPROVED_IDENTITIES)"
+        }
+      ]
+    },
+    {
+      "path": "installer/schemas/bundle-v2.schema.json",
+      "sha256": "2d1d5f68f394d923ab6e72583bc4f59196367423d25592e9bd0dea3ab708f899",
+      "matches": [
+        {
+          "line": 132,
+          "text": "\"copied-upstream\","
+        },
+        {
+          "line": 133,
+          "text": "\"retrieved-snapshot\","
+        },
+        {
+          "line": 134,
+          "text": "\"owned-reference\""
+        },
+        {
+          "line": 372,
+          "text": "\"copied-upstream\","
+        },
+        {
+          "line": 373,
+          "text": "\"owned-reference\""
+        }
+      ]
+    },
+    {
+      "path": "core/contracts/catalog.schema.json",
+      "sha256": "8cdaa97f50fa85e9654e18e85f1c5ea6877c81c44c8ce7c108ee8ec7fe9352a4",
+      "matches": [
+        {
+          "line": 14,
+          "text": "\"minItems\": 43,"
+        }
+      ]
+    },
+    {
+      "path": "core/contracts/resource-registry.schema.json",
+      "sha256": "fe6a99d3600c801c5a9c312f8d619bd181620a6ad1a6318b59d03196be1c862c",
+      "matches": [
+        {
+          "line": 269,
+          "text": "\"copied-upstream\","
+        },
+        {
+          "line": 270,
+          "text": "\"retrieved-snapshot\","
+        },
+        {
+          "line": 271,
+          "text": "\"owned-reference\""
+        },
+        {
+          "line": 282,
+          "text": "\"const\": \"owned-reference\""
+        }
+      ]
+    }
+  ],
+  "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+  "identities": 43,
+  "base_cases": 172,
+  "resources": 13,
+  "bindings": 35,
+  "archived_public_verifier": {
+    "path": "C:/Users/USER\\Downloads\\test-skill\\github-publication\\nckh-kit\\scripts\\verify-public-package.py",
+    "sha256": "4a285d9cfe301b5f6b3a1bbb0258ed1ed437059031d357c99e453f39258a02fa",
+    "disposition": "Archived r38 publication snapshot; not current candidate authority; unchanged, no publication authorized"
+  }
+}

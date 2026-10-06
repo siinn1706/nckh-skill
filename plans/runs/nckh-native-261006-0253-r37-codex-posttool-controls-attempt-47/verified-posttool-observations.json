@@ -1,0 +1,231 @@
+{
+  "status": "verified-current-Codex-posttool-patch-controls-and-fault-observations",
+  "timestamp_utc": "2026-10-05T20:04:42.690959+00:00",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "version": "0.154.0",
+  "surface": "codex-cli-exec",
+  "model_requested": "gpt-5.6-luna",
+  "effort_requested": "medium",
+  "backend_model_effort_attestation": "not-observed",
+  "native_callback_model": "gpt-5.6-luna",
+  "model_turns": 7,
+  "actual_native_patches": 7,
+  "callbacks": 35,
+  "policy_receipts": 32,
+  "results": [
+    {
+      "attempt": "posttool-allow",
+      "mode": "allow",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-9b632d09-1870-449e-b1fb-eedf5d73196e",
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "advisory",
+      "selected_reason_codes": [
+        "delivery-bindings-current-review-separate"
+      ],
+      "selected_wire": {
+        "hookSpecificOutput": {
+          "additionalContext": "delivery-bindings-current-review-separate",
+          "hookEventName": "PostToolUse"
+        }
+      },
+      "fault_origin": "none",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-allow.json",
+        "sha256": "50e8b5d0f65fc27e9c7c28eba5dda886ff35fbd53aad41d1ca4b828b22a82e7a"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-allow/PostToolUse/76b09d59dbc24c60a76fd53c326746f7.json",
+        "sha256": "28158163b4b39443d48d4e07d5e4017864a72de33648332419193bc4b549ebe7"
+      }
+    },
+    {
+      "attempt": "posttool-policy-deny",
+      "mode": "policy-deny",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-56266d7f-da18-4f3b-bb59-1650622ab6fd",
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "block",
+      "selected_reason_codes": [
+        "bounded-input-exceeded"
+      ],
+      "selected_wire": {
+        "hookSpecificOutput": {
+          "additionalContext": "bounded-input-exceeded",
+          "hookEventName": "PostToolUse"
+        }
+      },
+      "fault_origin": "none",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-policy-deny.json",
+        "sha256": "51d555f5e8f0320a7f2f5faa9afcba14bc3bbd1a3ef2f0b88dc2a951a7b1f698"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-policy-deny/PostToolUse/c6d9ac1530f6488fb3643423fd81c6c0.json",
+        "sha256": "5273bbfa58953bad30d3c1a133cfbe1fad342dffb3bfb291b3260f4f76f36dad"
+      }
+    },
+    {
+      "attempt": "posttool-malformed-input",
+      "mode": "malformed-input",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-639a29d1-3d02-40ac-bcc3-1543a5498500",
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "block",
+      "selected_reason_codes": [
+        "hook-input-or-context-invalid"
+      ],
+      "selected_wire": {
+        "hookSpecificOutput": {
+          "additionalContext": "hook-input-or-context-invalid",
+          "hookEventName": "PostToolUse"
+        }
+      },
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-malformed-input.json",
+        "sha256": "4c428c5b86a2794a5fec77c7b5622a6d754c78e914169a326bac59093c65bd28"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-malformed-input/PostToolUse/d500af2d5b384010a5b1d91c3a7567b9.json",
+        "sha256": "ffd0c8bac8bcd0e57e7df6a9f505d3f4dc1fdc156d7efdd0154bd539b658dc7a"
+      }
+    },
+    {
+      "attempt": "posttool-malformed-output",
+      "mode": "malformed-output",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-13c44861-8441-4e32-8ff9-861bdbd7a759",
+      "selected_callback_status": "intentional-test-malformed-output",
+      "selected_policy_receipts": 0,
+      "selected_decision": null,
+      "selected_reason_codes": [],
+      "selected_wire": null,
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-malformed-output.json",
+        "sha256": "b81496dba35d96fcc8727e9d80e137adf3d3455c1c08036f7655971e8e155a9d"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-malformed-output/PostToolUse/769dd91524224cdc883313bac0c16b01.json",
+        "sha256": "3b36317e3b9d3b303fb147a64934b436146a00e5ba3ec747b8fb959e498bb8b0"
+      }
+    },
+    {
+      "attempt": "posttool-timeout",
+      "mode": "timeout",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-aa4bb61a-c948-4f14-9967-f654d305c882",
+      "selected_callback_status": "intentional-test-sleep-eight-seconds",
+      "selected_policy_receipts": 0,
+      "selected_decision": null,
+      "selected_reason_codes": [],
+      "selected_wire": null,
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-timeout.json",
+        "sha256": "3ebedc485a77b567c6f2b7068d00eef95f8aae08b63088c951cd28a3f5a749b7"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-timeout/PostToolUse/a4ced36414eb488dbfcb02f21e32a872.json",
+        "sha256": "02da3d4b056a46529f3e1f45ac797a0a7437b3bf771f7adab289026a8196821f"
+      }
+    },
+    {
+      "attempt": "posttool-crash",
+      "mode": "crash",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-220dec2f-e032-45b4-b8de-7ed896cd6d84",
+      "selected_callback_status": "intentional-test-crash-exit-17",
+      "selected_policy_receipts": 0,
+      "selected_decision": null,
+      "selected_reason_codes": [],
+      "selected_wire": null,
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-crash.json",
+        "sha256": "a45cfd2379604f1f36ddf62b8bfad10e228e020d222c509a6a56d95535a0ad3a"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-crash/PostToolUse/7685878657a54deb856460b0c8cf293f.json",
+        "sha256": "a0223df4647b9294a4ac663c8dc96c20ab0f8185ff00ea419aefa5c060607cb9"
+      }
+    },
+    {
+      "attempt": "posttool-unsupported-codec",
+      "mode": "unsupported-codec",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_before_selected_callback": true,
+      "native_tool_use_id": "exec-6ce9015f-3188-4fb9-bdc6-51c4d54e13d7",
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "block",
+      "selected_reason_codes": [
+        "hook-input-or-context-invalid"
+      ],
+      "selected_wire": {},
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/final-attempts/posttool-unsupported-codec.json",
+        "sha256": "86962c366b01a66834a0c1f8f400cfed477eff24f2fe809c3aae98374ecc4abc"
+      },
+      "post_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-posttool-controls-47/observations/posttool-unsupported-codec/PostToolUse/32dbd632f3d3420bac4cc1fc1589756b.json",
+        "sha256": "1aed8d86f816e33696a72b374412c8b117dfa2222b7d53ef284e9d9765fc894a"
+      }
+    }
+  ],
+  "marker_bytes_hex": "4e434b485f4e41544956455f46494c455f4f5241434c450a",
+  "posttool_prevention_or_rollback": "not-established; exact mutation already present at every selected callback entry",
+  "native_hook_notification_states": "not-exposed-by-retained-exec-JSON; native completed file_change/turn items observed",
+  "timeout_observation": "configured outer5s/sleeper8s; final selected observer remains sleep record, no selected receipt; no live owned descendants",
+  "context_hash_verification": "normal expected context derived from retained last-case bytes and frozen single artifact.path change; deny context observed directly",
+  "scientific_QA": "unverified; synthetic prospective marker binding is not scientific evidence",
+  "unsupported_event_scope": "selected codec injection after genuine PostToolUse callback; unknown-host-event delivery unqualified",
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/frozen-brief.json",
+    "sha256": "15408adb6656a7a61aa7d391fe840b15fba1e7aed6925d1f9b5753f73969c2dd"
+  },
+  "summary": {
+    "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/native-posttool-summary.json",
+    "sha256": "34e97eedbfd5195bbc873ef8a6652008084ef39dcf15b46a528d4b9fdfee2520"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/cleanup.json",
+    "sha256": "9c6a157e24026e5bdbab006fddeb83d0c2e78634319ad86bc429694b90051c49"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/process-final-audit.json",
+    "sha256": "c69cd761808c452af593b06f15ff58ef6aaef7fed6450cc121085d00ee0778a1"
+  },
+  "process_union_identities": 2164,
+  "processes_live": 0,
+  "process_stop_performed": false,
+  "historical_files_preserved": 538,
+  "global_direct_writes": false,
+  "new_project_trust_keys": 0,
+  "global_config_and_hook_hashes_unchanged": true,
+  "full_native_gate": "unchecked",
+  "review": "inline; no independent reviewer",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/verify-posttool-controls.py",
+    "sha256": "c78481c0e3fa81f168dac0667c853b4446bf882b929f50c7efb5ccec8b4d8a8d"
+  }
+}

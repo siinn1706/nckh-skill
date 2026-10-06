@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "metadata selection; acquisition not executed",
+  "primary_candidate": {
+    "source": "BARO 0.0.4 metric sample linked by RCAEval download_data",
+    "url": "https://github.com/phamquiluan/baro/releases/download/0.0.4/simple_data.csv",
+    "modality": "metrics only; no invented logs/traces",
+    "max_bytes": 1048576,
+    "tasks": [
+      "local descriptive RCA ranking",
+      "chronological forecast baseline"
+    ],
+    "grant": "pending exact download/local computation approval",
+    "rights": "pending selected release-asset license binding",
+    "gold": "not assumed from README example; independent annotation gate"
+  },
+  "permissible_offline_candidate": {
+    "source": "existing World Bank VNM population snapshot",
+    "path": "nckh-kit/core/profiles/resources/worldbank-series.jsonl",
+    "bytes": 6004,
+    "sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
+    "rights": "existing CC-BY-4.0 source/notice record, verify before use",
+    "task": "one-step chronological naive forecast on actual observed values",
+    "scope": "supplied scientific project route allowed by plan; not incident telemetry",
+    "unknowns": [
+      "unit field blank retained",
+      "single population series; no independent system efficacy claim"
+    ]
+  },
+  "local_operations": [
+    "bounded read/hash",
+    "owned project copy with provenance",
+    "stdlib baseline calculation",
+    "actual prediction/metric receipts",
+    "hash/denominator/drift checks"
+  ],
+  "excluded": [
+    "install dependency",
+    "model/provider",
+    "cloud/cluster/fault injection",
+    "cross-workspace access",
+    "source/dist pilot data or private labels",
+    "public release"
+  ]
+}

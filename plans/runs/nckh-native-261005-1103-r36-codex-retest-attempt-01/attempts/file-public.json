@@ -1,0 +1,163 @@
+{
+  "attempt": "file-public",
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "callbacks": [],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-1103-r36-codex-retest-attempt-01/commands/codex-native-file-file-public.json",
+    "sha256": "c07f90ad4448aaba81777d294cebd4c14acc899efc2fdf31daec46b4087b4433"
+  },
+  "config_route": "inline sessionFlags; existing native-persisted workspace trust reused, no new key",
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "invalid_stdout_lines": 0,
+  "marker_exists": true,
+  "marker_relative": "oracles/r36-file-direct-public-01.txt",
+  "marker_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "mode": "allow",
+  "model_requested": "gpt-5.6-luna",
+  "native_callbacks": [],
+  "native_frames": [
+    {
+      "thread_id": "01a10a4f-5ad4-7bc2-9fe7-d8a9f291debe",
+      "type": "thread.started"
+    },
+    {
+      "item": {
+        "id": "item_0",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_1",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_2",
+        "message": "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "item": {
+        "id": "item_3",
+        "message": "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_4",
+        "text": "**Enforcing single apply_patch call**",
+        "type": "reasoning"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "changes": [
+          {
+            "kind": "add",
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0658-r34-codex-file-attempt-01\\project-02\\oracles\\r36-file-direct-public-01.txt"
+          }
+        ],
+        "id": "item_5",
+        "status": "in_progress",
+        "type": "file_change"
+      },
+      "type": "item.started"
+    },
+    {
+      "item": {
+        "changes": [
+          {
+            "kind": "add",
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0658-r34-codex-file-attempt-01\\project-02\\oracles\\r36-file-direct-public-01.txt"
+          }
+        ],
+        "id": "item_5",
+        "status": "completed",
+        "type": "file_change"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_6",
+        "text": "ORACLE_ATTEMPT_FINISHED",
+        "type": "agent_message"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 26368,
+        "input_tokens": 53358,
+        "output_tokens": 118,
+        "reasoning_output_tokens": 50
+      }
+    }
+  ],
+  "permission_route": "dangerous native CLI flags",
+  "policy_receipts": [
+    {
+      "decision": "pending",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r36-codex-retest-01/policy-receipts/file-public/PostToolUse/1c7fb11be7140dcad562f3541498befb57b7ca15f85f96e0f85e787f505b8e1d.json",
+      "reason_codes": [
+        "artifact-final-bytes-missing-or-stale"
+      ],
+      "sha256": "ab334fc3d2565e5773f6db97d33ae73dc63978f0fb7307510346a2e301e89ec7"
+    },
+    {
+      "decision": "allow",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r36-codex-retest-01/policy-receipts/file-public/PreToolUse/2999a51db4e412301915f075d3f146c83010edd7814894bb753391ded5ad5861.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "56162ea3190678ce50c3521ef0cc4b1b7984044d2d3eac0fdafa0ea5cf67862b"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r36-codex-retest-01/policy-receipts/file-public/SessionStart/4341d59170623cf73223cff8aa6eed4e935e7507bed6042e590482d50c8ec8b1.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "a462432940b061c03b44d1329654d8fc79a8e33ab220ab15701518f75286b073"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r36-codex-retest-01/policy-receipts/file-public/Stop/2f1181a0cf7880f74a634f3288ad7d9ac7e146d87953d1c8fdb27d0118903a10.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "c49a7c918a120018807bcbb5cb235f0ac9fb9858fd72ad75141c18d311972167"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r36-codex-retest-01/policy-receipts/file-public/UserPromptSubmit/4341d59170623cf73223cff8aa6eed4e935e7507bed6042e590482d50c8ec8b1.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "a462432940b061c03b44d1329654d8fc79a8e33ab220ab15701518f75286b073"
+    }
+  ],
+  "process_exited": true,
+  "requested_native_tool": "apply_patch",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36,
+  "status": "completed"
+}

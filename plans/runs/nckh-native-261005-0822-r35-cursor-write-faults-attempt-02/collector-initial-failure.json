@@ -1,0 +1,15 @@
+{
+  "actual_marker_sha256": "dd1c8671e6dfb096562a972df909383941ac8cff04a5cd63f879e3cfcf972254",
+  "actual_marker_suffix_hex": "0d0a",
+  "current_sha256": "dbf337bb7abe68a2a853a40929e5960dfdbb85440e67251d7b7c284841abe750",
+  "failed_repair_checks": [
+    "Incorrect double-escaping hypothesis; precondition assertion failed without modification.",
+    "Replacement assumed a standalone assert line; precondition assertion failed without modification."
+  ],
+  "initial_failure": "LF marker hash assertion failed. Actual native Windows file bytes have CRLF; native stream has LF.",
+  "preimage_sha256": "f0d9d49a680f314d211c828c1f6c827d452db3baaf681f1b5207a21a2b8823ca",
+  "repair": "Require exact Windows CRLF hash and separately exact native stream LF content. No native inputs, outputs or historical receipts changed.",
+  "source_changes": false,
+  "status": "retained-collector-assertion-failure-repaired",
+  "verification_result": "19 native turns reconciled; two native failures retained"
+}

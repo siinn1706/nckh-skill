@@ -1,0 +1,30 @@
+{
+  "status": "controller-only-amendment",
+  "source_revision": 34,
+  "source_unchanged": true,
+  "cause": "native Windows owned relative path serialization",
+  "repair": "Path.as_posix before unchanged contained/hash validation",
+  "recorded_at": "2026-10-04T18:23:52.4151391+00:00",
+  "changes": [
+    {
+      "path": "codex-native-cases.py",
+      "current_sha256": "172c417a89167552c078dd3a03f1571e86cea074c7654cb51f0ad5a59a672e49",
+      "preimage": "preimages/cleanup-before-repair-codex-native-cases.py",
+      "preimage_sha256": "04d1e66645b2537f30208a67c182e93c8573cb0f856b4c1290065c83cc06f3ac"
+    },
+    {
+      "path": "process-audit-codex.ps1",
+      "current_sha256": "442a6ce145904663a5c0001db96c8415e2d36ab858190201fccb934d04327f98",
+      "preimage": "preimages/cleanup-before-repair-process-audit-codex.ps1",
+      "preimage_sha256": "551d23176125ab264c2c3e4084582647950549b19f370e580d9107ec48a24569"
+    },
+    {
+      "path": "write-codex-native-addendum.py",
+      "current_sha256": "d3e88aa3ebf071c7eeb39262b2bb69ab585f5d025feef060c3d62e57b5cf8133",
+      "preimage": "preimages/cleanup-before-repair-write-codex-native-addendum.py",
+      "preimage_sha256": "c8c80817e5b51dd62c06e9a573aa6119096f7ad453909db7fc750c5718c935d6"
+    }
+  ],
+  "prior_audit_retained": "final-process-audit.json",
+  "required_post_cleanup_audit": "post-cleanup-process-audit.json"
+}

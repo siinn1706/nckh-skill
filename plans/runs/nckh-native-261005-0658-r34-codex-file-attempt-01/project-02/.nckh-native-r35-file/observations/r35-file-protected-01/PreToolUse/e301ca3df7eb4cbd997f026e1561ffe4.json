@@ -1,0 +1,52 @@
+{
+  "attempt": "r35-file-protected-01",
+  "completed_at": "2026-10-05T00:26:08.227217+00:00",
+  "event": "PreToolUse",
+  "fault_origin": "none",
+  "input_fields": [
+    "cwd",
+    "hook_event_name",
+    "model",
+    "permission_mode",
+    "session_id",
+    "tool_input",
+    "tool_name",
+    "tool_use_id",
+    "transcript_path",
+    "turn_id"
+  ],
+  "input_sha256": "0bb33336fcdf8ba3cf489b531eb1242aee41b3088c18ca08d3e6c125aa27bcea",
+  "input_size": 558,
+  "mode": "allow",
+  "native_command_sha256": "7e3df1c6f002db8703cd63161043fc2090b2501df807051e5cdd83833d6dbbd4",
+  "native_direct_path_fields": {},
+  "native_model": "gpt-5.6-luna",
+  "native_permission_mode": "bypassPermissions",
+  "native_session_hash": "0c9e1f7eb6f0ec291500cb589cd8809859db9771732e5e0735ba6f39d1c3eea3",
+  "native_tool_input_type": "dict",
+  "native_tool_name": "apply_patch",
+  "native_tool_use_id": "exec-949ac9b7-5eb4-4460-a0f3-3e2fb27cf5a4",
+  "native_turn_id": "01a10973-d95e-7d52-9ecc-24b46ce30ba0",
+  "observer_pid": 34772,
+  "parent_pid": 23040,
+  "reported_event": "PreToolUse",
+  "runner_exit_code": 0,
+  "runner_exited": true,
+  "runner_output": {
+    "hookSpecificOutput": {
+      "hookEventName": "PreToolUse",
+      "permissionDecision": "deny",
+      "permissionDecisionReason": "private-holdout-credential-path"
+    }
+  },
+  "runner_pid": 26680,
+  "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+  "selected": true,
+  "started_at": "2026-10-05T00:26:07.114807+00:00",
+  "status": "completed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "beae2531e1ba6f870647255d9e6ef230725bfa5804f6580822e4d7ed1f1935c8",
+  "tool_input_fields": [
+    "command"
+  ]
+}

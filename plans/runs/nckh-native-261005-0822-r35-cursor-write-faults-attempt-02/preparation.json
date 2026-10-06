@@ -1,0 +1,10 @@
+{
+  "status": "prepared-cause-aligned-retry",
+  "cases": 3,
+  "prior_failure_receipt": "plans/runs/nckh-native-261005-0812-r35-cursor-write-faults-attempt-01/attempts/write-stage-timeout.json",
+  "prior_failure_sha256": "243c074641884af3982079d2986f38ef8670bc503cef40df1ae9c46c3d14567f",
+  "change": "Cursor preToolUse timeout handlers use Read 20 seconds and Write 2 seconds with exact tool matchers. Fault selection still requires genuine Write callback.",
+  "official_reference": "https://cursor.com/docs/hooks#matcher-configuration",
+  "does_not_claim_intermittent_timeout_root_cause": true,
+  "controller_sha256": "ace9ab16d9509f46ada0dbe7ebbb8315e6b92f30e8af9814402e1e4cad09a05f"
+}

@@ -1,0 +1,46 @@
+{
+  "root_pid": 53228,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T11:53:53.9085887Z",
+  "identity_checks": [
+    {
+      "pid": 53228,
+      "expected": "2026-10-05T11:45:26.444548Z",
+      "current": "2026-10-05T11:45:26.4445480Z"
+    },
+    {
+      "pid": 44112,
+      "expected": "2026-10-05T11:46:16.251823Z",
+      "current": "2026-10-05T11:46:16.2518230Z"
+    },
+    {
+      "pid": 57312,
+      "expected": "2026-10-05T11:46:16.396215Z",
+      "current": "2026-10-05T11:46:16.3962150Z"
+    },
+    {
+      "pid": 48848,
+      "expected": "2026-10-05T11:46:18.447408Z",
+      "current": "2026-10-05T11:46:18.4474080Z"
+    },
+    {
+      "pid": 17356,
+      "expected": "2026-10-05T11:46:18.482638Z",
+      "current": "2026-10-05T11:46:18.4826380Z"
+    }
+  ],
+  "method": "graceful-owned-tree-after-native-exit-request",
+  "exit_code": 128,
+  "output": [
+    "ERROR: The process with PID 17356 (child process of PID 48848) could not be terminated.",
+    "Reason: This process can only be terminated forcefully (with /F option).",
+    "ERROR: The process with PID 48848 (child process of PID 57312) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 57312 (child process of PID 44112) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 44112 (child process of PID 53228) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 53228 (child process of PID 58012) could not be terminated.",
+    "Reason: One or more child processes of this process were still running."
+  ]
+}

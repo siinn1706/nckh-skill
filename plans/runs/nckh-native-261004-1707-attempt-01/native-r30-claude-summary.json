@@ -1,0 +1,529 @@
+{
+  "event": "SessionStart",
+  "evidence_class": "native-startup-observation",
+  "host": "claude",
+  "native_prevention_qualification": "pending",
+  "provider_turns": 0,
+  "records": [
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "direct",
+      "observations": [],
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "09cd1d58feee0c09c2ea8048c06d6edadb3610351da273695eaec757a5e7fe17",
+          "decision": "advisory",
+          "event_hash": "35bc59ae3c64a60dfb1f13a013d083aae9fb0c0ceb6c2f52356a0342e3c9310f",
+          "evidence_class": "deterministic",
+          "host": "claude",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "advisory",
+          "reason_codes": [
+            "writing-resource-advice-only"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "4afa447ddef2fb73fbb553f485c9704d6ae37bb03c638d05e0994b54da48dc06",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "a07e263020096ecdb4b48593482b534a3317455915b146d8af4be7f9e4bfabf7"
+        }
+      ],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\direct"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "normal",
+      "observations": [
+        {
+          "completed_at": "2026-10-04T11:13:23.254103+00:00",
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "d162c6655e41fc5236fcd0ce0f09aa1b274aebc1c250600034a53daaf582685e",
+          "input_size": 583,
+          "mode": "normal",
+          "observer_pid": 33508,
+          "output_sha256": "fe7b7019656fd6c0a1bf0e387ff5655abf5a3bc6d18babc7cd127dcbd6f2cfa1",
+          "parent_pid": 53764,
+          "reported_event": "SessionStart",
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "writing-resource-advice-only",
+              "hookEventName": "SessionStart"
+            }
+          },
+          "runner_pid": 49256,
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:21.925037+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "09cd1d58feee0c09c2ea8048c06d6edadb3610351da273695eaec757a5e7fe17",
+          "decision": "advisory",
+          "event_hash": "adda71eb92d9fc67565d5bc71503428808a3f0e2a9fdeeeeeeae0875a6decd34",
+          "evidence_class": "deterministic",
+          "host": "claude",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "advisory",
+          "reason_codes": [
+            "writing-resource-advice-only"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "f43afa2038ae65a5d6cd9f6d1ace455519ff40e399db04c1de162af0cd927a3a",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "a07e263020096ecdb4b48593482b534a3317455915b146d8af4be7f9e4bfabf7"
+        }
+      ],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\normal"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "policy-block",
+      "observations": [
+        {
+          "completed_at": "2026-10-04T11:13:29.116407+00:00",
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "dbb3f750e6be6ca431b3ed11b94c06bcf62140f42f60acd1caf98c9e5dd3bd42",
+          "input_size": 601,
+          "mode": "policy-block",
+          "observer_pid": 43268,
+          "output_sha256": "a5cbbfb8b0fa886db9df2cc76f23aaf96676ea3667b36eed93df6a1337d708fe",
+          "parent_pid": 22944,
+          "reported_event": "SessionStart",
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "bounded-input-exceeded",
+              "hookEventName": "SessionStart"
+            }
+          },
+          "runner_pid": 38492,
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:27.580224+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "d20387e9363fba9cb5f22705fafd48358f204a99f38f30e3c249ccea0b9455f2",
+          "decision": "block",
+          "event_hash": "4427e90bd18fba7d44b0a8b80ceeb5c5c8c4add270e62e0c326ace71f4ea9c9c",
+          "evidence_class": "deterministic",
+          "host": "claude",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "advisory",
+          "reason_codes": [
+            "bounded-input-exceeded"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "b2777c18bf360802f1346361bc4d6897fdabac88cd2ac73d28a0714c153a90a1",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "a07e263020096ecdb4b48593482b534a3317455915b146d8af4be7f9e4bfabf7"
+        }
+      ],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\policy-block"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "malformed-input",
+      "observations": [
+        {
+          "completed_at": "2026-10-04T11:13:34.240571+00:00",
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "45cb3911e4929daf19b495c908a9d394f2fb43aaf32cb08b4f13fc4dec22ee01",
+          "input_size": 610,
+          "mode": "malformed-input",
+          "observer_pid": 46944,
+          "output_sha256": "b62aab4e662e3f1147e2ad241116d26329961abc3d1aa2e27daeab4d83debe4c",
+          "parent_pid": 23032,
+          "reported_event": "SessionStart",
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "hook-input-or-context-invalid",
+              "hookEventName": "SessionStart"
+            }
+          },
+          "runner_pid": 58328,
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:32.921430+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "decision": "block",
+          "event_hash": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+          "evidence_class": "deterministic",
+          "host": "claude",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "reason_codes": [
+            "hook-input-or-context-invalid"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "side_effects": "none",
+          "status": "degraded-failed"
+        }
+      ],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\malformed-input"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "malformed-output",
+      "observations": [
+        {
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "faddb6d810bcd5ccc54d61a5451cc195e0f99b6f08a1d85db17343a939372ecc",
+          "input_size": 613,
+          "mode": "malformed-output",
+          "observer_pid": 22956,
+          "parent_pid": 52260,
+          "reported_event": "SessionStart",
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:38.501457+00:00",
+          "status": "intentional-malformed-output"
+        }
+      ],
+      "policy_receipts": [],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\malformed-output"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "timeout",
+      "observations": [
+        {
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "5798de2c91f501d6b725d5c0b7741cdbb5c56546343ccbef41e99955c0c84544",
+          "input_size": 586,
+          "mode": "timeout",
+          "observer_pid": 48324,
+          "parent_pid": 36088,
+          "reported_event": "SessionStart",
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:42.408166+00:00",
+          "status": "entered-from-host"
+        }
+      ],
+      "policy_receipts": [],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\timeout"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "crash",
+      "observations": [
+        {
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "8b759dac927bd338546a707b3f96119e90241b7c7a49c61946dcf6fc0efc2b01",
+          "input_size": 580,
+          "mode": "crash",
+          "observer_pid": 28888,
+          "parent_pid": 33692,
+          "reported_event": "SessionStart",
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:46.346787+00:00",
+          "status": "intentional-crash-exit-17"
+        }
+      ],
+      "policy_receipts": [],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\crash"
+    },
+    {
+      "callback_count": 1,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "unsupported-codec",
+      "observations": [
+        {
+          "completed_at": "2026-10-04T11:13:52.384032+00:00",
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "aad98cc5330583b1fab603ca561ebc92aa7c3c628499adec631f5007154f47cf",
+          "input_size": 616,
+          "mode": "unsupported-codec",
+          "observer_pid": 16408,
+          "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+          "parent_pid": 41368,
+          "reported_event": "SessionStart",
+          "runner_exit_code": 3,
+          "runner_exited": true,
+          "runner_output": {},
+          "runner_pid": 35412,
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:50.825424+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "decision": "block",
+          "event_hash": "aad98cc5330583b1fab603ca561ebc92aa7c3c628499adec631f5007154f47cf",
+          "evidence_class": "deterministic",
+          "host": "claude",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "reason_codes": [
+            "hook-input-or-context-invalid"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "side_effects": "none",
+          "status": "degraded-failed"
+        }
+      ],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\unsupported-codec"
+    },
+    {
+      "callback_count": 2,
+      "cleanup": {
+        "conflicts": [],
+        "payload": "retained-inert-for-evidence",
+        "processes": "owned-process-group-closed",
+        "removed_exact_owned_configs": [
+          ".claude/settings.local.json",
+          "duplicate-test-plugin/.claude-plugin/plugin.json",
+          "duplicate-test-plugin/hooks/hooks.json"
+        ]
+      },
+      "command_status": "completed-unreviewed",
+      "host_exit": 0,
+      "mode": "duplicate-project-plugin",
+      "observations": [
+        {
+          "completed_at": "2026-10-04T11:14:00.307254+00:00",
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "dd83ce1adf6f39936bd8943973ecde1a6058b4675d572d0bc4adc8a041df5efd",
+          "input_size": 637,
+          "mode": "duplicate-project-plugin",
+          "observer_pid": 14292,
+          "output_sha256": "fe7b7019656fd6c0a1bf0e387ff5655abf5a3bc6d18babc7cd127dcbd6f2cfa1",
+          "parent_pid": 21808,
+          "reported_event": "SessionStart",
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "writing-resource-advice-only",
+              "hookEventName": "SessionStart"
+            }
+          },
+          "runner_pid": 55496,
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:56.522912+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "completed_at": "2026-10-04T11:14:00.307254+00:00",
+          "input_fields": [
+            "cwd",
+            "hook_event_name",
+            "session_id",
+            "source",
+            "transcript_path"
+          ],
+          "input_sha256": "dd83ce1adf6f39936bd8943973ecde1a6058b4675d572d0bc4adc8a041df5efd",
+          "input_size": 637,
+          "mode": "duplicate-project-plugin",
+          "observer_pid": 41528,
+          "output_sha256": "fe7b7019656fd6c0a1bf0e387ff5655abf5a3bc6d18babc7cd127dcbd6f2cfa1",
+          "parent_pid": 21808,
+          "reported_event": "SessionStart",
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "writing-resource-advice-only",
+              "hookEventName": "SessionStart"
+            }
+          },
+          "runner_pid": 23328,
+          "runner_sha256": "2cc900d2328a2d9e3d40bc8bc495c484c9e6edbf93d2be3c73e917e266fad379",
+          "started_at": "2026-10-04T11:13:57.154933+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "09cd1d58feee0c09c2ea8048c06d6edadb3610351da273695eaec757a5e7fe17",
+          "decision": "advisory",
+          "event_hash": "2e6369973aad4d701d853c9295201e1b2d37d6aa9c90d4b8d3eea293064ae6fb",
+          "evidence_class": "deterministic",
+          "host": "claude",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "advisory",
+          "reason_codes": [
+            "writing-resource-advice-only"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "fd868a26c71d8590fb93a5f4344588a993b1cad1424719a6cd38a38403174e73",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "a07e263020096ecdb4b48593482b534a3317455915b146d8af4be7f9e4bfabf7"
+        }
+      ],
+      "preventive_tool_coverage": "not-exercised-no-model-turn",
+      "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\projects-r30-attempt-02\\claude\\duplicate-project-plugin"
+    }
+  ],
+  "source_lock_hash": "55a4b60779228f3be3ae42d7691a49dec1df1b4e6f26139a32435aa1914562e1",
+  "surface": "claude-code",
+  "version": "2.1.272"
+}

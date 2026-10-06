@@ -1,0 +1,503 @@
+{
+  "schema_version": 1,
+  "artifact_type": "candidate-native-real-source-cases",
+  "created_at": "2026-10-03",
+  "project_root": "C:/Users/USER/Downloads/test-skill",
+  "status": "prepared-not-run",
+  "source_snapshot": {
+    "reader_artifact": "plans/evaluation/personal-use/source-acquisition/derived/reader-ready.jsonl",
+    "reader_sha256": "16175d1edc8116d07d9e952584f3ef47b3227cf8bd7d599cc30c695bff4f893e",
+    "manifest_artifact": "plans/evaluation/personal-use/source-acquisition/derived/manifest.json",
+    "manifest_sha256": "48d6b7ca16d777a7248197c5271f697fdcd05cc99e0f15aec6600d273ade5998",
+    "acquired_at": "2026-10-03"
+  },
+  "acceptance_profile": {
+    "path": "nckh-kit/core/profiles/acceptance/personal-use.json",
+    "used_skill_contracts": [
+      "nckh-write",
+      "nckh-taste",
+      "nckh-visuals",
+      "nckh-code-review",
+      "nckh-analytics"
+    ],
+    "authority_boundary": "The profile supplies observable checks and authority limits; it does not prove a native run, human review or scientific validity."
+  },
+  "execution_contract": {
+    "dispatch_status": "not-run",
+    "cursor": {
+      "requested_model": "Grok 4.7 Extra High",
+      "fallback": false,
+      "on_unavailable": "record the exact route failure and do not substitute another model"
+    },
+    "agy": {
+      "requested_model": "Gemini 3.8 Flash",
+      "requested_effort": "High",
+      "fallback": false,
+      "on_unavailable": "record the exact route failure and do not substitute another model"
+    },
+    "current_app": {
+      "model_policy": "all callable models",
+      "effective_model": "record only from the native receipt",
+      "fallback": "record the actual route and model; do not infer availability from the catalogue"
+    },
+    "shared_limits": [
+      "Read the exact input artifact and preserve its source_id, locator, revision/version and hash in the output.",
+      "Create the specified usable artifact during a future native run; these case definitions do not claim that output exists.",
+      "Do not fabricate source values, citations, human gold, scientific validity, model uplift or owner acceptance.",
+      "Keep all external writes, publishing, package installation and global configuration out of scope."
+    ]
+  },
+  "cases": [
+    {
+      "case_id": "real-source-vi-prose-taste-01",
+      "lane": "VI prose and literary taste",
+      "skill_ids": [
+        "nckh-taste",
+        "nckh-write"
+      ],
+      "source": {
+        "source_id": "vi-wikisource-19383",
+        "locator": "https://vi.wikisource.org/w/index.php?title=Th%E1%BA%A7y_tr%C3%B2_trong_kh%C3%A1m%2FI&oldid=19383",
+        "record_selector": "reader-ready.jsonl record where source_id == vi-wikisource-19383",
+        "input_artifacts": [
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/reader-ready.jsonl",
+            "sha256": "16175d1edc8116d07d9e952584f3ef47b3227cf8bd7d599cc30c695bff4f893e",
+            "bytes": 221904,
+            "role": "reader record and rendered passage"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/vi-child-thay-tro-19383.json",
+            "sha256": "f52fbe45efebb62659384352ae8151bf3aa19d048b45418b17cdf39f9c977c1a",
+            "bytes": 31106,
+            "role": "pinned child API JSON and rendered parse.text lineage"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/vi-child-thay-tro-19383.html",
+            "sha256": "5220e82099a8fa6a0beced7f660c14afdbeba9d79893c5fac6dbf627ccfa7661",
+            "bytes": 71196,
+            "role": "pinned child HTML lineage"
+          }
+        ],
+        "revision": {
+          "child_oldid": 19383,
+          "parent_source_id": "vi-wikisource-106841",
+          "parent_oldid": 106841,
+          "actual_passage": true
+        },
+        "content_anchors": [
+          "Vào khoảng năm 1815, tại cửa biển Mạc-xây nước Pháp",
+          "Thân tôi đã hứa cho Đàm-đức-tư rồi, không thể nào dời đổi được.",
+          "-- Chàng chết thì tôi đây cũng nguyện chết theo chàng."
+        ]
+      },
+      "task": {
+        "prompt": "[removed: raw runtime content]",
+        "must_use_content": [
+          "The actual Vietnamese prose in the selected reader record",
+          "At least three exact content anchors, including one narrative opening and one dialogue exchange",
+          "The historical orthography and dialogue punctuation as evidence for the taste discussion"
+        ],
+        "do_not": [
+          "Do not use the catalog root as if it were the prose sample.",
+          "Do not silently modernize spelling, names, register or literary content.",
+          "Do not call a subjective taste judgment a scientific, historical or native-reader verdict.",
+          "Do not claim completeness of the work or universal redistribution rights."
+        ]
+      },
+      "output_contract": {
+        "locale": "vi",
+        "format": "Markdown",
+        "artifact_path": "plans/evaluation/personal-use/native/real-source-vi-prose-taste-01.md",
+        "required_sections": [
+          "Source receipt",
+          "Anchored observations",
+          "Defect versus subjective preference",
+          "Optional bounded suggestions",
+          "Limitations and rights boundary"
+        ]
+      },
+      "observable_checks": [
+        "Output names source_id=vi-wikisource-19383, child_oldid=19383, parent_oldid=106841 and the exact locator.",
+        "All three required content anchors occur in the source receipt or analysis without spelling correction.",
+        "The memo discusses position-specific register, rhythm, vocabulary and audience/genre evidence.",
+        "Suggestions remain bounded and clearly separate from the preserved source text.",
+        "The artifact does not claim human gold, broad literary authority, completeness or scientific validity."
+      ],
+      "limitations": [
+        "The sample is one pinned child page, not the complete Thầy trò trong khám work; the parent record notes a missing issue XIV.",
+        "Wikisource page-level CC BY-SA terms and the underlying-work public-domain rationale remain separate legal questions.",
+        "No native output or owner taste judgment exists until a future run."
+      ],
+      "rights_scope": "Use the page-level license metadata as recorded; do not turn the page's public-domain rationale into a universal redistribution claim."
+    },
+    {
+      "case_id": "real-source-en-scientific-fidelity-01",
+      "lane": "EN scientific writing fidelity",
+      "skill_ids": [
+        "nckh-write"
+      ],
+      "source": {
+        "source_id": "pmc-PMC13623154",
+        "locator": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13623154/",
+        "record_selector": "reader-ready.jsonl record where source_id == pmc-PMC13623154",
+        "input_artifacts": [
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/reader-ready.jsonl",
+            "sha256": "16175d1edc8116d07d9e952584f3ef47b3227cf8bd7d599cc30c695bff4f893e",
+            "bytes": 221904,
+            "role": "bounded title/abstract/body excerpt"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/pmc-PMC13623154.xml",
+            "sha256": "135e35ecbac31f8a2429ce25426d2564c3a87aa66f4f2ebaf3fd1bd15114c69c",
+            "bytes": 128666,
+            "role": "full JATS/XML source and article-level license evidence"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/pmc-scientific.jsonl",
+            "sha256": "b2dadda901d4ca37ea8124aca1f7f282f9adbee4582638bc5f334a4a389eeb45",
+            "bytes": 21320,
+            "role": "scientific lane projection"
+          }
+        ],
+        "version": {
+          "pmcid": "PMC13623154",
+          "doi": "10.1371/journal.pone.0359403",
+          "article_license": "CC BY 4.0"
+        },
+        "content_anchors": [
+          "Gender disparities in leadership of methodological research in health science",
+          "Of the 1,375 included studies, the genders of 1,332 first authors and 1,334 last authors were determined.",
+          "Among last authors, 486 (36.4%) were women, and 848 (63.6%) were men",
+          "women’s last authorship was negatively associated with number of authors"
+        ]
+      },
+      "task": {
+        "prompt": "[removed: raw runtime content]",
+        "must_use_content": [
+          "The actual article title and abstract claims",
+          "At least five numerical or methodological details present in the source",
+          "The source's association/uncertainty wording, including the last-authorship association"
+        ],
+        "do_not": [
+          "Do not claim that the data prove causes, mechanisms or universal gender effects.",
+          "Do not fabricate missing methods, population scope, citations or results.",
+          "Do not treat the bounded derived excerpt as the entire XML article.",
+          "Do not call fluent prose scientific validity or peer-review acceptance."
+        ]
+      },
+      "output_contract": {
+        "locale": "en",
+        "format": "Markdown",
+        "artifact_path": "plans/evaluation/personal-use/native/real-source-en-scientific-fidelity-01.md",
+        "required_sections": [
+          "Source receipt and license",
+          "Five-row claim ledger",
+          "Faithful conclusion",
+          "Limits and uncertainty"
+        ]
+      },
+      "observable_checks": [
+        "Output identifies source_id=pmc-PMC13623154, PMCID, DOI, raw XML hash and CC BY 4.0 article statement.",
+        "Every numerical claim in the ledger is traceable to the actual record or XML and preserves the source's formatting/meaning.",
+        "Association, adjusted odds ratio, p-value and confidence interval wording is not upgraded to causal language.",
+        "The output distinguishes the bounded derived excerpt from the preserved full XML.",
+        "No unsupported citation, participant count, population generalization or scientific verdict appears."
+      ],
+      "limitations": [
+        "The derived text is capped at 9,000 characters even though the full XML is preserved.",
+        "This is one PLOS One health-science article; it does not establish general scientific-writing quality across fields.",
+        "No native output or human scientific review exists until a future run."
+      ],
+      "rights_scope": "The article-level XML contains CC BY 4.0; preserve attribution and retain the raw/full-text provenance."
+    },
+    {
+      "case_id": "real-source-worldbank-visual-01",
+      "lane": "World Bank measurement and editable visual",
+      "skill_ids": [
+        "nckh-visuals"
+      ],
+      "source": {
+        "source_id": "worldbank-vnm-SP.POP.TOTL-2000-2025",
+        "locator": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
+        "record_selector": "reader-ready.jsonl record where source_id == worldbank-vnm-SP.POP.TOTL-2000-2025",
+        "input_artifacts": [
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/reader-ready.jsonl",
+            "sha256": "16175d1edc8116d07d9e952584f3ef47b3227cf8bd7d599cc30c695bff4f893e",
+            "bytes": 221904,
+            "role": "projected 26-observation record"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/worldbank-vnm-population-2000-2025.json",
+            "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781",
+            "bytes": 5217,
+            "role": "official API snapshot"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/worldbank-series.jsonl",
+            "sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
+            "bytes": 6004,
+            "role": "chart-ready field-preserving projection"
+          }
+        ],
+        "version": {
+          "indicator": "SP.POP.TOTL",
+          "country": "VNM",
+          "years": "2000-2025",
+          "response_lastupdated": "2026-07-13",
+          "observation_count": 26,
+          "non_null_value_count": 26,
+          "raw_unit_value": "",
+          "first_value_2000": 77154011,
+          "last_value_2025": 101598527
+        },
+        "content_anchors": [
+          "SP.POP.TOTL",
+          "Population, total",
+          "77154011",
+          "101598527"
+        ]
+      },
+      "task": {
+        "prompt": "[removed: raw runtime content]",
+        "must_use_content": [
+          "All 26 actual observations, with no synthetic interpolation",
+          "The raw blank unit field",
+          "The exact first/last values and response metadata"
+        ],
+        "do_not": [
+          "Do not label the values as persons or any other supplied unit; the raw unit is blank.",
+          "Do not recalculate or silently round the source values.",
+          "Do not infer a causal explanation for the trend.",
+          "Do not call a generated SVG editable or render-passed without inspection evidence."
+        ]
+      },
+      "output_contract": {
+        "locale": "vi",
+        "format": "Editable SVG plus Markdown QA receipt",
+        "artifact_paths": [
+          "plans/evaluation/personal-use/native/real-source-worldbank-visual-01.svg",
+          "plans/evaluation/personal-use/native/real-source-worldbank-visual-01.md"
+        ],
+        "required_sections": [
+          "Source and data receipt",
+          "Editable visual",
+          "Axes/units/caption/alt text",
+          "Hash and QA receipt",
+          "Limitations"
+        ]
+      },
+      "observable_checks": [
+        "The data receipt reports 26 observations and 26 non-null values for 2000-2025.",
+        "2000 and 2025 values match 77154011 and 101598527 exactly; the raw unit field is explicitly blank.",
+        "The visual has an inspectable source-to-mark mapping, axis labels, caption, Vietnamese alt text and reading order.",
+        "The SVG is source-native/editable with identifiable text and data objects; no raster-only acceptance is claimed.",
+        "The output records render/inspection status as pending until a real QA receipt is captured."
+      ],
+      "limitations": [
+        "World Bank values are a dated snapshot and may be revised by the provider.",
+        "The API unit field is blank; the case intentionally preserves that missing metadata.",
+        "No native chart, render inspection or visual acceptance exists until a future run."
+      ],
+      "rights_scope": "Keep the World Bank terms locator and possible third-party indicator restrictions attached to the chart receipt."
+    },
+    {
+      "case_id": "real-source-django-code-review-01",
+      "lane": "BSD Django code review",
+      "skill_ids": [
+        "nckh-code-review"
+      ],
+      "source": {
+        "source_id": "django__django-10087",
+        "locator": "https://huggingface.co/datasets/SWE-bench/SWE-bench",
+        "record_selector": "reader-ready.jsonl record where source_id == django__django-10087; use only its code_fixture entries",
+        "input_artifacts": [
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/swe-django-02cd16-sqlmigrate.py",
+            "sha256": "6ca06cab795d7b1f1247c1a1327ac0ec54bc9295c68e3cbc95ac7f10be817371",
+            "bytes": 2742,
+            "role": "pinned Django implementation fixture"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/swe-django-02cd16-test_commands.py",
+            "sha256": "c69753ae276a6815faf1abdd0f78d6ab4770d65ec8ba1f38698d73e34832c81a",
+            "bytes": 67864,
+            "role": "pinned Django migration test fixture"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/swe-django-02cd16-license.txt",
+            "sha256": "b846415d1b514e9c1dff14a22deb906d794bc546ca6129f950a18cd091e2a669",
+            "bytes": 1552,
+            "role": "exact base-commit BSD 3-Clause license"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/swe-bench.jsonl",
+            "sha256": "1a8f89f611e12f59c92606adbaa1ccc8da3bd4dff818ff751d573395f7374535",
+            "bytes": 12383,
+            "role": "source record and fixture metadata; do not use private task fields"
+          }
+        ],
+        "version": {
+          "base_commit": "02cd16a7a04529c726e5bb5a13d5979119f25c7d",
+          "license": "BSD-3-Clause",
+          "implementation_anchor": "class Command at line 7; handle at line 31",
+          "test_anchors": [
+            "test_sqlmigrate_forwards at line 427",
+            "test_sqlmigrate_backwards at line 465",
+            "test_sqlmigrate_for_non_atomic_migration at line 510"
+          ]
+        },
+        "content_anchors": [
+          "class Command(BaseCommand)",
+          "def handle(self, *args, **options)",
+          "def test_sqlmigrate_forwards(self)",
+          "def test_sqlmigrate_backwards(self)",
+          "def test_sqlmigrate_for_non_atomic_migration(self)"
+        ]
+      },
+      "task": {
+        "prompt": "[removed: raw runtime content]",
+        "must_use_content": [
+          "The exact implementation fixture and its Command/handle code",
+          "The exact forwards, backwards and non-atomic test methods",
+          "The pinned commit and BSD license evidence"
+        ],
+        "do_not": [
+          "Do not read, quote, infer from or package the private SWE-bench task/issue/patch artifacts.",
+          "Do not change files or turn the review into implementation work.",
+          "Do not claim a security guarantee, benchmark result or ticket resolution from code inspection alone.",
+          "Do not report style preference as an actionable defect without impact and evidence."
+        ]
+      },
+      "output_contract": {
+        "locale": "en",
+        "format": "Markdown",
+        "artifact_path": "plans/evaluation/personal-use/native/real-source-django-code-review-01.md",
+        "required_sections": [
+          "Source receipt and inspected scope",
+          "Findings or explicit no-finding result",
+          "Evidence/reproduction and required edit for each finding",
+          "Rights and review limitations"
+        ]
+      },
+      "observable_checks": [
+        "Every finding, if any, names an exact fixture path and line, impact, why/repro and required edit.",
+        "A no-finding result still lists the implementation and all three test methods inspected.",
+        "The review receipt includes the base commit, fixture hashes and BSD-3-Clause scope.",
+        "No private issue/task/patch text appears in the artifact or its source receipt.",
+        "The output remains review-only: no changed code, merge, publish or security guarantee."
+      ],
+      "limitations": [
+        "The case intentionally excludes the ticket and benchmark patch, so it cannot assess ticket intent or regression coverage beyond the provided fixtures.",
+        "No test execution or runtime environment is part of this brief.",
+        "Django BSD-3-Clause evidence applies to the verified code fixtures, not the private SWE-bench task artifacts."
+      ],
+      "rights_scope": "BSD-3-Clause is recorded only for the two verified upstream Django code fixtures at the pinned commit."
+    },
+    {
+      "case_id": "real-source-uci-analytics-01",
+      "lane": "UCI bounded campaign analytics",
+      "skill_ids": [
+        "nckh-analytics"
+      ],
+      "source": {
+        "source_id": "uci-bank-marketing-bank-csv-first-10",
+        "locator": "https://archive.ics.uci.edu/dataset/222/bank",
+        "record_selector": "reader-ready.jsonl record where source_id == uci-bank-marketing-bank-csv-first-10",
+        "input_artifacts": [
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/reader-ready.jsonl",
+            "sha256": "16175d1edc8116d07d9e952584f3ef47b3227cf8bd7d599cc30c695bff4f893e",
+            "bytes": 221904,
+            "role": "10-row projected sample and preserved field values"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/derived/uci-bank-marketing.jsonl",
+            "sha256": "647a774b9fb4545d6bc652114910df53677fbe993a00c268c16d4f50b03fe123",
+            "bytes": 4441,
+            "role": "lane-specific analytics artifact"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/uci-bank-marketing.zip",
+            "sha256": "e0bf5f5de5b846e2f18e9d90606637267d46dfa260e0f17bb12e605db5efbeb4",
+            "bytes": 1023843,
+            "role": "official outer archive"
+          },
+          {
+            "path": "plans/evaluation/personal-use/source-acquisition/raw/uci-bank.zip",
+            "sha256": "99d7e8eb12401ed278b793984423915411ea8df099e1795f9fefe254f513fe5e",
+            "bytes": 579043,
+            "role": "official nested archive containing bank.csv"
+          }
+        ],
+        "version": {
+          "doi": "10.24432/C5K306",
+          "file": "bank.csv",
+          "delimiter": ";",
+          "sample_policy": "first 10 data rows",
+          "row_count": 10,
+          "column_count": 17,
+          "target_counts": {
+            "y=no": 10,
+            "y=yes": 0
+          },
+          "month_counts": {
+            "may": 5,
+            "apr": 2,
+            "feb": 1,
+            "jun": 1,
+            "oct": 1
+          }
+        },
+        "content_anchors": [
+          "age",
+          "job",
+          "duration",
+          "y",
+          "1787",
+          "-88"
+        ]
+      },
+      "task": {
+        "prompt": "[removed: raw runtime content]",
+        "must_use_content": [
+          "The actual ten rows and all 17 source columns",
+          "Observed y/month counts and the negative balance value",
+          "The official UCI DOI/license and nested archive lineage"
+        ],
+        "do_not": [
+          "Do not fabricate yes outcomes, campaign lift, customer segments or population estimates.",
+          "Do not call the first ten rows representative or infer causality from descriptive counts.",
+          "Do not discard the semicolon delimiter, raw strings, sentinel values or negative balance.",
+          "Do not hide the post-contact duration leakage limitation."
+        ]
+      },
+      "output_contract": {
+        "locale": "vi",
+        "format": "Markdown",
+        "artifact_path": "plans/evaluation/personal-use/native/real-source-uci-analytics-01.md",
+        "required_sections": [
+          "Source/data receipt",
+          "Descriptive counts and tables",
+          "Data-quality and leakage notes",
+          "Non-causal interpretation limits"
+        ]
+      },
+      "observable_checks": [
+        "Output reports 10 rows, 17 columns, delimiter=; and the exact UCI DOI/locator.",
+        "The target table reports y=no=10 and y=yes=0 without presenting it as a population response rate.",
+        "The month counts and negative balance -88 are traceable to the actual sample.",
+        "The memo separates descriptive observations from causal/inferential claims and names duration leakage.",
+        "Raw archive and derived record hashes are included for reproducibility."
+      ],
+      "limitations": [
+        "The record is a first-ten-row bounded sample, not a representative campaign population.",
+        "The data are campaign-response observations; duration is post-contact and can leak the target in prospective prediction.",
+        "No native analytics output or owner review exists until a future run."
+      ],
+      "rights_scope": "The official UCI page states CC BY 4.0 and DOI 10.24432/C5K306; preserve attribution and dataset-level rights scope."
+    }
+  ]
+}

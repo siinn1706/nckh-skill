@@ -1,0 +1,1329 @@
+{
+  "collector_initial_failure": {
+    "path": "event-timing-collector-initial-failure.json",
+    "sha256": "fe6c5185bd5d0a14364a551ad7b2572f3fa9f45116339ccff72f832b2e35788f"
+  },
+  "metadata_correction": {
+    "field": "effect_timing",
+    "interpretation": "PreToolUse precedes the native tool; PostToolUse follows it. PreInvocation/PostInvocation wrap each model invocation and occur both before and after the tool in these turns. Stop follows the final response. Use observed callback order, not the original broad post-event description.",
+    "original": "post events run after the native tool; existing oracle is not evidence of a prevention failure",
+    "raw_summary_preserved": true
+  },
+  "qualification": "specific native event/version/tool observations; full host/surface gate remains open",
+  "raw_summary_sha256": "4d57f177daf0d40ec44f3c1eab563cd3d36f9213c93121de754b39c1f657a0ba",
+  "results": [
+    {
+      "attempt": "pre-invocation-malformed-input-01",
+      "attempt_sha256": "477ee07424a9bd299607f8bfba2f231ee0acf5114094de41e937afcaf580ac2a",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 53336,
+          "started_at": "2026-10-04T17:37:12.635249+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 46216,
+          "started_at": "2026-10-04T17:37:16.549578+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 49208,
+          "started_at": "2026-10-04T17:37:18.299589+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 26208,
+          "started_at": "2026-10-04T17:37:19.076524+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 52700,
+          "started_at": "2026-10-04T17:37:20.490747+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 18000,
+          "started_at": "2026-10-04T17:37:23.561898+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 56900,
+          "started_at": "2026-10-04T17:37:24.257371+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreInvocation",
+      "fault": "malformed-input",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "before-pre-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "4e8efcee4cf229ec2e54f145fa1f825e2aad289aac211c6ceb6d63a866ec1371"
+    },
+    {
+      "attempt": "pre-invocation-malformed-output-01",
+      "attempt_sha256": "ca6ebe352112a5b3d7d9ff2fc27ddca5be6847eb9c5ab8c4b73e46039c275b75",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 44724,
+          "started_at": "2026-10-04T17:37:29.237738+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 55708,
+          "started_at": "2026-10-04T17:37:32.715104+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 22700,
+          "started_at": "2026-10-04T17:37:34.702848+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 22140,
+          "started_at": "2026-10-04T17:37:35.363273+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 30092,
+          "started_at": "2026-10-04T17:37:36.057805+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 33256,
+          "started_at": "2026-10-04T17:37:40.909599+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 18856,
+          "started_at": "2026-10-04T17:37:42.326100+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreInvocation",
+      "fault": "malformed-output",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "before-pre-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "eb52957e77a90d23fd74ecf4b055a2c9006e4c6a11f83dc6db3b25e4c8099221"
+    },
+    {
+      "attempt": "pre-invocation-timeout-01",
+      "attempt_sha256": "72fde99ae8d14d74e134cf3d938c6199e46277669c00eaabddb97942655c4428",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 56924,
+          "started_at": "2026-10-04T17:37:48.588104+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 47512,
+          "started_at": "2026-10-04T17:37:54.195287+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 42048,
+          "started_at": "2026-10-04T17:37:56.097291+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 30848,
+          "started_at": "2026-10-04T17:37:56.708841+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 49372,
+          "started_at": "2026-10-04T17:37:58.664909+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 6048,
+          "started_at": "2026-10-04T17:38:02.636480+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 45936,
+          "started_at": "2026-10-04T17:38:03.334375+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreInvocation",
+      "fault": "timeout",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "before-pre-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "b32f592546f5dc051d10cc64c16e52dbe914d48a70af30f6146adbfd19f56db5"
+    },
+    {
+      "attempt": "pre-invocation-crash-01",
+      "attempt_sha256": "cb7a9e6c3495713769ca1014e776155fc812703f9a72410392c9ae9c0bc7e70a",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 24284,
+          "started_at": "2026-10-04T17:38:07.436188+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 48704,
+          "started_at": "2026-10-04T17:38:11.213591+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 57796,
+          "started_at": "2026-10-04T17:38:12.618926+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 45500,
+          "started_at": "2026-10-04T17:38:13.158879+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 17692,
+          "started_at": "2026-10-04T17:38:13.713698+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 51276,
+          "started_at": "2026-10-04T17:38:16.940071+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 18000,
+          "started_at": "2026-10-04T17:38:17.770381+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreInvocation",
+      "fault": "crash",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "before-pre-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "4ac2d888602dff6ceaee1c55c1a00c92e5186e2ca5b50a61eccb87feb7d3e28a"
+    },
+    {
+      "attempt": "pre-invocation-unsupported-codec-01",
+      "attempt_sha256": "7a76173bd64872d9cd59dfd71edb717ca4ac69902fc3f2f8d5cf08229a4b6e2f",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 29832,
+          "started_at": "2026-10-04T17:38:22.673967+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 25604,
+          "started_at": "2026-10-04T17:38:28.796882+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 57932,
+          "started_at": "2026-10-04T17:38:30.340756+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 25528,
+          "started_at": "2026-10-04T17:38:31.408625+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 35180,
+          "started_at": "2026-10-04T17:38:32.663435+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 52632,
+          "started_at": "2026-10-04T17:38:36.347364+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 58968,
+          "started_at": "2026-10-04T17:38:37.149463+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreInvocation",
+      "fault": "unsupported-codec",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "before-pre-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "680bccfc2234b44d041e87f1dd7bd41606bb86e874df42f85f9c41ef4398fc26"
+    },
+    {
+      "attempt": "pre-tool-use-malformed-input-01",
+      "attempt_sha256": "19e947010ad5067888b2e54bf8b28c62a5634b6ae189d787d3860fe257a119ef",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 36492,
+          "started_at": "2026-10-04T17:38:42.154558+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 47284,
+          "started_at": "2026-10-04T17:38:46.185099+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 56520,
+          "started_at": "2026-10-04T17:38:47.012332+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 56256,
+          "started_at": "2026-10-04T17:38:47.598659+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 51620,
+          "started_at": "2026-10-04T17:38:50.759017+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 58764,
+          "started_at": "2026-10-04T17:38:51.458925+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreToolUse",
+      "fault": "malformed-input",
+      "native_error": "tool call denied by pre-tool hook: hook-input-or-context-invalid",
+      "native_outcome": "native-tool-error-before-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": false,
+      "selected_callback_positions": [
+        "pre-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "ff4895f2f2676027976e772354ad005dd3a3e06ba6d8db73d96869c49903b6d3"
+    },
+    {
+      "attempt": "pre-tool-use-malformed-output-01",
+      "attempt_sha256": "6fd103b4c45a97a6d97abfba9b08b1003e8180d86fd3c9d267efcb53f18bb470",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 34228,
+          "started_at": "2026-10-04T17:38:56.112129+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 5668,
+          "started_at": "2026-10-04T17:39:03.772296+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 31260,
+          "started_at": "2026-10-04T17:39:05.099474+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 57480,
+          "started_at": "2026-10-04T17:39:06.377798+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 52604,
+          "started_at": "2026-10-04T17:39:10.277606+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 41936,
+          "started_at": "2026-10-04T17:39:11.278362+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreToolUse",
+      "fault": "malformed-output",
+      "native_error": "failed to unmarshal result from hook jsonhook__nckh-native-probe_PreToolUse_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token [",
+      "native_outcome": "native-tool-error-before-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": false,
+      "selected_callback_positions": [
+        "pre-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "0f68622f4f3daaa0737170b1bd30bcdea978a22475968e89b649a7d38f2e52a3"
+    },
+    {
+      "attempt": "pre-tool-use-timeout-01",
+      "attempt_sha256": "7a891e67a0365357a48e432a99706136ab55c5851ff00fe83f6f6d7bc90590d1",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 31276,
+          "started_at": "2026-10-04T17:39:15.841329+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 30968,
+          "started_at": "2026-10-04T17:39:20.432041+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 58964,
+          "started_at": "2026-10-04T17:39:23.268239+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 36024,
+          "started_at": "2026-10-04T17:39:24.136694+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 30356,
+          "started_at": "2026-10-04T17:39:29.166954+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 59096,
+          "started_at": "2026-10-04T17:39:29.625366+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreToolUse",
+      "fault": "timeout",
+      "native_error": "JSON hook \"jsonhook__nckh-native-probe_PreToolUse_0_0\" failed: command failed: exit status 1, stderr:",
+      "native_outcome": "native-tool-error-before-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": false,
+      "selected_callback_positions": [
+        "pre-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "388b9954ba52fcef56dea191c2ac5293fc73ff6e30fa0e98eed4b86035b011a6"
+    },
+    {
+      "attempt": "pre-tool-use-crash-01",
+      "attempt_sha256": "b97905fdb02cb2282571109262a382948a3a946bc1cbe134fd3161fb75fa4e0a",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 47328,
+          "started_at": "2026-10-04T17:39:33.783734+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 41328,
+          "started_at": "2026-10-04T17:39:37.100511+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 50288,
+          "started_at": "2026-10-04T17:39:37.435325+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 42964,
+          "started_at": "2026-10-04T17:39:37.924006+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 54348,
+          "started_at": "2026-10-04T17:39:40.249325+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 36500,
+          "started_at": "2026-10-04T17:39:41.024532+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreToolUse",
+      "fault": "crash",
+      "native_error": "JSON hook \"jsonhook__nckh-native-probe_PreToolUse_0_0\" failed: command failed: exit status 17, stderr:",
+      "native_outcome": "native-tool-error-before-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": false,
+      "selected_callback_positions": [
+        "pre-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "6e68194422209d074428ae31bd5fce0e05f401a03808fc6ba804865848a72b45"
+    },
+    {
+      "attempt": "pre-tool-use-unsupported-codec-01",
+      "attempt_sha256": "847b7f47213631bac1571505ccd1567f5c7288b93f55e484912552cee958ce33",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 59056,
+          "started_at": "2026-10-04T17:39:45.455810+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 42120,
+          "started_at": "2026-10-04T17:39:49.301333+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 7224,
+          "started_at": "2026-10-04T17:39:50.869050+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 54136,
+          "started_at": "2026-10-04T17:39:51.662302+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 3588,
+          "started_at": "2026-10-04T17:39:54.825921+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 38288,
+          "started_at": "2026-10-04T17:39:55.690260+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PreToolUse",
+      "fault": "unsupported-codec",
+      "native_error": "JSON hook \"jsonhook__nckh-native-probe_PreToolUse_0_0\" failed: command failed: exit status 3, stderr:",
+      "native_outcome": "native-tool-error-before-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": false,
+      "selected_callback_positions": [
+        "pre-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "7b0c7fb3a10055a7c4362fdf14d2d32d3ffccac97a1a1629a10a125527bc6ea4"
+    },
+    {
+      "attempt": "post-tool-use-malformed-input-01",
+      "attempt_sha256": "c7ee5992d1ddcc05a310946c08171ae398f19a638e780e8c73af81642a372eb8",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 42736,
+          "started_at": "2026-10-04T17:40:00.012413+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 55892,
+          "started_at": "2026-10-04T17:40:04.442401+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 52560,
+          "started_at": "2026-10-04T17:40:05.969156+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 43416,
+          "started_at": "2026-10-04T17:40:06.589415+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 57648,
+          "started_at": "2026-10-04T17:40:08.643515+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 49952,
+          "started_at": "2026-10-04T17:40:12.596975+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 51244,
+          "started_at": "2026-10-04T17:40:13.332358+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostToolUse",
+      "fault": "malformed-input",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": true,
+      "stdout_sha256": "8a4931fedf934d1b4696e73213fdd5c8a33cfcd060f494b97c49b6eab69c513b"
+    },
+    {
+      "attempt": "post-tool-use-malformed-output-01",
+      "attempt_sha256": "3d7f76d33deb090723f073a130d8d4af06aa02f9a3c4ce545632443935e04b33",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 55708,
+          "started_at": "2026-10-04T17:40:17.784307+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 55996,
+          "started_at": "2026-10-04T17:40:21.805692+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 57692,
+          "started_at": "2026-10-04T17:40:24.306689+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 38036,
+          "started_at": "2026-10-04T17:40:24.468854+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 16600,
+          "started_at": "2026-10-04T17:40:25.326300+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 52992,
+          "started_at": "2026-10-04T17:40:28.775550+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 31980,
+          "started_at": "2026-10-04T17:40:29.586608+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostToolUse",
+      "fault": "malformed-output",
+      "native_error": null,
+      "native_outcome": "native-tool-marked-error-after-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": true,
+      "stdout_sha256": "9269edd5ee504423cf9f30cbfb03d1a59c4c96413d2b81a57db5385a3a5adce0"
+    },
+    {
+      "attempt": "post-tool-use-timeout-01",
+      "attempt_sha256": "3ef35743beb14f6f61e53840d559384e49154c87f66293307870abf784e572e0",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 38148,
+          "started_at": "2026-10-04T17:40:33.958707+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 35460,
+          "started_at": "2026-10-04T17:40:38.426233+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 42964,
+          "started_at": "2026-10-04T17:40:40.181771+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 49908,
+          "started_at": "2026-10-04T17:40:43.083273+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 17136,
+          "started_at": "2026-10-04T17:40:43.810564+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 44428,
+          "started_at": "2026-10-04T17:40:45.999761+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 4876,
+          "started_at": "2026-10-04T17:40:46.806351+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostToolUse",
+      "fault": "timeout",
+      "native_error": null,
+      "native_outcome": "native-tool-marked-error-after-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": true,
+      "stdout_sha256": "1922ec574b95825a54bedef5bb9623fd838dbb5fae282d983d35cfb53e5c9000"
+    },
+    {
+      "attempt": "post-tool-use-crash-01",
+      "attempt_sha256": "4cfd3333389d0923c2281fad708a91bb2f7a23f2acb3e0170ecc03201cd3cb07",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 13144,
+          "started_at": "2026-10-04T17:40:50.711924+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 56476,
+          "started_at": "2026-10-04T17:40:54.638939+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 52632,
+          "started_at": "2026-10-04T17:40:56.358433+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 51676,
+          "started_at": "2026-10-04T17:40:56.492571+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 35324,
+          "started_at": "2026-10-04T17:40:57.249273+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 38692,
+          "started_at": "2026-10-04T17:41:00.119168+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 36364,
+          "started_at": "2026-10-04T17:41:00.888302+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostToolUse",
+      "fault": "crash",
+      "native_error": null,
+      "native_outcome": "native-tool-marked-error-after-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": true,
+      "stdout_sha256": "ada172af2c25583bfc7b49b545113122bbec2d7cc111b896ec191125fde8646b"
+    },
+    {
+      "attempt": "post-tool-use-unsupported-codec-01",
+      "attempt_sha256": "324592102cfe33bbce7c9e52dd5231af5fedadc2535e7ac3e7acafc64e44157b",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 48564,
+          "started_at": "2026-10-04T17:41:04.996378+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 11876,
+          "started_at": "2026-10-04T17:41:08.622021+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 59184,
+          "started_at": "2026-10-04T17:41:09.924388+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 5984,
+          "started_at": "2026-10-04T17:41:10.394516+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 55328,
+          "started_at": "2026-10-04T17:41:10.911791+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 13472,
+          "started_at": "2026-10-04T17:41:13.811244+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 56724,
+          "started_at": "2026-10-04T17:41:14.452001+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostToolUse",
+      "fault": "unsupported-codec",
+      "native_error": null,
+      "native_outcome": "native-tool-marked-error-after-marker",
+      "native_tool_state": "ERROR",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": true,
+      "stdout_sha256": "1dbbf84491ba983f4d2e7caba21f3c9f351d84cdb46ec56fc65ea84f54dc585b"
+    },
+    {
+      "attempt": "post-invocation-malformed-input-01",
+      "attempt_sha256": "c082fae7c1344ea2cc1169e3a0690b8b5495d06dc3645aa792d9cb28df58c2e1",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 36404,
+          "started_at": "2026-10-04T17:41:19.936753+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 22156,
+          "started_at": "2026-10-04T17:41:23.318439+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 55788,
+          "started_at": "2026-10-04T17:41:26.214123+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 1804,
+          "started_at": "2026-10-04T17:41:26.852325+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 22104,
+          "started_at": "2026-10-04T17:41:27.424392+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 52820,
+          "started_at": "2026-10-04T17:41:31.932602+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 40260,
+          "started_at": "2026-10-04T17:41:32.543172+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostInvocation",
+      "fault": "malformed-input",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "62a44e311b7cb6c427305f243c7f6d5619494e59240fb70feaed5e45b1c65d1c"
+    },
+    {
+      "attempt": "post-invocation-malformed-output-01",
+      "attempt_sha256": "a29441725b883ee6cc638dfbf90d1c760549726ab9e92f82aa53de76a2a51213",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 20064,
+          "started_at": "2026-10-04T17:41:37.351646+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 30788,
+          "started_at": "2026-10-04T17:41:41.048311+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 52276,
+          "started_at": "2026-10-04T17:41:42.351646+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 1804,
+          "started_at": "2026-10-04T17:41:42.843594+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 17824,
+          "started_at": "2026-10-04T17:41:42.967080+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 53064,
+          "started_at": "2026-10-04T17:41:45.118180+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 49712,
+          "started_at": "2026-10-04T17:41:45.400619+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostInvocation",
+      "fault": "malformed-output",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "8e27a244ecb2ba1e782610ec4797d6d6c7d36d0ff780fb59bb3ab9724f093159"
+    },
+    {
+      "attempt": "post-invocation-timeout-01",
+      "attempt_sha256": "b10a1d994a0302b7b9da53c9a5c3d8eea5d9d84523b683f2dfb0040bfffa1b9f",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 49736,
+          "started_at": "2026-10-04T17:41:49.634963+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 41124,
+          "started_at": "2026-10-04T17:41:54.413618+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 49888,
+          "started_at": "2026-10-04T17:41:56.304193+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 37976,
+          "started_at": "2026-10-04T17:41:56.858342+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 37904,
+          "started_at": "2026-10-04T17:41:59.736706+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 48172,
+          "started_at": "2026-10-04T17:42:02.364226+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 12724,
+          "started_at": "2026-10-04T17:42:05.209620+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostInvocation",
+      "fault": "timeout",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "c2fc7404fb015dad094a9fc55c7b076677ef4eb382692ca221dcefcd6fe91339"
+    },
+    {
+      "attempt": "post-invocation-crash-01",
+      "attempt_sha256": "346df6e2711de2b1eda73059079e382448ececbfbf9d42b1a45e4e2b9a4cef28",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 42420,
+          "started_at": "2026-10-04T17:42:09.222031+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 56864,
+          "started_at": "2026-10-04T17:42:14.985117+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 43292,
+          "started_at": "2026-10-04T17:42:16.306040+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 57952,
+          "started_at": "2026-10-04T17:42:16.795960+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 59272,
+          "started_at": "2026-10-04T17:42:16.913648+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 54280,
+          "started_at": "2026-10-04T17:42:19.364468+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 55144,
+          "started_at": "2026-10-04T17:42:19.645295+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostInvocation",
+      "fault": "crash",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "efb1f07b41250064e75c1a413533a603c08d6b5bfc3165d8c247224f8db4ba79"
+    },
+    {
+      "attempt": "post-invocation-unsupported-codec-01",
+      "attempt_sha256": "538cd0c25efe5e8a917369514e919bdd9c7be24af2881a20b724318acf4f5e0d",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 52856,
+          "started_at": "2026-10-04T17:42:23.762204+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 33612,
+          "started_at": "2026-10-04T17:42:28.709023+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 31724,
+          "started_at": "2026-10-04T17:42:30.012134+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 59024,
+          "started_at": "2026-10-04T17:42:30.491515+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 27636,
+          "started_at": "2026-10-04T17:42:30.991005+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 47148,
+          "started_at": "2026-10-04T17:42:36.658717+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 51216,
+          "started_at": "2026-10-04T17:42:37.726421+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "PostInvocation",
+      "fault": "unsupported-codec",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback",
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "e996a606c33ea233d5e985f8b949329d10e5a32a1a04d68eb9877403cf67b96a"
+    },
+    {
+      "attempt": "stop-malformed-input-01",
+      "attempt_sha256": "b3dbc194a81495c76a5a39b2cdc8290d166cf46942164bd97b34c2cbb2928851",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 13112,
+          "started_at": "2026-10-04T17:42:41.720361+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 57068,
+          "started_at": "2026-10-04T17:42:44.903892+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 52292,
+          "started_at": "2026-10-04T17:42:46.249031+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 20888,
+          "started_at": "2026-10-04T17:42:46.734923+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 42864,
+          "started_at": "2026-10-04T17:42:47.245953+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 6720,
+          "started_at": "2026-10-04T17:42:49.384540+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 40604,
+          "started_at": "2026-10-04T17:42:50.057657+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "Stop",
+      "fault": "malformed-input",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "6e3cd72fb3e4c7e2670361c5f2a6aca873b805d5262fc8d6f7ec6fe0acfb74f2"
+    },
+    {
+      "attempt": "stop-malformed-output-01",
+      "attempt_sha256": "00987871a3b301c31f48402ded969db06ecf209ec306c0df027b50a431823b1a",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 13268,
+          "started_at": "2026-10-04T17:42:54.537133+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 52388,
+          "started_at": "2026-10-04T17:42:57.970401+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 56604,
+          "started_at": "2026-10-04T17:42:59.349298+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 24336,
+          "started_at": "2026-10-04T17:42:59.836476+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 17212,
+          "started_at": "2026-10-04T17:43:00.326797+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 22292,
+          "started_at": "2026-10-04T17:43:02.502461+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 48564,
+          "started_at": "2026-10-04T17:43:03.124369+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "Stop",
+      "fault": "malformed-output",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "9173234f7c156d4b714eed468d159ea8ad4b495fa3b3fbae749f2bdfea18b43b"
+    },
+    {
+      "attempt": "stop-timeout-01",
+      "attempt_sha256": "8457f3b6e9b5f7bff4106c83b751c6d6ef091578ac44cbb1e1f5937b6e95026d",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 45964,
+          "started_at": "2026-10-04T17:43:07.173625+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 3280,
+          "started_at": "2026-10-04T17:43:10.053925+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 47732,
+          "started_at": "2026-10-04T17:43:12.364614+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 42696,
+          "started_at": "2026-10-04T17:43:13.206420+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 55144,
+          "started_at": "2026-10-04T17:43:13.753180+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 40368,
+          "started_at": "2026-10-04T17:43:15.596645+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 52560,
+          "started_at": "2026-10-04T17:43:16.473088+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "Stop",
+      "fault": "timeout",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "0723c787cabe8a315a2b55e5a5066e256e5f9cf706a68923dc88f409070e1e36"
+    },
+    {
+      "attempt": "stop-crash-01",
+      "attempt_sha256": "830e81798b71fa6b7f8345251122a31d02f3a8eab7d54b2116d5b2464c94c70e",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 35528,
+          "started_at": "2026-10-04T17:43:24.485529+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 40464,
+          "started_at": "2026-10-04T17:43:30.179113+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 13756,
+          "started_at": "2026-10-04T17:43:31.610873+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 48352,
+          "started_at": "2026-10-04T17:43:32.089159+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 41964,
+          "started_at": "2026-10-04T17:43:32.546068+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 54996,
+          "started_at": "2026-10-04T17:43:35.267141+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 56284,
+          "started_at": "2026-10-04T17:43:35.927519+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "Stop",
+      "fault": "crash",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "11d20ca5eb411abc6cd4eb8f2934a95bc5ae180c389c1f1cc2230d176e82f2e9"
+    },
+    {
+      "attempt": "stop-unsupported-codec-01",
+      "attempt_sha256": "2e5095517adfabd9e0d350f7de3ce6a66f23a6de8a73d40c12b908af23a6053a",
+      "callback_order": [
+        {
+          "event": "PreInvocation",
+          "observer_pid": 59272,
+          "started_at": "2026-10-04T17:43:39.633869+00:00"
+        },
+        {
+          "event": "PreToolUse",
+          "observer_pid": 44724,
+          "started_at": "2026-10-04T17:43:43.777496+00:00"
+        },
+        {
+          "event": "PostToolUse",
+          "observer_pid": 42048,
+          "started_at": "2026-10-04T17:43:45.522169+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 31912,
+          "started_at": "2026-10-04T17:43:46.207564+00:00"
+        },
+        {
+          "event": "PreInvocation",
+          "observer_pid": 51756,
+          "started_at": "2026-10-04T17:43:46.894022+00:00"
+        },
+        {
+          "event": "PostInvocation",
+          "observer_pid": 14904,
+          "started_at": "2026-10-04T17:43:49.497322+00:00"
+        },
+        {
+          "event": "Stop",
+          "observer_pid": 37388,
+          "started_at": "2026-10-04T17:43:50.864602+00:00"
+        }
+      ],
+      "command_matches_authorized_oracle": true,
+      "event": "Stop",
+      "fault": "unsupported-codec",
+      "native_error": null,
+      "native_outcome": "native-tool-completed-marker-preserved",
+      "native_tool_state": "DONE",
+      "oracle_created": true,
+      "selected_callback_positions": [
+        "at-or-after-post-tool-callback"
+      ],
+      "side_effect_precedes_posttool_failure": false,
+      "stdout_sha256": "1a7afa21a836a8402112cc1a51b8d7d9e7ed37378aa39b66cd730b7935c6bf19"
+    }
+  ],
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "status": "recorded-native-tool-states-and-order"
+}

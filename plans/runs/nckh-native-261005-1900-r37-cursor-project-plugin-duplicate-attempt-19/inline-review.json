@@ -1,0 +1,41 @@
+{
+  "status": "inline-reviewed-current-native-checkpoint",
+  "reviewer": "controller /root; no independent reviewer claimed",
+  "scope": [
+    "native18 create observation",
+    "native19 project/plugin observation",
+    "four stateful plan/journal documents"
+  ],
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "production_source_changes": 0,
+  "findings": [
+    {
+      "resolution": "retained-native-gap",
+      "evidence": "native18 original collector and verified summary",
+      "detail": "Read denial on an absent private target does not qualify a private Write callback or denial"
+    },
+    {
+      "resolution": "retained-native-gap",
+      "evidence": "native19 eight actual callbacks/five policy receipts",
+      "detail": "Only sessionStart/preToolUse/postToolUse have both project and plugin callbacks; beforeSubmitPrompt/stop stay unqualified"
+    },
+    {
+      "resolution": "retained-capture-limit",
+      "evidence": "terminal poll receipts and terminal-final-observation.json",
+      "detail": "Raw terminal truncated; tool-return content not retained; harness exit1 after completed marker/Stop and owned process cleanup"
+    },
+    {
+      "resolution": "passed-scope-check",
+      "evidence": "cleanup.json and final-process-audit.json in native18/native19",
+      "detail": "54 matching owned members removed; historical member hashes preserved; zero matching/tracked-live owned Cursor processes; protected global configs unchanged"
+    },
+    {
+      "resolution": "passed-state-check",
+      "evidence": "native19 plan-reconciliation.json",
+      "detail": "235 local links verified; SQLite backup and index bookkeeping preserved; plan44/45/phase3/active and native/scientific/stable/release gates remain open"
+    }
+  ],
+  "independent_review": "not-performed",
+  "additional_model_prompts": 0
+}

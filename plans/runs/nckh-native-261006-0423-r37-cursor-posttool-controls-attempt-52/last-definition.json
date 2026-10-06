@@ -1,0 +1,87 @@
+{
+  "config": {
+    "hooks": {
+      "beforeSubmitPrompt": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52\\cursor-file-observer.py --host cursor --event beforeSubmitPrompt --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-posttool-controls-52 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "postToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52\\cursor-file-observer.py --host cursor --event postToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-posttool-controls-52 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "matcher": "^Write$",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "preToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-posttool-controls-52 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "failClosed": true,
+          "matcher": "^Write$",
+          "timeout": 20,
+          "type": "command"
+        }
+      ],
+      "sessionStart": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52\\cursor-file-observer.py --host cursor --event sessionStart --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-posttool-controls-52 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "stop": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -X utf8 -B C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52\\cursor-file-observer.py --host cursor --event stop --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-posttool-controls-52 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py --callback-source project",
+          "loop_limit": 1,
+          "timeout": 5,
+          "type": "command"
+        }
+      ]
+    },
+    "version": 1
+  },
+  "config_sha256": "20d6c2fc18a2819ff506f62bbeb037fa4a3041bfe74564e37e5abe6330596ce3",
+  "definition_kind": "bounded-posttool-Write-observations",
+  "extra_configs": [
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-allow.txt",
+      "sha256": "0b11e47d8529b9faf7c1e746584dd56f37ad6636add4e3530d01a102097eb93b"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-policy-deny.txt",
+      "sha256": "406d33fefd1767c610675137af65acd03e2fc7d477a420d70cde4ed8bd1e6549"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-malformed-input.txt",
+      "sha256": "a1d149fc552273846a18f53c1828c239c3410fa698cd95d65427320e830aeb52"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-malformed-output.txt",
+      "sha256": "b951696447b043c4a87d23c0db30f7b3c82311022dca943af92680ee6e4884a8"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-timeout.txt",
+      "sha256": "3708fecaf0913f6c1ec0177a51a30b01ebdf7cc5d012e7e21115a3117555ad03"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-crash.txt",
+      "sha256": "25d944b9a78f145bdc7b36b2527b7443d6e6ae56c9760192f77fb4f403519862"
+    },
+    {
+      "path": ".nckh-native-r37-cursor-posttool-controls-52/public/posttool-unsupported-codec.txt",
+      "sha256": "1d408851e5167c45b4064b6c620b5febaf4d0e541fdd3d15733adbb85243c6d7"
+    }
+  ],
+  "injected_sleep_seconds": 8,
+  "inner_runner_timeout_seconds": 5,
+  "observer": {
+    "path": "plans/runs/nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52/cursor-file-observer.py",
+    "sha256": "6f2639ed485d69f456896f42007f48a3c08f8773fb901d5670ba267ddc432277"
+  },
+  "postToolUse_timeout_seconds": 5,
+  "selected_matcher": "^Write$",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb"
+}

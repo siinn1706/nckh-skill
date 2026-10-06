@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "contract": "pass",
+  "predictions": 6,
+  "checks": [
+    {
+      "baseline": "naive",
+      "sample_id": "VNM:2023",
+      "exact_prediction": "99680655",
+      "exact_absolute_error": "671537",
+      "absolute_tolerance": 1e-06
+    },
+    {
+      "baseline": "drift",
+      "sample_id": "VNM:2023",
+      "exact_prediction": "1107750527/11",
+      "exact_absolute_error": "3876415/11",
+      "absolute_tolerance": 1e-06
+    },
+    {
+      "baseline": "naive",
+      "sample_id": "VNM:2024",
+      "exact_prediction": "100352192",
+      "exact_absolute_error": "635494",
+      "absolute_tolerance": 1e-06
+    },
+    {
+      "baseline": "drift",
+      "sample_id": "VNM:2024",
+      "exact_prediction": "2331298597/23",
+      "exact_absolute_error": "8581819/23",
+      "absolute_tolerance": 1e-06
+    },
+    {
+      "baseline": "naive",
+      "sample_id": "VNM:2025",
+      "exact_prediction": "100987686",
+      "exact_absolute_error": "610841",
+      "absolute_tolerance": 1e-06
+    },
+    {
+      "baseline": "drift",
+      "sample_id": "VNM:2025",
+      "exact_prediction": "2447538139/24",
+      "exact_absolute_error": "9173491/24",
+      "absolute_tolerance": 1e-06
+    }
+  ],
+  "exact_mean_difference": "-4919044265/18216",
+  "oracle_code_sha256": "58da4e99b151fb11f887340566c21f0c290157699b380fb225f2741a5bd4894b",
+  "inputs": [
+    {
+      "path": "pilot-data/normalized.json",
+      "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+    },
+    {
+      "path": "pilot-output/predictions.json",
+      "sha256": "337ff2c2a109ac9fd63b0132a6af05bd188c13c378acb46dc4e17e6112a8b008"
+    },
+    {
+      "path": "pilot-output/metrics.json",
+      "sha256": "fbc7f64e92967866ad3b5001a7d3ebb6e51bca5e65cdfdbefcb272d1ece473ac"
+    },
+    {
+      "path": "pilot-output/statistics.json",
+      "sha256": "ae936940d5ccc7c28473ca19c6bb1e058ed51242de220a64ce62671d0322774a"
+    }
+  ],
+  "scope": "Independent numerical reconciliation; no inferential/scientific efficacy acceptance"
+}

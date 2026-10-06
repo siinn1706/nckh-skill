@@ -1,0 +1,41 @@
+{
+  "root_pid": 46992,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T12:12:52.7177589Z",
+  "identity_checks": [
+    {
+      "pid": 46992,
+      "expected": "2026-10-05T12:02:26.500726Z",
+      "current": "2026-10-05T12:02:26.5007260Z"
+    },
+    {
+      "pid": 39348,
+      "expected": "2026-10-05T12:03:53.244838Z",
+      "current": "2026-10-05T12:03:53.2448380Z"
+    },
+    {
+      "pid": 51592,
+      "expected": "2026-10-05T12:03:53.390732Z",
+      "current": "2026-10-05T12:03:53.3907320Z"
+    },
+    {
+      "pid": 27796,
+      "expected": "2026-10-05T12:03:55.645321Z",
+      "current": "2026-10-05T12:03:55.6453210Z"
+    },
+    {
+      "pid": 54364,
+      "expected": "2026-10-05T12:03:55.679854Z",
+      "current": "2026-10-05T12:03:55.6798540Z"
+    }
+  ],
+  "method": "force-owned-tree-after-graceful-refusal",
+  "exit_code": 0,
+  "output": [
+    "SUCCESS: The process with PID 54364 (child process of PID 27796) has been terminated.",
+    "SUCCESS: The process with PID 27796 (child process of PID 51592) has been terminated.",
+    "SUCCESS: The process with PID 51592 (child process of PID 39348) has been terminated.",
+    "SUCCESS: The process with PID 39348 (child process of PID 46992) has been terminated.",
+    "SUCCESS: The process with PID 46992 (child process of PID 53404) has been terminated."
+  ]
+}

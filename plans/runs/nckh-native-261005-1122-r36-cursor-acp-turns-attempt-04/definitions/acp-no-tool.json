@@ -1,0 +1,57 @@
+{
+  "attempt": "acp-no-tool",
+  "changes_from_preview": [
+    "selected controller context",
+    "owned receipt namespace"
+  ],
+  "config": {
+    "hooks": {
+      "beforeSubmitPrompt": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event beforeSubmitPrompt --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-acp-04/context-allow.json --receipt-dir .nckh-native-r36-cursor-acp-04/policy-receipts/acp-no-tool",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "postToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event postToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-acp-04/context-allow.json --receipt-dir .nckh-native-r36-cursor-acp-04/policy-receipts/acp-no-tool",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "preToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-acp-04/context-allow.json --receipt-dir .nckh-native-r36-cursor-acp-04/policy-receipts/acp-no-tool",
+          "failClosed": true,
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "sessionStart": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event sessionStart --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-acp-04/context-allow.json --receipt-dir .nckh-native-r36-cursor-acp-04/policy-receipts/acp-no-tool",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "stop": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event stop --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-acp-04/context-allow.json --receipt-dir .nckh-native-r36-cursor-acp-04/policy-receipts/acp-no-tool",
+          "loop_limit": 1,
+          "timeout": 5,
+          "type": "command"
+        }
+      ]
+    },
+    "version": 1
+  },
+  "config_sha256": "79837ebdf70cc9a6e14e245faeb153931ef56cb386e6e99e06dd371025b7e1d1",
+  "context_reference": ".nckh-native-r36-cursor-acp-04/context-allow.json",
+  "definition_kind": "direct-packaged-runner",
+  "extra_configs": [],
+  "mode": "allow",
+  "receipt_namespace": ".nckh-native-r36-cursor-acp-04/policy-receipts/acp-no-tool",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "timeout_seconds": 5
+}

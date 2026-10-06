@@ -1,0 +1,50 @@
+{
+  "attempt": "posttooluse-malformed-input-01",
+  "completed_at": "2026-10-04T18:17:10.091167+00:00",
+  "event": "PostToolUse",
+  "fault_origin": "controller-after-genuine-callback",
+  "input_fields": [
+    "cwd",
+    "hook_event_name",
+    "model",
+    "permission_mode",
+    "session_id",
+    "tool_input",
+    "tool_name",
+    "tool_response",
+    "tool_use_id",
+    "transcript_path",
+    "turn_id"
+  ],
+  "input_sha256": "5e3acc9b67d4a4f0ba28932be9dc9f6a82e3c1204748842555b3eb2973ff2519",
+  "input_size": 685,
+  "mode": "malformed-input",
+  "native_command_sha256": "d364d70f0733b53d1b859400900cb8080a8a2d5165027035f3b73738945c872f",
+  "native_model": "gpt-5.6-luna",
+  "native_permission_mode": "bypassPermissions",
+  "native_session_hash": "7a34fcaa3bd946a011f6672dd3203b7b5b9fa79ed0f60362083bdeb9d0151426",
+  "native_tool_name": "Bash",
+  "native_tool_use_id": "exec-f24e19f8-c0af-4236-af0a-edf3837048ee",
+  "native_turn_id": "01a10822-297e-7591-a7c0-db301a4c7052",
+  "observer_pid": 59228,
+  "parent_pid": 51948,
+  "reported_event": "PostToolUse",
+  "runner_exit_code": 0,
+  "runner_exited": true,
+  "runner_output": {
+    "hookSpecificOutput": {
+      "additionalContext": "hook-input-or-context-invalid",
+      "hookEventName": "PostToolUse"
+    }
+  },
+  "runner_pid": 55600,
+  "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+  "selected": true,
+  "started_at": "2026-10-04T18:17:09.714624+00:00",
+  "status": "completed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "98a2e9db13c223397906fb4fd91e9070d354360e256068a8a809394dce836a87",
+  "tool_input_fields": [
+    "command"
+  ]
+}

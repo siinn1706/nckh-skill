@@ -1,0 +1,120 @@
+{
+  "accepted_task_count": 0,
+  "agent_cases_not_run": 148,
+  "agent_command_adapter": "implemented; deterministic lifecycle/read fault repairs verified",
+  "artifacts": [
+    {
+      "agents": 6,
+      "closure_hash": "b806125ee44d64c0ad7a51fbc949d135a6698aa29907097a683496d81212069a",
+      "files": 639,
+      "host": "claude",
+      "manifest": "dist-runner-cleanup/claude/manifest.json",
+      "manifest_sha256": "769a70385b7e61066c587c39e54fdf360bbb79d196010de9bde26bd000271fc6",
+      "native_qualification": "unverified",
+      "skills": 37
+    },
+    {
+      "agents": 6,
+      "closure_hash": "287e97ab7cfbf607a14b40c027fcc7e062ac45540f781813fdd9c1c958097a01",
+      "files": 633,
+      "host": "codex",
+      "manifest": "dist-runner-cleanup/codex/manifest.json",
+      "manifest_sha256": "c53d4f5d4a6a475940c42d484a6255845f852031f60c9cc748f9249c09a33b28",
+      "native_qualification": "unverified",
+      "skills": 37
+    },
+    {
+      "agents": 6,
+      "closure_hash": "b864f06b436085b98e95471c84a79e2ae28ffb7aa8cd7991fb2d804d98b7d950",
+      "files": 639,
+      "host": "cursor",
+      "manifest": "dist-runner-cleanup/cursor/manifest.json",
+      "manifest_sha256": "93db1fcde28fec8fb86a92fdb7b2cbf09cd31e6e1dae19ae38f8249bf449131a",
+      "native_qualification": "unverified",
+      "skills": 37
+    },
+    {
+      "agents": 6,
+      "closure_hash": "755837bfc634a8e1f853d3bc3711d4831cfe7a854e2aa1f9c81d44b383140ceb",
+      "files": 639,
+      "host": "agy",
+      "manifest": "dist-runner-cleanup/agy/manifest.json",
+      "manifest_sha256": "506a920bbe373be137fb1102f761818d205dcf6b09849c9c7b7bf650baa14b84",
+      "native_qualification": "unverified",
+      "skills": 37
+    }
+  ],
+  "checksum_manifest": "dist-runner-cleanup/checksums.sha256",
+  "checksum_manifest_sha256": "b09cf71aa9714b0fac9f774a0d1f0648ffcc3b93d7fc37be1b69be1138fcf5c4",
+  "checksummed_files": 2554,
+  "cost": "unknown",
+  "cost_per_accepted_task": "undefined",
+  "deterministic_tests": 81,
+  "human_rubric_approval": "pending",
+  "installed_candidate": {
+    "install_id": "d5811d724fe29cb5016c7c3a",
+    "owned_items": 43,
+    "ownership_bytes_unchanged": true,
+    "policy_unchanged": true,
+    "result": "read-only comparison; no installation update",
+    "source_lock_hash": "2c98d9edad4db63b1b3b8db620d947e6e9e5182ddbfa24ede5a90d27ea6fde03",
+    "unchanged": 43
+  },
+  "installer_acceptance_cases_not_run": 10,
+  "native_cells_not_run": 224,
+  "open_gates": [
+    "Native discovery/invocation/effective model and cleanup on all eight surfaces",
+    "OS, POSIX and symlink acceptance",
+    "Frozen agent cases and matched baselines",
+    "VI/EN corpus rights, human/domain reviewers, approved thresholds and protected holdout",
+    "Actual native scientific visual review",
+    "Measured cost and approved provider budget",
+    "Trusted origin/redistribution review and explicit publication authority"
+  ],
+  "package_version": "0.1.0-experimental",
+  "prior_candidates": {
+    "candidate-runner.json": {
+      "artifact_checksums_verified": 2554,
+      "receipt_hashes_verified": {
+        "checksum_manifest": true,
+        "runner-build.json": true,
+        "runner-local-checks.json": true,
+        "runner-reproducibility.json": true
+      },
+      "sha256": "02d9a1a6963192bf323181e5b29a0b0034c8dfd5304ddfdc3f22942e475abff9",
+      "source_lock_hash": "35689ebdccd2ef84713a452819f06d7104fa769241a8cee0ab9c19db79f30394"
+    },
+    "candidate.json": {
+      "artifact_checksums_verified": 2554,
+      "receipt_hashes_verified": {
+        "build.json": true,
+        "checksum_manifest": true,
+        "local-checks.json": true,
+        "reproducibility.json": true
+      },
+      "sha256": "676c641ea1d37cb9f349dc3769af8402178f24aafbcaf9706b31efdeef5feaa9",
+      "source_lock_hash": "2c98d9edad4db63b1b3b8db620d947e6e9e5182ddbfa24ede5a90d27ea6fde03"
+    }
+  },
+  "provider_calls": "not-run",
+  "public_rights": "pending",
+  "qualification": "pending",
+  "receipt_files": {
+    "runner-cleanup-build.json": "dfeb6bd378033f4349c567235ff105cbfa0bac72f4c18dd19242be31c69b6503",
+    "runner-cleanup-local-checks.json": "fc7383180e048e72fb88c11a888586f7150d63766563c01521cefdcbc84a5820",
+    "runner-cleanup-reproducibility.json": "e7fc3a805c76da549713eb8f3686d9bf614165c863ac6f060ff557509d9f916e"
+  },
+  "recorded_at": "2026-10-01T13:36:00.062392+00:00",
+  "release_decision": "NO-GO for stable qualification or public distribution",
+  "schema_version": 1,
+  "skills_by_kit": {
+    "core": 10,
+    "engineer": 13,
+    "marketing": 13,
+    "tooling": 1
+  },
+  "source_files_pinned": 184,
+  "source_lock_hash": "f52a03676b29fbd5434673a0f831dcae397fe879131beec00f35d3ca9b4d472d",
+  "source_lock_revision": "18",
+  "state": "experimental-local-candidate"
+}

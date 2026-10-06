@@ -1,0 +1,296 @@
+{
+  "agy_shell": {
+    "attempts": [
+      {
+        "attempt": "shell-public",
+        "command": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/commands/agy-tools-shell-public.json",
+          "sha256": "8f7c4cd6df9b2b9457ca928dd8fc297c3698a6db211c6c34e51e8363ae0d4a53"
+        },
+        "command_target": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/command-targets/shell-public.json",
+          "sha256": "f764ce426ac1c834f71ca91c67ee0103dca5a44d8ecc7fa63ed278a1d4413053"
+        },
+        "control_outcome": "native-shell-error-with-pending-target-guard-and-marker-absent",
+        "definition": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/definitions/shell-public.json",
+          "sha256": "2ee1ac5798c4da700dd5a783fb414107308d2cdd2da710ab113e9e0f284fed08"
+        },
+        "direct": false,
+        "expected_reason": "shell-targets-unverifiable",
+        "marker_created": false,
+        "outcome": "native-denial-before-synthetic-file-creation",
+        "policy_receipts": [
+          {
+            "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r36-agy-shell-01/policy-receipts/shell-public/PreToolUse/5b03d565a0e30f2efa12fabfe4b374d2cf53178964653a4f74805feccfdaf90c.json",
+            "receipt": {
+              "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "context_hash": "1bfefef26285f875bb62be8553f0ed0f40d7bfcecc1fc53444543f58045b5c35",
+              "decision": "pending",
+              "event_hash": "3f639c5f50bb15a33fc2d7ce6b4ac3a0952e46b6f8bd596d7d511be16c2c2c5e",
+              "evidence_class": "deterministic",
+              "host": "agy",
+              "native_enforcement": "unverified",
+              "native_host_response": "unobserved",
+              "phase": "preflight",
+              "reason_codes": [
+                "shell-targets-unverifiable"
+              ],
+              "schema_version": 1,
+              "semantic_fidelity": "unverified",
+              "session_key": "c7a3ab17a1cb37302d306de8f18098780ce0eb34d90fa67d8c381e5f169b9660",
+              "side_effects": "none",
+              "status": "checked-unreviewed",
+              "task_key": "1611b253eadf13a37fb3e64bb1ab5039e9aee2b2f64767d2b145944edecbac21"
+            },
+            "sha256": "750e4cd1cd2cef236a341457620742da6fd46d0e90bb9e2d8a5abda72ffb1213"
+          }
+        ],
+        "receipt": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/attempts/shell-public.json",
+          "sha256": "3c58080e388a0e5dc7f3b48df8d3514b7abc07667f976c37dc878432a062ab24"
+        },
+        "stderr": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/commands/agy-tools-shell-public.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/commands/agy-tools-shell-public.stdout.txt",
+          "sha256": "f75b77813967f58c285264d6e05fd181fad13bde5e7d56d0bdb9d6c526413496"
+        }
+      },
+      {
+        "attempt": "shell-private-direct",
+        "command": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/commands/agy-tools-shell-private-direct.json",
+          "sha256": "82fb3f0fde643cf1c7b75970a79862be6f85b11a9e2965963c4d939bf09864cb"
+        },
+        "command_target": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/command-targets/shell-private-direct.json",
+          "sha256": "9df9b1bdb1b0e4646205d8f105764a5aae49624521568a70c4d3617f0457041a"
+        },
+        "control_outcome": "native-shell-error-with-pending-target-guard-and-marker-absent",
+        "definition": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/definitions/shell-private-direct.json",
+          "sha256": "9c8b20da04c6a837167aff73763e5c3e7b2a77c7f88f415c8d33a857c63a23b9"
+        },
+        "direct": true,
+        "expected_reason": "shell-targets-unverifiable",
+        "marker_created": false,
+        "outcome": "native-denial-before-synthetic-file-creation",
+        "policy_receipts": [
+          {
+            "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r36-agy-shell-01/direct-policy-receipts/shell-private-direct/2034de100148bfd77ff7bbaf03d132fec890e23b652be0446def213688be5ea3.json",
+            "receipt": {
+              "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "context_hash": "1bfefef26285f875bb62be8553f0ed0f40d7bfcecc1fc53444543f58045b5c35",
+              "decision": "pending",
+              "event_hash": "d25c3d6b686bb66da93a7bf801666131d45087243f441cda84f3e7f9a2a4e573",
+              "evidence_class": "deterministic",
+              "host": "agy",
+              "native_enforcement": "unverified",
+              "native_host_response": "unobserved",
+              "phase": "preflight",
+              "reason_codes": [
+                "shell-targets-unverifiable"
+              ],
+              "schema_version": 1,
+              "semantic_fidelity": "unverified",
+              "session_key": "c38ecd45acc470af1feb32f2ff86205b7f8e835c2f04c73de653bf159adf4408",
+              "side_effects": "none",
+              "status": "checked-unreviewed",
+              "task_key": "1611b253eadf13a37fb3e64bb1ab5039e9aee2b2f64767d2b145944edecbac21"
+            },
+            "sha256": "4b2265d5aea17acf9f6f5f9f41d9e20e44de3ceff77b8c0f3b65b8825573c19e"
+          },
+          {
+            "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r36-agy-shell-01/direct-policy-receipts/shell-private-direct/2683662282b27af68d342a5908084afcc98c4e6266c36d6947c4e6bdeb48a0de.json",
+            "receipt": {
+              "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "context_hash": "1bfefef26285f875bb62be8553f0ed0f40d7bfcecc1fc53444543f58045b5c35",
+              "decision": "advisory",
+              "event_hash": "396039d993a621f044ef21547847e70e760f9db9359a5ab3965883aa347542bf",
+              "evidence_class": "deterministic",
+              "host": "agy",
+              "native_enforcement": "unverified",
+              "native_host_response": "unobserved",
+              "phase": "stop",
+              "reason_codes": [
+                "writing-resource-advice-only"
+              ],
+              "schema_version": 1,
+              "semantic_fidelity": "unverified",
+              "session_key": "c38ecd45acc470af1feb32f2ff86205b7f8e835c2f04c73de653bf159adf4408",
+              "side_effects": "none",
+              "status": "checked-unreviewed",
+              "task_key": "1611b253eadf13a37fb3e64bb1ab5039e9aee2b2f64767d2b145944edecbac21"
+            },
+            "sha256": "2767cda9393e826798f9585162953609d92fc0af543f9ca560212743325f9ad0"
+          },
+          {
+            "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r36-agy-shell-01/direct-policy-receipts/shell-private-direct/890a1dc2bfeb782190a0d1c4af04a7927c8233defd15480607cef754cb379254.json",
+            "receipt": {
+              "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+              "context_hash": "1bfefef26285f875bb62be8553f0ed0f40d7bfcecc1fc53444543f58045b5c35",
+              "decision": "advisory",
+              "event_hash": "bf340d4c455268865dffa3a9adbe3baa00b48e7a9224c85e583169a9190e9e09",
+              "evidence_class": "deterministic",
+              "host": "agy",
+              "native_enforcement": "unverified",
+              "native_host_response": "unobserved",
+              "phase": "advisory",
+              "reason_codes": [
+                "writing-resource-advice-only"
+              ],
+              "schema_version": 1,
+              "semantic_fidelity": "unverified",
+              "session_key": "c38ecd45acc470af1feb32f2ff86205b7f8e835c2f04c73de653bf159adf4408",
+              "side_effects": "none",
+              "status": "checked-unreviewed",
+              "task_key": "1611b253eadf13a37fb3e64bb1ab5039e9aee2b2f64767d2b145944edecbac21"
+            },
+            "sha256": "163d555687b4f0a8d1eef61d55c853f702cc87a9bbf8917f05e7ad1f7b3484fc"
+          }
+        ],
+        "receipt": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/attempts/shell-private-direct.json",
+          "sha256": "b9d51782a33762c77a40ff74c106a5b0a411c15cadc233bcd810ffb261e8f4a7"
+        },
+        "stderr": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/commands/agy-tools-shell-private-direct.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/commands/agy-tools-shell-private-direct.stdout.txt",
+          "sha256": "d94281ee98615937670a31c459bfbcfa74278ff756605f2b0a4184f7ad332cce"
+        }
+      }
+    ],
+    "cleanup": {
+      "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/cleanup.json",
+      "sha256": "397a9d607fcd4b70b087e55c5caeed4d014e98f1298e155f91ca3e9fd8a65398"
+    },
+    "historical_members_preserved": 208,
+    "native_turns": 2,
+    "process_audit": {
+      "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/final-process-audit.json",
+      "sha256": "d74b5fb034e0bffd579719c452ba412f35262ced3b9a2ab37f9d17bf2bb14a2b"
+    },
+    "summary": {
+      "path": "plans/runs/nckh-native-261005-1134-r36-agy-shell-attempt-01/native-shell-summary.json",
+      "sha256": "8d3d9a42fa04280f145c87cccf03504a1a7c74568ece7b289b91f754a1ad984f"
+    },
+    "surface": "agy-cli-print",
+    "version": "1.2.16"
+  },
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "codex_delivery": {
+    "path": "plans/reports/delivery-261005-1103-r36-shell-retest.json",
+    "sha256": "2d232d053c2c5b624c6e5f9457123091526780ed2efddd518ef37c43c1d49a72"
+  },
+  "cursor_acp": {
+    "attempts": [
+      {
+        "attempt": "acp-no-tool",
+        "definition": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/definitions/acp-no-tool.json",
+          "sha256": "367ba5ceacd9290c2f017ddd580fb53c73fc583c5efbb17043390d8149f25668"
+        },
+        "native_exit_code": 3221225786,
+        "parameter_selector": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/attempts/acp-no-tool/parameter-selector-result.json",
+          "sha256": "cbdbd3076c6a63b1a9bb5d54b651cbb8b41cf7f980f8809e2de968c0c9ee2638"
+        },
+        "policy_receipt_count": 0,
+        "receipt": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/attempts/acp-no-tool/native-turn.json",
+          "sha256": "b18c21a7404cac90bdeb165e0b2341d2e946f6535f4bb4a3795caacc2cd44757"
+        },
+        "transcript": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/attempts/acp-no-tool/native-transcript.jsonl",
+          "sha256": "536c0854bccaff2966c99dd3bcbeb63a63ca4e299a29b34fe0c1071c6f9d969b"
+        }
+      },
+      {
+        "attempt": "acp-public-read",
+        "definition": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/definitions/acp-public-read.json",
+          "sha256": "d54dc36d543653b399e747accd835c277e6ba59c75c4b7346adeaf739e872030"
+        },
+        "native_exit_code": 3221225786,
+        "parameter_selector": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/attempts/acp-public-read/parameter-selector-result.json",
+          "sha256": "9dcb57b29ed8db1f0fce3978db6bb295d7e4c7a7feb24e7a82047af1be1ffef1"
+        },
+        "policy_receipt_count": 0,
+        "receipt": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/attempts/acp-public-read/native-turn.json",
+          "sha256": "5d8fa2eb4bb96407eb822adf91224446aa86501870c9f4c75f8f299a74c01285"
+        },
+        "transcript": {
+          "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/attempts/acp-public-read/native-transcript.jsonl",
+          "sha256": "de0fe5268cd968bdf933de92407aa620207f4bea05750375478e4b9d8d92a66b"
+        }
+      }
+    ],
+    "cleanup": {
+      "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/cleanup.json",
+      "sha256": "56889f969cb8d69fe56b8683b7fb6ab154434a4f5855eac30b4c558cd9c2d422"
+    },
+    "enforcement": "unqualified-no-policy-receipts-in-observed-sessions",
+    "historical_members_preserved": 374,
+    "native_turns": 2,
+    "process_audit": {
+      "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/final-process-audit.json",
+      "sha256": "dbbb7f9d50b96e0ab2492951cd378762839fd247993289508a42b7c9c8eea483"
+    },
+    "summary": {
+      "path": "plans/runs/nckh-native-261005-1122-r36-cursor-acp-turns-attempt-04/native-acp-summary.json",
+      "sha256": "c136384375db94f3c850172dd9bff58d87836af44c4579bd4ad2b1d03a9a80af"
+    },
+    "surface": "cursor-cli-acp"
+  },
+  "cursor_interactive": {
+    "cleanup": {
+      "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/cleanup.json",
+      "sha256": "82f598b5566446180a788630f76e885769ef3778f37e8f1dedb23f93163ee6e6"
+    },
+    "historical_members_preserved": 378,
+    "model_turns_verified": 0,
+    "process_audit": {
+      "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/final-process-audit.json",
+      "sha256": "1678411870b9b96e09edba5ef17821d0d990873dc2973e6411ed527480db488d"
+    },
+    "prompt_tool_stop_evidence": "unverified",
+    "summary": {
+      "path": "plans/runs/nckh-native-261005-1141-r36-cursor-interactive-attempt-05/native-interactive-summary.json",
+      "sha256": "fb9605a117f068b63d92ab859b768c5fc9e4da8d83659f88a79d28e274bd0408"
+    }
+  },
+  "full_native_gate": "unchecked",
+  "independent_review": "not-run; inline review",
+  "installed_revision": 25,
+  "installed_update": "not-performed",
+  "local_counts": {
+    "archives_extractions": 16,
+    "hook_projections": 24,
+    "installer_previews": 8,
+    "protected_hashes": 509,
+    "resource_reads": 216,
+    "skipped": 1,
+    "tests": 192,
+    "writer_disabled_no_read": 48
+  },
+  "owner_samples": "accepted-exact-r29-VI-EN",
+  "plan_state": "in-progress-44-of-45",
+  "scientific_stable_release": "pending-separate-gates",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "verified-r36-local-delivery-scoped-native-outcomes-and-retained-gaps",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1218-r36-evidence-reconciliation-attempt-01/verify-native-evidence.py",
+    "sha256": "be31a01f983ece56231acaee8b885c81e1c2c55871ba5ac539a9a78be126e449"
+  }
+}

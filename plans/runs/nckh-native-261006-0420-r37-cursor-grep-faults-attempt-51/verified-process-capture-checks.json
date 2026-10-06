@@ -1,0 +1,42 @@
+{
+  "status": "verified-focused-controller-process-capture-checks",
+  "timestamp_utc": "2026-10-05T21:14:52.511101+00:00",
+  "checks": [
+    "reject preexisting child and its subtree",
+    "retain actual temporal child chain",
+    "reject mismatched root generation",
+    "reject ambiguous PID generations",
+    "observe current checker root identity",
+    "atomic same-directory write roundtrip"
+  ],
+  "synthetic_scope": "declared lineage regression fixtures only",
+  "real_process_scope": "current checker process; no native host or model",
+  "maximum_atomic_commit_attempts": 6,
+  "maximum_retry_delay_seconds": 0.775,
+  "WinError5_cause_or_reproduction": "not-established",
+  "native_oracle_regraded": false,
+  "model_prompts": 0,
+  "source_kit_modified": false,
+  "process_stop_performed": false,
+  "current_process_pid": 57004,
+  "current_process_ticks": 134357084923773341,
+  "bindings": [
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/native-process-capture.py",
+      "sha256": "bec33357312be4d13447531e26aace3a91982b3b50e75590cf4f933efe9ccdfb"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/owned-cli-command.py",
+      "sha256": "60f7a8fa553bef01927ee850bdf2ef1565b69b57b9a628b7f4696b471f53bdef"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/controller-atomic-write-control.json",
+      "sha256": "a820589122268b968804aff45cca5be95e6bacaf1719e358b3a4b7e26cfc30a3"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/verify-process-capture.py",
+      "sha256": "f7dca7ed7325a5b30b818e3e4660b4fbd9fce6e8ea30d2116aa406b85d47c913"
+    }
+  ],
+  "future_wiring": "explicit expected root creation ticks required; retain terminal errors and independent precision/ownership audit"
+}

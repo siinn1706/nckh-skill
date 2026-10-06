@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "status": "passed-for-document-structure-and-links",
+  "recorded_at": "2026-10-03T11:33:31.010723+00:00",
+  "commands": [
+    {
+      "command": [
+        "ak",
+        "plan",
+        "validate",
+        "C:/Users/USER\\Downloads\\test-skill\\plans\\261003-0101-nckh-personal-use-sources-and-standards",
+        "--json"
+      ],
+      "exit_status": 0,
+      "stdout": "[removed: raw runtime content]",
+      "stderr": "[removed: raw runtime content]"
+    },
+    {
+      "command": [
+        "ak",
+        "plan",
+        "reindex",
+        "--path",
+        "C:/Users/USER\\Downloads\\test-skill",
+        "--apply",
+        "--json"
+      ],
+      "exit_status": 0,
+      "stdout": "[removed: raw runtime content]",
+      "stderr": "[removed: raw runtime content]"
+    }
+  ],
+  "local_link_count": 113,
+  "broken_links": [],
+  "phase_checkbox_counts": [
+    {
+      "file": "phase-01-start.md",
+      "checked": 5,
+      "pending": 0
+    },
+    {
+      "file": "phase-02-sources.md",
+      "checked": 6,
+      "pending": 0
+    },
+    {
+      "file": "phase-03-acceptance.md",
+      "checked": 6,
+      "pending": 0
+    },
+    {
+      "file": "phase-04-runtime.md",
+      "checked": 8,
+      "pending": 1
+    }
+  ],
+  "files_sha256": {
+    "plans/261003-0101-nckh-personal-use-sources-and-standards/plan.md": "87a3f59e62db4131e07183b1cc79d3a484b75fa6007f7df8ad2b29f4457feba8",
+    "plans/261003-0101-nckh-personal-use-sources-and-standards/phase-04-runtime.md": "db10440b06a31729edaec8295d2614ee95386bf5dac860d4a996072da940bd46",
+    "plans/reports/checklist-261003-hoan-thanh-plans.md": "31b2bd14b0cd9f34d51436ecc61478bb2eec1fb2cba7e9b4122010ce0b4461ff",
+    "plans/reports/runtime-261003-1757-r25-installed-and-visual-followup.md": "c402144155546f3d67889ee47e4d17b346ce4195c558c1493bcd81153e5c143e",
+    "plans/reports/review-261003-gpt-sol-r25-worldbank-source-and-memo.md": "6960f0e47bfe80eaefd617d65530b9a5c4ad0e61aca211e372de8838e20024e4",
+    "plans/reports/review-261003-gpt-sol-r25-worldbank-controller-qa.md": "0634d3732015386649fa41e6a39ce399b46c0e1fad11dce475a3d4ec419418fc",
+    "plans/journals/2026-10-03-nckh-r25-installed-and-gpt-sol-world-bank-controller-qa.md": "551fd7c7c177fa06ecf2e3325a451b2403d4f3a5a52cb327e5ddb70ff2466c02"
+  },
+  "limits": [
+    "Plan validation and indexing confirm document structure only; no artifact or human acceptance inferred."
+  ]
+}

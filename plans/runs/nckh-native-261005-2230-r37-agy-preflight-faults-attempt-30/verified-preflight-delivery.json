@@ -1,0 +1,189 @@
+{
+  "status": "verified-five-native-agy-Write-fault-denials",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "permission_mode_observed": "always-proceed",
+  "model_turns": 5,
+  "prompt_submissions": 5,
+  "model_retries": 0,
+  "fault_origin": "controller-injection-after-genuine-callback",
+  "instrumentation": "test observer, not direct packaged handler",
+  "outer_handler_timeout_seconds": 5,
+  "inner_runner_timeout_seconds": 5,
+  "results": [
+    {
+      "attempt": "fault-malformed-input",
+      "fault": "malformed-input",
+      "conversation_id": "3091525a-c4da-4591-b778-3d472528f782",
+      "native_step_index": 2,
+      "native_error": "tool call denied by pre-tool hook: hook-input-or-context-invalid",
+      "native_tool_duration_seconds": 0.2973915,
+      "observer_duration_seconds": null,
+      "late_policy_not_native_permission": false,
+      "native_state": "ERROR",
+      "fixture_unchanged": true,
+      "event_counts": {
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "PostToolUse": 0,
+        "PostInvocation": 2,
+        "Stop": 1
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-malformed-input.json",
+        "sha256": "ec286e98743c6d92bd1b3bda63817d38a9539a0f35382bae69676979cc106b3d"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/commands/agy-tools-fault-malformed-input.json",
+        "sha256": "f51fbfe3ed875ed654a771288d7dbbd516f5eec2c8b04f1397ebd782e56caef7"
+      }
+    },
+    {
+      "attempt": "fault-malformed-output",
+      "fault": "malformed-output",
+      "conversation_id": "009a6fdb-e366-45a7-860e-c0192e4d35b2",
+      "native_step_index": 2,
+      "native_error": "failed to unmarshal result from hook jsonhook__nckh-native-r37-preflight-faults_PreToolUse_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token [",
+      "native_tool_duration_seconds": 0.1454538,
+      "observer_duration_seconds": null,
+      "late_policy_not_native_permission": false,
+      "native_state": "ERROR",
+      "fixture_unchanged": true,
+      "event_counts": {
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "PostToolUse": 0,
+        "PostInvocation": 2,
+        "Stop": 1
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-malformed-output.json",
+        "sha256": "85b089acd36ad2701c0494a1cd0df3904899feef0fcba3a8afac56c4d80496a7"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/commands/agy-tools-fault-malformed-output.json",
+        "sha256": "6e2fbbf26adcef1e37d3972bf0dbf69bd9a75acebdf29b597e2123bfdbf3e5de"
+      }
+    },
+    {
+      "attempt": "fault-timeout",
+      "fault": "timeout",
+      "conversation_id": "c41dbfbc-8e14-4b7b-b83e-5514853c2095",
+      "native_step_index": 2,
+      "native_error": "JSON hook \"jsonhook__nckh-native-r37-preflight-faults_PreToolUse_0_0\" failed: command failed: exit status 1, stderr:",
+      "native_tool_duration_seconds": 6.0395856,
+      "observer_duration_seconds": 8.140703,
+      "late_policy_not_native_permission": true,
+      "native_state": "ERROR",
+      "fixture_unchanged": true,
+      "event_counts": {
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "PostToolUse": 0,
+        "PostInvocation": 2,
+        "Stop": 1
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-timeout.json",
+        "sha256": "a72efb55cfbc394e4e325215de72f2b2aeb2a471c5d1847b9f4bf81e772471e3"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/commands/agy-tools-fault-timeout.json",
+        "sha256": "7c71002f506fb8958fdeaca8fecc938f2c3f36a0c106c6afc3c465819935ba7f"
+      }
+    },
+    {
+      "attempt": "fault-crash",
+      "fault": "crash",
+      "conversation_id": "341a9fb4-6826-4e67-aad4-952706e1b8fd",
+      "native_step_index": 2,
+      "native_error": "JSON hook \"jsonhook__nckh-native-r37-preflight-faults_PreToolUse_0_0\" failed: command failed: exit status 17, stderr:",
+      "native_tool_duration_seconds": 0.3629812,
+      "observer_duration_seconds": null,
+      "late_policy_not_native_permission": false,
+      "native_state": "ERROR",
+      "fixture_unchanged": true,
+      "event_counts": {
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "PostToolUse": 0,
+        "PostInvocation": 2,
+        "Stop": 1
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-crash.json",
+        "sha256": "c1d3330c775ef728c2ded1cd041003177d5684ba6e54f9620919f7800996e9fe"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/commands/agy-tools-fault-crash.json",
+        "sha256": "0373808ed2e4ddd762f67b67b691146ec2951af2a00fd7b7b77c61ce957d7459"
+      }
+    },
+    {
+      "attempt": "fault-unsupported-codec",
+      "fault": "unsupported-codec",
+      "conversation_id": "464d513b-dd04-4a9e-82ff-5f9135346e76",
+      "native_step_index": 2,
+      "native_error": "JSON hook \"jsonhook__nckh-native-r37-preflight-faults_PreToolUse_0_0\" failed: command failed: exit status 3, stderr:",
+      "native_tool_duration_seconds": 0.2853851,
+      "observer_duration_seconds": null,
+      "late_policy_not_native_permission": false,
+      "native_state": "ERROR",
+      "fixture_unchanged": true,
+      "event_counts": {
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "PostToolUse": 0,
+        "PostInvocation": 2,
+        "Stop": 1
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-unsupported-codec.json",
+        "sha256": "b52514d1283c34e86bfb3cf944f41a08cf9b7b62fb5c693fde1eb7ca3a0ef963"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/commands/agy-tools-fault-unsupported-codec.json",
+        "sha256": "16e2ac0c4768565021152c9211a9128020d83d08f5793162558f0f7b42065896"
+      }
+    }
+  ],
+  "observed_native_callback_counts": {
+    "PreInvocation": 10,
+    "PreToolUse": 5,
+    "PostToolUse": 0,
+    "PostInvocation": 10,
+    "Stop": 5
+  },
+  "shared_tool_use_id": "not reported; match actual conversation hash/step index/TargetFile",
+  "unsupported_event_scope": "injected codec event after supported callback; genuine unsupported native admission unqualified",
+  "full_native_gate": "unchecked",
+  "backend_attestation": "not-observed",
+  "billing_attestation": "not-observed",
+  "source_modified": false,
+  "installed_update": "not-performed",
+  "global_direct_write": false,
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/native-preflight-summary.json",
+    "sha256": "fd9a0e5ceffe81b11d40bced75f5a893d9946e92fa589e5fb7065b0b9e9b7587"
+  },
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/frozen-brief.json",
+    "sha256": "17ade57a958cfd4892aded741961c7966c385c608ef9470cb313dcc402725995"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/cleanup.json",
+    "sha256": "711cff30ebe5c6ef9d80f9cbd88a971e857db765d27f10c8b27d31db05777d58"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/process-final-audit.json",
+    "sha256": "8244a7216fd6ac3dc96c169a4ba66cd85e8b92dbbd6d7c7f17076d8011590bd5"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/verify-preflight-delivery.py",
+    "sha256": "f8cdb5e723d08dde928e5d15627ca581de9d482f069dbf5c880202786565a5df"
+  }
+}

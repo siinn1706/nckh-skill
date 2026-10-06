@@ -1,0 +1,41 @@
+{
+  "root_pid": 19948,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T08:37:35.3411863Z",
+  "identity_checks": [
+    {
+      "pid": 19948,
+      "expected": "2026-10-05T08:30:01.678549Z",
+      "current": "2026-10-05T08:30:01.6785490Z"
+    },
+    {
+      "pid": 35124,
+      "expected": "2026-10-05T08:30:52.322315Z",
+      "current": "2026-10-05T08:30:52.3223150Z"
+    },
+    {
+      "pid": 36104,
+      "expected": "2026-10-05T08:30:52.507776Z",
+      "current": "2026-10-05T08:30:52.5077760Z"
+    },
+    {
+      "pid": 13016,
+      "expected": "2026-10-05T08:30:54.764194Z",
+      "current": "2026-10-05T08:30:54.7641940Z"
+    },
+    {
+      "pid": 51676,
+      "expected": "2026-10-05T08:30:54.805126Z",
+      "current": "2026-10-05T08:30:54.8051260Z"
+    }
+  ],
+  "method": "force-owned-tree-after-graceful-refusal",
+  "exit_code": 0,
+  "output": [
+    "SUCCESS: The process with PID 51676 (child process of PID 13016) has been terminated.",
+    "SUCCESS: The process with PID 13016 (child process of PID 36104) has been terminated.",
+    "SUCCESS: The process with PID 36104 (child process of PID 35124) has been terminated.",
+    "SUCCESS: The process with PID 35124 (child process of PID 19948) has been terminated.",
+    "SUCCESS: The process with PID 19948 (child process of PID 32872) has been terminated."
+  ]
+}

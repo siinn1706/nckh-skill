@@ -1,0 +1,88 @@
+{
+  "UI_model_check_required_before_prompt": true,
+  "before_sha256": "52b2044a5f0eb0efa8a7dfc7e0e86536126eeda543410d24ac86b9b261fcee4c",
+  "cases": [
+    {
+      "attempt": "preToolUse-Write-malformed-input",
+      "event": "preToolUse",
+      "index": 1,
+      "marker": "NCKH_WRITE_FAULT_FINISHED_27_1",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-input",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_WRITE_FAULT_REQUESTED_27_1\n"
+    },
+    {
+      "attempt": "preToolUse-Write-malformed-output",
+      "event": "preToolUse",
+      "index": 2,
+      "marker": "NCKH_WRITE_FAULT_FINISHED_27_2",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-output",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_WRITE_FAULT_REQUESTED_27_2\n"
+    },
+    {
+      "attempt": "preToolUse-Write-timeout",
+      "event": "preToolUse",
+      "index": 3,
+      "marker": "NCKH_WRITE_FAULT_FINISHED_27_3",
+      "maximum_prompt_submissions": 1,
+      "mode": "timeout",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_WRITE_FAULT_REQUESTED_27_3\n"
+    },
+    {
+      "attempt": "preToolUse-Write-crash",
+      "event": "preToolUse",
+      "index": 4,
+      "marker": "NCKH_WRITE_FAULT_FINISHED_27_4",
+      "maximum_prompt_submissions": 1,
+      "mode": "crash",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_WRITE_FAULT_REQUESTED_27_4\n"
+    },
+    {
+      "attempt": "preToolUse-Write-unsupported-codec",
+      "event": "preToolUse",
+      "index": 5,
+      "marker": "NCKH_WRITE_FAULT_FINISHED_27_5",
+      "maximum_prompt_submissions": 1,
+      "mode": "unsupported-codec",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_WRITE_FAULT_REQUESTED_27_5\n"
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-2125-r37-cursor-Write-faults-attempt-27/prepare-write-faults.py",
+    "sha256": "54d2c58a1ba44998cff3ce200b2ef8dc4e4710954df3fc254bb8579471c31dcd"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2125-r37-cursor-Write-faults-attempt-27/definitions/session.json",
+    "sha256": "7145c9731d59e43c31ce7326f673149a49e32f7b9b5568a6257fdac7ce876171"
+  },
+  "effort": "xhigh",
+  "failure_policy": "Stop dependent actions after prerequisite failure; keep selected context until observer terminal; no model resubmission or oracle/source change",
+  "fault_origin": "controller-injection-after-genuine-callback",
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "installed_update": "not-performed",
+  "maximum_model_turns": 5,
+  "maximum_prompt_submissions": 5,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_selection_source": "existing selectedModel; --model omitted",
+  "oracle": "Each case must expose actual native Write callback and matching selected-path native permission_denied/tool-use ID/version; unchanged fixture and zero successful selected Write post receipts. Preserve any unqualified outcome without retry.",
+  "port": null,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "relative": ".nckh-native-r37-cursor-write-faults-27/public/fixture.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-2125-r37-cursor-Write-faults-attempt-27/cursor-write-fault-runtime.py",
+    "sha256": "0a77e79f4dae0805d234dcb485352b09ebc6a67b8fb211d96f696697336ddecb"
+  },
+  "scope_limit": "Read prerequisites intentionally outside selected Write matcher; no default-all-tools enforcement claim",
+  "selected_matcher": "^Write$",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-five-selected-Write-preflight-fault-cases",
+  "unsupported_scope": "Unknown codec-event injection after supported native Write callback; genuine native unsupported event/tool admission remains unqualified"
+}

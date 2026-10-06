@@ -1,0 +1,23 @@
+{
+  "status": "planned-not-executed",
+  "purpose": "Capture native failure information after direct5s controls returned an allow Read receipt but no successful post-tool event/effect.",
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "source_revision": 36,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "maximum_prompt_submissions": 1,
+  "maximum_model_turns": 1,
+  "maximum_requested_native_use_identities": 1,
+  "relative": "oracles/r36-cursor-direct-failure-read-12.txt",
+  "before_text": "NCKH_CURSOR_DIRECT_FAILURE_READ_12\n",
+  "expected": "unchanged fixture; report actual Read success or native failure without inventing cause",
+  "per_case_observation_timeout_seconds": 240,
+  "hook_scope": "five packaged direct5s events retained; one diagnostic postToolUseFailure logger at10s, with no policy invocation",
+  "failure_event_compatibility": "current docs describe event; installed CLI capability remains subject to actual observation",
+  "constraints": [
+    "One native Read of the selected synthetic fixture; no edits, shell, other files, agents, retries or denial workaround.",
+    "Failure logger keeps bounded field names, tool identity and scrubbed selected-Read error; no raw transcript or draft.",
+    "No source/global direct config/trust-key/installed/release changes.",
+    "Preserve prior evidence and perform exact-process and matching-byte cleanup."
+  ]
+}

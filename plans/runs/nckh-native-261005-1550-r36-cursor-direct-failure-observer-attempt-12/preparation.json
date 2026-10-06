@@ -1,0 +1,44 @@
+{
+  "base_runtime": {
+    "path": "plans/runs/nckh-native-261005-1523-r36-cursor-direct-sequence-attempt-11/cursor-direct-sequence-runtime.py",
+    "sha256": "b3d0f13612c67068869672eb25752feede4bd6b00cd287518a49be36d10717ab"
+  },
+  "before_sha256": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957",
+  "brief": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/frozen-brief.json",
+    "sha256": "af83fc8e13d7bab6f0413311c438488230a497f2ce1f745475b2aa27fd73da5e"
+  },
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/prepare-failure-observation.py",
+    "sha256": "4bc3d1f635b64fcc2df7dfce640bdc4d21444ac6712c28146df510a08fbcae04"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/definitions/session.json",
+    "sha256": "65b5476da29cb7e2d77a410879e66afa3da93de58d6649ee4c68aa056057d81f"
+  },
+  "diagnostic_failure_event_timeout_seconds": 10,
+  "effort_requested": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "fixture_preimage": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/fixture-preimage.txt",
+    "sha256": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957"
+  },
+  "marker": "NCKH_DIRECT_FAILURE_FINISHED_12",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_use_identities": 1,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "prompt": "[removed: raw runtime content]",
+  "relative": "oracles/r36-cursor-direct-failure-read-12.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/cursor-direct-failure-runtime.py",
+    "sha256": "eee9173297b9e632fcb883ea7607a644be3f495173555bbc00e925fe02772fbd"
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-one-direct-read-with-after-failure-observer",
+  "timeout_seconds": 5
+}

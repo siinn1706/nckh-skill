@@ -1,0 +1,38 @@
+{
+  "config": {
+    "hooks": {
+      "UserPromptSubmit": [
+        {
+          "hooks": [
+            {
+              "args": [
+                "-I",
+                "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\prompt-admission-zero-budget\\malformed-context\\.nckh-state\\hooks\\claude\\53b4ec236de6b3906f4f282c34bf2e1e1a5dbe252ed55fe49fb3e2a2a615f018\\hooks\\runner.py",
+                "--host",
+                "claude",
+                "--event",
+                "UserPromptSubmit",
+                "--project",
+                "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-1707-attempt-01\\prompt-admission-zero-budget\\malformed-context",
+                "--context",
+                "context.json",
+                "--receipt-dir",
+                ".nckh-state/hooks/events/claude"
+              ],
+              "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+              "timeout": 5,
+              "type": "command"
+            }
+          ],
+          "matcher": ".*"
+        }
+      ]
+    }
+  },
+  "config_sha256": "23844c303392dac8d3bcc9528d2e3c58d36d380ff648607c4a59bec595dde3ac",
+  "definition_hash": "5dfafdb547c6af52f5d1e3e302ef104d04f8918419ae1dee78daf1e3fa944d31",
+  "payload_closure_hash": "53b4ec236de6b3906f4f282c34bf2e1e1a5dbe252ed55fe49fb3e2a2a615f018",
+  "production_apply": "not-called",
+  "registration_method": "human-granted-disposable-test-bootstrap",
+  "source_lock_hash": "55a4b60779228f3be3ae42d7691a49dec1df1b4e6f26139a32435aa1914562e1"
+}

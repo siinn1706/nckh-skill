@@ -1,0 +1,27 @@
+{
+  "evidence_class": "deterministic-fixture",
+  "finding": "Expected lifecycle/read failures escape the private receipt handler and leave a running journal.",
+  "kind": "runner-incomplete-journal-reproduction",
+  "observations": [
+    {
+      "accepted_task_count": 0,
+      "attempt_statuses": [
+        "starting"
+      ],
+      "driver_execution": "injected fault; no driver dispatched",
+      "escaped_exception": "TimeoutExpired",
+      "fault": "cleanup-wait",
+      "journal_status": "running"
+    },
+    {
+      "accepted_task_count": 0,
+      "attempt_statuses": [],
+      "driver_execution": "injected fault; no driver dispatched",
+      "escaped_exception": "ValueError",
+      "fault": "case-read",
+      "journal_status": "running"
+    }
+  ],
+  "schema_version": 1,
+  "source_lock_hash": "35689ebdccd2ef84713a452819f06d7104fa769241a8cee0ab9c19db79f30394"
+}

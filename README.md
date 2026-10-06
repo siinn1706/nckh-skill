@@ -26,6 +26,10 @@ stable đã được kiểm định đầy đủ. Xem [phạm vi và quyền](do
 
 ## Cấu trúc
 
+[Chỉ mục workspace](docs/README.md) dẫn tới source, resources tham khảo, kế hoạch
+và evidence. Đọc [quy tắc bảo quản repository](docs/repository-maintenance.md)
+trước khi dọn file hoặc xuất bản thêm nội dung.
+
 - `packages/claude/`: package cho Claude Code.
 - `packages/codex/`: package cho Codex CLI, desktop và IDE.
 - `packages/cursor/`: package cho Cursor CLI và IDE.

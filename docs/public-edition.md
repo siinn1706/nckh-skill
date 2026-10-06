@@ -21,9 +21,13 @@ binding giữa tài nguyên và skill sử dụng. Verifier kiểm tra file, has
 phép, reference closure và binding thực tế. Reader mặc định dùng `on` và trả lại
 nguồn/record cụ thể; lỗi đọc hoặc sai hash cần được xử lý tại nguồn lỗi.
 
-Source acquisition thô, bản build thử, cache, dữ liệu cài đặt local, prompt,
-model transcript, kết quả đánh giá và các plan của workspace được giữ ngoài
-repository. Các resource đã đăng ký cùng source, test fixture và protocol/case đánh giá được phân phối; raw trace và kết quả chạy riêng vẫn nằm ngoài repository.
+Chủ sở hữu cho phép bổ sung snapshot tham khảo upstream, kế hoạch, báo cáo và
+evidence chạy đã rà soát vào bản công khai. Snapshot giữ license/notice của nguồn
+tương ứng. Các resource đã đăng ký, source, test fixture và protocol/case đánh
+giá tiếp tục được phân phối. Bản build thử, cache, cấu hình cá nhân, state và
+biên nhận cài đặt trên máy, logs thô, prompt/transcript không được xuất bản.
+Evidence được chia sẻ không tự xác nhận native/scientific/human acceptance.
+Xem [bảo quản repository](repository-maintenance.md).
 
 | Nhóm tài nguyên | Giấy phép/nguồn quyền |
 |---|---|

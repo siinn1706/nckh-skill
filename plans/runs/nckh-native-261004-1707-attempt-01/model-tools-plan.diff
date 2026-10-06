@@ -1,0 +1,72 @@
+--- plan.md before
++++ plan.md after
+@@ -13,7 +13,7 @@
+ 
+ ## Outcome và quyền thực thi
+ 
+-Candidate r30 gồm hai writer theo nhiệm vụ, scientific-purpose visual guard và portable deterministic hooks. Lệnh `/goal ak-cook plan.md --auto` ngày 04/10/2026 cấp quyền implementation, tests/build/extract/local checks và previews. [Xác nhận tiếp theo](../runs/nckh-native-261004-1707-attempt-01/native-grant.json) cấp quyền native registration/trust/cleanup trong project thử riêng; [owner feedback](../runs/nckh-native-261004-1707-attempt-01/owner-feedback.json) chấp nhận đúng hai mẫu VI/EN của r29. Installation đang dùng r25 chưa cập nhật; provider/stable/scientific/release có gate riêng. [Starting baseline](../reports/checks-261004-1037-starting-baseline.json) giữ r26/243 pins và installed r25.
++Candidate r30 gồm hai writer theo nhiệm vụ, scientific-purpose visual guard và portable deterministic hooks. Lệnh `/goal ak-cook plan.md --auto` ngày 04/10/2026 cấp quyền implementation, tests/build/extract/local checks và previews. [Native grant](../runs/nckh-native-261004-1707-attempt-01/native-grant.json) cấp quyền registration/trust/cleanup trong project thử riêng; [owner feedback](../runs/nckh-native-261004-1707-attempt-01/owner-feedback.json) chấp nhận hai mẫu VI/EN của r29. [Model grant mới](../runs/nckh-native-261004-1707-attempt-01/model-medium-grant.json) cho phép `gpt-5.6-luna` hoặc `gpt-6.1-sol`, mức `medium`, để tiếp tục native observations. Installation r25/stable/scientific/release có gate riêng. [Starting baseline](../reports/checks-261004-1037-starting-baseline.json) giữ r26/243 pins và installed r25.
+ 
+ ## Quyết định và contract
+ 
+@@ -27,7 +27,7 @@
+ |---|---|---|
+ | [P1 Writers](./phase-01-start.md) | 13/13 checkboxes; hai writer, locale/preservation/router, exact membership, source consumers và supplemental matrix | Language decision; catalog/writer/profile/eval owners |
+ | [P2 Scientific visuals](./phase-02-scientific-visuals.md) | 9/9 checkboxes; purpose/origin/mark guards, real local calculation và selective QA | P1 contract; guards/visual contracts/cases/instruction owners |
+-| [P3 Portable hooks](./phase-03-portable-hooks.md) | 10/11 checkboxes; Claude SessionStart và Codex UserPromptSubmit block/advisory observed; full preventive event/surface evidence còn mở | P2 + official schema ledger; hook/config/build owners |
++| [P3 Portable hooks](./phase-03-portable-hooks.md) | 10/11 checkboxes; Claude SessionStart, Codex UserPromptSubmit và PreToolUse có native receipts; full event/surface evidence còn mở | P2 + official schema ledger; hook/config/build owners |
+ | [P4 Integration](./phase-04-integration-and-personal-acceptance.md) | 12/12 checkboxes; r30 freeze/deterministic/build/extract/smoke/previews; owner VI/EN accepted | P1–P3; single freeze owner `/root`, preservation và acceptance lanes |
+ 
+ ## Technical checkpoint
+@@ -38,6 +38,8 @@
+ 
+ [Prompt failure addendum](../reports/delivery-261004-1707-r30-prompt-failures.md) / [bindings](../reports/delivery-261004-1707-r30-prompt-failures.json): bảy instrumented Codex UserPromptSubmit callbacks thực. Policy-deny/injected malformed-input chặn prompt; malformed output, timeout, crash và unsupported selected codec ghi failed rồi tiếp tục thử provider. Giữ inactive/manual; duplicate/native-tool/other-event/surface evidence còn mở.
+ 
++[Model/tool addendum](../reports/delivery-261004-1707-r30-model-tools.md) / [bindings](../reports/delivery-261004-1707-r30-model-tools.json): tám completed `gpt-5.6-luna/medium` turns và PreToolUse callbacks thực. Allow tạo oracle; policy deny/injected malformed runner input chặn trước shell. Bốn hook failure cases vẫn tạo tệp; uncovered controller mapping trả manual. Source/tests/build không đổi; full native gate giữ mở.
++
+ | Kiểm tra thực | Kết quả |
+ |---|---|
+ | Static/current source | r30, 281 pins, exact 39/156/19; writer matrix 256 planned native cells + 20 scenarios, unverified |
+@@ -46,13 +48,13 @@
+ | Extracted behavior | 216 resource reads, 48 writer disabled/no-read observations, 24 primary/reference hook projections |
+ | Installer previews | 8 surfaces, mỗi preview 39 skills + 6 agents, disposable projects không đổi bytes |
+ | Preservation | 509 protected hashes không đổi; installed r25 chưa update; 4 legacy schema-v1 bundles verify được |
+-| Owner/native | Hai mẫu VI/EN accepted; Claude SessionStart và Codex UserPromptSubmit có callback thực; full preventive/khác surface chưa qualified |
++| Owner/native | Hai mẫu VI/EN accepted; Claude SessionStart, Codex UserPromptSubmit/PreToolUse có callbacks; PreToolUse deny ngăn oracle, failure cases fail-open; full native chưa qualified |
+ 
+ ## Open gates, risk và rollback
+ 
+-Plan giữ **in-progress, 44/45 checkboxes**. Một task native host/version/surface/event evidence còn unchecked: Claude chưa có PreToolUse prevention oracle; Codex local shell lịch sử không có callback, UserPromptSubmit mới có block/advisory nhưng full failure/tool matrix còn thiếu; Cursor CLI yêu cầu authentication; AGY eligibility chưa qua kết nối thật; Desktop/IDE tracks chưa thử. Native grant và owner feedback đã có, không cần duyệt lại. Update installation, provider, stable/scientific/rights/reviewer/holdout/economics cần scope/evidence riêng. Four-case [writer trial](../reports/reviewer-261004-1037-writer-forward-test.md) vẫn là local agent evidence; human feedback chỉ bind hai mẫu đã duyệt. Resource access ON giữ public contract, OFF chỉ là internal comparison; r30 chưa publish.
++Plan giữ **in-progress, 44/45 checkboxes**. Native task còn unchecked: Claude chưa có PreToolUse oracle; Codex native model shell đã có allow/deny/failure evidence, còn duplicate project/plugin, các events/surfaces khác và protected-path coverage chưa đủ. [Host preflight mới](../runs/nckh-native-261004-1707-attempt-01/host-model-grant-prerequisites.json) xác nhận Cursor CLI chưa đăng nhập; AGY model listing qua kết nối thật thành công nhưng không có hai GPT models được phép, prompt eligibility chưa thử. Desktop/IDE tracks chưa có receipts. Native/model grants và owner feedback đã có, không cần duyệt lại; model khác, installation/stable/scientific/release có gate riêng. Four-case [writer trial](../reports/reviewer-261004-1037-writer-forward-test.md) là local agent evidence; human feedback bind hai mẫu. Resource access ON giữ public contract, OFF chỉ là internal comparison; r30 chưa publish.
+ 
+-Critical risks: source rights/claim inflation; native uncovered/fail-open routes; config/user-byte conflicts. Giữ manual/unverified coverage, no-copy với restricted sources, preimages/postimage hashes và rollback/recover chỉ trên owned matching bytes. [Native cleanup lịch sử](../runs/nckh-native-261004-1707-attempt-01/native-cleanup.json), [direct prompt cleanup](../runs/nckh-native-261004-1707-attempt-01/projects/codex/prompt-admission-cleanup.json) và [fault probe cleanup](../runs/nckh-native-261004-1707-attempt-01/projects/codex/failure-probe-cleanup.json) gỡ matching config/staged payload thử. Native store còn ba project-test keys disabled; UserPromptSubmit trusted_hash mới thay hash direct trước đó qua normal UI. Không còn project config/payload để gọi. Chi tiết ở phase files và [source→reader→artifact→test map](./source-adoption-map.md).
++Critical risks: source rights/claim inflation; native uncovered/fail-open routes; config/user-byte conflicts. Giữ manual/unverified coverage, no-copy với restricted sources, preimages/postimage hashes và rollback/recover chỉ trên owned matching bytes. [Native cleanup lịch sử](../runs/nckh-native-261004-1707-attempt-01/native-cleanup.json), [direct prompt cleanup](../runs/nckh-native-261004-1707-attempt-01/projects/codex/prompt-admission-cleanup.json), [prompt fault cleanup](../runs/nckh-native-261004-1707-attempt-01/projects/codex/failure-probe-cleanup.json) và [model/tool cleanup](../runs/nckh-native-261004-1707-attempt-01/projects/codex-model/tool-probe-cleanup.json) gỡ matching config/payload thử. Native store còn bốn test keys disabled trong hai projects; UserPromptSubmit scalar hash lịch sử đã được thay qua normal UI. Không còn project hook callable; audit mới có 0 matching processes. Chi tiết ở phase files và [source→reader→artifact→test map](./source-adoption-map.md).
+ 
+ ## Review và validation history
+ 
+--- phase-03-portable-hooks.md before
++++ phase-03-portable-hooks.md after
+@@ -114,3 +114,13 @@
+ [Bảy native callbacks](../reports/delivery-261004-1707-r30-prompt-failures.md) / [bindings](../reports/delivery-261004-1707-r30-prompt-failures.json) dùng declared fault injection sau genuine UserPromptSubmit callback trên Codex CLI 0.154.0/r30. Policy deny và injected malformed runner input có native `blocked` và empty-items completed turn. Malformed output, 2-second timeout, intentional observer crash và unsupported selected codec đều native `failed`, rồi host vẫn thử provider refused-loopback. Unsupported codec có deterministic degraded block receipt nhưng không được host enforce; không đổi receipt thành native PASS.
+ 
+ Giữ route inactive/manual; còn duplicate project/plugin, unsupported native tool, PreToolUse prevention và event/surface gates khác. Trust/enable riêng observer qua normal UI, disable rồi gỡ matching config/26 payload members. Native store còn ba project-test keys disabled; hash UserPromptSubmit cũ được thay bằng observer hash, không có bốn current trusted hashes. Unrelated user-state hash không đổi; final audit có 0 matching run processes. Source/tests/build không đổi, checkbox native còn unchecked.
++
++## Continuation — native model/tool turns
++
++[Model grant](../runs/nckh-native-261004-1707-attempt-01/model-medium-grant.json) cho phép `gpt-5.6-luna` hoặc `gpt-6.1-sol`, mức `medium`; cả hai có trong native model/list. [Model/tool checkpoint](../reports/delivery-261004-1707-r30-model-tools.md) / [bindings](../reports/delivery-261004-1707-r30-model-tools.json) ghi tám completed `gpt-5.6-luna/medium` turns, tám genuine PreToolUse callbacks trên Codex CLI 0.154.0 Windows app-server/stdio model unifiedExecStartup. Native matcher/tool là Bash. Trust/enable riêng đúng definition `sha256:f26dcc9290135bcf225d52cdff4a72130753dc33758b46a5ebf2a5b314e71206` qua normal TUI.
++
++Allow thực sự tạo tệp oracle; policy deny `plan-only-mutation` và injected malformed runner input có native blocked, không completed command item và không có tệp. Malformed output, 2-second timeout, observer crash và unsupported selected codec đều native failed rồi shell vẫn exit0/tạo tệp: bốn fail-open cases. Bash thiếu controller mapping trả manual và host tiếp tục. Injections xảy ra sau callback; không gọi chúng là native host phát malformed/unknown event hoặc unsupported tool.
++
++Mỗi lượt effective metadata xác nhận medium, 27 user hooks/ba configured MCP servers/13 plugins disabled theo invocation. Thread không fallback model khác; gateway backend model attestation và provider billing chưa observed. Bash chỉ có tool_input.command, không structured file_path/path; chưa chứng minh protected-path blocking từ thí nghiệm này. Duplicate project/plugin, các event còn lại và direct TUI/Desktop/IDE tracks chưa được qualified; checkbox native vẫn unchecked.
++
++[Cleanup mới](../runs/nckh-native-261004-1707-attempt-01/projects/codex-model/tool-probe-cleanup.json) sau normal UI disable đã gỡ matching config/26 staged members. Native list không còn project hook callable; key mới trusted/disabled cộng ba keys lịch sử là bốn disabled keys trong hai projects. Unrelated state giữ nguyên, [final process audit](../runs/nckh-native-261004-1707-attempt-01/process-audit-model-tools-final.json) không có matching run processes. [Host preflight](../runs/nckh-native-261004-1707-attempt-01/host-model-grant-prerequisites.json) xác nhận Cursor CLI chưa đăng nhập; AGY models qua kết nối thật exit0 nhưng không liệt kê hai GPT models được phép, prompt eligibility/native coverage chưa thử. Source-lock r30, tests, archives và installed r25 giữ nguyên.
+--- phase-04-integration-and-personal-acceptance.md before
++++ phase-04-integration-and-personal-acceptance.md after
+@@ -81,3 +81,7 @@
+ [r30 source checkpoint](../runs/nckh-native-261004-1707-attempt-01/r30-source-checkpoint.json) giữ 281 pins và đúng ba source deltas, writer instructions unchanged. [Complete deterministic run](../runs/nckh-native-261004-1707-attempt-01/deterministic-r30-attempt-02.json) đạt 182 tests, một Windows symlink skip, giữ initial 900-second timeout/error receipt và per-test timeouts; không đổi tests để qua. [Current delivery](../reports/delivery-261004-1707-r30-native-checkpoint.md) có 16 r30 archive/extracted bundles, 216 reads, 48 disabled/no-read observations, 24 hook projections và 8 previews. [Current preservation](../runs/nckh-native-261004-1707-attempt-01/final-preservation.json) giữ 509 protected hashes/installed r25/legacy v1; không publish/install r30.
+ 
+ Native test grant được dùng đúng disposable projects và actual callback observations; configs/staged runtime đã cleanup. Full preventive matrix và bốn app/IDE surfaces chưa đủ evidence, nên task P3 giữ unchecked. Plan tổng 44/45; không gọi technical checks hoặc owner samples là native/scientific qualification.
++
++## Continuation — model permission và native tool evidence
++
++[Quyền model mới](../runs/nckh-native-261004-1707-attempt-01/model-medium-grant.json) cấp hai GPT lựa chọn ở mức medium. [Tám native model/tool turns](../reports/delivery-261004-1707-r30-model-tools.md) đã completed trên Codex CLI 0.154.0: PreToolUse deny chặn oracle, bốn failure cases fail-open, cleanup matching config/payload và process audit đạt. Source-lock r30/281 pins giữ nguyên; full suite/build/extract không chạy lại, hai owner mẫu accepted giữ exact bindings. Native full event/surface task vẫn thuộc P3/unchecked; P4 không được dùng để thay qualification thiếu.

@@ -1,0 +1,9 @@
+{
+  "status": "failed-before-record-writes",
+  "operation": "qualification-run.py bootstrap",
+  "observed_error": "RuntimeError: Candidate source lock changed; inspect before qualification",
+  "cause": "The helper compared the raw file SHA-256 against the package's canonical JSON SHA-256.",
+  "verification": "core/build.py uses digest_record(lock); core/paths.py defines its canonical JSON encoding.",
+  "repair": "Use the same canonical JSON digest and retain the raw file digest separately.",
+  "candidate_source_changed": false
+}

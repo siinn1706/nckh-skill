@@ -1,0 +1,49 @@
+{
+  "base_observation": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/native-failure-summary.json",
+    "sha256": "3f0a395514facc0875c4fb99b02b13961f3d89f0fa532e04b0c8bdfce939139c"
+  },
+  "base_runtime": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/cursor-direct-failure-runtime.py",
+    "sha256": "eee9173297b9e632fcb883ea7607a644be3f495173555bbc00e925fe02772fbd"
+  },
+  "before_sha256": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957",
+  "brief": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/frozen-brief.json",
+    "sha256": "ff9eed8d6d37bfbdd1aa7d29ec7b63585eb86f6bfc8454475ff01f3dcf106b31"
+  },
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/prepare-timeout-control.py",
+    "sha256": "ee36eaebec9baf128bb0924d75be9ed0ff1d07230a49f29ed13158ea28b75968"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/definitions/session.json",
+    "sha256": "8597748c8465b1df90c3050285912eaccfbde5ca89b120eb701aca33278020a2"
+  },
+  "diagnostic_failure_event_timeout_seconds": 10,
+  "effort_requested": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "fixture_preimage": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/fixture-preimage.txt",
+    "sha256": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957"
+  },
+  "marker": "NCKH_DIRECT_TIMEOUT_FINISHED_13",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_use_identities": 1,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "prompt": "[removed: raw runtime content]",
+  "relative": "oracles/r36-cursor-direct-failure-read-12.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/cursor-direct-timeout-runtime.py",
+    "sha256": "807ca73953edf302429c8e064c1bd20dd8953652f37d14a853ace98d669f234c"
+  },
+  "source_default_unchanged": true,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-declared-direct20s-preToolUse-control",
+  "timeout_seconds": 20
+}

@@ -1,0 +1,45 @@
+{
+  "output": [
+    "SUCCESS: The process with PID 40844 (child process of PID 56124) has been terminated.",
+    "SUCCESS: The process with PID 56124 (child process of PID 45092) has been terminated.",
+    "SUCCESS: The process with PID 45092 (child process of PID 35916) has been terminated.",
+    "SUCCESS: The process with PID 35916 (child process of PID 47492) has been terminated.",
+    "SUCCESS: The process with PID 47492 (child process of PID 49076) has been terminated."
+  ],
+  "identity_checks": [
+    {
+      "pid": 47492,
+      "expected": "2026-10-05T04:41:06.3616240Z",
+      "current": "2026-10-05T04:41:06.3616240Z",
+      "expected_type": "DateTime"
+    },
+    {
+      "pid": 35916,
+      "expected": "2026-10-05T04:41:55.2397200Z",
+      "current": "2026-10-05T04:41:55.2397200Z",
+      "expected_type": "DateTime"
+    },
+    {
+      "pid": 45092,
+      "expected": "2026-10-05T04:41:55.3697140Z",
+      "current": "2026-10-05T04:41:55.3697140Z",
+      "expected_type": "DateTime"
+    },
+    {
+      "pid": 56124,
+      "expected": "2026-10-05T04:41:57.5639900Z",
+      "current": "2026-10-05T04:41:57.5639900Z",
+      "expected_type": "DateTime"
+    },
+    {
+      "pid": 40844,
+      "expected": "2026-10-05T04:41:57.5997590Z",
+      "current": "2026-10-05T04:41:57.5997590Z",
+      "expected_type": "DateTime"
+    }
+  ],
+  "exit_code": 0,
+  "method": "taskkill-force-owned-tree-after-graceful-refusal",
+  "timestamp_utc": "2026-10-05T05:15:35.7212845Z",
+  "root_pid": 47492
+}

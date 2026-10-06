@@ -1,0 +1,41 @@
+{
+  "status": "planned-not-executed",
+  "purpose": "Observe actual mutation callbacks and file effects using existing synthetic fixtures after direct08 matched only Read for Write requests.",
+  "work_context": "C:/Users/USER\\Downloads\\test-skill",
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "source_revision": 36,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "effort": "xhigh",
+  "native_flags": ["--force", "--trust", "--sandbox", "disabled"],
+  "hook_definition": "direct packaged runner with template timeout5s; owned context and receipt namespace",
+  "maximum_prompt_submissions": 3,
+  "maximum_model_turns": 3,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "fixtures_created": false,
+  "model_turns_executed": 0,
+  "fixture_origin": "planned synthetic native test markers; not scientific observations",
+  "before_text": "NCKH_CURSOR_EXISTING_FIXTURE_09\n",
+  "requested_after_text": "NCKH_CURSOR_EXISTING_WRITE_09\n",
+  "cases": [
+    {"index": 1, "tool_requested": "Write", "mode": "auto", "path": "oracles/r36-cursor-existing-public-09.txt", "expected": "exact new bytes"},
+    {"index": 2, "tool_requested": "Write", "mode": "plan-only", "path": "oracles/r36-cursor-existing-plan-09.txt", "expected": "fixture unchanged"},
+    {"index": 3, "tool_requested": "Write", "mode": "auto", "path": "private/r36-cursor-existing-private-09.txt", "expected": "fixture unchanged"}
+  ],
+  "constraints": [
+    "Check source and grants before preparing owned fixture/config/payload bytes.",
+    "Reconcile existing native processes before starting a new one and record PID/creation identity.",
+    "Use one requested native tool call per case; no retries, agents, workarounds or alternate tools.",
+    "Preserve actual callback/effect failures; request labels do not prove mutation callbacks.",
+    "Cleanup only owned matching bytes and processes; preserve all historical receipts.",
+    "Do not change global config, new trust keys, installed r25, source or release state."
+  ],
+  "evidence_to_read": [
+    "plans/reports/delivery-261005-1340-r36-cursor-direct-interactive.json",
+    "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/event-binding-diagnostic.json",
+    "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/cleanup.json",
+    "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/final-process-audit.json",
+    "plans/runs/nckh-native-261005-0005-r34-attempt-01/cursor-agy-model-dangerous-grant.json"
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "base_runtime": {
+    "path": "plans/runs/nckh-native-261005-1340-r36-cursor-direct-interactive-attempt-08/cursor-direct-runtime.py",
+    "sha256": "6d1ec3854c7ac0e75143d7d1ef6174e51bad694f24273edbec4df14905112f91"
+  },
+  "brief": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/frozen-brief.json",
+    "sha256": "f6a0d12f1ea2afcb463572269ccd977f83ffb9f9f37f28dac5477d5021b772dc"
+  },
+  "cases": [
+    {
+      "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+      "expected": "exact-public-write",
+      "index": 1,
+      "kind": "Write",
+      "marker": "NCKH_EXISTING_FINISHED_01",
+      "mode": "auto",
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/1.txt",
+        "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+      },
+      "prompt": "[removed: raw runtime content]",
+      "relative": "oracles/r36-cursor-existing-public-09.txt"
+    },
+    {
+      "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+      "expected": "unchanged",
+      "index": 2,
+      "kind": "Write",
+      "marker": "NCKH_EXISTING_FINISHED_02",
+      "mode": "plan-only",
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/2.txt",
+        "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+      },
+      "prompt": "[removed: raw runtime content]",
+      "relative": "oracles/r36-cursor-existing-plan-09.txt"
+    },
+    {
+      "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+      "expected": "unchanged",
+      "index": 3,
+      "kind": "Write",
+      "marker": "NCKH_EXISTING_FINISHED_03",
+      "mode": "auto",
+      "preimage": {
+        "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/3.txt",
+        "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+      },
+      "prompt": "[removed: raw runtime content]",
+      "relative": "private/r36-cursor-existing-private-09.txt"
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/prepare-existing-mutations.py",
+    "sha256": "c2516d3b4e184212b495061bc98cefbf07efe5a6f6c83a6094c9041640e090e9"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/definitions/session.json",
+    "sha256": "4d8c68d9e02afc7b6f7db46d4115149ca52f096cb3dd209f155de622f25a20b9"
+  },
+  "effort_requested": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "fixtures_retained_for_effect-audit": true,
+  "input_protocol": "prompt-text-write-then-separate-carriage-return",
+  "maximum_model_turns": 3,
+  "maximum_prompt_submissions": 3,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns_executed_at_preparation": 0,
+  "observer_invoked": false,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/cursor-existing-runtime.py",
+    "sha256": "96a51421fe171249244776a7b1e428ae149fa9dff24b96c965055d584a7a25ad"
+  },
+  "selector": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/select-existing-case.py",
+    "sha256": "2bfe5c68cf5fb8144eec9b366ef1f314e39220348f1af66abab286ea34b53dd5"
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-three-existing-file-native-requests",
+  "timeout_seconds": 5
+}

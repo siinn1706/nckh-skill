@@ -1,0 +1,41 @@
+{
+  "root_pid": 42004,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T08:22:35.3042831Z",
+  "identity_checks": [
+    {
+      "pid": 42004,
+      "expected": "2026-10-05T08:12:03.863288Z",
+      "current": "2026-10-05T08:12:03.8632880Z"
+    },
+    {
+      "pid": 56484,
+      "expected": "2026-10-05T08:12:55.429576Z",
+      "current": "2026-10-05T08:12:55.4295760Z"
+    },
+    {
+      "pid": 51988,
+      "expected": "2026-10-05T08:12:55.619016Z",
+      "current": "2026-10-05T08:12:55.6190160Z"
+    },
+    {
+      "pid": 4816,
+      "expected": "2026-10-05T08:12:58.28358Z",
+      "current": "2026-10-05T08:12:58.2835800Z"
+    },
+    {
+      "pid": 57312,
+      "expected": "2026-10-05T08:12:58.320132Z",
+      "current": "2026-10-05T08:12:58.3201320Z"
+    }
+  ],
+  "method": "force-owned-tree-after-graceful-refusal",
+  "exit_code": 0,
+  "output": [
+    "SUCCESS: The process with PID 57312 (child process of PID 4816) has been terminated.",
+    "SUCCESS: The process with PID 4816 (child process of PID 51988) has been terminated.",
+    "SUCCESS: The process with PID 51988 (child process of PID 56484) has been terminated.",
+    "SUCCESS: The process with PID 56484 (child process of PID 42004) has been terminated.",
+    "SUCCESS: The process with PID 42004 (child process of PID 47628) has been terminated."
+  ]
+}

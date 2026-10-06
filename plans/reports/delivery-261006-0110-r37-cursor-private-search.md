@@ -1,0 +1,13 @@
+# Cursor CLI r37: private Grep control
+
+[Verified bindings](./delivery-261006-0110-r37-cursor-private-search.json) record one actual native `Grep` request on CLI2026.09.15-d2fe57e. Existing selectedModel and terminal display confirm Grok4.7/context500k/xhigh/fastfalse/Run Everything. Legacy callback model strings do not attest effective backend parameters. Source r37/281 pins/hash `629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb` unchanged.
+
+The native preToolUse callback supplies the exact synthetic private `file_path` and a nonempty tool-use ID. The unchanged packaged runner returns permission deny/private-holdout-credential-path; the actual CLI displays `Error: private-holdout-credential-path` and its blocked-tool note. Four genuine callbacks/four policy receipts cover startup, prompt, preflight and stop; no successful search return or postToolUse callback is observed. The fixture has the same exact bytes before/after; the final response marker is observed. One prompt/one turn/no retries/no injected faults.
+
+The context operation map remains empty. Policy checks protected paths before looking up that map, so this control adds private-path denial evidence while the earlier public Grep manual result remains intact. Scope is an exact `file_path`; directory/glob/search-scope extraction and other tools are unqualified. A bounded observer forwards genuine input to the packaged runner: outer preToolUse20s, other handlers5s, inner runner5s. This is not direct producer5s search qualification.
+
+Native /exit and monitor both exit0. Matching-byte cleanup removes27 config/payload/fixture members and preserves846 historical files/protected global configs. Final union1038 PID/creation FILETIME identities has zero matching/tracked-live; no taskkill. CLI-owned state hash changes are recorded without inferring the changed fields.
+
+The user supplied the AGY app mention again. The current Computer Use API disables native computer access and returns apps=[]; its Chrome inventory also reports an unavailable Codex auth token. No AGY UI input was sent. This is a current tool-availability limitation, not evidence that the real application has no window. The existing authorized AGY CLI route is retained; AGY IDE qualification remains unverified.
+
+Full native task remains **unchecked/44 of45/P3 active**. Remaining host/event/tool/fault/duplicate cells, genuine unsupported native-event delivery, Claude model/effort/turns and direct app qualification stay open. Exact r29 VI/EN owner acceptance, installed r25 and release boundaries remain unchanged. Review was inline; no independent reviewer.

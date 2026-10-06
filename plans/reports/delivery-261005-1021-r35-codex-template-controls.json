@@ -1,0 +1,458 @@
+{
+  "attempts": [
+    {
+      "attempt": "template-write-allow",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-allow.json",
+        "sha256": "19a8fb6a98374bd1007a116e26153e7a5385d34121067bfcc5697511d99c77a9"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/definitions/template-write-allow.json",
+        "sha256": "7be4b5cf4e2173212fe8f6b062cd1cf89c80447b31bcf04b399a6bec63f2160a"
+      },
+      "events_with_policy_receipts": [
+        "PostToolUse",
+        "PreToolUse",
+        "SessionStart",
+        "Stop",
+        "UserPromptSubmit"
+      ],
+      "fault_origin": "none",
+      "marker_created": true,
+      "observer_invoked": false,
+      "outcome": "native-write-completed-with-pending-artifact-qa",
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/PostToolUse/c7144650a8674861b4eb6293a18eb272907522674d995ed96b793747ad968a49.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "pending",
+            "event_hash": "caf039e33a5428f54a0884b152c754163df2d98b31033a893675035492eb8396",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "pre-delivery",
+            "reason_codes": [
+              "artifact-final-bytes-missing-or-stale"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "759477458b98bdfa8d3e6a70118576bb9d6996a19ab398d27279b1a9435c9e5e",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "0194706ec466aac73cafe990b69ebb2e0aeb3b0127b2a6c627f708cb258065e1"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/PreToolUse/0bd1f50abea678a1743e8e528d0ceb97217e5ced382688f8d14fca9eb9b2b8ff.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "allow",
+            "event_hash": "251c706311bfa14a43d93d99b3d45917fba727bdfd92764332540cea1b917cbe",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "declared-route-checks-current"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "759477458b98bdfa8d3e6a70118576bb9d6996a19ab398d27279b1a9435c9e5e",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "a5cf7d1f11251fac6c6272378d0224af8b9aa6e6e620cd0b19ca1103b9248435"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/SessionStart/aa385525cf9b8bc30942a0ca95ca8de3f2e28c1c8e54e6d521c49a5feecde886.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "advisory",
+            "event_hash": "620d9c4be3438d246d91cc4def0292daaef21dc88600996073cd5140af5d737e",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "759477458b98bdfa8d3e6a70118576bb9d6996a19ab398d27279b1a9435c9e5e",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "b3e9335c821862f3a64315610e7e4d80d40a682440657ea2f8011c00eba379f2"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/Stop/e78e7762b75b7289eb378eb65bc40180e0877e69c185d32f3466caf2341576a0.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "advisory",
+            "event_hash": "1cd76b04085711585fde8d20af9cfea29c42f8fa3c051c043bc337eda3249fb3",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "stop",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "759477458b98bdfa8d3e6a70118576bb9d6996a19ab398d27279b1a9435c9e5e",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "a18a04c954157f392abe63b6d338c95251aef89b5a78f61567614edcc5e624d8"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-allow/UserPromptSubmit/aa385525cf9b8bc30942a0ca95ca8de3f2e28c1c8e54e6d521c49a5feecde886.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "advisory",
+            "event_hash": "620d9c4be3438d246d91cc4def0292daaef21dc88600996073cd5140af5d737e",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "759477458b98bdfa8d3e6a70118576bb9d6996a19ab398d27279b1a9435c9e5e",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "b3e9335c821862f3a64315610e7e4d80d40a682440657ea2f8011c00eba379f2"
+        }
+      ],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/attempts/template-write-allow.json",
+        "sha256": "8a6bd36187d48d0852c1585465a353ea04bd1291c4b2a804e84a027865615c6a"
+      },
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-allow.stderr.txt",
+        "sha256": "c7407f18d9a023682ee5ababb2cccd0438fa022cbd90a8244363c5bbb75d45f0"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-allow.stdout.txt",
+        "sha256": "37764e72af4d485a213dc70ddfc5565f6d290747779c056417dbf89690307333"
+      }
+    },
+    {
+      "attempt": "template-write-deny",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-deny.json",
+        "sha256": "55ddbfc35b947e62cc6b1ba1a5f7455887bc724cf5fc9a05cb58385eee3fc3e5"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/definitions/template-write-deny.json",
+        "sha256": "97c1b2469c20ce309fb45c6b8151b58a006f8c6cabc7c2b1a0e5021c4b9bee0f"
+      },
+      "events_with_policy_receipts": [
+        "PreToolUse",
+        "SessionStart",
+        "Stop",
+        "UserPromptSubmit"
+      ],
+      "fault_origin": "none",
+      "marker_created": false,
+      "observer_invoked": false,
+      "outcome": "native-policy-denial-before-file-creation",
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-deny/PreToolUse/5be48e2a38e63d672f675ba1391b15e906250f76873f5aad0fbc02a6b8596e21.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "83b37facf9132237c8dde6c58386de3739eb6ae698aece82a4b1c2d521308880",
+            "decision": "block",
+            "event_hash": "b5b466dd46ac35a3145fef7c23c3f7a58f11ac353f205d218140cfcd21f1424e",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "plan-only-mutation"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "54a61400c2e2e4b8737c51903deeb54d0e97f2db118b662606b909a80a5346b1",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "c50e6f0f7b6e5fd7a0c2e4e497bba02f924daa6063adb504e6208a4cae5e97cc"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-deny/SessionStart/e13f75a784ddf5801a83b353686d6e580773b238328450f1f9189c8d07f56198.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "83b37facf9132237c8dde6c58386de3739eb6ae698aece82a4b1c2d521308880",
+            "decision": "advisory",
+            "event_hash": "ec30b4669666dff2b14fc695a5435e3b0be940c77815cfa66332de5132bdd5d1",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "54a61400c2e2e4b8737c51903deeb54d0e97f2db118b662606b909a80a5346b1",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "fab4628f24bc4589ba18c52fe393df09635f77e3c6d7691dd20ee5998620f3ce"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-deny/Stop/42d7623c86c1b94f78a5d71ae2f91aded3cbd19646d7544a28a18e9b571e443f.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "83b37facf9132237c8dde6c58386de3739eb6ae698aece82a4b1c2d521308880",
+            "decision": "advisory",
+            "event_hash": "09e0ae2552433e79251622125df646950c1f465738b56638cb341d65d48291cb",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "stop",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "54a61400c2e2e4b8737c51903deeb54d0e97f2db118b662606b909a80a5346b1",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "057fa909da3d08e0729415cd1cc93719457d6da03df2b6b2c321f975cab690f7"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-deny/UserPromptSubmit/e13f75a784ddf5801a83b353686d6e580773b238328450f1f9189c8d07f56198.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "83b37facf9132237c8dde6c58386de3739eb6ae698aece82a4b1c2d521308880",
+            "decision": "advisory",
+            "event_hash": "ec30b4669666dff2b14fc695a5435e3b0be940c77815cfa66332de5132bdd5d1",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "54a61400c2e2e4b8737c51903deeb54d0e97f2db118b662606b909a80a5346b1",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "fab4628f24bc4589ba18c52fe393df09635f77e3c6d7691dd20ee5998620f3ce"
+        }
+      ],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/attempts/template-write-deny.json",
+        "sha256": "3872c95ee0cd3ae0c4c9a7b1d6e2c0c7d49bdc23ec6d2a5ba90c4b72e9cabe6e"
+      },
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-deny.stderr.txt",
+        "sha256": "d92e9b4650c925522eebf7398d2d2b9f98ce1f5896b11a2cc4fa77010de2686d"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-deny.stdout.txt",
+        "sha256": "1fe44a6d0c0fe058e55fa29bd413a69fd30b10ab3ce3d4e36c427c04c1d92a68"
+      }
+    },
+    {
+      "attempt": "template-write-private",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-private.json",
+        "sha256": "8c0489dd0cd8868ce221d332b47a878486223c3f19442e7c1c42d0fa941fed54"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/definitions/template-write-private.json",
+        "sha256": "4b54ece4482b8ce02f9336bd1e28b03cd29fcdcfe3d62ea0e560ea3130fe2496"
+      },
+      "events_with_policy_receipts": [
+        "PreToolUse",
+        "SessionStart",
+        "Stop",
+        "UserPromptSubmit"
+      ],
+      "fault_origin": "none",
+      "marker_created": false,
+      "observer_invoked": false,
+      "outcome": "native-policy-denial-before-file-creation",
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/PreToolUse/fe0bfc8e50aae1ff1e3c098f1065b5aa0f0a48e7e8c0045843dcf219834c8a1d.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "block",
+            "event_hash": "850cafe76943d4166fbde6021a2b52127e4f3e7a142c99328603c7c21f2654e3",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "private-holdout-credential-path"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "fb6c50aba4eec1da46ceac73b9efb09494a09fd60304ad03c5ea059410318472",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "3adbf87d9f440006841360adf16a5a088f610443d74190316a6216bff6976bc3"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/SessionStart/56098d7c470a460160ad36964570f1e388b39514144ec15e933ab81f690a595a.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "advisory",
+            "event_hash": "9773d1d6ab252e13e31162bac1cef6d375888a86b505e9329b0082b7ab904ef6",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "fb6c50aba4eec1da46ceac73b9efb09494a09fd60304ad03c5ea059410318472",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "0aeab762c408257139c18a1b80c7f163d02ded23218b6326f60369c15fc00649"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/Stop/2bab2a53b16d228ff5cdf4eba72c55bff4f0a8dde3f639848a2a181296b5c80f.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "advisory",
+            "event_hash": "1a8483f3da68004a717636fe4a6831638a81851089dc9731af38c3e79a7b61bf",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "stop",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "fb6c50aba4eec1da46ceac73b9efb09494a09fd60304ad03c5ea059410318472",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "8f2c18280ca56352773545d335bbbcc45048b3c14b4a3fc560a961df179e5c91"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/UserPromptSubmit/56098d7c470a460160ad36964570f1e388b39514144ec15e933ab81f690a595a.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "9993883c3d2b321c09b7443184bccfed86a8f1cbe24e9e74dcc78d8e4b892b85",
+            "decision": "advisory",
+            "event_hash": "9773d1d6ab252e13e31162bac1cef6d375888a86b505e9329b0082b7ab904ef6",
+            "evidence_class": "deterministic",
+            "host": "codex",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "fb6c50aba4eec1da46ceac73b9efb09494a09fd60304ad03c5ea059410318472",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "207464cb205aa42f983fb45277bec2207d92192d8e1f0f91b9a1d54b4c2fb86c"
+          },
+          "sha256": "0aeab762c408257139c18a1b80c7f163d02ded23218b6326f60369c15fc00649"
+        }
+      ],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/attempts/template-write-private.json",
+        "sha256": "a9776bc3ff513df372a5b3b46c8c3e2193a88d1bb47965adc2e3dec43a97780b"
+      },
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-private.stderr.txt",
+        "sha256": "96e4459bb9d8db23bdec8b7567606dcb2c6a1444eaaa3c998c32e4bd3d980d3e"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-private.stdout.txt",
+        "sha256": "3b0eaf8f62fa738f66a5cdcf3f0d30be7e6c39669975631fc9860eab6c740536"
+      }
+    }
+  ],
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/cleanup.json",
+    "sha256": "5acfef6738a1cd49474d59dcf80b2a3307541eb87ca355be5c28c66956c1f147"
+  },
+  "fault_origin": "none",
+  "full_native_gate": "unchecked",
+  "global_config_unchanged": true,
+  "global_hook_unchanged": true,
+  "historical_members_preserved": 280,
+  "host": "codex",
+  "native_turns": 3,
+  "new_project_trust_keys": 0,
+  "observer_invoked": false,
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/final-process-audit.json",
+    "sha256": "03188b28d4099e87a824eda89c48d8a55feaebf159f57c4f3bf3728659293c0c"
+  },
+  "review": "inline",
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_modified": false,
+  "source_revision": 35,
+  "status": "verified-scoped-native-direct-template5s-controls",
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/direct-template-summary.json",
+    "sha256": "dd031568e20ed9a03f7f89b8eb5d50db7275b12ad923345e6f459114e2fda360"
+  },
+  "surface": "codex-cli-exec",
+  "timeout_seconds": 5,
+  "timing_scope": "Three canonical apply_patch add-file turns only; failure matrix and other routes remain separate.",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/verify-codex-template-controls.py",
+    "sha256": "60b2cd36a1f5c7f58800d59d3a7baba0f4d0a1751a13487c8699a9171846af06"
+  },
+  "version": "0.154.0"
+}

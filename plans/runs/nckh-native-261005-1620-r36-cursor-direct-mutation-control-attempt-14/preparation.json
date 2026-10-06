@@ -1,0 +1,62 @@
+{
+  "base_read_control": {
+    "path": "plans/runs/nckh-native-261005-1610-r36-cursor-direct-timeout-control-attempt-13/native-timeout-summary.json",
+    "sha256": "a30af75a093d0fe30f50050f1d84d598130cd2904f850b41acb8ebceed0ad82c"
+  },
+  "before_sha256": "ad20f34a3554f11c34fdee1d2cf0b0c8484b375c002ed03b2e53fb35910841ef",
+  "brief": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/frozen-brief.json",
+    "sha256": "53a036634791e683e23f28b2d17ac3d58d75347d145dc6d6f5355952548c1713"
+  },
+  "cases": [
+    {
+      "case": "allow",
+      "marker": "NCKH_DIRECT_MUTATION_ALLOWED_FINISHED_14",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_DIRECT20_ALLOWED_14\n",
+      "requested_native_tool_use_identities_maximum": 2
+    },
+    {
+      "case": "deny",
+      "marker": "NCKH_DIRECT_MUTATION_DENIED_FINISHED_14",
+      "mode": "plan-only",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_DIRECT20_DENIED_14\n",
+      "requested_native_tool_use_identities_maximum": 2
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/prepare-mutation-controls.py",
+    "sha256": "63bb3c9b61792470cd53e7e93c6c2101fa167976d82d706dd2601e27a99313f7"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/definitions/session.json",
+    "sha256": "39e775683377cc85caeb621fa814d36d0b747054d621e814939136298b28dee8"
+  },
+  "effort": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "fixture_preimage": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/fixture-preimage.txt",
+    "sha256": "ad20f34a3554f11c34fdee1d2cf0b0c8484b375c002ed03b2e53fb35910841ef"
+  },
+  "maximum_model_turns": 2,
+  "maximum_prompt_submissions": 2,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "other_packaged_timeout_seconds": 5,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "preToolUse_timeout_seconds": 20,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "purpose": "verify direct20s public write effect and plan-only Write prevention before deciding a source timeout repair",
+  "relative": "oracles/r36-cursor-direct-mutation-control-14.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/cursor-direct-mutation-runtime.py",
+    "sha256": "2cd7388ad72afc26abb90fd976066921e9b0e5d24393dd9abbb4a3ec6dc10b54"
+  },
+  "source_default_unchanged": true,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-two-direct20s-mutation-controls"
+}

@@ -1,0 +1,510 @@
+{
+  "callbacks": 7,
+  "cases": [
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 1,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "policy-deny",
+      "native_feedback": [
+        {
+          "kind": "feedback",
+          "text": "bounded-input-exceeded"
+        }
+      ],
+      "native_hook_status": "blocked",
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "2b491313eeaffd1b3d6297c9cbcb20a0d6dfdc053d4f2e867156fa87aeba07c2",
+          "decision": "block",
+          "event_hash": "a1ca6c7f5f4554e51d6676499d6694dfb3c0d2fac397e72cab713e5d8c049a2e",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "advisory",
+          "reason_codes": [
+            "bounded-input-exceeded"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "68c437db2bc4f453ce1dd5e88ea13d8760daaafda3e5a6da429cdb338e5a088c",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "41928f5d0ccf4ae13d8af8957a85638c50f3cef34b36a187a1e077a97a3be1db"
+        }
+      ],
+      "provider_error_notifications": 0,
+      "tool_side_effect_oracle": "not-exercised"
+    },
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 0,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "advisory",
+      "native_feedback": [
+        {
+          "kind": "context",
+          "text": "writing-resource-advice-only"
+        }
+      ],
+      "native_hook_status": "completed",
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "2b0332f4481d14995609b35aaf24b31d104517b94bf8962d75f01efbe84d9b98",
+          "decision": "advisory",
+          "event_hash": "0176d381a3b27fe54cf8a559fb98fb5f08c4bd5a935584c961e13b03f5eded48",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "advisory",
+          "reason_codes": [
+            "writing-resource-advice-only"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "e92eec8d65b8e88651c16dc734ebd7783d594bd31c358d36bbdeceefbacee82a",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "41928f5d0ccf4ae13d8af8957a85638c50f3cef34b36a187a1e077a97a3be1db"
+        }
+      ],
+      "provider_error_notifications": 1,
+      "tool_side_effect_oracle": "not-exercised"
+    },
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 1,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "malformed-input",
+      "native_feedback": [
+        {
+          "kind": "feedback",
+          "text": "hook-input-or-context-invalid"
+        }
+      ],
+      "native_hook_status": "blocked",
+      "policy_receipts": [
+        {
+          "decision": "block",
+          "event_hash": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "reason_codes": [
+            "hook-input-or-context-invalid"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "side_effects": "none",
+          "status": "degraded-failed"
+        }
+      ],
+      "provider_error_notifications": 0,
+      "tool_side_effect_oracle": "not-exercised"
+    },
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 0,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "malformed-output",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook returned invalid user prompt submit JSON output"
+        }
+      ],
+      "native_hook_status": "failed",
+      "policy_receipts": [],
+      "provider_error_notifications": 2,
+      "tool_side_effect_oracle": "not-exercised"
+    },
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 0,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "timeout",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook timed out after 2s"
+        }
+      ],
+      "native_hook_status": "failed",
+      "policy_receipts": [],
+      "provider_error_notifications": 1,
+      "tool_side_effect_oracle": "not-exercised"
+    },
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 0,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "crash",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook exited with code 1"
+        }
+      ],
+      "native_hook_status": "failed",
+      "policy_receipts": [],
+      "provider_error_notifications": 1,
+      "tool_side_effect_oracle": "not-exercised"
+    },
+    {
+      "callbacks": 1,
+      "completed_turn_notifications": 0,
+      "fault_after_real_callback": true,
+      "model_success": "none-observed",
+      "name": "unsupported-codec",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook exited with code 1"
+        }
+      ],
+      "native_hook_status": "failed",
+      "policy_receipts": [
+        {
+          "decision": "block",
+          "event_hash": "160818b77e7f64a60fc15eefdb99f27b4e84b8eded2cc509975a5b993523a35b",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "reason_codes": [
+            "hook-input-or-context-invalid"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "side_effects": "none",
+          "status": "degraded-failed"
+        }
+      ],
+      "provider_error_notifications": 1,
+      "tool_side_effect_oracle": "not-exercised"
+    }
+  ],
+  "cleanup": {
+    "config_removed": true,
+    "disabled_native_test_state_keys": 3,
+    "initial_audit_observed_own_inflight_metadata_probe": true,
+    "matching_run_processes": 0,
+    "project_hooks_after": 0,
+    "staged_payload_members_removed": 26,
+    "trusted_hash_storage": "scalar-replaced-by-normal-UI",
+    "unrelated_hook_state_unchanged": true
+  },
+  "event": "UserPromptSubmit",
+  "evidence_bindings": [
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-registration.json",
+      "sha256": "ccb9f6e582fbd511b8bbdcaddb00dd03b4804af12234a029c3927f0218b61cdb"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-ui-trust.json",
+      "sha256": "ccdf14aafff6f554e7ae2891c5be9d38933c6dbe8d3ad33de4da9ca21b21dcbd"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-ui-disable.json",
+      "sha256": "e2f7ddd55265d2612511b3c91ced6af979958f796182b56bb2a578edc1b5f528"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-cleanup.json",
+      "sha256": "29e988eb33ce930b8a2ac889f22b4e23aadaf88cd793da5d33abfbf5facc252f"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\native-grant.json",
+      "sha256": "bda22ac46fa6eb8b7b2dbb45e6bbfff12c249d9b49d4e4bd956f80bd07578222"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\owner-feedback.json",
+      "sha256": "38a753763fcf29399f952ef8dab8c0232d9f6bd7987856929b41fe8b051788f7"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\process-audit-prompt-failures.json",
+      "sha256": "3441aad8201a99ba99581e8cc4b85ef2900ded1f58fbf861e2b2dd6923983502"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\process-audit-prompt-failures-final.json",
+      "sha256": "624b42aab99d9eeed7b52db858db93c69a9203808e0554388a33a182bdb35558"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\codex-prompt-failure-observer.py",
+      "sha256": "cacb0966f60ccc3237240877a570fa784e16df8eb856676d036bf5aa433a392f"
+    },
+    {
+      "path": "plans\\reports\\delivery-261004-1707-r30-prompt-admission.json",
+      "sha256": "06cb72cedcc6e60d6d09154c22f30fcd2ff92714d51799fab8b4b09b1c07554f"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-policy-deny.json",
+      "sha256": "2e20065bce4ab99d1015e88c0719f31c6e053f6bea2aeb1c93a12d8e1a261aeb"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-advisory.json",
+      "sha256": "b91e942f07033b49a93652c5cb708c9bf9d6e6e8c1711ad51f18580da0cb4380"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-malformed-input.json",
+      "sha256": "047af2f42fdb389902c505b8e58778786755acfe644ff05f286429ecc81e2682"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-malformed-output.json",
+      "sha256": "c8ef0a4e1f6adb7ed4f2c750ee301c59fbee43d69ed3bc7f1ea48f1bfb755afc"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-timeout.json",
+      "sha256": "5012e9a127b1c32b663a6e7bd073c3f35aead063b58def48aa585729f488778c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-crash.json",
+      "sha256": "b98ed8e4f260c03d76743bdefb1bbc4b5bdd87593fd1a0a49d8add621090fd87"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-unsupported-codec.json",
+      "sha256": "82b86bed8660a9a4c550f8ea9ef0a2e03db77b8767bf32b61acadf2a0dd36818"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-metadata-01.json",
+      "sha256": "d4de5aa30731f76728a551491154b8f4742eecc7b93524b66711e74c69de666c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-metadata-02.json",
+      "sha256": "dea89889764aed3c4707db0f29011674ac4fc50239645259c3f42fc0f5d28be1"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-metadata-03.json",
+      "sha256": "98fab37119e5a865aa15bd05481b5c21aa0e4c3e7a370c94db0fefec9caf3907"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-probe-metadata-04.json",
+      "sha256": "a29b024c605052e31d93d540bd36d41e0ae418ccc58f53d049f12f42cb0bdb40"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-advisory.json",
+      "sha256": "88321ea94393813b55091284ea51baab1b385ec56cbb9d162d36bf29de0cd646"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-crash.json",
+      "sha256": "89695b766b9ae2296503f5c3adcdc027a8051a0cd8b5605d46e5618b2584976e"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-malformed-input.json",
+      "sha256": "fd29bd0710ff7286d3b14bffe4a9416ea43bfe5040462faab26ec94e140874f9"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-malformed-output.json",
+      "sha256": "7abebe48adbe461bf29129bcbf64233377490e31d19a5408e3a88357cb21db45"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-01.json",
+      "sha256": "d174d77ef4473c3732d3f8d146e73040c10af0c21660e3064c35676d7860654b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-02.json",
+      "sha256": "1c726dd0ba337e59201adb642ca8033f781bee577cf2c3cbd035d65e09512a7f"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-03.json",
+      "sha256": "e4b6a2b7be2f9c042cbf2a53f46d74d03c2aa6bfb2d88863ecb9474b06486fbd"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-04.json",
+      "sha256": "059104d7f5594cbce5c441f9cd70f162a2b33e68410a24cc07b77be8bddb227b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-policy-deny.json",
+      "sha256": "d3a45ad2ae6d629b2478bed8ada4a2b26917d45c73a37b1b29d4b70e030e50af"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-timeout.json",
+      "sha256": "56a09de69208470d8b99954b7a33f4719f4078ad6aaa31dabfa804c6bac536aa"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-unsupported-codec.json",
+      "sha256": "82f89bf3397ebea029a1020b18fb04308223aed2416ced5c69aa434da59d96d6"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\prompt-admission-tui-process-attempt-04.json",
+      "sha256": "97b3170f2efe1578990294d359f943fba5e914619f87a060d0315d952ebd296b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\prompt-admission-tui-process-attempt-05.json",
+      "sha256": "c462d05f48daf8a57bd07ce41e552e702e54c10281940b9af00a1cc32ca31987"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-advisory.stdout.jsonl",
+      "sha256": "e7d0330aa927792a15ce4084c9ed55fcc81c6bbdd031a27a7d39be227efd3ada"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-crash.stdout.jsonl",
+      "sha256": "0cc2e180d32d9d73929897a5da4dfce03e0a2d497eb9b19dc2d467c3bd9cf7aa"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-malformed-input.stdout.jsonl",
+      "sha256": "91ec08c39409fd8f64f402d9be8e46eea599037970011b1d34fb4791264a53ba"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-malformed-output.stdout.jsonl",
+      "sha256": "edcbcac14a4ce3b49272d21e38ccff6642caba8c89c7ef70a7b4416dedd011fe"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-01.stdout.jsonl",
+      "sha256": "350018382b51b10582d1f2d90ea89175e2da40d4660e4a9e060c90893d8fb5b0"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-02.stdout.jsonl",
+      "sha256": "b695b5169b6d7d406828fae1553756dcb9e134c442e3d0987fa12290f494f631"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-03.stdout.jsonl",
+      "sha256": "0e5ba17b13babdce876a19965245c78b8a565bfe57c13f39e19a28b6255ad2ef"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-04.stdout.jsonl",
+      "sha256": "8d7255c3b058744f138110cf8e3f59a61b37742ddced62da4617ebdacf48cd06"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-policy-deny.stdout.jsonl",
+      "sha256": "a062b529ac5896e5a68e6774874c4563e0016d084143040064c8ceb09883522c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-timeout.stdout.jsonl",
+      "sha256": "447d8857b3cac8de77a0b344e9576bdb856949757abca65bdac9372fe18eeb89"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-unsupported-codec.stdout.jsonl",
+      "sha256": "9cb241111f9415a6dfbcf9e758e2bb5d6603e525b9957a75f79e7ea616ebc178"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-advisory.stderr.txt",
+      "sha256": "3ceaff4ba9c243321313b129fa68a3072c3bb1ecf01077e2c4273a45f7a044bb"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-crash.stderr.txt",
+      "sha256": "607e5f1dc2f46eaa2af4913ed1115175afee0aef28ca5dffaa3e511f6027d029"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-malformed-input.stderr.txt",
+      "sha256": "bf2efab00ca274437dc02f13ae2bcba50f850602428a7d758bdfcb4ff11e7413"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-malformed-output.stderr.txt",
+      "sha256": "ffde15878f5a97dda17f90e64f92bc5588aaabd924acbfb1f5610a6a00e892d4"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-01.stderr.txt",
+      "sha256": "d52b416d302f176d426180b0c2157a322ca488751c2a281ae92e2a6431de3d64"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-02.stderr.txt",
+      "sha256": "79e4903fb68a681f64957270fde45125a5c7322414d5a0c57041b17ecbc811ee"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-03.stderr.txt",
+      "sha256": "a3ece1b8c9d0409d6d9d89f04f665081c5816934eabfd021a68699179a6059a3"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-metadata-04.stderr.txt",
+      "sha256": "866a58f4d94a6995ec1493f17191be5cc60eb90554344194f14d0b2e605a54d8"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-policy-deny.stderr.txt",
+      "sha256": "a851c1da7d85c0ad5d5fb803d489cbea3bc6b2e35bfe8e81a5dce49b861f429d"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-timeout.stderr.txt",
+      "sha256": "c8aab4f20564fe34988ad0fc5e971f3293d32c81dda0192167245352f93f55bc"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-prompt-failure-unsupported-codec.stderr.txt",
+      "sha256": "306262be7b0fa0f78f697a31667dc69dcbde040181db44b044959b09b0975fe6"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\advisory\\65360a15bf4446e2aa1df60fd10e6af1.json",
+      "sha256": "3238ffdfdb1e45d25600374bc90ad7706aae1814fe03316c0d38d7f4168e925a"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\crash\\920c8ab2b3fc45f98d9b46416d6c4128.json",
+      "sha256": "998a9721f79deef2ca70a92f1e2097e47f2f66852919a811dd69c7479c4272b0"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\malformed-input\\2eef2603f9a94c56a9e47a0c52fb4fb4.json",
+      "sha256": "b3bf3c91ea896f1b22efa467bee37df43be4971f77de4593b720174723e5c1a2"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\malformed-output\\9ca7cf18a59a4a35be1074b26cc52811.json",
+      "sha256": "596d1d981f9893026abadecc02e60430f529c8ad5641f58f80721dce9c09fa2a"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\policy-deny\\8ae8d737db9942bc9d67e6617aa3abfe.json",
+      "sha256": "6c97c2890c3353425bf30c293d86705e7624a27791078ee7ac6426e9cf6a65f0"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\timeout\\66671ec529b64e40a1d2e2e2b3f3e3fa.json",
+      "sha256": "2f18861355b0d3b478081993e58f7fd5a27047c69f4db1d44d9fd472c5c8314d"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-observations\\unsupported-codec\\4f9f27f19c8d4045999424ab6b58384e.json",
+      "sha256": "f199423487bdd79588af74998f7ef987473e2004571b5155bdb454e6b6a106de"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-policy-receipts\\advisory\\b9fa84fdde243583f438eda9b9bebf2790e81179fe68ced6dd09882403659f85.json",
+      "sha256": "51400fe1e8d21e59135636b3d4403d4ae406aa637d6e98381760ca809b9b509e"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-policy-receipts\\malformed-input\\ec211e042d4d8456a23fea4cf29ba6d849d13f2754a94ff7a08064a4a5feff78.json",
+      "sha256": "bc1bed81f827b97cfba198b4502e098b0dae9287eb5cbcea407907cc14bd8565"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-policy-receipts\\policy-deny\\2ded42734af16eeb53423c8ebc30bd9a92586989783a10b339c7704d53c66415.json",
+      "sha256": "3138eafa981e9978ee61438b36f10d299b0d4fd863308414540cad54d9f881c8"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex\\failure-policy-receipts\\unsupported-codec\\9dfe177de15859a4ef9e4f019e4e4c9a243183d7f70bf7686c911da9b9245528.json",
+      "sha256": "087e8fb5527c77b8679c13f56fb027d7d2763a621ff04105e5285978827f2005"
+    }
+  ],
+  "execution_route": "installed-CLI-app-server-stdio-thread-start-turn-start",
+  "fail_open_cases": [
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-codec"
+  ],
+  "full_suite_build_rerun": false,
+  "goal_turn_classification": "progress",
+  "host": "Codex CLI",
+  "native_definition_hash": "sha256:083884235854b0985c5612fab601f099bf17bbe0d4a422667a3d967abe0aafa3",
+  "native_unsupported_event_or_tool_claim": false,
+  "next_required_inputs": [
+    "provider-host-quota-or-budget",
+    "account-surface-prerequisites"
+  ],
+  "plan_progress": {
+    "done": 44,
+    "total": 45
+  },
+  "policy_receipts": 4,
+  "qualification": "inactive-manual-full-event-surface-tool-duplicate-evidence-pending",
+  "recorded_at": "2026-10-04T13:08:05.459007+00:00",
+  "schema_version": 1,
+  "source_changed": false,
+  "source_lock_hash": "55a4b60779228f3be3ae42d7691a49dec1df1b4e6f26139a32435aa1914562e1",
+  "source_pins": 281,
+  "source_revision": "30",
+  "status": "native-prompt-fail-open-observed-qualification-pending",
+  "trust_route": "normal-CLI-TUI",
+  "version": "0.154.0"
+}

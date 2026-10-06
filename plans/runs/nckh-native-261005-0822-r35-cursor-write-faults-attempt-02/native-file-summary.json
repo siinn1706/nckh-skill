@@ -1,0 +1,38 @@
+{
+  "fault_target_tool": "Write",
+  "results": [
+    {
+      "attempt": "write-stage-02-timeout",
+      "fault_target_tool": "Write",
+      "kind": "Write",
+      "mode": "timeout",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0822-r35-cursor-write-faults-attempt-02/attempts/write-stage-02-timeout.json",
+        "sha256": "e128262e9e4b9295c77c7887507f112612789e15b90040ce10afa4d413e56e5c"
+      }
+    },
+    {
+      "attempt": "write-stage-02-crash",
+      "fault_target_tool": "Write",
+      "kind": "Write",
+      "mode": "crash",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0822-r35-cursor-write-faults-attempt-02/attempts/write-stage-02-crash.json",
+        "sha256": "784e7c2cfad23a6317e1eb8e8215f3257e912fe26b50016d7d32b1a45a1f529d"
+      }
+    },
+    {
+      "attempt": "write-stage-02-unsupported-codec",
+      "fault_target_tool": "Write",
+      "kind": "Write",
+      "mode": "unsupported-codec",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0822-r35-cursor-write-faults-attempt-02/attempts/write-stage-02-unsupported-codec.json",
+        "sha256": "3560294bc17b92039f0c55b81f5d05c5684376c2cd4852dce07c535580830d7e"
+      }
+    }
+  ],
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "recorded-native-cursor-write-stage-faults"
+}

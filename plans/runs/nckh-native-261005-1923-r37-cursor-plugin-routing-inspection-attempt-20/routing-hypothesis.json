@@ -1,0 +1,18 @@
+{
+  "status": "source-backed-native-hypothesis-not-qualified",
+  "native19_observation": "beforeSubmitPrompt and stop have only project callbacks; sessionStart/preToolUse/postToolUse have project and plugin callbacks",
+  "vendor_version": "2026.09.15-d2fe57e",
+  "vendor_index_sha256": "9f51ecf275d932372bf367914708b0dd21bf9c9e807b5e20e789ec9e247d9f86",
+  "source_observation": "The current parser detects nested Claude-style hook config and maps UserPromptSubmit to beforeSubmitPrompt and Stop to stop",
+  "official_reference": "https://cursor.com/docs/reference/third-party-hooks",
+  "hypothesis": "A local plugin using those two nested compatibility definitions might supply the missing plugin prompt/stop callbacks",
+  "native_case_needed": "One actual prompt/reply with project native hooks and a local plugin containing only the two compatibility definitions",
+  "oracle": "Require an actual project/plugin callback pair for each selected event, same native session/input/version, unchanged packaged runner/context and a single policy receipt per event",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_tools": 0,
+  "source_code_changes": 0,
+  "global_config_direct_write": false,
+  "failure_policy": "Retain gaps and current source; no identical resubmission or posthoc change of oracle",
+  "scope_limit": "Parser/docs evidence is not native qualification; this does not prove the cause of native19 missing callbacks"
+}

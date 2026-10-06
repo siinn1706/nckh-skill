@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "status": "controller-qa-completed-for-stated-checks",
+  "recorded_at": "2026-10-03T11:25:34.655928+00:00",
+  "case_id": "real-source-worldbank-visual-01",
+  "model_run_revision": "r25-visual-attempt-01",
+  "content_revision": "raw model SVG unchanged; restored Illustrator derivative",
+  "files": {
+    "artifact.md": {
+      "sha256": "e4f37b5304af9a684b3acfb9fdc6a39c0ad3727c0113de777c72f353d9bc91a0",
+      "bytes": 22104
+    },
+    "artifact.svg": {
+      "sha256": "a85e1a4aaa336d20e7d3096362dd019041e7d73e44f887f972fa58773cdafb3e",
+      "bytes": 10194
+    },
+    "artifact-rsvg.png": {
+      "sha256": "ff6b8f76d4d03c7f5dfe63131c72ef43a5d98c64edd18ebba67aeebda0a73be9",
+      "bytes": 71132
+    },
+    "artifact-illustrator.png": {
+      "sha256": "5d16da6909d333a11c1c96100a684a366c5ac11b338b3081b29be61d25ed830f",
+      "bytes": 86606
+    },
+    "native-qa-copy.ai": {
+      "sha256": "7a33d6b055fd447dc03669d00843154f3626d4b91ee75dbee926b95de1a6f0b7",
+      "bytes": 173685
+    },
+    "source-to-mark-check.json": {
+      "sha256": "213cc0361c17e149f37632a912ef82aa605bcb2b0d7d9685d5796c3e5d30ede0",
+      "bytes": 5867
+    },
+    "rsvg-render.json": {
+      "sha256": "031118ebb0227d7c7bfffade9e9f0ecd7a552d448b93f835db89c34672d01f64",
+      "bytes": 1126
+    },
+    "illustrator-tool-evidence.json": {
+      "sha256": "ad86a536041b52c530ae38ffdbd494b9213d6267273ab973c6252d5d2823dd38",
+      "bytes": 112170
+    },
+    "extraction.json": {
+      "sha256": "4fa372e1419e5c5b5a2d0e334b3fdb14008c6869b6fd8b376fdc53d765b272ed",
+      "bytes": 355
+    },
+    "events.jsonl": {
+      "sha256": "4710abed842aeb5e86c419a00a7d2c83d708e09217ca3eac2fdbed4b35fe0988",
+      "bytes": 148464
+    },
+    "receipt.json": {
+      "sha256": "6526e303db224e0e7fc8bb098fe28098b2f396e418b88311e8ad8e6267761814",
+      "bytes": 2765
+    }
+  },
+  "source_projection_sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
+  "independent_source_review": {
+    "path": "plans/reports/review-261003-gpt-sol-r25-worldbank-source-and-memo.md",
+    "sha256": "6960f0e47bfe80eaefd617d65530b9a5c4ad0e61aca211e372de8838e20024e4",
+    "verdict": "pass-for-stated-source-memo-checks"
+  },
+  "native_viewer": {
+    "name": "Adobe Illustrator 2024",
+    "observed_process_id": 43464,
+    "executable": "C:/Program Files/Adobe/Adobe Illustrator 2024/Support Files/Contents/Windows/Illustrator.exe",
+    "observed_file_version": "28.0.0",
+    "font_family_observed": "Arial",
+    "title_style_observed": "Bold",
+    "installed_font_files": [
+      {
+        "path": "C:\\Windows\\Fonts\\arial.ttf",
+        "sha256": "b3658eadae55e682b5f69eb64c439c1ecc8f196c0bb8d4756d145d13bc86476a",
+        "versions": [
+          "Version 7.06"
+        ]
+      },
+      {
+        "path": "C:\\Windows\\Fonts\\arialbd.ttf",
+        "sha256": "e8f4e3baf6cc35fed6fcce3a540e8b39e8f6cda1d22a28f2ec8f526fef7a43f5",
+        "versions": [
+          "Version 7.06"
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "source_to_mark": "pass; 26 unchanged values, circles and polyline; exact table/formulas independently reviewed",
+    "rsvg_render": "pass; bound engine 2.40.20 completed exit0",
+    "native_open": "pass; actual SVG opened at 1400x1100",
+    "native_structure": {
+      "text_frames": 29,
+      "data_paths": 26,
+      "raster_images": 0,
+      "all_native_text_equals_svg": true,
+      "maximum_mark_center_delta_svg_units": 2.2937484004614817e-05
+    },
+    "native_edit_save_reopen": "pass; title text edited and point2000 x moved195 to196, saved, closed, reopened; both edits retained",
+    "native_restore_save_reopen": "pass; original title and point x195 restored, saved, closed, reopened; all29 texts and26 marks retained",
+    "layout": "controller observed both full1400x1100 rendered images; no clipping, unintended text overlap or missing Vietnamese characters; all29 native text bounds inside artboard",
+    "contrast": [
+      {
+        "foreground": "#152638",
+        "background": "#ffffff",
+        "ratio": 15.370697987638057
+      },
+      {
+        "foreground": "#26394c",
+        "background": "#ffffff",
+        "ratio": 11.850846413636745
+      },
+      {
+        "foreground": "#006b82",
+        "background": "#ffffff",
+        "ratio": 6.130636524481035
+      },
+      {
+        "foreground": "#526476",
+        "background": "#ffffff",
+        "ratio": 6.098911446850489
+      }
+    ],
+    "accessibility_structure": "pass for SVG title/desc, Vietnamese language, role img, valid aria-labelledby, yearly DOM order, source mapping and visible caveats",
+    "rights_scope": "World Bank terms locator, attribution, snapshot and possible third-party restrictions retained; no publishing clearance claimed",
+    "owner_feedback": "pending-personal-review"
+  },
+  "limits": [
+    "Effective provider model and effort telemetry remain unknown/null.",
+    "Actual assistive-technology user testing was not run; accessibility verdict is structural plus visual contrast only.",
+    "Illustrator AI is an editable derivative; SVG accessibility metadata preservation in AI is not claimed.",
+    "Installed Arial font bytes/version observed and native family/style verified; exact rsvg font file resolution was not exposed.",
+    "Raw model memo/SVG pending-QA captions record generation-time state; this separate hash-bound receipt records subsequent controller observations.",
+    "No human/scientific/stable certification or global host compatibility claimed."
+  ]
+}

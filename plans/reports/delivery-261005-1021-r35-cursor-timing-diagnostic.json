@@ -1,0 +1,142 @@
+{
+  "attempt": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/attempts/immediate-read-allow.json",
+    "sha256": "b83f4ddfc70ea44fbaf65d85d5da65433ddc38e3d0f8c443c046a4f663081702"
+  },
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "callback_counts": {
+    "beforeSubmitPrompt": 0,
+    "postToolUse": 0,
+    "preToolUse": 1,
+    "sessionStart": 1,
+    "stop": 0
+  },
+  "callbacks": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-immediate-diagnostic-01/immediate-observations/preToolUse/1869e01ba56f4575891ef93e42d5d938.json",
+      "receipt": {
+        "atexit_at": "2026-10-05T03:28:32.875372+00:00",
+        "entered_at": "2026-10-05T03:28:32.874257+00:00",
+        "event": "preToolUse",
+        "evidence_class": "native-timing-diagnostic-only",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "87df254fbda026c26eb81a65ad7c93b0b2be554bab737a58d2caceacc880e198",
+        "input_size": 794,
+        "interpreter_elapsed_seconds": 0.0036947999615222216,
+        "native_model": "grok-4.7",
+        "native_tool_name": "Read",
+        "native_tool_use_id": "call-562b9455-59cb-4cd4-b99c-131e2a682386-0\nfc_c4ab49d1-238e-9800-aed2-a7201d1939dd_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "output_elapsed_seconds": 0.003076199966017157,
+        "output_flushed_at": "2026-10-05T03:28:32.874257+00:00",
+        "parent_pid": 30788,
+        "pid": 45728,
+        "policy_invoked": false,
+        "reported_event": "preToolUse",
+        "runner_invoked": false,
+        "status": "interpreter-atexit-observed",
+        "wire": {
+          "permission": "allow"
+        }
+      },
+      "sha256": "90476f56bfbda768a732e464a5cee8626cbd6fc7c3b3ff6723a3748ff02fac9a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-immediate-diagnostic-01/immediate-observations/sessionStart/6c95b0475e574fa595fb65280f9cd981.json",
+      "receipt": {
+        "atexit_at": "2026-10-05T03:28:10.678960+00:00",
+        "entered_at": "2026-10-05T03:28:10.677122+00:00",
+        "event": "sessionStart",
+        "evidence_class": "native-timing-diagnostic-only",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "is_background_agent",
+          "model",
+          "session_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "c6447c6e419592a480f2825cec77f98576207b58c5e4a46b0b02f6deaa3202f6",
+        "input_size": 505,
+        "interpreter_elapsed_seconds": 0.004497300018556416,
+        "native_model": "grok-4.7-xhigh",
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "output_elapsed_seconds": 0.0035979999811388552,
+        "output_flushed_at": "2026-10-05T03:28:10.678160+00:00",
+        "parent_pid": 57556,
+        "pid": 53928,
+        "policy_invoked": false,
+        "reported_event": "sessionStart",
+        "runner_invoked": false,
+        "status": "interpreter-atexit-observed",
+        "wire": {}
+      },
+      "sha256": "36a12e9d06f921ff55598cc90ca941cef58a6faebe6d62b889166e60b9255305"
+    }
+  ],
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/cleanup.json",
+    "sha256": "6ad3215a853e61ab9190773c68e6d36ecb1184e911a9432abe6d9e599cecf016"
+  },
+  "collector_labels": "Inherited attempt observer_invoked=false denotes no original packaged-runner observer; the immediate diagnostic callback is explicitly bound here.",
+  "command": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/commands/cursor-file-immediate-read-allow.json",
+    "sha256": "1b579b3f3356ff4264c510af8941457489dc93b42ba97143e05015be93213fc8"
+  },
+  "diagnostic_callback_invoked": true,
+  "full_native_gate": "unchecked",
+  "host": "cursor",
+  "inference": "The timeout is reproducible without NCKH policy processing; exact host execution/transport cause remains unresolved.",
+  "native_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01\\cursor-immediate-hook.py --event preToolUse --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-immediate-diagnostic-01\" execution failed: Hook script timed out after 5000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+  "native_turns": 1,
+  "packaged_runner_invoked": false,
+  "policy_invoked": false,
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/final-process-audit.json",
+    "sha256": "e0c2880f1c66a5956d3105cd8751537b34ebab3074591c91ab81331fa14c5650"
+  },
+  "production_timing": "unqualified",
+  "review": "inline",
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_modified": false,
+  "source_revision": 35,
+  "status": "verified-native-timing-diagnostic-production-gate-open",
+  "stderr": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/commands/cursor-file-immediate-read-allow.stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/commands/cursor-file-immediate-read-allow.stdout.txt",
+    "sha256": "75f427a7803325d9f0e38c9a6f155fc1cb23f8715d9501c2dee4cef687034030"
+  },
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/diagnostic-summary.json",
+    "sha256": "3f01743f430b272f46d4c319cec3dcd0b90818be10744aaf4300ef21224fb13b"
+  },
+  "surface": "cursor-cli",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-cursor-timing-diagnostic-attempt-01/verify-timing-diagnostic.py",
+    "sha256": "7378a77588d2be72704e27de34c2a23c1f97d0da5cc23f7b64470f0e0a8545c0"
+  },
+  "version": "2026.09.15-d2fe57e"
+}

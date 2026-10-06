@@ -1,0 +1,960 @@
+{
+  "report_schema_version": 1,
+  "status": "DONE_WITH_CONCERNS",
+  "purpose": "Bounded ak-xia compare evidence, not runtime receipts or host configuration",
+  "work_context": "C:/Users/USER\\Downloads\\test-skill",
+  "timezone": "Asia/Saigon",
+  "language": "vi",
+  "fetched_date": "2026-10-04",
+  "authorization": {
+    "reference": "Controller /root task delegation 2026-10-04 for accepted NCKH cook plan",
+    "revision": "261004-0047-nckh-research-data-hooks-writing",
+    "flags": [
+      "--auto"
+    ],
+    "yagni": false,
+    "allowed_writes": [
+      "plans/reports/researcher-261004-1037-hook-schemas-visual-source.md",
+      "plans/reports/researcher-261004-1037-hook-schemas-visual-source.json"
+    ],
+    "native_install_register_trust_enable_authorized_by_this_report": false
+  },
+  "execution_settings": {
+    "requested_tier": "researcher/worker inherit",
+    "resolved_role": "nckh-researcher",
+    "configured_model": null,
+    "applied_model": null,
+    "effective_model": null,
+    "configured_effort": null,
+    "applied_effort": null,
+    "effective_effort": null,
+    "usable_context": null,
+    "total_cost": null
+  },
+  "source_manifest": {
+    "repository": "K-Dense-AI/scientific-agent-skills",
+    "attribution_url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+    "attribution_url_fetched": false,
+    "local_root": "C:/Users/USER\\Downloads\\test-skill\\resources\\scientific-agent-skills-main",
+    "git_metadata_present": false,
+    "branch": null,
+    "resolved_archive_commit": null,
+    "license": "MIT",
+    "copyright": "Copyright (c) 2025 K-Dense Inc.",
+    "disposition": "re-authored bounded QA/table guidance; no copied implementation or whole skill",
+    "files": [
+      {
+        "relative_path": "skills/scientific-visualization/SKILL.md",
+        "absolute_path": "C:/Users/USER\\Downloads\\test-skill\\resources\\scientific-agent-skills-main\\skills\\scientific-visualization\\SKILL.md",
+        "sha256": "8cbde7cdc10d959cf72cfd08335cc8ce996247eee6ebdb900eb64a4cb0ff34a3",
+        "selected_sections": [
+          "guardrails",
+          "inspect and review",
+          "final review checklist"
+        ],
+        "read_date": "2026-10-04"
+      },
+      {
+        "relative_path": "skills/scientific-visualization/references/publication_guidelines.md",
+        "absolute_path": "C:/Users/USER\\Downloads\\test-skill\\resources\\scientific-agent-skills-main\\skills\\scientific-visualization\\references\\publication_guidelines.md",
+        "sha256": "5f70c6b22dbb5e0fae18b0f1197b8794896bf7afc059874bcf7afbd5aa86bbe5",
+        "selected_sections": [
+          "evidence layers",
+          "honest encoding",
+          "accessibility and table alternative",
+          "scientific review"
+        ],
+        "read_date": "2026-10-04"
+      },
+      {
+        "relative_path": "skills/scientific-writing/references/figures_tables.md",
+        "absolute_path": "C:/Users/USER\\Downloads\\test-skill\\resources\\scientific-agent-skills-main\\skills\\scientific-writing\\references\\figures_tables.md",
+        "sha256": "212d10f3e7a01325d2518c4aab54a4fc04a67e4aa94e959cead199c425a0f4d6",
+        "selected_sections": [
+          "provenance",
+          "tables",
+          "captions and alt text",
+          "manual review"
+        ],
+        "read_date": "2026-10-04"
+      },
+      {
+        "relative_path": "LICENSE.md",
+        "absolute_path": "C:/Users/USER\\Downloads\\test-skill\\resources\\scientific-agent-skills-main\\LICENSE.md",
+        "sha256": "09b02a3c9df3053c55531d503357a9c7cde275970e6c3ceaa1ddf5f0e90b40c1",
+        "selected_sections": [
+          "license and notice"
+        ],
+        "read_date": "2026-10-04"
+      }
+    ],
+    "copy_obligation": "Include the copyright and permission notice in copies or substantial portions."
+  },
+  "examples_notice": {
+    "kind": "self-authored schema illustration",
+    "observed_native_payloads": false,
+    "executed_commands": false,
+    "composition": "Common example plus per-event extra fields; replace common event name where present. Conditional metadata is illustrative, not a normative required-field assertion.",
+    "agy_event_discriminator": "Selected controller route supplies event; no invented payload event field.",
+    "secrets_or_full_transcripts_read": false,
+    "config_registered": false,
+    "config_paths_are_placeholders": true
+  },
+  "hosts": {
+    "claude": {
+      "source_url": "https://code.claude.com/docs/en/hooks",
+      "fetched_date": "2026-10-04",
+      "status": "official-doc-confirmed; native-unverified",
+      "project_config_target": ".claude/settings.local.json",
+      "config_shape": "hooks.<Event>[] -> matcher group -> hooks[] handler",
+      "supported_selected_events": [
+        "SessionStart",
+        "UserPromptSubmit",
+        "PreToolUse",
+        "PostToolUse",
+        "Stop"
+      ],
+      "command_handler_fields": [
+        "type",
+        "command",
+        "args",
+        "timeout",
+        "async",
+        "asyncRewake",
+        "shell",
+        "if",
+        "statusMessage"
+      ],
+      "common_input_fields": [
+        "session_id",
+        "transcript_path",
+        "cwd",
+        "hook_event_name"
+      ],
+      "conditional_input_fields": [
+        "permission_mode",
+        "prompt_id",
+        "scratchpad_dir",
+        "effort",
+        "agent_id",
+        "agent_type"
+      ],
+      "model_field_limitation": "model is optional on SessionStart; not a universal input field",
+      "common_input_example": {
+        "session_id": "example-session",
+        "transcript_path": "/example/transcript.jsonl",
+        "cwd": "/example-project",
+        "hook_event_name": "PreToolUse",
+        "permission_mode": "default"
+      },
+      "event_extra_input_examples": {
+        "SessionStart": {
+          "hook_event_name": "SessionStart",
+          "source": "startup"
+        },
+        "UserPromptSubmit": {
+          "hook_event_name": "UserPromptSubmit",
+          "prompt": "[removed: raw runtime content]"
+        },
+        "PreToolUse": {
+          "hook_event_name": "PreToolUse",
+          "tool_name": "Write",
+          "tool_input": {
+            "file_path": "/example-project/figure.svg",
+            "content": "<EXAMPLE_CONTENT>"
+          },
+          "tool_use_id": "example-tool-use"
+        },
+        "PostToolUse": {
+          "hook_event_name": "PostToolUse",
+          "tool_name": "Write",
+          "tool_input": {
+            "file_path": "/example-project/figure.svg",
+            "content": "<EXAMPLE_CONTENT>"
+          },
+          "tool_use_id": "example-tool-use",
+          "tool_response": {
+            "filePath": "/example-project/figure.svg",
+            "type": "create"
+          },
+          "duration_ms": 1
+        },
+        "Stop": {
+          "hook_event_name": "Stop",
+          "stop_hook_active": false,
+          "last_assistant_message": "<EXAMPLE_ASSISTANT_TEXT>",
+          "background_tasks": [],
+          "session_crons": []
+        }
+      },
+      "event_stdout_examples": {
+        "SessionStart": {
+          "hookSpecificOutput": {
+            "hookEventName": "SessionStart",
+            "additionalContext": "Bounded NCKH guidance."
+          }
+        },
+        "UserPromptSubmit": {
+          "decision": "block",
+          "reason": "NCKH policy requires review."
+        },
+        "PreToolUse": {
+          "hookSpecificOutput": {
+            "hookEventName": "PreToolUse",
+            "permissionDecision": "deny",
+            "permissionDecisionReason": "NCKH policy requires review."
+          }
+        },
+        "PostToolUse": {
+          "hookSpecificOutput": {
+            "hookEventName": "PostToolUse",
+            "additionalContext": "NCKH artifact review is pending."
+          }
+        },
+        "Stop": {}
+      },
+      "pretool_permission_enum": [
+        "allow",
+        "deny",
+        "ask",
+        "defer"
+      ],
+      "stop_continue_fields": [
+        "decision=block with reason",
+        "hookSpecificOutput.additionalContext"
+      ],
+      "stop_guard": {
+        "input_field": "stop_hook_active",
+        "documented_native_cap": 8,
+        "nckh_policy": "at most one reminder; no auto continuation"
+      },
+      "exit_behavior": {
+        "zero": "structured JSON when valid",
+        "two": "blocking where event permits; Stop continues instead of stopping",
+        "other": "not blocking by itself; valid supported JSON can still decide; malformed output can fail open"
+      },
+      "unsupported_or_limited": [
+        "EndConversation skips pre/post tool hooks",
+        "PostToolUse observes success; failures use PostToolUseFailure",
+        "Bash-only matcher misses PowerShell-only Windows routes",
+        "SessionStart exit 2 does not block start",
+        "suppressOutput is accepted but has no effect",
+        "async hooks cannot provide synchronous preventive control"
+      ],
+      "config_example": {
+        "hooks": {
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE>",
+                  "args": [
+                    "<OWNED_RUNNER>",
+                    "--host",
+                    "claude",
+                    "--event",
+                    "SessionStart"
+                  ],
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE>",
+                  "args": [
+                    "<OWNED_RUNNER>",
+                    "--host",
+                    "claude",
+                    "--event",
+                    "UserPromptSubmit"
+                  ],
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "PreToolUse": [
+            {
+              "matcher": "Bash|PowerShell|Write|Edit",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE>",
+                  "args": [
+                    "<OWNED_RUNNER>",
+                    "--host",
+                    "claude",
+                    "--event",
+                    "PreToolUse"
+                  ],
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "PostToolUse": [
+            {
+              "matcher": "Bash|PowerShell|Write|Edit",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE>",
+                  "args": [
+                    "<OWNED_RUNNER>",
+                    "--host",
+                    "claude",
+                    "--event",
+                    "PostToolUse"
+                  ],
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE>",
+                  "args": [
+                    "<OWNED_RUNNER>",
+                    "--host",
+                    "claude",
+                    "--event",
+                    "Stop"
+                  ],
+                  "timeout": 5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "codex": {
+      "source_url": "https://learn.chatgpt.com/docs/hooks",
+      "fetched_date": "2026-10-04",
+      "status": "official-doc-confirmed; native-unverified",
+      "project_config_target": ".codex/hooks.json",
+      "config_shape": "optional description plus hooks.<Event>[] -> matcher group -> hooks[] handler",
+      "supported_selected_events": [
+        "SessionStart",
+        "UserPromptSubmit",
+        "PreToolUse",
+        "PostToolUse",
+        "Stop"
+      ],
+      "command_handler_fields": [
+        "type",
+        "command",
+        "commandWindows",
+        "timeout",
+        "statusMessage",
+        "additionalContextLimit",
+        "async"
+      ],
+      "common_input_fields": [
+        "session_id",
+        "transcript_path",
+        "cwd",
+        "hook_event_name",
+        "model"
+      ],
+      "common_input_types": {
+        "session_id": "string",
+        "transcript_path": "string|null",
+        "cwd": "string",
+        "hook_event_name": "string",
+        "model": "string"
+      },
+      "conditional_input_fields": [
+        "permission_mode",
+        "turn_id"
+      ],
+      "common_input_example": {
+        "session_id": "example-session",
+        "transcript_path": "/example/transcript.jsonl",
+        "cwd": "/example-project",
+        "hook_event_name": "PreToolUse",
+        "model": "<MODEL_SLUG>"
+      },
+      "event_extra_input_examples": {
+        "SessionStart": {
+          "hook_event_name": "SessionStart",
+          "source": "startup",
+          "permission_mode": "default"
+        },
+        "UserPromptSubmit": {
+          "hook_event_name": "UserPromptSubmit",
+          "turn_id": "example-turn",
+          "prompt": "[removed: raw runtime content]",
+          "permission_mode": "default"
+        },
+        "PreToolUse": {
+          "hook_event_name": "PreToolUse",
+          "turn_id": "example-turn",
+          "tool_name": "apply_patch",
+          "tool_use_id": "example-tool-use",
+          "tool_input": {
+            "command": "<EXAMPLE_PATCH>"
+          },
+          "permission_mode": "default"
+        },
+        "PostToolUse": {
+          "hook_event_name": "PostToolUse",
+          "turn_id": "example-turn",
+          "tool_name": "apply_patch",
+          "tool_use_id": "example-tool-use",
+          "tool_input": {
+            "command": "<EXAMPLE_PATCH>"
+          },
+          "tool_response": "<EXAMPLE_MODEL_VISIBLE_RESULT>",
+          "permission_mode": "default"
+        },
+        "Stop": {
+          "hook_event_name": "Stop",
+          "turn_id": "example-turn",
+          "stop_hook_active": false,
+          "last_assistant_message": null,
+          "permission_mode": "default"
+        }
+      },
+      "event_stdout_examples": {
+        "SessionStart": {
+          "hookSpecificOutput": {
+            "hookEventName": "SessionStart",
+            "additionalContext": "Bounded NCKH guidance."
+          }
+        },
+        "UserPromptSubmit": {
+          "decision": "block",
+          "reason": "NCKH policy requires review."
+        },
+        "PreToolUse": {
+          "hookSpecificOutput": {
+            "hookEventName": "PreToolUse",
+            "permissionDecision": "deny",
+            "permissionDecisionReason": "NCKH policy requires review."
+          }
+        },
+        "PostToolUse": {
+          "hookSpecificOutput": {
+            "hookEventName": "PostToolUse",
+            "additionalContext": "NCKH artifact review is pending."
+          }
+        },
+        "Stop": {}
+      },
+      "native_trust": {
+        "project_layer_requires_trust": true,
+        "non_managed_definition_requires_exact_hash_trust": true,
+        "changed_definition": "skipped until reviewed/trusted",
+        "project_and_plugin_hooks_can_both_run": true,
+        "bypass_used": false
+      },
+      "pretool_unsupported_fields": [
+        "permissionDecision=ask",
+        "legacy decision=approve",
+        "continue",
+        "stopReason",
+        "suppressOutput"
+      ],
+      "pretool_unsupported_outcome": "failed hook run, error reported, tool continues",
+      "posttool_unsupported_fields": [
+        "updatedMCPToolOutput",
+        "suppressOutput"
+      ],
+      "stop_continue_fields": [
+        "decision=block with reason",
+        "exit 2 with stderr reason"
+      ],
+      "stop_guard": {
+        "input_field": "stop_hook_active",
+        "documented_numeric_cap": null,
+        "nckh_policy": "at most one reminder; no auto continuation"
+      },
+      "exit_behavior": {
+        "zero": "valid event JSON; Stop requires JSON, plain stdout invalid",
+        "two": "pre-tool/prompt deny; post feedback; Stop continuation",
+        "general_error_and_timeout": "native failure-path qualification pending"
+      },
+      "tool_coverage": {
+        "shell": "Bash matcher",
+        "exec_command": "Bash matcher; completion post event may arrive via write_stdin",
+        "apply_patch": "apply_patch or Edit/Write matcher aliases",
+        "mcp": "MCP canonical name",
+        "other_local_functions": "generally supported; some specialized paths may opt out",
+        "hosted_tools": "not covered",
+        "write_stdin": "does not rerun PreToolUse"
+      },
+      "config_example": {
+        "hooks": {
+          "SessionStart": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host codex --event SessionStart",
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "UserPromptSubmit": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host codex --event UserPromptSubmit",
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "PreToolUse": [
+            {
+              "matcher": "Bash|apply_patch|mcp__.*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host codex --event PreToolUse",
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "PostToolUse": [
+            {
+              "matcher": "Bash|apply_patch|mcp__.*",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host codex --event PostToolUse",
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "Stop": [
+            {
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host codex --event Stop",
+                  "timeout": 5
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "cursor": {
+      "source_url": "https://cursor.com/docs/hooks",
+      "fetched_date": "2026-10-04",
+      "status": "official-doc-confirmed; native-unverified",
+      "project_config_target": ".cursor/hooks.json",
+      "config_shape": "version:1 plus hooks.<lowerCamelEvent>[] direct handlers",
+      "supported_selected_events": [
+        "sessionStart",
+        "beforeSubmitPrompt",
+        "preToolUse",
+        "postToolUse",
+        "stop"
+      ],
+      "command_handler_fields": [
+        "command",
+        "type",
+        "timeout",
+        "matcher",
+        "failClosed",
+        "loop_limit"
+      ],
+      "common_input_fields": [
+        "conversation_id",
+        "generation_id",
+        "model",
+        "hook_event_name",
+        "cursor_version",
+        "workspace_roots",
+        "user_email",
+        "transcript_path"
+      ],
+      "optional_input_fields": [
+        "model_id",
+        "model_params"
+      ],
+      "common_input_example": {
+        "conversation_id": "example-conversation",
+        "generation_id": "example-generation",
+        "model": "<MODEL_SLUG>",
+        "hook_event_name": "preToolUse",
+        "cursor_version": "<NATIVE_VERSION>",
+        "workspace_roots": [
+          "/example-project"
+        ],
+        "user_email": null,
+        "transcript_path": null
+      },
+      "event_extra_input_examples": {
+        "sessionStart": {
+          "hook_event_name": "sessionStart",
+          "session_id": "example-conversation",
+          "is_background_agent": false,
+          "composer_mode": "agent"
+        },
+        "beforeSubmitPrompt": {
+          "hook_event_name": "beforeSubmitPrompt",
+          "prompt": "[removed: raw runtime content]",
+          "attachments": []
+        },
+        "preToolUse": {
+          "hook_event_name": "preToolUse",
+          "tool_name": "Shell",
+          "tool_input": {
+            "command": "<EXAMPLE_COMMAND>",
+            "working_directory": "/example-project"
+          },
+          "tool_use_id": "example-tool-use",
+          "cwd": "/example-project"
+        },
+        "postToolUse": {
+          "hook_event_name": "postToolUse",
+          "tool_name": "Shell",
+          "tool_input": {
+            "command": "<EXAMPLE_COMMAND>"
+          },
+          "tool_use_id": "example-tool-use",
+          "cwd": "/example-project",
+          "tool_output": "{}",
+          "duration": 1
+        },
+        "stop": {
+          "hook_event_name": "stop",
+          "status": "completed",
+          "loop_count": 0
+        }
+      },
+      "event_stdout_examples": {
+        "sessionStart": {
+          "additional_context": "Bounded NCKH guidance."
+        },
+        "beforeSubmitPrompt": {
+          "continue": false,
+          "user_message": "NCKH policy requires review."
+        },
+        "preToolUse": {
+          "permission": "deny",
+          "user_message": "NCKH policy requires review.",
+          "agent_message": "NCKH policy requires review."
+        },
+        "postToolUse": {
+          "additional_context": "NCKH artifact review is pending."
+        },
+        "stop": {}
+      },
+      "pretool_unsupported_decision": "permission=ask is parsed but not enforced",
+      "posttool_output_type": "tool_output is a JSON-stringified string, not a JSON value",
+      "session_blocking": "sessionStart continue=false is not enforced",
+      "exit_behavior": {
+        "zero": "use response JSON; invalid permission output blocks",
+        "two": "deny",
+        "other": "fail-open by default",
+        "failClosed_true": "block crash/timeout/nonzero/no-output failures"
+      },
+      "stop_guard": {
+        "input_field": "loop_count",
+        "config_field": "loop_limit",
+        "default_cap": 5,
+        "unlimited_value": null,
+        "nckh_policy": "no followup_message; at most one reminder"
+      },
+      "surfaces": {
+        "agent_chat_and_cmd_k": "selected Agent hooks apply",
+        "tab": "separate beforeTabFileRead/afterTabFileEdit",
+        "cloud_selected_supported": [
+          "preToolUse",
+          "postToolUse",
+          "beforeSubmitPrompt",
+          "stop"
+        ],
+        "cloud_unsupported": [
+          "sessionStart",
+          "sessionEnd",
+          "beforeMCPExecution",
+          "afterMCPExecution",
+          "beforeTabFileRead",
+          "afterTabFileEdit",
+          "workspaceOpen"
+        ],
+        "cloud_early_readonly": "hooks do not run",
+        "self_hosted_workers": "sessionStart/sessionEnd tied to worker claim/release"
+      },
+      "config_example": {
+        "version": 1,
+        "hooks": {
+          "sessionStart": [
+            {
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host cursor --event sessionStart",
+              "type": "command",
+              "timeout": 5
+            }
+          ],
+          "beforeSubmitPrompt": [
+            {
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host cursor --event beforeSubmitPrompt",
+              "type": "command",
+              "timeout": 5
+            }
+          ],
+          "preToolUse": [
+            {
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host cursor --event preToolUse",
+              "type": "command",
+              "timeout": 5,
+              "matcher": "Shell|Read|Write|MCP:.*",
+              "failClosed": true
+            }
+          ],
+          "postToolUse": [
+            {
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host cursor --event postToolUse",
+              "type": "command",
+              "timeout": 5,
+              "matcher": "Shell|Read|Write|MCP:.*"
+            }
+          ],
+          "stop": [
+            {
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host cursor --event stop",
+              "type": "command",
+              "timeout": 5,
+              "loop_limit": 1
+            }
+          ]
+        }
+      }
+    },
+    "agy": {
+      "source_url": "https://www.antigravity.google/docs/hooks/",
+      "fetched_date": "2026-10-04",
+      "status": "official-doc-confirmed; native-unverified",
+      "project_config_target": ".agents/hooks.json",
+      "config_shape": "top-level named hook groups; no root hooks wrapper",
+      "supported_selected_events": [
+        "PreToolUse",
+        "PostToolUse",
+        "PreInvocation",
+        "PostInvocation",
+        "Stop"
+      ],
+      "unsupported_session_prompt_events": [
+        "SessionStart",
+        "SessionEnd",
+        "UserPromptSubmit"
+      ],
+      "unsupported_mapping": "PreInvocation occurs before each model invocation; not a user-prompt-submit event",
+      "tool_event_structure": "array of matcher groups with hooks array",
+      "invocation_stop_structure": "direct handler array; matcher ignored",
+      "group_fields": [
+        "enabled",
+        "PreToolUse",
+        "PostToolUse",
+        "PreInvocation",
+        "PostInvocation",
+        "Stop"
+      ],
+      "command_handler_fields": [
+        "type",
+        "command",
+        "timeout"
+      ],
+      "command_handler_types": {
+        "type": "optional command, default command",
+        "command": "required string",
+        "timeout": "optional integer seconds, default 30"
+      },
+      "common_input_fields": [
+        "conversationId",
+        "workspacePaths",
+        "transcriptPath",
+        "artifactDirectoryPath",
+        "modelName"
+      ],
+      "common_input_example": {
+        "conversationId": "example-conversation",
+        "workspacePaths": [
+          "/example-project"
+        ],
+        "transcriptPath": "/example-app/brain/example-conversation/.system_generated/logs/transcript.jsonl",
+        "artifactDirectoryPath": "/example-app/brain/example-conversation",
+        "modelName": "<MODEL_NAME>"
+      },
+      "absent_documented_discriminator_fields": [
+        "hook_event_name",
+        "cwd",
+        "session_id"
+      ],
+      "event_extra_input_examples": {
+        "PreToolUse": {
+          "toolCall": {
+            "name": "generate_image",
+            "args": {
+              "Prompt": "[removed: raw runtime content]",
+              "ImageName": "<EXAMPLE_NAME>"
+            }
+          },
+          "stepIdx": 0
+        },
+        "PostToolUse": {
+          "toolCall": {
+            "name": "generate_image",
+            "args": {
+              "Prompt": "[removed: raw runtime content]",
+              "ImageName": "<EXAMPLE_NAME>"
+            }
+          },
+          "stepIdx": 0,
+          "error": ""
+        },
+        "PreInvocation": {
+          "invocationNum": 0,
+          "initialNumSteps": 0
+        },
+        "PostInvocation": {
+          "invocationNum": 0,
+          "initialNumSteps": 0
+        },
+        "Stop": {
+          "executionNum": 0,
+          "terminationReason": "model_stop",
+          "fullyIdle": true
+        }
+      },
+      "event_stdout_examples": {
+        "PreToolUse": {
+          "decision": "deny",
+          "reason": "NCKH policy requires review."
+        },
+        "PostToolUse": {},
+        "PreInvocation": {
+          "injectSteps": []
+        },
+        "PostInvocation": {
+          "injectSteps": [],
+          "terminationBehavior": ""
+        },
+        "Stop": {
+          "decision": "stop"
+        }
+      },
+      "pretool_decision_enum": [
+        "allow",
+        "deny",
+        "ask",
+        "force_ask",
+        "deny_unless_prior_grant"
+      ],
+      "pretool_optional_output_fields": [
+        "reason",
+        "permissionOverrides"
+      ],
+      "posttool_output": "empty JSON object only documented",
+      "injection_step_fields": [
+        "toolCall",
+        "userMessage",
+        "ephemeralMessage"
+      ],
+      "postinvocation_termination_enum": [
+        "force_continue",
+        "terminate",
+        ""
+      ],
+      "stop_decision_semantics": "continue re-enters loop; every other string allows stop",
+      "stop_guard": {
+        "input_fields": [
+          "executionNum",
+          "fullyIdle"
+        ],
+        "native_cap": null,
+        "nckh_policy": "owned idempotence; no continue/force_continue; at most one reminder"
+      },
+      "exit_behavior": {
+        "zero": null,
+        "two": null,
+        "crash": null,
+        "malformed_output": null,
+        "timeout": null,
+        "status": "not specified by fetched official page"
+      },
+      "surfaces": [
+        "Antigravity 2.0",
+        "Antigravity CLI",
+        "Antigravity IDE"
+      ],
+      "config_example": {
+        "nckh-portable-checks": {
+          "enabled": false,
+          "PreToolUse": [
+            {
+              "matcher": "run_command|write_to_file|generate_image",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host agy --event PreToolUse",
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "PostToolUse": [
+            {
+              "matcher": "run_command|write_to_file|generate_image",
+              "hooks": [
+                {
+                  "type": "command",
+                  "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host agy --event PostToolUse",
+                  "timeout": 5
+                }
+              ]
+            }
+          ],
+          "PreInvocation": [
+            {
+              "type": "command",
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host agy --event PreInvocation",
+              "timeout": 5
+            }
+          ],
+          "PostInvocation": [
+            {
+              "type": "command",
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host agy --event PostInvocation",
+              "timeout": 5
+            }
+          ],
+          "Stop": [
+            {
+              "type": "command",
+              "command": "<OWNED_EXECUTABLE> <OWNED_RUNNER> --host agy --event Stop",
+              "timeout": 5
+            }
+          ]
+        }
+      }
+    }
+  },
+  "blockers": [
+    "Native host version/surface/event failure-path evidence absent.",
+    "AGY exit/error/timeout semantics and native loop cap unspecified.",
+    "Local K-Dense archive resolved commit unknown; selected-file hashes and MIT license verified.",
+    "Scientific/native/human artifact acceptance not evaluated."
+  ]
+}

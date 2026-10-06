@@ -1,0 +1,528 @@
+{
+  "after_sha256": null,
+  "attempt": "write-policy-deny",
+  "backend_attestation": "not-observed",
+  "before_sha256": null,
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/observations/write-policy-deny/preToolUse/9aa05336608a45a795d2a2fe868e9c9f.json",
+      "sha256": "85edd7b13380d0a3a763229470de19691f6e90299d02cdabf3fe29513b7af314"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/observations/write-policy-deny/preToolUse/9e7aa08ae6c64eaa93a939a580d4a280.json",
+      "sha256": "e6ad20c306c93be54a11c94bb2f6432ff7d3aaf4a3def4ef54b41cd124c8bf80"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/observations/write-policy-deny/sessionStart/020c6a5daabb488799f579a90846b352.json",
+      "sha256": "d4655123d7f954e25bd3569c6ca43edeec30976f5210f8d33e3af24873936755"
+    }
+  ],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-0746-r35-cursor-file-attempt-01/commands/cursor-file-write-policy-deny.json",
+    "sha256": "93f36af2c6d38ba0208b789e4494b1ab1b05faf1d9481188dc439712baf93fdf"
+  },
+  "completed_tool_calls": [
+    {
+      "call_id": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0",
+      "model_call_id": "623479fe-648d-46b5-bb13-82185db06395-0-dyfy",
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "completed",
+      "timestamp_ms": 1791161759751,
+      "tool_call": {
+        "completedAtMs": "1791161759726",
+        "editToolCall": {
+          "result": {
+            "error": {
+              "error": "plan-only-mutation\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "modelVisibleError": "plan-only-mutation\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "path": ""
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791161740234",
+        "toolCallId": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0"
+      },
+      "type": "tool_call"
+    }
+  ],
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0746-r35-cursor-file-attempt-01/definitions/write-policy-deny.json",
+    "sha256": "623ec8fdf5dcbb6ba0e3dca44cea01eff003a4a2d51fca074fafe1b2de867e34"
+  },
+  "effort_requested": "xhigh",
+  "exit_code": 0,
+  "fault_origin": "none",
+  "file_exists": false,
+  "invalid_stdout_lines": 0,
+  "kind": "Write",
+  "mode": "policy-deny",
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_callbacks": [
+    {
+      "attempt": "write-policy-deny",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T00:55:54.173226+00:00",
+      "control_sha256": "f452fcb83ec1f64505a8c32efe14c134a604dfe21aa33f4d99940d4142b6d8b9",
+      "event": "preToolUse",
+      "fault_origin": "none",
+      "fault_selected": true,
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "6c74ea3851f205f9d07e6f1a795cfa73e80cd576b85d03f8eaea6b6fdc01b743",
+      "input_size": 1066,
+      "mode": "policy-deny",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-deny.txt"
+      },
+      "native_session_hash": "33761dd4a49add9455d0f26b46965eb0beab6cb6011d893d9976c2dce7aa9e19",
+      "native_step_idx": null,
+      "native_tool_name": "Write",
+      "native_tool_use_id": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 47944,
+      "output_sha256": "4e0a6d71e6bb04ed1eca84ee987b3b1c089869ab743a388bfc73619a374fec30",
+      "parent_pid": 55724,
+      "reported_event": "preToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "permission": "deny",
+        "user_message": "plan-only-mutation"
+      },
+      "runner_pid": 19096,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T00:55:53.585201+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "content",
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-policy-deny",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T00:55:42.163798+00:00",
+      "control_sha256": "f452fcb83ec1f64505a8c32efe14c134a604dfe21aa33f4d99940d4142b6d8b9",
+      "event": "preToolUse",
+      "fault_origin": "none",
+      "fault_selected": true,
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "8b594207cd1c45c5afb9327ee62585bb2ff91a4479f15a33eefb83fb6e914e0a",
+      "input_size": 779,
+      "mode": "policy-deny",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-deny.txt"
+      },
+      "native_session_hash": "33761dd4a49add9455d0f26b46965eb0beab6cb6011d893d9976c2dce7aa9e19",
+      "native_step_idx": null,
+      "native_tool_name": "Read",
+      "native_tool_use_id": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 35816,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 44596,
+      "reported_event": "preToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 26480,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T00:55:41.119214+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-policy-deny",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T00:55:24.906826+00:00",
+      "control_sha256": "f452fcb83ec1f64505a8c32efe14c134a604dfe21aa33f4d99940d4142b6d8b9",
+      "event": "sessionStart",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "is_background_agent",
+        "model",
+        "session_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "a3488973a12554bbc15b959959ae5ca609767df5da063e5efea9d4a55f1391ae",
+      "input_size": 505,
+      "mode": "policy-deny",
+      "native_model": "grok-4.7-xhigh",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "33761dd4a49add9455d0f26b46965eb0beab6cb6011d893d9976c2dce7aa9e19",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 34352,
+      "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+      "parent_pid": 44924,
+      "reported_event": "sessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "additional_context": "writing-resource-advice-only"
+      },
+      "runner_pid": 18248,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T00:55:24.196267+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    }
+  ],
+  "native_frames": [
+    {
+      "apiKeySource": "login",
+      "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+      "model": "Grok 4.7 500K Extra High",
+      "permissionMode": "default",
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "Use the native Write file tool exactly once in this authorized scratch project. Do not use shell/terminal, any other tool, inspect other files, call agents, retry or work around denial. These files contain synthetic test markers only. After the one attempted call say ORACLE_ATTEMPT_FINISHED and stop. Write exactly NCKH_CURSOR_FILE_ORACLE followed by a newline to oracles/r35-cursor-write-deny.txt",
+            "type": "text"
+          }
+        ],
+        "role": "user"
+      },
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "type": "user"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": "I will use the native",
+      "timestamp_ms": 1791161737073,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " Write file tool exactly",
+      "timestamp_ms": 1791161737158,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " once to write NCKH_CURSOR_FILE_ORACLE",
+      "timestamp_ms": 1791161737244,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " to oracles/r35-cursor-write-deny.txt.",
+      "timestamp_ms": 1791161737337,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " Then I will say ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791161737513,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " and stop.",
+      "timestamp_ms": 1791161737514,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "completed",
+      "timestamp_ms": 1791161740239,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "I'll write that marker once with the native file tool, then stop.",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "model_call_id": "623479fe-648d-46b5-bb13-82185db06395-0-dyfy",
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "timestamp_ms": 1791161740253,
+      "type": "assistant"
+    },
+    {
+      "call_id": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0",
+      "model_call_id": "623479fe-648d-46b5-bb13-82185db06395-0-dyfy",
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "started",
+      "timestamp_ms": 1791161740253,
+      "tool_call": {
+        "editToolCall": {
+          "args": {
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-deny.txt",
+            "streamContent": "NCKH_CURSOR_FILE_ORACLE\n"
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791161740234",
+        "toolCallId": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "call_id": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0",
+      "model_call_id": "623479fe-648d-46b5-bb13-82185db06395-0-dyfy",
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "completed",
+      "timestamp_ms": 1791161759751,
+      "tool_call": {
+        "completedAtMs": "1791161759726",
+        "editToolCall": {
+          "result": {
+            "error": {
+              "error": "plan-only-mutation\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "modelVisibleError": "plan-only-mutation\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "path": ""
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791161740234",
+        "toolCallId": "call-cc64aaca-952e-4d3a-bfb6-720c0c1c238b-0\nfc_0cffb9a7-cd3a-9449-bdfb-7f8ed40fe64f_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": "I will attempt the native",
+      "timestamp_ms": 1791161762689,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " Write file tool exactly",
+      "timestamp_ms": 1791161762689,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " once. I will then write",
+      "timestamp_ms": 1791161762689,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791161762689,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " to the specified oracle",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " file and stop. I will",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " not use shell commands,",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " other tools, file inspection,",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " agents, retries, or",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " workarounds.",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": "\n\nThe write was denied",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " with a plan-only-mutation",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " error. I will not retry",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " or work around it. ",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": "I will write ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "delta",
+      "text": " and stop.",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "completed",
+      "timestamp_ms": 1791161762690,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "ORACLE_ATTEMPT_FINISHED",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "type": "assistant"
+    },
+    {
+      "duration_api_ms": 33341,
+      "duration_ms": 33341,
+      "is_error": false,
+      "request_id": "623479fe-648d-46b5-bb13-82185db06395",
+      "result": "I'll write that marker once with the native file tool, then stop.ORACLE_ATTEMPT_FINISHED",
+      "session_id": "c4941434-d9f9-40cc-a4aa-f37e89b7e48f",
+      "subtype": "success",
+      "type": "result",
+      "usage": {
+        "cacheReadTokens": 33920,
+        "cacheWriteTokens": 0,
+        "inputTokens": 32431,
+        "outputTokens": 642
+      }
+    }
+  ],
+  "path": "oracles/r35-cursor-write-deny.txt",
+  "policy_receipts": [
+    {
+      "decision": "block",
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/policy-receipts/write-policy-deny/preToolUse/22d6cfbe0d9d14a03d835a85f7ef582d9b8a6438e66c68bba6942479ba435a4e.json",
+      "reason_codes": [
+        "plan-only-mutation"
+      ],
+      "sha256": "00ac07bd8dfeffb49170dfc56087bd3ce303dda577e79449163c1791ed92a34c"
+    },
+    {
+      "decision": "allow",
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/policy-receipts/write-policy-deny/preToolUse/bef4932c227ce7bd3e6603fd567d462f6ded80fcf9f4dafeefe68b41458da3d0.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "7d5b866daaa5287995236c4c248988fce45896e09760b44f05f755bdb73392d6"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed"
+}

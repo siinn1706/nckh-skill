@@ -1,0 +1,8 @@
+{
+  "status": "owner-feedback-and-native-grant-recorded; inventory-not-recorded",
+  "operation": "qualification-run.py bootstrap",
+  "observed_error": "RuntimeError: Ambiguous installed Codex executables",
+  "cause": "A broad package search included an old npm promotion directory and the active codex package.",
+  "verification": "The installed codex.ps1 entrypoint invokes the active @openai/codex/bin/codex.js loader.",
+  "repair": "Resolve the executable inside that active package only; preserve the recorded feedback and continue with inventory."
+}

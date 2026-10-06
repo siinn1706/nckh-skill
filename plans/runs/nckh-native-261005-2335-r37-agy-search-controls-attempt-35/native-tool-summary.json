@@ -1,0 +1,72 @@
+{
+  "failed_frozen_oracles": 4,
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/frozen-brief.json",
+    "sha256": "1305d519241c7787be151cc68175096c2366d92cad40e992aa261a01a5b36063"
+  },
+  "full_native_gate": "unchecked",
+  "model_retries": 0,
+  "model_turns": 4,
+  "results": [
+    {
+      "attempt": "find-by-name-public",
+      "final_marker_observed": false,
+      "fixture_expected": true,
+      "native_expected": false,
+      "policy_expected": false,
+      "private": false,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/find-by-name-public.json",
+        "sha256": "c0c46190ff0a4c9109da213892fab319ee7eaf991a97fac9fce601c4aa151fc8"
+      },
+      "status": "failed-frozen-tool-oracle-retained",
+      "tool": "find_by_name"
+    },
+    {
+      "attempt": "find-by-name-private",
+      "final_marker_observed": true,
+      "fixture_expected": true,
+      "native_expected": true,
+      "policy_expected": false,
+      "private": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/find-by-name-private.json",
+        "sha256": "54585e7213d914ff4fd0706959c8a736138983204c83d8d3d2bf184042505aa6"
+      },
+      "status": "failed-frozen-tool-oracle-retained",
+      "tool": "find_by_name"
+    },
+    {
+      "attempt": "grep-search-public",
+      "final_marker_observed": false,
+      "fixture_expected": true,
+      "native_expected": false,
+      "policy_expected": false,
+      "private": false,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/grep-search-public.json",
+        "sha256": "16341f10feb9c0dd95318de3f1440f4f04d259cf57695ce6d5d8555eaf0229b3"
+      },
+      "status": "failed-frozen-tool-oracle-retained",
+      "tool": "grep_search"
+    },
+    {
+      "attempt": "grep-search-private",
+      "final_marker_observed": false,
+      "fixture_expected": true,
+      "native_expected": false,
+      "policy_expected": false,
+      "private": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/attempts/grep-search-private.json",
+        "sha256": "c835b97b0cc987a7b737fc494a6292cc2a2c8e54c02fea512bb3705a2ec583e3"
+      },
+      "status": "failed-frozen-tool-oracle-retained",
+      "tool": "grep_search"
+    }
+  ],
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "recorded-four-native-agy-search-tool-outcomes",
+  "verified_controls": 0
+}

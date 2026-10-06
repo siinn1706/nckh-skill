@@ -1,0 +1,1144 @@
+{
+  "status": "verified-scoped-native51-process-exit-with-historical-capture-correction",
+  "timestamp_utc": "2026-10-05T21:08:48.711704+00:00",
+  "raw_identity_union": 2968,
+  "raw_precision_live_matches": 27,
+  "preexisting_applications_preserved": 27,
+  "current_temporally_valid_captured_identities": 358,
+  "current_snapshot_rows_rejected": 20,
+  "current_scoped_owned_live": 0,
+  "current_project_command_matches": 0,
+  "native_terminal_exit_code": 0,
+  "monitor_exit_code": 1,
+  "continuous_monitor_success": false,
+  "continuous_capture_after_failure": "unverified",
+  "causes": [
+    "tree traversal expands parent PID without requiring child creation after the retained parent",
+    "FILETIME exact comparison against CIM microsecond timestamps can falsely classify a live process as a reused PID",
+    "monitor os.replace WinError5 is preserved; the exact lock holder is unestablished"
+  ],
+  "historical_raw_zero_live_claim": "not-currently-qualified; source records preserved without regrading",
+  "classified_live": [
+    {
+      "pid": 14896,
+      "name": "wslhost.exe",
+      "creation_filetime_ticks": 134353828057436110,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057436111,
+          "created_before_root_seconds": 324033.6936331
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057436111,
+          "created_before_root_seconds": 324033.6936331
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 31036,
+      "name": "com.docker.backend.exe",
+      "creation_filetime_ticks": 134353828030851180,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828030851188,
+          "created_before_root_seconds": 324036.3521254
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828030851188,
+          "created_before_root_seconds": 324036.3521254
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 57528,
+      "name": "Discord.exe",
+      "creation_filetime_ticks": 134355168365002470,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.process-tree.json",
+            "sha256": "fc9f367bf82ce0cd4c0b1c1762c700f9eca22cb549763a87411261cb672b56dd"
+          },
+          "root_pid": 14500,
+          "root_ticks": 134356915118307168,
+          "recorded_process_ticks": 134355168365002479,
+          "created_before_root_seconds": 174675.3304689
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 44936,
+      "name": "wsl.exe",
+      "creation_filetime_ticks": 134353828040019700,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828040019703,
+          "created_before_root_seconds": 324035.4352739
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828040019703,
+          "created_before_root_seconds": 324035.4352739
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 37804,
+      "name": "cloudflared.exe",
+      "creation_filetime_ticks": 134353828520398780,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828520398783,
+          "created_before_root_seconds": 323987.3973659
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828520398783,
+          "created_before_root_seconds": 323987.3973659
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 25236,
+      "name": "Docker Desktop.exe",
+      "creation_filetime_ticks": 134353828047586650,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828047586654,
+          "created_before_root_seconds": 324034.6785788
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828047586654,
+          "created_before_root_seconds": 324034.6785788
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 47292,
+      "name": "Docker Desktop.exe",
+      "creation_filetime_ticks": 134353828039354100,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039354105,
+          "created_before_root_seconds": 324035.5018337
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039354105,
+          "created_before_root_seconds": 324035.5018337
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 24124,
+      "name": "wsl.exe",
+      "creation_filetime_ticks": 134353828040036140,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828040036141,
+          "created_before_root_seconds": 324035.4336301
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828040036141,
+          "created_before_root_seconds": 324035.4336301
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 43308,
+      "name": "conhost.exe",
+      "creation_filetime_ticks": 134353828025571950,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828025571956,
+          "created_before_root_seconds": 324036.8800486
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828025571956,
+          "created_before_root_seconds": 324036.8800486
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 35108,
+      "name": "cmd.exe",
+      "creation_filetime_ticks": 134353828518205490,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828518205498,
+          "created_before_root_seconds": 323987.6166944
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828518205498,
+          "created_before_root_seconds": 323987.6166944
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 46988,
+      "name": "conhost.exe",
+      "creation_filetime_ticks": 134353828518310720,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828518310723,
+          "created_before_root_seconds": 323987.6061719
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828518310723,
+          "created_before_root_seconds": 323987.6061719
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 43820,
+      "name": "conhost.exe",
+      "creation_filetime_ticks": 134353828057842060,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057842067,
+          "created_before_root_seconds": 324033.6530375
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057842067,
+          "created_before_root_seconds": 324033.6530375
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 21916,
+      "name": "com.docker.backend.exe",
+      "creation_filetime_ticks": 134353828025459340,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828025459345,
+          "created_before_root_seconds": 324036.8913097
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828025459345,
+          "created_before_root_seconds": 324036.8913097
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 31088,
+      "name": "Discord.exe",
+      "creation_filetime_ticks": 134355168350622700,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.process-tree.json",
+            "sha256": "fc9f367bf82ce0cd4c0b1c1762c700f9eca22cb549763a87411261cb672b56dd"
+          },
+          "root_pid": 14500,
+          "root_ticks": 134356915118307168,
+          "recorded_process_ticks": 134355168350622704,
+          "created_before_root_seconds": 174676.7684464
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 45236,
+      "name": "wsl.exe",
+      "creation_filetime_ticks": 134353828039881770,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039881774,
+          "created_before_root_seconds": 324035.4490668
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039881774,
+          "created_before_root_seconds": 324035.4490668
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 40252,
+      "name": "Discord.exe",
+      "creation_filetime_ticks": 134355168348785280,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.process-tree.json",
+            "sha256": "fc9f367bf82ce0cd4c0b1c1762c700f9eca22cb549763a87411261cb672b56dd"
+          },
+          "root_pid": 14500,
+          "root_ticks": 134356915118307168,
+          "recorded_process_ticks": 134355168348785281,
+          "created_before_root_seconds": 174676.9521887
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 14864,
+      "name": "wslhost.exe",
+      "creation_filetime_ticks": 134353828057532580,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057532587,
+          "created_before_root_seconds": 324033.6839855
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057532587,
+          "created_before_root_seconds": 324033.6839855
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 9620,
+      "name": "MoNotificationUx.exe",
+      "creation_filetime_ticks": 134356959025480620,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0400-r37-cursor-directory-denial-attempt-50/commands/native-cursor-directory-denial.process-tree.json",
+            "sha256": "ba71afbe7104cde2552a917b2b508d15436e85fd52e4356c6cc58a7ab43c27d9"
+          },
+          "root_pid": 54032,
+          "root_ticks": 134357061504580538,
+          "recorded_process_ticks": 134356959025480624,
+          "created_before_root_seconds": 10247.9099914
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0330-r37-agy-tool-route-inspection-attempt-46/commands/agy-agents-help.process-tree.json",
+            "sha256": "364eb0afced5277c9b759ce77c8432c8bb2842264f59bc0156c525d1786f4fb6"
+          },
+          "root_pid": 14412,
+          "root_ticks": 134357029111960727,
+          "recorded_process_ticks": 134356959025480624,
+          "created_before_root_seconds": 7008.6480103
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0215-r37-cursor-workspace-startup-attempt-43/commands/native-cursor-workspace-startup.process-tree.json",
+            "sha256": "30557fd4a114e64686080f49592f1fbfd14874857b5ac58cbccf082effa86897"
+          },
+          "root_pid": 7564,
+          "root_ticks": 134357003652426950,
+          "recorded_process_ticks": 134356959025480624,
+          "created_before_root_seconds": 4462.6946326
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 57984,
+      "name": "Discord.exe",
+      "creation_filetime_ticks": 134355168343127940,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.process-tree.json",
+            "sha256": "fc9f367bf82ce0cd4c0b1c1762c700f9eca22cb549763a87411261cb672b56dd"
+          },
+          "root_pid": 14500,
+          "root_ticks": 134356915118307168,
+          "recorded_process_ticks": 134355168343127942,
+          "created_before_root_seconds": 174677.5179226
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 26900,
+      "name": "Discord.exe",
+      "creation_filetime_ticks": 134355168351255390,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.process-tree.json",
+            "sha256": "fc9f367bf82ce0cd4c0b1c1762c700f9eca22cb549763a87411261cb672b56dd"
+          },
+          "root_pid": 14500,
+          "root_ticks": 134356915118307168,
+          "recorded_process_ticks": 134355168351255394,
+          "created_before_root_seconds": 174676.7051774
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 47920,
+      "name": "docker-sandbox.exe",
+      "creation_filetime_ticks": 134353828039294370,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039294371,
+          "created_before_root_seconds": 324035.5078071
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039294371,
+          "created_before_root_seconds": 324035.5078071
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 50220,
+      "name": "Discord.exe",
+      "creation_filetime_ticks": 134355168375919760,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.process-tree.json",
+            "sha256": "fc9f367bf82ce0cd4c0b1c1762c700f9eca22cb549763a87411261cb672b56dd"
+          },
+          "root_pid": 14500,
+          "root_ticks": 134356915118307168,
+          "recorded_process_ticks": 134355168375919769,
+          "created_before_root_seconds": 174674.2387399
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 37356,
+      "name": "com.docker.build.exe",
+      "creation_filetime_ticks": 134353828038820800,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828038820801,
+          "created_before_root_seconds": 324035.5551641
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828038820801,
+          "created_before_root_seconds": 324035.5551641
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 43036,
+      "name": "Docker Desktop.exe",
+      "creation_filetime_ticks": 134353828025129350,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828025129356,
+          "created_before_root_seconds": 324036.9243086
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828025129356,
+          "created_before_root_seconds": 324036.9243086
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 45956,
+      "name": "wsl.exe",
+      "creation_filetime_ticks": 134353828039889770,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039889771,
+          "created_before_root_seconds": 324035.4482671
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828039889771,
+          "created_before_root_seconds": 324035.4482671
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 26980,
+      "name": "conhost.exe",
+      "creation_filetime_ticks": 134353828057784190,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057784194,
+          "created_before_root_seconds": 324033.6588248
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828057784194,
+          "created_before_root_seconds": 324033.6588248
+        }
+      ],
+      "process_stop_performed": false
+    },
+    {
+      "pid": 43428,
+      "name": "Docker Desktop.exe",
+      "creation_filetime_ticks": 134353828048100900,
+      "classification": "preexisting-process-impossible-as-descendant-of-retained-test-root",
+      "witnesses": [
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json",
+            "sha256": "bc6cbe94ca25cc4bbfa59090c3a6b54730acd60f2dc8b2442dcc9425150399f4"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828048100904,
+          "created_before_root_seconds": 324034.6271538
+        },
+        {
+          "snapshot": {
+            "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/commands/native-cursor-grep-faults.process-tree.json.writing",
+            "sha256": "b9495289a7534176d05b3c7b2e7ec30b3612473b3910a0a914a74b7022ae6d35"
+          },
+          "root_pid": 26104,
+          "root_ticks": 134357068394372442,
+          "recorded_process_ticks": 134353828048100904,
+          "created_before_root_seconds": 324034.6271538
+        }
+      ],
+      "process_stop_performed": false
+    }
+  ],
+  "owned_identity_keys": [
+    "26104:134357068394372442",
+    "46148:134357068470819233",
+    "16104:134357068835859025",
+    "33772:134357069210476660",
+    "1428:134357069213296042",
+    "29888:134357069215894818",
+    "7328:134357069218547849",
+    "37492:134357069221275674",
+    "23472:134357069224609120",
+    "43868:134357069228171343",
+    "44672:134357069231748360",
+    "39448:134357069235329337",
+    "45600:134357069239173977",
+    "22404:134357069242791369",
+    "43112:134357069246452579",
+    "29040:134357069250038562",
+    "51212:134357069253382362",
+    "22128:134357069256703205",
+    "49052:134357069260164255",
+    "25296:134357069486202030",
+    "53124:134357069488818852",
+    "52396:134357069491464465",
+    "35900:134357069537272942",
+    "9696:134357069623790223",
+    "47080:134357069626525154",
+    "24116:134357069629168485",
+    "53900:134357069631893306",
+    "57956:134357069634683146",
+    "50256:134357069637607016",
+    "51468:134357069640669480",
+    "31956:134357069643791198",
+    "55916:134357069647105606",
+    "57340:134357069650500991",
+    "44672:134357069654105568",
+    "48612:134357069657604183",
+    "55592:134357070440381899",
+    "47216:134357070443229337",
+    "46084:134357070445811798",
+    "26552:134357070448456235",
+    "58640:134357070451200276",
+    "24116:134357070454348385",
+    "25480:134357070457682655",
+    "44620:134357070461220454",
+    "57484:134357070464967735",
+    "41004:134357070468836127",
+    "59376:134357070474759588",
+    "20116:134357070478487764",
+    "54452:134357070482174466",
+    "52632:134357070485906705",
+    "56492:134357070489463593",
+    "31192:134357070493134155",
+    "23472:134357070640391918",
+    "17840:134357070643192637",
+    "12608:134357070645850667",
+    "13144:134357070703986878",
+    "57448:134357070785819057",
+    "3008:134357070788508738",
+    "8376:134357070791113693",
+    "53952:134357070793785517",
+    "34324:134357070796523840",
+    "13760:134357070799318120",
+    "30708:134357070802351465",
+    "49140:134357070805534171",
+    "34940:134357070808957277",
+    "16576:134357070812407907",
+    "13208:134357070815962390",
+    "58336:134357070819566088",
+    "29204:134357072006566799",
+    "44404:134357072009363107",
+    "2452:134357072011962510",
+    "46076:134357072014627098",
+    "42964:134357072017355542",
+    "38048:134357072020715120",
+    "51300:134357072024157513",
+    "58628:134357072027667424",
+    "35384:134357072031479603",
+    "45752:134357072035264459",
+    "48296:134357072039073628",
+    "18696:134357072042773332",
+    "58704:134357072046501235",
+    "48332:134357072050102722",
+    "46980:134357072053757691",
+    "31244:134357072057376368",
+    "55880:134357072230177024",
+    "2416:134357072232633619",
+    "50156:134357072235233516",
+    "56944:134357072480193833",
+    "19356:134357072561650157",
+    "41996:134357072564426691",
+    "22936:134357072567020960",
+    "2868:134357072569669100",
+    "56044:134357072572380469",
+    "18124:134357072575216374",
+    "23528:134357072578345554",
+    "39076:134357072581585745",
+    "18860:134357072584937016",
+    "47628:134357072588526281",
+    "53160:134357072592107983",
+    "22400:134357072595679524",
+    "52296:134357074733480422",
+    "35252:134357074736365891",
+    "57228:134357074738984541",
+    "4424:134357074741642210",
+    "5728:134357074744415627",
+    "13616:134357074747850188",
+    "57236:134357074751342864",
+    "41568:134357074754874742",
+    "32636:134357074758431627",
+    "29680:134357074761981185",
+    "58424:134357074765763490",
+    "58628:134357074769298802",
+    "56944:134357074773164766",
+    "5944:134357074781234152",
+    "4132:134357074784726264",
+    "32408:134357074788475748",
+    "44740:134357074935399721",
+    "32876:134357074938012716",
+    "53676:134357074940677442",
+    "46716:134357074993233544",
+    "12736:134357075074940241",
+    "4728:134357075077841324",
+    "46000:134357075080505516",
+    "37980:134357075083175116",
+    "19588:134357075086010149",
+    "45300:134357075088927610",
+    "6096:134357075091923030",
+    "50472:134357075094979134",
+    "20532:134357075098251268",
+    "47436:134357075101704800",
+    "13208:134357075105349165",
+    "30624:134357075108870340",
+    "41520:134357075685984368",
+    "15716:134357075689006614",
+    "6748:134357075691631024",
+    "44680:134357075694240642",
+    "9628:134357075696942895",
+    "33976:134357075700269251",
+    "50868:134357075703685660",
+    "26680:134357075707199026",
+    "44932:134357075710788038",
+    "11620:134357075714406284",
+    "38272:134357075718022317",
+    "32524:134357075721698510",
+    "31540:134357075725317613",
+    "49664:134357075728892883",
+    "28508:134357075732385233",
+    "28736:134357075736171923",
+    "53564:134357075902517482",
+    "31936:134357075905090533",
+    "37204:134357075907683569",
+    "48384:134357075960808807",
+    "49288:134357076044593430",
+    "56816:134357076047562537",
+    "47572:134357076050265745",
+    "43512:134357076053360512",
+    "36960:134357076056383124",
+    "31936:134357076059493545",
+    "30356:134357076062654781",
+    "9608:134357076065841915",
+    "27896:134357076069102388",
+    "54260:134357076072355013",
+    "31560:134357076075628381",
+    "40496:134357076079004237",
+    "37868:134357068470886201",
+    "28388:134357068477657555",
+    "26008:134357068837570041",
+    "52716:134357069217356269",
+    "51920:134357069220232836",
+    "42280:134357069227936352",
+    "32876:134357069237105235",
+    "36976:134357069242746867",
+    "3556:134357069246120782",
+    "20128:134357069248242854",
+    "44740:134357069257195349",
+    "30136:134357069258531302",
+    "7628:134357069265616038",
+    "43016:134357069269351917",
+    "36824:134357069271474290",
+    "44532:134357069495459234",
+    "50884:134357069630643842",
+    "52792:134357069633513045",
+    "23984:134357069636346062",
+    "9584:134357069653359770",
+    "35308:134357069661676242",
+    "44424:134357069666221829",
+    "36236:134357069669744057",
+    "13208:134357070447367575",
+    "44368:134357070450241713",
+    "42084:134357070460930654",
+    "22152:134357070466092517",
+    "29320:134357070477889540",
+    "11600:134357070484511717",
+    "26716:134357070494200084",
+    "59260:134357070497744300",
+    "13088:134357070501661081",
+    "53020:134357070504982602",
+    "47712:134357070792555627",
+    "6796:134357070795291461",
+    "51104:134357070798041668",
+    "42080:134357070801114890",
+    "46992:134357070815455684",
+    "9716:134357070824033913",
+    "40600:134357070827976847",
+    "30280:134357072016360263",
+    "48168:134357072019880018",
+    "43956:134357072027667451",
+    "54080:134357072031961060",
+    "50904:134357072039863089",
+    "48432:134357072042550172",
+    "19312:134357072045475665",
+    "39956:134357072049362168",
+    "49908:134357072052978116",
+    "49680:134357072059342714",
+    "23068:134357072062634999",
+    "50584:134357072236562462",
+    "56016:134357072239306538",
+    "35624:134357072241955787",
+    "26552:134357072486605811",
+    "3576:134357072573888719",
+    "19092:134357072583726484",
+    "37568:134357072591281861",
+    "5396:134357072596180551",
+    "32420:134357072601112043",
+    "28636:134357072608274915",
+    "49048:134357074740530842",
+    "29096:134357074747253432",
+    "42356:134357074773957072",
+    "14344:134357074776079410",
+    "12736:134357074783127270",
+    "41108:134357074795212249",
+    "23072:134357074799537666",
+    "29880:134357074802554689",
+    "50628:134357074821489618",
+    "4132:134357075093673103",
+    "43648:134357075095062160",
+    "50764:134357075100776577",
+    "42480:134357075104796710",
+    "13960:134357075109145324",
+    "22680:134357075117724820",
+    "42804:134357075693289348",
+    "19284:134357075695980463",
+    "29760:134357075706887687",
+    "26080:134357075711459551",
+    "45200:134357075722332699",
+    "11008:134357075728122845",
+    "51196:134357075729486151",
+    "43232:134357075735150612",
+    "29320:134357075741676262",
+    "45556:134357075744964775",
+    "15684:134357075750259735",
+    "5728:134357075754375791",
+    "9572:134357075909042093",
+    "57816:134357076052461246",
+    "36972:134357076053848686",
+    "16016:134357076076280598",
+    "38216:134357076079927703",
+    "38120:134357076086540549",
+    "35124:134357076089583314",
+    "46972:134357068477756594",
+    "58656:134357068859939255",
+    "45936:134357069221306142",
+    "44828:134357069260156666",
+    "17100:134357069273618135",
+    "22756:134357069496537779",
+    "25144:134357069655845285",
+    "37704:134357069663088811",
+    "37212:134357069667328394",
+    "34788:134357069679675333",
+    "47844:134357069686512723",
+    "18000:134357070495954498",
+    "15676:134357070503438818",
+    "30312:134357070506827375",
+    "22760:134357070509732004",
+    "19356:134357070817993364",
+    "54608:134357070825183453",
+    "9196:134357070829874724",
+    "57932:134357070841051717",
+    "32944:134357070847471802",
+    "45504:134357072017490871",
+    "43616:134357072054477973",
+    "43292:134357072060516074",
+    "57048:134357072575084711",
+    "45348:134357072592274481",
+    "56276:134357072597503351",
+    "49216:134357072609760609",
+    "58848:134357072620854471",
+    "9444:134357072627936828",
+    "9712:134357074741632388",
+    "55616:134357074785291945",
+    "18388:134357074796585660",
+    "52848:134357074801906126",
+    "40196:134357074804223659",
+    "48500:134357074806750006",
+    "22420:134357074809801677",
+    "29580:134357075095170332",
+    "44424:134357075105953498",
+    "46124:134357075106100385",
+    "56060:134357075111924813",
+    "44972:134357075118957488",
+    "48352:134357075130642201",
+    "40060:134357075137148797",
+    "54560:134357075732154231",
+    "46632:134357075736856374",
+    "54512:134357075746030891",
+    "44316:134357075751335510",
+    "16576:134357076053750676",
+    "48352:134357076078591498",
+    "49660:134357076080933461",
+    "53420:134357076090604301",
+    "58864:134357076100319311",
+    "5396:134357076109177915",
+    "37428:134357076109261799",
+    "50548:134357076118235368",
+    "37400:134357068860297907",
+    "58552:134357069221411724",
+    "9416:134357069260252192",
+    "41368:134357069273698917",
+    "50708:134357069496624673",
+    "39152:134357069663207186",
+    "53696:134357069670930277",
+    "30316:134357069679746226",
+    "55068:134357069686599632",
+    "48240:134357070496052052",
+    "46308:134357070503555253",
+    "50804:134357070506943597",
+    "23656:134357070509834069",
+    "56696:134357070510347301",
+    "47124:134357070825293876",
+    "21432:134357070833466590",
+    "58356:134357070841150958",
+    "28552:134357070847545362",
+    "22672:134357072054590404",
+    "46948:134357072060604931",
+    "9568:134357072575175106",
+    "57472:134357072592444247",
+    "38124:134357072597619965",
+    "10656:134357072614125137",
+    "10928:134357072620951087",
+    "22068:134357072628041163",
+    "26720:134357074741718836",
+    "40408:134357074785413961",
+    "26632:134357074796702485",
+    "47992:134357074802027117",
+    "9584:134357074804449945",
+    "56796:134357074806848294",
+    "8436:134357074809898606",
+    "59376:134357075112366352",
+    "38048:134357075122680958",
+    "37864:134357075130724804",
+    "24168:134357075135620747",
+    "58892:134357075137229367",
+    "26568:134357075732544977",
+    "15284:134357075736961704",
+    "50420:134357075751431981",
+    "52848:134357076078693968",
+    "31548:134357076081022404",
+    "52052:134357076093443320",
+    "42412:134357076100407022"
+  ],
+  "process_stop_performed": false,
+  "global_direct_writes": false,
+  "bindings": [
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/monitor-exit.json",
+      "sha256": "67f026920f04bf6dfef80d0c793a007baec5d125a9b7cb1b11e6f2010df159a1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/original-verification-result.json",
+      "sha256": "a6d50324a6f5b9748330e6dc68fa3340bd59f52027bd789b3a47c71311c3f9d3"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/process-final-audit.json",
+      "sha256": "1a5b37af499ae47782ded80e48ce3e9fc664050643c704c7975dbc98c14cd3a6"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/process-exit-precision-audit.json",
+      "sha256": "2b5265634dabe2d5d5ac9f0226a11e58ebabfdb647ff27f72a9ba52b9d72f11c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/live-process-identity-inspection.json",
+      "sha256": "77cc822f9caeab27adaf79ec43cb6c7f42f6e6376d473ce280deacbd9624850c"
+    }
+  ],
+  "classifier": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/classify-process-capture-contamination.py",
+    "sha256": "3b4a6ba14968f21f4f4fd9df36566bc3ead262cfbc8ffd91643f107e64bced4f"
+  }
+}

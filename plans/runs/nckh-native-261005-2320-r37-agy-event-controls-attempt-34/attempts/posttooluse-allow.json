@@ -1,0 +1,636 @@
+{
+  "after": {
+    "file": "0c2a3456952021fd8872d9de704c6f985a683c3cb6ff9ac69a3662c9e7bec640"
+  },
+  "attempt": "posttooluse-allow",
+  "backend_attestation": "not-observed",
+  "before": {
+    "file": "ec0bac22d94bc259c9a096f853cfcf4b062ceaa7b73efc9f6f7a32b205e7e437"
+  },
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/PostInvocation/745e8658f14a4a88bff97a9236d32798.json",
+      "sha256": "0dde8a1e1001e1abb894e13635f01e080a139ceee351c3d72771367541461ec5"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/PostInvocation/c584451f0ad147f9834c7fa283fec68d.json",
+      "sha256": "cfa546caa9e1d7492bb1781b5890ffb3203761eff1afea40f41e617f713479f2"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/PostToolUse/f96bfdd4186e4ebda4f6c597c1d48792.json",
+      "sha256": "6378c0192299d2814190fd45d1034ccc7cd8d029d92aeaa4f6ec2c86f497a9c8"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/PreInvocation/7d700d83cee04c11871cd987a39015bd.json",
+      "sha256": "16f38625a520ae76d598096b7ff5549682ac9c1b1d56f9efd2bfb48a51d813db"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/PreInvocation/c59ddbf27ff445beba79590f99b4f1fe.json",
+      "sha256": "017629e69ce6b9125959210787bc88a778e215b7004dbf0e5f6827fefb265e1d"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/PreToolUse/ec04836356824013b087ac1451ac3276.json",
+      "sha256": "8b36379cdabb8f16af5e7116a976af8e5f041159c54b627f06b90b2b1dd39b36"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/observations/posttooluse-allow/Stop/376600e097ce44eab36e052d4e56aabe.json",
+      "sha256": "f03e592f1758c244e812da75a9b1f08e30ff212c077df3f9f8f54b46418c7cf7"
+    }
+  ],
+  "command": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-allow.json",
+    "sha256": "f3a25211357089ce56b3f7b341d74574ee0c9a04585cfe04dc092aa37c51113c"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/definitions/posttooluse-allow.json",
+    "sha256": "6e744b05cd31b695f2331ee2f844d9e8d2fc3d514bef972ba1ad556fa5c35c4c"
+  },
+  "direct": false,
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "expected_deny": false,
+  "expected_tool": "write_to_file",
+  "fault_origin": "none",
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_callbacks": [
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:58.277038+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "PostInvocation",
+      "execution_num": null,
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "b27ef2bf69bc82eb6da02310fa963bd77784b28092c6e37f8b13fef44fc98dbe",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 36952,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 56604,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 25604,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:58.136503+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:52.808164+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "PostInvocation",
+      "execution_num": null,
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "b26b18501955d44decdf0d12564e1f31cf88e24c56b9e9e557712956100bbc0a",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 48876,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 59384,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 58296,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:52.666966+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:52.545712+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "PostToolUse",
+      "execution_num": null,
+      "fault_origin": "none",
+      "fault_selected": true,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "error",
+        "modelName",
+        "stepIdx",
+        "toolCall",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "b5b115fb2fd5bb56549547bdac2cc9be45c4bf910f09bc8d430a5e2715b41a66",
+      "input_size": 894,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-event34-posttooluse-allow.txt"
+      },
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": 2,
+      "native_tool_name": "write_to_file",
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 38216,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 50660,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 58680,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:52.399652+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "CodeContent",
+        "Description",
+        "Overwrite",
+        "TargetFile",
+        "toolAction",
+        "toolSummary"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:53.052086+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "PreInvocation",
+      "execution_num": null,
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "b27ef2bf69bc82eb6da02310fa963bd77784b28092c6e37f8b13fef44fc98dbe",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 6568,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 23544,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 5944,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:52.923175+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:47.881053+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "PreInvocation",
+      "execution_num": null,
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "b26b18501955d44decdf0d12564e1f31cf88e24c56b9e9e557712956100bbc0a",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 58188,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 50148,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 50480,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:47.740061+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:52.266605+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "PreToolUse",
+      "execution_num": null,
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "modelName",
+        "stepIdx",
+        "toolCall",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "4b560807203d58b6ede45b890a5664c6cdc0b6012032a5fae55796cd4ac4dd75",
+      "input_size": 883,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-event34-posttooluse-allow.txt"
+      },
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": 2,
+      "native_tool_name": "write_to_file",
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 36496,
+      "output_sha256": "93e80fefb7561c97d1aa80ea77afb43f2b03c26608e7be84be5caaa7c9fb3920",
+      "parent_pid": 50580,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "decision": "ask"
+      },
+      "runner_pid": 43680,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:52.112411+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "CodeContent",
+        "Description",
+        "Overwrite",
+        "TargetFile",
+        "toolAction",
+        "toolSummary"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T16:27:58.549824+00:00",
+      "control_sha256": "7b55494f3b36a8d09200c4a687450059165b1b6a71c6349ab084b02c5a68a1c4",
+      "event": "Stop",
+      "execution_num": 0,
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "error",
+        "executionNum",
+        "fullyIdle",
+        "modelName",
+        "terminationReason",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "2e3f9fb33da1cf7f7e57ee17811c40c2ba1677d9eac00270ab650f0e3938e018",
+      "input_size": 555,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "7e70194923619ab6fa90445f9013be3188a0bdf524591ea51a9505411d9e57c7",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 33904,
+      "output_sha256": "6290c175f8eac6a2a8d0c84971a057abff8306cfe17fbd3a242f862b9e0befd0",
+      "parent_pid": 32120,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "decision": "stop"
+      },
+      "runner_pid": 44728,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T16:27:58.401383+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    }
+  ],
+  "native_frames": [
+    {
+      "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+      "event": "init",
+      "init": {
+        "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model",
+        "model": "gemini-3.8-flash-medium",
+        "permission_mode": "always-proceed",
+        "tools": [
+          "ask_custom_permission",
+          "ask_permission",
+          "ask_question",
+          "browser_click_element",
+          "browser_drag_pixel_to_pixel",
+          "browser_get_dom",
+          "browser_get_network_request",
+          "browser_input",
+          "browser_list_network_requests",
+          "browser_mouse_down",
+          "browser_mouse_up",
+          "browser_move_mouse",
+          "browser_press_key",
+          "browser_refresh_page",
+          "browser_resize_window",
+          "browser_scroll",
+          "browser_scroll_dom",
+          "browser_select_option",
+          "browser_subagent",
+          "call_mcp_tool",
+          "capture_browser_console_logs",
+          "capture_browser_screenshot",
+          "click_browser_pixel",
+          "command_status",
+          "define_subagent",
+          "delete_knowledge",
+          "execute_browser_javascript",
+          "find_by_name",
+          "finish",
+          "generate_image",
+          "grep_search",
+          "invoke_subagent",
+          "list_browser_pages",
+          "list_dir",
+          "list_permissions",
+          "list_plugin_accounts",
+          "list_resources",
+          "manage_inbox",
+          "manage_subagents",
+          "manage_task",
+          "multi_replace_file_content",
+          "notebook_edit",
+          "notebook_execution",
+          "open_browser_url",
+          "read_browser_page",
+          "read_resource",
+          "read_url_content",
+          "replace_file_content",
+          "run_command",
+          "run_workflow",
+          "schedule",
+          "search_marketplace",
+          "search_web",
+          "sed_file",
+          "send_command_input",
+          "send_message",
+          "view_file",
+          "wait",
+          "wait_5_seconds",
+          "write_to_file"
+        ]
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "state": "DONE",
+        "step_index": 0,
+        "step_type": "user_input"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "duration_seconds": 4.0984362,
+        "state": "DONE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 20623,
+          "output_tokens": 519,
+          "thinking_tokens": 383,
+          "total_tokens": 21142
+        }
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "state": "ACTIVE",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "name": "write_to_file",
+          "parameters": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-event34-posttooluse-allow.txt"
+          }
+        },
+        "tool_name": "write_to_file"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "duration_seconds": 0.3227672,
+        "state": "DONE",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "name": "write_to_file",
+          "parameters": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-event34-posttooluse-allow.txt"
+          }
+        },
+        "tool_name": "write_to_file"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "state": "ACTIVE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "ORACLE_ATTEMPT_FINISHED"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "duration_seconds": 4.9510169,
+        "state": "DONE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "\n",
+        "usage": {
+          "cache_read_tokens": 16309,
+          "input_tokens": 5009,
+          "output_tokens": 32,
+          "thinking_tokens": 25,
+          "total_tokens": 5041
+        }
+      }
+    },
+    {
+      "event": "result",
+      "result": {
+        "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+        "duration_seconds": 10.4407507,
+        "num_turns": 1,
+        "response": "ORACLE_ATTEMPT_FINISHED\n",
+        "status": "SUCCESS",
+        "usage": {
+          "cache_read_tokens": 16309,
+          "input_tokens": 25632,
+          "output_tokens": 551,
+          "thinking_tokens": 408,
+          "total_tokens": 26183
+        }
+      }
+    }
+  ],
+  "path": "oracles/r37-agy-event34-posttooluse-allow.txt",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-event-controls-34/policy-receipts/posttooluse-allow/PreToolUse/0647b62ecce1115a37870c24e6a03945aef397bab5905afa8d37da3b7c0f5be6.json",
+      "receipt": {
+        "artifact_sha256": "0c2a3456952021fd8872d9de704c6f985a683c3cb6ff9ac69a3662c9e7bec640",
+        "context_hash": "b6e74e7d2a4413130a4654f1e935d1d3be8afad683b292675cdd8166d39d41b0",
+        "decision": "allow",
+        "event_hash": "50c0d0008cc9609bd7a2f77b39d8196bbf25e39b22153fa818c9c2436c7ff4d1",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "0c00e7a3464b463e280b7f6db7f78a1552a24913ba2f98f96c1ba42748979f96",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "694ee14be14404499a973ac8d4ec853171a1ecea5c98a9fd8b4209bfa9375c1b"
+      },
+      "sha256": "5e38f3985d15abd026275ae86e947df4b6c923fac60529dd348e4e18d3bf7a43"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "completed",
+  "terminal_tools": [
+    {
+      "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+      "duration_seconds": 0.3227672,
+      "state": "DONE",
+      "step_index": 2,
+      "step_type": "tool",
+      "tool_info": {
+        "name": "write_to_file",
+        "parameters": {
+          "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-event34-posttooluse-allow.txt"
+        }
+      },
+      "tool_name": "write_to_file"
+    }
+  ]
+}

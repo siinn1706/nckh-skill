@@ -1,0 +1,52 @@
+{
+  "attempt": "shell-private",
+  "completed_at": "2026-10-05T04:25:04.448692+00:00",
+  "event": "PreToolUse",
+  "fault_origin": "none",
+  "input_fields": [
+    "cwd",
+    "hook_event_name",
+    "model",
+    "permission_mode",
+    "session_id",
+    "tool_input",
+    "tool_name",
+    "tool_use_id",
+    "transcript_path",
+    "turn_id"
+  ],
+  "input_sha256": "1a5ddba2033b371073c06f33dd0943801579d0b9ce92c073f0b096dd84d758d0",
+  "input_size": 565,
+  "mode": "allow",
+  "native_command_sha256": "67566839c7681d408e627c88463317740fef33af046181f190341805c4bc2245",
+  "native_direct_path_fields": {},
+  "native_model": "gpt-5.6-luna",
+  "native_permission_mode": "bypassPermissions",
+  "native_session_hash": "b10b28c738497fb8b1beb0149160070704a31d7dfd4704251e5eb5ddd8f4a38e",
+  "native_tool_input_type": "dict",
+  "native_tool_name": "Bash",
+  "native_tool_use_id": "exec-9ccb0dd1-13e0-4933-89ad-f4666f2fc276",
+  "native_turn_id": "01a10a4e-ac4b-7c21-9a37-1b5d97703802",
+  "observer_pid": 12856,
+  "parent_pid": 34688,
+  "reported_event": "PreToolUse",
+  "runner_exit_code": 0,
+  "runner_exited": true,
+  "runner_output": {
+    "hookSpecificOutput": {
+      "hookEventName": "PreToolUse",
+      "permissionDecision": "deny",
+      "permissionDecisionReason": "shell-targets-unverifiable"
+    }
+  },
+  "runner_pid": 22368,
+  "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+  "selected": true,
+  "started_at": "2026-10-05T04:25:04.290403+00:00",
+  "status": "completed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "2d6e3088154cf6a692c10a90647daa997a82372e26356aba6bfe818e4bfd24c3",
+  "tool_input_fields": [
+    "command"
+  ]
+}

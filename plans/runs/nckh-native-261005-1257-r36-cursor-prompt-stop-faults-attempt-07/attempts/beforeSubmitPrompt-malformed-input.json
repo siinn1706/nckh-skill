@@ -1,0 +1,104 @@
+{
+  "attempt": "beforeSubmitPrompt-malformed-input",
+  "callbacks": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-prompt-stop-07/observations/beforeSubmitPrompt-malformed-input/beforeSubmitPrompt/9522b2db979a4464b5177961b9329370.json",
+      "receipt": {
+        "attempt": "beforeSubmitPrompt-malformed-input",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T06:04:12.865362+00:00",
+        "control_sha256": "5586e848194428ccb435dbafe088a5c68c6a630c649b695cf6f3dd91f69d2c03",
+        "event": "beforeSubmitPrompt",
+        "fault_origin": "controller-injection-after-genuine-callback",
+        "fault_selected": true,
+        "host": "cursor",
+        "input_fields": [
+          "attachments",
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "prompt",
+          "session_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "63d9f62b4717ac8ca2ab04524a7da5cc4db677cd01da80e642ca61e541387b34",
+        "input_size": 699,
+        "mode": "malformed-input",
+        "native_model": "grok-4.7-xhigh",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {},
+        "native_session_hash": "3f5a0984f6a8d5309df2eb040fbccf3f7a45147805217524b98ba35d9763a241",
+        "native_step_idx": null,
+        "native_tool_name": null,
+        "native_tool_use_id": null,
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 55272,
+        "output_sha256": "63a72bd36265a1c16b2c96cd068b8135b770f15dd50307a4d0d190c94851f163",
+        "parent_pid": 41520,
+        "reported_event": "beforeSubmitPrompt",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {
+          "continue": false,
+          "user_message": "hook-input-or-context-invalid"
+        },
+        "runner_pid": 28304,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T06:04:12.654259+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [],
+        "workspace_contains_selected_project": true
+      },
+      "sha256": "aff4eb2f834f22e49e1ed09b6b4a05c85f40206b8cc1f282371d0cbcc7b4716d"
+    }
+  ],
+  "event": "beforeSubmitPrompt",
+  "index": 1,
+  "marker": "NCKH_PROMPT_STOP_ORACLE_01",
+  "maximum_prompt_submissions": 1,
+  "mode": "malformed-input",
+  "native_admission_rejection": {
+    "model_turns_verified": 0,
+    "reason": "hook-input-or-context-invalid",
+    "status": "native-admission-rejection-observed",
+    "terminal": {
+      "path": "plans/runs/nckh-native-261005-1257-r36-cursor-prompt-stop-faults-attempt-07/terminal/002-case-01.json",
+      "sha256": "f9cc6cb2fb38674ef96baa21c3ba33d64e46626822c7cbef4df2a79b6aa946d5"
+    }
+  },
+  "observed_at": "2026-10-05T06:06:34.056566+00:00",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-prompt-stop-07/policy-receipts/beforeSubmitPrompt-malformed-input/beforeSubmitPrompt/306410eb331e87f0cd7e6bb88232e873a510e47894ca5b41795dab57cfac9a27.json",
+      "receipt": {
+        "decision": "block",
+        "event_hash": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "reason_codes": [
+          "hook-input-or-context-invalid"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "side_effects": "none",
+        "status": "degraded-failed"
+      },
+      "sha256": "e0f27c434080c611485df6c6ff519eb71aab007e3a24dd76b549a860d9fe3f17"
+    }
+  ],
+  "prompt": "[removed: raw runtime content]",
+  "ready_for_next_case": true,
+  "selected_callback_count": 1,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36,
+  "stop_callback_count": 0
+}

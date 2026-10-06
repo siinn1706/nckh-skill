@@ -1,0 +1,62 @@
+{
+  "observed_at": "2026-10-03T10:20:33.226172+00:00",
+  "pid": 20792,
+  "context_declared_by_caller": "controller-escalated",
+  "target": "C:/Users/USER\\Downloads\\test-skill\\.agents\\skills\\nckh-visuals",
+  "limits": [
+    "Context is caller-declared; effective token is not dumped or equated across runs.",
+    "DELETE access opens and closes a handle only; no delete, rename or delete-on-close.",
+    "Access denied (5) does not uniquely identify ACL versus filesystem filter denial.",
+    "Sharing violation (32) indicates incompatible sharing at observation time.",
+    "Successful DELETE open does not prove the full rename or destination permissions.",
+    "Restart Manager lists users of enumerated regular files, not every directory handle or filter.",
+    "An empty process list does not exclude locks; snapshots can race.",
+    "Restart Manager creates transient OS session/registry metadata; EndSession cleans the session.",
+    "No privileges enabled, ACL changes, process stops, installation or resource writes."
+  ],
+  "access_probes": [
+    {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\.agents\\skills\\nckh-visuals",
+      "access": "FILE_READ_ATTRIBUTES",
+      "opened": true
+    },
+    {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\.agents\\skills\\nckh-visuals",
+      "access": "DELETE",
+      "opened": true
+    }
+  ],
+  "skipped_resources": [],
+  "restart_manager": {
+    "file_resources": 21,
+    "processes": [
+      {
+        "pid": 31492,
+        "start_time_utc": "2026-10-02T17:51:28.423751+00:00",
+        "start_time_filetime": 134354370884237511,
+        "app_name": "Cursor",
+        "service_name": "",
+        "app_type": 0
+      }
+    ],
+    "enumeration_available": true,
+    "start": {
+      "code": 0,
+      "message": "The operation completed successfully."
+    },
+    "register": {
+      "code": 0,
+      "message": "The operation completed successfully."
+    },
+    "get_list": {
+      "code": 0,
+      "message": "The operation completed successfully."
+    },
+    "end": {
+      "code": 0,
+      "message": "The operation completed successfully."
+    }
+  },
+  "status": "diagnostic-completed",
+  "receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\diagnose-r25-20261003-102033-b6d28ded.json"
+}

@@ -1,0 +1,10 @@
+{
+  "evidence_class": "staged-contract-regression",
+  "exit_status": 1,
+  "output": "E\n======================================================================\nERROR: test_real_read_after_archive_extraction_outside_repo (tests.resource.test_extracted_smoke.ExtractedSmokeTests.test_real_read_after_archive_extraction_outside_repo)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\resource\\test_extracted_smoke.py\", line 26, in test_real_read_after_archive_extraction_outside_repo\n    result = smoke.smoke(extracted, cwd)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Temp\\nckh-fa73bf78abef4aeb984d85a9c01951ba\\scripts\\resource-smoke.py\", line 28, in smoke\n    raise ContractError(\"smoke CWD must be an existing directory outside the repository\")\ncore.schema.ContractError: smoke CWD must be an existing directory outside the repository\n\n----------------------------------------------------------------------\nRan 1 test in 12.809s\n\nFAILED (errors=1)\n",
+  "promoted": false,
+  "real_installed_skills_changed": false,
+  "schema_version": 1,
+  "status": "fail",
+  "temporary_source_lock_hash": "b7f94e47c97b4657f254f850ae036dcad046539adc7fc649e40c14402e0cbe6b"
+}

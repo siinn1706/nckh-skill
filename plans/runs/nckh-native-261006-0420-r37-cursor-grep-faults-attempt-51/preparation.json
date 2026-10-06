@@ -1,0 +1,81 @@
+{
+  "baseline": "Grep missing from context operation map; normal public route returns manual/tool-route-uncovered",
+  "cases": [
+    {
+      "attempt": "grep-malformed-input",
+      "index": 1,
+      "marker": "NCKH_GREP_FAULT_ATTEMPT_FINISHED_51_1",
+      "maximum_prompt_submissions": 1,
+      "maximum_requested_native_tools": 1,
+      "mode": "malformed-input",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "grep-malformed-output",
+      "index": 2,
+      "marker": "NCKH_GREP_FAULT_ATTEMPT_FINISHED_51_2",
+      "maximum_prompt_submissions": 1,
+      "maximum_requested_native_tools": 1,
+      "mode": "malformed-output",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "grep-timeout",
+      "index": 3,
+      "marker": "NCKH_GREP_FAULT_ATTEMPT_FINISHED_51_3",
+      "maximum_prompt_submissions": 1,
+      "maximum_requested_native_tools": 1,
+      "mode": "timeout",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "grep-crash",
+      "index": 4,
+      "marker": "NCKH_GREP_FAULT_ATTEMPT_FINISHED_51_4",
+      "maximum_prompt_submissions": 1,
+      "maximum_requested_native_tools": 1,
+      "mode": "crash",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "grep-unsupported-codec",
+      "index": 5,
+      "marker": "NCKH_GREP_FAULT_ATTEMPT_FINISHED_51_5",
+      "maximum_prompt_submissions": 1,
+      "maximum_requested_native_tools": 1,
+      "mode": "unsupported-codec",
+      "prompt": "[removed: raw runtime content]"
+    }
+  ],
+  "context_sha256": "7c5aeb9093b3dab3a9c965805e5a21406884e12f734136af78c2e822f660156b",
+  "definition": {
+    "path": "plans/runs/nckh-native-261006-0420-r37-cursor-grep-faults-attempt-51/definitions/session.json",
+    "sha256": "e66fc8a794c4c1b0175f7dcf4b5bd433dbceb23f83c249e258cb1ad13a815528"
+  },
+  "expected_native_response": "matching native postToolUseFailure/Grep/permission_denied for each declared fault",
+  "fault_origin": "controller injection after genuine native preToolUse callback",
+  "fixture_bytes_hex": "4e434b485f53594e5448455449435f5055424c49435f475245505f4641554c545f4d41524b45520a",
+  "fixture_path": ".nckh-native-r37-cursor-grep-faults-51/public/fixture.txt",
+  "fixture_sha256": "f36e0bd5818de9c6bd71394bfd6a51cb64ff827c56d6a912bd13fca96e7ff4d7",
+  "global_direct_write": false,
+  "injected_sleeper_seconds": 24,
+  "inner_runner_timeout_seconds": 5,
+  "late_callback_rule": "keep control stable until selected observer/runner terminal; late manual receipt does not override native timeout denial",
+  "maximum_model_turns": 5,
+  "maximum_prompt_submissions": 5,
+  "maximum_requested_native_tools": 5,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_retries": 0,
+  "model_selection_source": "existing selectedModel; --model omitted",
+  "native_failure_diagnostic_timeout_seconds": 10,
+  "oracle": "one genuine Grep per case; matching native failure ID/session/path/version; no successful post; unchanged fixture and final marker",
+  "other_handler_timeout_seconds": 5,
+  "preToolUse_timeout_seconds": 20,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "scope_limit": "directory Grep on current producer20s route; unknown native event/glob/root/direct5s remain unqualified",
+  "selected_directory": ".nckh-native-r37-cursor-grep-faults-51/public",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-five-current-directory-Grep-preflight-faults",
+  "whole_turn_deadline": null
+}

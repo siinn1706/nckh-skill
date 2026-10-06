@@ -1,0 +1,489 @@
+{
+  "command": [
+    "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\node.exe",
+    "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\index.js",
+    "--workspace",
+    "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+    "--model",
+    "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+    "--force",
+    "--trust",
+    "--sandbox",
+    "disabled",
+    "acp"
+  ],
+  "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "ended_at": "2026-10-05T04:09:39.646319+00:00",
+  "exit_code": 3221225786,
+  "global_direct_write": false,
+  "hook_registration": "not-performed",
+  "initialize": {
+    "id": 1,
+    "jsonrpc": "2.0",
+    "result": {
+      "agentCapabilities": {
+        "loadSession": true,
+        "mcpCapabilities": {
+          "http": true,
+          "sse": true
+        },
+        "promptCapabilities": {
+          "audio": false,
+          "embeddedContext": false,
+          "image": true
+        },
+        "sessionCapabilities": {
+          "list": {}
+        }
+      },
+      "authMethods": [
+        {
+          "description": "Authenticate using existing Cursor login credentials. Run 'agent login' first if not logged in.",
+          "id": "cursor_login",
+          "name": "Cursor Login"
+        }
+      ],
+      "protocolVersion": 1
+    }
+  },
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns": 0,
+  "native_exit_after_stdin_close": false,
+  "owner": "/root",
+  "pid": 35044,
+  "port": null,
+  "process_cleanup": "owned-process-group-closed",
+  "process_exited": true,
+  "protected_global_configs_unchanged": true,
+  "protected_global_hashes_after": {
+    "C:/Users/USER\\.cursor\\hooks.json": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9",
+    "C:/Users/USER\\.cursor\\mcp.json": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72",
+    "C:/Users/USER\\.cursor\\plugins\\installed_plugins.json": null,
+    "C:/Users/USER\\.cursor\\plugins\\settings.json": null
+  },
+  "protected_global_hashes_before": {
+    "C:/Users/USER\\.cursor\\hooks.json": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9",
+    "C:/Users/USER\\.cursor\\mcp.json": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72",
+    "C:/Users/USER\\.cursor\\plugins\\installed_plugins.json": null,
+    "C:/Users/USER\\.cursor\\plugins\\settings.json": null
+  },
+  "session_id": "311d8e8d-054e-4586-b739-d495e39aafed",
+  "session_new": {
+    "id": 2,
+    "jsonrpc": "2.0",
+    "result": {
+      "configOptions": [
+        {
+          "category": "mode",
+          "currentValue": "agent",
+          "description": "Controls how the agent executes tasks",
+          "id": "mode",
+          "name": "Mode",
+          "options": [
+            {
+              "description": "Full agent capabilities with tool access",
+              "name": "Agent",
+              "value": "agent"
+            },
+            {
+              "description": "Read-only mode for planning and designing before implementation",
+              "name": "Plan",
+              "value": "plan"
+            },
+            {
+              "description": "Q&A mode - no edits or command execution",
+              "name": "Ask",
+              "value": "ask"
+            }
+          ],
+          "type": "select"
+        },
+        {
+          "category": "model",
+          "currentValue": "grok-4.7[context=256k,reasoning_effort=high,fast=true]",
+          "description": "Controls which model variant is used for responses",
+          "id": "model",
+          "name": "Model",
+          "options": [
+            {
+              "name": "Auto",
+              "value": "default[]"
+            },
+            {
+              "name": "grok-4.7",
+              "value": "grok-4.7[context=256k,reasoning_effort=high,fast=true]"
+            },
+            {
+              "name": "grok-4.6",
+              "value": "grok-4.6[effort=high,fast=true]"
+            },
+            {
+              "name": "composer-2.5",
+              "value": "composer-2.5[fast=true]"
+            },
+            {
+              "name": "claude-opus-5-5",
+              "value": "claude-opus-5-5[context=300k,effort=medium,fast=false]"
+            },
+            {
+              "name": "claude-opus-5",
+              "value": "claude-opus-5[thinking=true,context=300k,effort=high,fast=false]"
+            },
+            {
+              "name": "claude-opus-4-8",
+              "value": "claude-opus-4-8[thinking=true,context=300k,effort=high,fast=false]"
+            },
+            {
+              "name": "gpt-5.6-sol",
+              "value": "gpt-5.6-sol[context=272k,reasoning=medium,fast=false]"
+            },
+            {
+              "name": "gpt-5.5",
+              "value": "gpt-5.5[context=272k,reasoning=medium,fast=false]"
+            },
+            {
+              "name": "claude-fable-5-1",
+              "value": "claude-fable-5-1[thinking=true,context=300k,effort=high]"
+            },
+            {
+              "name": "claude-fable-5",
+              "value": "claude-fable-5[thinking=true,context=300k,effort=high]"
+            },
+            {
+              "name": "grok-4.5",
+              "value": "grok-4.5[effort=high,fast=true]"
+            },
+            {
+              "name": "gemini-3.8-flash",
+              "value": "gemini-3.8-flash[reasoning_effort=high]"
+            },
+            {
+              "name": "gemini-3.7-flash",
+              "value": "gemini-3.7-flash[effort=high]"
+            },
+            {
+              "name": "muse-spark-1.3",
+              "value": "muse-spark-1.3[context=300k,effort=high]"
+            },
+            {
+              "name": "gpt-5.6-terra",
+              "value": "gpt-5.6-terra[context=272k,reasoning=medium,fast=false]"
+            },
+            {
+              "name": "claude-sonnet-5-5",
+              "value": "claude-sonnet-5-5[context=300k,reasoning_effort=high]"
+            },
+            {
+              "name": "claude-sonnet-5",
+              "value": "claude-sonnet-5[thinking=true,context=300k,effort=high]"
+            },
+            {
+              "name": "claude-sonnet-4-6",
+              "value": "claude-sonnet-4-6[thinking=true,context=200k,effort=medium]"
+            },
+            {
+              "name": "gpt-5.3-codex",
+              "value": "gpt-5.3-codex[reasoning=medium,fast=false]"
+            },
+            {
+              "name": "claude-opus-4-7",
+              "value": "claude-opus-4-7[thinking=true,context=300k,effort=xhigh,fast=false]"
+            },
+            {
+              "name": "gpt-5.4",
+              "value": "gpt-5.4[context=272k,reasoning=medium,fast=false]"
+            },
+            {
+              "name": "claude-opus-4-6",
+              "value": "claude-opus-4-6[thinking=true,context=200k,effort=high]"
+            },
+            {
+              "name": "claude-opus-4-5",
+              "value": "claude-opus-4-5[thinking=true]"
+            },
+            {
+              "name": "gpt-5.2",
+              "value": "gpt-5.2[reasoning=medium,fast=false]"
+            },
+            {
+              "name": "gpt-5.6-luna",
+              "value": "gpt-5.6-luna[context=272k,reasoning=medium,fast=false]"
+            },
+            {
+              "name": "gemini-3.6-flash",
+              "value": "gemini-3.6-flash[effort=high]"
+            },
+            {
+              "name": "gemini-3.1-pro",
+              "value": "gemini-3.1-pro[]"
+            },
+            {
+              "name": "gpt-5.4-mini",
+              "value": "gpt-5.4-mini[reasoning=medium]"
+            },
+            {
+              "name": "gpt-5.4-nano",
+              "value": "gpt-5.4-nano[reasoning=medium]"
+            },
+            {
+              "name": "claude-haiku-4-5",
+              "value": "claude-haiku-4-5[thinking=true]"
+            },
+            {
+              "name": "claude-sonnet-4-5",
+              "value": "claude-sonnet-4-5[thinking=true,context=200k]"
+            },
+            {
+              "name": "gpt-5.1",
+              "value": "gpt-5.1[reasoning=medium]"
+            },
+            {
+              "name": "gemini-3-flash",
+              "value": "gemini-3-flash[]"
+            },
+            {
+              "name": "gemini-3.5-flash",
+              "value": "gemini-3.5-flash[]"
+            },
+            {
+              "name": "claude-sonnet-4",
+              "value": "claude-sonnet-4[thinking=false,context=200k]"
+            },
+            {
+              "name": "gpt-5-mini",
+              "value": "gpt-5-mini[]"
+            },
+            {
+              "name": "gemini-2.5-flash",
+              "value": "gemini-2.5-flash[]"
+            },
+            {
+              "name": "kimi-k3",
+              "value": "kimi-k3[reasoning=max]"
+            },
+            {
+              "name": "kimi-k2.7-code",
+              "value": "kimi-k2.7-code[]"
+            },
+            {
+              "name": "glm-5.2",
+              "value": "glm-5.2[reasoning=high]"
+            },
+            {
+              "name": "glm-5p3",
+              "value": "glm-5p3[reasoning=high]"
+            },
+            {
+              "name": "glm-5p3-flash",
+              "value": "glm-5p3-flash[reasoning=high]"
+            }
+          ],
+          "type": "select"
+        }
+      ],
+      "models": {
+        "availableModels": [
+          {
+            "modelId": "default[]",
+            "name": "Auto"
+          },
+          {
+            "modelId": "grok-4.7[context=256k,reasoning_effort=high,fast=true]",
+            "name": "grok-4.7"
+          },
+          {
+            "modelId": "grok-4.6[effort=high,fast=true]",
+            "name": "grok-4.6"
+          },
+          {
+            "modelId": "composer-2.5[fast=true]",
+            "name": "composer-2.5"
+          },
+          {
+            "modelId": "claude-opus-5-5[context=300k,effort=medium,fast=false]",
+            "name": "claude-opus-5-5"
+          },
+          {
+            "modelId": "claude-opus-5[thinking=true,context=300k,effort=high,fast=false]",
+            "name": "claude-opus-5"
+          },
+          {
+            "modelId": "claude-opus-4-8[thinking=true,context=300k,effort=high,fast=false]",
+            "name": "claude-opus-4-8"
+          },
+          {
+            "modelId": "gpt-5.6-sol[context=272k,reasoning=medium,fast=false]",
+            "name": "gpt-5.6-sol"
+          },
+          {
+            "modelId": "gpt-5.5[context=272k,reasoning=medium,fast=false]",
+            "name": "gpt-5.5"
+          },
+          {
+            "modelId": "claude-fable-5-1[thinking=true,context=300k,effort=high]",
+            "name": "claude-fable-5-1"
+          },
+          {
+            "modelId": "claude-fable-5[thinking=true,context=300k,effort=high]",
+            "name": "claude-fable-5"
+          },
+          {
+            "modelId": "grok-4.5[effort=high,fast=true]",
+            "name": "grok-4.5"
+          },
+          {
+            "modelId": "gemini-3.8-flash[reasoning_effort=high]",
+            "name": "gemini-3.8-flash"
+          },
+          {
+            "modelId": "gemini-3.7-flash[effort=high]",
+            "name": "gemini-3.7-flash"
+          },
+          {
+            "modelId": "muse-spark-1.3[context=300k,effort=high]",
+            "name": "muse-spark-1.3"
+          },
+          {
+            "modelId": "gpt-5.6-terra[context=272k,reasoning=medium,fast=false]",
+            "name": "gpt-5.6-terra"
+          },
+          {
+            "modelId": "claude-sonnet-5-5[context=300k,reasoning_effort=high]",
+            "name": "claude-sonnet-5-5"
+          },
+          {
+            "modelId": "claude-sonnet-5[thinking=true,context=300k,effort=high]",
+            "name": "claude-sonnet-5"
+          },
+          {
+            "modelId": "claude-sonnet-4-6[thinking=true,context=200k,effort=medium]",
+            "name": "claude-sonnet-4-6"
+          },
+          {
+            "modelId": "gpt-5.3-codex[reasoning=medium,fast=false]",
+            "name": "gpt-5.3-codex"
+          },
+          {
+            "modelId": "claude-opus-4-7[thinking=true,context=300k,effort=xhigh,fast=false]",
+            "name": "claude-opus-4-7"
+          },
+          {
+            "modelId": "gpt-5.4[context=272k,reasoning=medium,fast=false]",
+            "name": "gpt-5.4"
+          },
+          {
+            "modelId": "claude-opus-4-6[thinking=true,context=200k,effort=high]",
+            "name": "claude-opus-4-6"
+          },
+          {
+            "modelId": "claude-opus-4-5[thinking=true]",
+            "name": "claude-opus-4-5"
+          },
+          {
+            "modelId": "gpt-5.2[reasoning=medium,fast=false]",
+            "name": "gpt-5.2"
+          },
+          {
+            "modelId": "gpt-5.6-luna[context=272k,reasoning=medium,fast=false]",
+            "name": "gpt-5.6-luna"
+          },
+          {
+            "modelId": "gemini-3.6-flash[effort=high]",
+            "name": "gemini-3.6-flash"
+          },
+          {
+            "modelId": "gemini-3.1-pro[]",
+            "name": "gemini-3.1-pro"
+          },
+          {
+            "modelId": "gpt-5.4-mini[reasoning=medium]",
+            "name": "gpt-5.4-mini"
+          },
+          {
+            "modelId": "gpt-5.4-nano[reasoning=medium]",
+            "name": "gpt-5.4-nano"
+          },
+          {
+            "modelId": "claude-haiku-4-5[thinking=true]",
+            "name": "claude-haiku-4-5"
+          },
+          {
+            "modelId": "claude-sonnet-4-5[thinking=true,context=200k]",
+            "name": "claude-sonnet-4-5"
+          },
+          {
+            "modelId": "gpt-5.1[reasoning=medium]",
+            "name": "gpt-5.1"
+          },
+          {
+            "modelId": "gemini-3-flash[]",
+            "name": "gemini-3-flash"
+          },
+          {
+            "modelId": "gemini-3.5-flash[]",
+            "name": "gemini-3.5-flash"
+          },
+          {
+            "modelId": "claude-sonnet-4[thinking=false,context=200k]",
+            "name": "claude-sonnet-4"
+          },
+          {
+            "modelId": "gpt-5-mini[]",
+            "name": "gpt-5-mini"
+          },
+          {
+            "modelId": "gemini-2.5-flash[]",
+            "name": "gemini-2.5-flash"
+          },
+          {
+            "modelId": "kimi-k3[reasoning=max]",
+            "name": "kimi-k3"
+          },
+          {
+            "modelId": "kimi-k2.7-code[]",
+            "name": "kimi-k2.7-code"
+          },
+          {
+            "modelId": "glm-5.2[reasoning=high]",
+            "name": "glm-5.2"
+          },
+          {
+            "modelId": "glm-5p3[reasoning=high]",
+            "name": "glm-5p3"
+          },
+          {
+            "modelId": "glm-5p3-flash[reasoning=high]",
+            "name": "glm-5p3-flash"
+          }
+        ],
+        "currentModelId": "grok-4.7[context=256k,reasoning_effort=high,fast=true]"
+      },
+      "modes": {
+        "availableModes": [
+          {
+            "description": "Full agent capabilities with tool access",
+            "id": "agent",
+            "name": "Agent"
+          },
+          {
+            "description": "Read-only mode for planning and designing before implementation",
+            "id": "plan",
+            "name": "Plan"
+          },
+          {
+            "description": "Q&A mode - no edits or command execution",
+            "id": "ask",
+            "name": "Ask"
+          }
+        ],
+        "currentModeId": "agent"
+      },
+      "sessionId": "311d8e8d-054e-4586-b739-d495e39aafed"
+    }
+  },
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36,
+  "source_unchanged": true,
+  "started_at": "2026-10-05T04:09:27.536513+00:00",
+  "status": "recorded-native-acp-metadata-no-inference"
+}

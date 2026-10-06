@@ -1,0 +1,471 @@
+{
+  "after_sha256": null,
+  "attempt": "write-stage-malformed-input",
+  "backend_attestation": "not-observed",
+  "before_sha256": null,
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults/observations/write-stage-malformed-input/preToolUse/1c36bb1175c44fac84dd8e4454acb4ca.json",
+      "sha256": "d5567dfe1a6a5d7fd14053e0310705161d1a72bb0d268dd9db9e2f86b287422a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults/observations/write-stage-malformed-input/preToolUse/24ebf1a9517f4252adeadc4ff0a9a19c.json",
+      "sha256": "cb9abbc34c0fef5be01797a76e679a0320548dc4cf65f3c08463f89723433db6"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults/observations/write-stage-malformed-input/sessionStart/a5483281bfb04435b0867d98965da6dc.json",
+      "sha256": "244c96adc4409f26496abc490b24433296e8ee4d4f99f77bd88a46e3010e5446"
+    }
+  ],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-0812-r35-cursor-write-faults-attempt-01/commands/cursor-file-write-stage-malformed-input.json",
+    "sha256": "3d64c758fda362919f6aec85afdcd77fa001c61c555db6f11fe5586c93e3e263"
+  },
+  "completed_tool_calls": [
+    {
+      "call_id": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0",
+      "model_call_id": "7d8ea0e2-109e-4692-85a6-728153886250-0-inxe",
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "completed",
+      "timestamp_ms": 1791162784470,
+      "tool_call": {
+        "completedAtMs": "1791162784438",
+        "editToolCall": {
+          "result": {
+            "error": {
+              "error": "hook-input-or-context-invalid\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "modelVisibleError": "hook-input-or-context-invalid\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "path": ""
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791162764995",
+        "toolCallId": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0"
+      },
+      "type": "tool_call"
+    }
+  ],
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0812-r35-cursor-write-faults-attempt-01/definitions/write-stage-malformed-input.json",
+    "sha256": "650da7feba2c0c5c192ab48f7d2aa5674dd91d753f6178414433cb230520c1e3"
+  },
+  "effort_requested": "xhigh",
+  "exit_code": 0,
+  "fault_origin": "controller-after-genuine-callback",
+  "file_exists": false,
+  "invalid_stdout_lines": 0,
+  "kind": "Write",
+  "mode": "malformed-input",
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_callbacks": [
+    {
+      "attempt": "write-stage-malformed-input",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:12:54.275823+00:00",
+      "control_sha256": "5c7f44dcbbc80c70a8d5575d141daad92067642571fc5718ae967fd99f137996",
+      "event": "preToolUse",
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "fault_selected": true,
+      "fault_target_event": "preToolUse",
+      "fault_target_tool": "Write",
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "0ef0884deac9c6da4e79e8ecfa08000fbe6165b4df29aaa5617584e75d1ad4fd",
+      "input_size": 1083,
+      "mode": "malformed-input",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-stage-malformed-input.txt"
+      },
+      "native_session_hash": "f632e9b814f0652b25a524483a808496db07a56cec0ba4ac7a590dbf685e1624",
+      "native_step_idx": null,
+      "native_tool_name": "Write",
+      "native_tool_use_id": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 22928,
+      "output_sha256": "7a59c2dfb1c1e02479b649f85b6693c184ff65a3fdacedc2b375c7f7761b98b2",
+      "parent_pid": 40992,
+      "reported_event": "preToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "permission": "deny",
+        "user_message": "hook-input-or-context-invalid"
+      },
+      "runner_pid": 41080,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:12:54.125858+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "content",
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-stage-malformed-input",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:12:45.965414+00:00",
+      "control_sha256": "5c7f44dcbbc80c70a8d5575d141daad92067642571fc5718ae967fd99f137996",
+      "event": "preToolUse",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "fault_target_event": "preToolUse",
+      "fault_target_tool": "Write",
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "5f63c1d7b6b91be2d1f34c3e1c9dbb2fbc669d0b6b3ca6f7c7b58de2b3f2ed1a",
+      "input_size": 796,
+      "mode": "malformed-input",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-stage-malformed-input.txt"
+      },
+      "native_session_hash": "f632e9b814f0652b25a524483a808496db07a56cec0ba4ac7a590dbf685e1624",
+      "native_step_idx": null,
+      "native_tool_name": "Read",
+      "native_tool_use_id": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 52052,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 56620,
+      "reported_event": "preToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 33592,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:12:45.809121+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-stage-malformed-input",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:12:30.728925+00:00",
+      "control_sha256": "5c7f44dcbbc80c70a8d5575d141daad92067642571fc5718ae967fd99f137996",
+      "event": "sessionStart",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "fault_target_event": "preToolUse",
+      "fault_target_tool": "Write",
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "is_background_agent",
+        "model",
+        "session_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "8bfc146334ae209fe27c8ae9a36725e506cb3f82bb12c1b67c436494f9664eda",
+      "input_size": 505,
+      "mode": "malformed-input",
+      "native_model": "grok-4.7-xhigh",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "f632e9b814f0652b25a524483a808496db07a56cec0ba4ac7a590dbf685e1624",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 48132,
+      "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+      "parent_pid": 17716,
+      "reported_event": "sessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "additional_context": "writing-resource-advice-only"
+      },
+      "runner_pid": 4780,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:12:30.566223+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    }
+  ],
+  "native_frames": [
+    {
+      "apiKeySource": "login",
+      "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+      "model": "Grok 4.7 500K Extra High",
+      "permissionMode": "default",
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "Use the native Write file tool exactly once in this authorized scratch project. Do not use shell/terminal, any other tool, inspect other files, call agents, retry or work around denial. These files contain synthetic test markers only. After the one attempted call say ORACLE_ATTEMPT_FINISHED and stop. Write exactly NCKH_CURSOR_FILE_ORACLE followed by a newline to oracles/r35-cursor-write-stage-malformed-input.txt",
+            "type": "text"
+          }
+        ],
+        "role": "user"
+      },
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "type": "user"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": "I will use the native",
+      "timestamp_ms": 1791162760738,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " Write file tool exactly",
+      "timestamp_ms": 1791162760831,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " once to write the specified",
+      "timestamp_ms": 1791162760894,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " content to the target",
+      "timestamp_ms": 1791162760990,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " file.",
+      "timestamp_ms": 1791162761054,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": "\n\nI am proceeding to",
+      "timestamp_ms": 1791162764221,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " execute the Write tool",
+      "timestamp_ms": 1791162764317,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " call now.",
+      "timestamp_ms": 1791162764407,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "completed",
+      "timestamp_ms": 1791162764887,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "I'll write the marker once with the native Write tool, then stop.",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "model_call_id": "7d8ea0e2-109e-4692-85a6-728153886250-0-inxe",
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "timestamp_ms": 1791162765019,
+      "type": "assistant"
+    },
+    {
+      "call_id": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0",
+      "model_call_id": "7d8ea0e2-109e-4692-85a6-728153886250-0-inxe",
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "started",
+      "timestamp_ms": 1791162765019,
+      "tool_call": {
+        "editToolCall": {
+          "args": {
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-stage-malformed-input.txt",
+            "streamContent": "NCKH_CURSOR_FILE_ORACLE\n"
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791162764995",
+        "toolCallId": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "call_id": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0",
+      "model_call_id": "7d8ea0e2-109e-4692-85a6-728153886250-0-inxe",
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "completed",
+      "timestamp_ms": 1791162784470,
+      "tool_call": {
+        "completedAtMs": "1791162784438",
+        "editToolCall": {
+          "result": {
+            "error": {
+              "error": "hook-input-or-context-invalid\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "modelVisibleError": "hook-input-or-context-invalid\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "path": ""
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791162764995",
+        "toolCallId": "call-a4eff183-7995-40d8-a673-0cacea307628-0\nfc_9d9b637c-695d-909e-b677-103d2af34c96_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": "I will write the specified",
+      "timestamp_ms": 1791162786724,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " marker to the oracle",
+      "timestamp_ms": 1791162786724,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " file once, then output",
+      "timestamp_ms": 1791162786724,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791162786725,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "delta",
+      "text": " and stop.",
+      "timestamp_ms": 1791162786725,
+      "type": "thinking"
+    },
+    {
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "completed",
+      "timestamp_ms": 1791162786725,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "ORACLE_ATTEMPT_FINISHED",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "type": "assistant"
+    },
+    {
+      "duration_api_ms": 30587,
+      "duration_ms": 30587,
+      "is_error": false,
+      "request_id": "7d8ea0e2-109e-4692-85a6-728153886250",
+      "result": "I'll write the marker once with the native Write tool, then stop.ORACLE_ATTEMPT_FINISHED",
+      "session_id": "f7b14952-1135-4868-ab3c-94d08693ade9",
+      "subtype": "success",
+      "type": "result",
+      "usage": {
+        "cacheReadTokens": 38016,
+        "cacheWriteTokens": 0,
+        "inputTokens": 28650,
+        "outputTokens": 895
+      }
+    }
+  ],
+  "path": "oracles/r35-cursor-write-stage-malformed-input.txt",
+  "policy_receipts": [
+    {
+      "decision": "block",
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults/policy-receipts/write-stage-malformed-input/preToolUse/4cb5e574cb4b322d63315dcf36ebb0845f258104bc730aec1aa14fbb3650783d.json",
+      "reason_codes": [
+        "hook-input-or-context-invalid"
+      ],
+      "sha256": "e0f27c434080c611485df6c6ff519eb71aab007e3a24dd76b549a860d9fe3f17"
+    },
+    {
+      "decision": "allow",
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults/policy-receipts/write-stage-malformed-input/preToolUse/9e30dbe61293d5cf04f8c4f194545d77190e229829225932365830e5d6eb0ea1.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "ec9bda02b95de23de84eccc7db263c789624df58f1b45e8dec37f554984debe1"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed"
+}

@@ -1,0 +1,54 @@
+{
+  "changes_from_preview": [
+    "owned active-context reference",
+    "owned receipt namespace"
+  ],
+  "config": {
+    "hooks": {
+      "beforeSubmitPrompt": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event beforeSubmitPrompt --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-direct-sequence-11/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-sequence-11/policy-receipts",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "postToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event postToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-direct-sequence-11/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-sequence-11/policy-receipts",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "preToolUse": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-direct-sequence-11/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-sequence-11/policy-receipts",
+          "failClosed": true,
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "sessionStart": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event sessionStart --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-direct-sequence-11/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-sequence-11/policy-receipts",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "stop": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event stop --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r36-cursor-direct-sequence-11/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-sequence-11/policy-receipts",
+          "loop_limit": 1,
+          "timeout": 5,
+          "type": "command"
+        }
+      ]
+    },
+    "version": 1
+  },
+  "config_sha256": "bcd74b7ba856d8ae0b665dc8e2a66aed9a2be160652ebf8cfc3db68ea43dd427",
+  "definition_kind": "direct-packaged-runner",
+  "extra_configs": [],
+  "observer_invoked": false,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "timeout_seconds": 5
+}

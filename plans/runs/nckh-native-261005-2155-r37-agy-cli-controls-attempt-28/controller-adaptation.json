@@ -1,0 +1,30 @@
+{
+  "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1134-r36-agy-shell-attempt-01\\agy-shell-runtime.py",
+  "source_sha256": "117c0351df997e6a929ab55978f860b05960b024148e79d0e41d0726f806495d",
+  "preserved_preimage_sha256": "117c0351df997e6a929ab55978f860b05960b024148e79d0e41d0726f806495d",
+  "adapted_controller_sha256": "e4cbe1e4b0fe1c4ac86879779211e26f6807ed6df9096f99c5f4661276c3e629",
+  "replacements": {
+    ".nckh-native-r36-agy-shell-01": ".nckh-native-r37-agy-cli-controls-28",
+    "plans/runs/nckh-native-261005-1050-r36-shell-guard-attempt-02": "plans/runs/nckh-native-261005-1640-r37-cursor-timeout-repair-attempt-02",
+    "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+    "native-agy-shell-r36": "native-agy-cli-controls-r37",
+    "nckh-native-r36-shell": "nckh-native-r37-cli-controls",
+    "\"source_revision\": 36": "\"source_revision\": 37",
+    "\"--print-timeout\", \"4m\"": "\"--print-timeout\", \"0\"",
+    "cwd=PROJECT, timeout=270": "cwd=PROJECT, timeout=None"
+  },
+  "candidate_modified": false,
+  "direct_packaged_handlers": true,
+  "hook_timeout_seconds": 5,
+  "model_turn_timeout": "none; monitor exact owned process",
+  "sandbox_models_failure": {
+    "chunk_id": "c2ccde",
+    "exit_code": 1,
+    "model_prompts": 0,
+    "observed": [
+      "global log access denied",
+      "sandbox proxy 127.0.0.1:9 refused"
+    ],
+    "raw_tool_output": "bounded and truncated; not a model authentication conclusion"
+  }
+}

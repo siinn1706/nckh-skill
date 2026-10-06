@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "passed-for-document-structure-and-links",
+  "recorded_at": "2026-10-03T15:18:44.947535+00:00",
+  "commands": [
+    {
+      "command": [
+        "ak",
+        "plan",
+        "validate",
+        "C:/Users/USER\\Downloads\\test-skill\\plans\\261003-0101-nckh-personal-use-sources-and-standards",
+        "--json"
+      ],
+      "exit_status": 0,
+      "stdout": "[removed: raw runtime content]",
+      "stderr": "[removed: raw runtime content]"
+    },
+    {
+      "command": [
+        "ak",
+        "plan",
+        "reindex",
+        "--path",
+        "C:/Users/USER\\Downloads\\test-skill",
+        "--apply",
+        "--json"
+      ],
+      "exit_status": 0,
+      "stdout": "[removed: raw runtime content]",
+      "stderr": "[removed: raw runtime content]"
+    }
+  ],
+  "local_link_count": 139,
+  "broken_links": [],
+  "phase_counts": [
+    {
+      "file": "phase-01-start.md",
+      "checked": 5,
+      "pending": 0
+    },
+    {
+      "file": "phase-02-sources.md",
+      "checked": 6,
+      "pending": 0
+    },
+    {
+      "file": "phase-03-acceptance.md",
+      "checked": 6,
+      "pending": 0
+    },
+    {
+      "file": "phase-04-runtime.md",
+      "checked": 9,
+      "pending": 0
+    }
+  ],
+  "files_sha256": {
+    "plans/261003-0101-nckh-personal-use-sources-and-standards/plan.md": "31b598fcd94b5ee37f7ab27dab98532339734ca6546858acb6dffb9307955dda",
+    "plans/261003-0101-nckh-personal-use-sources-and-standards/phase-04-runtime.md": "4c16f3eff6f03ef5c5826e38aef245bf47f8ff58b5ec4a75f36be14c5ac1f056",
+    "plans/reports/checklist-261003-hoan-thanh-plans.md": "a04ce5423e25ccc5b70e817925e0baeee714d497ebbc79f0313a87aef0b8678d",
+    "plans/reports/runtime-261003-2137-three-prompts-and-personal-use-closeout.md": "8d9f1d4c965f4225cd86c66c6bce47963a800c9875c553319fdf306b6dc9662d",
+    "plans/reports/review-261003-2137-agy-repair-02.md": "e43123426da6fa19fa9f6265729badb94738a5e96fa14058f41874ade2658f0b",
+    "plans/reports/review-261003-2137-ide-worldbank-source-and-receipts.md": "2e21ab8a03ecc7c5735b84ed56a93c9278d39993f807d2c73f3d7b3a9a6eee94",
+    "plans/reports/review-261003-2137-ide-worldbank-controller-qa.md": "16278e5a91c11986e44a8f5ee33f9f34bc6be6cd1fbc772a44b4fdeddeda3ab2",
+    "plans/journals/2026-10-03-nckh-three-prompts-reviewed-and-personal-use-handoff.md": "b8064fbeefabccc8f36154aca0ec834523e74d940fdd58ac1ed799adbeb2e0f7"
+  },
+  "limits": [
+    "Document validation only; artifact acceptance is supported by separate actual source/native QA and reviews."
+  ]
+}

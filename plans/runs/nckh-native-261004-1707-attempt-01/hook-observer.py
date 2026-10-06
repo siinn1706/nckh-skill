@@ -1,0 +1,81 @@
+"""Test-only observer around the unchanged extracted hook runner."""
+
+import argparse
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import time
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--host", required=True)
+parser.add_argument("--event", required=True)
+parser.add_argument("--project", type=Path, required=True)
+parser.add_argument("--runner", type=Path, required=True)
+parser.add_argument("--mode", default="normal")
+args = parser.parse_args()
+project = args.project.resolve()
+directory = project / "observations"
+directory.mkdir(exist_ok=True)
+record_path = directory / (uuid.uuid4().hex + ".json")
+payload = sys.stdin.buffer.read(65537)
+record = {"schema_version": 1, "host": args.host, "selected_event": args.event, "mode": args.mode,
+          "started_at": datetime.now(timezone.utc).isoformat(), "observer_pid": os.getpid(),
+          "parent_pid": os.getppid(), "input_sha256": hashlib.sha256(payload).hexdigest(),
+          "input_size": len(payload), "runner_sha256": hashlib.sha256(args.runner.read_bytes()).hexdigest(),
+          "status": "entered-from-host"}
+try:
+    decoded = json.loads(payload)
+    record["input_fields"] = sorted(decoded)
+    record["reported_event"] = decoded.get("hook_event_name")
+    record["reported_roots"] = decoded.get("workspace_roots", decoded.get("workspacePaths", [decoded.get("cwd")]))
+    record["tool_name"] = decoded.get("tool_name", decoded.get("toolName"))
+except (ValueError, TypeError):
+    record["input_schema"] = "not-json-object"
+
+
+def save():
+    record_path.write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
+
+
+save()
+if args.mode == "crash":
+    record["status"] = "intentional-crash-exit-17"
+    save()
+    os._exit(17)
+if args.mode == "timeout":
+    time.sleep(8)
+if args.mode == "malformed-output":
+    record["status"] = "intentional-malformed-output"
+    save()
+    print("[invalid-native-hook-output")
+    sys.exit(0)
+event = "UnknownNckhEvent" if args.mode == "unsupported" else args.event
+context = "missing-context.json" if args.mode == "deny" else "context.json"
+runner_input = b"{" if args.mode == "malformed-input" else payload
+command = [sys.executable, "-I", str(args.runner), "--host", args.host, "--event", event,
+           "--project", str(project), "--context", context, "--receipt-dir", "policy-receipts"]
+process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                           creationflags=subprocess.CREATE_NO_WINDOW)
+record["runner_pid"] = process.pid
+save()
+try:
+    stdout, stderr = process.communicate(runner_input, timeout=3)
+except subprocess.TimeoutExpired:
+    process.terminate()
+    stdout, stderr = process.communicate(timeout=5)
+record.update(status="completed", runner_exit_code=process.returncode,
+              output_sha256=hashlib.sha256(stdout).hexdigest(), stderr_sha256=hashlib.sha256(stderr).hexdigest(),
+              completed_at=datetime.now(timezone.utc).isoformat(), runner_exited=process.poll() is not None)
+try:
+    record["runner_output"] = json.loads(stdout)
+except ValueError:
+    record["runner_output"] = "invalid-json"
+save()
+sys.stdout.buffer.write(stdout)
+sys.stderr.buffer.write(stderr)
+sys.exit(process.returncode)

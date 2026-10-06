@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "selected_at": "2026-10-06T02:00:32.838440+00:00",
+  "status": "frozen-local-offline-pilot",
+  "route": "existing supplied scientific-project data, no remote ingestion",
+  "task_id": "vnm-population-chronological-forecast",
+  "source_path": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\core\\profiles\\resources\\worldbank-series.jsonl",
+  "source_sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
+  "raw_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\source-acquisition\\raw\\worldbank-vnm-population-2000-2025.json",
+  "raw_sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781",
+  "source_version": "SP.POP.TOTL:2000-2025@2026-07-13",
+  "rights": {
+    "as_of": "2026-10-03",
+    "license": "CC-BY-4.0",
+    "license_kind": "owned-rights-record",
+    "license_path": "core/profiles/resources/worldbank-rights.md",
+    "license_sha256": "e44f97747f7318dd25d9d939db15c8f4dcf4b18bfd8dab0405d2af25b261451c",
+    "lineage": [
+      {
+        "kind": "source-response",
+        "locator": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
+        "operation": "API response projected field-for-field; values and blank unit preserved",
+        "sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+      }
+    ],
+    "notice_path": "core/profiles/resources/worldbank-rights.md",
+    "notice_sha256": "e44f97747f7318dd25d9d939db15c8f4dcf4b18bfd8dab0405d2af25b261451c",
+    "redistribution": "permitted-with-notices",
+    "repository": "World Bank",
+    "retrieval_timezone": "Asia/Saigon",
+    "retrieved_at": "2026-10-03",
+    "review_reference": "plans/reports/acquisition-261003-real-sources.md",
+    "rights_scope": "redistributable",
+    "sha256": "a29802fa36bc453ce9abbf9789e119bae689462ffd6348e327ee7d7f5e9cb4b2",
+    "upstream_license_path": "https://data.worldbank.org/summary-terms-of-use",
+    "upstream_path": "https://api.worldbank.org/v2/country/VNM/indicator/SP.POP.TOTL?date=2000%3A2025&format=json&per_page=100",
+    "upstream_sha256": "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781",
+    "upstream_sha256s": [
+      "a63e499e9f24ae600bb52ecac8acb07bbb959a812e830cc7cf870fbca2fe5781"
+    ],
+    "version": "SP.POP.TOTL:2000-2025@2026-07-13",
+    "version_kind": "api-snapshot"
+  },
+  "scope": "research artifact-chain demonstration; no incident RCA or real-system efficacy claim",
+  "operations_grant": "current direct /goal ak-cook plan --auto authorizes bounded local implementation and computations on supplied workspace data",
+  "measurement_count": 26,
+  "modality": "annual population indicator only; no logs or traces",
+  "unit": "unknown; blank source field preserved",
+  "independent_unit": "one country population series; yearly errors temporally dependent",
+  "split": {
+    "train_years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "validation_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "test_years": [
+      2023,
+      2024,
+      2025
+    ],
+    "axes": [
+      "chronological-year"
+    ],
+    "fit": "train only; baselines fixed before test",
+    "decision_time": "forecast origin preceding target year"
+  },
+  "baselines": [
+    "last-observation naive",
+    "expanding historical mean annual change from available preceding years"
+  ],
+  "metrics": [
+    "absolute-error per target year",
+    "MAE per frozen partition and baseline",
+    "paired absolute-error difference on exact target years"
+  ],
+  "uncertainty": "descriptive only; no IID confidence interval from three test-year windows",
+  "stochastic_applicability": "not applicable: both baselines deterministic, no invented seed/repeats",
+  "trusted_caps": {
+    "file_bytes": 1048576,
+    "aggregate_bytes": 8388608,
+    "records": 1000,
+    "output_bytes": 1048576
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "packages": "stdlib only"
+  },
+  "excluded": [
+    "network/download",
+    "provider",
+    "cluster",
+    "fault injection",
+    "dependencies install",
+    "source/dist pilot data",
+    "publication"
+  ],
+  "input_access": "source already contains observed values; development demonstration, not blind heldout efficacy evaluation",
+  "previous_selection_sha256": "3a262d4a5ac842f0eaf83e57865fbdec91ea7dc98fd7b8b697ab561b777fb5be"
+}

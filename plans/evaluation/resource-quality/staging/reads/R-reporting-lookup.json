@@ -1,0 +1,81 @@
+{
+  "consumer": "nckh-method",
+  "context": {
+    "article_type": null,
+    "stage": null,
+    "track": null,
+    "venue": null,
+    "year": null
+  },
+  "domain": "clinical-health",
+  "evidence_class": "resource-read-observation",
+  "genre": "reporting-reference",
+  "human_acceptance": "not-evaluated",
+  "locale": "en",
+  "policy_applicability": "unverified",
+  "query": "",
+  "reader_sha256": "5aa6752d7c9bf5d9cf2e09b1c9e00422a209f82695eb814c000c85467363e00d",
+  "records": [
+    {
+      "content": {
+        "conditions": {},
+        "coverage_topics": [
+          {
+            "id": "design-and-randomization",
+            "label": "Trial design, allocation, concealment, and masking"
+          },
+          {
+            "id": "participants-and-flow",
+            "label": "Eligibility, recruitment, analysis populations, and participant flow"
+          },
+          {
+            "id": "outcomes-and-harms",
+            "label": "Prespecified outcomes, estimates, uncertainty, and harms"
+          },
+          {
+            "id": "registration-protocol-analysis-plan",
+            "label": "Registration, protocol, analysis plan, and deviations"
+          },
+          {
+            "id": "open-science-and-funding",
+            "label": "Data sharing, funding, conflicts, and contributor information"
+          }
+        ],
+        "id": "consort-2025",
+        "name": "CONSORT 2025",
+        "official_url": "https://www.consort-spirit.org/",
+        "protocol": false,
+        "role": "primary",
+        "source_ids": [
+          "SW-S07",
+          "SW-S08"
+        ],
+        "study_designs": [
+          "randomized_trial",
+          "pilot_randomized_trial"
+        ],
+        "version": "2025"
+      },
+      "provenance": {
+        "as_of": "2026-10-02",
+        "license": "MIT",
+        "locator": "consort-2025",
+        "record_sha256": "9870de389846567d7cbfb54d8466dc79feb4207fd6f8ffc8a9c90c436d0d90dc",
+        "repository": "K-Dense-AI/scientific-agent-skills",
+        "source_path": "skills/scientific-writing/assets/reporting_guidelines.json",
+        "source_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd",
+        "version": "154988403bb5a18e9d3c0ce4e6d5e2e4b184a298"
+      },
+      "record_id": "consort-2025"
+    }
+  ],
+  "resource_id": "R-reporting-lookup",
+  "resource_read": true,
+  "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd",
+  "schema_version": 1,
+  "status": "matched",
+  "warnings": [
+    "Snapshot/reference lookup only; semantic support, current policy and human acceptance are not certified.",
+    "Clinical/health study-design registry; it does not impose reporting guidance on generic CS work."
+  ]
+}

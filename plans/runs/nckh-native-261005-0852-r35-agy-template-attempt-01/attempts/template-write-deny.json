@@ -1,0 +1,314 @@
+{
+  "after": {},
+  "attempt": "template-write-deny",
+  "backend_attestation": "not-observed",
+  "before": {},
+  "billing": "not-observed",
+  "callback_bindings": [],
+  "command": {
+    "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-deny.json",
+    "sha256": "1bffa3e86556847916b8f45cabb88265301aebac96f84bed4f2dfeff7135ed0f"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/definitions/template-write-deny.json",
+    "sha256": "67eef2b156a7e59dc8a2d130c11a22013a500474358c89e2182d65360056c0b9"
+  },
+  "direct": true,
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "expected_deny": true,
+  "expected_tool": "write_to_file",
+  "fault_origin": "none",
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_callbacks": [],
+  "native_frames": [
+    {
+      "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+      "event": "init",
+      "init": {
+        "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model",
+        "model": "gemini-3.8-flash-medium",
+        "permission_mode": "always-proceed",
+        "tools": [
+          "ask_custom_permission",
+          "ask_permission",
+          "ask_question",
+          "browser_click_element",
+          "browser_drag_pixel_to_pixel",
+          "browser_get_dom",
+          "browser_get_network_request",
+          "browser_input",
+          "browser_list_network_requests",
+          "browser_mouse_down",
+          "browser_mouse_up",
+          "browser_move_mouse",
+          "browser_press_key",
+          "browser_refresh_page",
+          "browser_resize_window",
+          "browser_scroll",
+          "browser_scroll_dom",
+          "browser_select_option",
+          "browser_subagent",
+          "call_mcp_tool",
+          "capture_browser_console_logs",
+          "capture_browser_screenshot",
+          "click_browser_pixel",
+          "command_status",
+          "define_subagent",
+          "delete_knowledge",
+          "execute_browser_javascript",
+          "find_by_name",
+          "finish",
+          "generate_image",
+          "grep_search",
+          "invoke_subagent",
+          "list_browser_pages",
+          "list_dir",
+          "list_permissions",
+          "list_plugin_accounts",
+          "list_resources",
+          "manage_inbox",
+          "manage_subagents",
+          "manage_task",
+          "multi_replace_file_content",
+          "notebook_edit",
+          "notebook_execution",
+          "open_browser_url",
+          "read_browser_page",
+          "read_resource",
+          "read_url_content",
+          "replace_file_content",
+          "run_command",
+          "run_workflow",
+          "schedule",
+          "search_marketplace",
+          "search_web",
+          "sed_file",
+          "send_command_input",
+          "send_message",
+          "view_file",
+          "wait",
+          "wait_5_seconds",
+          "write_to_file"
+        ]
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "state": "DONE",
+        "step_index": 0,
+        "step_type": "user_input"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "duration_seconds": 2.4989733,
+        "state": "DONE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 20606,
+          "output_tokens": 387,
+          "thinking_tokens": 250,
+          "total_tokens": 20993
+        }
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "state": "ACTIVE",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "name": "write_to_file",
+          "parameters": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-direct-template-write-deny.txt"
+          }
+        },
+        "tool_name": "write_to_file"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "duration_seconds": 0.1730592,
+        "state": "ERROR",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "error": {
+            "message": "tool call denied by pre-tool hook: plan-only-mutation",
+            "type": "TOOL_ERROR"
+          },
+          "name": "write_to_file",
+          "parameters": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-direct-template-write-deny.txt"
+          }
+        },
+        "tool_name": "write_to_file"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "state": "ACTIVE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "OR"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "state": "ACTIVE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "ACLE_ATTEMPT_FINISHED"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "duration_seconds": 2.1980162,
+        "state": "DONE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "\n",
+        "usage": {
+          "cache_read_tokens": 16308,
+          "input_tokens": 4782,
+          "output_tokens": 77,
+          "thinking_tokens": 70,
+          "total_tokens": 4859
+        }
+      }
+    },
+    {
+      "event": "result",
+      "result": {
+        "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+        "duration_seconds": 5.3313037,
+        "num_turns": 1,
+        "response": "ORACLE_ATTEMPT_FINISHED\n",
+        "status": "SUCCESS",
+        "usage": {
+          "cache_read_tokens": 16308,
+          "input_tokens": 25388,
+          "output_tokens": 464,
+          "thinking_tokens": 320,
+          "total_tokens": 25852
+        }
+      }
+    }
+  ],
+  "path": "oracles/r35-agy-direct-template-write-deny.txt",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-deny/0c680b17922c2bac882dcfc7fccaf0b01c65afb67eb6c0d06f5c6a76c6eb2488.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "fcc86b2adff3147c1da82629905db804194be2796348abe5fac8cb39bb294dea",
+        "decision": "advisory",
+        "event_hash": "998ad5d9ad8c51a1f6e69096d590941a167c61a5f6c00c97ddfc15ae4ea30511",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "83ac874c469ba3a73d5d542a595a4badb7655a695a58505247b9590ccd6798b2",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+      },
+      "sha256": "7be196c8e9f818b804793d1e5c2a9dd2c931ef49674a9b7f0f2b6328e9515549"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-deny/9f2b6c7830673bb4199832fd64ded01c4f8495158aafe381afc096532c786a78.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "fcc86b2adff3147c1da82629905db804194be2796348abe5fac8cb39bb294dea",
+        "decision": "block",
+        "event_hash": "66f25859c0975c8d593d30102637ac69c1eb84159005b1bb6e7fcb5bdc917706",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "plan-only-mutation"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "83ac874c469ba3a73d5d542a595a4badb7655a695a58505247b9590ccd6798b2",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+      },
+      "sha256": "46f644d2d3beb4439e994a2c86dffdb91dc3592c374a181dc0bdf08b4c3a4b45"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-deny/c407792ff3564106e82aeef5e8297e73a0120e2936e29a1b94ecd96a4d25bc58.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "fcc86b2adff3147c1da82629905db804194be2796348abe5fac8cb39bb294dea",
+        "decision": "advisory",
+        "event_hash": "099eb963280778caa92c1b7c44c44f8eb3dc9f3e07e0ccddfec1b31b41934a22",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "83ac874c469ba3a73d5d542a595a4badb7655a695a58505247b9590ccd6798b2",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+      },
+      "sha256": "bac54a78fe18444f434fa3269b274fb9976b21f2cf56a082238e9efe72fcb104"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed",
+  "terminal_tools": [
+    {
+      "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+      "duration_seconds": 0.1730592,
+      "state": "ERROR",
+      "step_index": 2,
+      "step_type": "tool",
+      "tool_info": {
+        "error": {
+          "message": "tool call denied by pre-tool hook: plan-only-mutation",
+          "type": "TOOL_ERROR"
+        },
+        "name": "write_to_file",
+        "parameters": {
+          "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-direct-template-write-deny.txt"
+        }
+      },
+      "tool_name": "write_to_file"
+    }
+  ]
+}

@@ -1,0 +1,367 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "outcome": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "enum": [
+        "research",
+        "engineer",
+        "marketing"
+      ]
+    },
+    "language": {
+      "enum": [
+        "vi",
+        "en",
+        "bilingual"
+      ]
+    },
+    "scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "non_goals": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "acceptance": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "authorization_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "private_store": {
+      "type": "string",
+      "minLength": 1
+    },
+    "mode": {
+      "enum": [
+        "plan-only",
+        "auto",
+        "interactive"
+      ]
+    },
+    "venue_profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "glossary_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "protected_regions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "visual_purpose": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "kind": {
+          "enum": [
+            "chart",
+            "mechanism",
+            "illustration"
+          ]
+        },
+        "purpose_question": {
+          "type": "string",
+          "minLength": 1
+        },
+        "research_object": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifact_role": {
+          "enum": [
+            "research-evidence",
+            "mechanism-explanation",
+            "research-illustration"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "source_access": {
+          "enum": [
+            "public-data",
+            "full-text",
+            "user-supplied",
+            "owned-run"
+          ]
+        },
+        "data_origin": {
+          "enum": [
+            "observed",
+            "derived",
+            "computational",
+            "simulation",
+            "none"
+          ]
+        },
+        "inference_labels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "non_evidentiary_label": {
+          "type": "string"
+        },
+        "required_marks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "source_to_mark": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "mark_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "origin": {
+                "enum": [
+                  "observed-field",
+                  "calculation-output",
+                  "inference",
+                  "illustration"
+                ]
+              },
+              "pointer": {
+                "type": "string",
+                "minLength": 1
+              },
+              "value": {},
+              "unit": {
+                "type": "string"
+              },
+              "denominator": {},
+              "unit_pointer": {
+                "type": "string"
+              },
+              "denominator_pointer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "mark_id",
+              "evidence_id",
+              "source_sha256",
+              "origin",
+              "pointer",
+              "value",
+              "unit",
+              "denominator",
+              "unit_pointer",
+              "denominator_pointer"
+            ]
+          }
+        },
+        "uncertainty": {
+          "type": "string"
+        },
+        "uncertainty_not_applicable_reason": {
+          "type": "string"
+        },
+        "computation": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "model": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "run_locator": {
+              "type": "string",
+              "minLength": 1
+            },
+            "parameters": {
+              "type": "object"
+            },
+            "code": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ]
+            },
+            "source": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ]
+            },
+            "transform": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ]
+            },
+            "output": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ]
+            },
+            "run_receipt": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              },
+              "required": [
+                "path",
+                "sha256"
+              ]
+            }
+          },
+          "required": [
+            "model",
+            "version",
+            "run_locator",
+            "parameters",
+            "code",
+            "source",
+            "transform",
+            "output",
+            "run_receipt"
+          ]
+        }
+      },
+      "required": [
+        "kind",
+        "purpose_question",
+        "research_object",
+        "artifact_role",
+        "evidence_ids",
+        "source_access",
+        "data_origin",
+        "inference_labels",
+        "non_evidentiary_label",
+        "required_marks",
+        "source_to_mark",
+        "uncertainty",
+        "uncertainty_not_applicable_reason"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "outcome",
+    "domain",
+    "language",
+    "scope",
+    "constraints",
+    "non_goals",
+    "acceptance",
+    "mode"
+  ]
+}

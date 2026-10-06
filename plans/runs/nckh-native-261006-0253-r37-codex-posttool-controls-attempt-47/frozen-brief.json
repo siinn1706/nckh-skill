@@ -1,0 +1,48 @@
+{
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "model": "gpt-5.6-luna",
+  "effort": "medium",
+  "surface": "codex-cli-exec",
+  "version": "0.154.0",
+  "event": "PostToolUse",
+  "tool": "apply_patch",
+  "modes": [
+    "allow",
+    "policy-deny",
+    "malformed-input",
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-codec"
+  ],
+  "maximum_model_turns": 7,
+  "maximum_requested_native_tools": 7,
+  "model_retries": 0,
+  "expected_marker_hex": "4e434b485f4e41544956455f46494c455f4f5241434c450a",
+  "expected_marker_exists": {
+    "allow": true,
+    "policy-deny": true,
+    "malformed-input": true,
+    "malformed-output": true,
+    "timeout": true,
+    "crash": true,
+    "unsupported-codec": true
+  },
+  "normal_policy_expected": "advisory/delivery-bindings-current-review-separate; declared synthetic artifact bytes only",
+  "deny_policy_expected": "block/bounded-input-exceeded from33 controller-owned empty reference records; advisory wire after mutation",
+  "oracle": "one genuine matching patch pre/post call; exact mutation before selected post callback; preserve native states/failures/late callbacks without regrading",
+  "fault_origin": "controller-injection-after-genuine-native-callback for five fault modes; none for allow/policy-deny",
+  "outer_timeout_seconds": 5,
+  "inner_timeout_seconds": 5,
+  "injected_sleep_seconds": 8,
+  "whole_turn_deadline": null,
+  "trust_route": "reuse existing native workspace key; inline invocation hook-trust bypass",
+  "new_trust_keys": "not-authorized",
+  "global_direct_writes": false,
+  "scientific_QA": "not-claimed; synthetic marker binding only",
+  "controller": {
+    "path": "plans/runs/nckh-native-261006-0253-r37-codex-posttool-controls-attempt-47/run-posttool-controls.py",
+    "sha256": "a8fab2067dbe748b4e68e66714540cdc602d346664f268cf68c4612f622043c1"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "status": "verified-native-Grep-uncovered-route-manual-host-completion",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "native_version": "2026.09.15-d2fe57e",
+  "surface": "cursor-cli",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_selection_source": "existing CLI selectedModel; --model omitted",
+  "model_selection": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/model-selection-before-prompt.json",
+    "sha256": "9aa4fff57c4dafea1717b3efc599ed775684f7474e716a751ba03e07e25f26b4"
+  },
+  "model_turns": 1,
+  "prompt_submissions": 1,
+  "model_prompt_retries": 0,
+  "fault_origin": "none",
+  "native_model_fields_by_event": {
+    "beforeSubmitPrompt": "grok-4.7-xhigh",
+    "postToolUse": "grok-4.7",
+    "preToolUse": "grok-4.7",
+    "sessionStart": "grok-4.7-xhigh",
+    "stop": "grok-4.7-xhigh"
+  },
+  "native_model_parameter_attestation": "absent model_id/model_params; granted selection confirmed by config and CLI display only",
+  "failed_verifier_attempt_01": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/verifier-attempt-01-failure.json",
+    "sha256": "a6d61d8b7e39365bd6dc1c29260848d52b72f033ba0606786b164f07c2c2ceee"
+  },
+  "model_field_correction": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/verifier-attempt-02-adaptation.json",
+    "sha256": "57d286aa1d820e4df43a2331d6a930a49e86517ad8919888fed4df7450d86988"
+  },
+  "native_callback_count": 5,
+  "policy_receipt_count": 5,
+  "actual_native_tool": "Grep",
+  "native_tool_ids": [
+    "call-e67ccb62-0b97-4a27-8375-a5f27e093ab9-0\nfc_0f182a11-af49-93a9-95c3-0448dd1ddc16_0"
+  ],
+  "preflight_result": "manual/tool-route-uncovered; native runner output empty JSON; native Grep proceeds",
+  "post_result": "pending/artifact-final-bytes-missing-or-stale; artifact QA remains separate",
+  "fixture_unchanged": true,
+  "final_marker_observed": true,
+  "original_case_status_retained": "verified-native-uncovered-search-manual-route",
+  "original_case": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/case-uncovered-search.json",
+    "sha256": "3f2977de714f74a7b049d0eba4740f6b5514f829a822b164b1495303132d04fc"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/definitions/session.json",
+    "sha256": "a47aa43755085e2030a1ad92025e1634eeeec519418c77837665c5d08d965e5a"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/cleanup.json",
+    "sha256": "80d1eee575dc35b1538ff617182e017f5423474a09216a7e40a70b84bac1af7e"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/final-process-audit.json",
+    "sha256": "068c06a45db8926d3ae86c76699506681526037e10935a82eb64ba723dc49887"
+  },
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/terminal-native-exit-poll-01.json",
+    "sha256": "766721688343312d761d054063411f416f07f736ee5ff4750f4b28ba1bd90554"
+  },
+  "native_terminal_exit_code": 0,
+  "preparation_controller_recovery": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/preparation-controller-recovery.json",
+    "sha256": "dcff9f59fe436e440f201c07c7dede1eb93e12b4d35870a5766562c8d5becfc5"
+  },
+  "previous_admission_failure": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/native-admission-summary.json",
+    "sha256": "7582ca0a84a018d9babd9af4799239a68712422e192aeb6809361bed9813a3f6"
+  },
+  "previous_failure_regraded": false,
+  "preflight_timeout_seconds": 20,
+  "other_handler_timeout_seconds": 5,
+  "inner_runner_timeout_seconds": 5,
+  "handler_kind": "bounded project observer forwarding genuine native payload to unchanged verified packaged runner",
+  "raw_terminal_truncated": true,
+  "native_tool_return_content": "not-retained; bounded terminal reports one match",
+  "global_direct_write": false,
+  "protected_global_configs_unchanged": true,
+  "cli_owned_state_hash_changed": true,
+  "CLI_owned_state_fields": "not-inferred-from-hashes",
+  "historical_members_preserved": 767,
+  "removed_members": 27,
+  "scope_limit": "Grep exists in the native host but is absent from this controller operation map; this is not natively unsupported tool/event evidence or enforcement",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2119-r37-cursor-selected-model-search-attempt-24/verify-uncovered-search-delivery-attempt-02.py",
+    "sha256": "c3b1e61488f0951d9f20237a77caf99882fb74935de031c10738825e1fa670f6"
+  },
+  "plan_tasks": "44/45",
+  "full_native_gate": "unchecked",
+  "owner_acceptance": "exact-r29-VI-EN-only",
+  "installed_update": "not-performed",
+  "publication": "not-performed",
+  "scientific_stable_release": "pending"
+}

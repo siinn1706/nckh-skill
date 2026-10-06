@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-10-03T09:35:42.3527535Z",
+  "operation": "read-only-ACL-observation-after-failed-owned-update",
+  "transaction": "34b8711868b94f28bc45f9695d071238",
+  "actual_error": "WinError 5 on target-to-backup rename",
+  "paths": [
+    {
+      "project_relative_path": ".agents\\skills",
+      "deny_ace_count": 4,
+      "deny_rights": [
+        "1074987350",
+        "DeleteSubdirectoriesAndFiles, Write, Delete, ReadPermissions, Synchronize"
+      ],
+      "inherits_acl": true
+    },
+    {
+      "project_relative_path": ".agents\\skills\\nckh-visuals",
+      "deny_ace_count": 0,
+      "deny_rights": [],
+      "inherits_acl": true
+    },
+    {
+      "project_relative_path": ".nckh-state\\transactions\\34b8711868b94f28bc45f9695d071238",
+      "deny_ace_count": 0,
+      "deny_rights": [],
+      "inherits_acl": true
+    }
+  ],
+  "limits": [
+    "No ACL changes or process termination performed.",
+    "Deny entries observed; this does not identify the complete effective token or exclude concurrent handle/filter denial.",
+    "Tool escalation was allowed and ran; this was not an automatic approval review rejection."
+  ]
+}

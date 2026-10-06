@@ -1,0 +1,72 @@
+{
+  "status": "required-native-gates-remain-open",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "plan_done_tasks": 44,
+  "plan_total_tasks": 45,
+  "full_native_task_checked": false,
+  "qualified_scope": "fresh r37 Cursor CLI public Write effect and plan-only preventive Write denial",
+  "required_failure_paths": [
+    "allow",
+    "policy-deny",
+    "malformed-input",
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-event-or-tool",
+    "duplicate-project-plugin-invocation"
+  ],
+  "remaining": [
+    {
+      "surface": "claude-code",
+      "model_execution": "selection-pending",
+      "observed_cli_version": "2.1.272",
+      "required_input": "owner selects exact Claude model and effort",
+      "evidence": "claude-live-help.json"
+    },
+    {
+      "surface": "agy-ide",
+      "status": "native-target-window-unidentified",
+      "required_input": "recover a targetable AGY-owned work surface",
+      "evidence": "agy-window-final-observation.json",
+      "access_granted": true,
+      "unlock_confirmed": true
+    },
+    {
+      "surface": "codex-desktop",
+      "status": "direct-event-receipts-pending"
+    },
+    {
+      "surface": "codex-ide",
+      "status": "direct-event-receipts-pending"
+    },
+    {
+      "surface": "cursor-ide",
+      "status": "direct-event-receipts-pending"
+    },
+    {
+      "surface": "cursor-cli",
+      "status": "remaining-private-mutation-and-full-event-failure-matrix-pending",
+      "prior_failures": "retained-revision-bound"
+    },
+    {
+      "surface": "codex-cli",
+      "status": "remaining-event-tool-failure-matrix-pending",
+      "prior_observations": "scoped-and-revision-bound"
+    },
+    {
+      "surface": "agy-cli",
+      "status": "remaining-event-tool-failure-matrix-pending",
+      "prior_observations": "scoped-and-revision-bound"
+    }
+  ],
+  "authorization": {
+    "dangerous_cli_flags": "granted-for-owned-scratch-tests",
+    "agy_access": "granted",
+    "unlock": "confirmed",
+    "installed_r25_replacement": "separate-not-performed",
+    "new_trust_keys": "not-created",
+    "publication": "not-performed"
+  },
+  "note": "A required native gate stays unchecked until its actual event/surface/version evidence is recorded; structure validation and local model checks do not close it."
+}

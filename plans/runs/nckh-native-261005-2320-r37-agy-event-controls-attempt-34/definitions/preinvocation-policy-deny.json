@@ -1,0 +1,60 @@
+{
+  "attempt": "preinvocation-policy-deny",
+  "config": {
+    "nckh-native-r37-cli-controls": {
+      "PostInvocation": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-tool-observer.py --host agy --event PostInvocation --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-native-r37-agy-event-controls-34 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-state\\hooks\\agy\\ce57363753585dbb39ec799f197dd56a4c3782b78a1e05d6cb6bf077a7de8ae8\\hooks\\runner.py",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "PostToolUse": [
+        {
+          "hooks": [
+            {
+              "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-tool-observer.py --host agy --event PostToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-native-r37-agy-event-controls-34 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-state\\hooks\\agy\\ce57363753585dbb39ec799f197dd56a4c3782b78a1e05d6cb6bf077a7de8ae8\\hooks\\runner.py",
+              "timeout": 5,
+              "type": "command"
+            }
+          ],
+          "matcher": ".*"
+        }
+      ],
+      "PreInvocation": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-tool-observer.py --host agy --event PreInvocation --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-native-r37-agy-event-controls-34 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-state\\hooks\\agy\\ce57363753585dbb39ec799f197dd56a4c3782b78a1e05d6cb6bf077a7de8ae8\\hooks\\runner.py",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "PreToolUse": [
+        {
+          "hooks": [
+            {
+              "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-tool-observer.py --host agy --event PreToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-native-r37-agy-event-controls-34 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-state\\hooks\\agy\\ce57363753585dbb39ec799f197dd56a4c3782b78a1e05d6cb6bf077a7de8ae8\\hooks\\runner.py",
+              "timeout": 5,
+              "type": "command"
+            }
+          ],
+          "matcher": ".*"
+        }
+      ],
+      "Stop": [
+        {
+          "command": "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-tool-observer.py --host agy --event Stop --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-native-r37-agy-event-controls-34 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\.nckh-state\\hooks\\agy\\ce57363753585dbb39ec799f197dd56a4c3782b78a1e05d6cb6bf077a7de8ae8\\hooks\\runner.py",
+          "timeout": 5,
+          "type": "command"
+        }
+      ],
+      "enabled": true
+    }
+  },
+  "config_sha256": "6a2b0f939c8bf4a240e6620039b9ad9d6294c862dad3347838aad0c64cb9d8c5",
+  "definition_kind": "instrumented-native-test",
+  "deny_mode": false,
+  "extra_configs": [],
+  "observer_sha256": "398426fc2c3a1e6de1152c9e72be200ee922efd6da9b737741c28eeb829a86a2",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "timeout_seconds": 5
+}

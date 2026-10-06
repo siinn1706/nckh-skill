@@ -1,0 +1,41 @@
+{
+  "root_pid": 30356,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T07:58:47.4566313Z",
+  "identity_checks": [
+    {
+      "pid": 30356,
+      "expected": "2026-10-05T07:46:35.693126Z",
+      "current": "2026-10-05T07:46:35.6931260Z"
+    },
+    {
+      "pid": 52796,
+      "expected": "2026-10-05T07:47:31.390364Z",
+      "current": "2026-10-05T07:47:31.3903640Z"
+    },
+    {
+      "pid": 36836,
+      "expected": "2026-10-05T07:47:31.52341Z",
+      "current": "2026-10-05T07:47:31.5234100Z"
+    },
+    {
+      "pid": 48836,
+      "expected": "2026-10-05T07:47:33.731373Z",
+      "current": "2026-10-05T07:47:33.7313730Z"
+    },
+    {
+      "pid": 40260,
+      "expected": "2026-10-05T07:47:33.769786Z",
+      "current": "2026-10-05T07:47:33.7697860Z"
+    }
+  ],
+  "method": "force-owned-tree-after-graceful-refusal",
+  "exit_code": 0,
+  "output": [
+    "SUCCESS: The process with PID 40260 (child process of PID 48836) has been terminated.",
+    "SUCCESS: The process with PID 48836 (child process of PID 36836) has been terminated.",
+    "SUCCESS: The process with PID 36836 (child process of PID 52796) has been terminated.",
+    "SUCCESS: The process with PID 52796 (child process of PID 30356) has been terminated.",
+    "SUCCESS: The process with PID 30356 (child process of PID 53948) has been terminated."
+  ]
+}

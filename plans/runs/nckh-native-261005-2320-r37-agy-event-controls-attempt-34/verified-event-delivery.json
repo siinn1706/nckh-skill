@@ -1,0 +1,928 @@
+{
+  "status": "verified-native-agy-event-observations",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "permission_mode_observed": "always-proceed",
+  "model_turns": 24,
+  "model_retries": 0,
+  "event_case_count": 24,
+  "results": [
+    {
+      "attempt": "preinvocation-allow",
+      "event": "PreInvocation",
+      "mode": "allow",
+      "conversation_id": "f7ceb612-deb2-48ec-853c-798622f2fa99",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        0.134607,
+        0.147274
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-allow.json",
+        "sha256": "ac70b6e0f22fb4384e8a579e27e1c627a355f12b4058782c320b00111b3c2e83"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-allow.json",
+        "sha256": "2086414a3816a9df84eb761222c38df40487b9b7013379cf80fb926a7e9ab423"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-allow.native.log",
+        "sha256": "bf2931fd63daee321d158e3e27273f09c987f0c532093530592f036a6498148d"
+      }
+    },
+    {
+      "attempt": "preinvocation-policy-deny",
+      "event": "PreInvocation",
+      "mode": "policy-deny",
+      "conversation_id": "f6731c14-0063-4ced-b9a8-6f162c5eba34",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.145191,
+        0.145982
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-policy-deny.json",
+        "sha256": "cdda55671cfd4065260be8b7d48b7557f2403418321bc67c79c275017bb82d66"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-policy-deny.json",
+        "sha256": "1277d6a15560d4be354b7c956d560110b1e9b1b810f59617c6e72c43f7e013e9"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-policy-deny.native.log",
+        "sha256": "06c0ea9c1ed7791dd804df6057d5c88dfcc37406da514c4234c510730670b453"
+      }
+    },
+    {
+      "attempt": "preinvocation-malformed-input",
+      "event": "PreInvocation",
+      "mode": "malformed-input",
+      "conversation_id": "f7e5df0d-6d8c-4404-85f2-594a174f95e4",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "block",
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.134335,
+        0.140814
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-malformed-input.json",
+        "sha256": "ccaa9e04bf9a1d8a57f975005cac4b953905c7647ab29b11861c94c3f6359716"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-malformed-input.json",
+        "sha256": "9e9d6428d2678583be7454c27a4b7e0b35fb7721e438783f136c337b36d0defa"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-malformed-input.native.log",
+        "sha256": "91c747dc4829f20e96008884cf2d7c9f59647c14dabf570547ca09a1002f5e51"
+      }
+    },
+    {
+      "attempt": "preinvocation-malformed-output",
+      "event": "PreInvocation",
+      "mode": "malformed-output",
+      "conversation_id": "3cb07a4c-8e59-4403-a15d-e2197488aa83",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:26:45.346378    1844 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: failed to unmarshal result from hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token [",
+        "E1005 23:26:49.150558    1844 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: failed to unmarshal result from hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token ["
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-malformed-output.json",
+        "sha256": "0f06e4106c284f829e0a397b82790978b831526c03d8e0611be5b7ceff568d16"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-malformed-output.json",
+        "sha256": "bfb7cfedb78d0c4b0738f2e34fefade6032d130a3b8f8dbdfc74b48fe924b543"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-malformed-output.native.log",
+        "sha256": "ba438b14c39293f877f34a942cd67c5acb9eea258d725e05faf9a1b5976454ca"
+      }
+    },
+    {
+      "attempt": "preinvocation-timeout",
+      "event": "PreInvocation",
+      "mode": "timeout",
+      "conversation_id": "8c4d9296-88ea-4386-9613-6427da385dcf",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        8.133995,
+        8.156558
+      ],
+      "native_hook_errors": [
+        "E1005 23:27:02.752840    1007 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0\" failed: command failed: exit status 1, stderr: ",
+        "E1005 23:27:11.644445    1007 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0\" failed: command failed: exit status 1, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-timeout.json",
+        "sha256": "fcaf7f318df95fff2f0bf743a0267889b2ec585489856ebd1efb9ba5daf7e853"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-timeout.json",
+        "sha256": "325934447865293c36ddfc0ee0b14e289293aeed4246e10fe3935596c82a8e50"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-timeout.native.log",
+        "sha256": "f3ae05e4ade30a0cadfecc81c499500b1c528dae9c364b4e506804b8033dc54b"
+      }
+    },
+    {
+      "attempt": "preinvocation-crash",
+      "event": "PreInvocation",
+      "mode": "crash",
+      "conversation_id": "72094692-0985-4a0f-8845-5961aa663f79",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:27:19.585400    1338 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0\" failed: command failed: exit status 17, stderr: ",
+        "E1005 23:27:24.184063    1338 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0\" failed: command failed: exit status 17, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-crash.json",
+        "sha256": "b85969c540943a8fce76f0bf52aef682250d7077f6a9ba5691afaaa78d8cac15"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-crash.json",
+        "sha256": "33046ffb4e4077db04ae6775ee8c9af0c6f66254c9107dd73291abf6de013ec7"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-crash.native.log",
+        "sha256": "abb17c9cc741cbc484009104ae902a56436acd76a61bea152a90e478e1b19bc2"
+      }
+    },
+    {
+      "attempt": "preinvocation-unsupported-codec",
+      "event": "PreInvocation",
+      "mode": "unsupported-codec",
+      "conversation_id": "cf5f3d18-e003-414b-b069-ab6c6a257bf3",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "block",
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.137468,
+        0.143342
+      ],
+      "native_hook_errors": [
+        "E1005 23:27:32.188475    1277 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0\" failed: command failed: exit status 3, stderr: ",
+        "E1005 23:27:36.972991    1277 prehooks.go:43] failed to call custom pre-invocation hook jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PreInvocation_0_0\" failed: command failed: exit status 3, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-unsupported-codec.json",
+        "sha256": "b8ca76f9a3b622c0314b9d367b1d3e0417e77b4c012542ab49bdef0a77a9ef8e"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-preinvocation-unsupported-codec.json",
+        "sha256": "629084c2ee16e4f78d228a6d739faf705f11bb247da11cac116590eae5722b28"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/preinvocation-unsupported-codec.native.log",
+        "sha256": "f5e11a9c207468082c22c2b5975209270db03f78857c350d89e19ecb1d29ade9"
+      }
+    },
+    {
+      "attempt": "posttooluse-allow",
+      "event": "PostToolUse",
+      "mode": "allow",
+      "conversation_id": "507657ad-d74c-4c07-a643-38d4e2fec053",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        0.14606
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-allow.json",
+        "sha256": "5e0d30f5a970019ab515f826737ce5f60fae840396924a85813ed7e42ec92904"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-allow.json",
+        "sha256": "f3a25211357089ce56b3f7b341d74574ee0c9a04585cfe04dc092aa37c51113c"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-allow.native.log",
+        "sha256": "0164bcb7efa42178024f029d4bef8216267c64856d5d882698874ddabcb15190"
+      }
+    },
+    {
+      "attempt": "posttooluse-policy-deny",
+      "event": "PostToolUse",
+      "mode": "policy-deny",
+      "conversation_id": "f8060440-df84-436a-ab6d-0542bf80b1da",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.136109
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-policy-deny.json",
+        "sha256": "19e203cdc5fc9b076192ff11670ab2734a77afa6b77425d8ef806e745791e4c7"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-policy-deny.json",
+        "sha256": "df2742a1b9186c76786f6528a747f5eead5a3e96cbcdf6f731e4f67be3ad21d1"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-policy-deny.native.log",
+        "sha256": "9f76d49318865d98bf60ad1db52e5796bd6fe4b1b729c532f22f8843add5a17f"
+      }
+    },
+    {
+      "attempt": "posttooluse-malformed-input",
+      "event": "PostToolUse",
+      "mode": "malformed-input",
+      "conversation_id": "90655aae-25a6-4851-ba58-0e75d6ca0986",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.131067
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-malformed-input.json",
+        "sha256": "2f704518152909814b9687a671b1643890b85dc568b5fe6bac7a80d39beb78e2"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-malformed-input.json",
+        "sha256": "c311d9c583babaf2c1696f0a64f8344f3a8e665bde7f0619034d27172790bcc1"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-malformed-input.native.log",
+        "sha256": "a4ad08587bd2cd0a540f0eaf94d6a029f97d97c33778ee2dadfba0e2bb0310ec"
+      }
+    },
+    {
+      "attempt": "posttooluse-malformed-output",
+      "event": "PostToolUse",
+      "mode": "malformed-output",
+      "conversation_id": "6227875f-e50a-4c96-85cf-551668f1b339",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:28:39.720822    3341 errorreport.go:224] post-tool hooks failed for step 2: failed to unmarshal result from hook jsonhook__nckh-native-r37-cli-controls_PostToolUse_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token ["
+      ],
+      "native_terminal_states": [
+        "ERROR"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-malformed-output.json",
+        "sha256": "352b86d530534553581175d7e52261f970703736d197ef85f51e53c42e63ada9"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-malformed-output.json",
+        "sha256": "3c4aebdd4ae98c05f90986566823af441d8db24dce8783a74fdf0a9a1b1ba2b1"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-malformed-output.native.log",
+        "sha256": "e99aeaaab35859846ff878b62cce2f92a3854e993920f24033064bcbf3eb26b1"
+      }
+    },
+    {
+      "attempt": "posttooluse-timeout",
+      "event": "PostToolUse",
+      "mode": "timeout",
+      "conversation_id": "95106602-deaf-42c6-a768-3e9b9ff50214",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        8.140941
+      ],
+      "native_hook_errors": [
+        "E1005 23:29:01.948315    3378 errorreport.go:224] post-tool hooks failed for step 2: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostToolUse_0_0\" failed: command failed: exit status 1, stderr: "
+      ],
+      "native_terminal_states": [
+        "ERROR"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-timeout.json",
+        "sha256": "4b5f4aabb947a86aeab169ba8d9ac4f847c34a272cd04d0312177dc23edf24fa"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-timeout.json",
+        "sha256": "a4813699dbb4e48fa910470521d19328d3d4d0227a6fa1c44f8667634c809827"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-timeout.native.log",
+        "sha256": "bd8c0594cb3d738da08f469ec862ef721084113346f41e0049f4301bf09c767d"
+      }
+    },
+    {
+      "attempt": "posttooluse-crash",
+      "event": "PostToolUse",
+      "mode": "crash",
+      "conversation_id": "8126dc98-561e-4d85-8ddc-d6061ca249ee",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:29:15.759734    3366 errorreport.go:224] post-tool hooks failed for step 2: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostToolUse_0_0\" failed: command failed: exit status 17, stderr: "
+      ],
+      "native_terminal_states": [
+        "ERROR"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-crash.json",
+        "sha256": "2453c391c55510872a8d99b024080f7c3dfe71eae8eb73f0bb677fe241f07892"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-crash.json",
+        "sha256": "358428dca323e541b57f36becbaaa5c88eee983cea3e15a2aeb4a26ac9a73393"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-crash.native.log",
+        "sha256": "30329750e2258364ce8083763e861913e0b3b2828c0edb3fdc972c15de07d5a9"
+      }
+    },
+    {
+      "attempt": "posttooluse-unsupported-codec",
+      "event": "PostToolUse",
+      "mode": "unsupported-codec",
+      "conversation_id": "4b03d1f3-70bd-4540-a8cc-6256aebe9669",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.153397
+      ],
+      "native_hook_errors": [
+        "E1005 23:29:29.677951    3363 errorreport.go:224] post-tool hooks failed for step 2: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostToolUse_0_0\" failed: command failed: exit status 3, stderr: "
+      ],
+      "native_terminal_states": [
+        "ERROR"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after actual tool mutation",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-unsupported-codec.json",
+        "sha256": "45ff73f89088dc78e9b00a9721a0cfc3b88f9729894119ad38985c8fb2b224e2"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-posttooluse-unsupported-codec.json",
+        "sha256": "ec103c8ac502cc94fefedd5929cdf081d8ea7a9a39128605c240ae554d271a14"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/posttooluse-unsupported-codec.native.log",
+        "sha256": "e4eb48b5fb68dd534e60fc08a771e8216b144ea78d40ca28996cb273a31138cb"
+      }
+    },
+    {
+      "attempt": "postinvocation-allow",
+      "event": "PostInvocation",
+      "mode": "allow",
+      "conversation_id": "bd066dc8-daee-446b-b5ba-741100a823fe",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        0.132479,
+        0.142803
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-allow.json",
+        "sha256": "7ec8d335b30e55fab3aacdca0f6d59286494ab1066035488141b1cdc827396eb"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-allow.json",
+        "sha256": "8c3d99d8496abfeb5d5b30e46b198119c2ad9f024a5cecfb036bd538fe925ff7"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-allow.native.log",
+        "sha256": "87698af9dc0788cec852bbdf7054923fd2b51bb7884286b2a9923d0993a4f488"
+      }
+    },
+    {
+      "attempt": "postinvocation-policy-deny",
+      "event": "PostInvocation",
+      "mode": "policy-deny",
+      "conversation_id": "486879d2-8c62-4d7b-a293-30949605c85c",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.139187,
+        0.13189
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-policy-deny.json",
+        "sha256": "ac130014640fc93518d44d37c2e20125b62c58509b337582eb6493090c94f539"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-policy-deny.json",
+        "sha256": "ff444763d212b42849935beeef608003a4500bd9b9125c5a0ab259c2657bb392"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-policy-deny.native.log",
+        "sha256": "bdd4e8d8ebe484447cff237c73b291298378e409bd8185893314b512cfb37463"
+      }
+    },
+    {
+      "attempt": "postinvocation-malformed-input",
+      "event": "PostInvocation",
+      "mode": "malformed-input",
+      "conversation_id": "fe43d2e2-3615-48ac-b541-ae0240149e70",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "block",
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.14155,
+        0.144314
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-malformed-input.json",
+        "sha256": "5da0bae976c56b26b6c0d0eeae5d60d494de59365784032a35b4cd04dda507f2"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-malformed-input.json",
+        "sha256": "0300d729c77ca687abf60f1710cf2b4a9e16952cd3c34761cbc3c22378b432c4"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-malformed-input.native.log",
+        "sha256": "e113a798585f70fddbdb43470e709ec9bfb5ad3117d1b6cf366bba4b95c0766e"
+      }
+    },
+    {
+      "attempt": "postinvocation-malformed-output",
+      "event": "PostInvocation",
+      "mode": "malformed-output",
+      "conversation_id": "e166b825-7b14-493c-8a61-4196256d6f69",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:30:24.886148    1328 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: failed to unmarshal result from hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token [",
+        "E1005 23:30:27.258487    1328 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: failed to unmarshal result from hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token ["
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-malformed-output.json",
+        "sha256": "c8972e4038a3f80da1d0d3a542765fdd406a11f54aa6cfb346a4ca2a11650ea6"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-malformed-output.json",
+        "sha256": "3e3ec7cac6cc93f48a7e0591a28c80619b97fe21e62d3781deedebd424704c94"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-malformed-output.native.log",
+        "sha256": "b650058091125152198a6cd3315a0265937a09a49ab463b58e4c96ad87208f90"
+      }
+    },
+    {
+      "attempt": "postinvocation-timeout",
+      "event": "PostInvocation",
+      "mode": "timeout",
+      "conversation_id": "b2815b5b-a611-4730-98c9-ef647fead112",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        8.141375,
+        8.147386
+      ],
+      "native_hook_errors": [
+        "E1005 23:30:42.555294     222 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0\" failed: command failed: exit status 1, stderr: ",
+        "E1005 23:30:51.457232     222 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0\" failed: command failed: exit status 1, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-timeout.json",
+        "sha256": "bda0a812a1972f48ecebc45819399e1b3b2f1b5e4e1480cd972b802abb336624"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-timeout.json",
+        "sha256": "e92437935236eb36913350709d5b6c3c81f70688766ca9ec4c42b961f0ad5641"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-timeout.native.log",
+        "sha256": "4959bd5e1bb832b754cd458e96f7919793d6a644feb750a9a938e7ca13a1addb"
+      }
+    },
+    {
+      "attempt": "postinvocation-crash",
+      "event": "PostInvocation",
+      "mode": "crash",
+      "conversation_id": "d56b5e40-d4a7-45bc-ae73-cacf03149244",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:31:02.835973    1362 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0\" failed: command failed: exit status 17, stderr: ",
+        "E1005 23:31:08.466552    1362 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0\" failed: command failed: exit status 17, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-crash.json",
+        "sha256": "7f0d9f2f8d63739f777a7cf4cd1362a8325a813ff7c1feaddfd2a499b9b3be63"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-crash.json",
+        "sha256": "3c1148b6ece54ddcd7219add210bf44e34b2bf5b8073028bb80f7eeb214df3c9"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-crash.native.log",
+        "sha256": "e2f63e7b2c123687bddf8420c732e5a996a92e192d4511c66bc77e540c0b3466"
+      }
+    },
+    {
+      "attempt": "postinvocation-unsupported-codec",
+      "event": "PostInvocation",
+      "mode": "unsupported-codec",
+      "conversation_id": "0c472b6c-a24c-4481-89f8-5049dde4456b",
+      "selected_callback_count": 2,
+      "selected_policy_decisions": [
+        "block",
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.133894,
+        0.132571
+      ],
+      "native_hook_errors": [
+        "E1005 23:31:19.799418    1068 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0\" failed: command failed: exit status 3, stderr: ",
+        "E1005 23:31:23.292170    1068 posthooks.go:58] failed to call custom post-invocation hook jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_PostInvocation_0_0\" failed: command failed: exit status 3, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "model lifecycle; per-tool side-effect ordering not inferred",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-unsupported-codec.json",
+        "sha256": "41a610009ded085b633f03c1869a2bcbb3a1753ad7439bd7ea2acf5dd4d0568c"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-postinvocation-unsupported-codec.json",
+        "sha256": "6ac38fe8aee8cb7071d3527b6d818b48e47de87b2eb1686fb4756c3590d408cd"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/postinvocation-unsupported-codec.native.log",
+        "sha256": "16b6ec02fc7aacece042b84f8d41c22e58d1b6ed21343bc6a7335922d7b45a82"
+      }
+    },
+    {
+      "attempt": "stop-allow",
+      "event": "Stop",
+      "mode": "allow",
+      "conversation_id": "0d8a6613-39dd-471e-8698-98aa9b0a3ca0",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        0.146186
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/stop-allow.json",
+        "sha256": "1fca7e862decc3442e6f0f515957b40d9da3fd1c8c110c0ffcec8eac7292aac7"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-allow.json",
+        "sha256": "589e700addf2aa91051d064d4d3c8523a7affdef493b6c5ac28408623b4ccfe1"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/stop-allow.native.log",
+        "sha256": "2f6a98edec6c587209dc686a58c9c201a356fae3ee2eac80daea1171b77ed9ac"
+      }
+    },
+    {
+      "attempt": "stop-policy-deny",
+      "event": "Stop",
+      "mode": "policy-deny",
+      "conversation_id": "b667e010-0af6-46e8-9441-c5224fe77dae",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.139989
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/stop-policy-deny.json",
+        "sha256": "f0ad6e56de481b156e2bb82acc255b61e66871c30a909a8c0c6cb6de97454794"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-policy-deny.json",
+        "sha256": "1489f768c1ca95db449f75c15e2b312db37d73179b21c65aa94846270d38c7dd"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/stop-policy-deny.native.log",
+        "sha256": "20f33df883ce7e7c0c930fcdf1a2560658add9fef676f7a92024a1697f74d0ed"
+      }
+    },
+    {
+      "attempt": "stop-malformed-input",
+      "event": "Stop",
+      "mode": "malformed-input",
+      "conversation_id": "9890a9e1-5070-4d14-b3c6-8624d74134fe",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.138422
+      ],
+      "native_hook_errors": [],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/stop-malformed-input.json",
+        "sha256": "bf1910c16663e03f25e8ea678d0802ea5cabed2a60bb28d731fba714e1a9bc7c"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/commands/agy-tools-stop-malformed-input.json",
+        "sha256": "330ec8980a10853dc382ed4dbd6c60769bc8f33248fe88fcfd25168c602a809f"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/attempts/stop-malformed-input.native.log",
+        "sha256": "e37627c5ae40ed02215e6b8e5abf4288219dc2058e9df985556e6edca65e2945"
+      }
+    }
+  ],
+  "observed_callback_counts": {
+    "PostInvocation": 48,
+    "PostToolUse": 24,
+    "PreInvocation": 48,
+    "PreToolUse": 24,
+    "Stop": 24
+  },
+  "instrumentation": "test observer with five-second outer and inner bounds; faults after genuine callback",
+  "effect_limit": "lifecycle block is advisory-only; post-tool mutation persistence does not establish preventive enforcement",
+  "unsupported_event_scope": "injected codec event only",
+  "duplicate_scope": "ordinary lifecycle repetition; controlled duplicate still pending",
+  "full_native_gate": "unchecked",
+  "source_modified": false,
+  "global_controller_config_write": false,
+  "backend_attestation": "not-observed",
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/native-event-recovery.json",
+    "sha256": "378d0db8373760f90577c73d72f78a0a950765c019756e4afa2d2ed217a3b3e4"
+  },
+  "original_summary": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/native-event-summary.json",
+    "sha256": "9a3162b6318d7a4364950b6e2eac48fbac78baedccdd097152f5af1371154c54"
+  },
+  "original_failure": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/native-event-failure.json",
+    "sha256": "9b3637c334b2fd628bcfbbe77e71ec5fedba5ea182ae6f5237f8ccb9c9fd0d53"
+  },
+  "original_collection_exit": 1,
+  "not_run_cases": [
+    "stop-malformed-output",
+    "stop-timeout",
+    "stop-crash",
+    "stop-unsupported-codec"
+  ],
+  "timing_correction": "original PostInvocation summary label does not establish per-tool timing; raw summary retained",
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/frozen-brief.json",
+    "sha256": "ebfa47035a75b6e0d2bdcece4207b7a9a0f3393112ed1cdb101f3637df577d5e"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/cleanup.json",
+    "sha256": "9fdaea84e7d2ce33728911c6ab4ab737005c7b7563f4be23300bec9939fdb38d"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/process-final-audit.json",
+    "sha256": "bf87e640f945034e6596664b60794b6f597e7d2ad58e350fac87110ceb41ff7a"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2320-r37-agy-event-controls-attempt-34/verify-event-delivery.py",
+    "sha256": "6366bfabbf22dad147d484df4baa5d7c69ff90d89b38e67ee3311840a942e87f"
+  }
+}

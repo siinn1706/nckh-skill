@@ -1,0 +1,54 @@
+{
+  "started_at": "2026-10-05T06:50:01.448Z",
+  "submitted_at": "2026-10-05T06:50:39.712Z",
+  "case": {
+    "before_sha256": null,
+    "context": {
+      "allowed_operations": [
+        "write",
+        "read"
+      ],
+      "brief": {
+        "mode": "auto"
+      },
+      "schema_version": 1,
+      "task_id": "native-cursor-direct-08-02",
+      "tool_operations": {
+        "Edit": "write",
+        "Read": "read",
+        "Shell": "write",
+        "StrReplace": "write",
+        "Write": "write"
+      }
+    },
+    "context_file_sha256": "015d0cb32f341e3b8036f95456c2c77ebd168ca68d00071fd49b9fde1db93e8a",
+    "context_hash": "f7c00227211690a5fe5ac1b6200ffe881bc699ce686ba2196c962c93d46b5a06",
+    "expected": "exact-public-write",
+    "index": 2,
+    "kind": "Write",
+    "marker": "NCKH_DIRECT_FINISHED_02",
+    "mode": "auto",
+    "prompt": "[removed: raw runtime content]",
+    "receipt_preimage": [
+      "policy-receipts/678ff1ef6fbd61724729a36f91c21997dc35917fb8348f056f6222111848f748.json",
+      "policy-receipts/be83eed9f7f03a1754699790def0dca70e03e589a708694b9fbac93796c8661d.json",
+      "policy-receipts/c20659d568dc56e6082c863fc6ae6054fccfca8830d875c4be46ced5b40a211f.json"
+    ],
+    "relative": "oracles/r36-cursor-direct-write-08.txt",
+    "selected_at": "2026-10-05T06:49:10.884918+00:00"
+  },
+  "prompt_write": {
+    "chunk_id": "8b7073",
+    "wall_time_seconds": 1.0069404,
+    "session_id": 8941,
+    "original_token_count": 166,
+    "output": "\u001b[17;1H  → Use the native Write tool exactly once in this authorized scratch project.  \r\n    Do not call another tool, inspect another file, use agents, retry, or       \r\n    work around denial. All markers are synthetic native test data. Write       \r\n    exactly NCKH_CURSOR_DIRECT_08_WRITE followed by a newline to\u001b[K\r\n    oracles/r36-cursor-direct-write-08.txt. After the one attempted call say    \r\n    NCKH_DIRECT_FINISHED_02 and stop.\u001b[K\r\n\u001b[K\u001b[80C\r\n\n  Grok 4.7 500K Extra High · MAX · 6.7%                         Run Everything  \r\n  ~\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-a \r\n  ttempt-02\\projects\\main\u001b[55C\r\n\u001b[80C"
+  },
+  "enter_write": {
+    "chunk_id": "d0fd02",
+    "wall_time_seconds": 1.0135211,
+    "session_id": 8941,
+    "original_token_count": 353,
+    "output": "\u001b[11;1H  Use the native Write tool exactly once in this authorized scratch\u001b[K\r\n  project. Do not call another tool, inspect another file, use agents,\u001b[K\r\n  retry, or work around denial. All markers are synthetic native test\u001b[K\r\n  data. Write exactly NCKH_CURSOR_DIRECT_08_WRITE followed by a newline\u001b[K\r\n  to oracles/r36-cursor-direct-write-08.txt. After the one attempted\u001b[K\r\n  call say NCKH_DIRECT_FINISHED_02 and stop.\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n ⠀⠞ Working  331 tokens\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n  → Use the native Write tool exactly once in this authorized scratch project.  \r\n    Do not call another tool, inspect another file, use agents, retry, or       \r\n    work around denial. All markers are synthetic native test data. Write       \r\n    exactly NCKH_CURSOR_DIRECT_08_WRITE followed by a newline to\u001b[16C\r\n    oracles/r36-cursor-direct-write-08.txt. After the one attempted call say    \r\n    NCKH_DIRECT_FINISHED_02 and stop.\u001b[43C\r\n\u001b[80C\r\n\u001b[80C\r\n  Grok 4.7 500K Extra High · MAX · 6.7%                         Run Everything  \r\n  ~\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-a \r\n  ttempt-02\\projects\\main\u001b[55C\r\n\u001b[80C\u001b[13;1H  → Add a follow-up\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n  Grok 4.7 500K Extra High · MAX · 6.7%                         Run Everything  \r\n  ~\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-a \r\n  ttempt-02\\projects\\main\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\r\n\u001b[K\u001b[80C"
+  }
+}

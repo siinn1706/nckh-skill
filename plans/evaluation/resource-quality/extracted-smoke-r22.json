@@ -1,0 +1,696 @@
+{
+  "accepted_task_count": 0,
+  "bundles": [
+    {
+      "access": "on",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-on-claude.zip",
+        "sha256": "9995f5ba0377a8bc3dc639eb23d9e774a4376e06afc1db162a66f29d98553f13"
+      },
+      "disabled_reader_observations": [],
+      "host": "claude",
+      "smoke": {
+        "bundle_manifest_hash": "a30735805fc29b6c72bc4b6b635c2ba1b9e90895c46b6522d191145593759fa0",
+        "closure_hash": "b63d99a86bffb35ef466b2e180dbda4d658eef02f99905109305a8ff14199b59",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [
+          {
+            "consumer": "nckh-frontend",
+            "exit_status": 0,
+            "output_sha256": "e240d2c7d9025b83bb95a604d26193052c63bb7c2e933c17f98fa8d99bf8de93",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "41",
+              "45"
+            ],
+            "resource_id": "R-ui-lookup",
+            "resource_read": true,
+            "resource_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+          },
+          {
+            "consumer": "nckh-method",
+            "exit_status": 0,
+            "output_sha256": "bb4c121498b908da763993f9b67fed51391335e51101c6eeeb1bf1c6bddd9b5a",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-taste",
+            "exit_status": 0,
+            "output_sha256": "fea3a3083bb88ee6e95f430fd90f20d925086928754189751fc78ea01a1b1f5c",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          },
+          {
+            "consumer": "nckh-visuals",
+            "exit_status": 0,
+            "output_sha256": "3dd2e81b8f87f53e3a81d9f9dfb6a7f86317e0ae1d663c341f35f36ee3adbf62",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "science"
+            ],
+            "resource_id": "R-publisher-profile",
+            "resource_read": true,
+            "resource_sha256": "1e1b1b5a4e0e3dfc57877f2abf1e96888fe6b65617234b078f193b8f76e0ebe9"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "582c677dea75318cbcb039e013f3741ce433a6f5652f0081ad7a1c9207167401",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "f4817c009cf076e6a69ecd205bdb00b8fec4da7cbc9bbe03b7c0799b69123441",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          }
+        ],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "on",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "off",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-off-claude.zip",
+        "sha256": "9601820daab7741165ee9322362ce62fbf4e07bf66e56cb62affee0399678ba6"
+      },
+      "disabled_reader_observations": [
+        {
+          "consumer": "nckh-frontend",
+          "exit_status": 0,
+          "output_sha256": "6603e8c0930e6c79fd6d1e9d001c737b51e0b624cccb717c239eca0992c592fb",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-ui-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-method",
+          "exit_status": 0,
+          "output_sha256": "c729c93a74bd71cfe148756af8eb81cacc741d2e2e486551784a40bbd1bc8c65",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-taste",
+          "exit_status": 0,
+          "output_sha256": "4400ba2c216ccc7213c211cd5dc5a538d90bcb4e06374d9b7263de4fd0a5aeb4",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-visuals",
+          "exit_status": 0,
+          "output_sha256": "7d5da0f5ac5ee05d438e9dd083c1c73af08db3eddfbc7fe1d9ab10f184ba8d7d",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-publisher-profile",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "60b7c961c1db5e5581bd8a1638a61c217777667a49b61af03e13b94c1437073f",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "31f44a63da125d0a4d5ba281561bc3655c46ca53bc2fe5dbdf1888925957a7e2",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        }
+      ],
+      "host": "claude",
+      "smoke": {
+        "bundle_manifest_hash": "88fbf134796c064278bd68e1354a9481b843ed1fa08ab65025a6149bb0963d08",
+        "closure_hash": "269031b186be0a970b8eb57848b90e983c001a6ac896e53503de860f1f9de38a",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "off",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "on",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-on-codex.zip",
+        "sha256": "33f778aea2e599eb453af0d209155a6c3ce2bc1de11b6392dfd353688e18ee34"
+      },
+      "disabled_reader_observations": [],
+      "host": "codex",
+      "smoke": {
+        "bundle_manifest_hash": "eab5a18b9a3e2c6975b72fac128b765659048affac46f1dd4592f4c272ac7859",
+        "closure_hash": "beda4b713eb2fa2476d6edc0d098c44830c29f3aa7a0363bd0a95c3fb93d22b3",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [
+          {
+            "consumer": "nckh-frontend",
+            "exit_status": 0,
+            "output_sha256": "e240d2c7d9025b83bb95a604d26193052c63bb7c2e933c17f98fa8d99bf8de93",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "41",
+              "45"
+            ],
+            "resource_id": "R-ui-lookup",
+            "resource_read": true,
+            "resource_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+          },
+          {
+            "consumer": "nckh-method",
+            "exit_status": 0,
+            "output_sha256": "bb4c121498b908da763993f9b67fed51391335e51101c6eeeb1bf1c6bddd9b5a",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-taste",
+            "exit_status": 0,
+            "output_sha256": "fea3a3083bb88ee6e95f430fd90f20d925086928754189751fc78ea01a1b1f5c",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          },
+          {
+            "consumer": "nckh-visuals",
+            "exit_status": 0,
+            "output_sha256": "3dd2e81b8f87f53e3a81d9f9dfb6a7f86317e0ae1d663c341f35f36ee3adbf62",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "science"
+            ],
+            "resource_id": "R-publisher-profile",
+            "resource_read": true,
+            "resource_sha256": "1e1b1b5a4e0e3dfc57877f2abf1e96888fe6b65617234b078f193b8f76e0ebe9"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "582c677dea75318cbcb039e013f3741ce433a6f5652f0081ad7a1c9207167401",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "f4817c009cf076e6a69ecd205bdb00b8fec4da7cbc9bbe03b7c0799b69123441",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          }
+        ],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "on",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "off",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-off-codex.zip",
+        "sha256": "d2bb3256c6f42c3d1f946e493b7f5516b7d165c7ed4844925b15f9d0d95acde3"
+      },
+      "disabled_reader_observations": [
+        {
+          "consumer": "nckh-frontend",
+          "exit_status": 0,
+          "output_sha256": "6603e8c0930e6c79fd6d1e9d001c737b51e0b624cccb717c239eca0992c592fb",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-ui-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-method",
+          "exit_status": 0,
+          "output_sha256": "c729c93a74bd71cfe148756af8eb81cacc741d2e2e486551784a40bbd1bc8c65",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-taste",
+          "exit_status": 0,
+          "output_sha256": "4400ba2c216ccc7213c211cd5dc5a538d90bcb4e06374d9b7263de4fd0a5aeb4",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-visuals",
+          "exit_status": 0,
+          "output_sha256": "7d5da0f5ac5ee05d438e9dd083c1c73af08db3eddfbc7fe1d9ab10f184ba8d7d",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-publisher-profile",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "60b7c961c1db5e5581bd8a1638a61c217777667a49b61af03e13b94c1437073f",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "31f44a63da125d0a4d5ba281561bc3655c46ca53bc2fe5dbdf1888925957a7e2",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        }
+      ],
+      "host": "codex",
+      "smoke": {
+        "bundle_manifest_hash": "6596a887f97c92a5b9a264ddf1a0f7175200f5b54e30cb433309b3762e3eb8c1",
+        "closure_hash": "793481722eeb15d7ba1477f7bae17d8ff2d4ecd4f6d4bf30893dcec1efab80a5",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "off",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "on",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-on-cursor.zip",
+        "sha256": "ad39d5b56824114118323777bf53a18bda4018b56bb4f4f714c67ab3478f0590"
+      },
+      "disabled_reader_observations": [],
+      "host": "cursor",
+      "smoke": {
+        "bundle_manifest_hash": "94a4601f6572f6b1e6a373ba13578068c6a046aa80d4d4f047e6fb1433310d48",
+        "closure_hash": "b6c6edf8238dd0dcf2597ef672725e08fb11d0e2dd5b7d77fa1a86856fe02659",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [
+          {
+            "consumer": "nckh-frontend",
+            "exit_status": 0,
+            "output_sha256": "e240d2c7d9025b83bb95a604d26193052c63bb7c2e933c17f98fa8d99bf8de93",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "41",
+              "45"
+            ],
+            "resource_id": "R-ui-lookup",
+            "resource_read": true,
+            "resource_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+          },
+          {
+            "consumer": "nckh-method",
+            "exit_status": 0,
+            "output_sha256": "bb4c121498b908da763993f9b67fed51391335e51101c6eeeb1bf1c6bddd9b5a",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-taste",
+            "exit_status": 0,
+            "output_sha256": "fea3a3083bb88ee6e95f430fd90f20d925086928754189751fc78ea01a1b1f5c",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          },
+          {
+            "consumer": "nckh-visuals",
+            "exit_status": 0,
+            "output_sha256": "3dd2e81b8f87f53e3a81d9f9dfb6a7f86317e0ae1d663c341f35f36ee3adbf62",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "science"
+            ],
+            "resource_id": "R-publisher-profile",
+            "resource_read": true,
+            "resource_sha256": "1e1b1b5a4e0e3dfc57877f2abf1e96888fe6b65617234b078f193b8f76e0ebe9"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "582c677dea75318cbcb039e013f3741ce433a6f5652f0081ad7a1c9207167401",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "f4817c009cf076e6a69ecd205bdb00b8fec4da7cbc9bbe03b7c0799b69123441",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          }
+        ],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "on",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "off",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-off-cursor.zip",
+        "sha256": "cf6eb991eccef37b109f8c35b35a84a4e182ce028e222016b21373bd4828fc02"
+      },
+      "disabled_reader_observations": [
+        {
+          "consumer": "nckh-frontend",
+          "exit_status": 0,
+          "output_sha256": "6603e8c0930e6c79fd6d1e9d001c737b51e0b624cccb717c239eca0992c592fb",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-ui-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-method",
+          "exit_status": 0,
+          "output_sha256": "c729c93a74bd71cfe148756af8eb81cacc741d2e2e486551784a40bbd1bc8c65",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-taste",
+          "exit_status": 0,
+          "output_sha256": "4400ba2c216ccc7213c211cd5dc5a538d90bcb4e06374d9b7263de4fd0a5aeb4",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-visuals",
+          "exit_status": 0,
+          "output_sha256": "7d5da0f5ac5ee05d438e9dd083c1c73af08db3eddfbc7fe1d9ab10f184ba8d7d",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-publisher-profile",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "60b7c961c1db5e5581bd8a1638a61c217777667a49b61af03e13b94c1437073f",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "31f44a63da125d0a4d5ba281561bc3655c46ca53bc2fe5dbdf1888925957a7e2",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        }
+      ],
+      "host": "cursor",
+      "smoke": {
+        "bundle_manifest_hash": "5656b68d416aef20b6440f2021f7dc977ab26ea3721e41375042d4aa49bdbd84",
+        "closure_hash": "9d46e5fd2781df5f3c3eebda02af66ae7dae3293a1ec44347799fac91a56f86b",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "off",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "on",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-on-agy.zip",
+        "sha256": "07b3b5969194a0f7b132570a2dd12c595c0771173e4de9bb154154a1c5de59e8"
+      },
+      "disabled_reader_observations": [],
+      "host": "agy",
+      "smoke": {
+        "bundle_manifest_hash": "a3fd67a3d1ec227e7ff3467f89c13841ae0eeaf5fe58e0cc89a1b5fc3e5479b4",
+        "closure_hash": "1f851905e411e42313c820b6b9ada08b9f1efd1130d7107d65a6e38026876df8",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [
+          {
+            "consumer": "nckh-frontend",
+            "exit_status": 0,
+            "output_sha256": "e240d2c7d9025b83bb95a604d26193052c63bb7c2e933c17f98fa8d99bf8de93",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "41",
+              "45"
+            ],
+            "resource_id": "R-ui-lookup",
+            "resource_read": true,
+            "resource_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+          },
+          {
+            "consumer": "nckh-method",
+            "exit_status": 0,
+            "output_sha256": "bb4c121498b908da763993f9b67fed51391335e51101c6eeeb1bf1c6bddd9b5a",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-taste",
+            "exit_status": 0,
+            "output_sha256": "fea3a3083bb88ee6e95f430fd90f20d925086928754189751fc78ea01a1b1f5c",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          },
+          {
+            "consumer": "nckh-visuals",
+            "exit_status": 0,
+            "output_sha256": "3dd2e81b8f87f53e3a81d9f9dfb6a7f86317e0ae1d663c341f35f36ee3adbf62",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "science"
+            ],
+            "resource_id": "R-publisher-profile",
+            "resource_read": true,
+            "resource_sha256": "1e1b1b5a4e0e3dfc57877f2abf1e96888fe6b65617234b078f193b8f76e0ebe9"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "582c677dea75318cbcb039e013f3741ce433a6f5652f0081ad7a1c9207167401",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "consort-2025"
+            ],
+            "resource_id": "R-reporting-lookup",
+            "resource_read": true,
+            "resource_sha256": "215f8c55bd40bda0569f2e81556030ff575319e25276b1e1ae70e2cc7475ddcd"
+          },
+          {
+            "consumer": "nckh-write",
+            "exit_status": 0,
+            "output_sha256": "f4817c009cf076e6a69ecd205bdb00b8fec4da7cbc9bbe03b7c0799b69123441",
+            "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+            "record_ids": [
+              "language/en"
+            ],
+            "resource_id": "R-nature-reference",
+            "resource_read": true,
+            "resource_sha256": "6de5e67bf7c90361237f998c10f98d6d2c61e9c067ce3c686cab6a3cdf919caf"
+          }
+        ],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "on",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    },
+    {
+      "access": "off",
+      "archive_reference": {
+        "path": "plans/evaluation/resource-quality/archives/r22-off-agy.zip",
+        "sha256": "19be2be753cb18641d7cc3edf6f84553d80e93bcfcb415acb98f83207ab1f4a3"
+      },
+      "disabled_reader_observations": [
+        {
+          "consumer": "nckh-frontend",
+          "exit_status": 0,
+          "output_sha256": "6603e8c0930e6c79fd6d1e9d001c737b51e0b624cccb717c239eca0992c592fb",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-ui-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-method",
+          "exit_status": 0,
+          "output_sha256": "c729c93a74bd71cfe148756af8eb81cacc741d2e2e486551784a40bbd1bc8c65",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-taste",
+          "exit_status": 0,
+          "output_sha256": "4400ba2c216ccc7213c211cd5dc5a538d90bcb4e06374d9b7263de4fd0a5aeb4",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-visuals",
+          "exit_status": 0,
+          "output_sha256": "7d5da0f5ac5ee05d438e9dd083c1c73af08db3eddfbc7fe1d9ab10f184ba8d7d",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-publisher-profile",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "60b7c961c1db5e5581bd8a1638a61c217777667a49b61af03e13b94c1437073f",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-reporting-lookup",
+          "resource_read": false
+        },
+        {
+          "consumer": "nckh-write",
+          "exit_status": 0,
+          "output_sha256": "31f44a63da125d0a4d5ba281561bc3655c46ca53bc2fe5dbdf1888925957a7e2",
+          "reader_sha256": "fc8c6d38614e7cb78cac13ce83fecafbe2746848f7111294cd23c12483584b9c",
+          "resource_id": "R-nature-reference",
+          "resource_read": false
+        }
+      ],
+      "host": "agy",
+      "smoke": {
+        "bundle_manifest_hash": "c3dae598b1c117ff81513ece3b8ca50c162c78bc49d911aaf5e22116e76d71b4",
+        "closure_hash": "64d6d28535c1ae132f8d683645de08f39461a2676968d9fe095438dd23485cd1",
+        "evidence_class": "extracted-resource-read",
+        "human_acceptance": "not-evaluated",
+        "observations": [],
+        "outside_repo_cwd": true,
+        "python_isolated": true,
+        "pythonpath_unset": true,
+        "qualification": "pending",
+        "resource_access": "off",
+        "schema_version": 1,
+        "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+        "status": "pass"
+      }
+    }
+  ],
+  "evidence_class": "extracted-on-off-reader-observations",
+  "human_acceptance": "not-evaluated",
+  "qualification": "pending",
+  "schema_version": 1,
+  "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+  "source_revision": "22",
+  "status": "pass"
+}

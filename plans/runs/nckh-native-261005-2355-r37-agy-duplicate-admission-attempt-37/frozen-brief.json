@@ -1,0 +1,43 @@
+{
+  "cases": [
+    {
+      "fixture": "oracles/r37-agy-duplicate37-project-plugin-duplicate.txt",
+      "initial_hex": "4e434b485f4147595f4455505f494e495449414c0a",
+      "kind": "project-plugin",
+      "name": "project-plugin-duplicate",
+      "requested_hex": "4e434b485f4147595f4455505f524556495345440a"
+    },
+    {
+      "fixture": "oracles/r37-agy-duplicate37-unknown-config-event.txt",
+      "initial_hex": "4e434b485f4147595f4455505f494e495449414c0a",
+      "kind": "unknown-event-config",
+      "name": "unknown-config-event",
+      "requested_hex": "4e434b485f4147595f4455505f524556495345440a"
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/run-duplicate-admission.py",
+    "sha256": "263e23cad588db4017f4030f36dd89aae352c7acb60f62859900c1397dec61f6"
+  },
+  "dangerous": true,
+  "duplicate_oracle": "native project/plugin callbacks for same input, idempotent policy receipts, one actual tool execution",
+  "effort": "medium",
+  "global_plugin_install": false,
+  "inner_runner_timeout_seconds": 5,
+  "maximum_model_turns": 2,
+  "model": "gemini-3.8-flash-medium",
+  "model_inventory_reused": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/model-admission.json",
+    "sha256": "476c45fbbca7cb71ea42dac8971d86be6da99a8a43218ca81854e76a7a610c7d"
+  },
+  "model_retries": 0,
+  "observer": {
+    "path": "plans/runs/nckh-native-261005-2355-r37-agy-duplicate-admission-attempt-37/agy-tool-observer.py",
+    "sha256": "81ccf93af75b75de7a3dd8e7ca717adc38bae9530603c1f90b2e9e5c95ce3a82"
+  },
+  "outer_handler_timeout_seconds": 5,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "unknown_config_event": "NckhUnsupportedNativeEvent",
+  "unknown_scope": "native config admission only; no injected runner input/event and no assumption that host emits unknown event"
+}

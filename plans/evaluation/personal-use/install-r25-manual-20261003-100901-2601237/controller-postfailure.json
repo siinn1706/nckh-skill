@@ -1,0 +1,33 @@
+{
+  "check": "manual-update-postfailure-rollback-integrity",
+  "status": "pass",
+  "observed_at": "2026-10-03T10:18:35.658812+00:00",
+  "transaction_id": "e0b28729028a4ff19848292e73f10feb",
+  "checks": {
+    "transaction_matches_manual_failure": true,
+    "rolled_back": true,
+    "no_recovery_conflicts": true,
+    "ownership_equals_before": true,
+    "physical_before_hash_matches": true,
+    "stage_after_hash_matches": true,
+    "backup_absent": true,
+    "doctor_43_current": true
+  },
+  "physical_tree_hash": "926c745ec2c504abf67aeccd9b0591bf82f57422f90fbd47f6c24b4e59b0b43f",
+  "staged_tree_hash": "fe0403204d22a2aa5e5b1dc587bd959cbb340d7784109e359c8de3eccc5116e0",
+  "owned_items": 43,
+  "doctor_command": [
+    "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\installer\\nckh-installer.py",
+    "doctor",
+    "--state-dir",
+    "C:/Users/USER\\Downloads\\test-skill\\.nckh-state"
+  ],
+  "doctor_started_at": "2026-10-03T10:18:25.349989+00:00",
+  "doctor_exit": 0,
+  "limits": [
+    "No installation retry, ACL change or user-process stop.",
+    "Integrity after rollback only; r25 remains uninstalled."
+  ]
+}

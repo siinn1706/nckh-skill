@@ -1,0 +1,119 @@
+{
+  "status": "bounded-readonly-workspace-plugin-route-inspection",
+  "timestamp_utc": "2026-10-05T18:51:11.322449+00:00",
+  "source": "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\index.js",
+  "source_sha256": "9f51ecf275d932372bf367914708b0dd21bf9c9e807b5e20e789ec9e247d9f86",
+  "source_bytes": 8162280,
+  "rows": [
+    {
+      "term": "workspaceOpen",
+      "match_count": 5,
+      "snippets": [
+        {
+          "start": 4008574,
+          "end": 4009537,
+          "match_start": 4008874,
+          "text": "terAgentResponse:\"afterAgentResponse\",afterAgentThought:\"afterAgentThought\",sessionStart:\"sessionStart\",sessionEnd:\"sessionEnd\",preCompact:\"preCompact\",subagentStart:\"subagentStart\",subagentStop:\"subagentStop\",preToolUse:\"preToolUse\",postToolUse:\"postToolUse\",postToolUseFailure:\"postToolUseFailure\",workspaceOpen:\"workspaceOpen\"},s={PreToolUse:n.preToolUse,PermissionRequest:null,PostToolUse:n.postToolUse,UserPromptSubmit:n.beforeSubmitPrompt,Stop:n.stop,SubagentStop:n.subagentStop,SessionStart:n.sessionStart,SessionEnd:n.sessionEnd,PreCompact:n.preCompact,Notification:null},i=Object.fromEntries(Object.entries(s).filter((e=>null!==e[1])).map((([e,t])=>[t,e]))),o={Bash:\"Shell\",Read:\"Read\",Write:\"Write\",Edit:\"Write\",Glob:null,Grep:\"Grep\",WebFetch:\"WebFetch\",WebSearch:\"WebSearch\",Task:\"Task\"},a=[\"Glob\"],c=[\"Notification\",\"PermissionRequest\"],u={warn:()=>{},info:()=>{}};function l(e,t){const r={loop_limit:null,failClosed:!1};return t&&\"*\"!==t&&(r.matcher=",
+          "sha256_utf8": "49bc231d9acbea3f89571a725578ae6779fd908bff543b8641d1c6cb9d48aeb2"
+        },
+        {
+          "start": 4008589,
+          "end": 4009552,
+          "match_start": 4008889,
+          "text": "e:\"afterAgentResponse\",afterAgentThought:\"afterAgentThought\",sessionStart:\"sessionStart\",sessionEnd:\"sessionEnd\",preCompact:\"preCompact\",subagentStart:\"subagentStart\",subagentStop:\"subagentStop\",preToolUse:\"preToolUse\",postToolUse:\"postToolUse\",postToolUseFailure:\"postToolUseFailure\",workspaceOpen:\"workspaceOpen\"},s={PreToolUse:n.preToolUse,PermissionRequest:null,PostToolUse:n.postToolUse,UserPromptSubmit:n.beforeSubmitPrompt,Stop:n.stop,SubagentStop:n.subagentStop,SessionStart:n.sessionStart,SessionEnd:n.sessionEnd,PreCompact:n.preCompact,Notification:null},i=Object.fromEntries(Object.entries(s).filter((e=>null!==e[1])).map((([e,t])=>[t,e]))),o={Bash:\"Shell\",Read:\"Read\",Write:\"Write\",Edit:\"Write\",Glob:null,Grep:\"Grep\",WebFetch:\"WebFetch\",WebSearch:\"WebSearch\",Task:\"Task\"},a=[\"Glob\"],c=[\"Notification\",\"PermissionRequest\"],u={warn:()=>{},info:()=>{}};function l(e,t){const r={loop_limit:null,failClosed:!1};return t&&\"*\"!==t&&(r.matcher=t),void 0!==e.t",
+          "sha256_utf8": "391d4261d1c613cc9c81ae53cbc82cc556bdebb4ab2e97a48bc86c8c48e6cb3e"
+        },
+        {
+          "start": 4018316,
+          "end": 4019279,
+          "match_start": 4018616,
+          "text": "t\",t),y(0===t.length,t)},[n.postToolUse]:e=>{const t=[],r=_(e);return r.isValid?(b(e.additional_context,\"additional_context\",t),y(0===t.length,t)):r},[n.postToolUseFailure]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return b(e.additional_context,\"additional_context\",r),y(0===r.length,r)},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Ob",
+          "sha256_utf8": "9e192b137a8ebe1e1262c3e102a9ba15a8f763093bb3f85875b2a0b075ebb897"
+        },
+        {
+          "start": 4019993,
+          "end": 4020956,
+          "match_start": 4020293,
+          "text": "d 0;return void 0===o?r:Object.assign(Object.assign({},r),{additional_context:o})}(e,t,s,r)}(e,t,r),o=(0,Q[e])(s);return o.isValid?{success:!0,data:s}:{success:!1,errors:o.errors}},J=[n.beforeShellExecution,n.beforeMCPExecution,n.beforeReadFile,n.beforeTabFileRead,n.subagentStart,n.preToolUse],P=[n.workspaceOpen];function D(e){return P.includes(e)}function N(e,t){const r=[];return(null==e?void 0:e.trim())&&r.push(e.trim()),(null==t?void 0:t.trim())&&r.push(t.trim()),r.length>0?r.join(\"\\n\\n---\\n\\n\"):void 0}function M(e,t){if(e||t)return Object.assign(Object.assign({},e||{}),t||{})}function O(e,t){var r;if(0===t.length)return;if(1===t.length)return t[0];const s=J.includes(e),i=e===n.sessionStart,o=e===n.workspaceOpen,a=S.has(e),c={};for(const e of t){const t=e;for(const[e,n]of Object.entries(t))if(void 0!==n)if(o&&\"pluginPaths\"===e&&Array.isArray(n)){const t=null!==(r=c[e])&&void 0!==r?r:[],s=new Set(t),i=[...t];for(const e of n)\"string\"!=typeof e||s.",
+          "sha256_utf8": "159ecd2cfc7c7440c225b3b3e2e6e5fd76eca478b55e49aacf468865dcaf3f29"
+        },
+        {
+          "start": 4020404,
+          "end": 4021367,
+          "match_start": 4020704,
+          "text": ".push(e.trim()),(null==t?void 0:t.trim())&&r.push(t.trim()),r.length>0?r.join(\"\\n\\n---\\n\\n\"):void 0}function M(e,t){if(e||t)return Object.assign(Object.assign({},e||{}),t||{})}function O(e,t){var r;if(0===t.length)return;if(1===t.length)return t[0];const s=J.includes(e),i=e===n.sessionStart,o=e===n.workspaceOpen,a=S.has(e),c={};for(const e of t){const t=e;for(const[e,n]of Object.entries(t))if(void 0!==n)if(o&&\"pluginPaths\"===e&&Array.isArray(n)){const t=null!==(r=c[e])&&void 0!==r?r:[],s=new Set(t),i=[...t];for(const e of n)\"string\"!=typeof e||s.has(e)||(s.add(e),i.push(e));c[e]=i}else\"permission\"===e&&s?c[e]=(l=n,\"deny\"===(u=c[e])||\"deny\"===l?\"deny\":\"ask\"===u||\"ask\"===l?\"ask\":\"allow\"===u||\"allow\"===l?\"allow\":void 0):\"user_message\"!==e&&\"agent_message\"!==e?a&&\"additional_context\"===e&&\"string\"==typeof n?c[e]=N(c[e],n):\"continue\"!==e||\"boolean\"!=typeof n?c[e]=i&&\"env\"===e&&\"object\"==typeof n&&null!==n?M(c[e],n):n:void 0===c[e]?c[e]=n:c[e]=c[e]&&n:c[e",
+          "sha256_utf8": "38177d2255c00b98a103eeb1ccd8bc7d6aa481199d3f92d260ab494eca5df826"
+        }
+      ]
+    },
+    {
+      "term": "pluginPaths",
+      "match_count": 7,
+      "snippets": [
+        {
+          "start": 4018400,
+          "end": 4019361,
+          "match_start": 4018700,
+          "text": ".additional_context,\"additional_context\",t),y(0===t.length,t)):r},[n.postToolUseFailure]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return b(e.additional_context,\"additional_context\",r),y(0===r.length,r)},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Object.assign({},r);let i=!1;return void 0!==n.permissionDecision&&(s.permission=n.p",
+          "sha256_utf8": "42cb0ab36e9ab18e3e559c16f879fac9f4ee67f8b9f80db3c3cfc6260e2865d1"
+        },
+        {
+          "start": 4018430,
+          "end": 4019391,
+          "match_start": 4018730,
+          "text": "l_context\",t),y(0===t.length,t)):r},[n.postToolUseFailure]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return b(e.additional_context,\"additional_context\",r),y(0===r.length,r)},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Object.assign({},r);let i=!1;return void 0!==n.permissionDecision&&(s.permission=n.permissionDecision,i=!0),\"strin",
+          "sha256_utf8": "dfa68d748fc2d2906ac92a658cbc91b6b14a2c107a2e1e0740d4e52ad78d59cc"
+        },
+        {
+          "start": 4018445,
+          "end": 4019406,
+          "match_start": 4018745,
+          "text": "(0===t.length,t)):r},[n.postToolUseFailure]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return b(e.additional_context,\"additional_context\",r),y(0===r.length,r)},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Object.assign({},r);let i=!1;return void 0!==n.permissionDecision&&(s.permission=n.permissionDecision,i=!0),\"string\"==typeof n.pe",
+          "sha256_utf8": "3263ca92e54ece1505463708e18ed9d787c2d3561189023676c63f4c6ec553e5"
+        },
+        {
+          "start": 4018508,
+          "end": 4019469,
+          "match_start": 4018808,
+          "text": "(!t.isValid)return t;const r=[];return b(e.additional_context,\"additional_context\",r),y(0===r.length,r)},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Object.assign({},r);let i=!1;return void 0!==n.permissionDecision&&(s.permission=n.permissionDecision,i=!0),\"string\"==typeof n.permissionDecisionReason&&(s.user_message=n.permissionDecisionRea",
+          "sha256_utf8": "19f451f2418716ee0569ec9975e7c9e6bd450355f69e84ddb5812d9e8fdb9435"
+        },
+        {
+          "start": 4018563,
+          "end": 4019524,
+          "match_start": 4018863,
+          "text": "ontext,\"additional_context\",r),y(0===r.length,r)},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Object.assign({},r);let i=!1;return void 0!==n.permissionDecision&&(s.permission=n.permissionDecision,i=!0),\"string\"==typeof n.permissionDecisionReason&&(s.user_message=n.permissionDecisionReason,i=!0),Y(n.updatedInput)&&(s.updated_input=n.updated",
+          "sha256_utf8": "9031d3a01b0604d25b98cca78b3ea41d779386b046364ca58e7f27ec4d8344b0"
+        },
+        {
+          "start": 4018611,
+          "end": 4019572,
+          "match_start": 4018911,
+          "text": "},[n.workspaceOpen]:e=>{const t=_(e);if(!t.isValid)return t;const r=[];return void 0!==e.pluginPaths&&(Array.isArray(e.pluginPaths)?e.pluginPaths.forEach(((e,t)=>{C(e)?0===e.trim().length&&r.push(`pluginPaths[${t}] must be a non-empty string`):r.push(`pluginPaths[${t}] must be a string`)})):r.push(\"pluginPaths must be an array of strings if provided\")),y(0===r.length,r)}},T=(e,t,r)=>{const s=function(e,t,r){let s;return s=e===n.preToolUse?function(e,t){if(!Y(e))return e;const r=e;if(void 0!==r.permission||void 0!==r.user_message||void 0!==r.agent_message||void 0!==r.updated_input)return r;if(!H(t))return r;const n=V(e);if(!W(n,\"PreToolUse\"))return r;const s=Object.assign({},r);let i=!1;return void 0!==n.permissionDecision&&(s.permission=n.permissionDecision,i=!0),\"string\"==typeof n.permissionDecisionReason&&(s.user_message=n.permissionDecisionReason,i=!0),Y(n.updatedInput)&&(s.updated_input=n.updatedInput,i=!0),i?s:r}(t,r):e===n.stop?z(t,r,\"Stop\")",
+          "sha256_utf8": "9005efa5ff7cdff58880318888e08635e55a52ba8519757c004871ae14d3626b"
+        }
+      ]
+    },
+    {
+      "term": "runWorkspaceOpen",
+      "match_count": 0,
+      "snippets": []
+    },
+    {
+      "term": "setWorkspacePlugin",
+      "match_count": 0,
+      "snippets": []
+    },
+    {
+      "term": "setExtensionPlugins",
+      "match_count": 0,
+      "snippets": []
+    }
+  ],
+  "official_reference": "https://cursor.com/docs/hooks#workspaceopen",
+  "vendor_source_modified": false,
+  "vendor_code_evaluated": false,
+  "model_prompts": 0,
+  "native_workspace_callback": "not-observed-by-this-inspection",
+  "qualification": "Source presence or absence alone does not establish supported callback delivery"
+}

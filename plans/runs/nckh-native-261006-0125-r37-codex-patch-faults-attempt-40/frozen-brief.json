@@ -1,0 +1,39 @@
+{
+  "controller": {
+    "path": "plans/runs/nckh-native-261006-0125-r37-codex-patch-faults-attempt-40/run-patch-faults.py",
+    "sha256": "02c92bd1db0ce9cf43f9cab4be06ba14f0cb1eac12dfb9d09c18c963b886ca0a"
+  },
+  "effort": "medium",
+  "event": "PreToolUse",
+  "fault_origin": "controller-injection-after-genuine-native-callback",
+  "injected_sleep_seconds": 8,
+  "inner_timeout_seconds": 5,
+  "maximum_model_turns": 5,
+  "maximum_requested_native_tools": 5,
+  "model": "gpt-5.6-luna",
+  "model_retries": 0,
+  "modes": [
+    "malformed-input",
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-codec"
+  ],
+  "new_trust_keys": "not-authorized; global hashes must remain exact",
+  "oracle": "One genuine matching patch callback per case; record native blocked/failed/completed state and exact marker outcome without regrading; no retries or alternate tools",
+  "outer_timeout_seconds": 5,
+  "predicted_marker": {
+    "crash": true,
+    "malformed-input": false,
+    "malformed-output": true,
+    "timeout": true,
+    "unsupported-codec": true
+  },
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "surface": "codex-cli-exec",
+  "tool": "apply_patch",
+  "trust_route": "existing native-persisted workspace key reused; inline invocation hook trust bypass",
+  "version": "0.154.0",
+  "whole_turn_deadline": null
+}

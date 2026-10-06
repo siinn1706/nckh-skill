@@ -1,0 +1,118 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 39,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "enum": [
+              "nckh-analytics",
+              "nckh-backend",
+              "nckh-brand",
+              "nckh-campaign",
+              "nckh-code-review",
+              "nckh-content",
+              "nckh-context",
+              "nckh-cook",
+              "nckh-copy",
+              "nckh-cro",
+              "nckh-data",
+              "nckh-debug",
+              "nckh-devops",
+              "nckh-docs",
+              "nckh-email",
+              "nckh-evidence",
+              "nckh-experiment",
+              "nckh-fix",
+              "nckh-frontend",
+              "nckh-git",
+              "nckh-handoff",
+              "nckh-humanwrite",
+              "nckh-launch",
+              "nckh-market-research",
+              "nckh-marketing-plan",
+              "nckh-method",
+              "nckh-paperwrite",
+              "nckh-plan",
+              "nckh-research",
+              "nckh-review",
+              "nckh-scout",
+              "nckh-security",
+              "nckh-seo",
+              "nckh-social",
+              "nckh-taste",
+              "nckh-test",
+              "nckh-visuals",
+              "nckh-write",
+              "nckh-xia"
+            ]
+          },
+          "kit": {
+            "enum": [
+              "core",
+              "engineer",
+              "marketing",
+              "tooling"
+            ]
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": [
+              "experimental",
+              "stable"
+            ]
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "eval_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "source_lock_id": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "kit",
+          "path",
+          "status",
+          "dependencies",
+          "eval_ids",
+          "source_lock_id"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "revision",
+    "skills"
+  ]
+}

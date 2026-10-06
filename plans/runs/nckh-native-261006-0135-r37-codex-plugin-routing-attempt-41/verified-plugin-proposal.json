@@ -1,0 +1,91 @@
+{
+  "status": "verified-inactive-proposal-static-preparation-only",
+  "timestamp_utc": "2026-10-05T18:46:41.039460+00:00",
+  "proposal_sha256": "b416619e182e84e749d9e688976456d29e5a1ea217a0db232107152573708e1a",
+  "proposal_tree_hash": "6e6e7e3618decdec995524c42a63e8f24235bd6753e7387be77ffdcae4e2f65b",
+  "proposal_files": 33,
+  "unchanged_packaged_payload_files": 26,
+  "python_files_compiled_in_memory": 18,
+  "project_target_preimages": {
+    ".agents/plugins/marketplace.json": "absent",
+    ".codex/config.toml": "absent",
+    ".codex/hooks.json": "absent",
+    ".nckh-native-codex-plugin-duplicate/context.json": "absent",
+    "plugins/nckh-native-hook-probe/": "absent"
+  },
+  "cache_preimage": "absent",
+  "native_trusted_project_reused": true,
+  "command_checks": [
+    {
+      "source": "project",
+      "event": "PostToolUse",
+      "command_sha256": "6f10398f758f913e1bb611fc282e3159ee1b9fb333099a6c527a6dcf2c720e36",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "project",
+      "event": "PreToolUse",
+      "command_sha256": "a0c7d85a1dc7044f48a51531363e902a1e60ce4b305f22009ba265b277e9ad25",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "project",
+      "event": "SessionStart",
+      "command_sha256": "003baa10471e0015d3aaf0230b18bd4463e6de6771a1089b929610888e839aa2",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "project",
+      "event": "Stop",
+      "command_sha256": "2a3e7d30a8b997f93ed0dfd027332efc1e90d44427a89443418595a1a0c1392f",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "project",
+      "event": "UserPromptSubmit",
+      "command_sha256": "0ea8d3b5bf46b2851de5d7f328442dfdc1b5bd64657e5213ec6f3edb768f9db6",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "plugin",
+      "event": "PostToolUse",
+      "command_sha256": "4ad97f5865770be61b5a7a3929127539aef58641fe09d586fb764f1d512ce588",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "plugin",
+      "event": "PreToolUse",
+      "command_sha256": "c2e220eb468d158dfa8b7a92ef9c4d0b978f3826eb2f59a21b0aba141b650b77",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "plugin",
+      "event": "SessionStart",
+      "command_sha256": "8ac105c98540dd35beb98c6a46214edb3c64506b0f199a34b106020abadf5bc2",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "plugin",
+      "event": "Stop",
+      "command_sha256": "5070b46361339f46a07d2c8851f6d053cf27ae527db603617d6daf85592a3afb",
+      "windows_argv_roundtrip": true
+    },
+    {
+      "source": "plugin",
+      "event": "UserPromptSubmit",
+      "command_sha256": "f1cf90eb38998d892b334e490d781b50fa04dc7d7e5c5708120398574247971d",
+      "windows_argv_roundtrip": true
+    }
+  ],
+  "windows_placeholder_delivery": "unverified; installed native host must resolve the plugin command and deliver a genuine lifecycle callback before a model turn",
+  "native_metadata_cleanup": "native uninstall only; retention or changed unrelated state must be reported, not overwritten",
+  "global_state": {
+    "config_sha256": "239a9fad3eef1cced2460b58279b28df12a91ccb9e5219578ab6211b681d0a23",
+    "hooks_sha256": "d5d8a9077f23adb6876f81ba8a358356b2167086b7d4d64a126fc556fe400901"
+  },
+  "model_prompts": 0,
+  "hook_executions": 0,
+  "native_installation": "not-performed",
+  "full_native_gate": "unchecked",
+  "verifier_sha256": "1beaca0a9515002a4b3d7b8738386bb163ca7d8e6a4ce18494a4b6979719be68"
+}

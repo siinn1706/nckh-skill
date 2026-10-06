@@ -1,0 +1,88 @@
+{
+  "after_failure_logger_timeout_seconds": 10,
+  "allow_after_sha256": "9eeb68c638fe89741028a9ff2e3d1b083a19a0d55e36652629ebb53c29b47450",
+  "allow_before_sha256": "ad20f34a3554f11c34fdee1d2cf0b0c8484b375c002ed03b2e53fb35910841ef",
+  "artifact_QA": "pending",
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "cases": [
+    {
+      "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/case-allow.json",
+      "sha256": "0a965527b1019e3f1c90c34d09e2674e1febd892f947e41bc72fc02d7dcfd41f"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/case-deny.json",
+      "sha256": "0a813be09358272f4989c7cb6b909fd7f6390b7f4845478d568dc48fc34626f7"
+    }
+  ],
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/cleanup.json",
+    "sha256": "c9ba625cdf22abb9951ddeda78b3787c7b97e667393de359fe0c6a5dd539ecb3"
+  },
+  "cli_state_hash_after": "f18bc8a4626bf1853da77c1296d9ce2e34d7b154ef0390c20b6837e423db9731",
+  "cli_state_hash_before": "bf6ac14a23c246e9e16403c9bc959df010459f526710397245a8dcec2e64cff6",
+  "cli_state_hash_unchanged": false,
+  "controller_failures": [
+    {
+      "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/collector-log-filter-failure.json",
+      "sha256": "7fa46c54efe84a722d32c41a61e79901c46d768c00eb487cf0cf0cb5078802f6"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/collector-hash-interface-failure.json",
+      "sha256": "4a67ae9258767e3267b3928507de1c40f0ef78cb34fc17cb5fd015a2f8763166"
+    }
+  ],
+  "controller_model_retries": 0,
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/definitions/session.json",
+    "sha256": "39e775683377cc85caeb621fa814d36d0b747054d621e814939136298b28dee8"
+  },
+  "deny_after_sha256": "9eeb68c638fe89741028a9ff2e3d1b083a19a0d55e36652629ebb53c29b47450",
+  "deny_before_sha256": "9eeb68c638fe89741028a9ff2e3d1b083a19a0d55e36652629ebb53c29b47450",
+  "effort_requested": "xhigh",
+  "fault_origin": "none",
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "historical_members_preserved": 596,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns": 2,
+  "native_denied_tool_use_id": "call-cd3c9db2-8149-462a-94b6-4f240b26a7a0-3\nfc_af0fccc1-d5fd-9d65-847d-f7c529c6445d_0",
+  "other_packaged_timeout_seconds": 5,
+  "packaged_event_observer_invoked": false,
+  "plan_only_Write_prevention": "native-permission_denied-plan-only-mutation; file-byte-identical",
+  "policy_native_ID_correlation": "neutral-event-hash binding; policy receipt itself omits native ID",
+  "preToolUse_timeout_seconds": 20,
+  "preparation": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/preparation.json",
+    "sha256": "fa3a85f13f85a4e6a485071e39c12242602ac067650ffb185d35b41e9fe6e777"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/final-process-audit.json",
+    "sha256": "3513f022d75362024981cdb888d4cff44e59dafa78ffaf98b9301de7218c2f35"
+  },
+  "prompt_submissions": 2,
+  "protected_global_configs_unchanged": true,
+  "public_write": "exact-requested-bytes-observed",
+  "recording_failure": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/terminal-allow-poll-01-recording-failure.json",
+    "sha256": "5d2b03fc352389fb09c452eb39c91480b4467ff22586376cd3578c73f602366b"
+  },
+  "scope": "direct20s public Write allow and plan-only Write deny; does not qualify private mutation or full event/surface/version matrix",
+  "source_default_unchanged": true,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "verified-direct-preToolUse20s-write-allow-and-plan-only-prevention",
+  "surface": "cursor-cli-interactive-terminal",
+  "terminal_capture_limitations": "one allow raw chunk lost after64KB save rejection; deny chunk truncated; retained native receipts/effects verified",
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/terminal-final-observation.json",
+    "sha256": "fb89d0a8d7e4406f1c264c1571620d7b0a4bf459d7abd46e39c47917137827a7"
+  },
+  "terminal_exit_code": 1,
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/verify-mutation-delivery.py",
+    "sha256": "158b36ebbbfbd25312ae3be08e804b272851ecbb99f345adf259c828d3d72b7e"
+  },
+  "version": "2026.09.15-d2fe57e"
+}

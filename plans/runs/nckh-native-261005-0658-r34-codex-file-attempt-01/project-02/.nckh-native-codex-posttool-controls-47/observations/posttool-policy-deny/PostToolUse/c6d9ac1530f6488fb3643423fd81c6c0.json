@@ -1,0 +1,56 @@
+{
+  "attempt": "posttool-policy-deny",
+  "completed_at": "2026-10-05T19:57:16.742135+00:00",
+  "controller_expected_marker_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "event": "PostToolUse",
+  "fault_origin": "none",
+  "input_fields": [
+    "cwd",
+    "hook_event_name",
+    "model",
+    "permission_mode",
+    "session_id",
+    "tool_input",
+    "tool_name",
+    "tool_response",
+    "tool_use_id",
+    "transcript_path",
+    "turn_id"
+  ],
+  "input_sha256": "82061032db2d7d77e2fae409e9eb95f737546d9e686531c14da077cd43f32ae0",
+  "input_size": 717,
+  "marker_at_callback_start_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "marker_exists_at_callback_start": true,
+  "mode": "policy-deny",
+  "native_command_sha256": "7ab41076f0ce1b558c8a70b26cd09fa1e93067d12bc13fd3a6fcbe6ce6e0d7a9",
+  "native_direct_path_fields": {},
+  "native_model": "gpt-5.6-luna",
+  "native_permission_mode": "bypassPermissions",
+  "native_session_hash": "e879de621d61f38870b207896625488f72dc66198180fa61089f350d97ab3543",
+  "native_stop_hook_active": null,
+  "native_tool_input_type": "dict",
+  "native_tool_name": "apply_patch",
+  "native_tool_use_id": "exec-56266d7f-da18-4f3b-bb59-1650622ab6fd",
+  "native_turn_id": "01a10da4-3e25-7bf1-a1e7-49e3783957e4",
+  "observer_pid": 11552,
+  "parent_pid": 6664,
+  "reported_event": "PostToolUse",
+  "runner_exit_code": 0,
+  "runner_exited": true,
+  "runner_output": {
+    "hookSpecificOutput": {
+      "additionalContext": "bounded-input-exceeded",
+      "hookEventName": "PostToolUse"
+    }
+  },
+  "runner_pid": 30104,
+  "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+  "selected": true,
+  "started_at": "2026-10-05T19:57:16.600716+00:00",
+  "status": "completed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "9761371de85915d83cd2c3891d726c2aee1998bff71508dce8d0cb758ad4f84e",
+  "tool_input_fields": [
+    "command"
+  ]
+}

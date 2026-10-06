@@ -1,0 +1,43 @@
+{
+  "status": "complete",
+  "date": "2026-10-04",
+  "request": "always enable resource-access in distributed packages",
+  "repository": "https://github.com/siinn1706/nckh-skill",
+  "visibility": "PUBLIC",
+  "branch": "main",
+  "commit": "58a3cdc90084a9cd2a21ab15b5368cf39975adb6",
+  "source_revision": "26",
+  "source_payloads_unchanged": true,
+  "resource_access": "on",
+  "hosts": [
+    "claude",
+    "codex",
+    "cursor",
+    "agy"
+  ],
+  "skills_per_host": 37,
+  "agents_per_host": 6,
+  "resource_groups_per_host": 9,
+  "bindings_per_host": 21,
+  "actual_reader_observations": 84,
+  "reader_receipts": {
+    "claude": "smoke-claude.json",
+    "codex": "smoke-codex.json",
+    "cursor": "smoke-cursor.json",
+    "agy": "smoke-agy.json"
+  },
+  "rights_notice_review": "pass",
+  "public_contract_review": "pass",
+  "scope_and_secret_scan": "scope-check.json",
+  "staged_byte_verification": "staged-check.json",
+  "cleanup_error_disposition": "resolved; see smoke-runner-cleanup.json",
+  "publication_verification": {
+    "source": "git_manager live git and GitHub API checks",
+    "remote_sha_matches": true,
+    "all_remote_manifest_blobs_match": true,
+    "working_tree_clean": true
+  },
+  "qualification": "experimental; no new model or human evaluation",
+  "installed_project_mode": "on",
+  "installed_project_revision": "25"
+}

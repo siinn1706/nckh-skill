@@ -1,0 +1,25 @@
+{
+  "recorded_at": "2026-10-04T14:26:32.914368+00:00",
+  "old_helper_sha256": "bc8f84626c226c73822664208063f71e9ded8c5dc31884ca56a136a5bd479cae",
+  "old_selector": "grok-4.7[context=500k,effort=xhigh,fast=false]",
+  "selector_refusal_evidence": "commands/cursor-native-allow-01.stderr.txt",
+  "new_selector": "grok-4.7-xhigh",
+  "native_selected_model": {
+    "modelId": "grok-4.7",
+    "parameters": [
+      {
+        "id": "context",
+        "value": "500k"
+      },
+      {
+        "id": "reasoning_effort",
+        "value": "xhigh"
+      },
+      {
+        "id": "fast",
+        "value": "false"
+      }
+    ]
+  },
+  "qualification": "selected-context-needs-actual-callback-confirmation"
+}

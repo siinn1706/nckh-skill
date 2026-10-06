@@ -1,0 +1,51 @@
+{
+  "status": "verified-model-admission-rejected-no-prompt-native-search-unqualified",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "requested_model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_model_turns": 0,
+  "prompt_submissions": 0,
+  "native_callbacks": 0,
+  "policy_receipts": 0,
+  "native_terminal_exit_code": 1,
+  "failure_class": "explicit-model-specifier-admission-rejection",
+  "fixture_unchanged": true,
+  "original_case_status_retained": "native-uncovered-search-unqualified",
+  "original_case": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/case-uncovered-search.json",
+    "sha256": "2687a86f4ae97fe0bab8b8230ae4695f61fa127a5349de8ae3765dfd8da836aa"
+  },
+  "terminal": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/terminal-ready-01.json",
+    "sha256": "55234447d70886f73abd845dd044209a0333928f0d6236c34a6a4a8db6e00e51"
+  },
+  "controller_failures": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/admission-controller-failure.json",
+    "sha256": "922f483750e7106c20fe0b2fad6afb4643ed83040271b6fec522a75fc37b04c0"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/cleanup.json",
+    "sha256": "24e87a7cf6223a920bdb610086cfdcbbd132ed54b1083fa4d50143e82d1e64cb"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/final-process-audit.json",
+    "sha256": "97b8a08d718d74afe45d45c7b40808c8283a62008e6a71d48e0bc9766e6c1077"
+  },
+  "historical_members_preserved": 763,
+  "removed_members": 27,
+  "startup_process_correlation": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/startup-process-ownership-correlation.json",
+    "sha256": "ccf2e9b3617aae401d473ab7e25c2bfce058611e49feb325a77556b297c821db"
+  },
+  "startup_process_scope": "36 unowned startup candidates predate this launch; no process stopped or ownership invented",
+  "native_root_ownership": "not-captured-before-exit; absent root is not assigned a PID",
+  "protected_global_configs_unchanged": true,
+  "global_direct_write": false,
+  "scope_limit": "No native tool oracle ran; this failure does not regrade earlier successful granted model turns",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2004-r37-cursor-uncovered-search-attempt-23/verify-admission-failure.py",
+    "sha256": "68f3a08478b924826f8228763fc1f96bddf79ad1a7053820ee43b9d6276046b6"
+  },
+  "plan_tasks": "44/45",
+  "full_native_gate": "unchecked"
+}

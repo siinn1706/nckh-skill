@@ -1,0 +1,37 @@
+{
+  "status": "bounded-selected-route-definitions",
+  "source": "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\index.js",
+  "source_sha256": "9f51ecf275d932372bf367914708b0dd21bf9c9e807b5e20e789ec9e247d9f86",
+  "definitions": [
+    {
+      "label": "getPluginHooks definition",
+      "match_count": 1,
+      "character_start": 4791089,
+      "character_end": 4794013,
+      "text": ",pluginSource:i.identifier.source})}var r,n;return t}}class jm{constructor(e){this.pluginsService=e}async getPluginHooks(e){const t=!1===e?.forceReload?await this.pluginsService.getAllEnabledPlugins():await this.pluginsService.reload(),r=[],n=[];for(const e of t){const t=e.hooks;t&&(\"config\"in t?r.push({pluginKey:(0,Gn.s4m)(e.identifier),installPath:e.installPath,config:t.config,sourcePath:t.sourcePath,plugin:(0,Gn.dBY)(e.identifier),marketplace:(0,Gn.R3Q)(e.identifier),pluginId:(0,Gn.xJd)(e.identifier),marketplaceId:(0,Gn.iUy)(e.identifier)}):n.push(t.error))}return{hooks:r,errors:n}}}function Um(e){try{const t=new URL(e),r=new URL(t.pathname,t.origin);return r.search=t.search,r.pathname.endsWith(\"/\")&&r.pathname.length>1&&(r.pathname=r.pathname.slice(0,-1)),\"/\"===r.pathname?r.origin+r.search:r.toString()}catch{return e.toLowerCase().trim()}}class Lm{constructor(e){this.pluginsService=e}async getPluginMcpServers(){const e=await this.pluginsService.reload(),t=[];for(const r of e){const e=\"marketplace\"in r.identifier.sourceInfo?r.identifier.sourceInfo.marketplace:void 0,n=\"marketplaceDbId\"in r.identifier.sourceInfo?r.identifier.sourceInfo.marketplaceDbId:void 0,s=r.identifier.sourceInfo.name,i=\"pluginDbId\"in r.identifier.sourceInfo?r.identifier.sourceInfo.pluginDbId:void 0,o=r.mcpConfig;o&&t.push(...(0,Gn.Iqv)(o,e,n,s,i,r.identifier.source))}return function(e){const t=[],r=new Set;for(const n of e){if(\"streamableHttp\"!==n.type||!n.url){t.push(n);continue}const e=Um(n.url);r.has(e)||(r.add(e),t.push(n))}return t}(t)}}var Fm=function(e){return function(t){function r(r){t.error=t.hasError?new e(r,t.error,\"An error was suppressed during disposal.\"):r,t.hasError=!0}var n,s=0;return function e(){for(;n=t.stack.pop();)try{if(!n.async&&1===s)return s=0,t.stack.push(n),Promise.resolve().then(e);if(n.dispose){var i=n.dispose.call(n.value);if(n.async)return s|=2,Promise.resolve(i).then(e,(function(t){return r(t),e()}))}else s|=1}catch(e){r(e)}if(1===s)return t.hasError?Promise.reject(t.error):Promise.resolve();if(t.hasError)throw t.error}()}}(\"function\"==typeof SuppressedError?SuppressedError:function(e,t,r){var n=new Error(r);return n.name=\"SuppressedError\",n.error=e,n.suppressed=t,n});function Gm(e,t){return void 0===e?[]:(Array.isArray(e)?e:[e]).map((e=>({...e,userHomeDir:t})))}class $m{constructor(e,t,r,n,s,i){this.workspacePaths=e,this.userHomeDirectory=t,this.getSettings=r,this.marketplaceOptions=n,this.localPluginVariablesLookup=i,this.plugins=[],this._loadFailures=[],this._pluginSetIncomplete=!0,this._retainedFromPreviousLoad=0,this._wasFirstLoad=!0,this.loadedOnce=!1,this._extensionPlugins=new Map,this._extensionPluginOriginalPaths=new Map,this.pluginLogger=s??Gn.NzK,this.reload()}async getAllEnabledPlugins(){return await this.ensureLoaded(),[...this.plugins]}getLoadFailures(){return[...this._loadFailures]}isPluginSetIncomplete(){return this._pluginSetIncomplete}getLoadDiagn",
+      "sha256_utf8": "ad472f5cd9ff85bc4d608393b70f017d9a6482dfa67550743d2c234220de7347"
+    },
+    {
+      "label": "hook name normalization",
+      "match_count": 1,
+      "character_start": 4008805,
+      "character_end": 4011731,
+      "text": "e\",postToolUse:\"postToolUse\",postToolUseFailure:\"postToolUseFailure\",workspaceOpen:\"workspaceOpen\"},s={PreToolUse:n.preToolUse,PermissionRequest:null,PostToolUse:n.postToolUse,UserPromptSubmit:n.beforeSubmitPrompt,Stop:n.stop,SubagentStop:n.subagentStop,SessionStart:n.sessionStart,SessionEnd:n.sessionEnd,PreCompact:n.preCompact,Notification:null},i=Object.fromEntries(Object.entries(s).filter((e=>null!==e[1])).map((([e,t])=>[t,e]))),o={Bash:\"Shell\",Read:\"Read\",Write:\"Write\",Edit:\"Write\",Glob:null,Grep:\"Grep\",WebFetch:\"WebFetch\",WebSearch:\"WebSearch\",Task:\"Task\"},a=[\"Glob\"],c=[\"Notification\",\"PermissionRequest\"],u={warn:()=>{},info:()=>{}};function l(e,t){const r={loop_limit:null,failClosed:!1};return t&&\"*\"!==t&&(r.matcher=t),void 0!==e.timeout&&(r.timeout=e.timeout),\"prompt\"===e.type?e.prompt?Object.assign({type:\"prompt\",prompt:e.prompt},r):null:e.command?Object.assign({type:\"command\",command:e.command},r):null}function d(e,t,r=u){const n=[];let s;if(\"PreToolUse\"===t||\"PostToolUse\"===t){const t=function(e,t=u){if(!e||\"*\"===e)return\"*\";const r=e.split(\"|\"),n=[],s=[];for(const e of r){const t=e.trim();if(t.startsWith(\"mcp__\")){const e=t.split(\"__\");if(e.length>=3){const t=e.slice(2).join(\"__\");n.push(`MCP:${t}`);continue}}const r=o[t];null!==r?void 0!==r?n.includes(r)||n.push(r):n.push(t):a.includes(t)&&s.push(`Tool \"${t}\" is not supported in Cursor and will be ignored`)}for(const e of s)t.warn(e);return 0===n.length?null:n.join(\"|\")}(e.matcher,r);if(null===t)return r.warn(`All tools in matcher \"${e.matcher}\" are unsupported, skipping hooks`),[];s=\"*\"===t?void 0:t}else\"SessionStart\"===t||\"PreCompact\"===t?(e.matcher&&\"*\"!==e.matcher&&\"\"!==e.matcher&&(\"SessionStart\"===t?[\"startup\",\"resume\",\"clear\",\"compact\"].includes(e.matcher):[\"manual\",\"auto\"].includes(e.matcher))&&r.warn(`${t} trigger matcher \"${e.matcher}\" is not supported in Cursor, hooks will fire for all triggers`),s=void 0):s=void 0;for(const t of e.hooks){const e=l(t,s);e&&n.push(e)}return n}function f(e,t=u){const r={};for(const[n,i]of Object.entries(e)){const e=n;if(c.includes(e)){t.warn(`Claude Code event \"${e}\" is not supported in Cursor and will be ignored`);continue}const o=s[e];if(!o){t.warn(`Unknown Claude Code event \"${e}\", skipping`);continue}const a=[];if(Array.isArray(i))for(const r of i){const n=d(r,e,t);a.push(...n)}else void 0!==i&&t.warn(`Claude Code event \"${e}\" has invalid value (expected array), skipping`);if(a.length>0){const e=r[o]||[];r[o]=[...e,...a]}}return{version:1,hooks:r}}function m(e){return e.hooks}function A(e,t={}){if(\"object\"!=typeof e||null===e)return!1;if(!(\"hooks\"in e))return!1;const r=e.hooks;if(\"object\"!=typeof r||null===r)return!1;const n=r;for(const[e,r]of Object.entries(n))if(e in s&&Array.isArray(r)){const n=!0===t.allowMatcherlessStop&&\"Stop\"===e;for(const e of r)if(\"object\"==typeof e&&null!==e&&\"hooks\"in e&&Array.isArray(e.hooks)&&(\"matcher\"in e||n))return!0}return!1}function",
+      "sha256_utf8": "131e118506a162e123a18f0408df7424d684c01fbf1b6daa48a80da8a9f550d0"
+    }
+  ],
+  "term_counts": {
+    "getPluginHooks": 1,
+    "pluginHook": 0,
+    "pluginHookConfigs": 0,
+    "hookConfigs": 0,
+    "loadHooks": 0,
+    "reloadHooks": 0,
+    "UserPromptSubmit": 2,
+    "forceReload": 1,
+    "getHookConfigurations": 0,
+    "loadHookConfigs": 0
+  },
+  "vendor_code_evaluated": false,
+  "vendor_source_modified": false
+}

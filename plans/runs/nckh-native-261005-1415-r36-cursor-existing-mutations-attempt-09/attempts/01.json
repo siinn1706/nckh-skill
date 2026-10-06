@@ -1,0 +1,144 @@
+{
+  "after_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+  "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+  "context": {
+    "before_sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1",
+    "context": {
+      "allowed_operations": [
+        "write",
+        "read"
+      ],
+      "brief": {
+        "mode": "auto"
+      },
+      "schema_version": 1,
+      "task_id": "native-cursor-existing-09-01",
+      "tool_operations": {
+        "Edit": "write",
+        "Read": "read",
+        "Shell": "write",
+        "StrReplace": "write",
+        "Write": "write"
+      }
+    },
+    "context_file_sha256": "b07c3ff651eedbb5adbd4811100abb14e0c6c66ad68c39928ad49f128694b131",
+    "context_hash": "b1524a5e5bfb067013a96af462e48bdcf6a05c2d643c8ba42acff60b7feb00ce",
+    "expected": "exact-public-write",
+    "index": 1,
+    "kind": "Write",
+    "marker": "NCKH_EXISTING_FINISHED_01",
+    "mode": "auto",
+    "preimage": {
+      "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/1.txt",
+      "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+    },
+    "prompt": "[removed: raw runtime content]",
+    "receipt_preimage": [
+      "policy-receipts/e6d286d541f7cbd61070579af6a8b0eb1361c9b782d2681c7157c86726276cf1.json"
+    ],
+    "relative": "oracles/r36-cursor-existing-public-09.txt",
+    "selected_at": "2026-10-05T07:47:59.985216+00:00"
+  },
+  "expected": "exact-public-write",
+  "expected_effect_observed": false,
+  "index": 1,
+  "kind": "Write",
+  "marker": "NCKH_EXISTING_FINISHED_01",
+  "mode": "auto",
+  "model_final_marker_observed": true,
+  "observed_at": "2026-10-05T07:50:01.208538+00:00",
+  "observer_invoked": false,
+  "policies": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-existing-09/policy-receipts/20177ab0c0a9603437f2af223400f798d2b014a7be15589e28456fc34c2fd134.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "b07c3ff651eedbb5adbd4811100abb14e0c6c66ad68c39928ad49f128694b131",
+        "decision": "advisory",
+        "event_hash": "330ebc46b2e0c7382f72b7a1186c4334ca1c7a29576173a04b90a7ea3c537b0a",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "deb0b63994c7342b4a810ba519535973947590b8c2ce2544e8770d25c2cecc5f",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "d340aff7c4abe1eacdeb838a3a9d84aaaa34491af9ebe5270c328e04ab0f711d"
+      },
+      "sha256": "00557dc8ea2cdaffcc00180af303093c671a36348ddd7c6c27dfc9ba45f8b08e"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-existing-09/policy-receipts/485a310e99f70a9a04b48f23425180dfd63a10e087fba072d454c52f68c7876b.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "b07c3ff651eedbb5adbd4811100abb14e0c6c66ad68c39928ad49f128694b131",
+        "decision": "advisory",
+        "event_hash": "fd515df718bf0525a93fb5cae918a9bd701abd1091d030ba83604be243c3b797",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "deb0b63994c7342b4a810ba519535973947590b8c2ce2544e8770d25c2cecc5f",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "d340aff7c4abe1eacdeb838a3a9d84aaaa34491af9ebe5270c328e04ab0f711d"
+      },
+      "sha256": "601e998d8934b35cb1b4bd0fca70c15e69c80b870bceb7a66d6ec856751c8161"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-existing-09/policy-receipts/9cf2855958284eec92301d258b69bc72b84133e2a143d35081349be9bd2f5888.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "b07c3ff651eedbb5adbd4811100abb14e0c6c66ad68c39928ad49f128694b131",
+        "decision": "allow",
+        "event_hash": "fbd6ca13ee376700b12488b5abed0ef07077951f840eac3bf23a62d8d0627baf",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "deb0b63994c7342b4a810ba519535973947590b8c2ce2544e8770d25c2cecc5f",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "d340aff7c4abe1eacdeb838a3a9d84aaaa34491af9ebe5270c328e04ab0f711d"
+      },
+      "sha256": "5d4ce6467959162319565849fd247cc8f8141bd7c7bd13a69b047a5f61ff5043"
+    }
+  ],
+  "preflight_count": 1,
+  "preimage": {
+    "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/fixture-preimages/1.txt",
+    "sha256": "1fb0359198c2b3129a1dc260ef31309cc151696b076a5276be8fdddf3e1b1ba1"
+  },
+  "prompt": "[removed: raw runtime content]",
+  "ready_for_next_case": true,
+  "receipt_context_binding": "SHA256-of-exact-context-file-bytes",
+  "relative": "oracles/r36-cursor-existing-public-09.txt",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": 36,
+  "stop_count": 1,
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261005-1415-r36-cursor-existing-mutations-attempt-09/terminal/001-case-01.json",
+      "sha256": "051e1f78abc08a499c7b79f1bb8c43ff767bc38d90262cef34d7d8158397a5ad"
+    }
+  ],
+  "timeout_seconds": 5
+}

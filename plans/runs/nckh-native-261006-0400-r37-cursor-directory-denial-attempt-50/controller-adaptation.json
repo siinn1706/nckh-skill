@@ -1,0 +1,31 @@
+{
+  "timestamp_utc": "2026-10-05T20:34:57.368458+00:00",
+  "source_runtime": {
+    "path": "plans/runs/nckh-native-261006-0345-r37-cursor-directory-search-attempt-49/cursor-directory-runtime.py",
+    "sha256": "7ff772376f938404544b63f55967b8d70b79c71d913267d6e9fd8fd5db23d074"
+  },
+  "source_failure_observer": {
+    "path": "plans/runs/nckh-native-261005-2055-r37-cursor-selected-write-attempt-25/native-failure-observer.py",
+    "sha256": "95c1ad7a688ae2d9bf6cf15ba32788f474c58e86a2ef6152e047b708f5aa60d1"
+  },
+  "observer": {
+    "path": "plans/runs/nckh-native-261006-0400-r37-cursor-directory-denial-attempt-50/cursor-file-observer.py",
+    "sha256": "559cbfb2f84c7f3b9577c822d220ceab9454103833d321e1b830b62de5dd0a79"
+  },
+  "failure_observer": {
+    "path": "plans/runs/nckh-native-261006-0400-r37-cursor-directory-denial-attempt-50/native-failure-observer.py",
+    "sha256": "69fcc16287bd09491ba071ac65a2dbbe0ca88ac8f572a7aba785fb40eeb35f4b"
+  },
+  "source_kit_modified": false,
+  "causal_change": "native49 lacks actual failure response; add documented native postToolUseFailure diagnostic already delivered25",
+  "diagnostic_selection_change": "exact Grep tool and exact private directory",
+  "controller": {
+    "path": "plans/runs/nckh-native-261006-0400-r37-cursor-directory-denial-attempt-50/control-directory-denial.py",
+    "sha256": "c4a74c495c7430b95b3a3c73c60c4b7a4bcc4e16cb93f54376ecc6d94f684bd4"
+  },
+  "prior_oracle_preserved": {
+    "path": "plans/runs/nckh-native-261006-0345-r37-cursor-directory-search-attempt-49/frozen-brief.json",
+    "sha256": "1206cba1493fa69af320d29daf77db4716cd1483221b159928313f1589c42e54"
+  },
+  "model_retries": 0
+}

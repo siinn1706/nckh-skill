@@ -1,0 +1,61 @@
+{
+  "task_id": "vnm-population-chronological-forecast",
+  "inputs": [
+    {
+      "path": "partition-supplement.py",
+      "sha256": "49e39f1ab1c53312d8e8c68c9d9a91d429f532c483d60e978cdd104cef7c2839"
+    },
+    {
+      "path": "research-protocol.md",
+      "sha256": "e0393f1595d6852b03ffc78aa4ee1146255db6cc8fbe3bde8b195bdc0131345e"
+    },
+    {
+      "path": "pilot-data/normalized.json",
+      "sha256": "e14e550c084806337e078d6de1481c90f2417564339b8f15db90497cfffaa6d5"
+    },
+    {
+      "path": "split-manifest.json",
+      "sha256": "b9607bc6e0d38c40da0e4fbb70788b7c41d505d4d0c8d89383f59d8f8394cdec"
+    },
+    {
+      "path": "environment-v2.json",
+      "sha256": "47d9d54bd8fc8512d08c7d8c9ccdad033137af22803a7adc58f7a2c27bcea490"
+    }
+  ],
+  "freeze": {
+    "path": "partition-supplement-freeze.json",
+    "sha256": "55ac3edbcac99f971c6d27a863425f6967d285981ed143fbe1c9a3b3de38f8a0"
+  },
+  "argv": [
+    "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-I",
+    "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\partition-supplement.py",
+    "--calculate"
+  ],
+  "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01",
+  "pid": 23416,
+  "parent_pid": 1616,
+  "started_at": "2026-10-06T03:23:41.324604+00:00",
+  "ended_at": "2026-10-06T03:23:41.409737+00:00",
+  "wall_seconds": 0.09400000000005093,
+  "exit_code": 0,
+  "status": "completed-unreviewed",
+  "cleanup": "exact owned Popen handle reaped",
+  "stdout": {
+    "path": "partition-supplement.stdout.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stderr": {
+    "path": "partition-supplement.stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "output": {
+    "path": "partition-supplement-output.json",
+    "sha256": "b351f446aab07bc9f6b44410bff02113dc09bc3ea5c77e2873c5ed573911f1f7"
+  },
+  "cpu_seconds": null,
+  "peak_memory_bytes": null,
+  "provider_cost": null,
+  "provider_calls": 0,
+  "scope": "Supplemental process observation, not research-run-receipt graph promotion; around-launch time, not OS CreationDate"
+}

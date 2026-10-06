@@ -1,0 +1,12 @@
+--- tests/hooks/test_closure.py before
++++ tests/hooks/test_closure.py after
+@@ -42,7 +42,8 @@
+                 for prefix in ("", hook["projection_root"] + "/"):
+                     process = self.invoke(bundle / (prefix + hook["entrypoint"]), common, project, raw)
+                     self.assertEqual(process.returncode, 0, process.stderr)
+-                    self.assertEqual(json.loads(process.stdout), {})
++                    expected = {"decision": "ask"} if host == "agy" else {}
++                    self.assertEqual(json.loads(process.stdout), expected)
+                     config = self.invoke(bundle / (prefix + hook["config_entrypoint"]), ["preview", "--host", host,
+                         "--package", str(bundle), "--project", str(project), "--context", "context.json"], project)
+                     self.assertEqual(config.returncode, 0, config.stderr + config.stdout)

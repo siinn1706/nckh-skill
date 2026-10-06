@@ -1,0 +1,72 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "as_of": {
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "type": "string"
+    },
+    "license": {
+      "enum": [
+        "MIT",
+        "Apache-2.0"
+      ]
+    },
+    "license_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "license_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "notice_path": {
+      "type": "string"
+    },
+    "notice_sha256": {
+      "pattern": "^([a-f0-9]{64})?$",
+      "type": "string"
+    },
+    "redistribution": {
+      "const": "permitted-with-notices"
+    },
+    "repository": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "review_reference": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "source_kind": {
+      "const": "copied-upstream"
+    },
+    "upstream_path": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "upstream_sha256": {
+      "pattern": "^[a-f0-9]{64}$",
+      "type": "string"
+    },
+    "version": {
+      "pattern": "^[a-f0-9]{40}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "repository",
+    "version",
+    "as_of",
+    "license",
+    "license_path",
+    "license_sha256",
+    "notice_path",
+    "notice_sha256",
+    "redistribution",
+    "review_reference",
+    "source_kind",
+    "upstream_path",
+    "upstream_sha256"
+  ],
+  "type": "object"
+}

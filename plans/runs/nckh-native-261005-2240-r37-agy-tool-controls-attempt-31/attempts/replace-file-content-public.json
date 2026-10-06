@@ -1,0 +1,324 @@
+{
+  "after": {
+    "file": "d42ac5c15dc9f96c41ac6c521b83ff0f31aa154cab5040db1493022120043972"
+  },
+  "attempt": "replace-file-content-public",
+  "backend_attestation": "not-observed",
+  "before": {
+    "file": "02edea2dea461effdeeedcd8b35cd1df5408dcd4769b21b6660a5d7685c2979b"
+  },
+  "billing": "not-observed",
+  "callback_bindings": [],
+  "command": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/commands/agy-tools-replace-file-content-public.json",
+    "sha256": "2d01d0448d897cd1f0e93ce4e7b9be4e347bc630e733487a297dbf96033d3684"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/definitions/replace-file-content-public.json",
+    "sha256": "5e2880ee3b5e463a366e317539bcfaff53a3b50b1b66c5a1e7111187350885a8"
+  },
+  "direct": true,
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "expected_deny": false,
+  "expected_tool": "replace_file_content",
+  "fault_origin": "none",
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_callbacks": [],
+  "native_frames": [
+    {
+      "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+      "event": "init",
+      "init": {
+        "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model",
+        "model": "gemini-3.8-flash-medium",
+        "permission_mode": "always-proceed",
+        "tools": [
+          "ask_custom_permission",
+          "ask_permission",
+          "ask_question",
+          "browser_click_element",
+          "browser_drag_pixel_to_pixel",
+          "browser_get_dom",
+          "browser_get_network_request",
+          "browser_input",
+          "browser_list_network_requests",
+          "browser_mouse_down",
+          "browser_mouse_up",
+          "browser_move_mouse",
+          "browser_press_key",
+          "browser_refresh_page",
+          "browser_resize_window",
+          "browser_scroll",
+          "browser_scroll_dom",
+          "browser_select_option",
+          "browser_subagent",
+          "call_mcp_tool",
+          "capture_browser_console_logs",
+          "capture_browser_screenshot",
+          "click_browser_pixel",
+          "command_status",
+          "define_subagent",
+          "delete_knowledge",
+          "execute_browser_javascript",
+          "find_by_name",
+          "finish",
+          "generate_image",
+          "grep_search",
+          "invoke_subagent",
+          "list_browser_pages",
+          "list_dir",
+          "list_permissions",
+          "list_plugin_accounts",
+          "list_resources",
+          "manage_inbox",
+          "manage_subagents",
+          "manage_task",
+          "multi_replace_file_content",
+          "notebook_edit",
+          "notebook_execution",
+          "open_browser_url",
+          "read_browser_page",
+          "read_resource",
+          "read_url_content",
+          "replace_file_content",
+          "run_command",
+          "run_workflow",
+          "schedule",
+          "search_marketplace",
+          "search_web",
+          "sed_file",
+          "send_command_input",
+          "send_message",
+          "view_file",
+          "wait",
+          "wait_5_seconds",
+          "write_to_file"
+        ]
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "state": "DONE",
+        "step_index": 0,
+        "step_type": "user_input"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "duration_seconds": 4.003455,
+        "state": "DONE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 20661,
+          "output_tokens": 729,
+          "thinking_tokens": 493,
+          "total_tokens": 21390
+        }
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "state": "ACTIVE",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "name": "replace_file_content",
+          "parameters": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-tool31-replace-file-content-public\\marker.txt"
+          }
+        },
+        "tool_name": "replace_file_content"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "duration_seconds": 0.1873227,
+        "state": "DONE",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "name": "replace_file_content",
+          "parameters": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-tool31-replace-file-content-public\\marker.txt"
+          }
+        },
+        "tool_name": "replace_file_content"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "state": "ACTIVE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "ORACLE_ATTEMPT_FINISHED"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "duration_seconds": 2.0423252,
+        "state": "DONE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "\n",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 21684,
+          "output_tokens": 33,
+          "thinking_tokens": 26,
+          "total_tokens": 21717
+        }
+      }
+    },
+    {
+      "event": "result",
+      "result": {
+        "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+        "duration_seconds": 6.8688967,
+        "num_turns": 1,
+        "response": "ORACLE_ATTEMPT_FINISHED\n",
+        "status": "SUCCESS",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 42345,
+          "output_tokens": 762,
+          "thinking_tokens": 519,
+          "total_tokens": 43107
+        }
+      }
+    }
+  ],
+  "path": "oracles/r37-agy-tool31-replace-file-content-public/marker.txt",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-tool-controls-31/direct-policy-receipts/replace-file-content-public/4eee44a364fee9eb9b2e5b7065257e74a756c1302459bc5b5b8a78427889a042.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "1f29edd90ee9eb74eb2ef9403f3934572243854ef2827569339a6dba1883f6db",
+        "decision": "allow",
+        "event_hash": "465b015033898ca6445a7972ef18f0bc46015998e1c01654353fd62593dc2e4d",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "08674ccd66fb0e1be079562a411338c2ae79133d4153bf122720346910d7ed5b",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "22609b1973db2601cdc66a9dda057af477997a9b011f0247686bf45dc7b16f09"
+      },
+      "sha256": "3592f82c939e2eb8208142d83c6e7e70af2744151419f116a80d6f9d335c878d"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-tool-controls-31/direct-policy-receipts/replace-file-content-public/a673480aacc945e5ce81ebcb783ea7c57c3fc041684de6d748374b251d219544.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "1f29edd90ee9eb74eb2ef9403f3934572243854ef2827569339a6dba1883f6db",
+        "decision": "advisory",
+        "event_hash": "5fc9c2cfb362077906f7e13d62a0a50425bc291a298ef8b2dc562ebf8ae0fce0",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "08674ccd66fb0e1be079562a411338c2ae79133d4153bf122720346910d7ed5b",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "22609b1973db2601cdc66a9dda057af477997a9b011f0247686bf45dc7b16f09"
+      },
+      "sha256": "19191d9812b709267dee5bd9e7e3ab41c36421e81ad31b2eca74290a7510117f"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-tool-controls-31/direct-policy-receipts/replace-file-content-public/dcd444ad90f56cc33104b4115fb807dafdf571345991b8d436082f09923f1bac.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "1f29edd90ee9eb74eb2ef9403f3934572243854ef2827569339a6dba1883f6db",
+        "decision": "pending",
+        "event_hash": "a79c3667fd68d2bb1feb2b298f0d87133f066fcebab1e00543f305e7f934d2e2",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "pre-delivery",
+        "reason_codes": [
+          "artifact-final-bytes-missing-or-stale"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "08674ccd66fb0e1be079562a411338c2ae79133d4153bf122720346910d7ed5b",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "22609b1973db2601cdc66a9dda057af477997a9b011f0247686bf45dc7b16f09"
+      },
+      "sha256": "71be15baaa70b67aaaaf0705cee37da2546dc00536ddb9b1e437e9d7ee1a756a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-tool-controls-31/direct-policy-receipts/replace-file-content-public/debc4306457ddb7c93dbf1e8e0092cc8f69dc052db5b8eb51ee75dfbdf22e758.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "1f29edd90ee9eb74eb2ef9403f3934572243854ef2827569339a6dba1883f6db",
+        "decision": "advisory",
+        "event_hash": "336de29dee8fc5dced046dbf809e3f66ac15f4ae50ef5f8e116ddf591470549d",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "08674ccd66fb0e1be079562a411338c2ae79133d4153bf122720346910d7ed5b",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "22609b1973db2601cdc66a9dda057af477997a9b011f0247686bf45dc7b16f09"
+      },
+      "sha256": "83fb35a70c2a42c91b5c8f4ecc809414c398d363b72e207458a92c578d76ff4c"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "completed",
+  "terminal_tools": [
+    {
+      "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+      "duration_seconds": 0.1873227,
+      "state": "DONE",
+      "step_index": 2,
+      "step_type": "tool",
+      "tool_info": {
+        "name": "replace_file_content",
+        "parameters": {
+          "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r37-agy-tool31-replace-file-content-public\\marker.txt"
+        }
+      },
+      "tool_name": "replace_file_content"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "status": "retained-controller-preparation-failures",
+  "source_revision": 34,
+  "source_unchanged": true,
+  "record_origin": "transcribed from observed exec outputs before helper repair",
+  "cleanup": {
+    "command_action": "codex-native-cases.py cleanup",
+    "exit_code": 1,
+    "tool_chunk_id": "9554ff",
+    "exception": "core.schema.ContractError: invalid relative path",
+    "cause": "prepare used str(Path.relative_to) on Windows; cleanup passed native backslashes to POSIX-only contained()",
+    "failed_before_payload_removal": true
+  },
+  "initial_process_audit": {
+    "tool_chunk_id": "c87a60",
+    "exit_code": 0,
+    "matching_processes": 0,
+    "timing": "after model batch exit, before successful cleanup"
+  },
+  "initial_report_generator": {
+    "tool_chunk_id": "464808",
+    "exit_code": 1,
+    "exception": "FileNotFoundError",
+    "missing_owned_artifact": "project/cleanup.json",
+    "report_written": false
+  },
+  "repair": "Normalize only controller-owned Windows relative paths using Path.as_posix(); preserve contained() and all matching-byte checks; retain original audit and create a separate audit after cleanup."
+}

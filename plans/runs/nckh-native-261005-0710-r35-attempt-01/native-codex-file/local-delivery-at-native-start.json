@@ -1,0 +1,39 @@
+{
+  "global_deadline_seconds": null,
+  "installed_update": "not-performed",
+  "native_r35_retest": "pending",
+  "owner": "/root",
+  "port": null,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "stages": [
+    {
+      "exit_status": 0,
+      "name": "deterministic",
+      "pid": 8684,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-0710-r35-attempt-01/commands/pipeline-deterministic.json",
+      "seconds": 648.7339999999967,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "build",
+      "pid": 31844,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-0710-r35-attempt-01/commands/pipeline-build.json",
+      "seconds": 1007.170999999973,
+      "status": "completed-unreviewed"
+    },
+    {
+      "exit_status": 0,
+      "name": "archive",
+      "pid": 18592,
+      "process_cleanup": "owned-process-group-closed",
+      "receipt": "plans/runs/nckh-native-261005-0710-r35-attempt-01/commands/pipeline-archive.json",
+      "seconds": 109.07799999997951,
+      "status": "completed-unreviewed"
+    }
+  ],
+  "status": "running"
+}

@@ -1,0 +1,37 @@
+{
+  "full_timing_qualification": "pending; prior allow5s failure retained",
+  "results": [
+    {
+      "attempt": "template-write-deny",
+      "control_outcome": "native-error-policy-prevention-unverified",
+      "native_failure": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r35-cursor-template-controls-01/context-deny.json --receipt-dir .nckh-native-r35-cursor-template-controls-01/policy-receipts/template-write-deny\" execution failed: Hook script timed out after 5000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0905-r35-cursor-template-controls-attempt-01/attempts/template-write-deny.json",
+        "sha256": "c1038143a628b80676971276ad717ed506761656b8d57385d9d6fe5e392cf6c4"
+      }
+    },
+    {
+      "attempt": "template-write-private",
+      "control_outcome": "native-error-policy-prevention-unverified",
+      "native_failure": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --context .nckh-native-r35-cursor-template-controls-01/context-allow.json --receipt-dir .nckh-native-r35-cursor-template-controls-01/policy-receipts/template-write-private\" execution failed: Hook script timed out after 5000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0905-r35-cursor-template-controls-attempt-01/attempts/template-write-private.json",
+        "sha256": "c8befef1bb5afd49dd43d702f59b405d1b85c15c48a6581f3bd44571a41b1f50"
+      }
+    },
+    {
+      "attempt": "template-read-allow",
+      "control_outcome": "native-error-read-control-unqualified",
+      "native_failure": null,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0905-r35-cursor-template-controls-attempt-01/attempts/template-read-allow.json",
+        "sha256": "728de7b4d9e222bb896f0d579f269ced817b6ad6d565342e06a6c27226e28e88"
+      }
+    }
+  ],
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_modified": false,
+  "source_revision": 35,
+  "status": "recorded-native-direct-template-controls",
+  "timeout_root_cause": "unresolved"
+}

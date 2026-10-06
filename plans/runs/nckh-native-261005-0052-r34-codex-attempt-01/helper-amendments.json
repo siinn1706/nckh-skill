@@ -1,0 +1,30 @@
+{
+  "source_revision": 34,
+  "source_unchanged": true,
+  "origin": "bounded controller repairs/adaptation; no packaged source edits",
+  "revisions": [
+    {
+      "native_failure": "metadata.json",
+      "cause": "new project layer untrusted; global trust attempt rejected by automatic review"
+    },
+    {
+      "native_failure": "metadata-invocation-only-02.json",
+      "cause": "actual native source enum is sessionFlags, not session; exact-command scope verified before inference"
+    },
+    {
+      "native_failure": "attempts/allow-01.json",
+      "cause": "app-server route had no callbacks, collector encoding alias typo; native marker preserved and reconciled without rerunning the same route"
+    }
+  ],
+  "current_helpers": [
+    {
+      "path": "codex-native-cases.py",
+      "sha256": "04d1e66645b2537f30208a67c182e93c8573cb0f856b4c1290065c83cc06f3ac"
+    },
+    {
+      "path": "codex-native-observer.py",
+      "sha256": "49c3b626a462f646c55227ede486ec93cd269dd1b80a704e67fab518e43b6286"
+    }
+  ],
+  "observer_definition_sha256": "49c3b626a462f646c55227ede486ec93cd269dd1b80a704e67fab518e43b6286"
+}

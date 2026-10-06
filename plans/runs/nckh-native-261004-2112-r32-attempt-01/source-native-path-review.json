@@ -1,0 +1,50 @@
+{
+  "changes": [
+    {
+      "after_sha256": "fe4b6a884472091b1b58ecaed54b00e4e99e76749abba95bf4e9ee82966d57cf",
+      "before_sha256": "1b3e022da29a8b2d7bb198656435ba107a34fae1ca528e3a687d77ebdd5574a7",
+      "path": "hooks/codecs/agy.py"
+    },
+    {
+      "after_sha256": "18c668edf0a3c8bb8d5bb042fda899d20374243b052455a74fbddb0402775b43",
+      "before_sha256": "f698512cbfd2aefa611d697b8e86356540afb3fbf186de01a1570cd8e68ca8d0",
+      "path": "tests/runtime/test_hook_adapters.py"
+    },
+    {
+      "after_sha256": "61dfdd20f25e20dcd99d7447b271093e01b1cb0f53c7d4b362556284f0a3531c",
+      "before_sha256": "6cbc99b45b2e0701f5dcdb49da3b6c509ed9c0d0cdc6d19439e87dab14dce8c9",
+      "path": "docs/installation.md"
+    }
+  ],
+  "critical_open_findings": [],
+  "findings_fixed": [
+    "required native file/search paths were not passed to protected-path policy",
+    "missing/malformed targets silently dropped",
+    "one alias could hide another protected target"
+  ],
+  "focused_after": "commands/agy-native-paths-focused-after.json",
+  "independent_review": false,
+  "native_followup_required": [
+    "real write_to_file allow and protected-path denial",
+    "real view_file protected-path denial"
+  ],
+  "official_source": "https://antigravity.google/docs/hooks/#supported-tools",
+  "preimages": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r32-attempt-01\\source-preimages-r32-agy-native-paths",
+  "preserved_boundaries": [
+    "native permissions ask/deny unchanged",
+    "no payload execution or transcript ingestion",
+    "seven bounded path fields",
+    "unknown tools retain manual policy",
+    "no installed/stable/scientific acceptance"
+  ],
+  "recorded_at": "2026-10-04T16:25:02.218613+00:00",
+  "regression_before": "commands/agy-native-paths-regression-before.json",
+  "reviewer": "/root-inline",
+  "scope": [
+    "hooks/codecs/agy.py",
+    "tests/runtime/test_hook_adapters.py",
+    "docs/installation.md"
+  ],
+  "skill": "ak-code-review",
+  "verified_cause": "native PreToolUse write_to_file uses TargetFile; marker was created with codec ask"
+}

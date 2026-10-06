@@ -1,0 +1,41 @@
+{
+  "root_pid": 58568,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T09:17:02.5847903Z",
+  "identity_checks": [
+    {
+      "pid": 58568,
+      "expected": "2026-10-05T09:10:03.385772Z",
+      "current": "2026-10-05T09:10:03.3857720Z"
+    },
+    {
+      "pid": 38132,
+      "expected": "2026-10-05T09:10:52.941814Z",
+      "current": "2026-10-05T09:10:52.9418140Z"
+    },
+    {
+      "pid": 27672,
+      "expected": "2026-10-05T09:10:53.071512Z",
+      "current": "2026-10-05T09:10:53.0715120Z"
+    },
+    {
+      "pid": 54156,
+      "expected": "2026-10-05T09:10:55.003243Z",
+      "current": "2026-10-05T09:10:55.0032430Z"
+    },
+    {
+      "pid": 47364,
+      "expected": "2026-10-05T09:10:55.038964Z",
+      "current": "2026-10-05T09:10:55.0389640Z"
+    }
+  ],
+  "method": "force-owned-tree-after-graceful-refusal",
+  "exit_code": 0,
+  "output": [
+    "SUCCESS: The process with PID 47364 (child process of PID 54156) has been terminated.",
+    "SUCCESS: The process with PID 54156 (child process of PID 27672) has been terminated.",
+    "SUCCESS: The process with PID 27672 (child process of PID 38132) has been terminated.",
+    "SUCCESS: The process with PID 38132 (child process of PID 58568) has been terminated.",
+    "SUCCESS: The process with PID 58568 (child process of PID 37408) has been terminated."
+  ]
+}

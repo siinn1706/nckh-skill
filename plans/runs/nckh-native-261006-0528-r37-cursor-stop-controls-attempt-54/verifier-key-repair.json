@@ -1,0 +1,29 @@
+{
+  "status": "fixed-proven-generated-mapping-key-error-before-native-model",
+  "actual_error": "TypeError: bad operand type for unary +: 'str'",
+  "line": 155,
+  "preimages": [
+    {
+      "path": "plans/runs/nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54/verifier-key-preimage.py",
+      "sha256": "ebb588ebc278513b443c33dccf73cb2b33eca528f105efedabcd5dc9ea403241"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54/controller-key-preimage.py",
+      "sha256": "1b99149e845dfbc39db9f1f015031bcc6c6162490e4199fe164be52534f570a5"
+    }
+  ],
+  "after": [
+    {
+      "path": "plans/runs/nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54/verify-stop-observations.py",
+      "sha256": "f076c3b42c8d60eea546316055a8bba7cf20321844a5c49c82626787063fe616"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0528-r37-cursor-stop-controls-attempt-54/prepare-controller.py",
+      "sha256": "9f33f8ac21eaf6e94fab6d717651cda9f9936a3db7dda1078f357b8985b1085a"
+    }
+  ],
+  "byte_content_oracles_changed": false,
+  "native_definitions_changed": false,
+  "source_kit_modified": false,
+  "model_prompts": 0
+}

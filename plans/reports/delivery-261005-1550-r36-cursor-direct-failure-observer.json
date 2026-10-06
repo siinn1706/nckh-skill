@@ -1,0 +1,87 @@
+{
+  "after_failure_logger_timeout_seconds": 10,
+  "agy_window_observation": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/agy-window-continuation.json",
+    "sha256": "e0df8b8c5f64b44915369cc1d2d99107345b9a98c76ff4b40725e50563d95102"
+  },
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "case_policy_receipts": 3,
+  "cause_scope": "actual native response for this selected Read only; earlier direct failures remain unqualified",
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/cleanup.json",
+    "sha256": "37fb6f7c9be42214129dd9bc1328d466e4836a1ae85f74ca4c3593cf841caf54"
+  },
+  "cli_state_hash_after": "0b764ba7c4d91cb5c30fefe5e6e1bdea26a422795444c25198d102f312ce4afb",
+  "cli_state_hash_before": "8ab5bdd2404f369e752bb95c0eddef06cf907e94ffb7bf7f6e6247c2d958bc0b",
+  "cli_state_hash_unchanged": false,
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/definitions/session.json",
+    "sha256": "65b5476da29cb7e2d77a410879e66afa3da93de58d6649ee4c68aa056057d81f"
+  },
+  "direct_packaged_timeout_seconds": 5,
+  "effort_requested": "xhigh",
+  "fault_origin": "none",
+  "fixture_sha256_after": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957",
+  "fixture_sha256_before": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957",
+  "fixture_unchanged": true,
+  "full_native_gate": "unchecked",
+  "full_transcript_read": false,
+  "global_direct_write": false,
+  "historical_members_preserved": 565,
+  "local_timing": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/local-runner-timing.json",
+    "sha256": "1e8a43cf593376695f278248ea23a561da9aad7e3b99adea85cda6b99ba16ec7"
+  },
+  "local_timing_scope": "three synthetic subprocess controls; does not explain native overhead or qualify timing",
+  "local_timing_seconds": [
+    0.12513370002852753,
+    0.11216550000244752,
+    0.10884939995594323
+  ],
+  "model_final_marker_observed": true,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_turns": 1,
+  "native_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <owned-project>\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event preToolUse --project <owned-project> --context .nckh-native-r36-cursor-direct-failure-12/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-failure-12/policy-receipts\" execution failed: Hook script timed out after 5000ms",
+  "native_tool_result": "permission_denied",
+  "native_tool_use_id": "call-f1fa2c6b-428f-40af-9464-39ff1a75d414-0\nfc_11bee0d6-71d0-9de8-898d-eb5eb0aa8625_0",
+  "neutral_preflight_hash_matches_selected_read": true,
+  "observation": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/failure-observation.json",
+    "sha256": "790d632bc2ee9c0ee13be4a23c73661202d0bfb8e73629fe33d4da0d362b91eb"
+  },
+  "packaged_event_observer_invoked": false,
+  "postToolUse_receipts": 0,
+  "pre_delivery_receipts": 0,
+  "preflight_decision": "allow",
+  "preparation": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/preparation.json",
+    "sha256": "53ea8a3d54530d5057abff22ce5655bc35fb7734738179b928f869c7820f83e8"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/final-process-audit.json",
+    "sha256": "f2e7726f9014aa9a6e2239d033b27051d6e8c827501155cc589cdbe11166f3a0"
+  },
+  "prompt_submissions": 1,
+  "protected_global_configs_unchanged": true,
+  "raw_model_frames": "not-retained",
+  "requested_tool": "Read",
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "startup_policy_receipts": 1,
+  "status": "verified-native-direct5s-preToolUse-timeout-read-blocked",
+  "successful_read": false,
+  "surface": "cursor-cli-interactive-terminal",
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-final-observation.json",
+    "sha256": "bc0977fe4391d5360dda721493cdb2c6eba3de7a4919115a742fd2faf0c48cac"
+  },
+  "terminal_exit_code": 1,
+  "terminal_poll_truncated": true,
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/verify-failure-delivery.py",
+    "sha256": "1f40a48370c7e7884b61cb0c259e5649961f9a46ee008655e5baeec459396d39"
+  },
+  "version": "2026.09.15-d2fe57e"
+}

@@ -1,0 +1,52 @@
+{
+  "diff_reference": {
+    "path": "plans/reports/code-diff-261002-resource-quality-final.diff",
+    "sha256": "ca4029b1c468b353ed270d94e16753d10c5339ae93d8b5cc18ac6db76e1dce35"
+  },
+  "evidence_class": "controller-code-review",
+  "findings_fixed": [
+    {
+      "fix": "actual contained file hashes, preserved history, variant/config/model/budget pair checks",
+      "issue": "matched preparation accepted shape-only references and unverified round counts",
+      "verification": "9 regression tests in 106-test full suite"
+    },
+    {
+      "fix": "common reader/registry; absent copied resource bytes; actual disabled read observed",
+      "issue": "resource-off removed reader/support code as well as resource bytes",
+      "verification": "on/off code equality and isolated reader tests, 24 disabled observations"
+    },
+    {
+      "fix": "common dependencies limited to reader/registry; retain revision-21 failure",
+      "issue": "attribution link pulled copied license into common off closure",
+      "verification": "targeted pass and full revision-22 suite"
+    },
+    {
+      "fix": "shared verifier matches declared rights/format/artifact to pinned registry",
+      "issue": "bundle resource format/expected-artifact fields could differ from source registry",
+      "verification": "tampered-format/artifact regressions"
+    }
+  ],
+  "independent_human_review": false,
+  "release": "NO-GO",
+  "remaining_technical_blockers": [],
+  "schema_version": 1,
+  "scope": [
+    "modified production Python, schemas, build/installer callers, consumer references and impacted docs",
+    "37 case manifests compared structurally: negative oracle only",
+    "copied resources/licenses matched pinned original hashes",
+    "full deterministic, all host build projections, extracted on/off observations"
+  ],
+  "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+  "source_revision": "22",
+  "status": "reviewed",
+  "unresolved_evidence": [
+    "missing historical nckh-cook answer",
+    "actual corpus/rights/reviewer/threshold/host/model/budget/economics",
+    "unselected upstream baseline subject/route",
+    "protected holdout NOT_CALLABLE; no native/human/release qualification"
+  ],
+  "validation_reference": {
+    "path": "plans/evaluation/resource-quality/final-integrity.json",
+    "sha256": "13c5cbbb44f0d55b41f8e71a0c6fe9c1e09ef87e70522bdcd4134c92dceab222"
+  }
+}

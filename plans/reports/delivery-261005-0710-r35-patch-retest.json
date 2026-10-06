@@ -1,0 +1,623 @@
+{
+  "backend_attestation": "not-observed",
+  "billing": "not-observed",
+  "cleanup_helper_review": {
+    "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/cleanup-helper-review.json",
+    "sha256": "f0a82a39a8d9fb479e86b2e2fc8ff35ddcb0fc8002f98afdecb31f230dfa703d"
+  },
+  "components": [
+    {
+      "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/deterministic-r35-attempt-01.json",
+      "sha256": "ef55a30a0335645701ae0123338448e3b8b4e9a84aba03b0b7bddbd60a32fad9"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/archive-summary.json",
+      "sha256": "1c6e21f0948d84823062c42433a625663e778ee6020f93c0016cd879c5ce28ac"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/smoke-summary.json",
+      "sha256": "0dc470a3a8df4dcd80b47754c84c9e3dd1f728354d8cf706da6f210c4c94b8e4"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/installer-previews.json",
+      "sha256": "9c8ab552d45f54f7a079cac03ea4ae6dcea3eb5f8eabee42d878f765210e8a83"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/final-preservation.json",
+      "sha256": "6e862211e4f92efd44fe58959fa68515e23945bc5138678b4dec7f1c2fe0f21b"
+    }
+  ],
+  "historical_failure": {
+    "path": "plans/reports/delivery-261005-0658-r34-codex-file-failure.json",
+    "sha256": "b7a3c822c55bef76b497233ff95bad5e5c71070855bbee77a6b0f5d34e934209"
+  },
+  "independent_review": "not-run; inline review",
+  "installed_revision": 25,
+  "installed_update": "not-performed",
+  "local_counts": {
+    "archives_extractions": 16,
+    "hook_projections": 24,
+    "installer_previews": 8,
+    "protected_hashes": 509,
+    "resource_reads": 216,
+    "skipped": 1,
+    "tests": 190,
+    "writer_disabled_no_read": 48
+  },
+  "native_checkbox": "unchecked",
+  "native_cleanup": {
+    "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/cleanup.json",
+    "sha256": "441dd9700f063a773e39407e232588906e59497a6e4872ee96d3e7a676971403"
+  },
+  "native_file_cases": [
+    {
+      "attempt": "r35-file-allow-01",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-allow-01/PostToolUse/e841590b84074e9d94530ba3973b7c15.json",
+          "sha256": "cd123767aae41dcc939cd334e83011868e38843602042b1c90aad9a895580fe8"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-allow-01/PreToolUse/b7b221d3c508472799290be81d3e6d1a.json",
+          "sha256": "10e2a1464bc13489dbcf3265da0eecc284ae149806aaed797c6115204ff259b9"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-allow-01/SessionStart/ac50a62806db4710b72e70dadf41f1f2.json",
+          "sha256": "46f03bd0825abae09930f8c2d3985d9cd897b65c534cdcb0511dcf6a8f7e8f3a"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-allow-01/Stop/7aa91e45a4524373a3ffa33fc80fe43b.json",
+          "sha256": "f8decdf69ffa01dd7b27f1bd04e169ecd08104e131f9cc64df295498172d953d"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-allow-01/UserPromptSubmit/506fbfb46b9f4d039f72ef6390258927.json",
+          "sha256": "bb0b741087625a673b67c112b1fac6137f66ffac0269cf14def02482b460f540"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/commands/codex-native-file-r35-file-allow-01.json",
+        "sha256": "be98d233e418a236aff1156aed9218e2636f1e360ea2432555ecd80d74ac6d19"
+      },
+      "completed_file_change_items": 1,
+      "effort_requested": "medium",
+      "marker": true,
+      "mode": "allow",
+      "model_requested": "gpt-5.6-luna",
+      "native_command_matches_requested_patch": true,
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_tool": "apply_patch",
+      "policy": {
+        "decision": "allow",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/policy-receipts/r35-file-allow-01/PreToolUse/d76e6e2e0551caa218e861e1eb247de0d7f396afbdab00cc1aa3f0c987c88972.json",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "sha256": "4650e3de6f97a8a533ab434d842a7fb7179d3bf95e8d9b3c5089fff8704a6557"
+      },
+      "pretool_callbacks": 1,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/attempts/r35-file-allow-01.json",
+        "sha256": "3c96eb320d3a1962fef8ebbb00158d097674745f3fd65c0b40487538975979e1"
+      }
+    },
+    {
+      "attempt": "r35-file-policy-deny-01",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-policy-deny-01/PreToolUse/229433a6f9fd42bba82abc2a341843e2.json",
+          "sha256": "3f828b142bab495382584748ca3653294285c2085dd36ec5191039800e01b48f"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-policy-deny-01/SessionStart/597b47c57e2740d7b3402f4a39fb7795.json",
+          "sha256": "ffc4f861feb948939a489f826263baeb12383e6980c8f397fa22b83d5c2fe317"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-policy-deny-01/Stop/7abef00d5fd5459d90d219a1ba91f39b.json",
+          "sha256": "cc8ff70c50738908b39cfd875fe4b255f148449d513ea3ab5f632b160b8dd6fd"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-policy-deny-01/UserPromptSubmit/35ba2a9fca0a4250b280b6b53c8eb84e.json",
+          "sha256": "610683a1f29fbb2029093bcbfc47f41b3db51e5e383efe8f5b62de1516b5deaf"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/commands/codex-native-file-r35-file-policy-deny-01.json",
+        "sha256": "33fa1254eb6e77e30f841bffc56812b5acd9842bfc1d4f90d4f71a9bd278e89a"
+      },
+      "completed_file_change_items": 0,
+      "effort_requested": "medium",
+      "marker": false,
+      "mode": "policy-deny",
+      "model_requested": "gpt-5.6-luna",
+      "native_command_matches_requested_patch": true,
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_tool": "apply_patch",
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/policy-receipts/r35-file-policy-deny-01/PreToolUse/a6debbd2b6144c5d36dc9cbec4278e658a9f9ebf9cc89aa026cbb316732b26b1.json",
+        "reason_codes": [
+          "plan-only-mutation"
+        ],
+        "sha256": "2a54033823abda21cdecf2f5971622378a77ff49bbcc120db07e8b0b0f895009"
+      },
+      "pretool_callbacks": 1,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/attempts/r35-file-policy-deny-01.json",
+        "sha256": "e75bec0684fb57bfed861776239f4247403e511a8302ba6c46b3ef257bbefcb9"
+      }
+    },
+    {
+      "attempt": "r35-file-protected-01",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-protected-01/PreToolUse/e301ca3df7eb4cbd997f026e1561ffe4.json",
+          "sha256": "b77308c4ae9534c199816322d69ed54aecc7380e87e5e8b72a3a53bdaf1847fd"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-protected-01/SessionStart/7d8a857f01c846678c4a99346739d77b.json",
+          "sha256": "9d710114143233856b92a19e966924b869f4f01391b63af1d657598c1c9dbf85"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-protected-01/Stop/d5fb04364d0448afae854ab14a677807.json",
+          "sha256": "e3fae2c35c41c4a9a9dea14abcd2e28d3202edfde3844bf2fd78c223a3ef9528"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-protected-01/UserPromptSubmit/e0243e757e4445098d2e026e374deca3.json",
+          "sha256": "6ff83cc3d51b338e058a57e6e9fc5b5a71a29ea1e1338590bc3d09388cd8ef47"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/commands/codex-native-file-r35-file-protected-01.json",
+        "sha256": "7e5d5f7ff2b6935e2d7d149f37d5e2060af693cb0eed1307b0545896feeea30f"
+      },
+      "completed_file_change_items": 0,
+      "effort_requested": "medium",
+      "marker": false,
+      "mode": "allow",
+      "model_requested": "gpt-5.6-luna",
+      "native_command_matches_requested_patch": true,
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_tool": "apply_patch",
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/policy-receipts/r35-file-protected-01/PreToolUse/81c802112717eba1e9fd303d20811c9e21ffe3a15af2ef47ec778438ce6e1b2e.json",
+        "reason_codes": [
+          "private-holdout-credential-path"
+        ],
+        "sha256": "910c3723266c0ebcbf7dd7c9437b9ab496e19759f015ccc4bd048fdbd06a69e5"
+      },
+      "pretool_callbacks": 1,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/attempts/r35-file-protected-01.json",
+        "sha256": "ed9660502c1b108697c1e186ad167c4a8b87637340e6c939e6983b059cff42fa"
+      }
+    },
+    {
+      "attempt": "r35-file-uncovered-01",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-uncovered-01/PostToolUse/12af7f22354f410295991047f41cbc87.json",
+          "sha256": "032623c98a41af552672a49c5e0af857e7a7d073f29aee94655a0c852f95ed2c"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-uncovered-01/PreToolUse/846f743808604ef98525ae13b3218d50.json",
+          "sha256": "2ddafa945b2aa088c35eb87fd8543a93de25694080b094e0723e618bdadd6037"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-uncovered-01/SessionStart/d446ae7d09ff494e852459eb849795b0.json",
+          "sha256": "bb204deec8e04e9ca8173cee3ab4dcd5fa4e104faba15f84b323e5fe80975761"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-uncovered-01/Stop/3de13af8c6a34e539746237e99118911.json",
+          "sha256": "df349e23df5a485a1681b57879393a690348b7de2c685dafaf99f99d96b71f0f"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/observations/r35-file-uncovered-01/UserPromptSubmit/fced332db37147d498af402f9a2b312e.json",
+          "sha256": "92a9392e770e0b1c9ecb7d550fc9c73140870cb208aae5a8e3ffefd50dced395"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/commands/codex-native-file-r35-file-uncovered-01.json",
+        "sha256": "b7d4a3c379bca40ad7fd75ccc9df837df7e022de55c93225b4600a24026383a7"
+      },
+      "completed_file_change_items": 1,
+      "effort_requested": "medium",
+      "marker": true,
+      "mode": "uncovered-tool",
+      "model_requested": "gpt-5.6-luna",
+      "native_command_matches_requested_patch": true,
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_tool": "apply_patch",
+      "policy": {
+        "decision": "manual",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-file/policy-receipts/r35-file-uncovered-01/PreToolUse/9731202969f052b46a6fe7f255c789e74a1de57b641fec0b15537d2d68042f8d.json",
+        "reason_codes": [
+          "tool-route-uncovered"
+        ],
+        "sha256": "10e0a5c2e201b13b73696c319184bcad13a2f838f58f82dbaf327be62d570c92"
+      },
+      "pretool_callbacks": 1,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-file/attempts/r35-file-uncovered-01.json",
+        "sha256": "39f1ae374e9998739739ca610339c4e49cc6e167e906f4552ac0d48f0a93c371"
+      }
+    }
+  ],
+  "native_patch_operations": [
+    {
+      "after_matches_expected": true,
+      "attempt": "update-allow",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-allow/PostToolUse/aa875f28649c4054a0ecc8d8ea84acf5.json",
+          "sha256": "8e0f00610337d602dccabfc6cd2bf0154952b9098a0ba46f5c0fadfb11e5d14a"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-allow/PreToolUse/141e95e86b3744188a14443e78436c9b.json",
+          "sha256": "973c94be84ffa3e6dc3199243628b2f3f9bd6f008acf895ea72812d8d6ab3847"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-allow/SessionStart/58fdeb04170949b5b830ed282775fa6a.json",
+          "sha256": "66384e9fe1269de1c15884dd6d6b9fe7bee5c3079745f5039196b7ada3b6b90f"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-allow/Stop/b95a8983b00b4ab395dfbf6b09481971.json",
+          "sha256": "5a28956a086dcbc711c615ce766302d9994a18403456c54009f8d250b5c65bf4"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-allow/UserPromptSubmit/990d9bd8e33647b88284b69234367e91.json",
+          "sha256": "bb51b0b0f1067920e3d601ebaef5a80eb817163a864aae1acf52ae50918058d5"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-update-allow.json",
+        "sha256": "a48c47b4c4774ea95ca665776207c29a2b91ba4470fa82320ce2b792087cffc8"
+      },
+      "completed_file_change_items": 1,
+      "expected_denial": false,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "allow",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/update-allow/PreToolUse/4ad2f27a38fd7ac12f7f02dc564aee5332700306e1848cf7c63004ab2b442a40.json",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "sha256": "2e60cc9f48df955386e4a1be3896e5bc60da881e1ff57c31d71da1ab208864db"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/update-allow.json",
+        "sha256": "674e300e462423d6f7274f15641c93ea58bf3921ced754023380ec248430ee76"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "update-private",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-private/PreToolUse/aa95c4e6e0cd42cf91bcc1c70f97a932.json",
+          "sha256": "b6208a8961a51388c615f85ed1ae094dd6fa397b93e49dddc008796ca44da331"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-private/SessionStart/9e0c72c34c2b493a8675874290baf6c4.json",
+          "sha256": "e7d26b22ce2287115690618054a6714c2eebff2a24d3fd73a27e5dd964d381ac"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-private/Stop/2b57239863a04b50b1a7bb0c40921f7b.json",
+          "sha256": "f91f450a9e5765077ba00d9c31b8f392a672fc5cc7329a8bf1bce2741d8a344e"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/update-private/UserPromptSubmit/9d2e4873b301418b8d421f52819d73e4.json",
+          "sha256": "9ef487afea95aac211822b4f482c91d3cd64d50b2abbe41875c4c15ccb92c0f0"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-update-private.json",
+        "sha256": "f101d31db927dcea4820b6f10b67bbba692ccd38094fbb08df74d5b44091b0b5"
+      },
+      "completed_file_change_items": 0,
+      "expected_denial": true,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/update-private/PreToolUse/fc218b798caa59411a52b5d18835d07b7a5bb15a8b698cff97f8cf9961e30679.json",
+        "reason_codes": [
+          "private-holdout-credential-path"
+        ],
+        "sha256": "e20fdaaa50befb4ac8edd5739ede91b04a382941f48d6cc24ff019c0f55b4918"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/update-private.json",
+        "sha256": "3586ba3b337e93c74fde07fa18d88beb57b4a81b81248f38e24be6813850280f"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "delete-allow",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-allow/PostToolUse/8d6093e0e31b49d1b4e8ca8cf3d89c7d.json",
+          "sha256": "2df7ec9122515555b0c064883ecccecb51c77c73e388fcf27bddf0569c78b67b"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-allow/PreToolUse/1380ae88f95046de949f25ded25704b6.json",
+          "sha256": "a29de3dcd705909edf6328010e7d49f347ee03b7067342b89849476eee46945b"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-allow/SessionStart/7e7e4c1ae20947d199755e669c34c4d8.json",
+          "sha256": "42b1fd271924bcfecf6da302183b12ff2c9f5b5d4721dca3eb775064914b6e52"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-allow/Stop/12cd7a456ed245c680d825d627527037.json",
+          "sha256": "c87b6bd8698ea5d99d8ba87948033b70c598d95202bb69442f041d9621e56371"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-allow/UserPromptSubmit/ed3a0822e3b64891819c45b758a0f1fe.json",
+          "sha256": "eba07c515def374ea2c5ed177805ab0cc862e243cf4a1f34c7988d342f697b29"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-delete-allow.json",
+        "sha256": "35e534460b8791e0b38eb7467c063242b6a42305318c40434a3d5261bf8b694b"
+      },
+      "completed_file_change_items": 1,
+      "expected_denial": false,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "allow",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/delete-allow/PreToolUse/454f3e49dc7d90154410cf8d07804b2e31e32ee28ddb8090f2f82edc3f80b46e.json",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "sha256": "2d6038da866cedb11e8c4a92c71b2a8bc950465a8acbfe3eacbd44046347269c"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/delete-allow.json",
+        "sha256": "bec4ed467db60092d1a8e07403e5a2a34093829b1da64ce536f188e059edc33a"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "delete-private",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-private/PreToolUse/d9249c36f4b44bf891196b3567fda640.json",
+          "sha256": "a90e9028d025a85c661551928c865c1cd5c334a2e06f438a1033be1f11b8f1e7"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-private/SessionStart/002e03f9fade429cab1d4afa23589315.json",
+          "sha256": "6318481a3aae4e09a105b3ec8ef4ee5ea4f9b2c001b87befe5b9e534ae0153dc"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-private/Stop/bb6442d816934edcba94795ebeb0c3df.json",
+          "sha256": "5d7774b48025c5dcdad9016b4724e73f2faa864f6946310285cbd44d8d88630c"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/delete-private/UserPromptSubmit/e13124a0272844b693bac148a9c29dbf.json",
+          "sha256": "aa22fe5d5265e6e20aaabac0b927a8bae3ac68630684d5443159268d5260a57a"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-delete-private.json",
+        "sha256": "ac891bdfbaa027ede5086ee414aab292613d975b187f05ac19f6ee6daec6f26d"
+      },
+      "completed_file_change_items": 0,
+      "expected_denial": true,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/delete-private/PreToolUse/4b557085af05ba80858b3c31151ce03c189d44822df97671bb21b6e33afa83f4.json",
+        "reason_codes": [
+          "private-holdout-credential-path"
+        ],
+        "sha256": "15ec2842d97ea57adf9ad6cbb8b5387964ac7f5fc84aab7d65e09ab2887a9aab"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/delete-private.json",
+        "sha256": "146852879b93cd4125a38dc18043848bfaab477caad21a7e14b4dfcb783870ba"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "move-allow",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-allow/PostToolUse/e65cdb9bef1a4f48aac7b27d4a1d4de2.json",
+          "sha256": "c8ad49678373b66c74ed300d52e23257d5296ede61d4351e672dac3f6293e8a6"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-allow/PreToolUse/fc111e85881c4dcda80b93b93565fc00.json",
+          "sha256": "a1aadb1ce362c8ef8be1b2db1ac5ba587d6cb422cbd00df3e3605e47877a5e72"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-allow/SessionStart/7d3ca3d2dd91401484b464a590892eda.json",
+          "sha256": "0807563e99f473fe496885c93680c302eb3dec56f0d00695f71756a1ed4dccbf"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-allow/Stop/a608e2e453c04c5981aa8df77c02101d.json",
+          "sha256": "e0102b511cbf7b9f4904d0b2f238ac7e0de82fba4cf9477627e8367e7911d7d2"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-allow/UserPromptSubmit/66508a11378a4877a832d199d337291a.json",
+          "sha256": "f7bb452a9ca89a6ccd6d432eebb1ffaf8ac8f8ba0b32831bf9b5722bcfd2d6f2"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-move-allow.json",
+        "sha256": "98d1a04106d5ce37e1b3bb5ea61be0645ceaf91bbcfd0767aa3e76b92b497f43"
+      },
+      "completed_file_change_items": 1,
+      "expected_denial": false,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "allow",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/move-allow/PreToolUse/ba5abc8a59c6c7800957519cfcdf94320028e19df4e3c51d970096e06b865441.json",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "sha256": "90313eb3285faaee7a22a48b677a87676aaeff5965fc2de963df458c0fc4493d"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/move-allow.json",
+        "sha256": "d86375bdf239b7d26b6343ec5fff4608fe67ad70dd74ba6d24c050e979a7343d"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "move-private-source",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-source/PreToolUse/e47dc6047e2241ecbac48af47d293f59.json",
+          "sha256": "4579aad9a5f1634a4ac03a9c34bbfc77f28bdeb038c61f8cea643024d0f2b239"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-source/SessionStart/b11926f3d1794b37b77946d3bbcfeb08.json",
+          "sha256": "a98266459c96271beaa5e542484f20c30170452ca872429245572ed4504abbb8"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-source/Stop/13c30def5b91409bb098f61a79d7743e.json",
+          "sha256": "d367c2cba93136b80adcf41acf73f899ffd6242bfbd93ec3aa05c07ae32c5d54"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-source/UserPromptSubmit/3b216716a074431c853d66fd45b35f2f.json",
+          "sha256": "935ba67d85079127cdd977062e3dcdfa7d98fa9b71060d462178d6267cb6cfff"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-move-private-source.json",
+        "sha256": "52dc88bb776a6ccac963ab873c3aaa8f78e18b9f726f5a45c2ad318e2d7bf9c9"
+      },
+      "completed_file_change_items": 0,
+      "expected_denial": true,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/move-private-source/PreToolUse/b3edb1dab6ee4403ce75fdcd5a345b7f8006e70f541d62c7c3287b2878fce3cd.json",
+        "reason_codes": [
+          "private-holdout-credential-path"
+        ],
+        "sha256": "88d375a6d56220802184d9938b7984050bb8437652c0826abf2ba220b0d3c247"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/move-private-source.json",
+        "sha256": "2b732701ad543e33ceab222fd959b1c430997d11263c0147c45ed50f7b59971f"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "move-private-destination",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-destination/PreToolUse/3bd70a3464614deaadc26f8985a9f8cd.json",
+          "sha256": "f66d1a5746ed493a7eb4dc2f28a963c4d5577c42e1f304223c77ed30a0256fe3"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-destination/SessionStart/40bced5c1eb64a0a931f4e8605af9918.json",
+          "sha256": "db2e149ffe2f206b809e409c83ae26f6ae2cda0301feecc61c6be7b45cd57342"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-destination/Stop/67ac6ee10d0a4c96a293dbb8cde9f74f.json",
+          "sha256": "6f3a4f1a9784ad8e7c46ae1b97afc2834581c9823cfe49413479538a554b2bb8"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/move-private-destination/UserPromptSubmit/4a4cb7b6f85f4639b7fc42e804c163b5.json",
+          "sha256": "befa256ab20ea387776331d33953cf14169d6cc639d1a8cb60606fc8758ff98d"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-move-private-destination.json",
+        "sha256": "a484055eb6a28760b7eca0e17715543d2fe4c520ae5a4aeeefb24632ae85d72b"
+      },
+      "completed_file_change_items": 0,
+      "expected_denial": true,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/move-private-destination/PreToolUse/49797460374d23ae3585eae6a580843ffa52a894e58fdc3b33154b65a6a92c6a.json",
+        "reason_codes": [
+          "private-holdout-credential-path"
+        ],
+        "sha256": "eacd724431f42cf265c968b1c647a76dc671cd4b7dc36259a65e348eb9a7b880"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/move-private-destination.json",
+        "sha256": "fcd171354031fefca8953bf50cb5cc34c819c3e11b3327cc46fa94b3d062e1e4"
+      }
+    },
+    {
+      "after_matches_expected": true,
+      "attempt": "mixed-add-private",
+      "callbacks": [
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/mixed-add-private/PreToolUse/91f39225098b45d9b194373cf15ac84e.json",
+          "sha256": "705fc80758ec9e67af27d53b4749e5ba450d70b15bc4ba9c8c02a92bb1782c9e"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/mixed-add-private/SessionStart/dcc81f8844b74388aba6455e56fa1bab.json",
+          "sha256": "4cb6630d4791cf7427916e999e8e7d958c92c69e6aa99871153b377cb89160e3"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/mixed-add-private/Stop/a1e7cd501bd940929860fa65ead7e1aa.json",
+          "sha256": "a6ba845a35aded3bee19272a0c1383feb0c86200b17bc20e45e7ed8fd387bd4b"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/observations/mixed-add-private/UserPromptSubmit/db2e6589cc6243278402aaf7262b874f.json",
+          "sha256": "71624a4ddca911bffc46ffbabf0c3f02038919def50e4d3647473a45a73c0621"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/commands/codex-native-patch-mixed-add-private.json",
+        "sha256": "7c3ca07809461dc20735321149dd3a2cbc0acf5ca07e2cf12f7ed8b3f52adcba"
+      },
+      "completed_file_change_items": 0,
+      "expected_denial": true,
+      "native_command_matches_requested_patch": true,
+      "policy": {
+        "decision": "block",
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-ops/policy-receipts/mixed-add-private/PreToolUse/beb18223abe099736240a9eff1b790ee733c6b60d704db4dcebe3670a2e01e28.json",
+        "reason_codes": [
+          "private-holdout-credential-path"
+        ],
+        "sha256": "0ae8338a3ae57268436f3c4708fab05cbb6e752724efa3dde7afe37edb570b87"
+      },
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/attempts/mixed-add-private.json",
+        "sha256": "e0cc4bddba9d4fa69ca735072c2b9b58830ff25f69d4314292cafea64b9e91e9"
+      }
+    }
+  ],
+  "native_surface": "codex-cli-exec",
+  "native_version": "0.154.0",
+  "operation_cleanup": {
+    "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/native-codex-patch-ops/cleanup.json",
+    "sha256": "a6ff822984f490b855b6ceb7e65020455c549a287e6600f6aace6336436e6b8b"
+  },
+  "owner_acceptance": "exact two r29 samples retained",
+  "pipeline": {
+    "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/revalidation-summary.json",
+    "sha256": "e43e4a4fd51e5182e9d96655a5733123b43048640211718c26d57cbc87b036d5"
+  },
+  "plan_progress": "44/45",
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-0710-r35-attempt-01/final-process-audit.json",
+    "sha256": "fa1bb2499f95869876e9223226553c9cac71873a51a1bd1c2de35c334aef9f65"
+  },
+  "recorded_at": "2026-10-05T00:35:48.720293+00:00",
+  "schema_version": 1,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "source_unchanged": true,
+  "stable_scientific_release": "pending",
+  "status": "local-delivery-and-native-patch-retest-recorded-full-native-gate-open",
+  "trust_correction": {
+    "path": "plans/runs/nckh-native-261005-0052-r34-codex-attempt-01/trust-report-correction.json",
+    "sha256": "2ed576ecdcf89956418d2f6173ea16e31b4f07e4d1c498da0cb49677d8556428"
+  }
+}

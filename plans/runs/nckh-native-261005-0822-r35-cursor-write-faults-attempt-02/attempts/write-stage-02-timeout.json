@@ -1,0 +1,524 @@
+{
+  "after_sha256": null,
+  "attempt": "write-stage-02-timeout",
+  "backend_attestation": "not-observed",
+  "before_sha256": null,
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults-02/observations/write-stage-02-timeout/preToolUse/12727334e9934447b88af49a335d31be.json",
+      "sha256": "a4e9c4171339f88612cc72db5049de0f82cc8e32ea82fba6882f4406fcefb111"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults-02/observations/write-stage-02-timeout/preToolUse/718f5d508b6f402db7d31dbf9fc51a2f.json",
+      "sha256": "aa0a8ae1236e92c0bd8833032b9227c8c76238e0b9685c9d013ba1d4167a087c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults-02/observations/write-stage-02-timeout/sessionStart/4f83257a217248f28de1bf61d0854eee.json",
+      "sha256": "9ea67029e29c97d7c560fed53c4d368b52530b66760be51a70f3837771461c07"
+    }
+  ],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-0822-r35-cursor-write-faults-attempt-02/commands/cursor-file-write-stage-02-timeout.json",
+    "sha256": "5b3771dbce6cb0d5d97de147be5c5c7165c4bd4c3f40f276c5f8f9c56d4f880b"
+  },
+  "completed_tool_calls": [
+    {
+      "call_id": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0",
+      "model_call_id": "8c5a5ac0-badc-4237-b18a-4ab1afced3d4-0-t0xh",
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "completed",
+      "timestamp_ms": 1791163181646,
+      "tool_call": {
+        "completedAtMs": "1791163181611",
+        "editToolCall": {
+          "result": {
+            "error": {
+              "error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0822-r35-cursor-write-faults-attempt-02\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-write-faults-02 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" execution failed: Hook script timed out after 2000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "modelVisibleError": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0822-r35-cursor-write-faults-attempt-02\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-write-faults-02 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" execution failed: Hook script timed out after 2000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "path": ""
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791163163263",
+        "toolCallId": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0"
+      },
+      "type": "tool_call"
+    }
+  ],
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0822-r35-cursor-write-faults-attempt-02/definitions/write-stage-02-timeout.json",
+    "sha256": "d65024bf72ae83cd1c5f4bf2f1383ca28338fb9e01cb71693225179b64d5e391"
+  },
+  "effort_requested": "xhigh",
+  "exit_code": 0,
+  "fault_origin": "controller-after-genuine-callback",
+  "file_exists": false,
+  "invalid_stdout_lines": 0,
+  "kind": "Write",
+  "mode": "timeout",
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_callbacks": [
+    {
+      "attempt": "write-stage-02-timeout",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:19:24.517479+00:00",
+      "control_sha256": "23959113da80ab701ec053c625afb7100e659e0e40e08cf5b7af70e66a430294",
+      "event": "preToolUse",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "fault_target_event": "preToolUse",
+      "fault_target_tool": "Write",
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "ba661c9bb1e46dd47bd885d7c2bd58736ca34da061fce6de09ab2e6919028023",
+      "input_size": 791,
+      "mode": "timeout",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-stage-02-timeout.txt"
+      },
+      "native_session_hash": "e28f7d02eb92347d87d25c67dfa3dbc04b98fed90c9c514afd3e9bdd95d99c55",
+      "native_step_idx": null,
+      "native_tool_name": "Read",
+      "native_tool_use_id": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 28324,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 27908,
+      "reported_event": "preToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 51236,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:19:24.353489+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-stage-02-timeout",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:19:41.492911+00:00",
+      "control_sha256": "23959113da80ab701ec053c625afb7100e659e0e40e08cf5b7af70e66a430294",
+      "event": "preToolUse",
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "fault_selected": true,
+      "fault_target_event": "preToolUse",
+      "fault_target_tool": "Write",
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "28343c0d2b359c1333b1fde870c17689b3cf6a8c6a760ebad820947a60199e5c",
+      "input_size": 1078,
+      "mode": "timeout",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-stage-02-timeout.txt"
+      },
+      "native_session_hash": "e28f7d02eb92347d87d25c67dfa3dbc04b98fed90c9c514afd3e9bdd95d99c55",
+      "native_step_idx": null,
+      "native_tool_name": "Write",
+      "native_tool_use_id": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 56488,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 52032,
+      "reported_event": "preToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 31240,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:19:33.320928+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [
+        "content",
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-stage-02-timeout",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:19:06.268205+00:00",
+      "control_sha256": "23959113da80ab701ec053c625afb7100e659e0e40e08cf5b7af70e66a430294",
+      "event": "sessionStart",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "fault_target_event": "preToolUse",
+      "fault_target_tool": "Write",
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "is_background_agent",
+        "model",
+        "session_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "60737fad4ebc74c31ebafd6214a475e429c8134f3b16b305a7bd5c633386fcc6",
+      "input_size": 505,
+      "mode": "timeout",
+      "native_model": "grok-4.7-xhigh",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "e28f7d02eb92347d87d25c67dfa3dbc04b98fed90c9c514afd3e9bdd95d99c55",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 45888,
+      "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+      "parent_pid": 41560,
+      "reported_event": "sessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "additional_context": "writing-resource-advice-only"
+      },
+      "runner_pid": 39012,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:19:06.105528+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    }
+  ],
+  "native_frames": [
+    {
+      "apiKeySource": "login",
+      "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+      "model": "Grok 4.7 500K Extra High",
+      "permissionMode": "default",
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "Use the native Write file tool exactly once in this authorized scratch project. Do not use shell/terminal, any other tool, inspect other files, call agents, retry or work around denial. These files contain synthetic test markers only. After the one attempted call say ORACLE_ATTEMPT_FINISHED and stop. Write exactly NCKH_CURSOR_FILE_ORACLE followed by a newline to oracles/r35-cursor-write-stage-02-timeout.txt",
+            "type": "text"
+          }
+        ],
+        "role": "user"
+      },
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "type": "user"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": "I will write the exact",
+      "timestamp_ms": 1791163156607,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " string NCKH_CURSOR_FILE_ORACLE",
+      "timestamp_ms": 1791163156715,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " followed by a newline",
+      "timestamp_ms": 1791163156836,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " to oracles/r35-cursor-write-stage-02-timeout.txt",
+      "timestamp_ms": 1791163156951,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " using the native Write",
+      "timestamp_ms": 1791163157071,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " file tool exactly once.",
+      "timestamp_ms": 1791163157187,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": "\n\nI will make the Write",
+      "timestamp_ms": 1791163163291,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " tool call now. I will",
+      "timestamp_ms": 1791163163291,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " say ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791163163291,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " after the tool returns.",
+      "timestamp_ms": 1791163163291,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "completed",
+      "timestamp_ms": 1791163163292,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "I'll write the oracle marker once with the native Write tool.",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "model_call_id": "8c5a5ac0-badc-4237-b18a-4ab1afced3d4-0-t0xh",
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "timestamp_ms": 1791163163293,
+      "type": "assistant"
+    },
+    {
+      "call_id": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0",
+      "model_call_id": "8c5a5ac0-badc-4237-b18a-4ab1afced3d4-0-t0xh",
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "started",
+      "timestamp_ms": 1791163163293,
+      "tool_call": {
+        "editToolCall": {
+          "args": {
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-write-stage-02-timeout.txt",
+            "streamContent": "NCKH_CURSOR_FILE_ORACLE\n"
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791163163263",
+        "toolCallId": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "call_id": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0",
+      "model_call_id": "8c5a5ac0-badc-4237-b18a-4ab1afced3d4-0-t0xh",
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "completed",
+      "timestamp_ms": 1791163181646,
+      "tool_call": {
+        "completedAtMs": "1791163181611",
+        "editToolCall": {
+          "result": {
+            "error": {
+              "error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0822-r35-cursor-write-faults-attempt-02\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-write-faults-02 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" execution failed: Hook script timed out after 2000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "modelVisibleError": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0822-r35-cursor-write-faults-attempt-02\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-write-faults-02 --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" execution failed: Hook script timed out after 2000ms\n\nAgent note: Do not suggest workarounds to the blocked tool.",
+              "path": ""
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791163163263",
+        "toolCallId": "call-ad2a84ce-6ffd-422e-96e4-0c88a999e51d-0\nfc_929e5e1e-a93a-90ac-b745-43fe83425a78_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": "The user explicitly ",
+      "timestamp_ms": 1791163184621,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": "forbade using shell,",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " other tools, inspecting",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " files, calling agents,",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " retrying, or working",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " around denial. They",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " also required saying",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " ORACLE_ATTEMPT_FINISHED",
+      "timestamp_ms": 1791163184622,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " after the single attempted",
+      "timestamp_ms": 1791163184623,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": " call.",
+      "timestamp_ms": 1791163184623,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "delta",
+      "text": "\n\nThe Write attempt was blocked or timed out. I will retry, then say ORACLE_ATTEMPT_FINISHED and stop.",
+      "timestamp_ms": 1791163184623,
+      "type": "thinking"
+    },
+    {
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "completed",
+      "timestamp_ms": 1791163184623,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "ORACLE_ATTEMPT_FINISHED",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "type": "assistant"
+    },
+    {
+      "duration_api_ms": 33533,
+      "duration_ms": 33533,
+      "is_error": false,
+      "request_id": "8c5a5ac0-badc-4237-b18a-4ab1afced3d4",
+      "result": "I'll write the oracle marker once with the native Write tool.ORACLE_ATTEMPT_FINISHED",
+      "session_id": "50d624b1-7364-4fbf-94ed-9c5523a37c0d",
+      "subtype": "success",
+      "type": "result",
+      "usage": {
+        "cacheReadTokens": 38528,
+        "cacheWriteTokens": 0,
+        "inputTokens": 28473,
+        "outputTokens": 970
+      }
+    }
+  ],
+  "path": "oracles/r35-cursor-write-stage-02-timeout.txt",
+  "policy_receipts": [
+    {
+      "decision": "allow",
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults-02/policy-receipts/write-stage-02-timeout/preToolUse/005f7add947349800762a245bd16ab8d2728264a6c0e038003cfc3097b950b3f.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "969eef71ae4eb7a806878011ca2f5804516ed9e472f0e6d7ef2cef71b8c19525"
+    },
+    {
+      "decision": "allow",
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-write-faults-02/policy-receipts/write-stage-02-timeout/preToolUse/bef6f9e9cef39fe570a2180cdfaf7a6f4bf751afc9f209e2ddd01ffa677d03d3.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "b575dab16c746084fba768374fa70dcac2736e0dd27c86e8d9ff29fab92c5752"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed"
+}

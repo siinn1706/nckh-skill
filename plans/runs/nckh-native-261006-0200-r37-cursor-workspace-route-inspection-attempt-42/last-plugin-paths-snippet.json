@@ -1,0 +1,6 @@
+{
+  "start": 4020518,
+  "end": 4021468,
+  "text": "){if(e||t)return Object.assign(Object.assign({},e||{}),t||{})}function O(e,t){var r;if(0===t.length)return;if(1===t.length)return t[0];const s=J.includes(e),i=e===n.sessionStart,o=e===n.workspaceOpen,a=S.has(e),c={};for(const e of t){const t=e;for(const[e,n]of Object.entries(t))if(void 0!==n)if(o&&\"pluginPaths\"===e&&Array.isArray(n)){const t=null!==(r=c[e])&&void 0!==r?r:[],s=new Set(t),i=[...t];for(const e of n)\"string\"!=typeof e||s.has(e)||(s.add(e),i.push(e));c[e]=i}else\"permission\"===e&&s?c[e]=(l=n,\"deny\"===(u=c[e])||\"deny\"===l?\"deny\":\"ask\"===u||\"ask\"===l?\"ask\":\"allow\"===u||\"allow\"===l?\"allow\":void 0):\"user_message\"!==e&&\"agent_message\"!==e?a&&\"additional_context\"===e&&\"string\"==typeof n?c[e]=N(c[e],n):\"continue\"!==e||\"boolean\"!=typeof n?c[e]=i&&\"env\"===e&&\"object\"==typeof n&&null!==n?M(c[e],n):n:void 0===c[e]?c[e]=n:c[e]=c[e]&&n:c[e]=N(c[e],n)}var u,l;return c}function q(e){return J.includes(e)}function j({step:e,command:t,failClos",
+  "sha256_utf8": "1afa833cab0488a68c7ce29602141d1e2e54cc24960d6373ab086631571a22b6"
+}

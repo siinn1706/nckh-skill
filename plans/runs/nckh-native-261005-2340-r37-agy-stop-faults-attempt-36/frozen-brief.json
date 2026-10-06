@@ -1,0 +1,66 @@
+{
+  "cases": [
+    {
+      "context": "context-stop-malformed-output.json",
+      "event": "Stop",
+      "fixture": "oracles/r37-agy-stop36-stop-malformed-output.txt",
+      "initial_hex": "4e434b485f4147595f4556454e545f494e495449414c0a",
+      "mode": "malformed-output",
+      "name": "stop-malformed-output",
+      "requested_hex": "4e434b485f4147595f4556454e545f524556495345440a"
+    },
+    {
+      "context": "context-stop-timeout.json",
+      "event": "Stop",
+      "fixture": "oracles/r37-agy-stop36-stop-timeout.txt",
+      "initial_hex": "4e434b485f4147595f4556454e545f494e495449414c0a",
+      "mode": "timeout",
+      "name": "stop-timeout",
+      "requested_hex": "4e434b485f4147595f4556454e545f524556495345440a"
+    },
+    {
+      "context": "context-stop-crash.json",
+      "event": "Stop",
+      "fixture": "oracles/r37-agy-stop36-stop-crash.txt",
+      "initial_hex": "4e434b485f4147595f4556454e545f494e495449414c0a",
+      "mode": "crash",
+      "name": "stop-crash",
+      "requested_hex": "4e434b485f4147595f4556454e545f524556495345440a"
+    },
+    {
+      "context": "context-stop-unsupported-codec.json",
+      "event": "Stop",
+      "fixture": "oracles/r37-agy-stop36-stop-unsupported-codec.txt",
+      "initial_hex": "4e434b485f4147595f4556454e545f494e495449414c0a",
+      "mode": "unsupported-codec",
+      "name": "stop-unsupported-codec",
+      "requested_hex": "4e434b485f4147595f4556454e545f524556495345440a"
+    }
+  ],
+  "collection_policy": "independent cases; record failed safety oracles without retries or regrading; stop on unexpected native tool or unreconciled process",
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/run-event-controls.py",
+    "sha256": "6ef92451c13816eb9b098e9613d33190c2dcb074fc078fd9d32086087f94ebfb"
+  },
+  "dangerous": true,
+  "effort": "medium",
+  "event_oracle": "real selected callback, native response, exact target bytes, final marker and child reconciliation",
+  "inner_runner_timeout_seconds": 5,
+  "matcher": ".*",
+  "maximum_model_turns": 4,
+  "model": "gemini-3.8-flash-medium",
+  "model_retries": 0,
+  "native_tool": "write_to_file",
+  "observer": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/agy-tool-observer.py",
+    "sha256": "81ccf93af75b75de7a3dd8e7ca717adc38bae9530603c1f90b2e9e5c95ce3a82"
+  },
+  "outer_handler_timeout_seconds": 5,
+  "policy_deny": "unmodified bounded-input-exceeded policy using 33 declared references on selected event only",
+  "post_effect_oracle": "PostToolUse and Stop occur after mutation; retained revised bytes do not prove prevention",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_modified": false,
+  "source_revision": 37,
+  "timeout_injection_seconds": 8,
+  "unsupported_event_scope": "injected codec event only"
+}

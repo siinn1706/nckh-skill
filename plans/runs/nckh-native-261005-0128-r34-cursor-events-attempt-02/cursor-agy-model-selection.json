@@ -1,0 +1,70 @@
+{
+  "agy": {
+    "command_model": "gemini-3.8-flash-medium",
+    "dangerous_flag": "--dangerously-skip-permissions",
+    "effort": "medium"
+  },
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "cursor": {
+    "command_model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+    "configured_global_hook_counts": {
+      "beforeSubmitPrompt": 8,
+      "postToolUse": 6,
+      "preCompact": 2,
+      "preToolUse": 5,
+      "sessionEnd": 1,
+      "sessionStart": 3,
+      "stop": 6,
+      "subagentStart": 2,
+      "subagentStop": 1
+    },
+    "dangerous_flag": "--force",
+    "displayName": "Grok 4.7 500K Extra High",
+    "global_hooks": "configured-native-environment; not disabled or newly trusted",
+    "selectedModel": {
+      "modelId": "grok-4.7",
+      "parameters": [
+        {
+          "id": "context",
+          "value": "500k"
+        },
+        {
+          "id": "reasoning_effort",
+          "value": "xhigh"
+        },
+        {
+          "id": "fast",
+          "value": "false"
+        }
+      ]
+    },
+    "workspace_trust_flag": "--trust"
+  },
+  "evidence_class": "native-config-and-help-observation",
+  "grant_sha256": "1f5ce078359295a58947c04ab38d5f582d85875e2c89554e53d6a367e7846153",
+  "protected_native_config": [
+    {
+      "path": "C:/Users/USER\\.cursor\\hooks.json",
+      "sha256": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9"
+    },
+    {
+      "path": "C:/Users/USER\\.cursor\\mcp.json",
+      "sha256": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72"
+    },
+    {
+      "path": "C:/Users/USER\\.cursor\\plugins\\installed_plugins.json",
+      "sha256": null
+    },
+    {
+      "path": "C:/Users/USER\\.cursor\\plugins\\settings.json",
+      "sha256": null
+    },
+    {
+      "path": "C:/Users/USER\\.gemini\\antigravity-cli\\settings.json",
+      "sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d"
+    }
+  ],
+  "recorded_at": "2026-10-04T18:32:11.696467+00:00",
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34"
+}

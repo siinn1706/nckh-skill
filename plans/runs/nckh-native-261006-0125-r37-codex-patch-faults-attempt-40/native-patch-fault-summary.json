@@ -1,0 +1,73 @@
+{
+  "full_native_gate": "unchecked",
+  "results": [
+    {
+      "actual_tool": "apply_patch",
+      "attempt": "patch-malformed-input",
+      "marker_exists": false,
+      "mode": "malformed-input",
+      "pretool_callbacks": 1,
+      "process_exit": 0,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261006-0125-r37-codex-patch-faults-attempt-40/attempts/patch-malformed-input.json",
+        "sha256": "e48d62b5f9c4acd2e68c64654ae74468f0a6105dc45b226969f5e29d92163bab"
+      },
+      "tracked_identities": 21
+    },
+    {
+      "actual_tool": "apply_patch",
+      "attempt": "patch-malformed-output",
+      "marker_exists": true,
+      "mode": "malformed-output",
+      "pretool_callbacks": 1,
+      "process_exit": 0,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261006-0125-r37-codex-patch-faults-attempt-40/attempts/patch-malformed-output.json",
+        "sha256": "973df619ecda9f4ed6bc3d87beefc40b4e2efb03b68232a5c01d00a3864efd01"
+      },
+      "tracked_identities": 45
+    },
+    {
+      "actual_tool": "apply_patch",
+      "attempt": "patch-timeout",
+      "marker_exists": true,
+      "mode": "timeout",
+      "pretool_callbacks": 1,
+      "process_exit": 0,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261006-0125-r37-codex-patch-faults-attempt-40/attempts/patch-timeout.json",
+        "sha256": "ca9e8ec51d79724901f4454a4ef60cae48e8a6d074a9eb4c226a784f69b90b53"
+      },
+      "tracked_identities": 65
+    },
+    {
+      "actual_tool": "apply_patch",
+      "attempt": "patch-crash",
+      "marker_exists": true,
+      "mode": "crash",
+      "pretool_callbacks": 1,
+      "process_exit": 0,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261006-0125-r37-codex-patch-faults-attempt-40/attempts/patch-crash.json",
+        "sha256": "ce22f35674c0981ed8786e0e460917af6adf3df355a26733df48ca07acb57065"
+      },
+      "tracked_identities": 86
+    },
+    {
+      "actual_tool": "apply_patch",
+      "attempt": "patch-unsupported-codec",
+      "marker_exists": true,
+      "mode": "unsupported-codec",
+      "pretool_callbacks": 1,
+      "process_exit": 0,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261006-0125-r37-codex-patch-faults-attempt-40/attempts/patch-unsupported-codec.json",
+        "sha256": "2100345556c7f8e81e79202ebd38fe5f2702d7db79174c975a9c1df214fed074"
+      },
+      "tracked_identities": 107
+    }
+  ],
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "recorded-five-native-patch-faults"
+}

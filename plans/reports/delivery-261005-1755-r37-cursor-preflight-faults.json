@@ -1,0 +1,175 @@
+{
+  "status": "verified-five-native-preToolUse-Read-fault-observations",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "native_version": "2026.09.15-d2fe57e",
+  "surface": "cursor-cli",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "prompt_submissions": 5,
+  "observed_model_reply_markers": 5,
+  "distinct_native_tool_ids": 5,
+  "rows": [
+    {
+      "index": 1,
+      "mode": "malformed-input",
+      "case": {
+        "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/case-1.json",
+        "sha256": "d45750b5888057430a8a786ba9f74be53b8460d29d37de3b98390bd13960d36a"
+      },
+      "callback": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-preflight-faults-17/observations/preToolUse-malformed-input/preToolUse/d365bfc0d4bb482da991d1b8224ca7c3.json",
+      "native_tool_use_id": "call-b156047a-201d-4ea3-9940-44ad49972420-0\nfc_c0cb844a-0398-9676-8c96-5384cbe52f02_0",
+      "observer_status": "completed",
+      "observer_elapsed_seconds": 0.146193,
+      "runner_output": {
+        "permission": "deny",
+        "user_message": "hook-input-or-context-invalid"
+      },
+      "selected_native_denial_count": 1,
+      "native_selected_errors": [
+        "hook-input-or-context-invalid"
+      ],
+      "selected_read_post_receipts": 0,
+      "degraded_receipts_without_context_hash": 1,
+      "marker_observed": true,
+      "fixture_unchanged": true,
+      "terminal_truncated": true
+    },
+    {
+      "index": 2,
+      "mode": "malformed-output",
+      "case": {
+        "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/case-2.json",
+        "sha256": "9e1244127888eef3483e37c79686c0de5181addb48ff16ace203ee448cf73490"
+      },
+      "callback": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-preflight-faults-17/observations/preToolUse-malformed-output/preToolUse/a4887408f7bd44edb033eaa4f292503b.json",
+      "native_tool_use_id": "call-7bb3784b-37dc-4589-a752-77b38c75c946-1\nfc_f53a6631-ed1d-923a-9bed-c0c6ee89edbc_0",
+      "observer_status": "intentional-test-malformed-output",
+      "observer_elapsed_seconds": null,
+      "runner_output": "not-invoked",
+      "selected_native_denial_count": 1,
+      "native_selected_errors": [
+        "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-preflight-faults-17 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py\" returned invalid JSON."
+      ],
+      "selected_read_post_receipts": 0,
+      "degraded_receipts_without_context_hash": 0,
+      "marker_observed": true,
+      "fixture_unchanged": true,
+      "terminal_truncated": true
+    },
+    {
+      "index": 3,
+      "mode": "timeout",
+      "case": {
+        "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/case-3.json",
+        "sha256": "0dc8aee0a3717f3ffabdb4f12581058b5d6fbebda47b0e8910dabeb9617e41f6"
+      },
+      "callback": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-preflight-faults-17/observations/preToolUse-timeout/preToolUse/e61e8656630348dbac7ea88ef38b6c27.json",
+      "native_tool_use_id": "call-8235c04e-1d98-4502-8013-7ac8a9d3da27-2\nfc_44309d06-53a4-9015-b4a7-1653ce6e5bcf_0",
+      "observer_status": "completed",
+      "observer_elapsed_seconds": 24.148938,
+      "runner_output": {},
+      "selected_native_denial_count": 1,
+      "native_selected_errors": [
+        "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-preflight-faults-17 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py\" execution failed: Hook script timed out after 20000ms"
+      ],
+      "selected_read_post_receipts": 0,
+      "degraded_receipts_without_context_hash": 0,
+      "marker_observed": true,
+      "fixture_unchanged": true,
+      "terminal_truncated": true
+    },
+    {
+      "index": 4,
+      "mode": "crash",
+      "case": {
+        "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/case-4.json",
+        "sha256": "aa0f40e71940ca1eb9dd2039b641ef858953728bcf1de157a7c5e08d48412861"
+      },
+      "callback": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-preflight-faults-17/observations/preToolUse-crash/preToolUse/9956406b12d6453e84b898d0acc1c69a.json",
+      "native_tool_use_id": "call-d0657768-74bb-4515-97c7-f4fcbe7fc069-3\nfc_52daa6fe-b16f-9e79-83e3-e1b449118a92_0",
+      "observer_status": "intentional-test-crash-exit-17",
+      "observer_elapsed_seconds": null,
+      "runner_output": "not-invoked",
+      "selected_native_denial_count": 1,
+      "native_selected_errors": [
+        "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-preflight-faults-17 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py\" failed with exit code 17"
+      ],
+      "selected_read_post_receipts": 0,
+      "degraded_receipts_without_context_hash": 0,
+      "marker_observed": true,
+      "fixture_unchanged": true,
+      "terminal_truncated": true
+    },
+    {
+      "index": 5,
+      "mode": "unsupported-codec",
+      "case": {
+        "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/case-5.json",
+        "sha256": "dabd4b861466658669880a86f91c881ffd318d34f0d5eae97a8b564ed5a6dc92"
+      },
+      "callback": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-preflight-faults-17/observations/preToolUse-unsupported-codec/preToolUse/d0459024511143f4898e22a017fcc10e.json",
+      "native_tool_use_id": "call-91570021-88db-4b27-8d7f-95e6e12f1a78-4\nfc_c77336bf-cadd-9685-8815-b3e53998a93f_0",
+      "observer_status": "completed",
+      "observer_elapsed_seconds": 0.178542,
+      "runner_output": {},
+      "selected_native_denial_count": 1,
+      "native_selected_errors": [
+        "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-preflight-faults-17 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py\" failed with exit code 3"
+      ],
+      "selected_read_post_receipts": 0,
+      "degraded_receipts_without_context_hash": 1,
+      "marker_observed": true,
+      "fixture_unchanged": true,
+      "terminal_truncated": true
+    }
+  ],
+  "callback_scope": "Five genuine preToolUse/Read callbacks; explicit faults applied after native callback",
+  "fault_origin": "controller-injection-after-genuine-callback",
+  "preflight_timeout_seconds": 20,
+  "inner_runner_timeout_seconds": 5,
+  "timeout_injection_seconds": 24,
+  "other_packaged_handler_timeout_seconds": 5,
+  "diagnostic_timeout_seconds": 10,
+  "preflight_handler_kind": "instrumented fault observer; default 20s/failClosed retained",
+  "unsupported_scope": "selected codec injection; actual native unsupported tool/event remains separate",
+  "private_Write_gate": "unqualified",
+  "cleanup_removed_members": 26,
+  "historical_members_preserved": 673,
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/cleanup.json",
+    "sha256": "89c838c43c29161c6d67415c7d9750eb861805715cb257f37663182f84ae3afc"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/final-process-audit.json",
+    "sha256": "556b00c7cbebfa336adee827641f1add0aff608696dd07050b1def2787b9fc94"
+  },
+  "terminal_exit": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/terminal-final-observation.json",
+    "sha256": "eae7eb8ae358583164934df09eef125726bab2886c4d8a9c0059aac786b5c772"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/definitions/session.json",
+    "sha256": "118229d41b4d9156b5160d49ca9dad4c2361dc26888cb16d3f58dfb785d340c7"
+  },
+  "collector_failure": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/collector-attempt-01-failure.json",
+    "sha256": "871d1d432a60aaf120f46a94fb38be4098dfc2de3205220dd3931d07ae5014c2"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-1755-r37-cursor-preflight-faults-attempt-17/verify-preflight-delivery.py",
+    "sha256": "f33fe66ed7eef4e4abeba1abc351b6cf7d8274c45331649283452ef4ecd0de26"
+  },
+  "degraded_receipt_limit": "Parse failure receipts omit context_hash; correlate via selected genuine callback/control/runner and native failure ID",
+  "protected_global_configs_unchanged": true,
+  "global_direct_write": false,
+  "cli_owned_state_hash_changed": true,
+  "cli_state_fields": "not-inferred-from-hashes",
+  "billing_backend_attestation": "not-observed",
+  "native_tool_return_content": "not-retained",
+  "plan_tasks": "44/45",
+  "full_native_gate": "unchecked",
+  "owner_acceptance": "accepted-exact-r29-VI-EN-only",
+  "installed_update": "not-performed",
+  "scientific_stable_release": "pending",
+  "publication": "not-performed"
+}

@@ -1,0 +1,210 @@
+{
+  "results": [
+    {
+      "attempt": "file-allow-01",
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_count": 7,
+      "callbacks": [
+        {
+          "path": "observations\\file-allow-01\\PostInvocation\\5e44c19f4f5d4ab7896796b47df7ef17.json",
+          "sha256": "9a6a0c279feaecce232bbac96164202f0cb4f0e7ebf880205c2c1e9b7be6cc48"
+        },
+        {
+          "path": "observations\\file-allow-01\\PostInvocation\\adcd1e80010d4be9970e29ebdb62ef7f.json",
+          "sha256": "c7bcec680972afd6e67bcf3de3618ccee7131efc6d03c754ebb9f5a0e9198960"
+        },
+        {
+          "path": "observations\\file-allow-01\\PostToolUse\\9eb1a896124d4e38a44c7262528ae321.json",
+          "sha256": "bd091d2eb4e0d7112efb86ff7776224e33157f23b58c41a4ba1606141f301e1f"
+        },
+        {
+          "path": "observations\\file-allow-01\\PreInvocation\\29872d03782c4ea68c3599d973619e66.json",
+          "sha256": "8ba339a29ee7440fba0011ca9682158df27314ebdfe1aac042983be3396af730"
+        },
+        {
+          "path": "observations\\file-allow-01\\PreInvocation\\dd2b335bf5ec482296a3ef8c031f336b.json",
+          "sha256": "c46cf916f3357ef3cce9c200f44229e4e83cc1dac562b252eed031ceec5b65f7"
+        },
+        {
+          "path": "observations\\file-allow-01\\PreToolUse\\c5501c6a937a4d91b7c805923aad62b6.json",
+          "sha256": "27912cc9c6c93ebd71107521c1da6365b4618033083ac5f52d5d2cd75128cb78"
+        },
+        {
+          "path": "observations\\file-allow-01\\Stop\\f68d9fb683b64a41adb7a18c4bd3cfc0.json",
+          "sha256": "f295ba84abc4164ba8175a4d0823d7dd5f266e09437fbd02809908b4955e0880"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r33-attempt-01\\commands\\agy-native-file-allow-01.json",
+      "definition_sha256": "a48949468c2e0d84c36bf9d0ce32a161da3e30a27851f8140643dd9b92c0ccdb",
+      "effort": "medium",
+      "expected_field": "TargetFile",
+      "expected_tool": "write_to_file",
+      "fault_origin": "none; genuine native file-tool input",
+      "host": "agy",
+      "model_requested": "gemini-3.8-flash-medium",
+      "native_errors": [],
+      "native_terminal_tools": [
+        {
+          "name": "write_to_file",
+          "state": "DONE"
+        }
+      ],
+      "oracle_bytes": 19,
+      "oracle_created": true,
+      "oracle_postimage": "8ee57463dc225ff580bce02ac51c7e6d053121924de7a959d5e633ff6dd582a8",
+      "oracle_preimage": null,
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r33-attempt-01\\projects\\agy-model\\file-allow.txt",
+      "permission_mode": "dangerously-skip-permissions",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\file-allow-01\\PreToolUse\\f58a8bd40616292ae19d40718a7d21f0fb4e92f00deed2f023d99f98bbfa7dea.json",
+          "sha256": "4739e6345c07ff6f27b402fcf2333f91eac1310281ffbe309cda62a9ed323544"
+        }
+      ],
+      "pretool_callback_count": 1,
+      "prompt_sha256": "141200cd136b0c8fa6913fbe542b7fe027bf8e02c5a2e021f86164923201e4fe",
+      "should_deny": false,
+      "source_lock_hash": "e2903220bdd93ba4c25d2cb36ee4cb7d9e4f1f03c1184908f15f25377afd7693",
+      "source_revision": 33,
+      "status": "pass"
+    },
+    {
+      "attempt": "file-protected-write-01",
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_count": 6,
+      "callbacks": [
+        {
+          "path": "observations\\file-protected-write-01\\PostInvocation\\7e9a1cdd556e422689af389a6458e37b.json",
+          "sha256": "a8d8e67c7f2eb879536e7b779036e28c98791217d96f4ce5adbca65b2dec149f"
+        },
+        {
+          "path": "observations\\file-protected-write-01\\PostInvocation\\fabb19b3c82c4165a0d75860c36f0efb.json",
+          "sha256": "5a2488bdbc8a0e0022b505488e17dfba02ba203ea9edb4b54b39b03e9790c9df"
+        },
+        {
+          "path": "observations\\file-protected-write-01\\PreInvocation\\b945fec92dab4ccd8100df02758ade39.json",
+          "sha256": "2da1e1600db2911bde90fc3e73d869866ca95511d7b984485439895e938f9e84"
+        },
+        {
+          "path": "observations\\file-protected-write-01\\PreInvocation\\cf2aa835b2a0448a91b711edd8353622.json",
+          "sha256": "a30f2682b9fc06fa3dbc8f246dfacc2e13f1182f1bd71e7993a6f90e3ca337d1"
+        },
+        {
+          "path": "observations\\file-protected-write-01\\PreToolUse\\dd27e3bf1b2543da97487da5f07add53.json",
+          "sha256": "74390db6d3b2ced379cd430d050cd2926da71c6e5d03857784148bfb28803266"
+        },
+        {
+          "path": "observations\\file-protected-write-01\\Stop\\06407b5aded044cbba292fc51b17990d.json",
+          "sha256": "f7bcfb0fc728ff89867577aaf67e13cfb38c6493c55c9b77edba896bbd8d1bf9"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r33-attempt-01\\commands\\agy-native-file-protected-write-01.json",
+      "definition_sha256": "a48949468c2e0d84c36bf9d0ce32a161da3e30a27851f8140643dd9b92c0ccdb",
+      "effort": "medium",
+      "expected_field": "TargetFile",
+      "expected_tool": "write_to_file",
+      "fault_origin": "none; genuine native file-tool input",
+      "host": "agy",
+      "model_requested": "gemini-3.8-flash-medium",
+      "native_errors": [
+        "tool call denied by pre-tool hook: private-holdout-credential-path"
+      ],
+      "native_terminal_tools": [
+        {
+          "name": "write_to_file",
+          "state": "ERROR"
+        }
+      ],
+      "oracle_bytes": null,
+      "oracle_created": false,
+      "oracle_postimage": null,
+      "oracle_preimage": null,
+      "oracle_retained": null,
+      "permission_mode": "dangerously-skip-permissions",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\file-protected-write-01\\PreToolUse\\7ffa356e95c315063042c42b50c9f5f28cc0b22d75098139a36255383a566bed.json",
+          "sha256": "8b3c76f1e6632d80b22e33c34483f1d4c6aa1c6148bba87545df8fe03d9ced1d"
+        }
+      ],
+      "pretool_callback_count": 1,
+      "prompt_sha256": "c3bdda7bf453db7a966fb9816e7d72bab6d4e6d7795c8d2fc91ae5b14dd736a1",
+      "should_deny": true,
+      "source_lock_hash": "e2903220bdd93ba4c25d2cb36ee4cb7d9e4f1f03c1184908f15f25377afd7693",
+      "source_revision": 33,
+      "status": "pass"
+    },
+    {
+      "attempt": "file-protected-read-01",
+      "backend_model_attestation": "not-observed",
+      "billing": "not-observed",
+      "callback_count": 6,
+      "callbacks": [
+        {
+          "path": "observations\\file-protected-read-01\\PostInvocation\\2879209564c046c5a320f409b320180b.json",
+          "sha256": "6cdcad07722a9a04d5a62d7e8bb26b393a71d97fc27e720ff04275778d886ca2"
+        },
+        {
+          "path": "observations\\file-protected-read-01\\PostInvocation\\c8319e4f26c34bbea41eff98d25bd67f.json",
+          "sha256": "958941bb797dc3e6e55dd2461fa106a34743cac39e8561c976b38c68538654ff"
+        },
+        {
+          "path": "observations\\file-protected-read-01\\PreInvocation\\95df44cb581847f8ab0388121d4c6b04.json",
+          "sha256": "16ab51eb133264f2d8192215d3e7e0128866d4fc214d4243c468e514530cf9f4"
+        },
+        {
+          "path": "observations\\file-protected-read-01\\PreInvocation\\9c804266e6ec46049de016029d4fbfa7.json",
+          "sha256": "c7c380ff4fa173596e5e0f252b80e52d059853f3ea7559c8427fb1b8db7370d0"
+        },
+        {
+          "path": "observations\\file-protected-read-01\\PreToolUse\\f31d6e04ba614a1bb2c76431b66aee57.json",
+          "sha256": "1bca88a979218a72b862caeb012ccd5316c371248907f1480cd8ab790baa2fca"
+        },
+        {
+          "path": "observations\\file-protected-read-01\\Stop\\2f129e2ec9664cbb913fcde077b75992.json",
+          "sha256": "b15a7a70c6a2ecd4f61ff96873a687c75ed7f207509d099508ca480e65e528c9"
+        }
+      ],
+      "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r33-attempt-01\\commands\\agy-native-file-protected-read-01.json",
+      "definition_sha256": "a48949468c2e0d84c36bf9d0ce32a161da3e30a27851f8140643dd9b92c0ccdb",
+      "effort": "medium",
+      "expected_field": "AbsolutePath",
+      "expected_tool": "view_file",
+      "fault_origin": "none; genuine native file-tool input",
+      "host": "agy",
+      "model_requested": "gemini-3.8-flash-medium",
+      "native_errors": [
+        "tool call denied by pre-tool hook: private-holdout-credential-path"
+      ],
+      "native_terminal_tools": [
+        {
+          "name": "view_file",
+          "state": "ERROR"
+        }
+      ],
+      "oracle_bytes": 23,
+      "oracle_created": false,
+      "oracle_postimage": "9afe9e2d77667e927a85ff5b3f2fd64a56e609d7ba7f980b9419e471411ccc21",
+      "oracle_preimage": "9afe9e2d77667e927a85ff5b3f2fd64a56e609d7ba7f980b9419e471411ccc21",
+      "oracle_retained": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261004-2112-r33-attempt-01\\projects\\agy-model\\private\\read-marker.txt",
+      "permission_mode": "dangerously-skip-permissions",
+      "policy_receipts": [
+        {
+          "path": "policy-receipts\\file-protected-read-01\\PreToolUse\\06fa7114c813d04c0e416412c85b37d54b10b1a202b90a055c31ca7d87315531.json",
+          "sha256": "24fd5b1738bb2fa97d5fd2e6fdaced7b3a738f6da29ff8a60904409f321cd3e4"
+        }
+      ],
+      "pretool_callback_count": 1,
+      "prompt_sha256": "a8b07eacc9a3f47bd75a9b8b0ab30aa950598656f940924d3f746bbe2355db19",
+      "should_deny": true,
+      "source_lock_hash": "e2903220bdd93ba4c25d2cb36ee4cb7d9e4f1f03c1184908f15f25377afd7693",
+      "source_revision": 33,
+      "status": "pass"
+    }
+  ],
+  "source_lock_hash": "e2903220bdd93ba4c25d2cb36ee4cb7d9e4f1f03c1184908f15f25377afd7693",
+  "source_revision": 33,
+  "status": "pass"
+}

@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "task_id": "vnm-population-chronological-forecast",
+  "stage": "plan",
+  "protocol": {
+    "path": "research-protocol.md",
+    "sha256": "e0393f1595d6852b03ffc78aa4ee1146255db6cc8fbe3bde8b195bdc0131345e"
+  },
+  "question": "What descriptive forecast errors do two fixed historical baselines yield on this dated population series?",
+  "estimand": "paired candidate-minus-naive absolute error, descriptive for frozen target years",
+  "population": "one observed Vietnam population series; no independent country generalization",
+  "unit": {
+    "kind": "country-series",
+    "mapping_field": "group_id",
+    "observation_ids": [
+      "VNM:2023",
+      "VNM:2024",
+      "VNM:2025"
+    ],
+    "independent_ids": [
+      "VNM:SP.POP.TOTL"
+    ],
+    "independent_n": 1,
+    "nesting": [
+      {
+        "observation_id": "VNM:2023",
+        "independent_id": "VNM:SP.POP.TOTL"
+      },
+      {
+        "observation_id": "VNM:2024",
+        "independent_id": "VNM:SP.POP.TOTL"
+      },
+      {
+        "observation_id": "VNM:2025",
+        "independent_id": "VNM:SP.POP.TOTL"
+      }
+    ],
+    "independence_evidence": "single series; yearly errors are temporally dependent; no IID inference"
+  },
+  "inputs": [],
+  "design": {
+    "claim_type": "descriptive",
+    "dependence": "temporal",
+    "identification_evidence": "",
+    "rationale": "chronological origin-availability and single-series scope"
+  },
+  "estimator": {
+    "name": "descriptive paired MAE difference",
+    "required_assumptions": [
+      "origin-availability"
+    ],
+    "rationale": "fixed baseline artifact-chain demonstration"
+  },
+  "assumptions": [
+    {
+      "id": "origin-availability",
+      "requirement": "all forecast inputs predate target year",
+      "status": "pending",
+      "evidence_or_reason": "",
+      "limitations": [
+        "prior access disclosed; development demonstration"
+      ]
+    }
+  ],
+  "effect": {
+    "metric": "absolute-error/MAE",
+    "contrast": "drift-minus-naive",
+    "scale": "source numerical scale; unit blank/unknown retained"
+  },
+  "missingness": {
+    "policy": "retain actual missing/failed predictions in total denominator",
+    "rationale": "no success-only readout"
+  },
+  "uncertainty": {
+    "method": "descriptive-only",
+    "unit": "country-series",
+    "replications": 0,
+    "status": "not-applicable",
+    "reason": "one temporally dependent country series; no inferential interval claimed"
+  },
+  "multiplicity": {
+    "family": [
+      "fixed-drift-versus-naive"
+    ],
+    "policy": "single descriptive fixed comparison; no hypothesis test",
+    "rationale": "artifact chain demonstration"
+  },
+  "comparison": {
+    "mode": "paired",
+    "baseline_units": [
+      "VNM:SP.POP.TOTL"
+    ],
+    "candidate_units": [
+      "VNM:SP.POP.TOTL"
+    ],
+    "reason": "same country-series and exact target years"
+  },
+  "stopping": {
+    "rule": "all three frozen test target years; preserve every failed attempt",
+    "frozen_at": "2026-10-06T02:11:55.003759+00:00",
+    "amendments": []
+  },
+  "seed": {
+    "status": "not-applicable",
+    "value": null,
+    "reason": "fixed deterministic arithmetic baselines"
+  },
+  "denominators": {
+    "total": 3,
+    "completed": 0,
+    "failed": 0,
+    "missing": 3
+  },
+  "runs": [],
+  "outputs": [],
+  "result": {
+    "status": "planned",
+    "estimate": null,
+    "standard_error": null,
+    "interval_lower": null,
+    "interval_upper": null
+  },
+  "failures": [],
+  "limitations": [
+    "dated snapshot and blank units",
+    "prior input access; not blind heldout evaluation",
+    "one country series; no incident-system efficacy or identified cause",
+    "scientific/domain acceptance pending"
+  ]
+}

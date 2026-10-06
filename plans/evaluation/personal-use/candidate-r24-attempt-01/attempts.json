@@ -1,0 +1,195 @@
+[
+  {
+    "name": "full-suite",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "evals/run-evals.py",
+      "--run-deterministic",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\full-suite.json"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T19:50:46.503287+00:00",
+    "finished_at": "2026-10-02T19:58:03.358974+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "c9fbcb19707436f7bc5eb18b6c9e381bd51cb71bb16570a9a95a90e04544a497",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reproducible-on",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/build-artifacts.py",
+      "--all",
+      "--check",
+      "--resource-access",
+      "on"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T19:58:04.595016+00:00",
+    "finished_at": "2026-10-02T19:59:45.671581+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "7aa34d97fe13b448f9e53c9046d6fdcc4bcdf117d556766d0e5df755c770e8f5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "build-on",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/build-artifacts.py",
+      "--all",
+      "--resource-access",
+      "on",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\bundles\\on"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T19:59:46.680876+00:00",
+    "finished_at": "2026-10-02T20:00:43.769733+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "ad45dc557af46cc5d40c6b20471805cc3c7900dfe62ed8af1a7f4e7877402bd6",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reproducible-off",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/build-artifacts.py",
+      "--all",
+      "--check",
+      "--resource-access",
+      "off"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T20:00:44.800956+00:00",
+    "finished_at": "2026-10-02T20:02:29.136195+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "74f249d79e7c8e3c392bb41201f296cc4cb479822ee150237ed8778a557f76bd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "build-off",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/build-artifacts.py",
+      "--all",
+      "--resource-access",
+      "off",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\bundles\\off"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T20:02:30.159566+00:00",
+    "finished_at": "2026-10-02T20:03:23.741974+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "b33a08b098c5c227f647208828765090ac86c21e5d073dad9ba88f5fb19f4a0d",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "extracted-smoke-claude",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/resource-smoke.py",
+      "--bundle",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\extracted\\claude",
+      "--cwd",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\cwd",
+      "--unset-pythonpath",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\extracted-smoke-claude.json"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T20:03:55.137558+00:00",
+    "finished_at": "2026-10-02T20:04:04.059339+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "7a89b821282d5234832cac11c85d8a87bb89648c901a3d9ea66d741c7bb6d65b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "extracted-smoke-codex",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/resource-smoke.py",
+      "--bundle",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\extracted\\codex",
+      "--cwd",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\cwd",
+      "--unset-pythonpath",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\extracted-smoke-codex.json"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T20:04:05.094731+00:00",
+    "finished_at": "2026-10-02T20:04:15.054544+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "e95ba41da1f0024abb39cd82fb6d27e043d2e461c47f7b8afe77ac911ef077b9",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "extracted-smoke-cursor",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/resource-smoke.py",
+      "--bundle",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\extracted\\cursor",
+      "--cwd",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\cwd",
+      "--unset-pythonpath",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\extracted-smoke-cursor.json"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T20:04:16.358819+00:00",
+    "finished_at": "2026-10-02T20:04:24.982767+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "007d2e751699a2912c30b32907d1a53895e7a25cbed27f49aa70c462c11dc511",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "extracted-smoke-agy",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-B",
+      "scripts/resource-smoke.py",
+      "--bundle",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\extracted\\agy",
+      "--cwd",
+      "C:/Users/USER\\AppData\\Local\\Temp\\nckh-bb126040b5084f1c8c5b4541ebbe7edc\\cwd",
+      "--unset-pythonpath",
+      "--output",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\candidate-r24-attempt-01\\extracted-smoke-agy.json"
+    ],
+    "cwd": "C:/Users/USER\\Downloads\\test-skill\\nckh-kit",
+    "started_at": "2026-10-02T20:04:26.078429+00:00",
+    "finished_at": "2026-10-02T20:04:34.390840+00:00",
+    "exit_status": 0,
+    "stdout": "[removed: raw runtime content]",
+    "stderr": "[removed: raw runtime content]",
+    "stdout_sha256": "6e538f3b389d09c1e573e448b9dccbc2900da16f5a239a892d83ed4434a8e60b",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

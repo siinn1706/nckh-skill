@@ -1,0 +1,23 @@
+{
+  "base_controller": {
+    "path": "plans/runs/nckh-native-261005-0818-r35-cursor-template-timing-attempt-01/cursor-file-probes.py",
+    "sha256": "cc45f475a039d799a0b806dd2c52474e78e9509f7bfe410b6e1c8203378a293b"
+  },
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-0905-r35-cursor-template-controls-attempt-01/cursor-template-controls.py",
+    "sha256": "deb8c610899a181af56ac23498ba8de618c312a2c08840316de8050b9828d9a5"
+  },
+  "effort_requested": "xhigh",
+  "expected_outcome_failure": "record as failed; preserve native streams and cleanup",
+  "fault_origin": "none",
+  "maximum_model_turns": 3,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "prior_failure": {
+    "path": "plans/runs/nckh-native-261005-0818-r35-cursor-template-timing-attempt-01/attempts/template-write-allow.json",
+    "sha256": "d302842d6e253296d01b427d9695aff2f6a96e5811224190eaa107ade170b89d"
+  },
+  "scope": "three remaining direct template5s controls; prior allow failure retained",
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_modified": false,
+  "timeout_seconds": 5
+}

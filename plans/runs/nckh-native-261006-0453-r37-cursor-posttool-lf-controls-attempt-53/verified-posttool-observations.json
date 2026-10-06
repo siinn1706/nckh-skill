@@ -1,0 +1,404 @@
+{
+  "status": "verified-seven-current-native-Write-posttool-observations",
+  "timestamp_utc": "2026-10-05T22:21:10.189847+00:00",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "surface": "cursor-cli-interactive",
+  "version": "2026.09.15-d2fe57e",
+  "model_turns": 7,
+  "requested_native_Writes": 7,
+  "native_Write_ids": [
+    "call-5dc18a1e-d1a3-4e25-800d-88b98b60835c-1\nfc_83aee4ec-19eb-9739-8d9a-7cff8e1db514_0",
+    "call-a41c9dab-cc77-4c1e-8a03-0276c51bc545-3\nfc_fa9d4e6d-4e8d-9d1a-a52c-dbd3850c5640_0",
+    "call-a961c1c7-adf9-4e52-b9e4-16e78ae4bd41-5\nfc_0b9d7e2c-e169-935f-b3fc-c340856ce078_0",
+    "call-2413cbb7-e050-4768-bf9c-285eda6568bb-7\nfc_07fab70b-8c19-9631-b043-096de08dcb69_0",
+    "call-08e0210c-ad66-4914-a782-dbd7209b0e7d-9\nfc_1075a75c-6f68-9724-8918-ee0eb8b3280f_0",
+    "call-4f7cf681-dc26-4e00-8326-a68dc2aa9c84-11\nfc_80529f00-c986-913c-ab7b-aed385c9d13e_0",
+    "call-1fb9c965-cfe8-4278-bbee-dbb7f7b33b47-13\nfc_4743104f-8bf6-9582-8a15-9e116386ea7b_0"
+  ],
+  "callback_count": 29,
+  "policy_receipt_count": 27,
+  "model_selection": "existing Grok4.7/500k/xhigh/fastfalse and native startup display",
+  "backend_parameters_attestation": "not-observed",
+  "native_timeout_deadline_qualification": "unqualified; declared bound and delayed receipt only",
+  "results": [
+    {
+      "mode": "allow",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-allow.json",
+        "sha256": "0d50903abd86ae1970fadc6b6e933877fea79df77739af411a60a9b54214377a"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-5dc18a1e-d1a3-4e25-800d-88b98b60835c-1\nfc_83aee4ec-19eb-9739-8d9a-7cff8e1db514_0",
+      "post_status": "completed",
+      "wire": {
+        "additional_context": "delivery-bindings-current-review-separate"
+      },
+      "selected_policy": "advisory",
+      "selected_policy_receipts": 1,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": 0.169581,
+      "timeout_observation": null
+    },
+    {
+      "mode": "policy-deny",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-policy-deny.json",
+        "sha256": "2d7d013b45b048770ffa1a25b795143e257a824aebe7530b63dac915e6c5bb2b"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-a41c9dab-cc77-4c1e-8a03-0276c51bc545-3\nfc_fa9d4e6d-4e8d-9d1a-a52c-dbd3850c5640_0",
+      "post_status": "completed",
+      "wire": {
+        "additional_context": "bounded-input-exceeded"
+      },
+      "selected_policy": "block",
+      "selected_policy_receipts": 1,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": 0.162462,
+      "timeout_observation": null
+    },
+    {
+      "mode": "malformed-input",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-malformed-input.json",
+        "sha256": "463c6d0dbbced76dc75fe56f29961bf18d109f1a4eab3b91e946394f4153945c"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-a961c1c7-adf9-4e52-b9e4-16e78ae4bd41-5\nfc_0b9d7e2c-e169-935f-b3fc-c340856ce078_0",
+      "post_status": "completed",
+      "wire": {
+        "additional_context": "hook-input-or-context-invalid"
+      },
+      "selected_policy": "block",
+      "selected_policy_receipts": 1,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": 0.155055,
+      "timeout_observation": null
+    },
+    {
+      "mode": "malformed-output",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-malformed-output.json",
+        "sha256": "f6088794c4d27d5306b396271df09bac857c0f88ec96afa9fde0aa1ecaefdf78"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-2413cbb7-e050-4768-bf9c-285eda6568bb-7\nfc_07fab70b-8c19-9631-b043-096de08dcb69_0",
+      "post_status": "intentional-test-malformed-output",
+      "wire": null,
+      "selected_policy": null,
+      "selected_policy_receipts": 0,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": null,
+      "timeout_observation": null
+    },
+    {
+      "mode": "timeout",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-timeout.json",
+        "sha256": "b7d0eda0d75287d0d63dc883188854b80adabe486d0b14cf7d7202b780953780"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-08e0210c-ad66-4914-a782-dbd7209b0e7d-9\nfc_1075a75c-6f68-9724-8918-ee0eb8b3280f_0",
+      "post_status": "completed",
+      "wire": {
+        "additional_context": "delivery-bindings-current-review-separate"
+      },
+      "selected_policy": "advisory",
+      "selected_policy_receipts": 1,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": 8.263741,
+      "timeout_observation": {
+        "declared_hook_bound_seconds": 5,
+        "injected_sleep_seconds": 8,
+        "observed_callback_elapsed_seconds": 8.263741,
+        "receipt_after_declared_bound": true,
+        "explicit_native_timeout_message_observed": false,
+        "selected_terminal_retention_complete": true,
+        "effective_native_deadline": "unqualified"
+      }
+    },
+    {
+      "mode": "crash",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-crash.json",
+        "sha256": "51157c54ec804acce6b4d0a606c0fef637e2eb2007daabddc5d51e38a473700a"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-4f7cf681-dc26-4e00-8326-a68dc2aa9c84-11\nfc_80529f00-c986-913c-ab7b-aed385c9d13e_0",
+      "post_status": "intentional-test-crash-exit-17",
+      "wire": null,
+      "selected_policy": null,
+      "selected_policy_receipts": 0,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": null,
+      "timeout_observation": null
+    },
+    {
+      "mode": "unsupported-codec",
+      "case": {
+        "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cases/posttool-unsupported-codec.json",
+        "sha256": "175ce4ee020ea6c0e15df4fc898bf63726b57ecea823470e6bdd0858b3aadcff"
+      },
+      "marker_before_post": true,
+      "marker_exact": true,
+      "native_tool_use_id": "call-1fb9c965-cfe8-4278-bbee-dbb7f7b33b47-13\nfc_4743104f-8bf6-9582-8a15-9e116386ea7b_0",
+      "post_status": "completed",
+      "wire": {},
+      "selected_policy": "block",
+      "selected_policy_receipts": 1,
+      "prevention_or_rollback": "unqualified",
+      "post_callback_elapsed_seconds": 0.254065,
+      "timeout_observation": null
+    }
+  ],
+  "all_markers_before_selected_post": true,
+  "prevention_or_rollback": "unqualified",
+  "unsupported_event_scope": "injected codec selector only; genuine unknown-host-event remains unqualified",
+  "scientific_QA": "unverified",
+  "native_exit_code": 0,
+  "monitor_exit_code": 0,
+  "temporal_process_capture": true,
+  "actual_exit_state_used": true,
+  "newline_scope": "actual native content LF / actual disk CRLF; vendor-internal attribution unqualified",
+  "qualified_process_union": 1542,
+  "owned_processes_live": 0,
+  "preexisting_apps_preserved": 27,
+  "legacy_raw_union_used_as_ownership": false,
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/cleanup.json",
+    "sha256": "f5f8bc524e1edd8f175819cd4f14302c6548a8f079bc86b83fef41dca1dbeb3d"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/process-final-audit.json",
+    "sha256": "1cd505db47b3430f22a23e6044de85c3677e202505c9419f5dbe6cd5bbb4d638"
+  },
+  "historical_preserved": 1010,
+  "protected_global_configs_unchanged": true,
+  "CLI_owned_state_hash_changed": true,
+  "global_direct_writes": false,
+  "source_kit_modified": false,
+  "full_native_gate": "unchecked",
+  "review": "inline; no independent reviewer",
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/frozen-brief.json",
+    "sha256": "e474d447f6a6c26dbdf8b50da0fef041bd8bc96a6f1db287742e94f5a5240ae9"
+  },
+  "source_check": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/final-source-check.json",
+    "sha256": "f7bc3ec86724f8326c363a0edd010f0fd5eafd4d1ea2ac992bae9bff76eb0467"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/verify-posttool-observations.py",
+    "sha256": "03b61e50e351833a89db9d179511222211e065e2eccc55832e2b5e96c40e3b41"
+  },
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-enter-submit.json",
+      "sha256": "1288c86d9702b05abefc3fc6aa845934f2515bcf8e401987da0380406d3d855e"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-poll-01.json",
+      "sha256": "a30debae7dc53be80515fa2c95130ac7a9fb45b84474ec730167685dd9f48698"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-poll-02.json",
+      "sha256": "c5b1c18dbbca628c0d7bea258aa1530d0bfa098e11131b6a983e273af3e52c44"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-poll-03.json",
+      "sha256": "0ee1de21c2ec8947a880df90cdf57ad23150bbcb01aa59fca493572492492ef3"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-poll-04.json",
+      "sha256": "7b9384b020d79a3dcaf84e424795e9a651dedb186757c37871450f9d9bd038f0"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-prompt-submit.json",
+      "sha256": "1ba370f074cf438757a997c47ac737209006971cabf312744bb9f1bc3a81d1ee"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-01-prompt-text.json",
+      "sha256": "26c6bf5b7b895361d4c91cd50c1cc8db0e676db45c315794ce15980ac9a2bdbd"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-02-poll-01.json",
+      "sha256": "9d00a5795045bb2e94cc1c388c74ea5afd9f76fbd19635f4c1557a5fd9a36b61"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-02-prompt-paste.json",
+      "sha256": "20a2451a05bd4d7ed5b508307c48f25a0a9182ce7b96489b27291ba3c8781134"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-02-prompt-submit.json",
+      "sha256": "c075354d866ffad3e00ae95b1f7cf44779c55ab682a15db259b0e6ce73116fa7"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-02-prompt-text.json",
+      "sha256": "2536ac56b410a9042b9cd286e4534faf621004bb60cd296f87324f1ce290ba91"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-03-poll-01.json",
+      "sha256": "bd9b3778e27e33b5b27f70b42ee42e9de1adfad4598cf9688226cf349d15f26d"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-03-poll-02.json",
+      "sha256": "b2b68ea2a9c32936e8aa2b42b09e957f92af32c04012c33d337b8b880bf34bd3"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-03-poll-03.json",
+      "sha256": "32d2646ed01dc472445bf31dbe756a1b1d0b6f95e875ccf3392681f97d3f2e48"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-03-prompt-paste.json",
+      "sha256": "832e6a6061207aae4323d9131cd55c70eb283a42ad8b89c77dd0aeb816ba5357"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-03-prompt-submit.json",
+      "sha256": "771a8b9e6682657f54a11b9561110904260e1c599081e7632b027fdf0d00c95c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-03-prompt-text.json",
+      "sha256": "5c702e3a6d7950f7e91138a5b222005c8e9e02bd2f8485d014a96d8b73d244e7"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-poll-01.json",
+      "sha256": "0041d2da994e360f5e86ab1bf6321c84b34b25bcea3926b9b190d07b8eeb95af"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-poll-02.json",
+      "sha256": "9a8e1750f25224c1e5be53aac5bd3bec4aad151456c44a17a13fc09e92389dc8"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-poll-03.json",
+      "sha256": "af801a89d91108d17252b8b86e19261b5000cf265886db4c0605cbe9e27caa77"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-poll-04.json",
+      "sha256": "92bf2ddcad7b7bd60fc2a8827fe8f4899a0b02f02f056737232689f1a1c5f1ea"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-prompt-paste.json",
+      "sha256": "72b357ea392627318d64c8713c53a7eaaa2bc06e6489b800f76c6e9d56f1d5f1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-prompt-submit.json",
+      "sha256": "d045725a3effac8a967803c288340c4f4b1e0b331941cf96551dae7db8c3dd75"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-04-prompt-text.json",
+      "sha256": "adcd05f82ec0b45b34b64ba34e9b3c5171044885bdbd5f8df7d90f68cc8d08a6"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-poll-01.json",
+      "sha256": "c307614349048a4fd17c91b3f145083511f2693b5a7b2df10a52dae808dc3cac"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-poll-02.json",
+      "sha256": "0a03140bdf07541966367b491f189115298669746f7b8d8c752b4a8c2bbc89a7"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-poll-03.json",
+      "sha256": "845ef933257d08744352ae6f50b91e049cb5b84cedccb928187623a618d39c7c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-poll-04.json",
+      "sha256": "eaec51cda6b9e4ec6b62ad73d1b57a0e31cf6c80a23906d6030846ed7bbc689c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-prompt-paste.json",
+      "sha256": "3f569653427f18d6fca4704cd5cbee9c9e8815521ea9307bf5c53a2f8c5298dc"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-prompt-submit.json",
+      "sha256": "6e129d468b818fd82093a26758fc0b2418e33204e6d1bff9dae05873c48d25c3"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-05-prompt-text.json",
+      "sha256": "19d04bcede9af2cd78f061939724477197752e98a9d6331f1c5f159f7a3e1319"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-poll-01.json",
+      "sha256": "531cd08f23ac69dadf817a7d993f5a614459df3c21f820b40852eb9db3248774"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-poll-02.json",
+      "sha256": "71316b982a7bf8dbdf1e53a811ff38369b50e48546d16399354a98c6641c8512"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-poll-03.json",
+      "sha256": "dd41d7930f39ada7ffbfee3718fa9e1b679e671876eee86e4aeec85e613c0eaa"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-poll-04.json",
+      "sha256": "4d0818842ff96725802e3a0061752c2238ada611e69865ff50595a8952b3f521"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-prompt-paste.json",
+      "sha256": "e7a93ed5cf051955b07a05b2be5e9c7acdc223cb83831309e71936108b86c18f"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-prompt-submit.json",
+      "sha256": "aa40034af59346074814d5d025c594e216702d9c1d252cb8963dc4ea818e35df"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-06-prompt-text.json",
+      "sha256": "1bebe3cf634aa36d11d1915225db37033e18295fe4000566b2d667395f137b5b"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-poll-01.json",
+      "sha256": "333f1d006819b5f835897bf8bfc65895410b963242442d9531b7014ff5cb6af3"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-poll-02.json",
+      "sha256": "50f28c7b507ec16792894e71bc14d2437c06c42d1b945c88df3230a76f07122b"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-poll-03.json",
+      "sha256": "d373fbd587a185deb0dc3d73e27f1e067f2c7720538a6e604c214d97435dfb4d"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-poll-04.json",
+      "sha256": "982870c5d1db12e635a0589e62fba37493dbef00025507075428d30bc294156a"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-prompt-paste.json",
+      "sha256": "2278cc9266f2d880e775c8189c8ed8182783d9bc61443206ba35a6c0a87b0531"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-prompt-submit.json",
+      "sha256": "ff5d154b48844cd39251341a845ceee235f18abdceaa5150f22bc576350ac9a7"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-07-prompt-text.json",
+      "sha256": "26c351dc413aba60b6589ad4ed0f7e5b1bde56fbd8e53924a1fd88af276202c1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-exit-completed.json",
+      "sha256": "f826a6fbb6c84b865302984b1f9543d5d414c64a176e1481671793a4c569d222"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-exit-poll-01.json",
+      "sha256": "f826a6fbb6c84b865302984b1f9543d5d414c64a176e1481671793a4c569d222"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-exit-submit.json",
+      "sha256": "29ac613fbefed3f08e19d716ebc5bbe2e954e41b9d2848f7d4f61f6bf68c93c0"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-exit-text.json",
+      "sha256": "e3fc67f08ac7cc186a6d0e52afe7ef0f47bcab9f503eb314ea6b93f6143723f6"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/terminal-start.json",
+      "sha256": "58037a0fd1ae8e81fa0cdc9df6a8c55830ce71ff3bd34beca3690e788004cbaa"
+    }
+  ],
+  "terminal_truncated": true
+}

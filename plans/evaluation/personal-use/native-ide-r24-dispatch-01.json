@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "artifact_type": "r24-native-ide-dispatch",
+  "recorded_at_utc": "2026-10-02 20:42:50 UTC",
+  "candidate_revision": "24",
+  "source_lock_hash": "57e9a049e12d33c0f73b34d7eb13ebae07c18cd9f0c08f96ea9e6d22cf9f7fa0",
+  "project": "C:/Users/USER/Downloads/test-skill",
+  "runs": [
+    {
+      "surface": "cursor",
+      "window_id": 67176300,
+      "chat_title": "Native integration probe report",
+      "requested_model": "Grok 4.7 Extra High",
+      "ui_selected_model": "Grok 4.7 Extra High",
+      "ui_environment": "This PC",
+      "effective_model": null,
+      "effective_effort": null,
+      "prompt": "[removed: raw runtime content]",
+      "prompt_sha256": "16e62a1d850a5f6c3680dac342bc634e3c766f7145ed25c782165312a316e1de",
+      "input_confirmed": true,
+      "dispatch_confirmed": true,
+      "dispatch_observation": "prompt appeared in conversation; composer emptied; Stop generation appeared; agent stated rereading r24 and explored 11 files/1 search",
+      "state_at_dispatch": "running",
+      "output_folder": "native/cursor-grok-r24",
+      "controller_acceptance": "pending artifact review",
+      "fallback": false,
+      "input_history": [
+        "indexed set_value confirmed exact prompt",
+        "indexed Send click left full composer and no run; not confirmed submitted",
+        "screenshot-coordinate Send click confirmed running"
+      ]
+    },
+    {
+      "surface": "agy",
+      "window_id": 6357010,
+      "chat_title": "World Bank Data Analysis Report",
+      "requested_model": "Gemini 3.8 Flash High",
+      "ui_selected_model": "Gemini 3.8 Flash High",
+      "ui_project": "test-skill",
+      "effective_model": null,
+      "effective_effort": null,
+      "prompt": "[removed: raw runtime content]",
+      "prompt_sha256": "ae804871b993f5f82d948ef6ccdd6f8cf987549623a15769252726b342d0cf60",
+      "input_confirmed": true,
+      "dispatch_confirmed": true,
+      "dispatch_observation": "new r24 prompt appeared as conversation bubble; screenshot showed Working, spinner and red stop control; composer emptied visually",
+      "state_at_dispatch": "running",
+      "output_folder": "native/agy-gemini-r24",
+      "controller_acceptance": "pending artifact review",
+      "fallback": false,
+      "input_history": [
+        "indexed set_value did not change visible empty composer",
+        "coordinate click verified caret in input",
+        "literal type_text confirmed exact prompt",
+        "screenshot-coordinate Send click showed active run"
+      ]
+    }
+  ],
+  "current_app_batch_retry": "not started; explicit authorization after automatic approval review rejection still pending",
+  "screenshot_payloads_saved": false,
+  "evidence_limits": [
+    "native UI dispatch observation only",
+    "selected model labels are separate from effective provider telemetry",
+    "outputs remain unaccepted until actual content review",
+    "unavailable visual engine leaves SVG output contract unmet"
+  ]
+}

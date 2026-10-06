@@ -1,0 +1,76 @@
+{
+  "accepted_task_count": 0,
+  "agent_cases_not_run": 156,
+  "cost": "unknown",
+  "cost_per_accepted_task": "undefined",
+  "deterministic": {
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1050-r36-shell-guard-attempt-02\\direct-deterministic-suite.py",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1050-r36-shell-guard-attempt-02\\deterministic-r36-attempt-01-suite.json"
+    ],
+    "errors": [],
+    "exit_status": 0,
+    "failures": [],
+    "output_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-1050-r36-shell-guard-attempt-02\\commands\\deterministic-r36-attempt-01.stderr",
+    "output_sha256": "f634197475182d279c14cd08a1e3d267feea3176d1b91cd301b09d94e7a33260",
+    "pid": 18412,
+    "process_cleanup": "owned-process-group-closed",
+    "seconds": 668.5320000000065,
+    "skipped": [
+      {
+        "reason": "host does not permit a real symlink fixture: [WinError 1314] A required privilege is not held by the client: 'C:/Users/USER\\\\AppData\\\\Local\\\\Temp\\\\nckh-8e24604747814a1b8397a04caf454595\\\\probe\\\\input.svg' -> 'C:/Users/USER\\\\AppData\\\\Local\\\\Temp\\\\nckh-8e24604747814a1b8397a04caf454595\\\\probe\\\\linked.svg'",
+        "test": "tests.evidence.test_visual_engine_binding.VisualEngineBindingTests.test_symlink_observation_is_rejected"
+      }
+    ],
+    "status": "completed-unreviewed",
+    "successful": true,
+    "tests": 192
+  },
+  "evidence_class": "deterministic",
+  "human_freeze": {
+    "acceptable_economics": "pending",
+    "case_ids_frozen": true,
+    "metrics": [
+      "raw pass/fail/pending counts",
+      "routing confusion",
+      "accepted unsupported claims",
+      "factual fidelity",
+      "spawn count/benefit",
+      "requested/resolved/effective model",
+      "latency",
+      "tokens/cost coverage",
+      "human edit minutes"
+    ],
+    "paid_budget": "not-authorized",
+    "quality_thresholds": "pending",
+    "reviewers": "pending",
+    "sample_rights": "pending"
+  },
+  "identities": 39,
+  "installer_acceptance_cases": 10,
+  "installer_os_qualification": "unverified",
+  "native_cells_not_run": 224,
+  "native_invocation_cells": 224,
+  "native_qualification": "separate",
+  "previous_attempt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\deterministic-r34-attempt-01.json",
+  "qualification": "pending",
+  "recorded_at": "2026-10-05T04:03:51.240992+00:00",
+  "required_families": 19,
+  "rubric_approval": "pending",
+  "rubrics": 5,
+  "schema_version": 1,
+  "skill_cases": 156,
+  "source_files_pinned": 281,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_revision": "36",
+  "source_unchanged": true,
+  "status": "pass",
+  "structural_validation": "pass",
+  "writer_native_cells": 256,
+  "writer_observed_behavior": "unverified",
+  "writer_scenario_cells": 20
+}

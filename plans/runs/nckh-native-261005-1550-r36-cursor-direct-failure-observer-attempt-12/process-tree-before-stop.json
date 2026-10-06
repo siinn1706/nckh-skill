@@ -1,0 +1,69 @@
+{
+  "root_pid": 32696,
+  "timestamp_utc": "2026-10-05T09:00:13.6342658Z",
+  "processes": [
+    {
+      "ProcessId": 32696,
+      "ParentProcessId": 52796,
+      "Name": "node.exe",
+      "creation_utc": "2026-10-05T08:55:40.3377030Z",
+      "CommandLine": "\"C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\node.exe\" C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\index.js --force --trust --sandbox disabled --workspace C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --model grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]"
+    },
+    {
+      "ProcessId": 22920,
+      "ParentProcessId": 32696,
+      "Name": "node.exe",
+      "creation_utc": "2026-10-05T08:55:50.0545050Z",
+      "CommandLine": "C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\node.exe C:/Users/USER\\AppData\\Local\\cursor-agent\\versions\\2026.09.15-d2fe57e\\index.js worker-server"
+    },
+    {
+      "ProcessId": 4588,
+      "ParentProcessId": 22920,
+      "Name": "conhost.exe",
+      "creation_utc": "2026-10-05T08:55:50.0616420Z",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 26104,
+      "ParentProcessId": 22920,
+      "Name": "cmd.exe",
+      "creation_utc": "2026-10-05T08:55:50.9755760Z",
+      "CommandLine": "C:\\WINDOWS\\System32\\cmd.exe -y typescript-language-server --stdio"
+    },
+    {
+      "ProcessId": 38976,
+      "ParentProcessId": 26104,
+      "Name": "conhost.exe",
+      "creation_utc": "2026-10-05T08:55:50.9892760Z",
+      "CommandLine": "\\??\\C:\\WINDOWS\\system32\\conhost.exe 0x4"
+    },
+    {
+      "ProcessId": 58716,
+      "ParentProcessId": 32696,
+      "Name": "cmd.exe",
+      "creation_utc": "2026-10-05T08:56:30.7531660Z",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /d /s /c \"npx ^\"-y^\" ^\"illustrator-mcp-server^\"\""
+    },
+    {
+      "ProcessId": 20728,
+      "ParentProcessId": 58716,
+      "Name": "node.exe",
+      "creation_utc": "2026-10-05T08:56:30.8975300Z",
+      "CommandLine": "\"C:\\Program Files\\nodejs\\\\node.exe\"  \"C:/Users/USER\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npx-cli.js\" \"-y\" \"illustrator-mcp-server\""
+    },
+    {
+      "ProcessId": 27908,
+      "ParentProcessId": 20728,
+      "Name": "cmd.exe",
+      "creation_utc": "2026-10-05T08:56:33.1250870Z",
+      "CommandLine": "C:\\WINDOWS\\system32\\cmd.exe /d /s /c illustrator-mcp-server"
+    },
+    {
+      "ProcessId": 44852,
+      "ParentProcessId": 27908,
+      "Name": "node.exe",
+      "creation_utc": "2026-10-05T08:56:33.1598520Z",
+      "CommandLine": "\"node\"   \"C:/Users/USER\\AppData\\Local\\npm-cache\\_npx\\151d8ca2cdcb4ff9\\node_modules\\.bin\\\\..\\illustrator-mcp-server\\dist\\index.js\" "
+    }
+  ]
+}

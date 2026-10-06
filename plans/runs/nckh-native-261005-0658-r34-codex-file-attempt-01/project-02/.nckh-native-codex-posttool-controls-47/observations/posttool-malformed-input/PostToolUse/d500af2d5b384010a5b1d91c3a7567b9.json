@@ -1,0 +1,56 @@
+{
+  "attempt": "posttool-malformed-input",
+  "completed_at": "2026-10-05T19:57:30.936405+00:00",
+  "controller_expected_marker_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "event": "PostToolUse",
+  "fault_origin": "controller-after-genuine-callback",
+  "input_fields": [
+    "cwd",
+    "hook_event_name",
+    "model",
+    "permission_mode",
+    "session_id",
+    "tool_input",
+    "tool_name",
+    "tool_response",
+    "tool_use_id",
+    "transcript_path",
+    "turn_id"
+  ],
+  "input_sha256": "c5027b3e5baf118a63576eb28b722a8852fb6001a765d6a705ca9c06fc899e7f",
+  "input_size": 725,
+  "marker_at_callback_start_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "marker_exists_at_callback_start": true,
+  "mode": "malformed-input",
+  "native_command_sha256": "8972c7c17d914ec63e135c3f1ea772a8ccef0640737fda3a73224eee95e7af19",
+  "native_direct_path_fields": {},
+  "native_model": "gpt-5.6-luna",
+  "native_permission_mode": "bypassPermissions",
+  "native_session_hash": "273141ee8551b8fbc9f0e1608284a8b9756e7649018df3aed65dde9efdb19607",
+  "native_stop_hook_active": null,
+  "native_tool_input_type": "dict",
+  "native_tool_name": "apply_patch",
+  "native_tool_use_id": "exec-639a29d1-3d02-40ac-bcc3-1543a5498500",
+  "native_turn_id": "01a10da4-702f-7d10-b8b8-6a49bb6ba1c7",
+  "observer_pid": 52280,
+  "parent_pid": 41072,
+  "reported_event": "PostToolUse",
+  "runner_exit_code": 0,
+  "runner_exited": true,
+  "runner_output": {
+    "hookSpecificOutput": {
+      "additionalContext": "hook-input-or-context-invalid",
+      "hookEventName": "PostToolUse"
+    }
+  },
+  "runner_pid": 46244,
+  "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+  "selected": true,
+  "started_at": "2026-10-05T19:57:30.797612+00:00",
+  "status": "completed",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "98a2e9db13c223397906fb4fd91e9070d354360e256068a8a809394dce836a87",
+  "tool_input_fields": [
+    "command"
+  ]
+}

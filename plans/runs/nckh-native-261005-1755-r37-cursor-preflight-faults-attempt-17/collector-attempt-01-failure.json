@@ -1,0 +1,12 @@
+{
+  "timestamp_utc": "2026-10-05T11:06:13.2588051Z",
+  "action": "collect 1",
+  "exit_code": 1,
+  "failed_line": 58,
+  "error": "AssertionError: context_hash missing from the deliberate degraded input receipt",
+  "original_collector_sha256": "7fccf6d6ad4c63b9d666da25e4c86a85de413f279fb67b56a19e2cc0e97acea6",
+  "native_prompt_retries": 0,
+  "next_select_failed_before_prompt_intent": true,
+  "prompt_intent_2_exists": false,
+  "correction": "Bind degraded receipts by selected genuine callback/control/runner; retain missing context_hash explicitly; normal receipts still require exact context hash"
+}

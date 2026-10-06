@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "observed_at": "2026-10-03 Asia/Saigon",
+  "evidence_class": "native-ui-configuration-observation",
+  "project": "C:/Users/USER/Downloads/test-skill",
+  "source_revision": "22",
+  "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+  "targets": [
+    {
+      "surface": "cursor-ui",
+      "window_title": "Cursor Agents",
+      "project_label": "test-skill",
+      "environment_label": "This PC",
+      "requested_model": "Grok 4.7 Extra High",
+      "configured_model_label": "Grok 4.7 Extra High",
+      "allowed_models": [
+        "Grok 4.7 Extra High"
+      ],
+      "fallback_allowed": false,
+      "authority": "Direct user instruction: Cursor may test only Grok 4.7 Extra High",
+      "effective_model": null,
+      "run_status": "completed-output-observed-on-r14",
+      "probe_receipt": "plans/evaluation/personal-use/native/cursor-grok-neutral-r14-observed-final.json",
+      "candidate_run_status": "not-run"
+    },
+    {
+      "surface": "antigravity-ui",
+      "window_title": "Antigravity",
+      "project_label": "test-skill",
+      "environment_label": "Local",
+      "requested_model": "Gemini 3.8 flash high",
+      "configured_model_label": "Gemini 3.8 Flash High",
+      "effective_model": null,
+      "run_status": "completed-output-observed-on-r14",
+      "probe_receipt": "plans/evaluation/personal-use/native/agy-neutral-r14-observed-final.json",
+      "candidate_run_status": "not-run"
+    },
+    {
+      "surface": "chatgpt-local-app",
+      "requested_model": "all available models",
+      "configured_model_label": null,
+      "effective_model": null,
+      "run_status": "not-run",
+      "clarification": "User confirmed this means the current desktop application hosting this chat, with local test-skill project. Native application execution tools are the route; no desktop UI automation or chatgpt.com project is required.",
+      "historical_browser_probe": "Chrome inventory reports Codex auth token is unavailable; not a blocker for the clarified native local application route."
+    }
+  ],
+  "limitations": [
+    "UI labels prove selected settings only; effective provider telemetry remains unavailable.",
+    "Two native neutral-root probes completed on installed r14; new candidate qualification remains open."
+  ]
+}

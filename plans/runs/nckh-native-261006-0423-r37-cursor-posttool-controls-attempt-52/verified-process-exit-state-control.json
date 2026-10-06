@@ -1,0 +1,41 @@
+{
+  "status": "verified-real-owned-process-exit-state-control",
+  "started_utc": "2026-10-05T21:43:38.068475+00:00",
+  "ended_utc": "2026-10-05T21:43:38.627522+00:00",
+  "before": {
+    "pid": 16496,
+    "status": "active",
+    "creation_filetime_ticks": 134357102180743961,
+    "exit_code": 259,
+    "winerror": null
+  },
+  "after_with_handle_retained": {
+    "pid": 16496,
+    "status": "terminated",
+    "creation_filetime_ticks": 134357102180743961,
+    "exit_code": 0,
+    "winerror": null
+  },
+  "legacy_creation_ticks_after_exit": 134357102180743961,
+  "legacy_times_can_remain_queryable": true,
+  "actual_process_exit_code": 0,
+  "process_stop_performed": false,
+  "native_model_prompts": 0,
+  "scope": "one controller-owned non-model Python process; actual GetExitCodeProcess observation",
+  "native52_monitor_failure_regraded": false,
+  "native52_closing_race_cause": "supported inference; raw native failure preserved",
+  "bindings": [
+    {
+      "path": "plans/runs/nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52/native-process-state.py",
+      "sha256": "6acf0b6a34a7e1684774386f8de7a8c01646b07d58376c227ee3034a703c61ee"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52/owned-cli-command.py",
+      "sha256": "94e1214c0e813201d66807e18204f7457ed9e111872fb3a0f7b3b6a34bb66079"
+    },
+    {
+      "path": "plans/runs/nckh-native-261006-0423-r37-cursor-posttool-controls-attempt-52/verify-process-exit-state.py",
+      "sha256": "f04250d338a4c16129dd1abc02f860e1b7928505cc275fadde5075ffef4325c1"
+    }
+  ]
+}

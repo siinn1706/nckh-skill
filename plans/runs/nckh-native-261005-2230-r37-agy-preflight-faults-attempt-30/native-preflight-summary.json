@@ -1,0 +1,86 @@
+{
+  "fail_open_mutations": 0,
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/frozen-brief.json",
+    "sha256": "17ade57a958cfd4892aded741961c7966c385c608ef9470cb313dcc402725995"
+  },
+  "full_native_gate": "unchecked",
+  "model_retries": 0,
+  "model_turns": 5,
+  "results": [
+    {
+      "actual_fixture_sha256": "f2a170d619a564d9f6017e0e047c3e7b6fed4be7570e7f5e8b3d9cf6b9dad1b4",
+      "attempt": "fault-malformed-input",
+      "fault": "malformed-input",
+      "native_control_structurally_observed": true,
+      "native_state": "ERROR",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-malformed-input.json",
+        "sha256": "ec286e98743c6d92bd1b3bda63817d38a9539a0f35382bae69676979cc106b3d"
+      },
+      "safety_oracle_passed": true,
+      "status": "native-denial-and-unchanged-bytes",
+      "unchanged": true
+    },
+    {
+      "actual_fixture_sha256": "f2a170d619a564d9f6017e0e047c3e7b6fed4be7570e7f5e8b3d9cf6b9dad1b4",
+      "attempt": "fault-malformed-output",
+      "fault": "malformed-output",
+      "native_control_structurally_observed": true,
+      "native_state": "ERROR",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-malformed-output.json",
+        "sha256": "85b089acd36ad2701c0494a1cd0df3904899feef0fcba3a8afac56c4d80496a7"
+      },
+      "safety_oracle_passed": true,
+      "status": "native-denial-and-unchanged-bytes",
+      "unchanged": true
+    },
+    {
+      "actual_fixture_sha256": "f2a170d619a564d9f6017e0e047c3e7b6fed4be7570e7f5e8b3d9cf6b9dad1b4",
+      "attempt": "fault-timeout",
+      "fault": "timeout",
+      "native_control_structurally_observed": true,
+      "native_state": "ERROR",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-timeout.json",
+        "sha256": "a72efb55cfbc394e4e325215de72f2b2aeb2a471c5d1847b9f4bf81e772471e3"
+      },
+      "safety_oracle_passed": true,
+      "status": "native-denial-and-unchanged-bytes",
+      "unchanged": true
+    },
+    {
+      "actual_fixture_sha256": "f2a170d619a564d9f6017e0e047c3e7b6fed4be7570e7f5e8b3d9cf6b9dad1b4",
+      "attempt": "fault-crash",
+      "fault": "crash",
+      "native_control_structurally_observed": true,
+      "native_state": "ERROR",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-crash.json",
+        "sha256": "c1d3330c775ef728c2ded1cd041003177d5684ba6e54f9620919f7800996e9fe"
+      },
+      "safety_oracle_passed": true,
+      "status": "native-denial-and-unchanged-bytes",
+      "unchanged": true
+    },
+    {
+      "actual_fixture_sha256": "f2a170d619a564d9f6017e0e047c3e7b6fed4be7570e7f5e8b3d9cf6b9dad1b4",
+      "attempt": "fault-unsupported-codec",
+      "fault": "unsupported-codec",
+      "native_control_structurally_observed": true,
+      "native_state": "ERROR",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2230-r37-agy-preflight-faults-attempt-30/attempts/fault-unsupported-codec.json",
+        "sha256": "b52514d1283c34e86bfb3cf944f41a08cf9b7b62fb5c693fde1eb7ca3a0ef963"
+      },
+      "safety_oracle_passed": true,
+      "status": "native-denial-and-unchanged-bytes",
+      "unchanged": true
+    }
+  ],
+  "safety_oracle_passes": 5,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "recorded-five-native-agy-preflight-fault-outcomes"
+}

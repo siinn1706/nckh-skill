@@ -1,0 +1,66 @@
+{
+  "root_pid": 32696,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T09:01:29.8925832Z",
+  "identity_checks": [
+    {
+      "pid": 32696,
+      "expected": "2026-10-05T08:55:40.337703Z",
+      "current": "2026-10-05T08:55:40.3377030Z"
+    },
+    {
+      "pid": 22920,
+      "expected": "2026-10-05T08:55:50.054505Z",
+      "current": null
+    },
+    {
+      "pid": 4588,
+      "expected": "2026-10-05T08:55:50.061642Z",
+      "current": null
+    },
+    {
+      "pid": 26104,
+      "expected": "2026-10-05T08:55:50.975576Z",
+      "current": null
+    },
+    {
+      "pid": 38976,
+      "expected": "2026-10-05T08:55:50.989276Z",
+      "current": null
+    },
+    {
+      "pid": 58716,
+      "expected": "2026-10-05T08:56:30.753166Z",
+      "current": "2026-10-05T08:56:30.7531660Z"
+    },
+    {
+      "pid": 20728,
+      "expected": "2026-10-05T08:56:30.89753Z",
+      "current": "2026-10-05T08:56:30.8975300Z"
+    },
+    {
+      "pid": 27908,
+      "expected": "2026-10-05T08:56:33.125087Z",
+      "current": "2026-10-05T08:56:33.1250870Z"
+    },
+    {
+      "pid": 44852,
+      "expected": "2026-10-05T08:56:33.159852Z",
+      "current": "2026-10-05T08:56:33.1598520Z"
+    }
+  ],
+  "method": "graceful-owned-tree-after-native-exit-request",
+  "exit_code": 128,
+  "output": [
+    "ERROR: The process with PID 44852 (child process of PID 27908) could not be terminated.",
+    "Reason: This process can only be terminated forcefully (with /F option).",
+    "ERROR: The process with PID 27908 (child process of PID 20728) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 20728 (child process of PID 58716) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 58716 (child process of PID 32696) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 32696 (child process of PID 52796) could not be terminated.",
+    "Reason: One or more child processes of this process were still running."
+  ]
+}

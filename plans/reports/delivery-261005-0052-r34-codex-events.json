@@ -1,0 +1,2111 @@
+{
+  "backend_model_attestation": "not-observed",
+  "baselines": {
+    "configuration_route": "CLI sessionFlags; project hook file absent after first CLI comparison; no global trust write",
+    "effort": "medium",
+    "file_sensitive_duplicate_observation": "First CLI case with matching project file had two callbacks per event; same invocation after preserving/removing that file had one per event. This differential supports project+inline source multiplicity on this CLI route but does not attest persisted project trust or plugin support.",
+    "host_version": "0.154.0",
+    "model_requested": "gpt-5.6-luna",
+    "plugin_duplicate": "unobserved",
+    "results": [
+      {
+        "attempt": "cli-allow-02",
+        "attempt_sha256": "abd157eb7b971906ff76ecebf3a1946281255452ff9895933f0796d81c8d87f3",
+        "callback_counts": {
+          "PostToolUse": 2,
+          "PreToolUse": 2,
+          "SessionStart": 2,
+          "Stop": 2,
+          "UserPromptSubmit": 2
+        },
+        "completed_shell_items": [
+          {
+            "exit_code": 0,
+            "status": "completed"
+          }
+        ],
+        "marker_exists": true,
+        "mode": "allow",
+        "native_exit_code": 0,
+        "pretool_policy_receipts": 1,
+        "pretool_same_native_tool": true
+      },
+      {
+        "attempt": "cli-invocation-only-allow-03",
+        "attempt_sha256": "c624868ce61ba5fc12bbe01e3609b23987c8d77378047e03ca9379c8d2e74ac8",
+        "callback_counts": {
+          "PostToolUse": 1,
+          "PreToolUse": 1,
+          "SessionStart": 1,
+          "Stop": 1,
+          "UserPromptSubmit": 1
+        },
+        "completed_shell_items": [
+          {
+            "exit_code": 0,
+            "status": "completed"
+          }
+        ],
+        "marker_exists": true,
+        "mode": "allow",
+        "native_exit_code": 0,
+        "pretool_policy_receipts": 1,
+        "pretool_same_native_tool": true
+      },
+      {
+        "attempt": "cli-policy-deny-01",
+        "attempt_sha256": "eef68e9eb8334de4823435c6b3437e5a3d6ca9f1bd2cd3511eecbb750cfc4b68",
+        "callback_counts": {
+          "PostToolUse": 0,
+          "PreToolUse": 1,
+          "SessionStart": 1,
+          "Stop": 1,
+          "UserPromptSubmit": 1
+        },
+        "completed_shell_items": [],
+        "marker_exists": false,
+        "mode": "policy-deny",
+        "native_exit_code": 0,
+        "pretool_policy_receipts": 1,
+        "pretool_same_native_tool": true
+      },
+      {
+        "attempt": "cli-duplicate-01",
+        "attempt_sha256": "428bcc352fea3ecf263adb8691d1e28271ca61dfbc208c178b9024718a469ed7",
+        "callback_counts": {
+          "PostToolUse": 1,
+          "PreToolUse": 2,
+          "SessionStart": 1,
+          "Stop": 1,
+          "UserPromptSubmit": 1
+        },
+        "completed_shell_items": [
+          {
+            "exit_code": 0,
+            "status": "completed"
+          }
+        ],
+        "marker_exists": true,
+        "mode": "duplicate",
+        "native_exit_code": 0,
+        "pretool_policy_receipts": 1,
+        "pretool_same_native_tool": true
+      }
+    ],
+    "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+    "source_revision": 34,
+    "status": "recorded-native-baselines",
+    "surface": "codex-cli-exec"
+  },
+  "billing": "not-observed",
+  "cleanup": {
+    "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\cleanup.json",
+    "sha256": "7cab8435f2f48594a7547b3129b956c2a7602a431540fe0d774d2461a103b499"
+  },
+  "configuration": "sessionFlags inline hooks, matching project file absent for the 25-case matrix",
+  "effort_requested": "medium",
+  "faults": [
+    {
+      "attempt": "sessionstart-malformed-input-01",
+      "callbacks": [
+        {
+          "path": "observations\\sessionstart-malformed-input-01\\PostToolUse\\fa68f71732f5403691e56bff4cded657.json",
+          "sha256": "1601e075e231c76096be005a6c0c2bd3118fec2934fd1ea2fc34292cc40b776a"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-input-01\\PreToolUse\\3317da23240b442587b99836a57668da.json",
+          "sha256": "4be12298bdc54468e615f20ae843b1062aa49611d1b29d9ef5d44f2e1dfb3e88"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-input-01\\SessionStart\\a35fa707a9c446f78b54cd6d87bf2c59.json",
+          "sha256": "8c794591b0b29645934603fb02ba50d1e6e67ec6caad9afecf4e94c61c2d5f78"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-input-01\\Stop\\5f57121162964a2da8d537aec05c4328.json",
+          "sha256": "985483754ee9d42999490434deb96d276bca6409c347939cd83113ad77d114f4"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-input-01\\UserPromptSubmit\\93301f096ab74fcbbc11ab57a3117e7b.json",
+          "sha256": "5245e4621f9efe10841b953629f55fad99dfde5f7d742f762e40277dcb4977ce"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-sessionstart-malformed-input-01.json",
+        "sha256": "d00957a78bc37d0d43e363347e12679a5526ea4a3e7bd0a6e60885a43ba1ab94"
+      },
+      "effort_requested": "medium",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\sessionstart-malformed-input-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53486,
+          "output_tokens": 204,
+          "reasoning_output_tokens": 41
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\sessionstart-malformed-input-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 0,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "hook-input-or-context-invalid",
+              "hookEventName": "SessionStart"
+            }
+          },
+          "started_at": "2026-10-04T18:12:56.199005+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "97fa5ad8b1fa672f26c72df962a32d3f8b028c33e20452cec02579a961f2feec",
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-malformed-output-01",
+      "callbacks": [
+        {
+          "path": "observations\\sessionstart-malformed-output-01\\PostToolUse\\aca310a436de4fdabffeae412ac305b2.json",
+          "sha256": "bc116e9dc7bb6762a9da367d7cee44023ccd1513487d508e75bc5983fed6bb32"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-output-01\\PreToolUse\\659f69f994cc45baa36a84162aca6934.json",
+          "sha256": "02490b39371b207d51db0331443e5f8f89f50228cf6e857791e0be7f24d53801"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-output-01\\SessionStart\\fac6fff668354888a344675b71df2bf2.json",
+          "sha256": "a271f7e6acde887227cc5cbde1b5676368a4fe6b2bdad0bb98aa483be00fa7df"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-output-01\\Stop\\873c878ae18744a2849b32a99032e3fa.json",
+          "sha256": "12a7651d5a4105013b4838753405239332142bd9155575dd9c20425049f25fa0"
+        },
+        {
+          "path": "observations\\sessionstart-malformed-output-01\\UserPromptSubmit\\0c2b2563d8c745b3b403e42750c22162.json",
+          "sha256": "8baa9ddf291703b5cc1fdec200b5c1ee9c347077277f737894fa953580286cf0"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-sessionstart-malformed-output-01.json",
+        "sha256": "632d4bb2ae56a9ed53836fd2a3626cdb4411ddad3b6608f618e0cf2015a7b4e2"
+      },
+      "effort_requested": "medium",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\sessionstart-malformed-output-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53460,
+          "output_tokens": 185,
+          "reasoning_output_tokens": 41
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\sessionstart-malformed-output-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:13:12.620007+00:00",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "44f3f29137099a3048b14d1975eda429b1347766449d386f7449c490fb2c4730",
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-timeout-01",
+      "callbacks": [
+        {
+          "path": "observations\\sessionstart-timeout-01\\PostToolUse\\3462d3263145476c9228c4eb9093b05e.json",
+          "sha256": "598d66c81dd225f45a979a1f7a97476dc1d18e0ecd59679ddc3fcbfe92b65204"
+        },
+        {
+          "path": "observations\\sessionstart-timeout-01\\PreToolUse\\affbdb651957408ba781fdbf123bde91.json",
+          "sha256": "c47e4ec3cf6d5ad2faadc3954cba593baa94411cf37f5255c62cafe082a297af"
+        },
+        {
+          "path": "observations\\sessionstart-timeout-01\\SessionStart\\70f63fe9efb745e29733ff994d0c21ea.json",
+          "sha256": "2b7069a2cbcf5f5db141a555bdd701ba2750339f494b54bc986ee2c575f7f4d2"
+        },
+        {
+          "path": "observations\\sessionstart-timeout-01\\Stop\\6983868a928849e68c735edecce507b0.json",
+          "sha256": "014b2751168a8e7f42331d624507d86190d9cd12e2ef16b3e0c42161b77a8c32"
+        },
+        {
+          "path": "observations\\sessionstart-timeout-01\\UserPromptSubmit\\10db96a4f33e4177af0f811425c4ec5f.json",
+          "sha256": "ac708f35b68f0e97e7bcd05ecf200cd7b44dc32dba8deadaa895d478dcc2397f"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-sessionstart-timeout-01.json",
+        "sha256": "07615c2e972284230411299483c8a6aac098a31f65ae5e678d1aec5d33343a74"
+      },
+      "effort_requested": "medium",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "fault": "timeout",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\sessionstart-timeout-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_6",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53469,
+          "output_tokens": 215,
+          "reasoning_output_tokens": 54
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\sessionstart-timeout-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:13:29.471898+00:00",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "e0f9c3cd4207cfe1fab505eae0b481dafbd644536b7540f00201b8e500406cad",
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-crash-01",
+      "callbacks": [
+        {
+          "path": "observations\\sessionstart-crash-01\\PostToolUse\\5ecdc30444cf41bebe1daea17046ebe6.json",
+          "sha256": "40dfcbe9419c88c6552f05e8d762546698d037b6ecee99c7992ba173a017ef68"
+        },
+        {
+          "path": "observations\\sessionstart-crash-01\\PreToolUse\\ac62741e192a478c830e3f5e14fd444e.json",
+          "sha256": "b6af46188d38c6789faf263f9dd9550640b82033b753e683de73d8f3b19d74c1"
+        },
+        {
+          "path": "observations\\sessionstart-crash-01\\SessionStart\\7d4dd0e787674b0aa9a30d78d9b056d1.json",
+          "sha256": "fcbbad48c54664881ed3bf341e042ea9fee343150cce36fc46072371c2ee0c1b"
+        },
+        {
+          "path": "observations\\sessionstart-crash-01\\Stop\\c598cad36bda4151b622e1f392cf2222.json",
+          "sha256": "70627dacc02bcc8fb2b285ab3e3053cd64c12e640a25e051c6d4e6edf93ade89"
+        },
+        {
+          "path": "observations\\sessionstart-crash-01\\UserPromptSubmit\\6031c0286b7f491bbfcd3fcf3398022f.json",
+          "sha256": "1d99a53ddd4cd9049c6df6d93806cd2cce98d928392e977903b65bbc5156bbdb"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-sessionstart-crash-01.json",
+        "sha256": "5ecc021a4acf76de14b4e6d18fe0fe19ad4b40e26ddd52e7ea603593afe50ea4"
+      },
+      "effort_requested": "medium",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "fault": "crash",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\sessionstart-crash-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53492,
+          "output_tokens": 219,
+          "reasoning_output_tokens": 46
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\sessionstart-crash-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:13:47.552976+00:00",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "4aed6afe0a04f06d0ba411b30c730acd1ada681c48bc6b2a2edb1fa355916797",
+      "status": "completed"
+    },
+    {
+      "attempt": "sessionstart-unsupported-codec-01",
+      "callbacks": [
+        {
+          "path": "observations\\sessionstart-unsupported-codec-01\\PostToolUse\\d2d4b0b6949242a7922115ab79be4f14.json",
+          "sha256": "69fc94446faf87bc703fece3f41369262f662177c01280b43b8a4b1d2c95109c"
+        },
+        {
+          "path": "observations\\sessionstart-unsupported-codec-01\\PreToolUse\\e18430c4304443dabfc5e3e7deff1030.json",
+          "sha256": "64f145e49cde49aa11cfe22670e678c92d04fa0d39b1a09e2d063c36f035ba0f"
+        },
+        {
+          "path": "observations\\sessionstart-unsupported-codec-01\\SessionStart\\b5acc8064daf4c62ba6b7592437de33e.json",
+          "sha256": "5fed51e5892c04933e5bbe26b361322bcdab0534f3717920dc3386f3369f9599"
+        },
+        {
+          "path": "observations\\sessionstart-unsupported-codec-01\\Stop\\44937ef4d2a94f84ad50f1f679cfb6e9.json",
+          "sha256": "b5897bf31f2c8b2417680969de22a146be2c4e904b360889fa41be00ba687db9"
+        },
+        {
+          "path": "observations\\sessionstart-unsupported-codec-01\\UserPromptSubmit\\500e264014704f04ba52d7a20928cf0f.json",
+          "sha256": "adce654c0bc1f61b08aad6c5cf128bc739f100195eefcc9712613cbfe890dab1"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-sessionstart-unsupported-codec-01.json",
+        "sha256": "e0f5e8d2e7b32de713cc5d5d2635fd801956bfefd39c333e1d98a3c2b7b85ad3"
+      },
+      "effort_requested": "medium",
+      "event": "SessionStart",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\sessionstart-unsupported-codec-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_6",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53517,
+          "output_tokens": 253,
+          "reasoning_output_tokens": 53
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\sessionstart-unsupported-codec-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "started_at": "2026-10-04T18:14:04.356750+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "74e0b95f0a4ee4a37c510430a7bf0f8e62adcb58144fa74779efa7b3a2d72be3",
+      "status": "completed"
+    },
+    {
+      "attempt": "userpromptsubmit-malformed-input-01",
+      "callbacks": [
+        {
+          "path": "observations\\userpromptsubmit-malformed-input-01\\SessionStart\\63b75003dc9841fea66f58795d679942.json",
+          "sha256": "d45ac51357abc1a8a8bc3a92d1552293ecd2bf66f9c7c1f67578de518d726eac"
+        },
+        {
+          "path": "observations\\userpromptsubmit-malformed-input-01\\UserPromptSubmit\\3daa95e9687a4ab583fcc9921940da19.json",
+          "sha256": "59708ef4f2b173694dddd11b72e0ea3d1e969f717be48342356e60931ee4da90"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-userpromptsubmit-malformed-input-01.json",
+        "sha256": "1f1d1bf8106a03829fe6b41d4dfc0ef1966c03ad071a23805f5e9a9c47fe4358"
+      },
+      "effort_requested": "medium",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "marker": false,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\userpromptsubmit-malformed-input-01.txt",
+      "marker_sha256": null,
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 0,
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "reasoning_output_tokens": 0
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\userpromptsubmit-malformed-input-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 0,
+          "runner_output": {
+            "decision": "block",
+            "reason": "hook-input-or-context-invalid"
+          },
+          "started_at": "2026-10-04T18:14:22.811242+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "14ff5f62564f6766f53a28f6605be74d4c3a5d822fa9913155db8ffbe916bb32",
+      "status": "completed"
+    },
+    {
+      "attempt": "userpromptsubmit-malformed-output-01",
+      "callbacks": [
+        {
+          "path": "observations\\userpromptsubmit-malformed-output-01\\PostToolUse\\140d2bdef5b446c3a08d7ef6eb5322f9.json",
+          "sha256": "c49dc7bc3c73e3e1e646f1a622c70458722ed11a7cb683f265b2247dbbefbe39"
+        },
+        {
+          "path": "observations\\userpromptsubmit-malformed-output-01\\PreToolUse\\816f2119b4c843159a8f48c4130790cc.json",
+          "sha256": "380f98956d4dd4f7c3374ff9f06ab9bbfca419ae42ba31db4522d8453915630b"
+        },
+        {
+          "path": "observations\\userpromptsubmit-malformed-output-01\\SessionStart\\d3ef6085b3574c94baf6834286b4a3fd.json",
+          "sha256": "5bc601a45435f016310001b3b2e94a56993efc37cc54944c99673b6ae9c123fe"
+        },
+        {
+          "path": "observations\\userpromptsubmit-malformed-output-01\\Stop\\90c729ad6a514c94967a5fa79b3eba5f.json",
+          "sha256": "90a2c8ba8efde3abb0b7af092786f32cd89f06beb601fe336bfc1f8681a2bc20"
+        },
+        {
+          "path": "observations\\userpromptsubmit-malformed-output-01\\UserPromptSubmit\\84e75ff9d83e4a58b345a96e3bda0d7b.json",
+          "sha256": "cfba68ed4957e226c0d303c2ee80512ba7e30a17d70dd136093bcc3188b014d5"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-userpromptsubmit-malformed-output-01.json",
+        "sha256": "715a5edfeb684aaad5e19413cf6a3a0e9984ebe7092aee3f98872fce09115caf"
+      },
+      "effort_requested": "medium",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\userpromptsubmit-malformed-output-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53479,
+          "output_tokens": 212,
+          "reasoning_output_tokens": 38
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\userpromptsubmit-malformed-output-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:14:27.073535+00:00",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "76a50e9c55b8c749ba3e42fed8832018dab493f1288ad41fda547694ec461104",
+      "status": "completed"
+    },
+    {
+      "attempt": "userpromptsubmit-timeout-01",
+      "callbacks": [
+        {
+          "path": "observations\\userpromptsubmit-timeout-01\\PostToolUse\\c4c72006e0c64c30ae7e1a505290a097.json",
+          "sha256": "2d24914fe94276e5379b2b5dffb3101f7747362fe3cbdba7466fbcfcba67a25a"
+        },
+        {
+          "path": "observations\\userpromptsubmit-timeout-01\\PreToolUse\\61a29782ee44476da6286e40925652b0.json",
+          "sha256": "3ff864452c08ebbfdcd3f3ae724bbdad8cfe0fa9007934bccf97a9f2fe964d98"
+        },
+        {
+          "path": "observations\\userpromptsubmit-timeout-01\\SessionStart\\d7756883df814437af1ca427625aa7b3.json",
+          "sha256": "aa2fbf647fa758087c6b8650bf988145d24a12b999559feef200da64170da156"
+        },
+        {
+          "path": "observations\\userpromptsubmit-timeout-01\\Stop\\fe6239a354934aafbbfbe4f73c2b91f3.json",
+          "sha256": "7d00fd836ea56cc8aed49731a4df76668592b80799ab3a898e379b8b6e1bfd4f"
+        },
+        {
+          "path": "observations\\userpromptsubmit-timeout-01\\UserPromptSubmit\\3b824dc785f648dab0f0b042f1530736.json",
+          "sha256": "78bdf07fdc457048eb558e061ab634be2d88ee9b0abad4d474e5eb2b854fb23e"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-userpromptsubmit-timeout-01.json",
+        "sha256": "4dc72b2dcf7e138e3bf3d45606b595423b49786f0b665f69a970363febedd0de"
+      },
+      "effort_requested": "medium",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "fault": "timeout",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\userpromptsubmit-timeout-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53482,
+          "output_tokens": 207,
+          "reasoning_output_tokens": 49
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\userpromptsubmit-timeout-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:14:45.363198+00:00",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "4d9ee9394ac8017d78000597f399c288d43a6d34d48bc297a6a20ab2955b4d4b",
+      "status": "completed"
+    },
+    {
+      "attempt": "userpromptsubmit-crash-01",
+      "callbacks": [
+        {
+          "path": "observations\\userpromptsubmit-crash-01\\PostToolUse\\4b29ded40c0b4e8e90fdffe222d01ffe.json",
+          "sha256": "b7dff64ded4fcf2e5fa5a794c0f1a28f8b4bf5f38ebca0b7ba5e29ebf1dd3836"
+        },
+        {
+          "path": "observations\\userpromptsubmit-crash-01\\PreToolUse\\1a111e54dbd64638b7abb3e4d1aae4af.json",
+          "sha256": "60d4d4148cc153f6ca0f360ce743ef5d75c49d8bdc0d4fadd81b5c9433c8e2da"
+        },
+        {
+          "path": "observations\\userpromptsubmit-crash-01\\SessionStart\\6d0e2efafdbf461c892d796b47ddb3e0.json",
+          "sha256": "e93e69d5af0bb8470c74649858c38a24bd0425c62d1c30f012e463925532012e"
+        },
+        {
+          "path": "observations\\userpromptsubmit-crash-01\\Stop\\7c2144f28eca4401b406524fb1251bf9.json",
+          "sha256": "c8c08543f7abb5aafd41d793856bdc76c90b0258be2a213ab0470a4488ab1815"
+        },
+        {
+          "path": "observations\\userpromptsubmit-crash-01\\UserPromptSubmit\\a7d944707e6a451abca7e93af0f95855.json",
+          "sha256": "05203d5a1cf2e0fd83a0bc544eb6d3e8e64c24c9859097c528159bcaeb869460"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-userpromptsubmit-crash-01.json",
+        "sha256": "58ebd8009e479c755e3f15b9eab6dabf9742667eec99e32eebcbe9a07b058c6c"
+      },
+      "effort_requested": "medium",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "fault": "crash",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\userpromptsubmit-crash-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_6",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53526,
+          "output_tokens": 264,
+          "reasoning_output_tokens": 58
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\userpromptsubmit-crash-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:15:03.925978+00:00",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "d58a9d59e8b8383f89eb8b30e24e1c4e6169b5ade326b551a9c27bf82749e258",
+      "status": "completed"
+    },
+    {
+      "attempt": "userpromptsubmit-unsupported-codec-01",
+      "callbacks": [
+        {
+          "path": "observations\\userpromptsubmit-unsupported-codec-01\\PostToolUse\\2560551a70ff4d0e9ffe047002c14638.json",
+          "sha256": "e6efd13c9ccc65d9cd5e237eb3f90d66421c9ad168c41997343553b57012dbf4"
+        },
+        {
+          "path": "observations\\userpromptsubmit-unsupported-codec-01\\PreToolUse\\d16a8290570141c49f2cf75d6ed9d477.json",
+          "sha256": "a5f381da81dec714dbd2cff90cca6878ed6f5200293783602f8eafa952b9098d"
+        },
+        {
+          "path": "observations\\userpromptsubmit-unsupported-codec-01\\SessionStart\\36c6eae2322b475aba8c31965c6d17c0.json",
+          "sha256": "97968a93f57ebde1c1f4bcf8ceb1dd5ea99459498d451b877ecef72feb732d49"
+        },
+        {
+          "path": "observations\\userpromptsubmit-unsupported-codec-01\\Stop\\6f9dc384cd294b5680bba51bb7eb952c.json",
+          "sha256": "db35889d7e3c33e329c86f5c09304dca2470240f8e473e42cfd53301efe1a603"
+        },
+        {
+          "path": "observations\\userpromptsubmit-unsupported-codec-01\\UserPromptSubmit\\7574e052a89446988d6de3a3ec9d1331.json",
+          "sha256": "4a273798b808b5e90b753e069d5b9596c972d9d4a1dc35c7813b28bc6b228237"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-userpromptsubmit-unsupported-codec-01.json",
+        "sha256": "e94d461ab1a240fa9469a71a0b5e6a75a4ad0202ad7c63246e0b8e88eb232212"
+      },
+      "effort_requested": "medium",
+      "event": "UserPromptSubmit",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\userpromptsubmit-unsupported-codec-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_4",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53438,
+          "output_tokens": 169,
+          "reasoning_output_tokens": 33
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\userpromptsubmit-unsupported-codec-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "started_at": "2026-10-04T18:15:21.570871+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "6e596ef2812a7d2d2edf323e73ff80bc364eb327524fb0cc4d1a52efe37ffb9a",
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-malformed-input-01",
+      "callbacks": [
+        {
+          "path": "observations\\pretooluse-malformed-input-01\\PreToolUse\\ab37fcec85e844718f82b9ba483c9d56.json",
+          "sha256": "d0a702eb1aee879fe9c6f9d19341b073d2a7ee5a239661f9dd773b804c4656d5"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-input-01\\SessionStart\\87db0bcd258d42ce8d7e59c7a57eee2e.json",
+          "sha256": "b029b546db40388ab155574209070dd2226bbefa5c133a75e5c66ceccb06f395"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-input-01\\Stop\\b43aabeb3e2d4d4dba1ab20b1abc1c7b.json",
+          "sha256": "80e2089e25e713cfb1f429ea6145588626ca63e934c894b9596e611305acb0ee"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-input-01\\UserPromptSubmit\\6b154e0c8408485c8e094e549e5d6a66.json",
+          "sha256": "a35403af3fbf912eb13b2bb77ff2446755ae48fb6ded35085ee290c5a45a2d23"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-pretooluse-malformed-input-01.json",
+        "sha256": "2e224b1bb06e3714e66cad89a262912b53a5c9d262758d295aa358eda145915b"
+      },
+      "effort_requested": "medium",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "marker": false,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\pretooluse-malformed-input-01.txt",
+      "marker_sha256": null,
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53605,
+          "output_tokens": 231,
+          "reasoning_output_tokens": 40
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\pretooluse-malformed-input-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 0,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "hookEventName": "PreToolUse",
+              "permissionDecision": "deny",
+              "permissionDecisionReason": "hook-input-or-context-invalid"
+            }
+          },
+          "started_at": "2026-10-04T18:15:44.130749+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "12098d856e326c69b9fe78299d4affcb8398a9212962eb4cf21ea662c94cb587",
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-malformed-output-01",
+      "callbacks": [
+        {
+          "path": "observations\\pretooluse-malformed-output-01\\PostToolUse\\ae156f3e32fe4a53acbef3cf06b4b03d.json",
+          "sha256": "519514a5d7e651dcf7dfba5dd78f96e04c79588d7a3b8522f02816b3155c6951"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-output-01\\PreToolUse\\0ac6cc693fc5471b8deda920f10a1fba.json",
+          "sha256": "9242d1a1c759848d315cc8c7008ae93a114930de99c3c3aa20acd137f7dee210"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-output-01\\SessionStart\\bf14df72c74845fcb90e3731f0284a75.json",
+          "sha256": "bd34918fa522bd263439e434df9966e53d8ea3553bf5fc0bd30a5703ff03be2f"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-output-01\\Stop\\23b6d551912e47a0a0a8ec62272fd8a5.json",
+          "sha256": "4e71f8d8ec3bdff5b50888fea1b399e1bd6d7d3374cdac8ec356d3cf8f47ceef"
+        },
+        {
+          "path": "observations\\pretooluse-malformed-output-01\\UserPromptSubmit\\6c0df2dccab24a9ca5139f6780a959d6.json",
+          "sha256": "81a1cb043306b617093ec8cc31e2a93ac4d639d5dd428fd7fab07a0ca06dbe34"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-pretooluse-malformed-output-01.json",
+        "sha256": "222cc78de91951f32b43ffb9706597696d8b63e8fb03250811a294ab72c8fd35"
+      },
+      "effort_requested": "medium",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\pretooluse-malformed-output-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53522,
+          "output_tokens": 239,
+          "reasoning_output_tokens": 32
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\pretooluse-malformed-output-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:16:00.433671+00:00",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "2f4c7bf655586f6bc93ed5a1697b2ed296b8a0619477d183fec3e2befff8e376",
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-timeout-01",
+      "callbacks": [
+        {
+          "path": "observations\\pretooluse-timeout-01\\PostToolUse\\d522f1c5474b43a8b36971a963d2880b.json",
+          "sha256": "27d9c2d6f5275c7c8ccc26aee8da79f2c415c249a43cf4fd42460777f4b1b2a9"
+        },
+        {
+          "path": "observations\\pretooluse-timeout-01\\PreToolUse\\2078c6c7d51340d0b046b1834db4a8c3.json",
+          "sha256": "abab8057d68a62133a59cdd50f407168fd600980dfdfe6ca7e619f9925c46593"
+        },
+        {
+          "path": "observations\\pretooluse-timeout-01\\SessionStart\\1d874f5a1d5c4dcaa00187a8e2122838.json",
+          "sha256": "661d9c96cd088c218b9595aa6b0b0907fa72996eba1673924143cabc3e726536"
+        },
+        {
+          "path": "observations\\pretooluse-timeout-01\\Stop\\f44871971ca34fd98bf3d8e1393bb553.json",
+          "sha256": "ae0f04b7c4fa48f0432e1ab262d6f5853bdef4ff5ace6fdb8818c93f7de887c8"
+        },
+        {
+          "path": "observations\\pretooluse-timeout-01\\UserPromptSubmit\\e03b3cff86bf466a9bbc1adc53f65c17.json",
+          "sha256": "0c258a7512599cb92b4724f1699dcc96339b70cc85dc688f8d4768921efc49ad"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-pretooluse-timeout-01.json",
+        "sha256": "e4b5a2c4f6097bfeb542670716bd399b479c8ce3a9601fe87c170078957e9bd0"
+      },
+      "effort_requested": "medium",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "timeout",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\pretooluse-timeout-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53517,
+          "output_tokens": 230,
+          "reasoning_output_tokens": 36
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\pretooluse-timeout-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:16:17.968932+00:00",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "ba2ea3d77da926e15c2c42081dd17aba19b63383e7c879a9016ad33863f0e2e9",
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-crash-01",
+      "callbacks": [
+        {
+          "path": "observations\\pretooluse-crash-01\\PostToolUse\\7da95332993d4deba3e0d8999995209d.json",
+          "sha256": "11f228d26be0fce356ae6903933a2a96e78dcad86b8999225a9d8130705826bf"
+        },
+        {
+          "path": "observations\\pretooluse-crash-01\\PreToolUse\\8f3a176324844e76a6fc84b1d0d923ef.json",
+          "sha256": "af2edd033f44a4f66b04b19677907adc2e7f18961ecbdcf18055177909dc4598"
+        },
+        {
+          "path": "observations\\pretooluse-crash-01\\SessionStart\\15a890e67ac445d2907739539a7ac43f.json",
+          "sha256": "f12b7ff970c83a237d50acaccebffcde1bd58b1bb90d3ad9c7a0ef20ff00941e"
+        },
+        {
+          "path": "observations\\pretooluse-crash-01\\Stop\\fd1a4af707c7402483ce0086d41894a7.json",
+          "sha256": "62f56592a207ba17c9f2a0524675f86d314a630dbbefa7f4f1641cacd3487948"
+        },
+        {
+          "path": "observations\\pretooluse-crash-01\\UserPromptSubmit\\54091cc94c664eb0bf04c560f06d55ef.json",
+          "sha256": "1cca23fcb4418f2ba349c6778370042b3cb9a608f82564939799d8b06af35d93"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-pretooluse-crash-01.json",
+        "sha256": "fefda83e94b59a78b20616349d117d45e84b6a1a7cd7cde5249d98520bcc7853"
+      },
+      "effort_requested": "medium",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "crash",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\pretooluse-crash-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53456,
+          "output_tokens": 173,
+          "reasoning_output_tokens": 39
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\pretooluse-crash-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:16:34.857064+00:00",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "a23f942fe8cd4273cf17e8fc5798c56480b7804f3360765b082f8910f5e87c3c",
+      "status": "completed"
+    },
+    {
+      "attempt": "pretooluse-unsupported-codec-01",
+      "callbacks": [
+        {
+          "path": "observations\\pretooluse-unsupported-codec-01\\PostToolUse\\c72e6fa0a1174dd3b726ad97d08a3e3c.json",
+          "sha256": "00603da70c875c566a6f56aa8664b0267581d2ebd03732e2fc1d5b65befca24c"
+        },
+        {
+          "path": "observations\\pretooluse-unsupported-codec-01\\PreToolUse\\3ee9420c349c4ff9be3ff8a6598ba26c.json",
+          "sha256": "c60aabbe9e6038087c0bfd6b60d9fb5381184f3e6e94cf48f8697bcdd8c00b7e"
+        },
+        {
+          "path": "observations\\pretooluse-unsupported-codec-01\\SessionStart\\987364d5638448e59e16b86af3e9c1b8.json",
+          "sha256": "c9aada82a63d7c2ce4909eb6ed1a60affd8e718aaf1cac23c09c37f72597494c"
+        },
+        {
+          "path": "observations\\pretooluse-unsupported-codec-01\\Stop\\3eb759987c3b48bfa11796b4bf46e93a.json",
+          "sha256": "9d828440234992019aa3db93de7ddcec2c084206b9a2f90668ae1ba175e0ad9c"
+        },
+        {
+          "path": "observations\\pretooluse-unsupported-codec-01\\UserPromptSubmit\\84243a3626164df0946b5d5633ed02a9.json",
+          "sha256": "13e8dfd7eff828131972d08a385469b24a152c094e7b54d601d5578158780a95"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-pretooluse-unsupported-codec-01.json",
+        "sha256": "0dab03fd3dde64ed9f932e060972eec14709a8d255c7c55edaa0a6e7e993c2e4"
+      },
+      "effort_requested": "medium",
+      "event": "PreToolUse",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\pretooluse-unsupported-codec-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53439,
+          "output_tokens": 153,
+          "reasoning_output_tokens": 30
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\pretooluse-unsupported-codec-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "started_at": "2026-10-04T18:16:51.365060+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "be2a2365cdf0904fb3b0043c48c269017ed10140e430412ec063139237e163d5",
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-malformed-input-01",
+      "callbacks": [
+        {
+          "path": "observations\\posttooluse-malformed-input-01\\PostToolUse\\6429bf811af9449cb7d8a9616227626b.json",
+          "sha256": "d2cef4444fbd9e217d56567d51275cd7cba12e77d94297e6fa9c42d564b1d814"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-input-01\\PreToolUse\\b28a8c8f4563472d9ed0dfa36e1707ec.json",
+          "sha256": "f92487442da6bf755e2cc7171e886a72996c90cf8268e8b9dc7a8842bab4a4ec"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-input-01\\SessionStart\\479f320c9843467db16b4f48150a9664.json",
+          "sha256": "dbfd0b1031f9d0f0cc76f465f5f9d814a6b29847a31ada85cfe07a48a16ad224"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-input-01\\Stop\\da26e9bfbabe4268a6b73244a4483e51.json",
+          "sha256": "14114f1866f5876f17d1f61b37c71ecfc3283b26476e028d3bcbd6c1708c2339"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-input-01\\UserPromptSubmit\\320cdcc25abd4eea9545564c408359a9.json",
+          "sha256": "a8570037486e1bac0511639204f8ca6efab07570e46dd42f4af3453bb244afb3"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-posttooluse-malformed-input-01.json",
+        "sha256": "379a2432b43c93bd98196a9293d87078b0dbc596e7f2c696487c3bb098c86e00"
+      },
+      "effort_requested": "medium",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\posttooluse-malformed-input-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_6",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53514,
+          "output_tokens": 235,
+          "reasoning_output_tokens": 47
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\posttooluse-malformed-input-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 0,
+          "runner_output": {
+            "hookSpecificOutput": {
+              "additionalContext": "hook-input-or-context-invalid",
+              "hookEventName": "PostToolUse"
+            }
+          },
+          "started_at": "2026-10-04T18:17:09.714624+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "4f95006f9ede69365b3b30aa6fda4ded6d6ac499719d38b4a19eb9c81f42b1c9",
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-malformed-output-01",
+      "callbacks": [
+        {
+          "path": "observations\\posttooluse-malformed-output-01\\PostToolUse\\a3d8455c67b9461ebd56d15f86bae20d.json",
+          "sha256": "27ae427fbdca8d7b5f65740fe745aa08941359fa5c85102b34de59c6a4d4ec2a"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-output-01\\PreToolUse\\f519d91695e24964bc0af593ab71b66f.json",
+          "sha256": "f59d7aabf85b622a60d3820d6abbb880116eb529211cb4a48286f4e5d90a9d37"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-output-01\\SessionStart\\8e8989afc78e473e81671bdd3d9abb78.json",
+          "sha256": "a29d7258c1f346f5c955e1271629501a7230720218dfd6e161727ca514d4f854"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-output-01\\Stop\\66a8b1d8b0d24b3a97b8ee022be00266.json",
+          "sha256": "1d63cdbb35b92766c0f0e9c9e171bb51f9d3f237a727fe4b4bfb11e35fd86291"
+        },
+        {
+          "path": "observations\\posttooluse-malformed-output-01\\UserPromptSubmit\\602b150ce37242688e7ca6a965ed23b4.json",
+          "sha256": "f881a83d4b6925922cbaa6feb06bb78d1b68c5081d85d3d90e366aec33e639b6"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-posttooluse-malformed-output-01.json",
+        "sha256": "e46a7c57436b80933e2f4b01e35427e38e2003f673fed5897739fa76e94479dd"
+      },
+      "effort_requested": "medium",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\posttooluse-malformed-output-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_6",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53507,
+          "output_tokens": 235,
+          "reasoning_output_tokens": 39
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\posttooluse-malformed-output-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:17:25.577154+00:00",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "07e1e248488c623caebc17630447fcbfc48af371a1b70d83deb79f5819f6426c",
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-timeout-01",
+      "callbacks": [
+        {
+          "path": "observations\\posttooluse-timeout-01\\PostToolUse\\a39df563182e49f5a1cc27dc1deabadc.json",
+          "sha256": "e04f23c549f2ab26c446a277c0131e475870ea34bd774653b7ad338e659b8074"
+        },
+        {
+          "path": "observations\\posttooluse-timeout-01\\PreToolUse\\9f264f0ef2f84822a4558048741d8fd1.json",
+          "sha256": "272329220e212f4ad015c42c726aa0dfadf28a67a5bb1b57b441ea3af1d6cc2c"
+        },
+        {
+          "path": "observations\\posttooluse-timeout-01\\SessionStart\\0264111bf08c418bbe35f3fe567a46dc.json",
+          "sha256": "01798485783b243c5745d81ac5d7d3f0b31a4c15b67679273692d6fd27906bfc"
+        },
+        {
+          "path": "observations\\posttooluse-timeout-01\\Stop\\ae91f0c540554780b09153b45ab9d445.json",
+          "sha256": "75e772b4c1f8810f30382ba8a8053429a1668bd3987528a76ccd3922aff7d05a"
+        },
+        {
+          "path": "observations\\posttooluse-timeout-01\\UserPromptSubmit\\8f824f35e6eb46e38cf2f1d662a68338.json",
+          "sha256": "fef43430aaae7adbe756ef95e2fb18ff0bcbfd0aecc76ed5123f4d3c6cd450f9"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-posttooluse-timeout-01.json",
+        "sha256": "8ad426c91b8235f2893d4ec6f7b4b60931135f191faeb11e035d34de0cec82a6"
+      },
+      "effort_requested": "medium",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "timeout",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\posttooluse-timeout-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53492,
+          "output_tokens": 212,
+          "reasoning_output_tokens": 29
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\posttooluse-timeout-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:17:41.983686+00:00",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "42e1b8e26520d56b7a47b42ba54fb4df24eacd7884e716757b07d9dcf771dfa5",
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-crash-01",
+      "callbacks": [
+        {
+          "path": "observations\\posttooluse-crash-01\\PostToolUse\\5774d6c42d94469c89e4a2578aaf486e.json",
+          "sha256": "dc667d22ff551a2f46b339061f023de38cb917949aefa6a1c6f72c68a2afb82c"
+        },
+        {
+          "path": "observations\\posttooluse-crash-01\\PreToolUse\\747cf40f77eb429da064986b46ccf2b1.json",
+          "sha256": "fc19c7d9f602c7c325f3477e81c7fc90c229382578eea0dd80de8b87111b066f"
+        },
+        {
+          "path": "observations\\posttooluse-crash-01\\SessionStart\\0925309e331141f7939a2cd3057e95e0.json",
+          "sha256": "01e5599624cbfe02e94c8c1742723688bee28ae6b0cd6dc02f36f69954747729"
+        },
+        {
+          "path": "observations\\posttooluse-crash-01\\Stop\\acbabde5af694099b1094404a412ceb6.json",
+          "sha256": "d355658362c31bf1ebd12b024bcc6f9822a23011d1d55601a0ef2efb15c398eb"
+        },
+        {
+          "path": "observations\\posttooluse-crash-01\\UserPromptSubmit\\b9d05a816c9e491fa50d0bf4a7958084.json",
+          "sha256": "4852af34e8712d2e8a0a3f32fcbb9723bed3c5b5add2828b94e55a67f241c26d"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-posttooluse-crash-01.json",
+        "sha256": "13d8d1bf9c18006a858b7fc5d11d0b70f785a9eedf20a83b32b011ce4cf4d966"
+      },
+      "effort_requested": "medium",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "crash",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\posttooluse-crash-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53508,
+          "output_tokens": 224,
+          "reasoning_output_tokens": 33
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\posttooluse-crash-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:17:59.967805+00:00",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "8ed8dab869e127f1b00c28b8e3fc7ac4e3a6c43f13fc32ab67ff5f22389a71a6",
+      "status": "completed"
+    },
+    {
+      "attempt": "posttooluse-unsupported-codec-01",
+      "callbacks": [
+        {
+          "path": "observations\\posttooluse-unsupported-codec-01\\PostToolUse\\822bd7003279477e91213e65a8ee49a3.json",
+          "sha256": "c77ab12af3cc49660f70b1ed4503e02bedb66bf6537fc1303827bb69798363ee"
+        },
+        {
+          "path": "observations\\posttooluse-unsupported-codec-01\\PreToolUse\\a869417c86184d49892a299edda859ec.json",
+          "sha256": "788cb3cd2b4eaeb99907ad103f8c7da59c2e6eff43537e1b7bbd8951c5077e20"
+        },
+        {
+          "path": "observations\\posttooluse-unsupported-codec-01\\SessionStart\\055ed795558c44e3bf86d172608519eb.json",
+          "sha256": "60e1f66e3f03d80f53d6140c339c90d170b7d74706cc87a3fba8503787397e0c"
+        },
+        {
+          "path": "observations\\posttooluse-unsupported-codec-01\\Stop\\b91f407d768b40d79ab7629baee5e237.json",
+          "sha256": "0e7309a3ec5c37f11cf712fdba456fb756ade6cee1cf808e6861d3242e5104e9"
+        },
+        {
+          "path": "observations\\posttooluse-unsupported-codec-01\\UserPromptSubmit\\f4c701dd9e7443febe8d8e7f9b786a7d.json",
+          "sha256": "483f24772f575bfe768ee0114ee07d5550c06bfe7d3372f9e47faac58fbb838c"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-posttooluse-unsupported-codec-01.json",
+        "sha256": "8b3d3a8e1af270fcf738cdb2b3fd07eddd9fdf8ebaa5e4cb3e2cd1c61b54b827"
+      },
+      "effort_requested": "medium",
+      "event": "PostToolUse",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\posttooluse-unsupported-codec-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53453,
+          "output_tokens": 169,
+          "reasoning_output_tokens": 32
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\posttooluse-unsupported-codec-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "started_at": "2026-10-04T18:18:16.304318+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "17500f139dc0c1eb2510186141fa0e67f7d87955feb28a06ddd31adbe84c17f9",
+      "status": "completed"
+    },
+    {
+      "attempt": "stop-malformed-input-01",
+      "callbacks": [
+        {
+          "path": "observations\\stop-malformed-input-01\\PostToolUse\\ab30514b9f184cc0be44eb2d857ca8b4.json",
+          "sha256": "d6c431142d8ccf987bdc9e0b0a878f446cc6232f88644bd237025d86482177b1"
+        },
+        {
+          "path": "observations\\stop-malformed-input-01\\PreToolUse\\9b01d7170cdf4873be28c717019d30e8.json",
+          "sha256": "4b42a6d3c886dba42e4be614bc41a29eb525f51844addffb6aff136e85afaf66"
+        },
+        {
+          "path": "observations\\stop-malformed-input-01\\SessionStart\\848023fab65c4598a8a224faa9cb3760.json",
+          "sha256": "6d977e637053cceb0342530a73ad901d01624616fc7d2feb4b6cff69b117a768"
+        },
+        {
+          "path": "observations\\stop-malformed-input-01\\Stop\\7630988a3be54742a8999cf8be63fbda.json",
+          "sha256": "6d8981c957a9fa0a5a2f0e9e25a7ff046ed7eca17819e003307c46379c0673f7"
+        },
+        {
+          "path": "observations\\stop-malformed-input-01\\UserPromptSubmit\\19d9529d3e354cffbc44445d2612e869.json",
+          "sha256": "f865ca8889a56177da395ba0aa2c25ace15efc0601cdd636e01b052b1b2ac248"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-stop-malformed-input-01.json",
+        "sha256": "34064f4e5cf52bb10189f9669d1b266869cced9c6c80ddf25334380164f3fe12"
+      },
+      "effort_requested": "medium",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "malformed-input",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\stop-malformed-input-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53514,
+          "output_tokens": 242,
+          "reasoning_output_tokens": 71
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\stop-malformed-input-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 0,
+          "runner_output": {},
+          "started_at": "2026-10-04T18:18:37.754541+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "81df0ebbe121b862c0887fc0a951879747ade2a5753df75711b21fc78a32a237",
+      "status": "completed"
+    },
+    {
+      "attempt": "stop-malformed-output-01",
+      "callbacks": [
+        {
+          "path": "observations\\stop-malformed-output-01\\PostToolUse\\12f6031894f643e98b607ce17c67e8cc.json",
+          "sha256": "243be490db20bba774436eb81415a4c9e6529a08c31b97514abe14f5a225b0de"
+        },
+        {
+          "path": "observations\\stop-malformed-output-01\\PreToolUse\\cc7ecb0737f64f36a3ead83fa253e899.json",
+          "sha256": "58a32eaa40d62075015995e8187fa6f3d40e53754aa33a04aa0eebfd2e8b3e46"
+        },
+        {
+          "path": "observations\\stop-malformed-output-01\\SessionStart\\a960d36ae5dd47f9a5b58b0160dc7556.json",
+          "sha256": "a9051202c7308fe5f03bc1722d8c6224836c04bd88af6406b304d1d8c345cfc1"
+        },
+        {
+          "path": "observations\\stop-malformed-output-01\\Stop\\7d5250ff699b44f2a23b2ed6032654ee.json",
+          "sha256": "b46557e3a0b47347ace92c6abaff705ad2a43b567d9985ea262e2bbea335e5f1"
+        },
+        {
+          "path": "observations\\stop-malformed-output-01\\UserPromptSubmit\\f1aa2be7207b478ea53156c2cb993c31.json",
+          "sha256": "ddefc5d398c67b86beccf7205c90782da2deb39c61060b859e242a61b234bd07"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-stop-malformed-output-01.json",
+        "sha256": "952656d6e4d2401ffc9abd2ad194101873483a9aeb0f8a74b0386fb8010096f2"
+      },
+      "effort_requested": "medium",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "malformed-output",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\stop-malformed-output-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_6",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53481,
+          "output_tokens": 190,
+          "reasoning_output_tokens": 31
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\stop-malformed-output-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:18:53.575131+00:00",
+          "status": "intentional-test-malformed-output"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "d5da3e178f25d94072931b0e584da28c0f60b9c56abbc85e1bbb3e8977a4063f",
+      "status": "completed"
+    },
+    {
+      "attempt": "stop-timeout-01",
+      "callbacks": [
+        {
+          "path": "observations\\stop-timeout-01\\PostToolUse\\03be4e0b669c425cb64cf5e4c279a877.json",
+          "sha256": "bc641a9ba62791057bde35cf33e1f42d68da467dbb43eb1da2736d7a087debc2"
+        },
+        {
+          "path": "observations\\stop-timeout-01\\PreToolUse\\8732f86e19ad401d93afff397420ec18.json",
+          "sha256": "54184212e749c68faca1afd54839715b8cc134964d2180122fa431c6aa7dd6c1"
+        },
+        {
+          "path": "observations\\stop-timeout-01\\SessionStart\\57e9d083da064cf5871741387a1c80ec.json",
+          "sha256": "f7dd2b5eb403175e5f5d5c3edb55e9d6d162af2b5b7ba599ea5bebf16e986ba8"
+        },
+        {
+          "path": "observations\\stop-timeout-01\\Stop\\2f550ce62bf34122a5a151de36d82d62.json",
+          "sha256": "8c93905ae24f2f9cb718040a6205ab861f5d3b475255f8f5d54e377f8e07acaf"
+        },
+        {
+          "path": "observations\\stop-timeout-01\\UserPromptSubmit\\a8480c94a11c41888d597b58808dc5a7.json",
+          "sha256": "1515547e81562f66dbd49662a48f024511a569c1da75f10354b962738a43c9ec"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-stop-timeout-01.json",
+        "sha256": "967b5a0da586a8dd2f4eacf685764e5d878cc26c93a119e0a3ff78ab65707d00"
+      },
+      "effort_requested": "medium",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "timeout",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\stop-timeout-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53540,
+          "output_tokens": 247,
+          "reasoning_output_tokens": 44
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\stop-timeout-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:19:13.434328+00:00",
+          "status": "intentional-test-sleep-eight-seconds"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "20d18f5fa2fca89611ac055e887e2a0ce5b8b7831f8005dfc8a4c7dea7ee53f8",
+      "status": "completed"
+    },
+    {
+      "attempt": "stop-crash-01",
+      "callbacks": [
+        {
+          "path": "observations\\stop-crash-01\\PostToolUse\\e55a07a17c164ee590565f8187ef31e7.json",
+          "sha256": "057a06d69c755e0e1c3e82ee49fe3c164d2e24b8a6904e3ea8e6f9ac2ce55ace"
+        },
+        {
+          "path": "observations\\stop-crash-01\\PreToolUse\\1991a80685194725a3d7b05721370113.json",
+          "sha256": "66c12104d9b9206ccbf010c683b55c7cdcac57be0a9b48b8282acc63ac898767"
+        },
+        {
+          "path": "observations\\stop-crash-01\\SessionStart\\dac5cbcd2e6c49d2880a7446a7ecd31e.json",
+          "sha256": "07166091334805e07afb7203aefd2c82e33d9c13cee1588b67e9d44fc04ca0b2"
+        },
+        {
+          "path": "observations\\stop-crash-01\\Stop\\b586b4fbcb5e4f67971f56b093475ee9.json",
+          "sha256": "5af417937b9cfaa213a9d7f4a98c12f444b062828d630b650e338fc8deef66e5"
+        },
+        {
+          "path": "observations\\stop-crash-01\\UserPromptSubmit\\1e8bb5d3164f488fb2dcff7ed619239e.json",
+          "sha256": "2167605d162e56e0c8f9a66c90ae74bc0dc55bce05b2fbe8d902e20cf792d565"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-stop-crash-01.json",
+        "sha256": "440ad399147f4a00153f3ce7dd90985e2a6c27f50351bc34227f02e4fd2abde3"
+      },
+      "effort_requested": "medium",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "crash",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\stop-crash-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 52736,
+          "input_tokens": 53496,
+          "output_tokens": 218,
+          "reasoning_output_tokens": 48
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\stop-crash-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": null,
+          "runner_output": null,
+          "started_at": "2026-10-04T18:19:32.365405+00:00",
+          "status": "intentional-test-crash-exit-17"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [],
+      "sha256": "c3709f31afad4c696b4eeb86aa4d62819e7cc99fafd3c314bfb48d00e651cbc7",
+      "status": "completed"
+    },
+    {
+      "attempt": "stop-unsupported-codec-01",
+      "callbacks": [
+        {
+          "path": "observations\\stop-unsupported-codec-01\\PostToolUse\\0ab67022d1af45d79b8ad2ebf7b09016.json",
+          "sha256": "2f9a6144c83aa2a9de7c065399721cb693fb002d026bc4ff872620507a9ff2da"
+        },
+        {
+          "path": "observations\\stop-unsupported-codec-01\\PreToolUse\\881a414d6899467da57d1898b1190a51.json",
+          "sha256": "384be8085598020d039c7c4f767f27fff3add8308fa2d1791e2b82aa4547bfd1"
+        },
+        {
+          "path": "observations\\stop-unsupported-codec-01\\SessionStart\\53f4779130e94c4baa54e2d367618769.json",
+          "sha256": "dc8da04967e2520020e676703c982b4f90291b260161d09afdc535f82871e1ca"
+        },
+        {
+          "path": "observations\\stop-unsupported-codec-01\\Stop\\d40703b35a7f41149a0a5fe7a52afdfa.json",
+          "sha256": "c3d26725c2c21b5bba0ed5729bc37e973f740d79a6795c1ec1a49aa454ba0c1b"
+        },
+        {
+          "path": "observations\\stop-unsupported-codec-01\\UserPromptSubmit\\ffca5c0cf2784b9e941ced7207766c3c.json",
+          "sha256": "a47c17bacf8341541734c899f27aa4b13d754264bfc931c61ea0fe95c93cb57e"
+        }
+      ],
+      "command_receipt": {
+        "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-stop-unsupported-codec-01.json",
+        "sha256": "e509cfc12d4f996cc5a7272f02c95e4c22f2b1713d64a2d18fb4267d93c99ace"
+      },
+      "effort_requested": "medium",
+      "event": "Stop",
+      "exit_code": 0,
+      "fault": "unsupported-codec",
+      "marker": true,
+      "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\stop-unsupported-codec-01.txt",
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "native_completed_command_items": [
+        {
+          "aggregated_output": "",
+          "exit_code": 0,
+          "id": "item_5",
+          "status": "completed"
+        }
+      ],
+      "native_error_items": [
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "native_models": [
+        "gpt-5.6-luna"
+      ],
+      "native_usage": [
+        {
+          "cache_write_input_tokens": 0,
+          "cached_input_tokens": 26368,
+          "input_tokens": 53505,
+          "output_tokens": 212,
+          "reasoning_output_tokens": 38
+        }
+      ],
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\attempts\\stop-unsupported-codec-01.json",
+      "selected_callback_outcomes": [
+        {
+          "runner_exit_code": 3,
+          "runner_output": {},
+          "started_at": "2026-10-04T18:19:48.748158+00:00",
+          "status": "completed"
+        }
+      ],
+      "selected_callbacks": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "sha256": "195161012d150b8dec92c6746a5bada4725bf616e2ff52348333d621e36a31b2",
+      "status": "completed"
+    }
+  ],
+  "global_direct_write": false,
+  "host": "codex",
+  "metadata_failures_and_reconciliations": [
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\metadata.json",
+      "sha256": "2c91b85d357ec417823d23206b563d555d2592e8b968e5b7b3f5fba60bcd2454"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\metadata-invocation-only-02.json",
+      "sha256": "43d20b811c971dae165771f683c2d53208c220a53b693d01537b9e82624c4c37"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\metadata-invocation-only-03.json",
+      "sha256": "5b2a79dcc60d0aa5251065f3740e815c7bd933228e4bf32d5cbd5020e6852c3b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\metadata-initial-reconciliation.json",
+      "sha256": "9b853a48e076ba8f6ac2f25a37a36c08e4344249307bb54802f7a935b20f3140"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\native-project-trust-auto-review-rejection.json",
+      "sha256": "2e692a1cc9523b06047806eab86b124fd77d4e406bbfd4141ec471d6d846afaa"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\app-server-allow-01-reconciliation.json",
+      "sha256": "55346ebf4a52d63959b2aa2fe9f2bb17d172dd8190f6b53814224135c64fe2ec"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\helper-amendments.json",
+      "sha256": "9e5a9f12cadc1f18a07901424a0e82ad83724aa5f074741201b4eddc3c1af6f2"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\cleanup-preparation-failure.json",
+      "sha256": "4a47c83f91c372d8158217ae542e484b49f83d2661b09a75f9bc58dc687ef42b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\cleanup-helper-amendment.json",
+      "sha256": "0d74c723b0ad16e89fc0c21b1bd24c17b1783c4a2b45c0ff6947ca09bb92b922"
+    }
+  ],
+  "model_requested": "gpt-5.6-luna",
+  "native_owned_project_trust": {
+    "C:/Users/USER\\downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project": {
+      "trust_level": "trusted"
+    }
+  },
+  "native_project_trust_change": "persisted-by-native-cli",
+  "open_gates": [
+    "normal UI trust rejection retained; native workspace trust persisted separately from hook trust",
+    "project plus plugin duplicate",
+    "protected-path/native other tool qualification",
+    "Claude model/tool and other events",
+    "Cursor missing events and timeout anomaly",
+    "Codex Desktop/IDE, Cursor IDE, AGY IDE direct application receipts",
+    "production timing and scientific/stable/release"
+  ],
+  "permission_route": "native dangerous flags",
+  "persisted_hook_trust_mutation": false,
+  "plan_progress": {
+    "done": 44,
+    "native_checkbox": "unchecked",
+    "total": 45
+  },
+  "pre_cleanup_process_audit": {
+    "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\final-process-audit.json",
+    "sha256": "87e89e7f8617ac16c068a7592516305a393afdb4271d3ae170ea1ddb42306246"
+  },
+  "prior_delivery": {
+    "path": "plans\\reports\\delivery-261005-0005-r34-cursor-agy.json",
+    "sha256": "2e2544f310574e03763693c047769e2e4e93ac33a3d4a1a19392d42dbf4c922a"
+  },
+  "process_audit": {
+    "path": "plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\post-cleanup-process-audit.json",
+    "sha256": "8f1f0f1f9364b644532f8371592af9949878746ddfb3aa0ff52aca594dbef5dd"
+  },
+  "public_activation": "inactive/manual",
+  "recorded_at": "2026-10-04T18:24:03.488402+00:00",
+  "schema_version": 1,
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "source_unchanged": true,
+  "status": "recorded-native-cli-events-full-surface-gate-open",
+  "surface": "codex-cli-exec",
+  "trust_correction": {
+    "classification": "reporting-correction; native observations unchanged",
+    "path": "plans/runs/nckh-native-261005-0052-r34-codex-attempt-01/trust-report-correction.json"
+  },
+  "trust_observation": {
+    "path": "plans/runs/nckh-native-261005-0052-r34-codex-attempt-01/trust-observation-current.json",
+    "sha256": "9fa445b9eb12210aac1a11fe9486480f6346a2b017b36694964e685aa99adcfe"
+  },
+  "unrelated_global_config_unchanged": true,
+  "version": "0.154.0"
+}

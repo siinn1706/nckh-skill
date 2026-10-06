@@ -1,0 +1,41 @@
+{
+  "timestamp_utc": "2026-10-05T06:36:55.0731194Z",
+  "comparison": "exact-UTC-ticks",
+  "root_pid": 53576,
+  "method": "force-owned-tree-after-graceful-refusal",
+  "identity_checks": [
+    {
+      "current": "2026-10-05T06:00:58.6741380Z",
+      "pid": 53576,
+      "expected": "2026-10-05T06:00:58.6741380Z"
+    },
+    {
+      "current": "2026-10-05T06:01:47.6696500Z",
+      "pid": 17316,
+      "expected": "2026-10-05T06:01:47.6696500Z"
+    },
+    {
+      "current": "2026-10-05T06:01:47.7992220Z",
+      "pid": 57404,
+      "expected": "2026-10-05T06:01:47.7992220Z"
+    },
+    {
+      "current": "2026-10-05T06:01:49.7209000Z",
+      "pid": 49332,
+      "expected": "2026-10-05T06:01:49.7209000Z"
+    },
+    {
+      "current": "2026-10-05T06:01:49.7547070Z",
+      "pid": 5144,
+      "expected": "2026-10-05T06:01:49.7547070Z"
+    }
+  ],
+  "output": [
+    "SUCCESS: The process with PID 5144 (child process of PID 49332) has been terminated.",
+    "SUCCESS: The process with PID 49332 (child process of PID 57404) has been terminated.",
+    "SUCCESS: The process with PID 57404 (child process of PID 17316) has been terminated.",
+    "SUCCESS: The process with PID 17316 (child process of PID 53576) has been terminated.",
+    "SUCCESS: The process with PID 53576 (child process of PID 37548) has been terminated."
+  ],
+  "exit_code": 0
+}

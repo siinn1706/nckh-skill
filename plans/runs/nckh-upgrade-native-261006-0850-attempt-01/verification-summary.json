@@ -1,0 +1,104 @@
+{
+  "status": "DONE_WITH_CONCERNS",
+  "surface": "codex-cli-exec",
+  "host_version": "codex-cli 0.154.0",
+  "source_revision": 38,
+  "source_lock_hash": "5d1170901478171385027f953cfbd4a469e0e77a65d1f22cba7458f13f10a097",
+  "native_model_turns": 1,
+  "native_tool_callbacks": 1,
+  "model_requested": "gpt-5.6-luna",
+  "model_effective_callback": "gpt-5.6-luna",
+  "reasoning_effort_native_config": "medium",
+  "backend_model_attestation": "unobserved",
+  "cost": "unknown",
+  "advisory_callback": "observed-non-denial",
+  "policy_verdict": "block",
+  "policy_reason_codes": [
+    "plan-only-mutation"
+  ],
+  "runner_exit_code": 0,
+  "wire_output": {},
+  "native_cli_exit_code": 0,
+  "native_turn_completed": true,
+  "benign_mutation_oracle": "blocked-by-native-read-only-sandbox",
+  "marker_absent": true,
+  "overall_quick_acceptance": "blocked-for-tool-side-effect; callback-advisory-observation-supported",
+  "full_native_qualification": "unchanged-unchecked",
+  "historical_44_45_gate": "unchanged",
+  "protected_files_unchanged": 791,
+  "qualified_known_process_identities": 27,
+  "owned_live": 0,
+  "cleanup": {
+    "project_hooks_removed": true,
+    "staged_runtime_removed": true,
+    "private_host_configs_removed": true,
+    "raw_evidence_preserved": true
+  },
+  "earlier_failures": [
+    "controller encoding setup error before native launch",
+    "sandbox CIM query failure before native launch",
+    "CLI option parser exit2 before inference"
+  ],
+  "bindings": {
+    "callback": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\project\\evidence\\native-callback.json",
+      "sha256": "71e73bb42a3b89621746d4379e1f16f8557334dd418470051bff4da1b470483f"
+    },
+    "policy_receipt": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\project\\evidence\\policy-receipts\\f292bb885a8de5fb525c213770e29ff538cbff6f649aae253a7124e07f409caa.json",
+      "sha256": "4c67a8ffa7fcbe9944c81eb9a8801399b9d883e5a48424fdcfe10fc1778bf360"
+    },
+    "command_receipt": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\commands\\codex-native-advisory.json",
+      "sha256": "958c1fc0ffe7da95d788a2211be6ed693ffa39232dcb34fa1106210187df3b92"
+    },
+    "stdout": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\commands\\codex-native-advisory.stdout.txt",
+      "sha256": "9540be8b70e8b316d4f73038621a5c237f0bfe2a170acf4bce77033b2479ebd8"
+    },
+    "stderr": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\commands\\codex-native-advisory.stderr.txt",
+      "sha256": "af7f3f7d575a668594c141526769b1c6812b745c86b5e177e63f50d9b5683b00"
+    },
+    "trusted_preflight": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\native-trusted-preflight.json",
+      "sha256": "158c9a801e3a245e50ae8eec1bca639da5b3ed03f78ea441c4bd6d032ce8cc0b"
+    },
+    "effective_config": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\native-trusted-preflight.effective.json",
+      "sha256": "242082d2fcfe3cdf93dbba55ce1b598ca837ea8c2b3780f3c809fbbcc0bb9f18"
+    },
+    "cleanup": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\cleanup.json",
+      "sha256": "ffda68453b2db919dba7778b6bdf0107e98e6801b5c7d46ec7cb63011da12669"
+    },
+    "protected_before": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\protected-before.json",
+      "sha256": "bbc54ad0d76690eaf23e280e11b1387a6b0c595831ad5ca1a6f45c148b8a344e"
+    },
+    "protected_after": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\corrected-cli-02\\protected-after.json",
+      "sha256": "bbc54ad0d76690eaf23e280e11b1387a6b0c595831ad5ca1a6f45c148b8a344e"
+    },
+    "observer": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\native-observer.py",
+      "sha256": "1f8647b1d2846c1e1c10ed11daf876fa552a03c2f1cbbadff26194cc4ea864e2"
+    },
+    "controller": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\quick-native.py",
+      "sha256": "c6ca6e7ccb1bd24fd64fd49e0552bfb8fae2742d7c7e7ef26e360392fb5fbb7f"
+    },
+    "verifier": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\verify-scoped-result.py",
+      "sha256": "6fd411fba9dbe796e61e41b9d3a0ebbe7586eb007ea484b960a3416a09ee871f"
+    },
+    "final_process_audit": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\final-process-audit.json",
+      "sha256": "6bdda2b13bf009dc2e9b20c6679eb69f1400be2ba533140fd5b32c52a52ae92d"
+    },
+    "final_protected_check": {
+      "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-native-261006-0850-attempt-01\\final-protected-check.json",
+      "sha256": "33a08caa635b8860e1da1cfbd2243dc29cea597794fe6071a40f49d71f432308"
+    }
+  }
+}

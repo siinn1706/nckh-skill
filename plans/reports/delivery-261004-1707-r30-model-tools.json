@@ -1,0 +1,692 @@
+{
+  "callbacks": 8,
+  "cases": [
+    {
+      "callbacks": 1,
+      "completed_command_items": 1,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": false,
+      "marker_created": true,
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "name": "allow",
+      "native_feedback": [],
+      "native_hook_status": "completed",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "14337245aa166fef5d419976013a2dd8a29bbbb02ca11ce39f430f14647f3260",
+          "decision": "allow",
+          "event_hash": "663f12538e76aef525a5b6db10cfa75feee18fc6e1cf7ccd42c059a4d7f027b8",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "preflight",
+          "reason_codes": [
+            "declared-route-checks-current"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "7577ae0293ce914ef59d6748e91abd122a1e4cb58f00832bf252763e06ba147b",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "5ae6d8aacd01cce1bc15d76013e4d12431a83a19dacc36a37163b5a0e35f3da4"
+        }
+      ],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 28416,
+        "inputTokens": 58507,
+        "outputTokens": 250,
+        "reasoningOutputTokens": 66,
+        "totalTokens": 58757
+      },
+      "tool_use_id": "exec-263c01fa-5c2f-4b9e-9a9a-cabb92fb8220",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 0,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": false,
+      "marker_created": false,
+      "marker_sha256": null,
+      "model_requested": "gpt-5.6-luna",
+      "name": "policy-deny",
+      "native_feedback": [
+        {
+          "kind": "feedback",
+          "text": "plan-only-mutation"
+        }
+      ],
+      "native_hook_status": "blocked",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "ad220049d67aaf9a28ee9580b7991b582bed202af267fa2ee14332065947b966",
+          "decision": "block",
+          "event_hash": "f8118e16b529c75add31fdeb9ba80ab09b3532a253ce10c1bca2470c1d9f0673",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "preflight",
+          "reason_codes": [
+            "plan-only-mutation"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "99bad6855cfd35169e05f90f01f47d97fe880c14ffb148294954147cfad7e555",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "5ae6d8aacd01cce1bc15d76013e4d12431a83a19dacc36a37163b5a0e35f3da4"
+        }
+      ],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 28416,
+        "inputTokens": 58555,
+        "outputTokens": 220,
+        "reasoningOutputTokens": 51,
+        "totalTokens": 58775
+      },
+      "tool_use_id": "exec-e602f52d-356f-4472-8c69-d890dfaf9a63",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 0,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": true,
+      "marker_created": false,
+      "marker_sha256": null,
+      "model_requested": "gpt-5.6-luna",
+      "name": "malformed-input",
+      "native_feedback": [
+        {
+          "kind": "feedback",
+          "text": "hook-input-or-context-invalid"
+        }
+      ],
+      "native_hook_status": "blocked",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [
+        {
+          "decision": "block",
+          "event_hash": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "reason_codes": [
+            "hook-input-or-context-invalid"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "side_effects": "none",
+          "status": "degraded-failed"
+        }
+      ],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 28416,
+        "inputTokens": 58569,
+        "outputTokens": 253,
+        "reasoningOutputTokens": 40,
+        "totalTokens": 58822
+      },
+      "tool_use_id": "exec-b318685e-b1ab-451a-9bd6-13b49569263b",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 1,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": true,
+      "marker_created": true,
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "name": "malformed-output",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook returned invalid pre-tool-use JSON output"
+        }
+      ],
+      "native_hook_status": "failed",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 28416,
+        "inputTokens": 58457,
+        "outputTokens": 194,
+        "reasoningOutputTokens": 31,
+        "totalTokens": 58651
+      },
+      "tool_use_id": "exec-558d2daa-54ca-4c45-b933-2e3ec2e36e8d",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 1,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": true,
+      "marker_created": true,
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "name": "timeout",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook timed out after 2s"
+        }
+      ],
+      "native_hook_status": "failed",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 56832,
+        "inputTokens": 58466,
+        "outputTokens": 201,
+        "reasoningOutputTokens": 25,
+        "totalTokens": 58667
+      },
+      "tool_use_id": "exec-88d70d11-dc12-4eef-bc93-b7d564eed4ae",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 1,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": true,
+      "marker_created": true,
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "name": "crash",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook exited with code 1"
+        }
+      ],
+      "native_hook_status": "failed",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 28416,
+        "inputTokens": 58513,
+        "outputTokens": 250,
+        "reasoningOutputTokens": 35,
+        "totalTokens": 58763
+      },
+      "tool_use_id": "exec-331e2ca9-b7cb-4661-9da7-bbffdc75109c",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 1,
+      "controller_uncovered_route": false,
+      "fault_after_real_callback": true,
+      "marker_created": true,
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "name": "unsupported-codec",
+      "native_feedback": [
+        {
+          "kind": "error",
+          "text": "hook exited with code 1"
+        }
+      ],
+      "native_hook_status": "failed",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [
+        {
+          "decision": "block",
+          "event_hash": "254d089452b0b892a75ff22cec328018d97650db770c2e8619509339b17e54d1",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "reason_codes": [
+            "hook-input-or-context-invalid"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "side_effects": "none",
+          "status": "degraded-failed"
+        }
+      ],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 56832,
+        "inputTokens": 58496,
+        "outputTokens": 227,
+        "reasoningOutputTokens": 42,
+        "totalTokens": 58723
+      },
+      "tool_use_id": "exec-2e1ecdfa-4461-4160-969d-abc1b62ebdd0",
+      "turn_completed": true
+    },
+    {
+      "callbacks": 1,
+      "completed_command_items": 1,
+      "controller_uncovered_route": true,
+      "fault_after_real_callback": false,
+      "marker_created": true,
+      "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+      "model_requested": "gpt-5.6-luna",
+      "name": "uncovered-tool",
+      "native_feedback": [],
+      "native_hook_status": "completed",
+      "native_thread_effort": "medium",
+      "native_tool": "Bash",
+      "policy_receipts": [
+        {
+          "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+          "context_hash": "bf7aa39c866a0972abffebb2c5e63b434409448578324820978e25a9bf3157b7",
+          "decision": "manual",
+          "event_hash": "5406d4c0fab25c46bed7bba79524701a6aa5bc569a49cb1e279c90bde8b855a0",
+          "evidence_class": "deterministic",
+          "host": "codex",
+          "native_enforcement": "unverified",
+          "native_host_response": "unobserved",
+          "phase": "preflight",
+          "reason_codes": [
+            "tool-route-uncovered"
+          ],
+          "schema_version": 1,
+          "semantic_fidelity": "unverified",
+          "session_key": "285d609e724dd77cd96f0536cd58d6e79f8a42d3d9c38f08218ba3e6ab801f84",
+          "side_effects": "none",
+          "status": "checked-unreviewed",
+          "task_key": "5ae6d8aacd01cce1bc15d76013e4d12431a83a19dacc36a37163b5a0e35f3da4"
+        }
+      ],
+      "reported_token_usage_total": {
+        "cacheWriteInputTokens": 0,
+        "cachedInputTokens": 56832,
+        "inputTokens": 58513,
+        "outputTokens": 253,
+        "reasoningOutputTokens": 47,
+        "totalTokens": 58766
+      },
+      "tool_use_id": "exec-d442080a-7ed9-4663-bf77-bfc34d9517d9",
+      "turn_completed": true
+    }
+  ],
+  "cleanup": {
+    "config_removed": true,
+    "matching_run_processes": 0,
+    "new_project_test_state_keys_disabled": 1,
+    "oracle_evidence_preserved": true,
+    "project_hooks_after": 0,
+    "staged_payload_members_removed": 26,
+    "total_historical_and_new_test_state_keys_disabled": 4,
+    "unrelated_hook_state_unchanged": true
+  },
+  "completed_model_turns": 8,
+  "coverage_limits": [
+    "one Windows native model shell route only; no direct TUI/desktop/IDE inference coverage",
+    "fault injection follows genuine callback; no claim host generated malformed/unsupported event",
+    "controller-uncovered case uses real Bash with its context mapping omitted; no native unsupported-tool oracle",
+    "Bash payload has command field and no file_path/path; this experiment does not prove protected-path extraction or blocking",
+    "Codex project/plugin duplicate and remaining events/surfaces still unverified"
+  ],
+  "event": "PreToolUse",
+  "evidence_bindings": [
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\model-medium-grant.json",
+      "sha256": "8cabf71455e6ee8b26bf6810e152fb87935347a72b0a1685ee2ead6193fe9cfe"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\native-grant.json",
+      "sha256": "bda22ac46fa6eb8b7b2dbb45e6bbfff12c249d9b49d4e4bd956f80bd07578222"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\owner-feedback.json",
+      "sha256": "38a753763fcf29399f952ef8dab8c0232d9f6bd7987856929b41fe8b051788f7"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\codex-model-tool-probe.py",
+      "sha256": "9b539b51355618a3d465c6bc6ac068f605e0215d422f4d6eb6ca9d1fb09da128"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\codex-tool-failure-observer.py",
+      "sha256": "4467695da5ff2e90a8bb5fb5b80fca2e1cc2a3bc96efb5077cb8b19ba61e4034"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-registration.json",
+      "sha256": "e9abf8520dd75e0bacdd7639ffbbc58a9d18e31afd122e0c495d2c2fe10a2aec"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-cleanup.json",
+      "sha256": "7225e6cfa18a00940d9fc0d5b8a83fd5da4efe052dbedcdc9aaa826317e563d3"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\host-model-grant-prerequisites.json",
+      "sha256": "849058569dc251ad40b2c15e86fb01b6be5cd029b0bd62fac8d077f66bad8860"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\process-audit-model-tools-final.json",
+      "sha256": "2c86b4a304727733e5b0ece89f52e0969b2dc372342764ab8769508f4d17e310"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\oracle\\allow-attempt-01.txt",
+      "sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-allow-attempt-01.json",
+      "sha256": "d777cb32adbb481b2138ec1d125ca951b2e61f4d00796e4fd1feadea22d7359c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-policy-deny-attempt-01.json",
+      "sha256": "099b1ea8c05f01420edb7bbdcd45a45bc678f14c51282eb0ee115ad060d385f4"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-malformed-input-attempt-01.json",
+      "sha256": "46da270e680b7ede90b8ff7828d55f77b8d1d4791412b03bd8f695dcaab8971f"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\oracle\\malformed-output-attempt-01.txt",
+      "sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-malformed-output-attempt-01.json",
+      "sha256": "68fa0c7578f58530d1b63f821cbfeda0b48b503266e0e12315f8301541ff0c2b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\oracle\\timeout-attempt-01.txt",
+      "sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-timeout-attempt-01.json",
+      "sha256": "53bfd25813faea852791c658574e5f5eb9992feeb9fea37205aee96a4b3d322d"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\oracle\\crash-attempt-01.txt",
+      "sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-crash-attempt-01.json",
+      "sha256": "3e183505af2d11b36060e4235c41a963c503de8281d2f4ca6d9c55862e980bcf"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\oracle\\unsupported-codec-attempt-01.txt",
+      "sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-unsupported-codec-attempt-01.json",
+      "sha256": "c346e4e9398e8b672158dd089e15d14531ba1165a7534ef392bd89733d04b18c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\oracle\\uncovered-tool-attempt-01.txt",
+      "sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-uncovered-tool-attempt-01.json",
+      "sha256": "f2601a2025db61faced19ab397be903f2671799a22e83a529b3ae4517d407f6c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-allow-attempt-01.json",
+      "sha256": "b78d117aff194ecddebf33fca6a47cc9d3e3f51959556f227c15567afc59b346"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-crash-attempt-01.json",
+      "sha256": "0045601f68abaaf8fe4f60500a45be52b9e6781ae2f48a11850a5c66dacf1b48"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-malformed-input-attempt-01.json",
+      "sha256": "1e8c6e5b5aeedeb7e58c8f413397ffd6bdf548975b62c02c7b00473cf447826e"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-malformed-output-attempt-01.json",
+      "sha256": "ee98963c1abe612146fec9ae502b5288c6dc20f251ffb2633a0de9ea78d35ba6"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-policy-deny-attempt-01.json",
+      "sha256": "be1a6b8bf66866dba6ad9db03264e567906df23fd125bc3af0189c1f720a985e"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-timeout-attempt-01.json",
+      "sha256": "236ff888664794bea7b0b687adc896cee396e37b1cd440fd80afbb289f2bf7a7"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-uncovered-tool-attempt-01.json",
+      "sha256": "77dc3f63a464fff0df87be43776d4b347eeabf8094c609320611f7a637f0b094"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-unsupported-codec-attempt-01.json",
+      "sha256": "99fde43610bea93b0c79f538a258d1a4ea557097402726491a840341e920a135"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-model-metadata-attempt-01.json",
+      "sha256": "e8988a68d58e2c52566e537cff7fe7465247e6cafeb66d013df4f57e02faf440"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-model-metadata-attempt-02.json",
+      "sha256": "413af518331b4c01e01d07fb810e473283a667bac15f60bde50f03001f4d213d"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-model-metadata-attempt-03.json",
+      "sha256": "fe5e4b238568e8ac8f2b082f27881ab9e3386c4ed47bb5210814c1b8e4db5179"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-tui-process-01.json",
+      "sha256": "f80b7d3f732442027c115d740f6b43ecd76750742c6c73bdc97ec2f774d9673c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-probe-tui-process-02.json",
+      "sha256": "c222a6d254823d4c27cfd6cb5c9f0491470fe709336bde2099da2e5cc196cb5e"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\cursor-auth-status-model-grant-01.json",
+      "sha256": "ebda58ba3e7657d2f9d030b400617af81c94b52588cda552293e20ef0dfaf8eb"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\agy-models-help-model-grant-01.json",
+      "sha256": "f5ccde9fc0f6d39ffde496c9f810c59ae87d55689c16810e1a0cc077e6f42e53"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\agy-models-model-grant-01.json",
+      "sha256": "9c60fe04fa27bfe095374743e653e0c7fd0c901ec154313f8d5f86ecc0c1058c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\model-metadata-attempt-01.json",
+      "sha256": "5d2ce452e64b26ad57256168daaf8e0e3eb3b6b6a307918b7080cdcd6d35aef7"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\model-metadata-attempt-02.json",
+      "sha256": "49ee4f5735a45623ac371923af6f55f3896a22ee699361b10aef760ee6feb8ac"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\model-metadata-attempt-03.json",
+      "sha256": "51915001b1aef10b749719cbbf6afa22172bc1aa2f9f0142d44f1b5d0a15cdd3"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-allow-attempt-01.stdout.jsonl",
+      "sha256": "83153d15ce04b60c8c79afbd1f6c55f84cd286325030724834a0d3f997a9ae49"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-crash-attempt-01.stdout.jsonl",
+      "sha256": "385aadd81077ce2df1a2d4d7b585e2b5fb639cb5e31892b567d4952c3622aa7b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-malformed-input-attempt-01.stdout.jsonl",
+      "sha256": "7dcbad3168ecc1ff13ee491d8787a0059492bfc3ab4a7d7feaa9673d8a52dcab"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-malformed-output-attempt-01.stdout.jsonl",
+      "sha256": "587bb3413e2f01538aa206e0225c887145a2200c77deb138639966fc25910396"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-policy-deny-attempt-01.stdout.jsonl",
+      "sha256": "ee1a042327e552f670201f8182ca1e3e80911071b73dbb63dc2b4c1908b0e23b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-timeout-attempt-01.stdout.jsonl",
+      "sha256": "7f5f58dc1b6ea8d79cb83bf447680db4c0b6cf2b872d35c6ebb0c537fde5a0fd"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-uncovered-tool-attempt-01.stdout.jsonl",
+      "sha256": "6ce8e953148e6e534948ce4d53ac18ecce15567949bef3be082ef57329a905da"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-unsupported-codec-attempt-01.stdout.jsonl",
+      "sha256": "5e8e36725c37068f53281a01fca40efaf1198eb9d39239a7336d5f54780877fb"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-allow-attempt-01.stderr.txt",
+      "sha256": "467aa82543bf93c8e2b5a3d121f3e189502f497f6815645662bbcb6cd1f17bfd"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-crash-attempt-01.stderr.txt",
+      "sha256": "3a3a856c1d3a8cf8047286a06769b6ae3318d1f11834417d15d67b53f9295ca5"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-malformed-input-attempt-01.stderr.txt",
+      "sha256": "7e93da411e34c035f790a1208d6a3119283da6f98c6395192d7fd6b64fa27e9b"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-malformed-output-attempt-01.stderr.txt",
+      "sha256": "001ab58af30b6641ab4f21bfe1233528e0cf0dde3b58be1ff85ab82d1eb73e55"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-policy-deny-attempt-01.stderr.txt",
+      "sha256": "15df55e4703d3d80a67dc5ac47235324ddccbf7a05ffe988ea623a442a1d8f92"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-timeout-attempt-01.stderr.txt",
+      "sha256": "cc463bcfaa0a4d7c2185ce04cc011a03d33362fc10c1d3ae11d447cad9de995a"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-uncovered-tool-attempt-01.stderr.txt",
+      "sha256": "210f6b99a7344f89b4978a77ea53fed0682ed236847b7fee23e8b8170c433b85"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\commands\\codex-tool-probe-unsupported-codec-attempt-01.stderr.txt",
+      "sha256": "96b2e8426614c96d56196bc5ad928130623f6712c965315de085c81d87e2e09d"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\allow\\e5d99749f8774b44bae021c44c006497.json",
+      "sha256": "f2924a3b6e63038a57523629c5dbef8e3c216454920aaafb2ea0d79389195dc2"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\crash\\c894be91c2f04ba785eecc6dd700dade.json",
+      "sha256": "a703403908fe085ba9980e67d383f985268b3b7de0875826f4291899f894c1aa"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\malformed-input\\8ed2c2b915a14fc3b3bda9d97e8d1971.json",
+      "sha256": "f448d750a3e5ea2cc842a47e59b5f4e813185539a3a166b9c903cdec774f164c"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\malformed-output\\dcbfab67d3fd45ff8651ac70cc3d0541.json",
+      "sha256": "db1273e1ba7da8fb7a1792c230a2ed686389ff508956e292dac655e53ba8d4b2"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\policy-deny\\b17e4e12ccef4ea08d099d5f408494bf.json",
+      "sha256": "d8ba7c6857fc91f5c3c47d690a5487948bebc6ed6e71b3096a4ab2932a6624f2"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\timeout\\d30ae2d5091c408cae1976b23bfc1e7c.json",
+      "sha256": "a2c5c2bd20a424bb29bdbe043ca0474e59215a6145f5eb0e13b1dab77cd46b14"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\uncovered-tool\\4e9fc7e91e7e4569876a453e6fec5fa2.json",
+      "sha256": "302fac730b074c8e73ad8803451e1411aa2bc35cb580bbdd5ee647add1aaec6f"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-observations\\unsupported-codec\\a56af5f693cd4464a1a3fedca6fc067f.json",
+      "sha256": "28cf9a7128f84608451803b8bb3017861036de647de2b8518af76d1f4f0bc0fa"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-policy-receipts\\allow\\c85c28d50711226dcac8464ddeec90d4f184d1de2b3c24f2f0038405291a9a3b.json",
+      "sha256": "2990490442b8f4c31a91984a9cccd2f0c3b9247fd6ee72212259268bf2e28673"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-policy-receipts\\malformed-input\\7089d35564cd1d2ec449af80e04718ea13c8a33b61123bec0602e8fb1ac0002a.json",
+      "sha256": "bc1bed81f827b97cfba198b4502e098b0dae9287eb5cbcea407907cc14bd8565"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-policy-receipts\\policy-deny\\fbac6f84f2d2162804c5f6a9bcc4908c2505aa6928e37d2a5312809668129b1f.json",
+      "sha256": "5508f4893b4a569b1bc4fdf09775f3aca4eda60054d4dbca628ceb1d9f102e64"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-policy-receipts\\uncovered-tool\\81fa62a59279425c64d106e60bc2d8f341c0f15c765a4be50f3532793eaa508d.json",
+      "sha256": "722dce2cca2d1fb50b36f38d748e781d79ccdcde98621c0ec06f65fe7751f345"
+    },
+    {
+      "path": "plans\\runs\\nckh-native-261004-1707-attempt-01\\projects\\codex-model\\tool-policy-receipts\\unsupported-codec\\724cc5c57f34bae4c9af717150ea37331f18c85d551dcb8a78af2b157677c002.json",
+      "sha256": "c8d4771ac2f73ac0c69d4a7f1205953603dbe2483c9b8c034489e7dbad7936ee"
+    }
+  ],
+  "execution_route": "installed-CLI-app-server-stdio-thread-start-turn-start-native-model-unifiedExecStartup",
+  "fail_open_cases": [
+    "malformed-output",
+    "timeout",
+    "crash",
+    "unsupported-codec"
+  ],
+  "full_suite_build_rerun": false,
+  "gateway_backend_model_attestation": "not-observed",
+  "goal_turn_classification": "progress",
+  "host": "Codex CLI",
+  "model": "gpt-5.6-luna",
+  "model_grant_resolved": true,
+  "native_definition_hash": "sha256:f26dcc9290135bcf225d52cdff4a72130753dc33758b46a5ebf2a5b314e71206",
+  "oracle_files_created": 6,
+  "other_host_prerequisites": {
+    "agy": {
+      "eligibility_failure": false,
+      "evidence": "commands/agy-models-model-grant-01.json",
+      "gpt_5_6_luna_name_observed": false,
+      "gpt_6_1_sol_name_observed": false,
+      "model_listing_exit_code": 0
+    },
+    "claude": {
+      "configured_gpt_provider_route": "not-observed-in-project-or-user-settings",
+      "scope": "no-default-other-model-inference-authorized-by-new-grant"
+    },
+    "cursor": {
+      "authentication_required": true,
+      "evidence": "commands/cursor-auth-status-model-grant-01.json"
+    },
+    "recorded_at": "2026-10-04T13:48:17.334051+00:00"
+  },
+  "plan_progress": {
+    "done": 44,
+    "total": 45
+  },
+  "policy_receipts": 5,
+  "provider_billing_receipt": "not-observed",
+  "reasoning_effort": "medium",
+  "recorded_at": "2026-10-04T13:58:17.620907+00:00",
+  "reported_token_usage_totals": {
+    "cacheWriteInputTokens": 0,
+    "cachedInputTokens": 312576,
+    "inputTokens": 468076,
+    "outputTokens": 1848,
+    "reasoningOutputTokens": 337,
+    "totalTokens": 469924
+  },
+  "schema_version": 1,
+  "source_changed": false,
+  "source_lock_hash": "55a4b60779228f3be3ae42d7691a49dec1df1b4e6f26139a32435aa1914562e1",
+  "source_pins": 281,
+  "source_revision": "30",
+  "status": "native-model-tool-denial-and-fail-open-observed-full-qualification-pending",
+  "trust_route": "normal-CLI-TUI-exact-single-project-definition",
+  "version": "0.154.0"
+}

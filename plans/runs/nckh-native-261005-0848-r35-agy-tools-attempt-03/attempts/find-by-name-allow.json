@@ -1,0 +1,504 @@
+{
+  "after": {
+    "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+  },
+  "attempt": "find-by-name-allow",
+  "backend_attestation": "not-observed",
+  "before": {
+    "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+  },
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PostInvocation/2b705b519c114130b1a638abaca6a16e.json",
+      "sha256": "2c9880d802a2bb7a92556c4913ce611e3d07c801f9d45023265ac18a73d1a9d4"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PostInvocation/9492fd7e74274336a03ba4d673c66fed.json",
+      "sha256": "033175e689b93c25cee134dd0905b26baa3c6c714fcd973d2a89289a1d51fad1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PreInvocation/ef23646573184140b57c0e76d4d6442c.json",
+      "sha256": "8b0f1d155d9bfd24df5ef62aea9e6e7c4171c102b230072bc133126a5b9287f8"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PreInvocation/f1b8125bd315458ab78efebbf7708043.json",
+      "sha256": "332a115c620bd455352ff0ceedacc27a014aa9d7e12b49def3bdd103baba87e1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/Stop/7caf4c9a9094484fb77eb3def1be9b72.json",
+      "sha256": "110b50983bb9bbecc705806681d96c1e8da60df3e3326265e310df31b10b42e6"
+    }
+  ],
+  "command": {
+    "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-find-by-name-allow.json",
+    "sha256": "e6b6271c4010cc920de44c1a20895e530e2ae3cf135dac02e59f57c04f13e1f7"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/definitions/find-by-name-allow.json",
+    "sha256": "c75df72f763c8b8de234f89382f59bcb39e7f98048791ac4a054d2aec4e341ff"
+  },
+  "direct": false,
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "expected_deny": false,
+  "expected_tool": "find_by_name",
+  "fault_origin": "none",
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_callbacks": [
+    {
+      "attempt": "find-by-name-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:46:23.048343+00:00",
+      "control_sha256": "cd533d980f7534c533a735f6b098b3356993e3cb67d6f49b7466f63916d2d843",
+      "event": "PostInvocation",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "670661257e56d16541313a45dd503ef39919c72c6dfef87c73c9d8f08d0fd05c",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "3d31d684f2ea89324cd30b07c817786e8e55707d4407679cb58d430764bba510",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 58888,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 43648,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 52452,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:46:22.900983+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "find-by-name-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:46:26.211150+00:00",
+      "control_sha256": "cd533d980f7534c533a735f6b098b3356993e3cb67d6f49b7466f63916d2d843",
+      "event": "PostInvocation",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "5e06e2955c696a41c8967e1380be8aaa5c11c32ebd61e44968e3a789b4c989dc",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "3d31d684f2ea89324cd30b07c817786e8e55707d4407679cb58d430764bba510",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 58756,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 42360,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 22004,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:46:26.058716+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "find-by-name-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:45:48.529980+00:00",
+      "control_sha256": "cd533d980f7534c533a735f6b098b3356993e3cb67d6f49b7466f63916d2d843",
+      "event": "PreInvocation",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "670661257e56d16541313a45dd503ef39919c72c6dfef87c73c9d8f08d0fd05c",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "3d31d684f2ea89324cd30b07c817786e8e55707d4407679cb58d430764bba510",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 37392,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 31836,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 31724,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:45:48.389347+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "find-by-name-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:46:23.289122+00:00",
+      "control_sha256": "cd533d980f7534c533a735f6b098b3356993e3cb67d6f49b7466f63916d2d843",
+      "event": "PreInvocation",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "initialNumSteps",
+        "invocationNum",
+        "modelName",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "5e06e2955c696a41c8967e1380be8aaa5c11c32ebd61e44968e3a789b4c989dc",
+      "input_size": 513,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "3d31d684f2ea89324cd30b07c817786e8e55707d4407679cb58d430764bba510",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 55852,
+      "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "parent_pid": 3928,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 8440,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:46:23.158934+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "find-by-name-allow",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:46:26.489277+00:00",
+      "control_sha256": "cd533d980f7534c533a735f6b098b3356993e3cb67d6f49b7466f63916d2d843",
+      "event": "Stop",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "agy",
+      "input_fields": [
+        "artifactDirectoryPath",
+        "conversationId",
+        "error",
+        "executionNum",
+        "fullyIdle",
+        "modelName",
+        "terminationReason",
+        "transcriptPath",
+        "workspacePaths"
+      ],
+      "input_sha256": "43cce5d15478b4515dcc9beee9d375b4b5a753573801daad9b1699a097c287c6",
+      "input_size": 555,
+      "mode": "allow",
+      "native_model": "gemini-3.8-flash-medium",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "3d31d684f2ea89324cd30b07c817786e8e55707d4407679cb58d430764bba510",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": null,
+      "observer_pid": 22628,
+      "output_sha256": "6290c175f8eac6a2a8d0c84971a057abff8306cfe17fbd3a242f862b9e0befd0",
+      "parent_pid": 46232,
+      "reported_event": null,
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "decision": "stop"
+      },
+      "runner_pid": 59260,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:46:26.343040+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    }
+  ],
+  "native_frames": [
+    {
+      "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+      "event": "init",
+      "init": {
+        "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model",
+        "model": "gemini-3.8-flash-medium",
+        "permission_mode": "always-proceed",
+        "tools": [
+          "ask_custom_permission",
+          "ask_permission",
+          "ask_question",
+          "browser_click_element",
+          "browser_drag_pixel_to_pixel",
+          "browser_get_dom",
+          "browser_get_network_request",
+          "browser_input",
+          "browser_list_network_requests",
+          "browser_mouse_down",
+          "browser_mouse_up",
+          "browser_move_mouse",
+          "browser_press_key",
+          "browser_refresh_page",
+          "browser_resize_window",
+          "browser_scroll",
+          "browser_scroll_dom",
+          "browser_select_option",
+          "browser_subagent",
+          "call_mcp_tool",
+          "capture_browser_console_logs",
+          "capture_browser_screenshot",
+          "click_browser_pixel",
+          "command_status",
+          "define_subagent",
+          "delete_knowledge",
+          "execute_browser_javascript",
+          "find_by_name",
+          "finish",
+          "generate_image",
+          "grep_search",
+          "invoke_subagent",
+          "list_browser_pages",
+          "list_dir",
+          "list_permissions",
+          "list_plugin_accounts",
+          "list_resources",
+          "manage_inbox",
+          "manage_subagents",
+          "manage_task",
+          "multi_replace_file_content",
+          "notebook_edit",
+          "notebook_execution",
+          "open_browser_url",
+          "read_browser_page",
+          "read_resource",
+          "read_url_content",
+          "replace_file_content",
+          "run_command",
+          "run_workflow",
+          "schedule",
+          "search_marketplace",
+          "search_web",
+          "sed_file",
+          "send_command_input",
+          "send_message",
+          "view_file",
+          "wait",
+          "wait_5_seconds",
+          "write_to_file"
+        ]
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "state": "DONE",
+        "step_index": 0,
+        "step_type": "user_input"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "duration_seconds": 34.2412181,
+        "state": "DONE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 20601,
+          "output_tokens": 11166,
+          "thinking_tokens": 11047,
+          "total_tokens": 31767
+        }
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "state": "ACTIVE",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "name": "find_by_name",
+          "parameters": {
+            "Pattern": "marker.txt",
+            "SearchDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-find-by-name-allow"
+          }
+        },
+        "tool_name": "find_by_name"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "duration_seconds": 0.002607,
+        "state": "ERROR",
+        "step_index": 2,
+        "step_type": "tool",
+        "tool_info": {
+          "error": {
+            "message": "unknown tool: \"find_by_name\" — check spelling",
+            "type": "TOOL_ERROR"
+          },
+          "name": "find_by_name",
+          "parameters": {
+            "Pattern": "marker.txt",
+            "SearchDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-find-by-name-allow"
+          }
+        },
+        "tool_name": "find_by_name"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "state": "ACTIVE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "ORACLE_ATTEMPT_"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "state": "ACTIVE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "FINISHED"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "duration_seconds": 2.637791,
+        "state": "DONE",
+        "step_index": 3,
+        "step_type": "agent_response",
+        "text_delta": "\n",
+        "usage": {
+          "cache_read_tokens": 20417,
+          "input_tokens": 11445,
+          "output_tokens": 125,
+          "thinking_tokens": 118,
+          "total_tokens": 11570
+        }
+      }
+    },
+    {
+      "event": "result",
+      "result": {
+        "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+        "duration_seconds": 37.7314317,
+        "num_turns": 1,
+        "response": "ORACLE_ATTEMPT_FINISHED\n",
+        "status": "SUCCESS",
+        "usage": {
+          "cache_read_tokens": 20417,
+          "input_tokens": 32046,
+          "output_tokens": 11291,
+          "thinking_tokens": 11165,
+          "total_tokens": 43337
+        }
+      }
+    }
+  ],
+  "path": "oracles/r35-agy-find-by-name-allow",
+  "policy_receipts": [],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed",
+  "terminal_tools": [
+    {
+      "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+      "duration_seconds": 0.002607,
+      "state": "ERROR",
+      "step_index": 2,
+      "step_type": "tool",
+      "tool_info": {
+        "error": {
+          "message": "unknown tool: \"find_by_name\" — check spelling",
+          "type": "TOOL_ERROR"
+        },
+        "name": "find_by_name",
+        "parameters": {
+          "Pattern": "marker.txt",
+          "SearchDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-find-by-name-allow"
+        }
+      },
+      "tool_name": "find_by_name"
+    }
+  ]
+}

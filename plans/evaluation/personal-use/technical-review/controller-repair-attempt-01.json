@@ -1,0 +1,10 @@
+{
+  "status": "fail",
+  "evidence_class": "deterministic",
+  "command": ["python", "-X", "utf8", "-m", "unittest", "tests.acceptance.test_profile", "-v"],
+  "tests": 7,
+  "errors": 1,
+  "cause": "New duplicate-JSON fixture used Python private TemporaryDirectory on Windows; directory ACL denied the sandbox write and cleanup.",
+  "failed_fixture_directory": "C:/Users/USER/AppData/Local/Temp/tmpru9x5w59",
+  "next_action": "Reuse existing core.paths.temporary_tree, which inherits Windows ACLs and validates cleanup containment."
+}

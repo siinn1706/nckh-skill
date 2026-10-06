@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "status": "controller-qa-completed-for-stated-checks",
+  "recorded_at": "2026-10-03T14:56:23.421434+00:00",
+  "case_id": "real-source-worldbank-visual-01",
+  "host_folder": "cursor-grok-r25-visual-01",
+  "files": {
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/real-source-worldbank-visual-01.svg": {
+      "sha256": "410c47985a1419bace3234a7d177c4e906ad37ae222e1276918c0631139a49e6",
+      "bytes": 38750
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/real-source-worldbank-visual-01.md": {
+      "sha256": "b109108ba6901e476466a41250fb800f6383abd430eae080593ed20407a6b66b",
+      "bytes": 11934
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/illustrator-evidence.json": {
+      "sha256": "1c731544659e5fb087ead1fe15515ea83a7ebd09fa27ac194454db36a6342e2c",
+      "bytes": 435979
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/native-qa-copy.ai": {
+      "sha256": "5723660550739f4c7c31b092de2fc64c6952c153e76ac914e5f52fc9c006d9ca",
+      "bytes": 289335
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/native-render.png": {
+      "sha256": "c8606015cd3ffb5b5bca669ca162efb77eb7ca0152122455b2af0ddc023cf4bf",
+      "bytes": 186418
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/controller-render.png": {
+      "sha256": "507b929c94785a55953d6f25768d63cae720809ac48ebcf79777903e220346ed",
+      "bytes": 128708
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/render.json": {
+      "sha256": "2dd2a0b5d2dddfdec3e45520cd04ef66582523fa9e188796294c6028822b50da",
+      "bytes": 1126
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/source-to-mark-check.json": {
+      "sha256": "ca75168146ac34ffbd169171698738888cc5a1f8fa9f5f89872d80fd801114ba",
+      "bytes": 6254
+    },
+    "plans/evaluation/personal-use/native/cursor-grok-r25-visual-01/controller-qa-01/source-check-execution.json": {
+      "sha256": "c46abe73f0e05441f30d0330e04bdf67f49c28a090e8b91320a2abfca852e1a9",
+      "bytes": 718
+    }
+  },
+  "checks": {
+    "source_marks": "pass-for-stated-checks;26 exact source values/circles/polyline",
+    "actual_controller_render": "pass; declared rsvg2.40.20 actual exit0 and reproduced submitted PNG bytes",
+    "native_open": "pass; actual submitted SVG opened in Illustrator2024",
+    "native_structure": {
+      "text_frames": 166,
+      "data_paths": 26,
+      "raster_images": 0,
+      "exact_text_multiset": true,
+      "max_mark_coordinate_delta": 4.8828130047695595e-05
+    },
+    "native_edit_save_reopen_restore": "pass; text and point changed, saved/closed/reopened retained, then restored/saved/closed/reopened",
+    "layout": "controller visually inspected submitted/reproduced and native PNG; no clipping or unintended overlap; all native text bounds inside artboard",
+    "contrast": [
+      {
+        "foreground": "#111111",
+        "background": "#ffffff",
+        "ratio": 18.883060964594996
+      },
+      {
+        "foreground": "#0A3A66",
+        "background": "#ffffff",
+        "ratio": 11.602272499690253
+      }
+    ],
+    "accessibility_structure": {
+      "title_desc_present": true,
+      "language": "vi",
+      "aria_labelledby": null,
+      "role": null,
+      "year_order_ascending": true
+    },
+    "owner": "pending-personal-review"
+  },
+  "viewer": {
+    "name": "Adobe Illustrator2024",
+    "file_version": "28.0.0",
+    "native_font_family_observed": [
+      "Arial"
+    ]
+  },
+  "limits": [
+    "User-reported completion and selected model are separate from effective provider telemetry; no model rerun.",
+    "AGY SVG/PNG byte identity with prior GPT Sol output does not establish independent Gemini generation.",
+    "Fresh reader execution is not authenticated by identical stored receipts alone.",
+    "Accessibility structural and contrast checks only; assistive technology testing not run and SVG metadata persistence in AI not claimed.",
+    "AGY premature generation-time Source truth pass is corrected by separate controller verdict; raw preserved.",
+    "Owner scoring and scientific/stable/public qualification remain separate."
+  ]
+}

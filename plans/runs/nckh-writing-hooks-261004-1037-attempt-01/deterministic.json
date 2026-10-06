@@ -1,0 +1,66 @@
+{
+  "accepted_task_count": 0,
+  "agent_cases_not_run": 156,
+  "cost": "unknown",
+  "cost_per_accepted_task": "undefined",
+  "deterministic": {
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py"
+    ],
+    "exit_status": 1,
+    "output": "...................................................s..........EE...E..............F...F..........................................................................E\n======================================================================\nERROR: hooks.test_closure (unittest.loader._FailedTest.hooks.test_closure)\n----------------------------------------------------------------------\nImportError: Failed to import test module: hooks.test_closure\nTraceback (most recent call last):\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_closure.py\", line 10, in <module>\n    from core.hook_config import payload_from_bundle, preview_config\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\core\\hook_config.py\", line 15, in <module>\n    from hooks.runner import strict_json\nModuleNotFoundError: No module named 'hooks.runner'\n\n\n======================================================================\nERROR: hooks.test_config (unittest.loader._FailedTest.hooks.test_config)\n----------------------------------------------------------------------\nImportError: Failed to import test module: hooks.test_config\nTraceback (most recent call last):\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_config.py\", line 7, in <module>\n    from core.hook_config import SURFACES, TARGETS, apply_config, preview_config, recover_config\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\core\\hook_config.py\", line 15, in <module>\n    from hooks.runner import strict_json\nModuleNotFoundError: No module named 'hooks.runner'\n\n\n======================================================================\nERROR: hooks.test_runner (unittest.loader._FailedTest.hooks.test_runner)\n----------------------------------------------------------------------\nImportError: Failed to import test module: hooks.test_runner\nTraceback (most recent call last):\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_runner.py\", line 9, in <module>\n    from hooks.runner import invoke, record_once\nModuleNotFoundError: No module named 'hooks.runner'\n\n\n======================================================================\nERROR: runtime.test_hook_adapters (unittest.loader._FailedTest.runtime.test_hook_adapters)\n----------------------------------------------------------------------\nImportError: Failed to import test module: runtime.test_hook_adapters\nTraceback (most recent call last):\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 396, in _find_test_path\n    module = self._get_module_from_name(name)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\unittest\\loader.py\", line 339, in _get_module_from_name\n    __import__(name)\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\runtime\\test_hook_adapters.py\", line 7, in <module>\n    from tests.hooks.test_runner import payload\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_runner.py\", line 9, in <module>\n    from hooks.runner import invoke, record_once\nModuleNotFoundError: No module named 'hooks.runner'\n\n\n======================================================================\nFAIL: test_native_model_config_is_owned_transaction_and_uninstall_preserves_user_edit (installer.test_transactions.TransactionTests.test_native_model_config_is_owned_transaction_and_uninstall_preserves_user_edit)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\installer\\test_transactions.py\", line 334, in test_native_model_config_is_owned_transaction_and_uninstall_preserves_user_edit\n    with self.assertRaises(OSError):\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: OSError not raised\n\n======================================================================\nFAIL: test_shared_consumers_need_qualification_and_survive_other_uninstall (installer.test_transactions.TransactionTests.test_shared_consumers_need_qualification_and_survive_other_uninstall)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\installer\\test_transactions.py\", line 142, in test_shared_consumers_need_qualification_and_survive_other_uninstall\n    self.assertEqual(len(read_index(self.state)[\"items\"]), 10)\nAssertionError: 12 != 10\n\n----------------------------------------------------------------------\nRan 162 tests in 563.357s\n\nFAILED (failures=2, errors=4, skipped=1)\n",
+    "status": "fail",
+    "tests": 162
+  },
+  "environment": {
+    "platform": "win32",
+    "python": "3.12.10"
+  },
+  "error": "deterministic suite failed or discovered no tests",
+  "evidence_class": "static",
+  "human_freeze": {
+    "acceptable_economics": "pending",
+    "case_ids_frozen": true,
+    "metrics": [
+      "raw pass/fail/pending counts",
+      "routing confusion",
+      "accepted unsupported claims",
+      "factual fidelity",
+      "spawn count/benefit",
+      "requested/resolved/effective model",
+      "latency",
+      "tokens/cost coverage",
+      "human edit minutes"
+    ],
+    "paid_budget": "not-authorized",
+    "quality_thresholds": "pending",
+    "reviewers": "pending",
+    "sample_rights": "pending"
+  },
+  "identities": 39,
+  "installer_acceptance_cases": 10,
+  "installer_os_qualification": "unverified",
+  "native_cells_not_run": 224,
+  "native_invocation_cells": 224,
+  "qualification": "pending",
+  "recorded_at": "2026-10-04T05:03:38.022573+00:00",
+  "required_families": 19,
+  "rubric_approval": "pending",
+  "rubrics": 5,
+  "schema_version": 1,
+  "skill_cases": 156,
+  "source_files_pinned": 281,
+  "source_lock_hash": "0cfaf3da1170cf1902377a1d737060d57db9773adb384ce98a150aedd21dd932",
+  "status": "fail",
+  "structural_validation": "pass",
+  "writer_native_cells": 256,
+  "writer_observed_behavior": "unverified",
+  "writer_scenario_cells": 20
+}

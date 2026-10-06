@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "snapshot_kind": "phase-03-before",
+  "modified_paths": [
+    "nckh-kit/core/policies/acceptance-policy.md",
+    "nckh-kit/core/workflows/execution.md",
+    "nckh-kit/skills/core/nckh-cook/SKILL.md"
+  ],
+  "new_paths_absent_before_phase": [
+    "nckh-kit/core/profiles/acceptance/personal-use.json",
+    "nckh-kit/core/acceptance.py",
+    "nckh-kit/tests/acceptance/__init__.py",
+    "nckh-kit/tests/acceptance/test_profile.py"
+  ],
+  "rollback": "Restore the three captured files and remove the listed new paths; do not touch historical qualification receipts or source-lock history."
+}

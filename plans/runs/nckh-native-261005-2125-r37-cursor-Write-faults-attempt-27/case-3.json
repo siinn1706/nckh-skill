@@ -1,0 +1,230 @@
+{
+  "actual_selected_write_post_receipts": 0,
+  "case": {
+    "attempt": "preToolUse-Write-timeout",
+    "event": "preToolUse",
+    "index": 3,
+    "marker": "NCKH_WRITE_FAULT_FINISHED_27_3",
+    "maximum_prompt_submissions": 1,
+    "mode": "timeout",
+    "prompt": "[removed: raw runtime content]",
+    "requested_bytes": "NCKH_WRITE_FAULT_REQUESTED_27_3\n"
+  },
+  "control": {
+    "path": "plans/runs/nckh-native-261005-2125-r37-cursor-Write-faults-attempt-27/control-3.json",
+    "sha256": "b09670da6dfa905b845a3f9e472bab061461767addf44f8569e249ae2b5737f1"
+  },
+  "degraded_receipt_binding": "Selected genuine callback/control/runner plus native failure ID; no context-hash claim for parse failures",
+  "degraded_without_context_hash": [],
+  "direct_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-write-faults-27/direct-policy-receipts/84a4e85feb79765a6069be55e35a29c383bb25e4db4d3dc787f85b895a454643.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "227298433c0886ed841318583c19fc68848a5125820365169a5c2d630358f254",
+        "decision": "advisory",
+        "event_hash": "14d7221bda6247138e32dc9bb52fd0986f1980564cdf432486cd605910532e25",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "3cf28ed1959c6fb39d9037b7d850db1325fd954cb0b64dcc7be7a2ff3f97efb1",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "d2b757862a20bb24deacf15b52afc0520adb49a53ca871765df4ccd9e3897c5b"
+      },
+      "sha256": "58078fa08aef844ae4b6f9b1ae7f298210fcd8431f474ff1a00758c85a1b1488"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-write-faults-27/direct-policy-receipts/bd27eef61e09e66539e16da11a3046c9ff2fdf5db5aab1ed74a4c9adeee3ab41.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "227298433c0886ed841318583c19fc68848a5125820365169a5c2d630358f254",
+        "decision": "advisory",
+        "event_hash": "fd5577c7ee0d221ba9f06748ab812747ee3a02fbd15d251dc036fbcb836dd0f6",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "3cf28ed1959c6fb39d9037b7d850db1325fd954cb0b64dcc7be7a2ff3f97efb1",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "d2b757862a20bb24deacf15b52afc0520adb49a53ca871765df4ccd9e3897c5b"
+      },
+      "sha256": "ff52c0a7e6af6f5655549c9072f2affe5208028a0bd64357b2d434496838048a"
+    }
+  ],
+  "fault_origin": "controller-injection-after-genuine-callback",
+  "fixture_after_sha256": "52b2044a5f0eb0efa8a7dfc7e0e86536126eeda543410d24ac86b9b261fcee4c",
+  "fixture_before_sha256": "52b2044a5f0eb0efa8a7dfc7e0e86536126eeda543410d24ac86b9b261fcee4c",
+  "fixture_unchanged": true,
+  "full_native_gate": "unchecked",
+  "model_reply_marker_observed": true,
+  "native_failures": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-write-faults-27/native-failures/1e601b4f6c9b435f879530c75134c7b6.json",
+      "record": {
+        "duration": 0,
+        "failure_type": "permission_denied",
+        "fault_origin": "none",
+        "full_transcript_read": false,
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "duration",
+          "error_message",
+          "failure_type",
+          "generation_id",
+          "hook_event_name",
+          "is_interrupt",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "8e94c2f707f1acf10009500393fd91cf92799d6c23caf7e774387308dc2c932c",
+        "input_size": 2141,
+        "is_interrupt": false,
+        "native_error_sha256": "6c4cbca509d57d20e7760fc88167680448e5857d9bb7229c66be1f280076317c",
+        "native_session_hash": "a4c0caa2dee9d954ee97e73903deaf5a2b41e62e2cd52e2eeb691b6f12677607",
+        "native_tool_name": "Write",
+        "native_tool_use_id": "call-7f5660ce-fca5-41e3-a687-91bfb4e59a11-5\nfc_f7774f0d-10dc-95e6-b2c1-c34cb5584598_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 3416,
+        "parent_pid": 51740,
+        "policy_invoked": false,
+        "reported_event": "postToolUseFailure",
+        "scrubbed_selected_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <user-home>\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-2125-r37-cursor-Write-faults-attempt-27\\cursor-file-observer.py --host cursor --event preToolUse --project <owned-project> --evidence <owned-project>\\.nckh-native-r37-cursor-write-faults-27 --runner <owned-project>\\.nckh-state\\hooks\\cursor\\26c83b69f9f8e279ef9e29e8a458217d496f01096f8b0310251f6ab3dc86b3b4\\hooks\\runner.py\" execution failed: Hook script timed out after 20000ms",
+        "selected_path_matches": true,
+        "started_at": "2026-10-05T14:36:36.436002+00:00",
+        "status": "completed-native-failure-metadata-observation",
+        "tool_input_fields": [
+          "content",
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "sha256": "4e03fdf90c437f2b814dd2ead80346d9972ccbb00c07ca607c5c4c4dea9bf376"
+    }
+  ],
+  "native_preflight_timeout_seconds": 20,
+  "observations": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-write-faults-27/observations/preToolUse-Write-timeout/preToolUse/87382c4029374233a8e6499cf07c6bb4.json",
+      "record": {
+        "attempt": "preToolUse-Write-timeout",
+        "callback_source": "project",
+        "completed_at": "2026-10-05T14:36:36.195027+00:00",
+        "control_sha256": "baff1a634ccdcbc1194483e9109865d77a876988c43c72c2c8922c1bc29f7c94",
+        "event": "preToolUse",
+        "fault_origin": "controller-injection-after-genuine-callback",
+        "fault_selected": true,
+        "host": "cursor",
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "generation_id",
+          "hook_event_name",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "d6af53bd0b3baf53f8267aab06fe87c377c40166284c654963c7f8c025aada9c",
+        "input_size": 1100,
+        "mode": "timeout",
+        "native_model": "grok-4.7",
+        "native_model_id": null,
+        "native_model_params": null,
+        "native_path_fields": {
+          "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-write-faults-27\\public\\fixture.txt"
+        },
+        "native_session_hash": "a4c0caa2dee9d954ee97e73903deaf5a2b41e62e2cd52e2eeb691b6f12677607",
+        "native_step_idx": null,
+        "native_tool_name": "Write",
+        "native_tool_use_id": "call-7f5660ce-fca5-41e3-a687-91bfb4e59a11-5\nfc_f7774f0d-10dc-95e6-b2c1-c34cb5584598_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 52332,
+        "output_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+        "parent_pid": 57384,
+        "reported_event": "preToolUse",
+        "runner_exit_code": 0,
+        "runner_exited": true,
+        "runner_output": {},
+        "runner_pid": 54312,
+        "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+        "schema_version": 1,
+        "started_at": "2026-10-05T14:36:12.015903+00:00",
+        "status": "completed",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tool_input_fields": [
+          "content",
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "sha256": "bc2cc87338499f53389701e0fa004e29d02961dc91b57604ba4ec5e5906c814d"
+    }
+  ],
+  "observer_runner_timeout_seconds": 5,
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r37-cursor-write-faults-27/policy-receipts/preToolUse-Write-timeout/preToolUse/e3d48002e8fecf7a4ded4bfafb914ed1e770f46d3631711b882b65d9cd22cf15.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "227298433c0886ed841318583c19fc68848a5125820365169a5c2d630358f254",
+        "decision": "allow",
+        "event_hash": "80e11e277c34b2905a1910b3608718eda500de097fabb3436a4460617b2b3a8d",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "3cf28ed1959c6fb39d9037b7d850db1325fd954cb0b64dcc7be7a2ff3f97efb1",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "d2b757862a20bb24deacf15b52afc0520adb49a53ca871765df4ccd9e3897c5b"
+      },
+      "sha256": "b4fbcd46f51c7646684e2ee6e06ca2bdf56e7c4b39f4f6cf7cd2f82ff17a041b"
+    }
+  ],
+  "prompt_retries": 0,
+  "selected_native_write_failures": 1,
+  "selected_observers_terminal": true,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "collected-actual-native-preflight-fault",
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261005-2125-r37-cursor-Write-faults-attempt-27/terminal-case-3-poll-01.json",
+      "sha256": "2d74a61d5ae76c427cdaee390290f3b7a29dfba71c0a588c066f11664239b391"
+    }
+  ],
+  "terminal_truncated": true,
+  "unsupported_scope": "Unknown codec-event injection after supported native Write callback; genuine native unsupported event/tool admission remains unqualified"
+}

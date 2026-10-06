@@ -1,0 +1,26 @@
+{
+  "status": "planned-not-executed",
+  "purpose": "Test the now-observed Read then edit sequence using direct packaged runner at native template5s.",
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "source_revision": 36,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "maximum_prompt_submissions": 1,
+  "maximum_model_turns": 1,
+  "maximum_requested_native_use_identities": 2,
+  "relative": "oracles/r36-cursor-direct-sequence-public-11.txt",
+  "before_text": "NCKH_CURSOR_DIRECT_SEQUENCE_FIXTURE_11\n",
+  "requested_after_text": "NCKH_CURSOR_DIRECT_SEQUENCE_WRITE_11\n",
+  "per_case_observation_timeout_seconds": 240,
+  "expected": "exact replacement bytes",
+  "mode": "auto",
+  "hook_scope": "direct packaged runner; template timeout5s; no observer/injection",
+  "native_use_identity_limit_observability": "direct neutral receipts do not retain raw native tool_use_id; scope must remain explicit",
+  "constraints": [
+    "Read the selected existing fixture then use one available native file edit tool on that file.",
+    "No shell, agents, retries, alternate files or denial workaround.",
+    "Preserve prior failures and instrumented20s observations as separate revisions/scopes.",
+    "No source/global direct config/trust-key/installed/release changes.",
+    "Reconcile owned processes and matching-byte config/payload cleanup."
+  ]
+}

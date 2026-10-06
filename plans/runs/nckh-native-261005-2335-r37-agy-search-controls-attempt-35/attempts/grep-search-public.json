@@ -1,0 +1,281 @@
+{
+  "after": {
+    "marker.txt": "02edea2dea461effdeeedcd8b35cd1df5408dcd4769b21b6660a5d7685c2979b"
+  },
+  "attempt": "grep-search-public",
+  "backend_attestation": "not-observed",
+  "before": {
+    "marker.txt": "02edea2dea461effdeeedcd8b35cd1df5408dcd4769b21b6660a5d7685c2979b"
+  },
+  "billing": "not-observed",
+  "callback_bindings": [],
+  "command": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/commands/agy-tools-grep-search-public.json",
+    "sha256": "5ed5f3ded5bc09b70cb5f746d72297d6c907a352135ea6e3c5026e4b39bb3f59"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2335-r37-agy-search-controls-attempt-35/definitions/grep-search-public.json",
+    "sha256": "4a234dce91ca4b37ec7a779658f0e383f23d3fde219a27f237c0097c5b9778b8"
+  },
+  "direct": true,
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "expected_deny": false,
+  "expected_tool": "grep_search",
+  "fault_origin": "none",
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_callbacks": [],
+  "native_frames": [
+    {
+      "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+      "event": "init",
+      "init": {
+        "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model",
+        "model": "gemini-3.8-flash-medium",
+        "permission_mode": "always-proceed",
+        "tools": [
+          "ask_custom_permission",
+          "ask_permission",
+          "ask_question",
+          "browser_click_element",
+          "browser_drag_pixel_to_pixel",
+          "browser_get_dom",
+          "browser_get_network_request",
+          "browser_input",
+          "browser_list_network_requests",
+          "browser_mouse_down",
+          "browser_mouse_up",
+          "browser_move_mouse",
+          "browser_press_key",
+          "browser_refresh_page",
+          "browser_resize_window",
+          "browser_scroll",
+          "browser_scroll_dom",
+          "browser_select_option",
+          "browser_subagent",
+          "call_mcp_tool",
+          "capture_browser_console_logs",
+          "capture_browser_screenshot",
+          "click_browser_pixel",
+          "command_status",
+          "define_subagent",
+          "delete_knowledge",
+          "execute_browser_javascript",
+          "find_by_name",
+          "finish",
+          "generate_image",
+          "grep_search",
+          "invoke_subagent",
+          "list_browser_pages",
+          "list_dir",
+          "list_permissions",
+          "list_plugin_accounts",
+          "list_resources",
+          "manage_inbox",
+          "manage_subagents",
+          "manage_task",
+          "multi_replace_file_content",
+          "notebook_edit",
+          "notebook_execution",
+          "open_browser_url",
+          "read_browser_page",
+          "read_resource",
+          "read_url_content",
+          "replace_file_content",
+          "run_command",
+          "run_workflow",
+          "schedule",
+          "search_marketplace",
+          "search_web",
+          "sed_file",
+          "send_command_input",
+          "send_message",
+          "view_file",
+          "wait",
+          "wait_5_seconds",
+          "write_to_file"
+        ]
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "DONE",
+        "step_index": 0,
+        "step_type": "user_input"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "The native `grep_search` tool is not"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": " available in this environment's dec"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "lared toolset. In accord"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "ance with th"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "e instruction not to use"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": " another too"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "l, no alternative tool was executed.\n\nORACLE_ATT"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "state": "ACTIVE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "EMPT_FINISHED"
+      }
+    },
+    {
+      "event": "step_update",
+      "step_update": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "duration_seconds": 20.7167457,
+        "state": "DONE",
+        "step_index": 1,
+        "step_type": "agent_response",
+        "text_delta": "\n",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 20604,
+          "output_tokens": 6136,
+          "thinking_tokens": 6091,
+          "total_tokens": 26740
+        }
+      }
+    },
+    {
+      "event": "result",
+      "result": {
+        "conversation_id": "bc3a54d4-f7ff-4701-827a-9b968ced209b",
+        "duration_seconds": 20.926604,
+        "num_turns": 1,
+        "response": "The native `grep_search` tool is not available in this environment's declared toolset. In accordance with the instruction not to use another tool, no alternative tool was executed.\n\nORACLE_ATTEMPT_FINISHED\n",
+        "status": "SUCCESS",
+        "usage": {
+          "cache_read_tokens": 0,
+          "input_tokens": 20604,
+          "output_tokens": 6136,
+          "thinking_tokens": 6091,
+          "total_tokens": 26740
+        }
+      }
+    }
+  ],
+  "path": "oracles/r37-agy-search35-grep-search-public",
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-search-controls-35/direct-policy-receipts/grep-search-public/1f86f2aa5bc9ef9766c7af67ac0aed54d01b748d3fc79d2f45af003e976a4a7e.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "f93a5edef5eecab962ea4933ce8c20f5b25257eaee81e4e62a89aeae2ab6b13c",
+        "decision": "advisory",
+        "event_hash": "68f3c342fa12278919f1434d994e5e47ae15515e439546ae5e1baad6114c95a6",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "70e7d1e1834ebbbd69ba7884c838e27add575f0468c87b6c8c94bac39737b3fc",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "c00e7a630dad747be529bf3627424bb6ebebaf46bd4cad747030dc722bf161ee"
+      },
+      "sha256": "5a8e0738953efed3736765cddac029d8720ff5a8248758307025f7af54ac2171"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r37-agy-search-controls-35/direct-policy-receipts/grep-search-public/7b877bee800e55846d8e8ddd07dcb4f76c1db2914a138e8fe1023f6fabab3672.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "f93a5edef5eecab962ea4933ce8c20f5b25257eaee81e4e62a89aeae2ab6b13c",
+        "decision": "advisory",
+        "event_hash": "58ab058aa8e50c7cf889a207f4231ffbc93b3e5c4975721d52965262286b4d62",
+        "evidence_class": "deterministic",
+        "host": "agy",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "70e7d1e1834ebbbd69ba7884c838e27add575f0468c87b6c8c94bac39737b3fc",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "c00e7a630dad747be529bf3627424bb6ebebaf46bd4cad747030dc722bf161ee"
+      },
+      "sha256": "33e410cf60c74edcc8c2f282b9656caab1521067872c50eb70a8d316696b67d0"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "completed",
+  "terminal_tools": []
+}

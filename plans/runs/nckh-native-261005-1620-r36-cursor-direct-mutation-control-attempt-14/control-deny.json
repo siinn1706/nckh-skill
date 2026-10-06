@@ -1,0 +1,46 @@
+{
+  "before_sha256": "9eeb68c638fe89741028a9ff2e3d1b083a19a0d55e36652629ebb53c29b47450",
+  "case": {
+    "case": "deny",
+    "marker": "NCKH_DIRECT_MUTATION_DENIED_FINISHED_14",
+    "mode": "plan-only",
+    "prompt": "[removed: raw runtime content]",
+    "requested_bytes": "NCKH_CURSOR_DIRECT20_DENIED_14\n",
+    "requested_native_tool_use_identities_maximum": 2
+  },
+  "context": {
+    "allowed_operations": [
+      "write",
+      "read"
+    ],
+    "brief": {
+      "mode": "plan-only"
+    },
+    "schema_version": 1,
+    "task_id": "native-cursor-direct-mutation-14-deny",
+    "tool_operations": {
+      "Edit": "write",
+      "Read": "read",
+      "Shell": "write",
+      "StrReplace": "write",
+      "Write": "write"
+    }
+  },
+  "context_file_sha256": "9bdd6eeb550fad55eb13743940b7236696f4f339ed4df4cff135cff26f3c5aae",
+  "failure_preimage": [],
+  "fixture_before": {
+    "path": "plans/runs/nckh-native-261005-1620-r36-cursor-direct-mutation-control-attempt-14/fixture-deny-before.txt",
+    "sha256": "9eeb68c638fe89741028a9ff2e3d1b083a19a0d55e36652629ebb53c29b47450"
+  },
+  "policy_preimage": [
+    "3de7598f80c5b0ddecfbf51b80724c71e970013e942f7ff013361467b1a29509.json",
+    "46a707bb153b5f40b944da756aec13290c3e5c9a651f39451d750b043ff4a59b.json",
+    "955e192191efb55014cdbd415e8a17b2519edc16e7a0edf96c3dfb248482b022.json",
+    "a7a3d9292c46926030d07855363f9764f938a4c2494c55dd02f840d8f809a632.json",
+    "ad44cb79e01f5d04f17c13ec7283da367cc47171a23c8b12cb7a701ecaaed0e5.json",
+    "ebd75073b092687c091b3f700056a8250dca7812d75e9dd5eb3e19d749f9a833.json",
+    "fe8f3248a001759c3d14ca438d0d70029208a20fb3616358d216cf97add71d30.json"
+  ],
+  "selected_at": "2026-10-05T09:30:17.588584+00:00",
+  "session_id": 66223
+}

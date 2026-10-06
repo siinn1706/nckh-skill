@@ -1,0 +1,119 @@
+{
+  "attempt": "template-write-private",
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "callbacks": [],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-1021-r35-codex-template-attempt-01/commands/codex-native-file-template-write-private.json",
+    "sha256": "8c0489dd0cd8868ce221d332b47a878486223c3f19442e7c1c42d0fa941fed54"
+  },
+  "config_route": "inline sessionFlags; existing native-persisted workspace trust reused, no new key",
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "invalid_stdout_lines": 0,
+  "marker_exists": false,
+  "marker_relative": "private/r35-codex-template-private.txt",
+  "marker_sha256": null,
+  "mode": "allow",
+  "model_requested": "gpt-5.6-luna",
+  "native_callbacks": [],
+  "native_frames": [
+    {
+      "thread_id": "01a10a22-5dd1-7ae3-b608-661a0fbe0fe4",
+      "type": "thread.started"
+    },
+    {
+      "item": {
+        "id": "item_0",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_1",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_2",
+        "message": "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "item": {
+        "id": "item_3",
+        "message": "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_4",
+        "text": "ORACLE_ATTEMPT_FINISHED",
+        "type": "agent_message"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 26368,
+        "input_tokens": 53380,
+        "output_tokens": 93,
+        "reasoning_output_tokens": 28
+      }
+    }
+  ],
+  "permission_route": "dangerous native CLI flags",
+  "policy_receipts": [
+    {
+      "decision": "block",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/PreToolUse/fe0bfc8e50aae1ff1e3c098f1065b5aa0f0a48e7e8c0045843dcf219834c8a1d.json",
+      "reason_codes": [
+        "private-holdout-credential-path"
+      ],
+      "sha256": "3adbf87d9f440006841360adf16a5a088f610443d74190316a6216bff6976bc3"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/SessionStart/56098d7c470a460160ad36964570f1e388b39514144ec15e933ab81f690a595a.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "0aeab762c408257139c18a1b80c7f163d02ded23218b6326f60369c15fc00649"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/Stop/2bab2a53b16d228ff5cdf4eba72c55bff4f0a8dde3f639848a2a181296b5c80f.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "8f2c18280ca56352773545d335bbbcc45048b3c14b4a3fc560a961df179e5c91"
+    },
+    {
+      "decision": "advisory",
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-r35-codex-template-01/policy-receipts/template-write-private/UserPromptSubmit/56098d7c470a460160ad36964570f1e388b39514144ec15e933ab81f690a595a.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "0aeab762c408257139c18a1b80c7f163d02ded23218b6326f60369c15fc00649"
+    }
+  ],
+  "process_exited": true,
+  "requested_native_tool": "apply_patch",
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed"
+}

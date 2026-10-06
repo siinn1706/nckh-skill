@@ -1,0 +1,46 @@
+{
+  "status": "verified-direct-AGY-current-version-shell-pending-denial",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "model_turns": 1,
+  "model_retries": 0,
+  "native_tool": "run_command",
+  "native_state": "ERROR",
+  "native_error": "tool call denied by pre-tool hook: shell-targets-unverifiable",
+  "native_step_index": 2,
+  "exact_requested_command_observed": true,
+  "marker_absent": true,
+  "direct_packaged_handlers": true,
+  "timeout_seconds": 5,
+  "policy": "pending/shell-targets-unverifiable",
+  "full_native_gate": "unchecked",
+  "source_modified": false,
+  "receipt": {
+    "path": "plans/runs/nckh-native-261006-0010-r37-agy-shell-control-attempt-38/attempts/current-version-shell-pending.json",
+    "sha256": "a83b52f4d58f84682650e0e115e7e9e9dbc69a35bc5e2a91e21ccabec0816332"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261006-0010-r37-agy-shell-control-attempt-38/definitions/current-version-shell-pending.json",
+    "sha256": "81399768c26154b28105b1faea9dab2000373af947491f5cbda8ccb5b57018e7"
+  },
+  "command": {
+    "path": "plans/runs/nckh-native-261006-0010-r37-agy-shell-control-attempt-38/commands/agy-tools-current-version-shell-pending.json",
+    "sha256": "270a6a370932ff297d9b412c1bbe78da556901a1689abbd4d1ca1e9533d026a5"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261006-0010-r37-agy-shell-control-attempt-38/cleanup.json",
+    "sha256": "2bc7ff09140300818b0ff9239176ffaf903f2837d5cb96327476efac4ce0ebaf"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261006-0010-r37-agy-shell-control-attempt-38/process-final-audit.json",
+    "sha256": "1aa3f595d4a1b41881adfbbc405ef697835940f54536cd5f47ed4b27fe691f00"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261006-0010-r37-agy-shell-control-attempt-38/verify-shell-delivery.py",
+    "sha256": "90cb398b0d2aaea998cf250488c8cbf69ef64d650c8f2fa1b2255bf713b47a4a"
+  }
+}

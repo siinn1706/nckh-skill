@@ -1,0 +1,327 @@
+{
+  "after_sha256": null,
+  "attempt": "write-crash",
+  "backend_attestation": "not-observed",
+  "before_sha256": null,
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/observations/write-crash/preToolUse/6a645d934a1549a296fe9c67d9629c8d.json",
+      "sha256": "d0e773d545aac32bac234b83773be8cfd9fb5f3b83e2b3174a96ab5a5ce98d85"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r35-cursor-files/observations/write-crash/sessionStart/b2163f673ae44173b40289782cfc4a92.json",
+      "sha256": "a9def6c698587314e809e01d545707dd549bcb1eddb4e45363fc25b6e9e5345e"
+    }
+  ],
+  "command_receipt": {
+    "path": "plans/runs/nckh-native-261005-0746-r35-cursor-file-attempt-01/commands/cursor-file-write-crash.json",
+    "sha256": "137dcf6b23c638183db2e1407a5fe2b8227a90f33d193183c1f7f112a12e2552"
+  },
+  "completed_tool_calls": [
+    {
+      "call_id": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0",
+      "model_call_id": "bb182723-3ded-47de-860c-fa2d7c1e6cf7-0-wmn6",
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "completed",
+      "timestamp_ms": 1791162163710,
+      "tool_call": {
+        "completedAtMs": "1791162163672",
+        "editToolCall": {
+          "result": {
+            "rejected": {
+              "path": "",
+              "reason": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0746-r35-cursor-file-attempt-01\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-files --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" failed with exit code 17\n\nAgent note: Do not suggest workarounds to the blocked tool."
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791162151045",
+        "toolCallId": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0"
+      },
+      "type": "tool_call"
+    }
+  ],
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-0746-r35-cursor-file-attempt-01/definitions/write-crash.json",
+    "sha256": "73181a55820bc9ed73fd79fa80b3b8e896f1ce939a8bcde390a1ba4bd9d5f614"
+  },
+  "effort_requested": "xhigh",
+  "exit_code": 0,
+  "fault_origin": "controller-after-genuine-callback",
+  "file_exists": false,
+  "invalid_stdout_lines": 0,
+  "kind": "Write",
+  "mode": "crash",
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "native_callbacks": [
+    {
+      "attempt": "write-crash",
+      "callback_source": "project",
+      "control_sha256": "012693a6a0caac4d820c77e7d3aee4b7a738dfc5837207fc76b41212d609d43d",
+      "event": "preToolUse",
+      "fault_origin": "controller-injection-after-genuine-callback",
+      "fault_selected": true,
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "model",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "606ba05d8b571cf3cc9112f1971bbfd7833d2f29fa22aafc52c66622c1a20e4c",
+      "input_size": 774,
+      "mode": "crash",
+      "native_model": "grok-4.7",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {
+        "file_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-crash.txt"
+      },
+      "native_session_hash": "5493a8cde0b6b7b576a9a8ef6f58dea79d4992b65f590dd42f957c46f4ae77ea",
+      "native_step_idx": null,
+      "native_tool_name": "Read",
+      "native_tool_use_id": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0",
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 58708,
+      "parent_pid": 38472,
+      "reported_event": "preToolUse",
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:02:32.017120+00:00",
+      "status": "intentional-test-crash-exit-17",
+      "tool_input_fields": [
+        "file_path"
+      ],
+      "workspace_contains_selected_project": true
+    },
+    {
+      "attempt": "write-crash",
+      "callback_source": "project",
+      "completed_at": "2026-10-05T01:02:18.028807+00:00",
+      "control_sha256": "012693a6a0caac4d820c77e7d3aee4b7a738dfc5837207fc76b41212d609d43d",
+      "event": "sessionStart",
+      "fault_origin": "none",
+      "fault_selected": false,
+      "host": "cursor",
+      "input_fields": [
+        "conversation_id",
+        "cursor_version",
+        "generation_id",
+        "hook_event_name",
+        "is_background_agent",
+        "model",
+        "session_id",
+        "transcript_path",
+        "user_email",
+        "workspace_roots"
+      ],
+      "input_sha256": "1769103d3466757ad20b10d92aba76dfcd6615d3ab59ace8e6bd721a411e41f1",
+      "input_size": 505,
+      "mode": "crash",
+      "native_model": "grok-4.7-xhigh",
+      "native_model_id": null,
+      "native_model_params": null,
+      "native_path_fields": {},
+      "native_session_hash": "5493a8cde0b6b7b576a9a8ef6f58dea79d4992b65f590dd42f957c46f4ae77ea",
+      "native_step_idx": null,
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_version": "2026.09.15-d2fe57e",
+      "observer_pid": 52448,
+      "output_sha256": "9cdedcb62830aecd3f9d2dc015610b35cc244f3bb0e24dabd38dd3294dccd6eb",
+      "parent_pid": 5668,
+      "reported_event": "sessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "additional_context": "writing-resource-advice-only"
+      },
+      "runner_pid": 40780,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "schema_version": 1,
+      "started_at": "2026-10-05T01:02:17.867136+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tool_input_fields": [],
+      "workspace_contains_selected_project": true
+    }
+  ],
+  "native_frames": [
+    {
+      "apiKeySource": "login",
+      "cwd": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+      "model": "Grok 4.7 500K Extra High",
+      "permissionMode": "default",
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "init",
+      "type": "system"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "Use the native Write file tool exactly once in this authorized scratch project. Do not use shell/terminal, any other tool, inspect other files, call agents, retry or work around denial. These files contain synthetic test markers only. After the one attempted call say ORACLE_ATTEMPT_FINISHED and stop. Write exactly NCKH_CURSOR_FILE_ORACLE followed by a newline to oracles/r35-cursor-crash.txt",
+            "type": "text"
+          }
+        ],
+        "role": "user"
+      },
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "type": "user"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "delta",
+      "text": "Writing \"NCKH_CURSOR_FILE_ORACLE\"",
+      "timestamp_ms": 1791162147795,
+      "type": "thinking"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "delta",
+      "text": " followed by a newline",
+      "timestamp_ms": 1791162148031,
+      "type": "thinking"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "delta",
+      "text": " to oracles/r35-cursor-crash.txt.",
+      "timestamp_ms": 1791162148280,
+      "type": "thinking"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "completed",
+      "timestamp_ms": 1791162150775,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "I'll write the marker once with the native Write tool, then stop.",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "model_call_id": "bb182723-3ded-47de-860c-fa2d7c1e6cf7-0-wmn6",
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "timestamp_ms": 1791162151082,
+      "type": "assistant"
+    },
+    {
+      "call_id": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0",
+      "model_call_id": "bb182723-3ded-47de-860c-fa2d7c1e6cf7-0-wmn6",
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "started",
+      "timestamp_ms": 1791162151082,
+      "tool_call": {
+        "editToolCall": {
+          "args": {
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\oracles\\r35-cursor-crash.txt",
+            "streamContent": "NCKH_CURSOR_FILE_ORACLE\n"
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791162151045",
+        "toolCallId": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "call_id": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0",
+      "model_call_id": "bb182723-3ded-47de-860c-fa2d7c1e6cf7-0-wmn6",
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "completed",
+      "timestamp_ms": 1791162163710,
+      "tool_call": {
+        "completedAtMs": "1791162163672",
+        "editToolCall": {
+          "result": {
+            "rejected": {
+              "path": "",
+              "reason": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0746-r35-cursor-file-attempt-01\\cursor-file-observer.py --host cursor --event preToolUse --project C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main --evidence C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r35-cursor-files --runner C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-state\\hooks\\cursor\\4b59db811c7f4166fbb12b25241190c67ef023fb76706d4a50630c3fa56428b2\\hooks\\runner.py\" failed with exit code 17\n\nAgent note: Do not suggest workarounds to the blocked tool."
+            }
+          }
+        },
+        "hookAdditionalContexts": [],
+        "startedAtMs": "1791162151045",
+        "toolCallId": "call-86406c8b-4908-4486-9e07-8d7d4a4a13ee-0\nfc_68a5aabe-ab7f-9100-b018-c6322782215a_0"
+      },
+      "type": "tool_call"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "delta",
+      "text": "I will write the cursor",
+      "timestamp_ms": 1791162166424,
+      "type": "thinking"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "delta",
+      "text": " file marker and then",
+      "timestamp_ms": 1791162166424,
+      "type": "thinking"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "delta",
+      "text": " stop.",
+      "timestamp_ms": 1791162166424,
+      "type": "thinking"
+    },
+    {
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "completed",
+      "timestamp_ms": 1791162166424,
+      "type": "thinking"
+    },
+    {
+      "message": {
+        "content": [
+          {
+            "text": "ORACLE_ATTEMPT_FINISHED",
+            "type": "text"
+          }
+        ],
+        "role": "assistant"
+      },
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "type": "assistant"
+    },
+    {
+      "duration_api_ms": 23798,
+      "duration_ms": 23798,
+      "is_error": false,
+      "request_id": "bb182723-3ded-47de-860c-fa2d7c1e6cf7",
+      "result": "I'll write the marker once with the native Write tool, then stop.ORACLE_ATTEMPT_FINISHED",
+      "session_id": "453f8525-0ba6-4033-82f6-cc80ca0f8909",
+      "subtype": "success",
+      "type": "result",
+      "usage": {
+        "cacheReadTokens": 38656,
+        "cacheWriteTokens": 0,
+        "inputTokens": 27774,
+        "outputTokens": 519
+      }
+    }
+  ],
+  "path": "oracles/r35-cursor-crash.txt",
+  "policy_receipts": [],
+  "process_exited": true,
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_revision": 35,
+  "status": "completed"
+}

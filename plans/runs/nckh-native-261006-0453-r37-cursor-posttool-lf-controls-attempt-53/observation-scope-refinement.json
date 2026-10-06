@@ -1,0 +1,17 @@
+{
+  "status": "retained-verifier-preimage-and-precise-scope",
+  "before": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/verification-preimage.py",
+    "sha256": "44d12ac943feb1887094a5385945c1dbf7d6a0a7643b09968f6ef45772634906"
+  },
+  "after": {
+    "path": "plans/runs/nckh-native-261006-0453-r37-cursor-posttool-lf-controls-attempt-53/verify-posttool-observations.py",
+    "sha256": "03b61e50e351833a89db9d179511222211e065e2eccc55832e2b5e96c40e3b41"
+  },
+  "reason": "Actual delayed observer completed at 8.263741 seconds; explicit native timeout message was not found in the bounded read. Do not infer effective host deadline.",
+  "oracle_byte_and_content_requirements_changed": false,
+  "case_requirements_weakened": false,
+  "exit_zero_requirements_changed": false,
+  "new_terminal_exit_anchor": "actual terminal-exit-completed tool result; early exit poll also retained",
+  "source_kit_modified": false
+}

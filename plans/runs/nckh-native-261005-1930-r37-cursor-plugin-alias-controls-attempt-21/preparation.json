@@ -1,0 +1,43 @@
+{
+  "context_sha256": "ef58d0b5829a4bab1dd50b4c82bb04f7ae0ad16714373c6ec2d36ff6671ff358",
+  "control_sha256": "f460e1c2c9da3c9d87df152795a9ef31016950b7dcd579ca53cb9e3f9b972e4f",
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/prepare-alias-control.py",
+    "sha256": "d5ee6f73c0c666b1250fd736d6643b294e4713110e8a1568ba8fa0b1dfb77c20"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/definitions/session.json",
+    "sha256": "24e72e9989023e74f18c21c6fe2ee431f39774f1d80be2987de86a22913e60b7"
+  },
+  "effort": "xhigh",
+  "fault_origin": "none",
+  "global_direct_write": false,
+  "hypothesis": {
+    "path": "plans/runs/nckh-native-261005-1923-r37-cursor-plugin-routing-inspection-attempt-20/routing-hypothesis.json",
+    "sha256": "e80420c556f4b5378d675fbc1f4dc56e7beeb8d8226084de7e8b2451ef118c3f"
+  },
+  "installed_update": "not-performed",
+  "marker": "NCKH_PLUGIN_ALIAS_FINISHED_21",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_tools": 0,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "official_reference": "https://cursor.com/docs/reference/third-party-hooks",
+  "oracle": "Require an actual project/plugin callback pair for each selected event, same native session/input/version, unchanged packaged runner/context and a single policy receipt per event",
+  "package": "C:/Users/USER\\.codex\\visualizations\\2026\\10\\04\\01a104fc-f969-7f43-b1e0-1a6774f0e0c8\\nckh-hooks-r37-1640-attempt-02\\extracted\\on-standalone\\cursor",
+  "plugin": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-plugin-alias-21\\plugin",
+  "port": null,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "prompt": "[removed: raw runtime content]",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1930-r37-cursor-plugin-alias-controls-attempt-21/cursor-alias-runtime.py",
+    "sha256": "d3bfd4eecd09bc7885f5c9bae191ef7ab91a1afa1191829767c5247ed2f1accc"
+  },
+  "selected_events": [
+    "beforeSubmitPrompt",
+    "stop"
+  ],
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-one-native-plugin-prompt-stop-alias-control"
+}

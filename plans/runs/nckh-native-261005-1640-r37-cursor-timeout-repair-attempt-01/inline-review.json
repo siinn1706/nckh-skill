@@ -1,0 +1,20 @@
+{
+  "base_failure": "plans/reports/delivery-261005-1550-r36-cursor-direct-failure-observer.json",
+  "checks": {
+    "Cursor_preToolUse20s_failClosed_true": true,
+    "inactive_registration_trust_state": true,
+    "other_events_and_hosts5s": true,
+    "template_matches_preview": true
+  },
+  "findings_requiring_fix": [],
+  "mutation_controls": "plans/reports/delivery-261005-1620-r36-cursor-direct-mutation-control.json",
+  "primary_basis": "actual native5s timeout; direct20s Read and public Write/plan-only prevention controls",
+  "read_control": "plans/reports/delivery-261005-1610-r36-cursor-direct-timeout-control.json",
+  "review_limits": "not-independent-review; full native matrix and remaining app surfaces are still unqualified",
+  "scope": [
+    "core/hook_config.py",
+    "docs/installation.md",
+    "hooks/templates/cursor.json"
+  ],
+  "status": "inline-reviewed"
+}

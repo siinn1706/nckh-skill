@@ -1,0 +1,187 @@
+{
+  "control": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/control.json",
+    "sha256": "29878d0a55589164adf753f7140aff84fc2a90b271301e095e7dee069107b515"
+  },
+  "final_marker_observed": true,
+  "fixture_after": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/fixture-after.txt",
+    "sha256": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957"
+  },
+  "fixture_preimage": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/fixture-preimage.txt",
+    "sha256": "b4710a6c0116e2f1ac269b9543e18a7b15591dc7576cac14bf5606a3f5559957"
+  },
+  "native_failures": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-direct-failure-12/native-failures/17403aaa9aa8469284bf2bb3edb5ab23.json",
+      "record": {
+        "duration": 0,
+        "failure_type": "permission_denied",
+        "fault_origin": "none",
+        "full_transcript_read": false,
+        "input_fields": [
+          "conversation_id",
+          "cursor_version",
+          "duration",
+          "error_message",
+          "failure_type",
+          "generation_id",
+          "hook_event_name",
+          "is_interrupt",
+          "model",
+          "session_id",
+          "tool_input",
+          "tool_name",
+          "tool_use_id",
+          "transcript_path",
+          "user_email",
+          "workspace_roots"
+        ],
+        "input_sha256": "888e40f4bf0dd34503a127c65418b0dd7a2030ec8369a781118c6d0a8f1077fa",
+        "input_size": 1901,
+        "is_interrupt": false,
+        "native_error_sha256": "6ba645d6c6ccf5b25e85a356ccd0547765f21bd036089b98a72ae52e9ba9f829",
+        "native_session_hash": "fbd915023260bf6d926297589837de31509f1e1f77e08098ebd215116ff833ee",
+        "native_tool_name": "Read",
+        "native_tool_use_id": "call-f1fa2c6b-428f-40af-9464-39ff1a75d414-0\nfc_11bee0d6-71d0-9de8-898d-eb5eb0aa8625_0",
+        "native_version": "2026.09.15-d2fe57e",
+        "observer_pid": 21964,
+        "parent_pid": 58000,
+        "policy_invoked": false,
+        "reported_event": "postToolUseFailure",
+        "scrubbed_selected_read_error": "Tool blocked because this hook is configured to fail closed (block when it fails). Hook \"<user-home>\\AppData\\Local\\Programs\\Python\\Python312\\python.exe -I <owned-project>\\.nckh-state\\hooks\\cursor\\697f64be72eaa1e17399f23c804d9c7a7e9c0db1cebb2b24661a8db1b1c5c92a\\hooks\\runner.py --host cursor --event preToolUse --project <owned-project> --context .nckh-native-r36-cursor-direct-failure-12/context-active.json --receipt-dir .nckh-native-r36-cursor-direct-failure-12/policy-receipts\" execution failed: Hook script timed out after 5000ms",
+        "selected_read_path_matches": true,
+        "started_at": "2026-10-05T08:58:48.063971+00:00",
+        "status": "completed-native-failure-metadata-observation",
+        "tool_input_fields": [
+          "file_path"
+        ],
+        "workspace_contains_selected_project": true
+      },
+      "sha256": "93d4817a5f221785734f051e0630fb91ddf47a286549a4d044f50f9abb32d378"
+    }
+  ],
+  "neutral_preflight": {
+    "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+    "host": "cursor",
+    "paths": [
+      "oracles/r36-cursor-direct-failure-read-12.txt"
+    ],
+    "phase": "preflight",
+    "schema_version": 1,
+    "session_key": "c611c38a641cc205d3de11a849cac152b4486a3832ebaf752d1eb99cad3abd52",
+    "stop_active": false,
+    "task_key": "969578c83eeebd6588861c4045a9da58c4238083df10140e45b71439d9530712",
+    "tool": "Read"
+  },
+  "policies": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-direct-failure-12/policy-receipts/226869235d31048db41a094e1ddfe06d0755feef72ec347a5a831f7ac78eb094.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "b80876d7c8d91699f2ea8be6f20480ddfda53c20e1a047e7662580e660c6332d",
+        "decision": "advisory",
+        "event_hash": "f1fa12f4fb6b4a582f1d20aaa45b46a72b5a3292855c1f6ad1cd0f6ebcd36831",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "stop",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "c611c38a641cc205d3de11a849cac152b4486a3832ebaf752d1eb99cad3abd52",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "969578c83eeebd6588861c4045a9da58c4238083df10140e45b71439d9530712"
+      },
+      "sha256": "53cf063d6bae90d4bdae3bb0ba9156d863f8d8f31eed277f14620fd8804accb0"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-direct-failure-12/policy-receipts/82bedec8a98ff0495eb6064b7e74c5018d3b900f554333878ead12a6e4f0f923.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "b80876d7c8d91699f2ea8be6f20480ddfda53c20e1a047e7662580e660c6332d",
+        "decision": "advisory",
+        "event_hash": "337f7518b1148cf21423f7e3f8ee0eef582894d48640f6ee1d5feb128cb2e4cb",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "advisory",
+        "reason_codes": [
+          "writing-resource-advice-only"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "c611c38a641cc205d3de11a849cac152b4486a3832ebaf752d1eb99cad3abd52",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "969578c83eeebd6588861c4045a9da58c4238083df10140e45b71439d9530712"
+      },
+      "sha256": "c47ac68e3ffa8315858d49723c4e560c5610dbacf3faaa06dbd5d9be7e6ceb67"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-r36-cursor-direct-failure-12/policy-receipts/e46c0af1de725ed786cbcc5d3e9b6d80b0e608a067e2648f4fa42a5ac40cb0df.json",
+      "receipt": {
+        "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+        "context_hash": "b80876d7c8d91699f2ea8be6f20480ddfda53c20e1a047e7662580e660c6332d",
+        "decision": "allow",
+        "event_hash": "e6e11ffde1d2c270f7caaf025ae6d30138950a40b8f430049f72f806ddd9a6d4",
+        "evidence_class": "deterministic",
+        "host": "cursor",
+        "native_enforcement": "unverified",
+        "native_host_response": "unobserved",
+        "phase": "preflight",
+        "reason_codes": [
+          "declared-route-checks-current"
+        ],
+        "schema_version": 1,
+        "semantic_fidelity": "unverified",
+        "session_key": "c611c38a641cc205d3de11a849cac152b4486a3832ebaf752d1eb99cad3abd52",
+        "side_effects": "none",
+        "status": "checked-unreviewed",
+        "task_key": "969578c83eeebd6588861c4045a9da58c4238083df10140e45b71439d9530712"
+      },
+      "sha256": "9851e50f859a4c920aee972c4fe9c46dad6f720a58a8b218204c80dd6c002d72"
+    }
+  ],
+  "prompt_intent": {
+    "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/prompt-intent.json",
+    "sha256": "b360746edb98245aa3adbd22dd6df0f53b63edd7a4cd442615d0ec094908b38b"
+  },
+  "terminal": [
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-launch.json",
+      "sha256": "849d6320bf37c637890441716da9b0a015236b93d7a98e2f6fd3ff59c38cd3a5"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-startup.json",
+      "sha256": "1399a27d16a7620af41a3d46da5892f6ae396f5007e1f6efb68bb6374cb07491"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-prompt.json",
+      "sha256": "3a254d9f437cad82daf58a410a0f25b9e4fffadb095847c7dd9e4b2e8a1d72c1"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-enter.json",
+      "sha256": "7802b83b322445294e88a46d35ff7e957f65d35cbc619b7a29d0481983019234"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-poll-01.json",
+      "sha256": "0447321f35f0f9551fec1fdf0e02aca4939af8bc4da0e48409658e841cc50a9c"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-stop-request.json",
+      "sha256": "cbf61e5a652a7fce8ed716f6d4768d12713b6f8d539f92b5251eae087330c804"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-1550-r36-cursor-direct-failure-observer-attempt-12/terminal-stop-request-02.json",
+      "sha256": "e458e5682f85ab45f6478e02d4a8bb38903ed78559d2f0501c0b2a8258b1cc2a"
+    }
+  ],
+  "timestamp_utc": "2026-10-05T16:07:22.458237+07:00"
+}

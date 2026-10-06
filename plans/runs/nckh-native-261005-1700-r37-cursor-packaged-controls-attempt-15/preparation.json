@@ -1,0 +1,57 @@
+{
+  "before_sha256": "33280328b2ce86d1557423aed843394f4b7cc4bdc10708dd4e7c93679ceb2a61",
+  "brief": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/frozen-brief.json",
+    "sha256": "7fc0d4d44597b70ab5a894f7a828e4db15e2f0371657e0d01455c351a5d46a62"
+  },
+  "cases": [
+    {
+      "case": "allow",
+      "marker": "NCKH_PACKAGED_ALLOWED_FINISHED_15",
+      "mode": "auto",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_R37_ALLOWED_15\n",
+      "requested_native_tool_use_identities_maximum": 2
+    },
+    {
+      "case": "deny",
+      "marker": "NCKH_PACKAGED_DENIED_FINISHED_15",
+      "mode": "plan-only",
+      "prompt": "[removed: raw runtime content]",
+      "requested_bytes": "NCKH_CURSOR_R37_DENIED_15\n",
+      "requested_native_tool_use_identities_maximum": 2
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/prepare-packaged-controls.py",
+    "sha256": "7eb4bb135d39b697b9acc1a4af3007b587339072c75660340a63607c1f40e65c"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/definitions/session.json",
+    "sha256": "e571ed738c38b6c4a2cd5024851ca7d96927a1f21407573f31162a719dd56d8d"
+  },
+  "effort": "xhigh",
+  "fixture_origin": "controller-owned-synthetic-native-markers",
+  "fixture_preimage": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/fixture-preimage.txt",
+    "sha256": "33280328b2ce86d1557423aed843394f4b7cc4bdc10708dd4e7c93679ceb2a61"
+  },
+  "maximum_model_turns": 2,
+  "maximum_prompt_submissions": 2,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "other_packaged_timeout_seconds": 5,
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "preToolUse_timeout_seconds": 20,
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "purpose": "fresh-r37-packaged-default native public Write effect and plan-only preventive denial",
+  "relative": "oracles/r37-cursor-packaged-control-15.txt",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-1700-r37-cursor-packaged-controls-attempt-15/cursor-packaged-runtime.py",
+    "sha256": "20c3c4310a85385c800b4707eec0293862ef784190f1db48946b47cb103e4b97"
+  },
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_modified": false,
+  "source_revision": 37,
+  "status": "prepared-two-fresh-r37-packaged-controls"
+}

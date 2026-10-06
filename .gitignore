@@ -2,13 +2,14 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .test-tmp/
-.nckh-state/
-.agents/
-.codex/
-.cursor/
-.gemini/
+/.nckh-state/
+/.agents/
+/.codex/
+/.cursor/
+/.gemini/
 .env
 .env.*
+!.env.example
 *.pem
 *.key
 *.p12
@@ -17,3 +18,55 @@ temp/
 logs/
 .DS_Store
 Thumbs.db
+
+# Local host state, duplicate publications and generated evidence workspaces.
+/.agentkit-r41-plan-index/
+/github-publication/
+/publication-r*/
+/nckh-kit/dist*/
+/nckh-kit/nckh-build-check-*/
+/plans/.agentkit-*/
+/plans/local-backups/
+/plans/github-export/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.log
+*.stdout.*
+*.stderr.*
+.coverage
+.coverage.*
+coverage/
+node_modules/
+target/
+.idea/
+.vscode/
+*.class
+*.DS_Store
+
+# Active native attempts are owned by the testing agents.
+/plans/runs/r41-agy-*/
+/plans/runs/r41-cursor-*/
+
+# Proprietary reference snapshots remain local by the owner's decision.
+/resources/claudekit-engineer-main/
+/resources/claudekit-marketing-main/
+/resources/skills-main/skills/docx/
+/resources/skills-main/skills/pdf/
+/resources/skills-main/skills/pptx/
+/resources/skills-main/skills/xlsx/
+
+# Keep live test plans untouched; a reviewed snapshot is published separately.
+/plans/261006-2210-r41-agy-full-skill-test/
+/plans/261006-2210-r41-shared-testcases/
+/plans/261006-2210-r41-cursor-full-skill-test/
+/plans/evaluation/personal-use/source-acquisition/
+
+# Raw acquisition/model inputs remain local; reviewed summaries are shared.
+/plans/evaluation/**/raw/
+/plans/evaluation/**/private/
+/plans/reports/2026-10-06-nckh-update/
+/plans/reports/test-261006-2210-r41-*.md
+/docs/journals/*r41-cursor*.md
+/docs/journals/*r41-agy*.md

@@ -1,0 +1,31 @@
+{
+  "cause": "Owned attribution Markdown linked the copied upstream license into resource-off closure.",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "tests.resource.test_matched",
+    "tests.resource.test_consumers",
+    "tests.resource.test_closure",
+    "tests.resource.test_extracted_smoke",
+    "tests.build.test_closure",
+    "tests.release.test_qualification",
+    "-v"
+  ],
+  "errors": 1,
+  "evidence_class": "controller-captured-local-check-summary",
+  "exit_status": 1,
+  "failure": "resource-off bundle includes copied resource content",
+  "observed_duration_seconds": 91.46,
+  "qualification": "pending",
+  "raw_output_retained": false,
+  "schema_version": 1,
+  "source_lock_hash": "4c66baf0115552e4af575b2af9ac756c7ed8384846ac98858a91bc5c09203806",
+  "source_revision": "21",
+  "source_snapshot_reference": {
+    "path": "plans/evaluation/resource-quality/source-revision-21-failed.zip",
+    "sha256": "44948dc12b5bea78a936deec3cd963487bb309ad1838437cf752d6a2386f5115"
+  },
+  "status": "fail",
+  "tests": 37
+}

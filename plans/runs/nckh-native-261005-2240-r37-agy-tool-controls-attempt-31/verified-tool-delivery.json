@@ -1,0 +1,89 @@
+{
+  "status": "verified-two-replace-controls-and-native-unknown-multi-replace-counterevidence",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "permission_mode_observed": "always-proceed",
+  "maximum_frozen_turns": 10,
+  "actual_user_turns": 3,
+  "remaining_frozen_cases_not_run": 7,
+  "model_retries": 0,
+  "cases": [
+    {
+      "attempt": "replace-file-content-public",
+      "native_tool": "replace_file_content",
+      "native_state": "DONE",
+      "conversation_id": "0ec7ee11-897f-486e-9cc1-bcf60660887d",
+      "step_index": 2,
+      "native_error": null,
+      "preflight_receipts": 1,
+      "outcome": "verified-public-replace-exact-bytes",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/attempts/replace-file-content-public.json",
+        "sha256": "7097a732ef313d09da72c179b7972265b4a3be0a459ec2a76f67a2ebc8e2b6c7"
+      }
+    },
+    {
+      "attempt": "replace-file-content-private",
+      "native_tool": "replace_file_content",
+      "native_state": "ERROR",
+      "conversation_id": "34f40c74-790b-45d3-8d59-e99fb963748e",
+      "step_index": 2,
+      "native_error": "tool call denied by pre-tool hook: private-holdout-credential-path",
+      "preflight_receipts": 1,
+      "outcome": "verified-private-replace-prevention",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/attempts/replace-file-content-private.json",
+        "sha256": "0d9c43ecdf18968bd1c09413cc5419be916ffe333965104ab50d1f867fc8e428"
+      }
+    },
+    {
+      "attempt": "multi-replace-file-content-public",
+      "native_tool": "multi_replace_file_content",
+      "native_state": "ERROR",
+      "conversation_id": "e61954be-7fb0-4333-bc68-b00d8423852c",
+      "step_index": 2,
+      "native_error": "unknown tool: \"multi_replace_file_content\" — check spelling",
+      "preflight_receipts": 0,
+      "outcome": "genuine-native-unknown-tool-observation; original public allow oracle failed",
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/attempts/multi-replace-file-content-public.json",
+        "sha256": "0d27b3ee7afd00b3b5a1c4aa27500b18735017dd957e7df3af1e24a0882117ff"
+      }
+    }
+  ],
+  "native_unsupported_tool_observation": "multi_replace_file_content advertised in init, actual unknown tool ERROR, no preflight receipts",
+  "original_failed_oracle_regraded": false,
+  "full_native_gate": "unchecked",
+  "source_modified": false,
+  "installed_update": "not-performed",
+  "global_direct_write": false,
+  "backend_attestation": "not-observed",
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/native-tool-summary.json",
+    "sha256": "4e9eec741b69ee884e57734087e6adcd6f1a815a19e3c4c9373903b504337fb8"
+  },
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/frozen-brief.json",
+    "sha256": "cfe83ba1c0cdd01142b585bd68d1256e6757843107de6a82a35af834ef422c1d"
+  },
+  "failure": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/native-tool-failure.json",
+    "sha256": "68496f818972fad4d8f706ff180abb4d7d7a199163761e527e6da4992cdc6856"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/cleanup.json",
+    "sha256": "4d9f09af10fb61429ae090a6e61e75823c9228f74ec3449aa06a273ffbd012ce"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/process-final-audit.json",
+    "sha256": "1cb8ac5dee6662ef550f2c569a8f801f99abc1080c9ff3d2f709feb0efc1354e"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2240-r37-agy-tool-controls-attempt-31/verify-tool-delivery.py",
+    "sha256": "b4125573ae207a8b5f72456cef42c0cd9a8ffc2d44040a2ce5e90af3416b338e"
+  }
+}

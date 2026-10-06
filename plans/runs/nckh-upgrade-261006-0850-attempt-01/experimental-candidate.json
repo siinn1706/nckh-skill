@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-06T04:58:21.075587+00:00",
+  "status": "experimental-delivered",
+  "revision": "41",
+  "pins": 337,
+  "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+  "source_lock_file_sha256": "4e86e15b74106a741c51b59072245661c0df9ee99bbda192f601ac9d2d1604f2",
+  "identities": 43,
+  "base_cases": 172,
+  "required_families": 19,
+  "resources": 13,
+  "resource_consumer_bindings": 35,
+  "supplemental_domain_scenarios": 12,
+  "deterministic_tests": 311,
+  "deterministic_passed": 310,
+  "deterministic_skipped": 1,
+  "deterministic_skip_cases": [
+    {
+      "id": "tests.evidence.test_visual_engine_binding.VisualEngineBindingTests.test_symlink_observation_is_rejected",
+      "result": "skipped \"host does not permit a real symlink fixture: [WinError 1314] A required privilege is not held by the client: 'C:/Users/USER\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\nckh-4bc9239b6ed948cbbbc2449a95fe9126\\\\\\\\probe\\\\\\\\input.svg' -> 'C:/Users/USER\\\\\\\\AppData\\\\\\\\Local\\\\\\\\Temp\\\\\\\\nckh-4bc9239b6ed948cbbbc2449a95fe9126\\\\\\\\probe\\\\\\\\linked.svg'\""
+    }
+  ],
+  "deterministic_duration_seconds": 914.791,
+  "deterministic_command": [
+    "C:/Users/USER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-t",
+    ".",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "deterministic_entrypoint": "task-local observable wrapper of the same complete unittest discovery suite; public runner timeout retained separately",
+  "isolated_resource_reads": 420,
+  "isolated_research_checker_runs": 8,
+  "installer_previews": 8,
+  "packages": [
+    {
+      "mode": "on-standalone",
+      "host": "claude",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-standalone\\claude",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-standalone\\claude",
+      "manifest_sha256": "1311a139c568fcffbce3e6e61083d1e98460a258f22178d927461c77f4ccbbb1",
+      "archive_sha256": "e7575c5056014fe12b266f22ec8c5543fd072d67d99c82575a55063d499db273",
+      "files": 895,
+      "resource_bindings": 35,
+      "closure_hash": "b1338ce983cef7d05ae65d665255b9e7c39a7f6c6f6368147ceac1de5d9f3880",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-standalone/claude/manifest.json",
+        "sha256": "1311a139c568fcffbce3e6e61083d1e98460a258f22178d927461c77f4ccbbb1"
+      }
+    },
+    {
+      "mode": "on-standalone",
+      "host": "codex",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-standalone\\codex",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-standalone\\codex",
+      "manifest_sha256": "f6c8747ccb91bdf81b9457b2a47550c08e2e5c48a9387091324847a28594f1bc",
+      "archive_sha256": "4c0ecc913e241eaf7c3f3c2f0ff62eeb44617d8a8ced4daeb57ff242c5560283",
+      "files": 895,
+      "resource_bindings": 35,
+      "closure_hash": "4c0866e5310b77ad6db1d30fce13378e1952d8bac43cee6c2ae747ebcd6d8e4d",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-standalone/codex/manifest.json",
+        "sha256": "f6c8747ccb91bdf81b9457b2a47550c08e2e5c48a9387091324847a28594f1bc"
+      }
+    },
+    {
+      "mode": "on-standalone",
+      "host": "cursor",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-standalone\\cursor",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-standalone\\cursor",
+      "manifest_sha256": "9afe79417bf6d22add0c4ddfa6e87a076afba2b8ff3756cb2b7c73cb779cb18e",
+      "archive_sha256": "a1115bad4738602a83ab12bed5140e301ae35ef5d32bf996b58ed7d8571c5f04",
+      "files": 894,
+      "resource_bindings": 35,
+      "closure_hash": "64e7c234252581dbcc7c9200f30e4ec0b390c98ee231c2eb0e188ec7c1daf9a9",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-standalone/cursor/manifest.json",
+        "sha256": "9afe79417bf6d22add0c4ddfa6e87a076afba2b8ff3756cb2b7c73cb779cb18e"
+      }
+    },
+    {
+      "mode": "on-standalone",
+      "host": "agy",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-standalone\\agy",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-standalone\\agy",
+      "manifest_sha256": "608d53fe33179f16492d68caca6bc5cacd4b1220e5a79116def17690c8cf6cb4",
+      "archive_sha256": "cd1e61dd8273be59a68d12aebde06f1d9008662fb0d49488dc68b0b394266973",
+      "files": 894,
+      "resource_bindings": 35,
+      "closure_hash": "71080064076ade239a7bb632b27dc4b397a868ec04085ec36f953988c56f4a9d",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-standalone/agy/manifest.json",
+        "sha256": "608d53fe33179f16492d68caca6bc5cacd4b1220e5a79116def17690c8cf6cb4"
+      }
+    },
+    {
+      "mode": "on-plugin",
+      "host": "claude",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-plugin\\claude",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-plugin\\claude",
+      "manifest_sha256": "18af585cfbcd068e29de0c8d5d13bdc4d4b216792a306b042953eb87d307df92",
+      "archive_sha256": "eba03b03ba81f6959d52d648a5b70a2160d59f3e7a968e162919f6a81827a7e3",
+      "files": 1782,
+      "resource_bindings": 35,
+      "closure_hash": "7bd65416376f76e00bb263ccb8b4a33c8a01f2c9ab73ab16b91a9117e3b9a5ba",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "actual_plugin_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-plugin/claude/manifest.json",
+        "sha256": "18af585cfbcd068e29de0c8d5d13bdc4d4b216792a306b042953eb87d307df92"
+      }
+    },
+    {
+      "mode": "on-plugin",
+      "host": "codex",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-plugin\\codex",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-plugin\\codex",
+      "manifest_sha256": "cd7dc00c2fc778c37b5e7c188735d7ef3e74226c45fb0826acac4bb7efd4fac6",
+      "archive_sha256": "cef5051f13adfd1fbb1b01dc58837969d0c58168db20db1f06981ac72171e8f6",
+      "files": 1776,
+      "resource_bindings": 35,
+      "closure_hash": "7c9653045133ac46a4d22664a0260ff06e706ceb403734c6d83b3c1a42f746cc",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "actual_plugin_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-plugin/codex/manifest.json",
+        "sha256": "cd7dc00c2fc778c37b5e7c188735d7ef3e74226c45fb0826acac4bb7efd4fac6"
+      }
+    },
+    {
+      "mode": "on-plugin",
+      "host": "cursor",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-plugin\\cursor",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-plugin\\cursor",
+      "manifest_sha256": "c4c1782a515c5406a6ad77c3b75980ebc7d447497d7fcaefc35f77f261fa42c3",
+      "archive_sha256": "34e0d6aa4eac4a71790bbe817860fda6d87ae66feb0cc9054a054a36f3f59287",
+      "files": 1780,
+      "resource_bindings": 35,
+      "closure_hash": "30366e82393a86c971e494bb6a125a6cc0d140f1a91c7b9734b37e3c5b3903d8",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "actual_plugin_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-plugin/cursor/manifest.json",
+        "sha256": "c4c1782a515c5406a6ad77c3b75980ebc7d447497d7fcaefc35f77f261fa42c3"
+      }
+    },
+    {
+      "mode": "on-plugin",
+      "host": "agy",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\on-plugin\\agy",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\on-plugin\\agy",
+      "manifest_sha256": "a446fbb89ebef4196b80d53f675d7c4cdbfe65ef2f7313e9c6baae0cef4a76c7",
+      "archive_sha256": "f0b6d9ceb74123397d1bd6bf1ee03efb3276111676579c1ddf9f081f0b009901",
+      "files": 1780,
+      "resource_bindings": 35,
+      "closure_hash": "2114c5d23332342f09ea55905f158fc1cbba68217bc3a02a80df629e597dcd91",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "actual_resource_reads": 35,
+      "actual_plugin_resource_reads": 35,
+      "isolated_checker": "pass",
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/on-plugin/agy/manifest.json",
+        "sha256": "a446fbb89ebef4196b80d53f675d7c4cdbfe65ef2f7313e9c6baae0cef4a76c7"
+      }
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "claude",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-standalone-internal\\claude",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-standalone-internal\\claude",
+      "manifest_sha256": "fa5ade6a1705fa2f292d8b696fb0748a2019ce7784d2960c3406d417500ae910",
+      "archive_sha256": "d42e54d83feafaf92026e7b590c705c5b47c2a6180c329ce3c016e166330f654",
+      "files": 821,
+      "resource_bindings": 0,
+      "closure_hash": "9f2a89720c3008b42131c3131a27b1c32b71a1a87f0c11d1f06ee280077ec03d",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-standalone-internal/claude/manifest.json",
+        "sha256": "fa5ade6a1705fa2f292d8b696fb0748a2019ce7784d2960c3406d417500ae910"
+      }
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "codex",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-standalone-internal\\codex",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-standalone-internal\\codex",
+      "manifest_sha256": "f9c072cf5ec0fc41014bb527118d0297e51a8007bf61aa7948cdf32efd762b03",
+      "archive_sha256": "0c03c5354d417873c9d02fcbce0fecb7ac2d880a163a854729aef3f1fd1c6f31",
+      "files": 821,
+      "resource_bindings": 0,
+      "closure_hash": "a97aed29583f81920e3b543e86c2c29baed95db6da6f9fbbd80f96224b688b79",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-standalone-internal/codex/manifest.json",
+        "sha256": "f9c072cf5ec0fc41014bb527118d0297e51a8007bf61aa7948cdf32efd762b03"
+      }
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "cursor",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-standalone-internal\\cursor",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-standalone-internal\\cursor",
+      "manifest_sha256": "2af3072838803656909b4a160744900618cc097afd81e482dc91d40487e2b1af",
+      "archive_sha256": "9daf175c66a0f2273e010ca1ebf7aeeb63f733d1eba4aced98210114e97fe9a4",
+      "files": 820,
+      "resource_bindings": 0,
+      "closure_hash": "83e62db69de1c23c7aca2cb5f09aec4457ab14969a2b9d49bf93c48e541d2a81",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-standalone-internal/cursor/manifest.json",
+        "sha256": "2af3072838803656909b4a160744900618cc097afd81e482dc91d40487e2b1af"
+      }
+    },
+    {
+      "mode": "off-standalone-internal",
+      "host": "agy",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-standalone-internal\\agy",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-standalone-internal\\agy",
+      "manifest_sha256": "64ba82f7e8d365ce7349f148f044a593d8750ea8f88692c05421a9c2e149a2bf",
+      "archive_sha256": "3e8788cc13f060e3b7d6854451f0985ff3fb00fed28b62e711f55bb43a6e189d",
+      "files": 820,
+      "resource_bindings": 0,
+      "closure_hash": "976f88f34ff05bf1fd94bc189a2ece447ee5c3b389adbfe598b91965f2f25252",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-standalone-internal/agy/manifest.json",
+        "sha256": "64ba82f7e8d365ce7349f148f044a593d8750ea8f88692c05421a9c2e149a2bf"
+      }
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "claude",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-plugin-internal\\claude",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-plugin-internal\\claude",
+      "manifest_sha256": "3f227fba0ba48e8ddfeb882ff5ef99d45220a46f80cb58f603fd6abd7b451968",
+      "archive_sha256": "019e27b3ef0ee16d9e7c59e01c5a7c26c8169a3dbc0cc4d8ee32bc0201468517",
+      "files": 1634,
+      "resource_bindings": 0,
+      "closure_hash": "86a4ef9f218711224374de6c0ae917cee627cdc4cbba17b370821070f488f276",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-plugin-internal/claude/manifest.json",
+        "sha256": "3f227fba0ba48e8ddfeb882ff5ef99d45220a46f80cb58f603fd6abd7b451968"
+      }
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "codex",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-plugin-internal\\codex",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-plugin-internal\\codex",
+      "manifest_sha256": "fa85b5a5867a1ba305b2f0eb4ac79cf20cc8c82df841ac36f92b622c6a63762c",
+      "archive_sha256": "9ac07d4e108532603fd60719a036669beeefa8679b14cb1cfb07859b51399f17",
+      "files": 1628,
+      "resource_bindings": 0,
+      "closure_hash": "843f0e2eb8885f2bed7ed6c1a541e4e880eeffd886e5b0f3a51aa6f1d3305447",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-plugin-internal/codex/manifest.json",
+        "sha256": "fa85b5a5867a1ba305b2f0eb4ac79cf20cc8c82df841ac36f92b622c6a63762c"
+      }
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "cursor",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-plugin-internal\\cursor",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-plugin-internal\\cursor",
+      "manifest_sha256": "2d183daf030e15c85450560cf3e2d52f3c49d59d546a0203b08bdefb3ad15597",
+      "archive_sha256": "861a8f7edb3af95bd8b989b7bebbb1340b0a348ce8ee4d4f28880c6ebaba69eb",
+      "files": 1632,
+      "resource_bindings": 0,
+      "closure_hash": "15c00297cc7a16bfb2cf869fa59c521872adf5da3c2e3c746da794b69a200600",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-plugin-internal/cursor/manifest.json",
+        "sha256": "2d183daf030e15c85450560cf3e2d52f3c49d59d546a0203b08bdefb3ad15597"
+      }
+    },
+    {
+      "mode": "off-plugin-internal",
+      "host": "agy",
+      "source": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-upgrade-261006-0850-attempt-01\\bundles\\off-plugin-internal\\agy",
+      "extracted": "C:/Users/USER\\AppData\\Local\\Temp\\nckh-upgrade-ab9bd2d1172f4d8e9196b1a12a709c9e\\extracted\\off-plugin-internal\\agy",
+      "manifest_sha256": "1c08fdfdb0244312766734e78dc3413502ebd794c16f825ee58cca7fb6754463",
+      "archive_sha256": "b99cf541f3d79d9ca6fffc7b01fb4ec50b9c14345f77b92760ebf264e7d539ac",
+      "files": 1632,
+      "resource_bindings": 0,
+      "closure_hash": "e842de9ee2442f87ead04762e7da1d5994c928ba66decbdfdd75d10684def31b",
+      "source_lock_hash": "114e57918889a52474b514c09443a2afd1999e2dd11990a099d5b8069a9267d5",
+      "verdict": "pass",
+      "off_missing_resources_no_read": true,
+      "manifest": {
+        "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/bundles/off-plugin-internal/agy/manifest.json",
+        "sha256": "1c08fdfdb0244312766734e78dc3413502ebd794c16f825ee58cca7fb6754463"
+      }
+    }
+  ],
+  "protected_hashes_checked": 590,
+  "owned_live": 0,
+  "quick_native_hooks": "Genuine bounded Codex advisory callback checked before upgrade; old full-native gate remains separate",
+  "pilot": {
+    "observations": 26,
+    "original_test_predictions": 6,
+    "supplemental_outcomes": 52,
+    "supplemental_completed": 49,
+    "supplemental_unknown": 3,
+    "scope": "Retrospective dependent single-country series; original values preserved; independent Fraction arithmetic; no CI/causal/blind efficacy/generalization claim"
+  },
+  "pending": {
+    "semantic_agent_routes": "unverified",
+    "native_full": "pending separately; old plan44/45",
+    "owner": "pending",
+    "scientific": "pending",
+    "provider_paid": "not-authorized",
+    "stable_public": "not-authorized",
+    "real_install_migration": "not-authorized"
+  },
+  "cost": "unknown/unmeasured; provider unused",
+  "release_rights": "local-package-only",
+  "evidence": [
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-local-gates.json",
+      "sha256": "9efc16a8efb0c16d6f01903d7b5e319bde6635a52cf9dfc18a7a90d28e772dde"
+    },
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-deterministic-attempt-02.json",
+      "sha256": "53822004e28228451f4ed11fc66d5514d7ca7fa1abf1581ee765439c328854d8"
+    },
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-extracted-qualification.json",
+      "sha256": "6eb3ea5b285639e6f0739abee48a0c2a56a48d0bb76b808470fd22083b91f685"
+    },
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-final-preservation.json",
+      "sha256": "f6cd73f5da70a2c17af9651429f423a627da012531814e575bc7bae71c2824d2"
+    },
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/paperwrite-evidence-handoff-v2.json",
+      "sha256": "f9be29f9dd3c2bec9c5cc0c21ac62dcdf44bddbd9dd55b86388ed6c603409cb0"
+    }
+  ],
+  "reviews": [
+    {
+      "path": "plans/reports/review-261006-research-contracts-p2-p3.md",
+      "sha256": "ffc75ef5e35ca028f26509e91acd96ab8c1128699ef68173a374a332ec078424"
+    },
+    {
+      "path": "plans/reports/review-261006-owned-resource-provenance.md",
+      "sha256": "b986da1735425b3ba8254beee217423a26799f336c8fbfb71ce316f7236aec70"
+    },
+    {
+      "path": "plans/reports/review-261006-experiment-graph-and-pilot.md",
+      "sha256": "76005b7bfd51102f2d2ecdde855714ee0f052a7ef59f85113fad9879c3837d97"
+    },
+    {
+      "path": "plans/reports/review-261006-research-integration-p7.md",
+      "sha256": "83ec82c3dbe6264bf1e38283793a61b3c3803507bc4a5ad0561ea0ebe1a96297"
+    }
+  ],
+  "retained_failures": [
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-pinned-tests-attempt-01.txt",
+      "sha256": "2d6fa00875903bee325bb1a68d1b8f0963168d2fad01ed1760bb851e5803c174"
+    },
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-deterministic.json",
+      "sha256": "f30c9f171f2c11af23dcc05b46da943543691d7e1356ba1b252097af3aa776f4"
+    },
+    {
+      "path": "plans/runs/nckh-upgrade-261006-0850-attempt-01/p7-core-count-diagnostic-attempt-01.txt",
+      "sha256": "0f9e6eb1b9f50fdc58006dc9771aab8f12feedfec7e3ce0fa56c4c7984abd221"
+    }
+  ],
+  "rollback": "Installed skills/ownership and archive remain unchanged; retain r38/r39 lock history and original runs; any later candidate repair needs new freeze and affected receipts"
+}

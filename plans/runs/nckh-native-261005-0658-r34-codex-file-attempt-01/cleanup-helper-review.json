@@ -1,0 +1,33 @@
+{
+  "after": {
+    "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/codex-native-files.py",
+    "sha256": "6fea985b9cc9b35369cbf967207d5548850df72bd7d37d44fb0c81b41b20741c"
+  },
+  "before": {
+    "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/preimages/before-cleanup-target-shadow-repair.py",
+    "sha256": "3358654815bcb417eada63641be5781ecf40c2b63ee6633a0113a8ff8705d761"
+  },
+  "classification": "owned helper repair; pinned kit/native receipts unchanged",
+  "controller_global_write_attempt": "not proven by retained trace",
+  "finding": "cleanup receipt variable was rebound by global config inspection loop; final atomic_json could target global hooks file",
+  "global_cleanup_overwrite_observed": false,
+  "helper_invoked": false,
+  "observed_global_hook_keys": [
+    "hooks"
+  ],
+  "observed_global_hook_sha256": "d5d8a9077f23adb6876f81ba8a358356b2167086b7d4d64a126fc556fe400901",
+  "recorded_at": "2026-10-05T00:15:41.885304+00:00",
+  "retained_native_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/native-global-trust-observation.json",
+      "sha256": "6d5b0627c0edb9e1d7f4aa802cd433ceac1b6289f53d02185211d6d7be042845"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/cleanup-reconciliation.json",
+      "sha256": "e674d5fd3a0035920a4bd25a55bb0d4d65108245d5662aef3f21aa3585ee478a"
+    }
+  ],
+  "retet_helper": "r35 helper uses receipt_path/global_path and checks raw config/hook hashes before cleanup",
+  "stalled_process_cause": "not proven; static defect is a concrete risk, not an execution trace",
+  "status": "static-cleanup-target-defect-repaired"
+}

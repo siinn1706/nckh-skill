@@ -1,0 +1,147 @@
+"""Record bounded native callbacks; faults are explicit controller test injections."""
+
+import argparse
+import importlib.util
+import hashlib
+import json
+import os
+import subprocess
+import sys
+import time
+import uuid
+from datetime import datetime, timezone
+from pathlib import Path
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--host", choices=["cursor", "agy"], required=True)
+parser.add_argument("--event", required=True)
+parser.add_argument("--project", type=Path, required=True)
+parser.add_argument("--evidence", type=Path, required=True)
+parser.add_argument("--runner", type=Path, required=True)
+parser.add_argument("--callback-source", choices=["project", "plugin"], default="project")
+args = parser.parse_args()
+capture_spec = importlib.util.spec_from_file_location("callback_capture", Path(__file__).resolve().parent / "native-process-capture.py")
+capture = importlib.util.module_from_spec(capture_spec)
+capture_spec.loader.exec_module(capture)
+control_path = args.evidence / "probe-control.json"
+control = json.loads(control_path.read_text(encoding="utf8"))
+mode = control["mode"]
+fault = args.event == control.get("selected_event")
+target = args.evidence / "observations" / control["attempt"] / args.event / (uuid.uuid4().hex + ".json")
+target.parent.mkdir(parents=True, exist_ok=True)
+data = sys.stdin.buffer.read(65537)
+sha = lambda value: hashlib.sha256(value).hexdigest()
+record = {"schema_version": 1, "host": args.host, "event": args.event, "mode": mode,
+          "callback_source": args.callback_source,
+          "attempt": control["attempt"], "started_at": datetime.now(timezone.utc).isoformat(),
+          "status": "entered-from-native-host", "observer_pid": os.getpid(), "parent_pid": os.getppid(),
+          "input_size": len(data), "input_sha256": sha(data), "control_sha256": sha(control_path.read_bytes()),
+          "runner_sha256": sha(args.runner.read_bytes()), "fault_selected": fault,
+          "fault_origin": "controller-injection-after-genuine-callback" if fault and mode not in
+          {"allow", "policy-deny", "uncovered-tool", "duplicate"} else "none"}
+record["observer_creation_filetime_ticks"] = capture.creation_ticks(os.getpid())
+if control.get("marker_relative"):
+    marker = (args.project / control["marker_relative"]).resolve()
+    marker.relative_to(args.project.resolve())
+    record["marker_exists_at_callback_start"] = marker.is_file()
+    if marker.is_file():
+        assert marker.stat().st_size <= 256
+        record["marker_at_callback_start_sha256"] = sha(marker.read_bytes())
+    record["controller_expected_marker_sha256"] = control["expected_marker_sha256"]
+try:
+    native = json.loads(data)
+    roots = native.get("workspace_roots", native.get("workspacePaths", []))
+    call = native.get("toolCall", {})
+    fields = native.get("tool_input", call.get("args", {}))
+    record.update(input_fields=sorted(native), reported_event=native.get("hook_event_name"),
+                  native_model=native.get("model", native.get("modelName")),
+                  native_model_id=native.get("model_id"), native_model_params=native.get("model_params"),
+                  native_version=native.get("cursor_version"),
+                  native_tool_name=native.get("tool_name", call.get("name")),
+                  native_tool_use_id=native.get("tool_use_id"), native_step_idx=native.get("stepIdx"),
+                  native_session_hash=sha(str(native.get("conversation_id", native.get("conversationId"))).encode()),
+                  tool_input_fields=sorted(fields) if isinstance(fields, dict) else [],
+                  workspace_contains_selected_project=any(str(Path(root).resolve()).casefold() ==
+                  str(args.project.resolve()).casefold() for root in roots))
+    if isinstance(fields, dict):
+        record["native_search_scope_fields"] = {
+            key: value for key, value in fields.items()
+            if key in {"path", "file_path", "directory", "search_path", "glob", "glob_pattern", "include", "include_pattern", "pattern"}
+            and isinstance(value, str) and len(value.encode("utf8")) <= 1024}
+
+        record["native_path_fields"] = {key: value for key, value in fields.items() if isinstance(value, str) and key in {"path", "file_path", "filePath", "target_path", "targetFile", "TargetFile", "AbsolutePath"}}
+        if record["native_tool_name"] == "Write" and control.get("marker_relative"):
+            native_path = fields.get("file_path")
+            if isinstance(native_path, str) and (args.project / native_path).resolve() == marker:
+                content = fields.get("content")
+                if isinstance(content, str):
+                    content_bytes = content.encode("utf8")
+                    prefix = control["native_marker_prefix"].encode("ascii")
+                    suffix = content_bytes[len(prefix):]
+                    synthetic = (len(content_bytes) <= 256 and content_bytes.startswith(prefix)
+                        and len(suffix) <= 8 and all(byte in {10,13} for byte in suffix))
+                    record["native_content_diagnostics"] = {
+                        "sha256":sha(content_bytes), "utf8_length":len(content_bytes),
+                        "synthetic_marker_only":synthetic,
+                        "tail_hex":content_bytes[-16:].hex() if synthetic else None,
+                        "expected_LF_content_sha256":control["expected_content_sha256"],
+                        "raw_content_retained":False,
+                        "scope":"exact controller-owned public synthetic marker path"}
+                else:
+                    record["native_content_diagnostics"] = {"status":"content-argument-not-observed"}
+        command = fields.get("command", fields.get("CommandLine"))
+        if isinstance(command, str):
+            record["native_command_sha256"] = sha(command.encode())
+            record["oracle_name_in_native_command"] = "oracle.txt" in command
+except (ValueError, TypeError, AttributeError, OSError):
+    record["input_schema"] = "not-readable-native-json-object"
+
+
+def save():
+    target.write_text(json.dumps(record, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf8")
+
+
+save()
+if fault and mode == "crash":
+    record["status"] = "intentional-test-crash-exit-17"
+    save()
+    os._exit(17)
+if fault and mode == "timeout":
+    record["status"] = "intentional-test-sleep-eight-seconds"
+    save()
+    time.sleep(8)
+if fault and mode == "malformed-output":
+    record["status"] = "intentional-test-malformed-output"
+    save()
+    print("[invalid-native-hook-output", flush=True)
+    sys.exit(0)
+selected_event = "UnknownNckhEvent" if fault and mode == "unsupported-codec" else args.event
+context = "context-deny.json" if fault and mode == "policy-deny" else "context-uncovered.json" if mode == "uncovered-tool" else "context-allow.json"
+command = [sys.executable, "-I", str(args.runner), "--host", args.host, "--event", selected_event,
+           "--project", str(args.project), "--context", (args.evidence.relative_to(args.project) / context).as_posix(),
+           "--receipt-dir", args.evidence.relative_to(args.project).as_posix() + "/policy-receipts/" + control["attempt"] + "/" + args.event]
+process = subprocess.Popen(command, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                           creationflags=subprocess.CREATE_NO_WINDOW)
+record["runner_pid"] = process.pid
+record["runner_creation_filetime_ticks"] = capture.creation_ticks(process.pid)
+save()
+try:
+    stdout, stderr = process.communicate(b"{" if fault and mode == "malformed-input" else data, timeout=5)
+except subprocess.TimeoutExpired:
+    process.terminate()
+    try:
+        stdout, stderr = process.communicate(timeout=5)
+    except subprocess.TimeoutExpired:
+        process.kill()
+        stdout, stderr = process.communicate(timeout=5)
+    record["runner_timeout"] = True
+record.update(status="completed", runner_exit_code=process.returncode, runner_exited=process.poll() is not None,
+              output_sha256=sha(stdout), stderr_sha256=sha(stderr), completed_at=datetime.now(timezone.utc).isoformat())
+try:
+    record["runner_output"] = json.loads(stdout)
+except ValueError:
+    record["runner_output"] = "invalid-json"
+save()
+sys.stdout.buffer.write(stdout)
+sys.stderr.buffer.write(stderr)
+sys.exit(process.returncode)

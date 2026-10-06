@@ -1,0 +1,238 @@
+{
+  "status": "verified-current-Codex-stop-patch-controls-and-fault-observations",
+  "timestamp_utc": "2026-10-05T20:20:01.751350+00:00",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "version": "0.154.0",
+  "surface": "codex-cli-exec",
+  "model_requested": "gpt-5.6-luna",
+  "effort_requested": "medium",
+  "backend_model_effort_attestation": "not-observed",
+  "native_callback_model": "gpt-5.6-luna",
+  "model_turns": 7,
+  "actual_native_patches": 7,
+  "callbacks": 35,
+  "policy_receipts": 32,
+  "results": [
+    {
+      "attempt": "stop-allow",
+      "mode": "allow",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "advisory",
+      "selected_reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "selected_wire": {},
+      "fault_origin": "none",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-allow.json",
+        "sha256": "9b44b67ecc8ed9d5c09bc14f12ba1632ed4f6ce756ecf36c07e9643e7ca1da46"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-allow/Stop/942691adf6cd49c284b24cbdc0dd45cc.json",
+        "sha256": "58c57966067c16525a828285ceec52fb42e54816845502688f096e2782e3df2a"
+      }
+    },
+    {
+      "attempt": "stop-policy-deny",
+      "mode": "policy-deny",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "block",
+      "selected_reason_codes": [
+        "bounded-input-exceeded"
+      ],
+      "selected_wire": {},
+      "fault_origin": "none",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-policy-deny.json",
+        "sha256": "e74e159823a21353e3f8521e4aef1187530dc7ca5a876ef296c0e7620136b607"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-policy-deny/Stop/10dbd97a6e4b44c6b4e0f97847f974d7.json",
+        "sha256": "7058bc747d2be8dd6cec9e384b2eae24189227f2bc2c2f93814007581f073da3"
+      }
+    },
+    {
+      "attempt": "stop-malformed-input",
+      "mode": "malformed-input",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "block",
+      "selected_reason_codes": [
+        "hook-input-or-context-invalid"
+      ],
+      "selected_wire": {},
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-malformed-input.json",
+        "sha256": "fab8a2df190101158ec265d2370cc90183f05d74fce0a506db2e0272a3194443"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-malformed-input/Stop/6c3c5600122e4224a17d54f9d0a1cd0f.json",
+        "sha256": "a4e3da6c55a0a5a68020167cc078c52c341b1d999ca1ac210206555272162f41"
+      }
+    },
+    {
+      "attempt": "stop-malformed-output",
+      "mode": "malformed-output",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "intentional-test-malformed-output",
+      "selected_policy_receipts": 0,
+      "selected_decision": null,
+      "selected_reason_codes": [],
+      "selected_wire": null,
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-malformed-output.json",
+        "sha256": "1974fa787b980a732e08257986644e8b8916d21cbbbaa0d0340813011e8dc26a"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-malformed-output/Stop/e940660603b14c3d82fdf49f9209545a.json",
+        "sha256": "3df234e6f3d2530a39184732cfbf7bd3c3d8624f307167be5ffec7040e295663"
+      }
+    },
+    {
+      "attempt": "stop-timeout",
+      "mode": "timeout",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "intentional-test-sleep-eight-seconds",
+      "selected_policy_receipts": 0,
+      "selected_decision": null,
+      "selected_reason_codes": [],
+      "selected_wire": null,
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-timeout.json",
+        "sha256": "9ccbb139e4b9d341dd017efb17d90f8fa55bfac30d72214e28c0f746d079c914"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-timeout/Stop/068ee09147594c7b90e261cbe26d7719.json",
+        "sha256": "81a8ec9fc010f8a006cab54b23bf60e6b95fd3a2927ee8653e03e455cfd48b44"
+      }
+    },
+    {
+      "attempt": "stop-crash",
+      "mode": "crash",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "intentional-test-crash-exit-17",
+      "selected_policy_receipts": 0,
+      "selected_decision": null,
+      "selected_reason_codes": [],
+      "selected_wire": null,
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-crash.json",
+        "sha256": "7fcf62e502b8f4e89b4525c41cde091b76adec4301d2bf91651eaa7649a0e1d7"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-crash/Stop/8f56c297dd53450fba8ec9b00575e6b4.json",
+        "sha256": "5b67f624aefdf2c6bd0a895aa2735cad6ce871a055002ab2dd993d955b0b8a60"
+      }
+    },
+    {
+      "attempt": "stop-unsupported-codec",
+      "mode": "unsupported-codec",
+      "native_patch_completed": true,
+      "marker_exact": true,
+      "marker_present_at_Stop_entry": true,
+      "stop_hook_active": false,
+      "last_assistant_message_bytes": 23,
+      "last_assistant_message_sha256": "eec35fe97866d09fbc7fd79f36ed5ccd476b5dba6306304f3f5815e6e7cc4378",
+      "native_message_matches_final_frame": true,
+      "selected_callback_status": "completed",
+      "selected_policy_receipts": 1,
+      "selected_decision": "block",
+      "selected_reason_codes": [
+        "hook-input-or-context-invalid"
+      ],
+      "selected_wire": {},
+      "fault_origin": "controller-after-genuine-callback",
+      "final_snapshot": {
+        "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/final-attempts/stop-unsupported-codec.json",
+        "sha256": "1ee3aec51ba82c5036245b9d4e61e9fad38bfb3b06a5f1ce03650486fc5fe482"
+      },
+      "Stop_callback": {
+        "path": "plans/runs/nckh-native-261005-0658-r34-codex-file-attempt-01/project-02/.nckh-native-codex-stop-controls-48/observations/stop-unsupported-codec/Stop/bc618dcb47964e6788e2da30adead52d.json",
+        "sha256": "10abfc547187ef9efb4ecaccd15df08bb175419dd3e27f8365a1a8834489c038"
+      }
+    }
+  ],
+  "marker_bytes_hex": "4e434b485f4e41544956455f46494c455f4f5241434c450a",
+  "Stop_policy_enforcement": "not-established; current Stop codec emits empty JSON for advisory and block decisions",
+  "prevention_or_rollback": "not-established; exact mutation already present at every selected Stop callback entry",
+  "native_hook_notification_states": "not-exposed-by-retained-exec-JSON; completed file_change/turn items observed",
+  "timeout_observation": "outer5s/sleeper8s; final Stop observer remains sleep record with no selected receipt; no live owned descendants",
+  "repeat_scope": "one Stop per turn with native stop_hook_active false; no actual repeat callback or repeated-reminder qualification",
+  "scientific_QA": "unverified; synthetic marker binding only",
+  "unknown_host_event": "unverified; selected codec injection only",
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/frozen-brief.json",
+    "sha256": "fc409254b025671cc76075b747828300a7176867f9d30af2b3ddde1ea3145987"
+  },
+  "summary": {
+    "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/native-stop-summary.json",
+    "sha256": "0799dd1dc26b8e91ee6ecba6bcd1d0b5ea7876338e9b32aa116cced04bedef3f"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/cleanup.json",
+    "sha256": "dc389ea357927fe062ac9cb009ecbb1c201f3da29fcc3e872bb9584406146bf9"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/process-final-audit.json",
+    "sha256": "c449157470681e5be5670e2d95c0c87de9ad1c3b6d05789d1d5c3ae43ff205e7"
+  },
+  "process_union_identities": 2310,
+  "historical_files_preserved": 655,
+  "processes_live": 0,
+  "process_stop_performed": false,
+  "global_direct_writes": false,
+  "new_project_trust_keys": 0,
+  "global_config_and_hook_hashes_unchanged": true,
+  "full_native_gate": "unchecked",
+  "review": "inline; no independent reviewer",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261006-0320-r37-codex-stop-controls-attempt-48/verify-stop-controls.py",
+    "sha256": "3ddd0015514f778a3081c47c1caafe9caa211539edd80577949fffd7be8a2ae0"
+  }
+}

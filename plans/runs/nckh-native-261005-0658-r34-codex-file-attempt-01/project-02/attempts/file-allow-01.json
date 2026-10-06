@@ -1,0 +1,408 @@
+{
+  "attempt": "file-allow-01",
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "callbacks": [
+    {
+      "path": "project-02/observations/file-allow-01/PostToolUse/33f04f8df88942b5870e82796f0124d6.json",
+      "sha256": "d77e2ec4944706e26a58d4a03376958cfdfcd189d0f94b9e9253f142bdaf424d"
+    },
+    {
+      "path": "project-02/observations/file-allow-01/PreToolUse/b634c7df63a54c90ba99d7d258fba6aa.json",
+      "sha256": "cd2f35277b54ca1852aaa87f919ea098a1957226d033dc9929a89accdb1522b4"
+    },
+    {
+      "path": "project-02/observations/file-allow-01/SessionStart/c2e211e381ce4a79a77fa1490642269a.json",
+      "sha256": "10449085f698f676e94f0e58df92b22ef91a3648f303f87ae04f3b4c5dd069f8"
+    },
+    {
+      "path": "project-02/observations/file-allow-01/Stop/cd881547ef694961abb1a362c3b04af9.json",
+      "sha256": "f3957b41fa8e1ca79bdb1f950de81944d0e5d7b72b0051dc02ecdb0870dcda75"
+    },
+    {
+      "path": "project-02/observations/file-allow-01/UserPromptSubmit/2cfef6b3b1b547d788b939e94e74642f.json",
+      "sha256": "a968a9e0f28af236ca5e102ec832924b43b28fd198234ca4049f619f8b2face0"
+    }
+  ],
+  "command_receipt": {
+    "path": "commands/codex-native-file-file-allow-01.json",
+    "sha256": "b683cf5b792d1179cd164c72130a35586b4ad7604806d6be0ecbbcf3f937f541"
+  },
+  "config_route": "invocation-only inline sessionFlags; no persisted project trust",
+  "effort_requested": "medium",
+  "exit_code": 0,
+  "invalid_stdout_lines": 0,
+  "marker_exists": true,
+  "marker_relative": "oracles/file-allow-01.txt",
+  "marker_sha256": "2dc41cb95039a23f16b77b5e7cf47d44f78988b01264547d41dda9dbfc52d2dc",
+  "mode": "allow",
+  "model_requested": "gpt-5.6-luna",
+  "native_callbacks": [
+    {
+      "attempt": "file-allow-01",
+      "completed_at": "2026-10-04T23:40:29.301613+00:00",
+      "event": "PostToolUse",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_response",
+        "tool_use_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "4bbe8f16c7d5c932a03335ca514b21ecb3f71021a84515e7cdbeae33f447a11f",
+      "input_size": 683,
+      "mode": "allow",
+      "native_command_sha256": "072e1c574c6b5832b83e29c5cc0cb64b97d652991f5dac5737f1d5faccd1f7f6",
+      "native_direct_path_fields": {},
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "16c23f56eb48449d7ed3cade45ecfbac8580bbd9d0258d31bc7e253f3d1b9542",
+      "native_tool_input_type": "dict",
+      "native_tool_name": "apply_patch",
+      "native_tool_use_id": "exec-d07d90ed-a51e-47ee-a1cf-05f24e530c3f",
+      "native_turn_id": "01a1094a-35e5-78c1-82dd-0632d6d97fda",
+      "observer_pid": 53600,
+      "parent_pid": 4624,
+      "reported_event": "PostToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "artifact-final-bytes-missing-or-stale",
+          "hookEventName": "PostToolUse"
+        }
+      },
+      "runner_pid": 22136,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T23:40:28.926124+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "67ef9c45d42d81133ea879ab96056aaac54220f673a0ce30b1aab71ff9c51928",
+      "tool_input_fields": [
+        "command"
+      ]
+    },
+    {
+      "attempt": "file-allow-01",
+      "completed_at": "2026-10-04T23:40:28.162522+00:00",
+      "event": "PreToolUse",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "83d2b6ebb2c19d83f730525f5ea34cf0d84cc11628f916e6fa81d8a1193007c9",
+      "input_size": 550,
+      "mode": "allow",
+      "native_command_sha256": "072e1c574c6b5832b83e29c5cc0cb64b97d652991f5dac5737f1d5faccd1f7f6",
+      "native_direct_path_fields": {},
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "16c23f56eb48449d7ed3cade45ecfbac8580bbd9d0258d31bc7e253f3d1b9542",
+      "native_tool_input_type": "dict",
+      "native_tool_name": "apply_patch",
+      "native_tool_use_id": "exec-d07d90ed-a51e-47ee-a1cf-05f24e530c3f",
+      "native_turn_id": "01a1094a-35e5-78c1-82dd-0632d6d97fda",
+      "observer_pid": 53268,
+      "parent_pid": 58140,
+      "reported_event": "PreToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 45348,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": true,
+      "started_at": "2026-10-04T23:40:27.773087+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "tool_input_fields": [
+        "command"
+      ]
+    },
+    {
+      "attempt": "file-allow-01",
+      "completed_at": "2026-10-04T23:40:22.280046+00:00",
+      "event": "SessionStart",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "source",
+        "transcript_path"
+      ],
+      "input_sha256": "ad99856d93ef115b63fafa57f486e3dc4187ee86ab79cc22e140c49ec81ecd57",
+      "input_size": 313,
+      "mode": "allow",
+      "native_direct_path_fields": {},
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "16c23f56eb48449d7ed3cade45ecfbac8580bbd9d0258d31bc7e253f3d1b9542",
+      "native_tool_input_type": "NoneType",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": null,
+      "observer_pid": 24960,
+      "parent_pid": 57080,
+      "reported_event": "SessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "writing-resource-advice-only",
+          "hookEventName": "SessionStart"
+        }
+      },
+      "runner_pid": 30808,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T23:40:21.772673+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fe7b7019656fd6c0a1bf0e387ff5655abf5a3bc6d18babc7cd127dcbd6f2cfa1",
+      "tool_input_fields": []
+    },
+    {
+      "attempt": "file-allow-01",
+      "completed_at": "2026-10-04T23:40:33.519983+00:00",
+      "event": "Stop",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "last_assistant_message",
+        "model",
+        "permission_mode",
+        "session_id",
+        "stop_hook_active",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "0a4216a1671de48aaffe8119a93c0f2769ef7f07a2704269fde3f9776630f727",
+      "input_size": 411,
+      "mode": "allow",
+      "native_direct_path_fields": {},
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "16c23f56eb48449d7ed3cade45ecfbac8580bbd9d0258d31bc7e253f3d1b9542",
+      "native_tool_input_type": "NoneType",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": "01a1094a-35e5-78c1-82dd-0632d6d97fda",
+      "observer_pid": 11008,
+      "parent_pid": 35052,
+      "reported_event": "Stop",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 22316,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T23:40:33.136382+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "tool_input_fields": []
+    },
+    {
+      "attempt": "file-allow-01",
+      "completed_at": "2026-10-04T23:40:23.648961+00:00",
+      "event": "UserPromptSubmit",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "prompt",
+        "session_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "b2df7f6fcd5aada3af78f41e0f7ffbded266772f367424ef5a98efbffa559f68",
+      "input_size": 797,
+      "mode": "allow",
+      "native_direct_path_fields": {},
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "16c23f56eb48449d7ed3cade45ecfbac8580bbd9d0258d31bc7e253f3d1b9542",
+      "native_tool_input_type": "NoneType",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": "01a1094a-35e5-78c1-82dd-0632d6d97fda",
+      "observer_pid": 48564,
+      "parent_pid": 18832,
+      "reported_event": "UserPromptSubmit",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "writing-resource-advice-only",
+          "hookEventName": "UserPromptSubmit"
+        }
+      },
+      "runner_pid": 55572,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T23:40:23.141681+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b132d4385a1c73b9ab3925fdc245e6104a49c7ff4bfee37bf346f11fe0607937",
+      "tool_input_fields": []
+    }
+  ],
+  "native_frames": [
+    {
+      "thread_id": "01a1094a-34a9-7990-b153-ad599c838bc2",
+      "type": "thread.started"
+    },
+    {
+      "item": {
+        "id": "item_0",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_1",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_2",
+        "message": "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "item": {
+        "id": "item_3",
+        "message": "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "changes": [
+          {
+            "kind": "add",
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0658-r34-codex-file-attempt-01\\project-02\\oracles\\file-allow-01.txt"
+          }
+        ],
+        "id": "item_4",
+        "status": "in_progress",
+        "type": "file_change"
+      },
+      "type": "item.started"
+    },
+    {
+      "item": {
+        "changes": [
+          {
+            "kind": "add",
+            "path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0658-r34-codex-file-attempt-01\\project-02\\oracles\\file-allow-01.txt"
+          }
+        ],
+        "id": "item_4",
+        "status": "completed",
+        "type": "file_change"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_5",
+        "text": "ORACLE_ATTEMPT_FINISHED",
+        "type": "agent_message"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 26368,
+        "input_tokens": 53342,
+        "output_tokens": 94,
+        "reasoning_output_tokens": 30
+      }
+    }
+  ],
+  "permission_route": "dangerous native CLI flags",
+  "policy_receipts": [
+    {
+      "decision": "pending",
+      "path": "project-02/policy-receipts/file-allow-01/PostToolUse/e91ce885669b8f9cc70f6b62bd4b6e70870fbde05176ad83808dd84ef6673de8.json",
+      "reason_codes": [
+        "artifact-final-bytes-missing-or-stale"
+      ],
+      "sha256": "2ba0356e94801bc612b96927a4493da3f8b8a3e494b0f3bc85882a8d8a78cc0c"
+    },
+    {
+      "decision": "allow",
+      "path": "project-02/policy-receipts/file-allow-01/PreToolUse/b9b5e2842eaccac52d5f01766ec8b3f0b2c4a2b085fe0d1d7bd68f827bb6b0a7.json",
+      "reason_codes": [
+        "declared-route-checks-current"
+      ],
+      "sha256": "b6dcec97b12bf9e80123f4b315cb95ebdbce71bbfa93eaca326bf261f6f63959"
+    },
+    {
+      "decision": "advisory",
+      "path": "project-02/policy-receipts/file-allow-01/SessionStart/11746ee084e1870d536d3ceda7b06b2f4256c595dcf4bc2b0b09cdc1091b7391.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "ab28369f4e113022ceb1def83965584638ccc56da4ec65e51fb94d86bcf24d14"
+    },
+    {
+      "decision": "advisory",
+      "path": "project-02/policy-receipts/file-allow-01/Stop/950487ad5333d5f612e05c993582153f3e07cec89af0e1db561b2f07139a54c5.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "271425c4f68d058999b5d2685b46366054662de08fbad054c472fec2acda40bc"
+    },
+    {
+      "decision": "advisory",
+      "path": "project-02/policy-receipts/file-allow-01/UserPromptSubmit/11746ee084e1870d536d3ceda7b06b2f4256c595dcf4bc2b0b09cdc1091b7391.json",
+      "reason_codes": [
+        "writing-resource-advice-only"
+      ],
+      "sha256": "ab28369f4e113022ceb1def83965584638ccc56da4ec65e51fb94d86bcf24d14"
+    }
+  ],
+  "process_exited": true,
+  "requested_native_tool": "apply_patch",
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "status": "completed"
+}

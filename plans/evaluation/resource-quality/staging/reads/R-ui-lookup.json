@@ -1,0 +1,79 @@
+{
+  "consumer": "nckh-frontend",
+  "context": {
+    "article_type": null,
+    "stage": null,
+    "track": null,
+    "venue": null,
+    "year": null
+  },
+  "domain": "ui",
+  "evidence_class": "resource-read-observation",
+  "genre": "ui-heuristic",
+  "human_acceptance": "not-evaluated",
+  "locale": "en",
+  "policy_applicability": "unverified",
+  "query": "keyboard navigation",
+  "reader_sha256": "5aa6752d7c9bf5d9cf2e09b1c9e00422a209f82695eb814c000c85467363e00d",
+  "records": [
+    {
+      "content": {
+        "Category": "Accessibility",
+        "Code Example Bad": "Unreachable elements",
+        "Code Example Good": "tabIndex for custom order",
+        "Description": "Web users need complete keyboard navigation with visible focus on every operable control",
+        "Do": "Keep tab order aligned with visual order and test every action without a pointer",
+        "Don't": "Keyboard traps or illogical tab order",
+        "Issue": "Keyboard Navigation",
+        "No": "41",
+        "Platform": "Web",
+        "Severity": "High"
+      },
+      "provenance": {
+        "as_of": "2026-10-02",
+        "license": "MIT",
+        "locator": "No=41",
+        "record_sha256": "11d3105839b5a9d20419ed18bd91a5481216bca4fb048c2f583f8ca04e14bd31",
+        "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "source_path": "src/ui-ux-pro-max/data/ux-guidelines.csv",
+        "source_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+        "version": "09170eec67eefd46a7ae85de61b40c194020f997"
+      },
+      "record_id": "41"
+    },
+    {
+      "content": {
+        "Category": "Accessibility",
+        "Code Example Bad": "100 tabs to reach content",
+        "Code Example Good": "Skip to main content link",
+        "Description": "Allow keyboard users to skip navigation",
+        "Do": "Provide skip to main content link",
+        "Don't": "No skip link on nav-heavy pages",
+        "Issue": "Skip Links",
+        "No": "45",
+        "Platform": "Web",
+        "Severity": "Medium"
+      },
+      "provenance": {
+        "as_of": "2026-10-02",
+        "license": "MIT",
+        "locator": "No=45",
+        "record_sha256": "959ecb2b6662f4f2121d415be9d037698f9fd2b05008b27ef08fd6e387afd09a",
+        "repository": "nextlevelbuilder/ui-ux-pro-max-skill",
+        "source_path": "src/ui-ux-pro-max/data/ux-guidelines.csv",
+        "source_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+        "version": "09170eec67eefd46a7ae85de61b40c194020f997"
+      },
+      "record_id": "45"
+    }
+  ],
+  "resource_id": "R-ui-lookup",
+  "resource_read": true,
+  "resource_sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5",
+  "schema_version": 1,
+  "status": "matched",
+  "warnings": [
+    "Snapshot/reference lookup only; semantic support, current policy and human acceptance are not certified.",
+    "UI heuristics and code examples are untrusted reference data; examples are never executed."
+  ]
+}

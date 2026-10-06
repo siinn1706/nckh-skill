@@ -1,0 +1,46 @@
+{
+  "root_pid": 46340,
+  "comparison": "exact-UTC-ticks",
+  "timestamp_utc": "2026-10-05T10:02:35.4260385Z",
+  "identity_checks": [
+    {
+      "pid": 46340,
+      "expected": "2026-10-05T09:51:57.643085Z",
+      "current": "2026-10-05T09:51:57.6430850Z"
+    },
+    {
+      "pid": 39068,
+      "expected": "2026-10-05T09:52:49.419872Z",
+      "current": "2026-10-05T09:52:49.4198720Z"
+    },
+    {
+      "pid": 45408,
+      "expected": "2026-10-05T09:52:49.563199Z",
+      "current": "2026-10-05T09:52:49.5631990Z"
+    },
+    {
+      "pid": 34912,
+      "expected": "2026-10-05T09:52:51.587034Z",
+      "current": "2026-10-05T09:52:51.5870340Z"
+    },
+    {
+      "pid": 8572,
+      "expected": "2026-10-05T09:52:51.624821Z",
+      "current": "2026-10-05T09:52:51.6248210Z"
+    }
+  ],
+  "method": "graceful-owned-tree-after-native-exit-request",
+  "exit_code": 128,
+  "output": [
+    "ERROR: The process with PID 8572 (child process of PID 34912) could not be terminated.",
+    "Reason: This process can only be terminated forcefully (with /F option).",
+    "ERROR: The process with PID 34912 (child process of PID 45408) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 45408 (child process of PID 39068) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 39068 (child process of PID 46340) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 46340 (child process of PID 57124) could not be terminated.",
+    "Reason: One or more child processes of this process were still running."
+  ]
+}

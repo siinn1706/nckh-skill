@@ -1,0 +1,67 @@
+[
+  {
+    "schema_version": 1,
+    "route": "current-app-native-codex-exec",
+    "requested_model": "gpt-6.1-sol",
+    "requested_effort": "low",
+    "effective_model": null,
+    "effective_effort": null,
+    "fallback": false,
+    "case_id": "real-source-vi-prose-taste-01",
+    "skill": "nckh-taste",
+    "command": [
+      "C:/Users/USER\\AppData\\Local\\OpenAI\\Codex\\bin\\be3fd7e5c1969ff6\\codex.exe",
+      "exec",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "read-only",
+      "--model",
+      "gpt-6.1-sol",
+      "-c",
+      "model_reasoning_effort=\"low\"",
+      "--cd",
+      "C:/Users/USER\\Downloads\\test-skill",
+      "--json",
+      "--output-last-message",
+      "C:/Users/USER\\Downloads\\test-skill\\plans\\evaluation\\personal-use\\native\\app-gpt-6-1-sol-r24-attempt-03\\gpt-6.1-sol\\real-source-vi-prose-taste-01\\artifact.md",
+      "-"
+    ],
+    "project": "C:/Users/USER\\Downloads\\test-skill",
+    "instruction_authority_exception": "C:/Users/USER/.claude/rules/development-rules.md",
+    "installed_ownership_sha256": "db7471d0b5d6637975617aeae4ecb9643f11554c93a3bd62561e8e57441f175d",
+    "prompt_sha256": "756243de403c27f4b8c0421b16224606f4414efa53c9015cab0a46db8a3f8a25",
+    "started_at": "2026-10-03T07:56:05.900893+00:00",
+    "status": "completed-unreviewed",
+    "repair_reference": {
+      "path": "plans/reports/review-261003-1435-gpt-6-1-sol-r24-output.md",
+      "sha256": "c271ccf60192806e12111eb8aa2b13fdd8899eae5ef8b3405df21d07b38c51cc"
+    },
+    "pid": 51372,
+    "exit_status": 0,
+    "seconds": 274.81299999999464,
+    "process_cleanup": "owned-process-group-closed",
+    "finished_at": "2026-10-03T08:00:40.714829+00:00",
+    "stderr_sha256": "a7b70500959eaf894a71cb35895f826e46fb2e8957885d1138dc5957f730ef2f",
+    "events_sha256": "2f3632e1751be63bbbc76fefda11cd46f993fbee9b7e0c57ba21325bf9549c46",
+    "instruction_authority_reads": {
+      "status": "trace-inspected",
+      "reads": [
+        {
+          "path": "C:/Users/USER/.claude/rules/development-rules.md",
+          "trace_line": 8,
+          "command": "\"C:\\\\Program Files\\\\PowerShell\\\\7\\\\pwsh.exe\" -Command \"Get-Content -LiteralPath 'C:/Users/USER/.claude/rules/development-rules.md'; Get-Content -LiteralPath '.agents/skills/nckh-taste/SKILL.md'; Get-Content -LiteralPath '.agents/skills/nckh-write/SKILL.md'\"",
+          "status": "completed",
+          "exit_code": 0
+        }
+      ]
+    },
+    "artifact_exists": true,
+    "artifact_sha256": "5022f64430f66c039ad4f51a039a16d417fc3a1c0a3a4c1ce3378c0c895ac9de",
+    "evidence_limits": [
+      "Native executable dispatch, not a main-window UI run.",
+      "Requested/configured model is separate from effective provider telemetry.",
+      "Successful process exit is unreviewed output, not an acceptance verdict."
+    ]
+  }
+]

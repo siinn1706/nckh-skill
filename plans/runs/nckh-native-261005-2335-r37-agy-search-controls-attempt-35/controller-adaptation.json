@@ -1,0 +1,58 @@
+{
+  "stage": "before model admission or native turns",
+  "source_modified": false,
+  "changes": [
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\agy-cli-runtime.py",
+      "source_sha256": "ebc8c456c4b6a59c9ef80d9e514bb65475b25f48d9d225c37c4f818be218886d",
+      "target": "agy-cli-runtime.py",
+      "adapted_sha256": "e2decc2bb479cad9bc3a16239c854e8715f27035da1d6acf6e788ca8b29fe947"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\owned-cli-command.py",
+      "source_sha256": "60f7a8fa553bef01927ee850bdf2ef1565b69b57b9a628b7f4696b471f53bdef",
+      "target": "owned-cli-command.py",
+      "adapted_sha256": "60f7a8fa553bef01927ee850bdf2ef1565b69b57b9a628b7f4696b471f53bdef"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\audit-owned-processes.ps1",
+      "source_sha256": "76d5242a1175f2249e3316b9eaee0b047b57ab91bcc223b5bf25e5d92f9fef36",
+      "target": "audit-owned-processes.ps1",
+      "adapted_sha256": "874633a2bb0e8f1d954cf236c4d74087c1ba1ca131f20b91561bf3140ce6f4c8"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\run-tool-controls.py",
+      "source_sha256": "1c87ee21f4d009069effa6b024f8cbe30656a73baa37f0159b66909f4f10f830",
+      "target": "run-tool-controls.py",
+      "adapted_sha256": "fcaf005aadc28315e8446a69857767e7fe835a66b47a609303e3f757e82e1d8c"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\agy-tool-observer.py",
+      "source_sha256": "5ef7a1caeae2ff138915eb139af31746a9c51adeb96e845a6e00b1fd4b07a2b6",
+      "target": "agy-tool-observer.py",
+      "adapted_sha256": "e2b87a4941959792fc6d58c87ca78817ac0cc9be897f266394d89104ca9526c2"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\cursor-agy-model-dangerous-grant.json",
+      "source_sha256": "1f5ce078359295a58947c04ab38d5f582d85875e2c89554e53d6a367e7846153",
+      "target": "cursor-agy-model-dangerous-grant.json",
+      "adapted_sha256": "1f5ce078359295a58947c04ab38d5f582d85875e2c89554e53d6a367e7846153"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\cli-route-user-decision.json",
+      "source_sha256": "cd359968535e23961e252de4932400dd0a1ce1b2783ad986ffa8402ca95688fa",
+      "target": "cli-route-user-decision.json",
+      "adapted_sha256": "c7709f0ff8633267eb83f2d1ef70080b7ff56a8d54d6056aad8874a4ad6556aa"
+    }
+  ],
+  "previous_failed_oracle": {
+    "path": "plans\\runs\\nckh-native-261005-2255-r37-agy-read-tools-attempt-32\\verified-read-attempt.json",
+    "sha256": "e58f14bc5eb6f840193d831897e8c82fb200500328657b487f13261eb7eb7b00"
+  },
+  "previous_failed_oracle_regraded": false,
+  "remaining_tools": [
+    "find_by_name",
+    "grep_search"
+  ],
+  "list_dir": "previous gap retained; no retry"
+}

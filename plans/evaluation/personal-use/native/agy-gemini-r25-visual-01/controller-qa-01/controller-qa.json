@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "status": "controller-qa-completed-for-stated-checks",
+  "recorded_at": "2026-10-03T14:56:23.406934+00:00",
+  "case_id": "real-source-worldbank-visual-01",
+  "host_folder": "agy-gemini-r25-visual-01",
+  "files": {
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/real-source-worldbank-visual-01.svg": {
+      "sha256": "a85e1a4aaa336d20e7d3096362dd019041e7d73e44f887f972fa58773cdafb3e",
+      "bytes": 10194
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/real-source-worldbank-visual-01.md": {
+      "sha256": "6cd0955969a76383f0d5548100f3cad4fe311dd243d785d7525c493cf138ab0d",
+      "bytes": 29850
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/illustrator-evidence.json": {
+      "sha256": "292570442ee1720b0bbefb13f5378c5324fed35cc26db3fc4cdc2ae26657d012",
+      "bytes": 128684
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/native-qa-copy.ai": {
+      "sha256": "c0f04eed48e1e752356d6220e69487f5640a5a182258d8396b38a661f2fcacb1",
+      "bytes": 174337
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/native-render.png": {
+      "sha256": "5d16da6909d333a11c1c96100a684a366c5ac11b338b3081b29be61d25ed830f",
+      "bytes": 86606
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/controller-render.png": {
+      "sha256": "ff6b8f76d4d03c7f5dfe63131c72ef43a5d98c64edd18ebba67aeebda0a73be9",
+      "bytes": 71132
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/render.json": {
+      "sha256": "ff7a0ce566800bb6897ca9968f90257e79db355cb928bfc3a709514facd42977",
+      "bytes": 1124
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/source-to-mark-check.json": {
+      "sha256": "98f62e6d2f1a134a304e092f1b3bace8b3e0a4b5b711e3c14153e05ce28628b8",
+      "bytes": 5833
+    },
+    "plans/evaluation/personal-use/native/agy-gemini-r25-visual-01/controller-qa-01/source-check-execution.json": {
+      "sha256": "53a1e132117d4b7987e8d13c78a4a2230e072396299cd9a4d2c3f38f34984a71",
+      "bytes": 716
+    }
+  },
+  "checks": {
+    "source_marks": "pass-for-stated-checks;26 exact source values/circles/polyline",
+    "actual_controller_render": "pass; declared rsvg2.40.20 actual exit0 and reproduced submitted PNG bytes",
+    "native_open": "pass; actual submitted SVG opened in Illustrator2024",
+    "native_structure": {
+      "text_frames": 29,
+      "data_paths": 26,
+      "raster_images": 0,
+      "exact_text_multiset": true,
+      "max_mark_coordinate_delta": 2.2937484004614817e-05
+    },
+    "native_edit_save_reopen_restore": "pass; text and point changed, saved/closed/reopened retained, then restored/saved/closed/reopened",
+    "layout": "controller visually inspected submitted/reproduced and native PNG; no clipping or unintended overlap; all native text bounds inside artboard",
+    "contrast": [
+      {
+        "foreground": "#152638",
+        "background": "#ffffff",
+        "ratio": 15.370697987638057
+      },
+      {
+        "foreground": "#26394c",
+        "background": "#ffffff",
+        "ratio": 11.850846413636745
+      },
+      {
+        "foreground": "#006b82",
+        "background": "#ffffff",
+        "ratio": 6.130636524481035
+      }
+    ],
+    "accessibility_structure": {
+      "title_desc_present": true,
+      "language": "vi",
+      "aria_labelledby": "chart-title chart-desc",
+      "role": "img",
+      "year_order_ascending": true
+    },
+    "owner": "pending-personal-review"
+  },
+  "viewer": {
+    "name": "Adobe Illustrator2024",
+    "file_version": "28.0.0",
+    "native_font_family_observed": [
+      "Arial"
+    ]
+  },
+  "limits": [
+    "User-reported completion and selected model are separate from effective provider telemetry; no model rerun.",
+    "AGY SVG/PNG byte identity with prior GPT Sol output does not establish independent Gemini generation.",
+    "Fresh reader execution is not authenticated by identical stored receipts alone.",
+    "Accessibility structural and contrast checks only; assistive technology testing not run and SVG metadata persistence in AI not claimed.",
+    "AGY premature generation-time Source truth pass is corrected by separate controller verdict; raw preserved.",
+    "Owner scoring and scientific/stable/public qualification remain separate."
+  ]
+}

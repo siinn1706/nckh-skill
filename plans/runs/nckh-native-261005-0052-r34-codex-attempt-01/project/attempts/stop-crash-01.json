@@ -1,0 +1,377 @@
+{
+  "attempt": "stop-crash-01",
+  "backend_model_attestation": "not-observed",
+  "billing": "not-observed",
+  "callback_bindings": [
+    {
+      "path": "observations\\stop-crash-01\\PostToolUse\\e55a07a17c164ee590565f8187ef31e7.json",
+      "sha256": "057a06d69c755e0e1c3e82ee49fe3c164d2e24b8a6904e3ea8e6f9ac2ce55ace"
+    },
+    {
+      "path": "observations\\stop-crash-01\\PreToolUse\\1991a80685194725a3d7b05721370113.json",
+      "sha256": "66c12104d9b9206ccbf010c683b55c7cdcac57be0a9b48b8282acc63ac898767"
+    },
+    {
+      "path": "observations\\stop-crash-01\\SessionStart\\dac5cbcd2e6c49d2880a7446a7ecd31e.json",
+      "sha256": "07166091334805e07afb7203aefd2c82e33d9c13cee1588b67e9d44fc04ca0b2"
+    },
+    {
+      "path": "observations\\stop-crash-01\\Stop\\b586b4fbcb5e4f67971f56b093475ee9.json",
+      "sha256": "5af417937b9cfaa213a9d7f4a98c12f444b062828d630b650e338fc8deef66e5"
+    },
+    {
+      "path": "observations\\stop-crash-01\\UserPromptSubmit\\1e8bb5d3164f488fb2dcff7ed619239e.json",
+      "sha256": "2167605d162e56e0c8f9a66c90ae74bc0dc55bce05b2fbe8d902e20cf792d565"
+    }
+  ],
+  "command_receipt": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\commands\\codex-cli-native-stop-crash-01.json",
+  "configuration_route": "only sessionFlags inline hooks; project remains untrusted; no global config or trust write",
+  "duplicate_kind": null,
+  "effort_requested": "medium",
+  "ended_at": "2026-10-04T18:19:33.003447+00:00",
+  "event": "Stop",
+  "exit_code": 0,
+  "fault_origin": "controller-after-genuine-native-callback",
+  "invalid_stdout_lines": 0,
+  "marker_exists": true,
+  "marker_path": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0052-r34-codex-attempt-01\\project\\oracles\\stop-crash-01.txt",
+  "marker_preimage": "absent",
+  "marker_sha256": "2c4870dd2d78d2a15d88ff930c60cb256d4f3819e06bf7a94c41eae9f9770752",
+  "mode": "crash",
+  "model_requested": "gpt-5.6-luna",
+  "native_callbacks": [
+    {
+      "attempt": "stop-crash-01",
+      "completed_at": "2026-10-04T18:19:28.957171+00:00",
+      "event": "PostToolUse",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_response",
+        "tool_use_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "0181a8d322025d575d172aec91ca2dc9a7e30e95d9fd47a13b11d89f5ac0defe",
+      "input_size": 668,
+      "mode": "allow",
+      "native_command_sha256": "160eddba116d3089e898fc54419b06a72441dcfc181979a51ead4c1fdffa647f",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "809e636b3e4923777d6bfe0a04cbd6535ed213956b0bc5dbe7d5f50cff827cb5",
+      "native_tool_name": "Bash",
+      "native_tool_use_id": "exec-73a3e5f2-002c-407c-ac1a-651da80371bf",
+      "native_turn_id": "01a10824-4518-7171-b539-7e4062b30b36",
+      "observer_pid": 52396,
+      "parent_pid": 54556,
+      "reported_event": "PostToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "artifact-final-bytes-missing-or-stale",
+          "hookEventName": "PostToolUse"
+        }
+      },
+      "runner_pid": 58208,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:19:28.465246+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "67ef9c45d42d81133ea879ab96056aaac54220f673a0ce30b1aab71ff9c51928",
+      "tool_input_fields": [
+        "command"
+      ]
+    },
+    {
+      "attempt": "stop-crash-01",
+      "completed_at": "2026-10-04T18:19:26.661687+00:00",
+      "event": "PreToolUse",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "tool_input",
+        "tool_name",
+        "tool_use_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "ec455b91013644a23f222a3068e041a07ef88d50dab6e3081e886f859f86cf6d",
+      "input_size": 648,
+      "mode": "allow",
+      "native_command_sha256": "160eddba116d3089e898fc54419b06a72441dcfc181979a51ead4c1fdffa647f",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "809e636b3e4923777d6bfe0a04cbd6535ed213956b0bc5dbe7d5f50cff827cb5",
+      "native_tool_name": "Bash",
+      "native_tool_use_id": "exec-73a3e5f2-002c-407c-ac1a-651da80371bf",
+      "native_turn_id": "01a10824-4518-7171-b539-7e4062b30b36",
+      "observer_pid": 18228,
+      "parent_pid": 58596,
+      "reported_event": "PreToolUse",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {},
+      "runner_pid": 49536,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:19:26.063714+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+      "tool_input_fields": [
+        "command"
+      ]
+    },
+    {
+      "attempt": "stop-crash-01",
+      "completed_at": "2026-10-04T18:19:18.325856+00:00",
+      "event": "SessionStart",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "session_id",
+        "source",
+        "transcript_path"
+      ],
+      "input_sha256": "9297a1f36a74c21c7a75ee5e8d4768cd67690b728852bae86c299fdb057ae508",
+      "input_size": 305,
+      "mode": "allow",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "809e636b3e4923777d6bfe0a04cbd6535ed213956b0bc5dbe7d5f50cff827cb5",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": null,
+      "observer_pid": 5160,
+      "parent_pid": 22104,
+      "reported_event": "SessionStart",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "writing-resource-advice-only",
+          "hookEventName": "SessionStart"
+        }
+      },
+      "runner_pid": 47096,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:19:17.911694+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fe7b7019656fd6c0a1bf0e387ff5655abf5a3bc6d18babc7cd127dcbd6f2cfa1",
+      "tool_input_fields": []
+    },
+    {
+      "attempt": "stop-crash-01",
+      "event": "Stop",
+      "fault_origin": "controller-after-genuine-callback",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "last_assistant_message",
+        "model",
+        "permission_mode",
+        "session_id",
+        "stop_hook_active",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "06db2f95ee25b547e741a7786e64efbda5992bb02b0f496b02d6d46b47e62596",
+      "input_size": 403,
+      "mode": "crash",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "809e636b3e4923777d6bfe0a04cbd6535ed213956b0bc5dbe7d5f50cff827cb5",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": "01a10824-4518-7171-b539-7e4062b30b36",
+      "observer_pid": 42228,
+      "parent_pid": 14108,
+      "reported_event": "Stop",
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": true,
+      "started_at": "2026-10-04T18:19:32.365405+00:00",
+      "status": "intentional-test-crash-exit-17",
+      "tool_input_fields": []
+    },
+    {
+      "attempt": "stop-crash-01",
+      "completed_at": "2026-10-04T18:19:19.351755+00:00",
+      "event": "UserPromptSubmit",
+      "fault_origin": "none",
+      "input_fields": [
+        "cwd",
+        "hook_event_name",
+        "model",
+        "permission_mode",
+        "prompt",
+        "session_id",
+        "transcript_path",
+        "turn_id"
+      ],
+      "input_sha256": "e3c052f4b11d3f82bb15643c444d75140256f825f886b414a6f05c74fc56cff2",
+      "input_size": 829,
+      "mode": "allow",
+      "native_model": "gpt-5.6-luna",
+      "native_permission_mode": "bypassPermissions",
+      "native_session_hash": "809e636b3e4923777d6bfe0a04cbd6535ed213956b0bc5dbe7d5f50cff827cb5",
+      "native_tool_name": null,
+      "native_tool_use_id": null,
+      "native_turn_id": "01a10824-4518-7171-b539-7e4062b30b36",
+      "observer_pid": 58256,
+      "parent_pid": 52868,
+      "reported_event": "UserPromptSubmit",
+      "runner_exit_code": 0,
+      "runner_exited": true,
+      "runner_output": {
+        "hookSpecificOutput": {
+          "additionalContext": "writing-resource-advice-only",
+          "hookEventName": "UserPromptSubmit"
+        }
+      },
+      "runner_pid": 54552,
+      "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+      "selected": false,
+      "started_at": "2026-10-04T18:19:18.957077+00:00",
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b132d4385a1c73b9ab3925fdc245e6104a49c7ff4bfee37bf346f11fe0607937",
+      "tool_input_fields": []
+    }
+  ],
+  "native_json_frames": [
+    {
+      "thread_id": "01a10824-442c-70e1-b8b2-7f4249d0a67c",
+      "type": "thread.started"
+    },
+    {
+      "item": {
+        "id": "item_0",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_1",
+        "message": "`--dangerously-bypass-hook-trust` is enabled. Enabled hooks may run without review for this invocation.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_2",
+        "message": "Under-development features enabled: local_thread_store_compression. Under-development features are incomplete and may behave unpredictably. To suppress this warning, set `suppress_unstable_features_warning = true` in C:/Users/USER\\.codex\\config.toml.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.started"
+    },
+    {
+      "item": {
+        "id": "item_3",
+        "message": "Skill descriptions were shortened to fit the skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest.",
+        "type": "error"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_4",
+        "text": "**Executing native shell with commentary**",
+        "type": "reasoning"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "aggregated_output": "",
+        "command": "\"C:\\\\Program Files\\\\PowerShell\\\\7\\\\pwsh.exe\" -NoProfile -Command \"Set-Content -LiteralPath 'C:/Users/USER\\\\Downloads\\\\test-skill\\\\plans\\\\runs\\\\nckh-native-261005-0052-r34-codex-attempt-01\\\\project\\\\oracles\\\\stop-crash-01.txt' -Value 'NCKH_NATIVE_TOOL_ORACLE' -Encoding utf8\"",
+        "exit_code": null,
+        "id": "item_5",
+        "status": "in_progress",
+        "type": "command_execution"
+      },
+      "type": "item.started"
+    },
+    {
+      "item": {
+        "aggregated_output": "",
+        "command": "\"C:\\\\Program Files\\\\PowerShell\\\\7\\\\pwsh.exe\" -NoProfile -Command \"Set-Content -LiteralPath 'C:/Users/USER\\\\Downloads\\\\test-skill\\\\plans\\\\runs\\\\nckh-native-261005-0052-r34-codex-attempt-01\\\\project\\\\oracles\\\\stop-crash-01.txt' -Value 'NCKH_NATIVE_TOOL_ORACLE' -Encoding utf8\"",
+        "exit_code": 0,
+        "id": "item_5",
+        "status": "completed",
+        "type": "command_execution"
+      },
+      "type": "item.completed"
+    },
+    {
+      "item": {
+        "id": "item_6",
+        "text": "ORACLE_ATTEMPT_FINISHED",
+        "type": "agent_message"
+      },
+      "type": "item.completed"
+    },
+    {
+      "type": "turn.completed",
+      "usage": {
+        "cache_write_input_tokens": 0,
+        "cached_input_tokens": 52736,
+        "input_tokens": 53496,
+        "output_tokens": 218,
+        "reasoning_output_tokens": 48
+      }
+    }
+  ],
+  "oracle_command_sha256": "160eddba116d3089e898fc54419b06a72441dcfc181979a51ead4c1fdffa647f",
+  "permission_route": "native CLI dangerous flags",
+  "policy_receipts": [
+    {
+      "decision": "pending",
+      "path": "policy-receipts\\stop-crash-01\\PostToolUse\\3e9e0543dafeba9b1b6ca7723dea49307982e925f4b678f4ee7e9b87f080a30a.json",
+      "sha256": "5524d8764dcdc3f5c2de26d2de71fa2a9cfccf51de44a11a3251e94562c6bdc5"
+    },
+    {
+      "decision": "allow",
+      "path": "policy-receipts\\stop-crash-01\\PreToolUse\\7b1aed5b068cb2c4b5308cfeb28ec1c29a2e2956856578cdb89d5663a914dcce.json",
+      "sha256": "0498d26a47675485bf2b0eb90d86a1adb3bd4a791d9b4d40170ed2b8a33fdd13"
+    },
+    {
+      "decision": "advisory",
+      "path": "policy-receipts\\stop-crash-01\\SessionStart\\28e21c7c3a0bfe11d17eec779049d577768cb1cabd909754d880f88892117b30.json",
+      "sha256": "d043c7553fb85eab218df343681245d733574d92c58946a17e62f52f40727172"
+    },
+    {
+      "decision": "advisory",
+      "path": "policy-receipts\\stop-crash-01\\UserPromptSubmit\\28e21c7c3a0bfe11d17eec779049d577768cb1cabd909754d880f88892117b30.json",
+      "sha256": "d043c7553fb85eab218df343681245d733574d92c58946a17e62f52f40727172"
+    }
+  ],
+  "process_exited": true,
+  "source_lock_hash": "8ca3304f3c906b0a3421c38fbb32c939ec23839537e9b9c5fc23421da0a21b34",
+  "source_revision": 34,
+  "started_at": "2026-10-04T18:19:16.767928+00:00",
+  "status": "completed",
+  "stderr_sha256": "6ad348894b2fa735f5334cbe74caa88d71056946ffe146a4b269a53c570fc774"
+}

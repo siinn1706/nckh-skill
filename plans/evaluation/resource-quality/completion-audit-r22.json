@@ -1,0 +1,586 @@
+{
+  "blocker_recurrence_turn": 2,
+  "broken_links": [],
+  "completion_proven": false,
+  "document_references": [
+    {
+      "path": "plans/261002-0832-nckh-skill-resource-quality/phase-01-start.md",
+      "sha256": "f6e51bad5d3aa436aecb44d5f32453585dfad190a358de7cfcb742e001583476"
+    },
+    {
+      "path": "plans/261002-0832-nckh-skill-resource-quality/phase-02-domain-resources.md",
+      "sha256": "f43a734726808df81db77b3fbffb36d570d3e0635d4e73d39fef71c4baec020a"
+    },
+    {
+      "path": "plans/261002-0832-nckh-skill-resource-quality/phase-03-resource-packaging.md",
+      "sha256": "f763416e930f2fa48c4f289b809034cf242080953071399572a6e108b1aacc33"
+    },
+    {
+      "path": "plans/261002-0832-nckh-skill-resource-quality/phase-04-behavioral-qualification.md",
+      "sha256": "c114bb4bf941b3369c326dd5774d3ce2ac155e5931b172d9d9609dc67b4a788c"
+    },
+    {
+      "path": "plans/261002-0832-nckh-skill-resource-quality/plan.md",
+      "sha256": "3708e37e2eb16ddc6b29b9ea7d2e34396fdfa4f04831a5a698da3bd3484ee9c4"
+    },
+    {
+      "path": "plans/261002-0832-nckh-skill-resource-quality/resource-map.md",
+      "sha256": "2ff22f35dc79906aecf32d64c2255b1ba729ca83465a37a54c707a70d2efbf21"
+    },
+    {
+      "path": "plans/reports/execution-261002-nckh-resource-quality.md",
+      "sha256": "c23e792323b1e6c5020c571add6df12747f10be90c2bd8fa9b32e3d32376e44a"
+    },
+    {
+      "path": "nckh-kit/docs/contracts.md",
+      "sha256": "42bdb966b5ea97f087e992b94e1806e15040ef00bab16fb944c0bb7127204635"
+    },
+    {
+      "path": "nckh-kit/docs/installation.md",
+      "sha256": "fcba50dbf8aa949341a694906d93b30feae44fa5a21825f1b233d19ba595fed5"
+    },
+    {
+      "path": "nckh-kit/docs/qualification.md",
+      "sha256": "b547e6cb9d1f802f9a33aff8f3f0800400c6af21b1ffc29e5e9a4882342b7aa0"
+    },
+    {
+      "path": "nckh-kit/docs/marketing.md",
+      "sha256": "1a48cd7f6ffdfcd0ade9643c09ab2a0f81d374573eebed95e54b739a7baa5365"
+    },
+    {
+      "path": "nckh-kit/docs/research-and-writing.md",
+      "sha256": "d9b3d984d6606af3602de7cd972a4e3a0a4de8dfcaa0c46826a85a847ac14d1c"
+    }
+  ],
+  "engineering_tasks_verified": 27,
+  "evidence_class": "requirement-by-requirement-completion-audit",
+  "live_job_wait": false,
+  "local_links_checked": 84,
+  "next_action": "Await the requested actual P4 input package; no run/holdout/release gate may be filled by inference.",
+  "previous_goal_turn_classification": "progress: implementation, verification and authoritative plan state changed",
+  "qualification": "pending",
+  "recorded_at": "2026-10-02T08:56:49.228534+00:00",
+  "required_tasks_incomplete": 2,
+  "requirements": [
+    {
+      "evidence_scope": "37 catalog/case/native identities retained",
+      "phase": 1,
+      "references": [
+        {
+          "path": "nckh-kit/core/registry/catalog/skills.json",
+          "sha256": "1e782ec5397a57144c17195b131192849933b5295d57e658577d536bfb4ff86b"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/final-freeze.json",
+          "sha256": "c06e89d39637f4fa362ff88a115842b079cc6ad10e65b155d24a262f4c1e5044"
+        }
+      ],
+      "requirement": "Giữ 37 catalog records (10 Core, 13 Engineer, 13 Marketing, 1 Xia), dependencies và 4 eval IDs/identity; không tạo manifest bắt buộc cho từng skill.",
+      "status": "complete-for-scoped-engineering",
+      "task": 1
+    },
+    {
+      "evidence_scope": "baseline and candidate freeze fields/history preserved",
+      "phase": 1,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/initial-freeze.json",
+          "sha256": "17feece6d8e86a9bb09c2890076f971c9aa3ab891c7c41eddd2bf112d117aac2"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/evaluator-freeze.json",
+          "sha256": "37586d598b3af25b8040e3968d69c578266fe8ee123b8ed54626f1a24284df5b"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/final-freeze.json",
+          "sha256": "c06e89d39637f4fa362ff88a115842b079cc6ad10e65b155d24a262f4c1e5044"
+        }
+      ],
+      "requirement": "Ghi freeze record gồm source-lock revision/hash, catalog hash, package case manifest hash, direct corpus hash, subject revision, lane/evidence class, input rights, split và receipt references. Cờ `not-run`, `pending`, `failed`, `completed-unreviewed` giữ nguyên nghĩa.",
+      "status": "complete-for-scoped-engineering",
+      "task": 2
+    },
+    {
+      "evidence_scope": "37 rejection/handoff/no-execution negative oracles repaired",
+      "phase": 1,
+      "references": [
+        {
+          "path": "nckh-kit/core/evaluation.py",
+          "sha256": "a67c4c25e87ac6ddd9af2a40ca728c07f021e3afcdd748319cdcef466f85e6bb"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/negative-oracle-migration.json",
+          "sha256": "aaf47a5e55b0f6d4c297161eab404ddf26932fe91d28d790a59f5ddcebccc8b4"
+        },
+        {
+          "path": "nckh-kit/tests/release/test_qualification.py",
+          "sha256": "1a7e651f8fb60c7e20758920559ec4e5a6cf54e1ec7f8a775e1cb347b80f7083"
+        }
+      ],
+      "requirement": "Sửa contract/oracle để mọi negative case có acceptance phủ `expected_route=reject-this-skill` (owner/handoff/no task execution), thêm regression cho 37/37 pattern; không sửa oracle hồi tố để che failure.",
+      "status": "complete-for-scoped-engineering",
+      "task": 3
+    },
+    {
+      "evidence_scope": "closed family/protocol fields, identities and receipt validation",
+      "phase": 1,
+      "references": [
+        {
+          "path": "nckh-kit/core/evaluation.py",
+          "sha256": "a67c4c25e87ac6ddd9af2a40ca728c07f021e3afcdd748319cdcef466f85e6bb"
+        },
+        {
+          "path": "nckh-kit/tests/release/test_qualification.py",
+          "sha256": "1a7e651f8fb60c7e20758920559ec4e5a6cf54e1ec7f8a775e1cb347b80f7083"
+        }
+      ],
+      "requirement": "Validate 19 required families theo schema/field types/status/rights/provenance/oracle/evaluator/receipt và map catalog/case IDs, không chỉ `len==19`; validate required qualification protocol keys bằng closed-schema subset.",
+      "status": "complete-for-scoped-engineering",
+      "task": 4
+    },
+    {
+      "evidence_scope": "direct lane separately linked with missing receipt explicit",
+      "phase": 1,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/direct-linkage.json",
+          "sha256": "46c3c682e74adebe0bf6b38f3a38f590684bef762c6b5599ed372ec22322047a"
+        }
+      ],
+      "requirement": "Ghi machine-readable linkage riêng cho direct evidence: corpus hash, source/install revision, condition, case mapping, review class và receipt hashes; giữ package cases `not-run` và direct evidence là controller-development, không chuyển thành package pass.",
+      "status": "complete-for-scoped-engineering",
+      "task": 5
+    },
+    {
+      "evidence_scope": "protected branch rejected; development limits retained",
+      "phase": 1,
+      "references": [
+        {
+          "path": "nckh-kit/core/evaluation.py",
+          "sha256": "a67c4c25e87ac6ddd9af2a40ca728c07f021e3afcdd748319cdcef466f85e6bb"
+        },
+        {
+          "path": "nckh-kit/evals/protocols/qualification.json",
+          "sha256": "8219a98f78073263105ae8e035a4701a98c5d0b3e270f40070f7a9b3a5f344f4"
+        },
+        {
+          "path": "nckh-kit/tests/release/test_qualification.py",
+          "sha256": "1a7e651f8fb60c7e20758920559ec4e5a6cf54e1ec7f8a775e1cb347b80f7083"
+        }
+      ],
+      "requirement": "Chặn `development_round(..., exposed_holdout=False)` thành protected holdout nếu thiếu freeze/rights/reviewer/threshold/partition receipt; helper phải trả pending/error, có default-branch regression. Giữ tối đa 3 development rounds, 1 protected holdout run, exposure → development; current runner vẫn development-only. Protected holdout là pending/NOT_CALLABLE cho đến khi có private route, inputs và human grant thật; không xây protected-holdout engine trong plan này.",
+      "status": "complete-for-scoped-engineering",
+      "task": 6
+    },
+    {
+      "evidence_scope": "resource registry field contract exists with actual consumers",
+      "phase": 1,
+      "references": [
+        {
+          "path": "nckh-kit/core/registry/catalog/resources.json",
+          "sha256": "d908a7a0eea4bcbe7a565dc2417b3f6861e971b35b231d6957bca2319279d27f"
+        }
+      ],
+      "requirement": "Định nghĩa resource record tối thiểu: `resource_id`, consumer skill, path/format, producer/reader, source kind, version/full SHA, license/NOTICE/redistribution state, copied-vs-re-authored state, dependency type, expected artifact và acceptance/rollback.",
+      "status": "complete-for-scoped-engineering",
+      "task": 7
+    },
+    {
+      "evidence_scope": "copied bytes/source/license rights not relabeled",
+      "phase": 1,
+      "references": [
+        {
+          "path": "nckh-kit/core/resources.py",
+          "sha256": "027ff4d9a96b1b5a3474cc953ab4a49f1f3cae26e3cad95cce890107c301de6e"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/final-freeze.json",
+          "sha256": "c06e89d39637f4fa362ff88a115842b079cc6ad10e65b155d24a262f4c1e5044"
+        }
+      ],
+      "requirement": "`copied_third_party_content=false` và `owned-local-package` không được dùng để relabel import. Mặc định dùng dữ liệu thật từ source/user-supplied/rights-cleared shortlist; bytes upstream chỉ được xem xét sau rights contract pin riêng, nếu thiếu thì `not-packaged`.",
+      "status": "complete-for-scoped-engineering",
+      "task": 8
+    },
+    {
+      "evidence_scope": "history unmodified, mappings separate from package definitions",
+      "phase": 1,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/initial-freeze.json",
+          "sha256": "17feece6d8e86a9bb09c2890076f971c9aa3ab891c7c41eddd2bf112d117aac2"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/direct-linkage.json",
+          "sha256": "46c3c682e74adebe0bf6b38f3a38f590684bef762c6b5599ed372ec22322047a"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/negative-oracle-migration.json",
+          "sha256": "aaf47a5e55b0f6d4c297161eab404ddf26932fe91d28d790a59f5ddcebccc8b4"
+        }
+      ],
+      "requirement": "Nối mapping case/input/oracle/subject/receipt nhưng không sửa 148 case definitions cũ nếu chưa có input/oracle review; direct corpus synthetic owned-development vẫn ở private/evaluation lane, không tạo synthetic dataset mới.",
+      "status": "complete-for-scoped-engineering",
+      "task": 9
+    },
+    {
+      "evidence_scope": "all 37 disposition rows recorded",
+      "phase": 2,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/staged-packet.json",
+          "sha256": "30f19fbbd6d45da85d1be0f0b6b3c647346ecd83a69bc9d2de75d1c85a29b12a"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/promotion-receipt.json",
+          "sha256": "e5fd80a1925f5002841fef8b6f846626ce7954bc3d2cfc16c47a4e8a7208f315"
+        }
+      ],
+      "requirement": "Duyệt toàn bộ 37 dòng và decision matrix cụ thể trong [resource-map.md](./resource-map.md); không identity nào bị loại. Mỗi lựa chọn ghi `candidate-staged`, `MD-only`, `blocked-rights` hoặc `blocked-input` với lý do; không có candidate promotion trong P2.",
+      "status": "complete-for-scoped-engineering",
+      "task": 1
+    },
+    {
+      "evidence_scope": "exact resources from three pinned sources, unchanged counts",
+      "phase": 2,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/staged-packet.json",
+          "sha256": "30f19fbbd6d45da85d1be0f0b6b3c647346ecd83a69bc9d2de75d1c85a29b12a"
+        },
+        {
+          "path": "nckh-kit/core/registry/catalog/resources.json",
+          "sha256": "d908a7a0eea4bcbe7a565dc2417b3f6861e971b35b231d6957bca2319279d27f"
+        }
+      ],
+      "requirement": "Không tự bịa dataset/resource rows. Nếu cần dữ liệu, lập shortlist tối đa ba nguồn mạnh theo **domain fit, consumer fit, provenance/revision, license/redistribution và evidence depth**; gọi đây là shortlist có tiêu chí, không tuyên bố top 1–2–3 toàn cầu. Mỗi record phải giữ upstream path/full SHA/as-of/license/rights và source locator.",
+      "status": "complete-for-scoped-engineering",
+      "task": 2
+    },
+    {
+      "evidence_scope": "namespaces unmixed; no missing records manufactured",
+      "phase": 2,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/staged-packet.json",
+          "sha256": "30f19fbbd6d45da85d1be0f0b6b3c647346ecd83a69bc9d2de75d1c85a29b12a"
+        },
+        {
+          "path": "nckh-kit/core/registry/catalog/resources.json",
+          "sha256": "d908a7a0eea4bcbe7a565dc2417b3f6861e971b35b231d6957bca2319279d27f"
+        }
+      ],
+      "requirement": "Chỉ mix các nguồn khi schema/semantics/license tương thích; ghi per-record provenance, dedup/conflict policy và missing-record policy. Không điền hàng còn thiếu, không dùng CSV có `TODO`/placeholder như dataset (đó chỉ là template), không gọi metadata hợp lệ là evidence hợp lệ.",
+      "status": "complete-for-scoped-engineering",
+      "task": 3
+    },
+    {
+      "evidence_scope": "missing VI/EN corpus/chart data explicitly blocked; no substitute accepted",
+      "phase": 2,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/staged-packet.json",
+          "sha256": "30f19fbbd6d45da85d1be0f0b6b3c647346ecd83a69bc9d2de75d1c85a29b12a"
+        }
+      ],
+      "requirement": "Core ưu tiên: reader-card/research-log templates, claim/evidence locator, factual-slot contract và honest chart-data/source-map. VI/EN genre corpus hiện **missing/blocked-input**: reporting registry/publisher profiles/Nature references không lấp được gap này. Glossary CSV hay fact-slots JSON + thin CLI chỉ được chọn khi có nguồn thật và lookup/read-write consumer.",
+      "status": "complete-for-scoped-engineering",
+      "task": 4
+    },
+    {
+      "evidence_scope": "Engineer/Marketing scoped references, no new provider/native route",
+      "phase": 2,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/staged-packet.json",
+          "sha256": "30f19fbbd6d45da85d1be0f0b6b3c647346ecd83a69bc9d2de75d1c85a29b12a"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/cro-scope-amendment.json",
+          "sha256": "67ac5c5a84df9011aab9de18c42611f41eec934252b3c280ca1de2a000a05b4c"
+        }
+      ],
+      "requirement": "Engineer/Marketing chỉ nhận references/templates có scope: schema/provenance/test/failure matrix, source disposition, metric/experiment ledger, SEO ownership và CRO friction. Không thêm provider/native engine ngoài route được chọn và verified.",
+      "status": "complete-for-scoped-engineering",
+      "task": 5
+    },
+    {
+      "evidence_scope": "historical synthetic development distinct from source/human gold",
+      "phase": 2,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/direct-linkage.json",
+          "sha256": "46c3c682e74adebe0bf6b38f3a38f590684bef762c6b5599ed372ec22322047a"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/staged-packet.json",
+          "sha256": "30f19fbbd6d45da85d1be0f0b6b3c647346ecd83a69bc9d2de75d1c85a29b12a"
+        }
+      ],
+      "requirement": "Mọi ví dụ VI/EN/corpus phải là real sourced/user-supplied/rights-cleared material. Fixture kỹ thuật nếu được duyệt riêng chỉ dùng test, không thay source corpus. 148 synthetic development cases giữ nhãn diagnostic, không phải dataset nguồn/human gold; không tự tạo synthetic dataset để lấp gap.",
+      "status": "complete-for-scoped-engineering",
+      "task": 6
+    },
+    {
+      "evidence_scope": "Nature selected file/commit/license/hash retained",
+      "phase": 2,
+      "references": [
+        {
+          "path": "nckh-kit/core/registry/catalog/resources.json",
+          "sha256": "d908a7a0eea4bcbe7a565dc2417b3f6861e971b35b231d6957bca2319279d27f"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/promotion-receipt.json",
+          "sha256": "e5fd80a1925f5002841fef8b6f846626ce7954bc3d2cfc16c47a4e8a7208f315"
+        }
+      ],
+      "requirement": "Nature/AgentKit pattern chỉ là design inspiration; nếu dùng byte/asset upstream, pin full SHA (Nature candidate full HEAD `84880815fb37317b3766bff2c2abba395b8993c3` phải re-check), LICENSE/NOTICE và redistribution. Clean-room re-authoring được ưu tiên.",
+      "status": "complete-for-scoped-engineering",
+      "task": 7
+    },
+    {
+      "evidence_scope": "one registry with four source/reader/rights/artifact records",
+      "phase": 3,
+      "references": [
+        {
+          "path": "nckh-kit/core/registry/catalog/resources.json",
+          "sha256": "d908a7a0eea4bcbe7a565dc2417b3f6861e971b35b231d6957bca2319279d27f"
+        }
+      ],
+      "requirement": "Thêm **một** resource registry/catalog extension, ưu tiên `nckh-kit/core/registry/catalog/resources.json` (hoặc field tương đương trong catalog nếu schema hiện hữu mở rộng được), không tạo 37 manifest. Mỗi record có ID, consumer skill IDs, relative path, format, `requires`, reader/entrypoint, source kind, version/full SHA, rights contract, release state và expected artifact.",
+      "status": "complete-for-scoped-engineering",
+      "task": 1
+    },
+    {
+      "evidence_scope": "selected consumer closure, required/optional/private boundary",
+      "phase": 3,
+      "references": [
+        {
+          "path": "nckh-kit/core/build.py",
+          "sha256": "3f2862e7e58c3914f1b09221b5b004eafe5e073254385c397caa6c1109cb9fef"
+        },
+        {
+          "path": "nckh-kit/core/resources.py",
+          "sha256": "027ff4d9a96b1b5a3474cc953ab4a49f1f3cae26e3cad95cce890107c301de6e"
+        },
+        {
+          "path": "nckh-kit/tests/resource/test_closure.py",
+          "sha256": "819adb2ec3eba3493cc29a30d8203d5a2aa5081a2d0f49fd889798496d9d7e68"
+        }
+      ],
+      "requirement": "`resources.json` chỉ liệt kê resource đã được P2 chọn; resource không có consumer không vào source inventory. `required` closure và `optional` preview phải phân biệt; private holdout/receipts không được package.",
+      "status": "complete-for-scoped-engineering",
+      "task": 2
+    },
+    {
+      "evidence_scope": "format 1/2 allowlist and copied provenance compatibility",
+      "phase": 3,
+      "references": [
+        {
+          "path": "nckh-kit/core/build.py",
+          "sha256": "3f2862e7e58c3914f1b09221b5b004eafe5e073254385c397caa6c1109cb9fef"
+        },
+        {
+          "path": "nckh-kit/tests/resource/test_closure.py",
+          "sha256": "819adb2ec3eba3493cc29a30d8203d5a2aa5081a2d0f49fd889798496d9d7e68"
+        }
+      ],
+      "requirement": "Sửa `source_members`/freeze/verify/materializer và closed bundle schema theo format version được khai báo để lấy data từ registry bằng allowlist; không blanket-enable CSV/JSONL/SVG. Phân biệt local re-authored với copied-upstream, giữ full-SHA/source path/license/NOTICE/redistribution disposition; thiếu quyền thì `blocked-rights`. Giữ reader tương thích historical local-only records, không relabel bytes hay viết lại lock cũ.",
+      "status": "complete-for-scoped-engineering",
+      "task": 3
+    },
+    {
+      "evidence_scope": "explicit closure, cycle/path/duplicate guards and bindings",
+      "phase": 3,
+      "references": [
+        {
+          "path": "nckh-kit/core/build.py",
+          "sha256": "3f2862e7e58c3914f1b09221b5b004eafe5e073254385c397caa6c1109cb9fef"
+        },
+        {
+          "path": "nckh-kit/tests/resource/test_closure.py",
+          "sha256": "819adb2ec3eba3493cc29a30d8203d5a2aa5081a2d0f49fd889798496d9d7e68"
+        }
+      ],
+      "requirement": "Sửa `closure`/materializer để theo `requires` explicit và Markdown links, kiểm tra cycle/path escape/duplicate mapping, pin every member và ghi `resource_id → consumer → output` vào manifest. Reuse `contained`, `no_links`, `unique_paths`, `digest_file`, `digest_record`; không tạo framework mới.",
+      "status": "complete-for-scoped-engineering",
+      "task": 4
+    },
+    {
+      "evidence_scope": "actual extracted relocated read outside repository/PYTHONPATH",
+      "phase": 3,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/extracted-smoke-r22.json",
+          "sha256": "941605a78c9550e31dfbb45d9b8116046a1a9963fe971f7e9f19e5628f1115f9"
+        },
+        {
+          "path": "nckh-kit/scripts/resource-smoke.py",
+          "sha256": "91d7d4c3477210d1a957fb68f99ebb49e907f2bfa19e5300808e61357d342839"
+        }
+      ],
+      "requirement": "Thêm extracted-package smoke harness: extract vào thư mục tạm ngoài repo, CWD khác repo, `PYTHONPATH` unset; gọi consumer bằng absolute package path hoặc `python -I`. Smoke phải chứng minh reader thực sự đọc resource, không chỉ file tồn tại.",
+      "status": "complete-for-scoped-engineering",
+      "task": 5
+    },
+    {
+      "evidence_scope": "shared verifier and three installer callers tested; support-before-promotion",
+      "phase": 3,
+      "references": [
+        {
+          "path": "nckh-kit/tests/resource/test_closure.py",
+          "sha256": "819adb2ec3eba3493cc29a30d8203d5a2aa5081a2d0f49fd889798496d9d7e68"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/deterministic-r22.json",
+          "sha256": "29ae1df896b7b275e5ea95aaee4b0f5e3cef50c9397fc1a70b028b658db77050"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/promotion-receipt.json",
+          "sha256": "e5fd80a1925f5002841fef8b6f846626ce7954bc3d2cfc16c47a4e8a7208f315"
+        }
+      ],
+      "requirement": "Giữ `verify_bundle` là verifier chung; thêm regression cho `resolve_targets`, `refresh_targets`, `plan_install` với bundle/tree và rights đúng/sai. Sau support/tests mới promote P2 content và gửi candidate pins để P1 ghi freeze/revision/history; P3 chỉ sở hữu format contract, không ghi lock hay dựng receipt/approval engine riêng cho từng caller.",
+      "status": "complete-for-scoped-engineering",
+      "task": 6
+    },
+    {
+      "evidence_scope": "six-condition preparation exists; models/runs honestly pending",
+      "phase": 4,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/matched-manifest.json",
+          "sha256": "9a54f091fa71ec4a5a53af8f08946fb54a199543e91c5588bb4e77774c249d62"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/matched-integrity.json",
+          "sha256": "f716954e76d5d124376553a469d0752b3a03667465887b99c053e17fac647ec1"
+        },
+        {
+          "path": "nckh-kit/tests/resource/test_matched.py",
+          "sha256": "c8dbeb2a97eaf62541c966a45e0f32e2d3956cc0567aee1aa2ec6e8703999465"
+        }
+      ],
+      "requirement": "Reuse existing 148 records only for development smoke; create a separately hashed condition/subject/input/split/wrapper/model/resource manifest with same-base off/on pairs and preserved baseline mappings. Never overwrite old definitions or label exposed data as protected holdout; retain the 3-round/1-holdout/exposure invariants and current development-only route.",
+      "status": "complete-for-scoped-engineering",
+      "task": 1
+    },
+    {
+      "evidence_scope": "negative/hash/consumer/locale/rights/CWD guards; no semantic qualification",
+      "phase": 4,
+      "references": [
+        {
+          "path": "nckh-kit/tests/resource/test_consumers.py",
+          "sha256": "1adaea4b9651bdf9c2e6285c4ec9b51b918c29f4617402aab3c302180fe795e1"
+        },
+        {
+          "path": "nckh-kit/tests/resource/test_closure.py",
+          "sha256": "819adb2ec3eba3493cc29a30d8203d5a2aa5081a2d0f49fd889798496d9d7e68"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/extracted-smoke-r22.json",
+          "sha256": "941605a78c9550e31dfbb45d9b8116046a1a9963fe971f7e9f19e5628f1115f9"
+        }
+      ],
+      "requirement": "Add negative/failure checks for resource unread, stale hash, wrong consumer, wrong locale/genre, unsupported claim, copied-rights gap and CWD/PYTHONPATH leak. Deterministic checks can validate slots/hash/schema, not semantic truth.",
+      "status": "complete-for-scoped-engineering",
+      "task": 2
+    },
+    {
+      "evidence_scope": "human reviewer/rights/threshold/artifact freezes still absent",
+      "phase": 4,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/human-review-queue.json",
+          "sha256": "2b197c0163a841a091d9a1f81d2f78e496c434884a2a643ba1a774f694c3fd0e"
+        },
+        {
+          "path": "nckh-kit/evals/protocols/qualification.json",
+          "sha256": "8219a98f78073263105ae8e035a4701a98c5d0b3e270f40070f7a9b3a5f344f4"
+        }
+      ],
+      "requirement": "Human/domain review queue separately freezes VI taste, EN fidelity, scientific/domain and visual rubric, reviewer identity/rights/threshold. No model score becomes human gold.",
+      "status": "incomplete-required-inputs",
+      "task": 3
+    },
+    {
+      "evidence_scope": "actual historical visual outputs distinguished from native acceptance",
+      "phase": 4,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/direct-linkage.json",
+          "sha256": "46c3c682e74adebe0bf6b38f3a38f590684bef762c6b5599ed372ec22322047a"
+        }
+      ],
+      "requirement": "For visuals, retain distinction: direct development already produced actual SVG/PNG and source-map evidence; missing native binding does not mean “no visual output”, but target-editor round trip, accessibility and human scientific meaning remain separate gates.",
+      "status": "complete-for-scoped-engineering",
+      "task": 4
+    },
+    {
+      "evidence_scope": "CRO decision implemented, failure/receipts/history retained",
+      "phase": 4,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/cro-scope-amendment.json",
+          "sha256": "67ac5c5a84df9011aab9de18c42611f41eec934252b3c280ca1de2a000a05b4c"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/direct-linkage.json",
+          "sha256": "46c3c682e74adebe0bf6b38f3a38f590684bef762c6b5599ed372ec22322047a"
+        }
+      ],
+      "requirement": "Preserve CRO `nckh-cro:positive` failure and hash-bound answer/native/trace match. The owner selected CRO canonical/noindex inspection; `cro-scope-amendment.json` records the decision using the original task with no historical rerun/regrade. Broader crawl/search analysis remains with SEO.",
+      "status": "complete-for-scoped-engineering",
+      "task": 5
+    },
+    {
+      "evidence_scope": "original diagnostic corpus retained; no fabricated evaluation corpus",
+      "phase": 4,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/initial-freeze.json",
+          "sha256": "17feece6d8e86a9bb09c2890076f971c9aa3ab891c7c41eddd2bf112d117aac2"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/matched-manifest.json",
+          "sha256": "9a54f091fa71ec4a5a53af8f08946fb54a199543e91c5588bb4e77774c249d62"
+        }
+      ],
+      "requirement": "New evaluation inputs must be real sourced/user-supplied tasks/artifacts or explicit approved fixtures with rights/provenance; do not generate a synthetic dataset to raise coverage. Existing synthetic 148 remains diagnostic only.",
+      "status": "complete-for-scoped-engineering",
+      "task": 6
+    },
+    {
+      "evidence_scope": "actual host/model/budget/rights/provider observations still absent",
+      "phase": 4,
+      "references": [
+        {
+          "path": "plans/evaluation/resource-quality/matched-manifest.json",
+          "sha256": "9a54f091fa71ec4a5a53af8f08946fb54a199543e91c5588bb4e77774c249d62"
+        },
+        {
+          "path": "plans/evaluation/resource-quality/human-review-queue.json",
+          "sha256": "2b197c0163a841a091d9a1f81d2f78e496c434884a2a643ba1a774f694c3fd0e"
+        },
+        {
+          "path": "nckh-kit/evals/protocols/qualification.json",
+          "sha256": "8219a98f78073263105ae8e035a4701a98c5d0b3e270f40070f7a9b3a5f344f4"
+        }
+      ],
+      "requirement": "Complete actual host/OS/model/budget/right grants, compatible per-case route and independent receipt review before provider/native/human runs; these inputs remain pending. Longer-than-900-second cases remain pending/NOT_CALLABLE until an approved route/adapter with named owner/tests exists; do not impose a total 15-minute deadline or run unbounded. Runtime audit repairs are prerequisites, not qualification.",
+      "status": "incomplete-required-inputs",
+      "task": 7
+    }
+  ],
+  "resource_counts": {
+    "R-nature-reference": "one exact manifest-routed fragment",
+    "R-publisher-profile": 8,
+    "R-reporting-lookup": 15,
+    "R-ui-lookup": 119
+  },
+  "same_blocker": "Actual corpus/rights/reviewers/thresholds/host/model/budget/economics and reviewed run observations are absent.",
+  "schema_version": 1,
+  "source_integrity": "pass",
+  "source_lock_hash": "5aa333170906f909a374f256a7093702a399f9038421856bd7589066a0a6917d",
+  "source_revision": "22"
+}

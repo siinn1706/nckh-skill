@@ -1,0 +1,31 @@
+{
+  "causal_change": "add bounded native failure callback logger missing49; original oracle49 remains partial",
+  "context_sha256": "3b1ea91e652ff22772b9b5d14e8a93dc6cf49977bb42870604fca54bded5df8a",
+  "control_sha256": "80ac514cf11a5a1a12952a8bb2db17d7175b36b3f4ef71c7e94fd9ed9017de13",
+  "definition": {
+    "path": "plans/runs/nckh-native-261006-0400-r37-cursor-directory-denial-attempt-50/definitions/session.json",
+    "sha256": "ea9a99206bdf73376227cd1960d965aaf02ff092079c7791a0ad6b4865b201bf"
+  },
+  "expected_native_response": "postToolUseFailure/Grep/permission_denied with same tool ID/session/path/version",
+  "expected_preflight": "block/private-holdout-credential-path",
+  "fault_origin": "none",
+  "fixture_bytes_hex": "4e434b485f53594e5448455449435f505249564154455f4449524543544f52595f44454e49414c5f4d41524b45520a",
+  "fixture_path": ".nckh-native-r37-cursor-directory-denial-50/private/fixture.txt",
+  "fixture_sha256": "f064bdc329bb910263f6ca9a3f8a09644d7237414a7bda8e6043946220065f78",
+  "global_direct_write": false,
+  "marker": "NCKH_DIRECTORY_DENIAL_ATTEMPT_FINISHED",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_native_tools": 1,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_retries": 0,
+  "model_selection_source": "existing selectedModel; --model omitted",
+  "oracle": "one actual directory Grep preflight; native failure witness matches it; zero successful post; unchanged fixture bytes; final marker",
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "prompt": "[removed: raw runtime content]",
+  "scope": "one private directory only; no glob/root traversal or all-tools",
+  "selected_directory": ".nckh-native-r37-cursor-directory-denial-50/private",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-one-private-directory-denial-with-native-diagnostic"
+}

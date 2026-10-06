@@ -1,0 +1,53 @@
+{
+  "stage": "before model admission or native turns",
+  "changes": [
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-cli-runtime.py",
+      "source_sha256": "7f02bd6bec0c9fae61bf7a43034cb421b7608e6fd941e3c98868b82f3d75e470",
+      "target": "agy-cli-runtime.py",
+      "adapted_sha256": "f1e831d0bfe1c2564484175440f65dcc25ce0d7f8a0a057d55565922030b5890"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\owned-cli-command.py",
+      "source_sha256": "60f7a8fa553bef01927ee850bdf2ef1565b69b57b9a628b7f4696b471f53bdef",
+      "target": "owned-cli-command.py",
+      "adapted_sha256": "60f7a8fa553bef01927ee850bdf2ef1565b69b57b9a628b7f4696b471f53bdef"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\agy-tool-observer.py",
+      "source_sha256": "398426fc2c3a1e6de1152c9e72be200ee922efd6da9b737741c28eeb829a86a2",
+      "target": "agy-tool-observer.py",
+      "adapted_sha256": "81ccf93af75b75de7a3dd8e7ca717adc38bae9530603c1f90b2e9e5c95ce3a82"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\run-event-controls.py",
+      "source_sha256": "6d1f39687f195fcc70f03013d03fba307e8402f002e97d1d58c5a6e225cd7b1b",
+      "target": "run-event-controls.py",
+      "adapted_sha256": "6ef92451c13816eb9b098e9613d33190c2dcb074fc078fd9d32086087f94ebfb"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\audit-owned-processes.ps1",
+      "source_sha256": "c99a5eef5baecf7e5d492f48be54c82569ea743f999fc654a539e187f87a69ac",
+      "target": "audit-owned-processes.ps1",
+      "adapted_sha256": "f5263b529cf32831802bcca01cf90cf675edeaebece48e1c2f99c2e73b2ec64e"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\cursor-agy-model-dangerous-grant.json",
+      "source_sha256": "1f5ce078359295a58947c04ab38d5f582d85875e2c89554e53d6a367e7846153",
+      "target": "cursor-agy-model-dangerous-grant.json",
+      "adapted_sha256": "1f5ce078359295a58947c04ab38d5f582d85875e2c89554e53d6a367e7846153"
+    },
+    {
+      "source": "plans\\runs\\nckh-native-261005-2320-r37-agy-event-controls-attempt-34\\cli-route-user-decision.json",
+      "source_sha256": "cd359968535e23961e252de4932400dd0a1ce1b2783ad986ffa8402ca95688fa",
+      "target": "cli-route-user-decision.json",
+      "adapted_sha256": "c7709f0ff8633267eb83f2d1ef70080b7ff56a8d54d6056aad8874a4ad6556aa"
+    }
+  ],
+  "scope": "four previously not-run Stop faults only, new fixtures and frozen brief",
+  "original_partial_batch_retained": true,
+  "original_oracles_regraded": false,
+  "model_retries": 0,
+  "process_supervision": "90-second descendant observation after native turn completion; no whole-turn deadline",
+  "source_modified": false
+}

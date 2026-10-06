@@ -1,0 +1,37 @@
+{
+  "changes": [
+    {
+      "after_sha256": "1b3e022da29a8b2d7bb198656435ba107a34fae1ca528e3a687d77ebdd5574a7",
+      "before_sha256": "8cf1e3c8c31368c6879e7d34753d48f75d9cc8e8f24f1d08b3c16ff1daffb3b4",
+      "path": "hooks/codecs/agy.py"
+    },
+    {
+      "after_sha256": "f698512cbfd2aefa611d697b8e86356540afb3fbf186de01a1570cd8e68ca8d0",
+      "before_sha256": "897807b2c8ed76d27b525c0978d1a9f7752dc9dfc7280a19bfaa9378c79611e9",
+      "path": "tests/runtime/test_hook_adapters.py"
+    },
+    {
+      "after_sha256": "6cbc99b45b2e0701f5dcdb49da3b6c509ed9c0d0cdc6d19439e87dab14dce8c9",
+      "before_sha256": "d0d16e2ff2354c6490861de8e2d763dbcf58e8ea04488fb45e0bbff598d42c49",
+      "path": "docs/installation.md"
+    }
+  ],
+  "focused_after": "commands/focused-hooks-agy-native-permission-repair.json",
+  "independent_review": false,
+  "invariants_reviewed": [
+    "required AGY decision for all PreToolUse outcomes",
+    "ask preserves native approval/Always Allow instead of issuing grant",
+    "block/pending deny unchanged",
+    "post/invocation/stop output unchanged",
+    "no payload execution, secret export, permissionOverrides, injected steps, network or provider call"
+  ],
+  "native_cause": "commands/agy-native-allow-01.stdout.txt",
+  "official_source": "https://www.antigravity.google/docs/hooks/#pretooluse",
+  "recorded_at": "2026-10-04T14:38:38.266640+00:00",
+  "regression_before": "commands/agy-native-permission-regression-before-repair.json",
+  "remaining_findings": [
+    "postrepair native permission semantics pending",
+    "path/tool/surface coverage separate and not promoted"
+  ],
+  "reviewer": "root-inline"
+}

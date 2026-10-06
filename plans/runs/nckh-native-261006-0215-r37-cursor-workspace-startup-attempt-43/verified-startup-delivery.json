@@ -1,0 +1,101 @@
+{
+  "status": "verified-genuine-workspace-plugin-startup-route",
+  "timestamp_utc": "2026-10-05T19:04:45.839609+00:00",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "surface": "cursor-cli-interactive",
+  "version": "2026.09.15-d2fe57e",
+  "workspaceOpen_callbacks": 1,
+  "project_sessionStart_callbacks": 1,
+  "plugin_sessionStart_callbacks": 1,
+  "same_native_lifecycle_input_and_session": true,
+  "idempotent_policy_receipts": 1,
+  "plugin_loading_route": "actual workspaceOpen output to owned plugin path; no --plugin-dir",
+  "model_selection": {
+    "modelId": "grok-4.7",
+    "parameters": [
+      {
+        "id": "context",
+        "value": "500k"
+      },
+      {
+        "id": "reasoning_effort",
+        "value": "xhigh"
+      },
+      {
+        "id": "fast",
+        "value": "false"
+      }
+    ]
+  },
+  "model_prompts": 0,
+  "tool_requests": 0,
+  "prompt_stop_duplicate_qualification": "not-run; remains pending",
+  "unsupported_codec_event_qualification": "not-run; workspaceOpen diagnostic returns pluginPaths without invoking packaged codec",
+  "callback_source_provenance": "controller-bound project/plugin command definitions; same native lifecycle input observed",
+  "callbacks": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-cursor-workspace-startup-43/observations/workspaceOpen/0bca1f5ef04143fcb143125316bac70e.json",
+      "sha256": "da79a03d93acf2eaa1208afee22c121997920f521a0e3dd778cac37a6ea9e44e"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-cursor-workspace-startup-43/observations/startup-only/sessionStart/28be7a517f284c149e760e829c71eedc.json",
+      "sha256": "0809299a0bef8904094bcb6c709e7db8fc053857f1be69a280f15a99f77799de"
+    },
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-cursor-workspace-startup-43/observations/startup-only/sessionStart/4ba25fc9283946bb80ed558af7f69614.json",
+      "sha256": "94f7a4421dab7074b18f3a36969e50874ac2f538dd1ba59810b106b2d55cd2de"
+    }
+  ],
+  "policy_receipts": [
+    {
+      "path": "plans/runs/nckh-native-261005-0128-r34-cursor-events-attempt-02/projects/main/.nckh-native-cursor-workspace-startup-43/policy-receipts/startup-only/sessionStart/74ea4ca0a5a4d14188f03b4f3eeb3a7c5ff9c29314e63b733b667e3891d46f53.json",
+      "sha256": "334fe9340f627fb3b3c5a1c4e2f35098838fcba0838773f4041fefe03e00e8ed"
+    }
+  ],
+  "preparation": {
+    "path": "plans/runs/nckh-native-261006-0215-r37-cursor-workspace-startup-attempt-43/preparation.json",
+    "sha256": "5f8e497ecae78348404baf84fbaa1b6dfb7f6494e8256f2896ed3516a8148ec5"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261006-0215-r37-cursor-workspace-startup-attempt-43/process-final-audit.json",
+    "sha256": "29c437a283f49d047416a78eeab14fcf66f7c78533ca8b5401d05ba94a4d2bca"
+  },
+  "process_union_identities": 1393,
+  "processes_live": 0,
+  "process_stop_performed": false,
+  "native_exit": 0,
+  "monitor_exit": 0,
+  "historical_project_files_preserved": 862,
+  "protected_configs": [
+    {
+      "path": "C:/Users/USER\\.cursor\\hooks.json",
+      "sha256": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9",
+      "current_sha256": "b5772003cdc6061528b29c8370b97f1bb40b093f9fc9ee34b9f77dd4aeef18e9"
+    },
+    {
+      "path": "C:/Users/USER\\.cursor\\mcp.json",
+      "sha256": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72",
+      "current_sha256": "f9179af0aa41fc44d19995224cf542c2fd996beac59315300f7c80e58e173c72"
+    },
+    {
+      "path": "C:/Users/USER\\.cursor\\plugins\\installed_plugins.json",
+      "sha256": null,
+      "current_sha256": null
+    },
+    {
+      "path": "C:/Users/USER\\.cursor\\plugins\\settings.json",
+      "sha256": null,
+      "current_sha256": null
+    }
+  ],
+  "CLI_owned_state_preimage_sha256": "63a9edfeffcf6bc24fe3f1cf7d4b06b47008b49cb9959f24005dca68cf3d5529",
+  "CLI_owned_state_current_sha256": "fab0f077e3d31b69ee3303668009b4b973a49e3ec6bd470c433b7c9c9b1575fb",
+  "CLI_owned_state_changed_fields": "not-inferred-from-hash",
+  "global_direct_writes": false,
+  "full_native_gate": "unchecked",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261006-0215-r37-cursor-workspace-startup-attempt-43/verify-startup-and-cleanup.py",
+    "sha256": "d55ba2f58f4b886bde221e819cb0cd4e9abecee4986abf1d8362813fb7827374"
+  }
+}

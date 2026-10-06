@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "id": "pilot-no-operational-telemetry",
+  "task_id": "vnm-population-chronological-forecast",
+  "stage": "not-applicable",
+  "reason": "annual population series is tabular; no operational logs/metrics/traces supplied",
+  "modalities": [],
+  "sources": [],
+  "outputs": [],
+  "normalization": [],
+  "semantic_conventions": {
+    "version": "not-applicable",
+    "locator": "tabular-pilot",
+    "status": "unknown",
+    "reason": "no instrumentation"
+  },
+  "time": {
+    "origin": "unknown",
+    "timezone": "",
+    "precision": "",
+    "alignment": "not-applicable",
+    "skew": 0,
+    "tolerance": 0,
+    "reason": "calendar-year data, no measured telemetry clocks"
+  },
+  "signals": [],
+  "sampling": {
+    "policy": "not-applicable",
+    "retention": "project-only",
+    "cardinality_limit": 0,
+    "limitations": [
+      "single country series; temporal dependence",
+      "dated retrospective values may be revised; no vintage publication-time claim",
+      "prior input access disclosed; development demonstration",
+      "blank source unit retained",
+      "scientific acceptance pending"
+    ]
+  },
+  "correlation": {
+    "required_keys": [],
+    "missing_ids": [],
+    "duplicate_ids": []
+  },
+  "joins": [],
+  "quality": {
+    "samples": 0,
+    "missing": 0,
+    "zeros": 0,
+    "duplicate_ids": [],
+    "gaps": [],
+    "limitations": [
+      "no operational telemetry claim"
+    ]
+  }
+}

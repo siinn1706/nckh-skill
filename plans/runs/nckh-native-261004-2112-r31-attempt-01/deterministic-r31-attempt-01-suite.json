@@ -1,0 +1,17 @@
+{
+  "errors": [],
+  "failures": [
+    {
+      "test": "tests.hooks.test_closure.HookClosureTests.test_all_host_isolated_entrypoints_and_inactive_plugin_projection (host='agy')",
+      "traceback": "Traceback (most recent call last):\n  File \"C:/Users/USER\\Downloads\\test-skill\\nckh-kit\\tests\\hooks\\test_closure.py\", line 45, in test_all_host_isolated_entrypoints_and_inactive_plugin_projection\n    self.assertEqual(json.loads(process.stdout), {})\nAssertionError: {'decision': 'ask'} != {}\n- {'decision': 'ask'}\n+ {}\n"
+    }
+  ],
+  "skipped": [
+    {
+      "reason": "host does not permit a real symlink fixture: [WinError 1314] A required privilege is not held by the client: 'C:/Users/USER\\\\AppData\\\\Local\\\\Temp\\\\nckh-a3436d40fa2947a5b6c2be57f5a31830\\\\probe\\\\input.svg' -> 'C:/Users/USER\\\\AppData\\\\Local\\\\Temp\\\\nckh-a3436d40fa2947a5b6c2be57f5a31830\\\\probe\\\\linked.svg'",
+      "test": "tests.evidence.test_visual_engine_binding.VisualEngineBindingTests.test_symlink_observation_is_rejected"
+    }
+  ],
+  "successful": false,
+  "tests": 183
+}

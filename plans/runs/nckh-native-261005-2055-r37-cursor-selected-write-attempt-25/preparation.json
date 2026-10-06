@@ -1,0 +1,46 @@
+{
+  "UI_model_check_required_before_prompt": true,
+  "configuration_source": "https://cursor.com/docs/hooks#matcher-configuration",
+  "context_sha256": "334e51b16368c4362f860a85bd9ba1bf2d1034a18f55a06e7f3d66e8d1c4c74b",
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-2055-r37-cursor-selected-write-attempt-25/prepare-selected-write.py",
+    "sha256": "04e7764a40a178ace62404f081d03cae1836370813757abd5ab7c0e14804baa6"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-2055-r37-cursor-selected-write-attempt-25/definitions/session.json",
+    "sha256": "d6a55f49e758f32e2c8ec4bfdaba3ef2b7201670675ab23496f7452ac86f1105"
+  },
+  "effort": "xhigh",
+  "evidence": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main\\.nckh-native-r37-cursor-selected-write-25",
+  "failure_policy": "Stop dependent actions after prerequisite failure. No identical prompt retries or regrading earlier private Read failures.",
+  "fault_origin": "none",
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "installed_update": "not-performed",
+  "marker": "NCKH_SELECTED_WRITE_FINISHED_25",
+  "maximum_model_turns": 1,
+  "maximum_prompt_submissions": 1,
+  "maximum_requested_Write_attempts": 2,
+  "model": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "model_selection_source": "existing selectedModel; --model omitted",
+  "oracle": "Public actual Write with allow neutral hash and exact bytes; private actual Write preflight block/private-holdout-credential-path and native permission_denied with nonempty ID/version/selected path; private bytes unchanged and zero successful private post receipts. Otherwise retain unqualified status.",
+  "package": "C:/Users/USER\\.codex\\visualizations\\2026\\10\\04\\01a104fc-f969-7f43-b1e0-1a6774f0e0c8\\nckh-hooks-r37-1640-attempt-02\\extracted\\on-standalone\\cursor",
+  "port": null,
+  "private_before_sha256": "c11a3637609856653062fcbefeb52386aea698a39be7ea56f80045c7b71359ec",
+  "private_relative": ".nckh-native-r37-cursor-selected-write-25/private/fixture.txt",
+  "private_requested_bytes": "NCKH_SELECTED_WRITE_PRIVATE_DENIED_25\n",
+  "project": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0128-r34-cursor-events-attempt-02\\projects\\main",
+  "prompt": "[removed: raw runtime content]",
+  "public_before_sha256": "01dbdf430c5a85e07e67aaf12287f0742808ec3f4845b6eb504255f2ec69b6b2",
+  "public_relative": ".nckh-native-r37-cursor-selected-write-25/public/fixture.txt",
+  "public_requested_bytes": "NCKH_SELECTED_WRITE_PUBLIC_ALLOWED_25\n",
+  "runtime": {
+    "path": "plans/runs/nckh-native-261005-2055-r37-cursor-selected-write-attempt-25/cursor-selected-write-runtime.py",
+    "sha256": "5d1c78afa437bacc8af01d9b2ae85e3aa7d72ca5129acfd91225c2e23c76da76"
+  },
+  "scope_limit": "Read prerequisites intentionally outside selected matcher; no default-all-tools or confidential-Read enforcement claim.",
+  "selected_matcher": "^Write$",
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "source_revision": 37,
+  "status": "prepared-one-native-selected-Write-control"
+}

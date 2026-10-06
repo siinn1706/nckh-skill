@@ -1,0 +1,191 @@
+{
+  "status": "verified-four-native-agy-Stop-fault-observations",
+  "source_revision": 37,
+  "source_lock_hash": "629f056d6686de77a68789843ea78277e1574cdf34152fe7e93f967021ca7fdb",
+  "host": "agy-cli",
+  "host_version": "1.2.17",
+  "model_observed": "gemini-3.8-flash-medium",
+  "effort_requested": "medium",
+  "permission_mode_observed": "always-proceed",
+  "model_turns": 4,
+  "model_retries": 0,
+  "event_case_count": 4,
+  "results": [
+    {
+      "attempt": "stop-malformed-output",
+      "event": "Stop",
+      "mode": "malformed-output",
+      "conversation_id": "9ba1a5cc-798a-4887-9c56-cb4e4fa124e5",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:45:26.538775    1370 stophooks.go:62] failed to call custom stop hook jsonhook__nckh-native-r37-cli-controls_Stop_0_0: failed to unmarshal result from hook jsonhook__nckh-native-r37-cli-controls_Stop_0_0 via protojson: [invalid-native-hook-output: proto: syntax error (line 1:1): unexpected token ["
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-malformed-output.json",
+        "sha256": "db810f181fe390d37f860bb583ced60019538753e14e7312cb0385e5068ef405"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/commands/agy-tools-stop-malformed-output.json",
+        "sha256": "3f8d482a86708f9f23f64b15961e03b7582c5cb8e09a9ba618b9bad09c6683fd"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-malformed-output.native.log",
+        "sha256": "80b8461e648d8fe2eeb7ee1cfbd67437082e81dd5979d6f0a35155560ea34416"
+      }
+    },
+    {
+      "attempt": "stop-timeout",
+      "event": "Stop",
+      "mode": "timeout",
+      "conversation_id": "87493e3e-bb63-48b7-bbd6-4d0f4292de2f",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "advisory"
+      ],
+      "selected_callback_durations_seconds": [
+        8.147656
+      ],
+      "native_hook_errors": [
+        "E1005 23:45:48.603417     885 stophooks.go:62] failed to call custom stop hook jsonhook__nckh-native-r37-cli-controls_Stop_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_Stop_0_0\" failed: command failed: exit status 1, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-timeout.json",
+        "sha256": "e2dd23f14c53a5980dffd675c5829979cefd3ec70db2718445d3d88bb0e94986"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/commands/agy-tools-stop-timeout.json",
+        "sha256": "e9c1c9b907cd1620ab0da2f985e25b4e5a4b309661cce3ba809f10a519de4c8f"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-timeout.native.log",
+        "sha256": "9ad39bfc962800432cd9153f5de2566e3e006e31edf97f7607742cf78cfe096b"
+      }
+    },
+    {
+      "attempt": "stop-crash",
+      "event": "Stop",
+      "mode": "crash",
+      "conversation_id": "bb75ecd3-6f1b-41e2-b39f-9beec424621c",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [],
+      "selected_callback_durations_seconds": [],
+      "native_hook_errors": [
+        "E1005 23:46:03.511539     142 stophooks.go:62] failed to call custom stop hook jsonhook__nckh-native-r37-cli-controls_Stop_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_Stop_0_0\" failed: command failed: exit status 17, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-crash.json",
+        "sha256": "7942ae4805f0f012d0307a16ca1cbef2a3366903fd482fbb87d2f190260a4fda"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/commands/agy-tools-stop-crash.json",
+        "sha256": "8df1501f463674a63066dc26ffa8a0cadb242be5fb138615f8b05eeaeb2876c1"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-crash.native.log",
+        "sha256": "e7df65fa63460595304e58e73a45ae4bcb21de32c7f4490a26ee4a7a200597c9"
+      }
+    },
+    {
+      "attempt": "stop-unsupported-codec",
+      "event": "Stop",
+      "mode": "unsupported-codec",
+      "conversation_id": "c7f877b7-cf7a-42ef-a823-91e59bbc60ca",
+      "selected_callback_count": 1,
+      "selected_policy_decisions": [
+        "block"
+      ],
+      "selected_callback_durations_seconds": [
+        0.139031
+      ],
+      "native_hook_errors": [
+        "E1005 23:46:16.310856     544 stophooks.go:62] failed to call custom stop hook jsonhook__nckh-native-r37-cli-controls_Stop_0_0: JSON hook \"jsonhook__nckh-native-r37-cli-controls_Stop_0_0\" failed: command failed: exit status 3, stderr: "
+      ],
+      "native_terminal_states": [
+        "DONE"
+      ],
+      "fixture_unchanged": false,
+      "fixture_exact_revised": true,
+      "native_exit_code": 0,
+      "final_marker_observed": true,
+      "timing_scope": "after final response",
+      "callback_qualified": true,
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-unsupported-codec.json",
+        "sha256": "9bed2165b5895043f4c8eb24cf2cf65f9358c21053ff2d6255a20d252c9392a6"
+      },
+      "command": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/commands/agy-tools-stop-unsupported-codec.json",
+        "sha256": "472862b944d593fc7003182b0766bee5f4e729f7ce4e38d17802f19040c97444"
+      },
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/attempts/stop-unsupported-codec.native.log",
+        "sha256": "9777636813202275b2096fe4fd9af2118c3ec5e0c987b8db0f5618243f827df4"
+      }
+    }
+  ],
+  "observed_callback_counts": {
+    "PostInvocation": 8,
+    "PostToolUse": 4,
+    "PreInvocation": 8,
+    "PreToolUse": 4,
+    "Stop": 4
+  },
+  "instrumentation": "test observer with five-second outer and inner bounds; faults after genuine callback",
+  "effect_limit": "lifecycle block is advisory-only; post-tool mutation persistence does not establish preventive enforcement",
+  "unsupported_event_scope": "injected codec event only",
+  "duplicate_scope": "ordinary lifecycle repetition; controlled duplicate still pending",
+  "full_native_gate": "unchecked",
+  "source_modified": false,
+  "global_controller_config_write": false,
+  "backend_attestation": "not-observed",
+  "summary": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/native-event-summary.json",
+    "sha256": "6a01e3bc692c13ba9eb39aaf4dda89ca887717853e99191f8255c58d8b8c0445"
+  },
+  "previous_partial_batch_retained": true,
+  "frozen_brief": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/frozen-brief.json",
+    "sha256": "e49201fe6cbfdf9cbb613cd87ad0dc89c5310e6a5a99f4832b9855b362053af4"
+  },
+  "cleanup": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/cleanup.json",
+    "sha256": "96403625a55db3f89f60d2bea4d1b86701d30ffff1db5953399b6fdf26bb4dd7"
+  },
+  "process_audit": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/process-final-audit.json",
+    "sha256": "55784ca2824be7b827d36be21c7be9794051b807606a58cab70cc9e6c3e10985"
+  },
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-2340-r37-agy-stop-faults-attempt-36/verify-event-delivery.py",
+    "sha256": "8357d490e436aad926304e808b7e14418c6f2c312325c0464f0e12d5fce86afc"
+  }
+}

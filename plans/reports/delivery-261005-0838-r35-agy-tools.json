@@ -1,0 +1,1234 @@
+{
+  "attempts": [
+    {
+      "after": {
+        "file": "474b96fbd8d6111d211d14cddd823f418862ab735696d332c66a5a423882c0f5"
+      },
+      "attempt": "replace-file-content-allow",
+      "before": {
+        "file": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/PostInvocation/47a85044b239482babf6548b8c1bd60a.json",
+          "sha256": "0fc77ef3d26c56dc44704badd1bc453ff74dafe70ef4f3862d4a04019ef9b64d"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/PostInvocation/dcbc1dbf94cd432da68c4ee6574acade.json",
+          "sha256": "d98fdbbc0d510ffadbe0d70ee003316f40298631473ec803de7f9df7d871978a"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/PostToolUse/1aa7081a03bd445e88e4a451a6887338.json",
+          "sha256": "7337ec94184a420c130d4a40cba6c8d26dd87aaf5986ff76764a43322822566d"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/PreInvocation/2438f0eeec0f41608b1f0ea13ae98dc4.json",
+          "sha256": "0ff90813375a0d973eaa87c461b4fad2f6eede0d170df9cc2cd1cc2919e592b6"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/PreInvocation/ff6a48cc171846c19da0ec3e6c9cecc7.json",
+          "sha256": "b2b4ce59cfb4f19e4d9e16e9bf4a825151a47f73cd88d49bbf2b269dbd7c44f1"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/PreToolUse/37fe05daae82461980752436495a7dcb.json",
+          "sha256": "79095f28a5cfca76ddab54ddf91253755fb3c69cd64e3de094b13d2aa9f5257e"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-allow/Stop/1d70bfd2edff41f396e6df7d4064aee2.json",
+          "sha256": "14c8320e5f7b1e8b4d29d11fed6a4df4654321b96ee84f30a6a7b852d6e59589"
+        }
+      ],
+      "classification": "native-write-completed",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-replace-file-content-allow.json",
+        "sha256": "626a5d52afe2d7b031c0378b6892ac364ba315da1abcf0e483becb08bcefb054"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/definitions/replace-file-content-allow.json",
+        "sha256": "c1eb7f9f62ac1e1c5c7e2aeaaaaa14ec671702ee4cb3fd74f2f546d702f56c85"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 2,
+        "PostToolUse": 1,
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": "",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/attempts/replace-file-content-allow.native.log",
+        "sha256": "ca965802e28e817a9e84ee75055bf717346a88ad3034a1b71e3bf8f19fb453d0"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "6b464458-2dee-4dd3-b516-9b76f6743578",
+          "duration_seconds": 0.5152161,
+          "state": "DONE",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "name": "replace_file_content",
+            "parameters": {
+              "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-replace-file-content-allow\\marker.txt"
+            }
+          },
+          "tool_name": "replace_file_content"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/policy-receipts/replace-file-content-allow/PreToolUse/672851fbf6c3f37d0ac7dab1c69c3bd35eb9eb6017faaf5e5ad6bda0869c9072.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "53c30a94958693f842d3eb1664686f3e2cd4ad235a470643289101c4ae195e9c",
+            "decision": "allow",
+            "event_hash": "f049c2f4d420195b024f84f37d23f3e72642e759f6c4906b86192089f929bd18",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "declared-route-checks-current"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "901f2c9c6c4ae44dda37d7bdf4c0a5d57479f112c6b26c53641d90971b5b9a06",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "727dea7c28094ae7efe67e4b1b1aefc2d133383e1c82fc17072ed62f6f3a50ea"
+        }
+      ],
+      "pretool_callbacks": [
+        {
+          "attempt": "replace-file-content-allow",
+          "callback_source": "project",
+          "completed_at": "2026-10-05T01:37:45.145995+00:00",
+          "control_sha256": "0d1bbd2d34ec4adf0134444de1b6a49693605c72e0d2d453db71fe1a57971328",
+          "event": "PreToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "host": "agy",
+          "input_fields": [
+            "artifactDirectoryPath",
+            "conversationId",
+            "modelName",
+            "stepIdx",
+            "toolCall",
+            "transcriptPath",
+            "workspacePaths"
+          ],
+          "input_sha256": "3626ee9d9469a31a94fa0146390bf7f5de144fb86e727e82081073503def1f16",
+          "input_size": 1037,
+          "mode": "allow",
+          "native_model": "gemini-3.8-flash-medium",
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_path_fields": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-replace-file-content-allow\\marker.txt"
+          },
+          "native_session_hash": "4dc7d187b7f690ad52f28e434b08d90afd66e5bd1af61c593094424972ad3ba0",
+          "native_step_idx": 2,
+          "native_tool_name": "replace_file_content",
+          "native_tool_use_id": null,
+          "native_version": null,
+          "observer_pid": 6868,
+          "output_sha256": "93e80fefb7561c97d1aa80ea77afb43f2b03c26608e7be84be5caaa7c9fb3920",
+          "parent_pid": 47956,
+          "reported_event": null,
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "decision": "ask"
+          },
+          "runner_pid": 35348,
+          "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+          "schema_version": 1,
+          "started_at": "2026-10-05T01:37:45.003903+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tool_input_fields": [
+            "AllowMultiple",
+            "Description",
+            "EndLine",
+            "Instruction",
+            "ReplacementContent",
+            "StartLine",
+            "TargetContent",
+            "TargetFile",
+            "toolAction",
+            "toolSummary"
+          ],
+          "workspace_contains_selected_project": true
+        }
+      ],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/attempts/replace-file-content-allow.json",
+        "sha256": "042124370ee54cf047881d7054cd519d5159aea272d492ab7a7325032dfdafab"
+      },
+      "run": "nckh-native-261005-0838-r35-agy-tools-attempt-01",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-replace-file-content-allow.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-replace-file-content-allow.stdout.txt",
+        "sha256": "48cd6427f9a0de92704a9c525cf2710d91f24f44cc60dee03a64645e7e2e5c5a"
+      },
+      "tool": "replace_file_content"
+    },
+    {
+      "after": {
+        "file": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "attempt": "replace-file-content-private",
+      "before": {
+        "file": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-private/PostInvocation/e0684f6e4b984104bf478aea54a86ad6.json",
+          "sha256": "9a4ae78dd3be4bfc6802e36e9520e176dff5aabf8d36c6ced9a96ec7bde9f46a"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-private/PostInvocation/e2fd5d6129104f1795dc15e0e64f3ab9.json",
+          "sha256": "a25738530e495d1288121851256ca2e9955d66d0d85668e4d3f4ea78d4823f0a"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-private/PreInvocation/8d483cf8a5884565896ade94869f1108.json",
+          "sha256": "2e07ae985e42f1df875e421a306ac57ec2af260776da55eff598c5bdef0768dc"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-private/PreInvocation/fd98e9e2e3bc40bfac699c1c3e6d3661.json",
+          "sha256": "164bd6ea3712959923f1d058b712399d801d03fbff18c569237951704db11d0a"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-private/PreToolUse/bfc361f8cbec4d7982a36d9fc4b53461.json",
+          "sha256": "fa003830156a8df699c763eab1478f429ecc7918a499fc6b2ef4f7b3a6293304"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/replace-file-content-private/Stop/87aee267cb21416bbdb34f954f0c47e8.json",
+          "sha256": "a208af873e94537faa416cb1ec6e77ab0ed7e5bcd482f135d12b360fdae6d189"
+        }
+      ],
+      "classification": "native-policy-denial-before-requested-write",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-replace-file-content-private.json",
+        "sha256": "7cc613052a861fde6f537e9930305e2b07affc8c076d7fb436f734212a0f63a1"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/definitions/replace-file-content-private.json",
+        "sha256": "f897017a1d845a9d2187829f92a2c32aad907dbd53b9fec7d5f1cfd3e68bc915"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 2,
+        "PreInvocation": 2,
+        "PreToolUse": 1,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": "tool call denied by pre-tool hook: private-holdout-credential-path",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/attempts/replace-file-content-private.native.log",
+        "sha256": "1112349ecf16c6013496fcf7112e4487ab8b89e67b2e1fb941651f98fafa84fc"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "7aa6fbe9-c2b3-42fb-aecb-79ac71281715",
+          "duration_seconds": 0.5431032,
+          "state": "ERROR",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "error": {
+              "message": "tool call denied by pre-tool hook: private-holdout-credential-path",
+              "type": "TOOL_ERROR"
+            },
+            "name": "replace_file_content",
+            "parameters": {
+              "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\private\\r35-agy-replace-file-content-private\\marker.txt"
+            }
+          },
+          "tool_name": "replace_file_content"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/policy-receipts/replace-file-content-private/PreToolUse/3815247fd56acc3a1b83b45da11a698d3fea772e004c1a663598cfb3c0a2698e.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "53c30a94958693f842d3eb1664686f3e2cd4ad235a470643289101c4ae195e9c",
+            "decision": "block",
+            "event_hash": "d798b0b347d52b3f17014dee424b3658e70a81ae9d3aa921ec78d4907afae221",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "private-holdout-credential-path"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "e5390bddf09f01140b3fd8193fd136d14218c3af365533f803f87997d1218f86",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "723998dd84323399eab16cefe78b666365c41f50c6335a98443445e8996d496f"
+        }
+      ],
+      "pretool_callbacks": [
+        {
+          "attempt": "replace-file-content-private",
+          "callback_source": "project",
+          "completed_at": "2026-10-05T01:38:00.801627+00:00",
+          "control_sha256": "9c65124f0a4134f8ba89f44832ff1cf71c8679da9a6c93eac47ae74a04134682",
+          "event": "PreToolUse",
+          "fault_origin": "none",
+          "fault_selected": true,
+          "host": "agy",
+          "input_fields": [
+            "artifactDirectoryPath",
+            "conversationId",
+            "modelName",
+            "stepIdx",
+            "toolCall",
+            "transcriptPath",
+            "workspacePaths"
+          ],
+          "input_sha256": "4b19562f7636b4d6f0ecdaf236390a75b9053fea0315cc9622085d752233fc3f",
+          "input_size": 1039,
+          "mode": "allow",
+          "native_model": "gemini-3.8-flash-medium",
+          "native_model_id": null,
+          "native_model_params": null,
+          "native_path_fields": {
+            "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\private\\r35-agy-replace-file-content-private\\marker.txt"
+          },
+          "native_session_hash": "58104c55483185959dfe45de81fe8cf53863134899f5d9cff65000688f33515e",
+          "native_step_idx": 2,
+          "native_tool_name": "replace_file_content",
+          "native_tool_use_id": null,
+          "native_version": null,
+          "observer_pid": 58024,
+          "output_sha256": "1955060228b84c8ef6c019cf921d747904d14d572764af23594e0221d3b1651a",
+          "parent_pid": 28292,
+          "reported_event": null,
+          "runner_exit_code": 0,
+          "runner_exited": true,
+          "runner_output": {
+            "decision": "deny",
+            "reason": "private-holdout-credential-path"
+          },
+          "runner_pid": 21616,
+          "runner_sha256": "bfe51b9040f872cb2f885a5f72e3aacd9c5bcd2bbd8257b89830167ef304162b",
+          "schema_version": 1,
+          "started_at": "2026-10-05T01:38:00.655950+00:00",
+          "status": "completed",
+          "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "tool_input_fields": [
+            "AllowMultiple",
+            "Description",
+            "EndLine",
+            "Instruction",
+            "ReplacementContent",
+            "StartLine",
+            "TargetContent",
+            "TargetFile",
+            "toolAction",
+            "toolSummary"
+          ],
+          "workspace_contains_selected_project": true
+        }
+      ],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/attempts/replace-file-content-private.json",
+        "sha256": "9adf0e021c95d4e35e85eac3e38b0848a3989a67305ab1120c77e026220fa341"
+      },
+      "run": "nckh-native-261005-0838-r35-agy-tools-attempt-01",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-replace-file-content-private.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-replace-file-content-private.stdout.txt",
+        "sha256": "e1efc12bed4a519572742c5c861ad34fb294641f4b4259c8f007347d44654336"
+      },
+      "tool": "replace_file_content"
+    },
+    {
+      "after": {
+        "file": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "attempt": "multi-replace-file-content-allow",
+      "before": {
+        "file": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/multi-replace-file-content-allow/PostInvocation/28bd4d7c402445fd8cb4be7d53ab55d7.json",
+          "sha256": "b78a0cc56272c7710d2810afe038169ae78bde8d4197662d23a639adddda0d7b"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/multi-replace-file-content-allow/PostInvocation/730486fd846845dc9a2c043197fe0b53.json",
+          "sha256": "6a3b6b54b65f51aca322cff38fb82cf48ff26c4f81966fa6063f34ea86806c7c"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/multi-replace-file-content-allow/PreInvocation/a523797663534819accdb8d16b755bd0.json",
+          "sha256": "9a54bb3cef2164a3545c412138508ee14fe3940fff4e7ae9558e74d9d489c469"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/multi-replace-file-content-allow/PreInvocation/df800589122047c6a5822982326d8df5.json",
+          "sha256": "2dafe464fe120cb6212979d768fe1772f121db15f65d44d1c2b26e4826a914f5"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools/observations/multi-replace-file-content-allow/Stop/c51a6b379291437b97e15f9b1c80f3e8.json",
+          "sha256": "9ab1f3655955d3941a98944343c407ae66de11cc8af12302a2bd95c58ccd88ee"
+        }
+      ],
+      "classification": "native-cli-tool-unavailable-prevention-unverified",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-multi-replace-file-content-allow.json",
+        "sha256": "eabaab342555046eccdad5d25b527e95d0d327a4b1504691b6707aa9e8b1cc59"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/definitions/multi-replace-file-content-allow.json",
+        "sha256": "234de49a69d0cf29bac45788d034c8e17773eed3d48e26300d59e844d01abb9d"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 2,
+        "PreInvocation": 2,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": "unknown tool: \"multi_replace_file_content\" — check spelling",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/attempts/multi-replace-file-content-allow.native.log",
+        "sha256": "88ef1c1730515e15159d96785eaa1a2990b598d57214c142a36509902c9cca77"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "5b402130-f10f-4dbd-bb8f-73084c51b0c5",
+          "duration_seconds": 0.0017615,
+          "state": "ERROR",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "error": {
+              "message": "unknown tool: \"multi_replace_file_content\" — check spelling",
+              "type": "TOOL_ERROR"
+            },
+            "name": "multi_replace_file_content",
+            "parameters": {
+              "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-multi-replace-file-content-allow\\marker.txt"
+            }
+          },
+          "tool_name": "multi_replace_file_content"
+        }
+      ],
+      "policy_receipts": [],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/attempts/multi-replace-file-content-allow.json",
+        "sha256": "1b073f3d8505639a0e44832e24786ea65760b48868251c89f02a1691e8dcb01b"
+      },
+      "run": "nckh-native-261005-0838-r35-agy-tools-attempt-01",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-multi-replace-file-content-allow.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/commands/agy-tools-multi-replace-file-content-allow.stdout.txt",
+        "sha256": "ab8c57350b5e0aaf31f7e2616359e21ef56023bf8d6d4b69d13c601f56d77f6e"
+      },
+      "tool": "multi_replace_file_content"
+    },
+    {
+      "after": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "attempt": "list-dir-allow",
+      "before": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-allow/PostInvocation/37f8f1678fd1462b92eb4dc7b3c22f75.json",
+          "sha256": "69caedf741260c63528508e23f0f3cec429c2c35bdd7479ac54288e1efaa455e"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-allow/PostInvocation/6f035adb569448759bb2df9d5878a618.json",
+          "sha256": "72fd72f6bf30df2c6fdeec55e3a686f4a6c8c8ce35ae6eff28bf3601efe49d65"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-allow/PreInvocation/44e09a54b8754edcb81d94c321756b2d.json",
+          "sha256": "6aac15712235a42ac2563eb27eaf430bc250e900edc6c4f7e792e14c9a9ebcfc"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-allow/PreInvocation/c66fdeeb1e8a48719ee127e7d5da8ed9.json",
+          "sha256": "af6757a9fe0b8a9dddc96977b741c5d4565df98df6a2f44400754e897e77eb85"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-allow/Stop/36d48cd7efbf449e88ab848d78e9314b.json",
+          "sha256": "6c6019cc1199fc45cf6a2d10d782217f796dfe15b372adac533ca789243a3d31"
+        }
+      ],
+      "classification": "native-cli-tool-unavailable-prevention-unverified",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/commands/agy-tools-list-dir-allow.json",
+        "sha256": "dd5f8bcf8be1d847b9bb1990dec8f59969184fdc0088824fd07aa72babcd09a9"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/definitions/list-dir-allow.json",
+        "sha256": "e1cb3b7ee5a51eb6d146be40c61f250922279d0f7bb285308e5b6c021de24cca"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 2,
+        "PreInvocation": 2,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": "unknown tool: \"list_dir\" — check spelling",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/attempts/list-dir-allow.native.log",
+        "sha256": "488c41c712952b2052a60461154fc9102bdbb1ddb0c42ebb436c2c6b2eb165be"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "076f4685-e06c-4199-90e4-8f2c6dd8201d",
+          "duration_seconds": 0.0022294,
+          "state": "ERROR",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "error": {
+              "message": "unknown tool: \"list_dir\" — check spelling",
+              "type": "TOOL_ERROR"
+            },
+            "name": "list_dir",
+            "parameters": {
+              "DirectoryPath": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-list-dir-allow"
+            }
+          },
+          "tool_name": "list_dir"
+        }
+      ],
+      "policy_receipts": [],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/attempts/list-dir-allow.json",
+        "sha256": "e2fd4af09330acec22e6443306917d3782837caa8962c79741405da2c617ba74"
+      },
+      "run": "nckh-native-261005-0844-r35-agy-tools-attempt-02",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/commands/agy-tools-list-dir-allow.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/commands/agy-tools-list-dir-allow.stdout.txt",
+        "sha256": "c40ea72ae3bcd69a0e8b32a182512047553415f899845371ba1de68de67d2dff"
+      },
+      "tool": "list_dir"
+    },
+    {
+      "after": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "attempt": "list-dir-private",
+      "before": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-private/PostInvocation/23611764693a44209599ea227880dd46.json",
+          "sha256": "e8c8c66008b1a7846da156b91afd4bacb4c6269033423ee94028b66a7f59134d"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-private/PreInvocation/8d9eda6264f746b8af2a0eebb766318c.json",
+          "sha256": "2197350e768bd2b0244c80a42aadac5bac2e0961fbcd9f3ce7c88ac490495317"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-02/observations/list-dir-private/Stop/e07624478d274aa885b1c4fd6a738c0d.json",
+          "sha256": "57d0cf9914d2c4b39f2da180296e80cdce6786176a7e75af6d2139217f1b7d8f"
+        }
+      ],
+      "classification": "no-native-tool-attempt-prevention-unverified",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/commands/agy-tools-list-dir-private.json",
+        "sha256": "6755b2e8ae8ca324384cd83358c640e6cd913ac59239895181332fc0e8fdb067"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/definitions/list-dir-private.json",
+        "sha256": "b07c2a1ae0a7afcb7a58370741856dbc33d26db1cc63c3005d1ea57f6a881efb"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 1,
+        "PreInvocation": 1,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": null,
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/attempts/list-dir-private.native.log",
+        "sha256": "5e95ea6cb84495a97dc5b62dd6b32674edafcb1afee08abe47c9aaaf849d97be"
+      },
+      "native_terminal_tools": [],
+      "policy_receipts": [],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/attempts/list-dir-private.json",
+        "sha256": "61eacf8e9d58b84e84c6261b8f2b10a9dff67ff873e8749b77d13d9d37887437"
+      },
+      "run": "nckh-native-261005-0844-r35-agy-tools-attempt-02",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/commands/agy-tools-list-dir-private.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/commands/agy-tools-list-dir-private.stdout.txt",
+        "sha256": "5e9d0efea79d18c59543f0b3835108c67af9e02c59daa2b0f7a58000e4446485"
+      },
+      "tool": "list_dir"
+    },
+    {
+      "after": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "attempt": "find-by-name-allow",
+      "before": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PostInvocation/2b705b519c114130b1a638abaca6a16e.json",
+          "sha256": "2c9880d802a2bb7a92556c4913ce611e3d07c801f9d45023265ac18a73d1a9d4"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PostInvocation/9492fd7e74274336a03ba4d673c66fed.json",
+          "sha256": "033175e689b93c25cee134dd0905b26baa3c6c714fcd973d2a89289a1d51fad1"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PreInvocation/ef23646573184140b57c0e76d4d6442c.json",
+          "sha256": "8b0f1d155d9bfd24df5ef62aea9e6e7c4171c102b230072bc133126a5b9287f8"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/PreInvocation/f1b8125bd315458ab78efebbf7708043.json",
+          "sha256": "332a115c620bd455352ff0ceedacc27a014aa9d7e12b49def3bdd103baba87e1"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/find-by-name-allow/Stop/7caf4c9a9094484fb77eb3def1be9b72.json",
+          "sha256": "110b50983bb9bbecc705806681d96c1e8da60df3e3326265e310df31b10b42e6"
+        }
+      ],
+      "classification": "native-cli-tool-unavailable-prevention-unverified",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-find-by-name-allow.json",
+        "sha256": "e6b6271c4010cc920de44c1a20895e530e2ae3cf135dac02e59f57c04f13e1f7"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/definitions/find-by-name-allow.json",
+        "sha256": "c75df72f763c8b8de234f89382f59bcb39e7f98048791ac4a054d2aec4e341ff"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 2,
+        "PreInvocation": 2,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": "unknown tool: \"find_by_name\" — check spelling",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/attempts/find-by-name-allow.native.log",
+        "sha256": "a85647586045392ea916571669e0e9b0733c28d65aae8a750c8f871459395e70"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "f1886147-a2e6-4a68-9cd4-2012c0aa0080",
+          "duration_seconds": 0.002607,
+          "state": "ERROR",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "error": {
+              "message": "unknown tool: \"find_by_name\" — check spelling",
+              "type": "TOOL_ERROR"
+            },
+            "name": "find_by_name",
+            "parameters": {
+              "Pattern": "marker.txt",
+              "SearchDirectory": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-find-by-name-allow"
+            }
+          },
+          "tool_name": "find_by_name"
+        }
+      ],
+      "policy_receipts": [],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/attempts/find-by-name-allow.json",
+        "sha256": "447ab1a0613d190dd982dda4a069d518017fe18ae75f05daaaf7a0578ff1f6d9"
+      },
+      "run": "nckh-native-261005-0848-r35-agy-tools-attempt-03",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-find-by-name-allow.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-find-by-name-allow.stdout.txt",
+        "sha256": "9494537b71f909b4b97ce77c8df7b61fe0cd74a81bd7d96026e3f55876944035"
+      },
+      "tool": "find_by_name"
+    },
+    {
+      "after": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "attempt": "grep-search-allow",
+      "before": {
+        "marker.txt": "ad0fc2c5a758a7151f0f1a783023f3f6edf98df70c40ba0a05e7348b34a42472"
+      },
+      "callback_bindings": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/grep-search-allow/PostInvocation/a99b1b89efb448078041cf4b0a977c69.json",
+          "sha256": "eebb72bf8a593ec1c94672280669bd7851a663c5f4812d4fb376e4418992c8b6"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/grep-search-allow/PreInvocation/aa0f6bd610f5461d91106a20cf58911f.json",
+          "sha256": "dd532da90aa9f82e32b016d77e26816c7eb689243c1035d41b73be9660d47828"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-tools-03/observations/grep-search-allow/Stop/d57de41d6acd47158fb5e52b1f4a0c13.json",
+          "sha256": "84a9a8bd57d4d129fa1e82188e3c359d72dfa822e78a59b58724ec30d401a771"
+        }
+      ],
+      "classification": "no-native-tool-attempt-prevention-unverified",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-grep-search-allow.json",
+        "sha256": "ecd596fb950dfd0a20764cf5fd133e91b3f7e6fff8f85e765123d3d0739591a4"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/definitions/grep-search-allow.json",
+        "sha256": "9ec150251ab6946bd55b976cfe2318b5f7fc71870ee3b2797bc3961cefe1943d"
+      },
+      "direct_packaged_runner": false,
+      "events_observed": {
+        "PostInvocation": 1,
+        "PreInvocation": 1,
+        "Stop": 1
+      },
+      "fault_origin": "none",
+      "native_error": null,
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/attempts/grep-search-allow.native.log",
+        "sha256": "180b463d16e3ec9917455288e3b22b9c40f3af2006fe45395ad8ac78245260a4"
+      },
+      "native_terminal_tools": [],
+      "policy_receipts": [],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/attempts/grep-search-allow.json",
+        "sha256": "352aae62924afa34eb0ebf9a53c54cb71437c6704aa017883cbcfab532a687ca"
+      },
+      "run": "nckh-native-261005-0848-r35-agy-tools-attempt-03",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-grep-search-allow.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/commands/agy-tools-grep-search-allow.stdout.txt",
+        "sha256": "486196b5773da5e44522901dc0000573ad5d36faa14432508e0b311ab7497d65"
+      },
+      "tool": "grep_search"
+    },
+    {
+      "after": {
+        "file": "474b96fbd8d6111d211d14cddd823f418862ab735696d332c66a5a423882c0f5"
+      },
+      "attempt": "template-write-allow",
+      "before": {},
+      "callback_bindings": [],
+      "classification": "native-write-completed",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-allow.json",
+        "sha256": "e827579cc7e52d60e1ad2e1c90ec642f885ba66976b51d88d85d708b4a1ff1d7"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/definitions/template-write-allow.json",
+        "sha256": "1c2aad1f3c707602f39caa3d773aaac4bc3350ec0e0adafe0e168d1bc431ab94"
+      },
+      "direct_packaged_runner": true,
+      "events_observed": {},
+      "fault_origin": "none",
+      "native_error": "",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/attempts/template-write-allow.native.log",
+        "sha256": "f4b666a6aff86a140ef33fd31fc00e66d30d4d158d1dc0df8fa67ef440164999"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "3069207b-b498-425d-a16b-8a2f10c0e371",
+          "duration_seconds": 0.1658229,
+          "state": "DONE",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "name": "write_to_file",
+            "parameters": {
+              "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-direct-template-write-allow.txt"
+            }
+          },
+          "tool_name": "write_to_file"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-allow/3ace54d5184621162b9daadae258c27c3ad8f5876b93e4d80136778498f81610.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "53c30a94958693f842d3eb1664686f3e2cd4ad235a470643289101c4ae195e9c",
+            "decision": "advisory",
+            "event_hash": "ad2880e519dc8a586cc2a578ebc45b7ae7cbf4250b44d389cfd4697d079827e2",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "stop",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "f43de7ad6aa5ed36e329860cbd4d5b5a7d2b8c1bba2bd1a362c38f8a6232cb90",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "a8381440a7e13a002582ac14bc4268046a85fb52e7b9c00d31e551bf139916a3"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-allow/907d7b5cbe1c2dc24fe0a23a640dee48796bf97b7fc4b98a272b2c6dd8c519a2.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "53c30a94958693f842d3eb1664686f3e2cd4ad235a470643289101c4ae195e9c",
+            "decision": "allow",
+            "event_hash": "e4503f216d720973c7255d8567e306742070140e1b0b90fb285b136fed382c61",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "declared-route-checks-current"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "f43de7ad6aa5ed36e329860cbd4d5b5a7d2b8c1bba2bd1a362c38f8a6232cb90",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "f089cd5b5b6cb5254c16be901af6d36e42c654b8265866b800f08e8869bd3c6c"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-allow/cee99656f7e993f6df050cde2ca79d7e4e3c32abfef547de3290fb0cc2317e3b.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "53c30a94958693f842d3eb1664686f3e2cd4ad235a470643289101c4ae195e9c",
+            "decision": "advisory",
+            "event_hash": "18f34d4a892585b1c513f3a87e352ce116e1d7eae8287780ce9383c94eaac3b9",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "f43de7ad6aa5ed36e329860cbd4d5b5a7d2b8c1bba2bd1a362c38f8a6232cb90",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "f87418380b23ad91fb387bac12f22e6b7b739e03e69482ef0e074cbe2b88790d"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-allow/fe8bc057057ae9c9e2f2aafe260867beadc0c073e48cae74fc6bbb3a5ef26464.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "53c30a94958693f842d3eb1664686f3e2cd4ad235a470643289101c4ae195e9c",
+            "decision": "pending",
+            "event_hash": "1b4f4f3cf4f4c1b71c15f43d416511f2c4b4bada10d22056a4972ad60e5d10d3",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "pre-delivery",
+            "reason_codes": [
+              "artifact-final-bytes-missing-or-stale"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "f43de7ad6aa5ed36e329860cbd4d5b5a7d2b8c1bba2bd1a362c38f8a6232cb90",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "c5f419aeccc9179f1403fbb4d5b1e9fc8f6a35c3096baa92805d8e2631c30521"
+        }
+      ],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/attempts/template-write-allow.json",
+        "sha256": "525d817586db5e7a44d15e769799bf4da7526a38e1a890c3838e84506f1dcf03"
+      },
+      "run": "nckh-native-261005-0852-r35-agy-template-attempt-01",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-allow.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-allow.stdout.txt",
+        "sha256": "43e03f3640d00d2e23cf2559e3a4d68b9c6fa5ac070ff89860e6fd4ee44da21b"
+      },
+      "tool": "write_to_file"
+    },
+    {
+      "after": {},
+      "attempt": "template-write-deny",
+      "before": {},
+      "callback_bindings": [],
+      "classification": "native-policy-denial-before-requested-write",
+      "command": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-deny.json",
+        "sha256": "1bffa3e86556847916b8f45cabb88265301aebac96f84bed4f2dfeff7135ed0f"
+      },
+      "definition": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/definitions/template-write-deny.json",
+        "sha256": "67eef2b156a7e59dc8a2d130c11a22013a500474358c89e2182d65360056c0b9"
+      },
+      "direct_packaged_runner": true,
+      "events_observed": {},
+      "fault_origin": "none",
+      "native_error": "tool call denied by pre-tool hook: plan-only-mutation",
+      "native_log": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/attempts/template-write-deny.native.log",
+        "sha256": "6f1eaf1016b5b8959b1325795d5fd786173f3505bee44fd17d018031723c30d8"
+      },
+      "native_terminal_tools": [
+        {
+          "conversation_id": "4cf84063-9fc1-4b52-a172-c0d467d41471",
+          "duration_seconds": 0.1730592,
+          "state": "ERROR",
+          "step_index": 2,
+          "step_type": "tool",
+          "tool_info": {
+            "error": {
+              "message": "tool call denied by pre-tool hook: plan-only-mutation",
+              "type": "TOOL_ERROR"
+            },
+            "name": "write_to_file",
+            "parameters": {
+              "TargetFile": "C:/Users/USER\\Downloads\\test-skill\\plans\\runs\\nckh-native-261005-0005-r34-attempt-01\\projects\\agy-model\\oracles\\r35-agy-direct-template-write-deny.txt"
+            }
+          },
+          "tool_name": "write_to_file"
+        }
+      ],
+      "policy_receipts": [
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-deny/0c680b17922c2bac882dcfc7fccaf0b01c65afb67eb6c0d06f5c6a76c6eb2488.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "fcc86b2adff3147c1da82629905db804194be2796348abe5fac8cb39bb294dea",
+            "decision": "advisory",
+            "event_hash": "998ad5d9ad8c51a1f6e69096d590941a167c61a5f6c00c97ddfc15ae4ea30511",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "advisory",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "83ac874c469ba3a73d5d542a595a4badb7655a695a58505247b9590ccd6798b2",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "7be196c8e9f818b804793d1e5c2a9dd2c931ef49674a9b7f0f2b6328e9515549"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-deny/9f2b6c7830673bb4199832fd64ded01c4f8495158aafe381afc096532c786a78.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "fcc86b2adff3147c1da82629905db804194be2796348abe5fac8cb39bb294dea",
+            "decision": "block",
+            "event_hash": "66f25859c0975c8d593d30102637ac69c1eb84159005b1bb6e7fcb5bdc917706",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "preflight",
+            "reason_codes": [
+              "plan-only-mutation"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "83ac874c469ba3a73d5d542a595a4badb7655a695a58505247b9590ccd6798b2",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "46f644d2d3beb4439e994a2c86dffdb91dc3592c374a181dc0bdf08b4c3a4b45"
+        },
+        {
+          "path": "plans/runs/nckh-native-261005-0005-r34-attempt-01/projects/agy-model/.nckh-native-r35-agy-template-01/direct-policy-receipts/template-write-deny/c407792ff3564106e82aeef5e8297e73a0120e2936e29a1b94ecd96a4d25bc58.json",
+          "receipt": {
+            "artifact_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "context_hash": "fcc86b2adff3147c1da82629905db804194be2796348abe5fac8cb39bb294dea",
+            "decision": "advisory",
+            "event_hash": "099eb963280778caa92c1b7c44c44f8eb3dc9f3e07e0ccddfec1b31b41934a22",
+            "evidence_class": "deterministic",
+            "host": "agy",
+            "native_enforcement": "unverified",
+            "native_host_response": "unobserved",
+            "phase": "stop",
+            "reason_codes": [
+              "writing-resource-advice-only"
+            ],
+            "schema_version": 1,
+            "semantic_fidelity": "unverified",
+            "session_key": "83ac874c469ba3a73d5d542a595a4badb7655a695a58505247b9590ccd6798b2",
+            "side_effects": "none",
+            "status": "checked-unreviewed",
+            "task_key": "a0b0210bc23f90780218e3f3ee6d8e3f80153e4d693d268c077bda22dfe6a065"
+          },
+          "sha256": "bac54a78fe18444f434fa3269b274fb9976b21f2cf56a082238e9efe72fcb104"
+        }
+      ],
+      "pretool_callbacks": [],
+      "receipt": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/attempts/template-write-deny.json",
+        "sha256": "4f27395b5606c711b27314987782e1699109c73e864bb8f93d7e64b7688831d6"
+      },
+      "run": "nckh-native-261005-0852-r35-agy-template-attempt-01",
+      "stderr": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-deny.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/commands/agy-tools-template-write-deny.stdout.txt",
+        "sha256": "d9d249011c6a2a6e7b42cf870794b118f3fe631baa3afd32a6c6b5a45b369a23"
+      },
+      "tool": "write_to_file"
+    }
+  ],
+  "backend_attestation": "not-observed",
+  "batches": [
+    {
+      "cleanup": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/cleanup.json",
+        "sha256": "3bf1cb2222932d973380e1da8c3a81b8113ef8b1e835792d36bf318154174257"
+      },
+      "historical_members_preserved": 92,
+      "metadata": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/native-metadata.json",
+        "sha256": "3f7140da4c3f931f2f2a6118a965d5436d865b06e931772dfc8d4f316db7ae7d"
+      },
+      "ownership": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/ownership.json",
+        "sha256": "e2f539baff7a6f651e433c94226ea707ee6ef27ce6b2b70c01987779d4570182"
+      },
+      "process_audit": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/final-process-audit.json",
+        "sha256": "23de47e178f45c1eff483a0d57101b2971b1f822e28b94f6683ec734a65fa953"
+      },
+      "protected_global_config": [
+        {
+          "current_sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d",
+          "path": "C:/Users/USER\\.gemini\\antigravity-cli\\settings.json",
+          "sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d"
+        },
+        {
+          "current_sha256": null,
+          "path": "C:/Users/USER\\.agents\\hooks.json",
+          "sha256": null
+        }
+      ],
+      "removed_members": 26,
+      "run": "nckh-native-261005-0838-r35-agy-tools-attempt-01",
+      "summary": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/native-tool-summary.json",
+        "sha256": "a0f075b4c7fddb874786528c3d93eec123480758038e79afc7e61ba3a3dae584"
+      },
+      "summary_status_retained": "running",
+      "terminal_reconciliation": {
+        "path": "plans/runs/nckh-native-261005-0838-r35-agy-tools-attempt-01/terminal-reconciliation.json",
+        "sha256": "ae65817e7d779793edcbe318636489fa0933dc499d029d1a55d8dc20b2d334c2"
+      }
+    },
+    {
+      "cleanup": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/cleanup.json",
+        "sha256": "f9fe35f6265236f34012fd3191aa717043261f4e594efff2ba3fbaf71f18948a"
+      },
+      "historical_members_preserved": 140,
+      "metadata": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/native-metadata.json",
+        "sha256": "3f7140da4c3f931f2f2a6118a965d5436d865b06e931772dfc8d4f316db7ae7d"
+      },
+      "ownership": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/ownership.json",
+        "sha256": "9b3d483ee2166e26856841490110a050f252b9818d72299a55592959626178ac"
+      },
+      "process_audit": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/final-process-audit.json",
+        "sha256": "8c45a4c41d6d31fd54682644b88d532370233ff82b90b89b52fa183a94b9e02a"
+      },
+      "protected_global_config": [
+        {
+          "current_sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d",
+          "path": "C:/Users/USER\\.gemini\\antigravity-cli\\settings.json",
+          "sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d"
+        },
+        {
+          "current_sha256": null,
+          "path": "C:/Users/USER\\.agents\\hooks.json",
+          "sha256": null
+        }
+      ],
+      "removed_members": 26,
+      "run": "nckh-native-261005-0844-r35-agy-tools-attempt-02",
+      "summary": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/native-tool-summary.json",
+        "sha256": "8ee94f9ef70d9f212866553ea8f29ebb067b523dd4b1d76ea56eadd9ef48e81b"
+      },
+      "summary_status_retained": "running",
+      "terminal_reconciliation": {
+        "path": "plans/runs/nckh-native-261005-0844-r35-agy-tools-attempt-02/terminal-reconciliation.json",
+        "sha256": "6a959e2ce1c8a2c47580f386f557db4ca2218cc0ceda08490e6cb5a82ff59d04"
+      }
+    },
+    {
+      "cleanup": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/cleanup.json",
+        "sha256": "421eb9c5795bf90cde9683ca9c6fb86858b8cf13dc8f1882918fb6786cb33a40"
+      },
+      "historical_members_preserved": 165,
+      "metadata": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/native-metadata.json",
+        "sha256": "3f7140da4c3f931f2f2a6118a965d5436d865b06e931772dfc8d4f316db7ae7d"
+      },
+      "ownership": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/ownership.json",
+        "sha256": "105a8c915daf42aaf2ba1f88c9cd04fc75ad4400b12fa6a7a8b76e75b319b0b3"
+      },
+      "process_audit": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/process-audit-final.json",
+        "sha256": "074cbd11d90eb0093f695c0349caad77688bf4a8e8abde125910b07791a96985"
+      },
+      "protected_global_config": [
+        {
+          "current_sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d",
+          "path": "C:/Users/USER\\.gemini\\antigravity-cli\\settings.json",
+          "sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d"
+        },
+        {
+          "current_sha256": null,
+          "path": "C:/Users/USER\\.agents\\hooks.json",
+          "sha256": null
+        }
+      ],
+      "removed_members": 26,
+      "run": "nckh-native-261005-0848-r35-agy-tools-attempt-03",
+      "summary": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/native-tool-summary.json",
+        "sha256": "b006793ae9d74ac0020391f8eb305f02db440a7a61479c99aeacc4a713da5272"
+      },
+      "summary_status_retained": "running",
+      "terminal_reconciliation": {
+        "path": "plans/runs/nckh-native-261005-0848-r35-agy-tools-attempt-03/terminal-reconciliation.json",
+        "sha256": "b0e6d613e2c1b8abc2faebf435e7fade03885d19bcc528f92cbc0787c4fbb4ef"
+      }
+    },
+    {
+      "cleanup": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/cleanup.json",
+        "sha256": "d51ac1c1b99c38b732ec5e92576b28db4d93ff9975eab7d78b137b7590fb81ab"
+      },
+      "historical_members_preserved": 190,
+      "metadata": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/native-metadata.json",
+        "sha256": "3f7140da4c3f931f2f2a6118a965d5436d865b06e931772dfc8d4f316db7ae7d"
+      },
+      "ownership": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/ownership.json",
+        "sha256": "21dee0325fadd5abae16a5117f27899cc2bff44399215741d88dd28ce228c726"
+      },
+      "process_audit": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/process-audit-final.json",
+        "sha256": "894bb08f571fe3f7ec1674f3efafc3bbade547e23be86ab3ab668599b5ef6ee2"
+      },
+      "protected_global_config": [
+        {
+          "current_sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d",
+          "path": "C:/Users/USER\\.gemini\\antigravity-cli\\settings.json",
+          "sha256": "e9a22185daaef5df906540c06e0ae56480235d6890c7e88c86526dac3b269f5d"
+        },
+        {
+          "current_sha256": null,
+          "path": "C:/Users/USER\\.agents\\hooks.json",
+          "sha256": null
+        }
+      ],
+      "removed_members": 26,
+      "run": "nckh-native-261005-0852-r35-agy-template-attempt-01",
+      "summary": {
+        "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/native-tool-summary.json",
+        "sha256": "e3cd21e69a5d95d3d0b4a80039558f4f7966c4699eabdc858a44c753cc71e124"
+      },
+      "summary_status_retained": "recorded-native-agy-direct-template-controls",
+      "terminal_reconciliation": null
+    }
+  ],
+  "billing": "not-observed",
+  "classifications": {
+    "native-cli-tool-unavailable-prevention-unverified": 3,
+    "native-policy-denial-before-requested-write": 2,
+    "native-write-completed": 2,
+    "no-native-tool-attempt-prevention-unverified": 2
+  },
+  "effort_requested": "medium",
+  "evidence_class": "genuine-native-cli-observations",
+  "full_native_gate": "unchecked",
+  "global_direct_write": false,
+  "host": "agy",
+  "installed_r25_update": false,
+  "model_requested": "gemini-3.8-flash-medium",
+  "native_turns": 9,
+  "plan_progress": "44/45",
+  "review": "inline",
+  "source_lock_hash": "4482bbba7f4537025b523d887abe34774a4427d397549730f1ba8cf9fd50a255",
+  "source_modified": false,
+  "source_revision": 35,
+  "status": "recorded-native-agy-tool-and-template-observations-full-native-gate-open",
+  "surface": "agy-cli",
+  "verifier": {
+    "path": "plans/runs/nckh-native-261005-0852-r35-agy-template-attempt-01/verify-agy-tool-evidence.py",
+    "sha256": "4804cd53461068beaecc69d9919f4314d7c566fc3cfe918017459ea887c72207"
+  },
+  "version": "1.2.16"
+}

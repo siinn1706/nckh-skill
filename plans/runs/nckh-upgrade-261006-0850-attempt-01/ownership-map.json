@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "execution": "sequential controller; native checker owns separate disposable run",
+  "routes": {
+    "nckh-research": "discovery/search/screening/appraisal",
+    "nckh-method": "design/protocol/identification",
+    "nckh-dataset": "scientific intake/selection/labels/splits",
+    "nckh-telemetry": "signals/time/units/joins",
+    "nckh-statistics": "estimand/unit/analysis/inference",
+    "nckh-aiops": "task-specific scientific evaluation",
+    "nckh-cook": "approved implementation/execution lifecycle",
+    "nckh-devops": "environment/process/cleanup",
+    "nckh-data": "DB/schema/migration",
+    "nckh-analytics": "marketing KPIs",
+    "nckh-experiment": "marketing A/B",
+    "nckh-debug": "code/runtime failure diagnosis"
+  },
+  "schema_names": [
+    "dataset-manifest",
+    "split-manifest",
+    "statistical-analysis",
+    "telemetry-manifest",
+    "aiops-evaluation",
+    "experiment-manifest",
+    "research-run-receipt",
+    "owned-resource-provenance"
+  ],
+  "shared_queue": [
+    "P2 domain files",
+    "P3 domain files",
+    "P4 domain files",
+    "P5 catalog/profile/base cases",
+    "P5 resources/readers/provenance",
+    "P6 artifact checker/pilot",
+    "P7 integration/review/freeze/checks"
+  ],
+  "constraints": [
+    "stdlib core",
+    "closed supported schema subset",
+    "no provider/collector/orchestrator",
+    "resource ON public, OFF internal",
+    "no implementation source freeze before P7"
+  ]
+}

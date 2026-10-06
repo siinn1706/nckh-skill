@@ -1,0 +1,121 @@
+{
+  "base_controller": {
+    "path": "plans/runs/nckh-native-261005-1225-r36-cursor-interactive-attempt-06/cursor-interactive-runtime.py",
+    "sha256": "08346e09db1b87677ea7ce92bffafdd49b06be18d4d0429cdd73309dc4c9b1d2"
+  },
+  "cases": [
+    {
+      "attempt": "beforeSubmitPrompt-malformed-input",
+      "event": "beforeSubmitPrompt",
+      "index": 1,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_01",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-input",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "beforeSubmitPrompt-malformed-output",
+      "event": "beforeSubmitPrompt",
+      "index": 2,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_02",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-output",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "beforeSubmitPrompt-timeout",
+      "event": "beforeSubmitPrompt",
+      "index": 3,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_03",
+      "maximum_prompt_submissions": 1,
+      "mode": "timeout",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "beforeSubmitPrompt-crash",
+      "event": "beforeSubmitPrompt",
+      "index": 4,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_04",
+      "maximum_prompt_submissions": 1,
+      "mode": "crash",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "beforeSubmitPrompt-unsupported-codec",
+      "event": "beforeSubmitPrompt",
+      "index": 5,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_05",
+      "maximum_prompt_submissions": 1,
+      "mode": "unsupported-codec",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "stop-malformed-input",
+      "event": "stop",
+      "index": 6,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_06",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-input",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "stop-malformed-output",
+      "event": "stop",
+      "index": 7,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_07",
+      "maximum_prompt_submissions": 1,
+      "mode": "malformed-output",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "stop-timeout",
+      "event": "stop",
+      "index": 8,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_08",
+      "maximum_prompt_submissions": 1,
+      "mode": "timeout",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "stop-crash",
+      "event": "stop",
+      "index": 9,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_09",
+      "maximum_prompt_submissions": 1,
+      "mode": "crash",
+      "prompt": "[removed: raw runtime content]"
+    },
+    {
+      "attempt": "stop-unsupported-codec",
+      "event": "stop",
+      "index": 10,
+      "marker": "NCKH_PROMPT_STOP_ORACLE_10",
+      "maximum_prompt_submissions": 1,
+      "mode": "unsupported-codec",
+      "prompt": "[removed: raw runtime content]"
+    }
+  ],
+  "controller": {
+    "path": "plans/runs/nckh-native-261005-1257-r36-cursor-prompt-stop-faults-attempt-07/prepare-prompt-stop.py",
+    "sha256": "47467b00f44b1312e3ec4e937a8f2252ed8c9c2bc5a773f64dde7ccd681c68fe"
+  },
+  "definition": {
+    "path": "plans/runs/nckh-native-261005-1257-r36-cursor-prompt-stop-faults-attempt-07/definitions/session.json",
+    "sha256": "b1ca218a6de528ae9bbf4f2df9deb62735da1e32ffbf33d7a3768290f351b648"
+  },
+  "effort_requested": "xhigh",
+  "input_protocol": "prompt-text-write-then-separate-carriage-return",
+  "maximum_model_turns": 10,
+  "maximum_prompt_submissions": 10,
+  "model_requested": "grok-4.7[context=500k,reasoning_effort=xhigh,fast=false]",
+  "observer": {
+    "path": "plans/runs/nckh-native-261005-1257-r36-cursor-prompt-stop-faults-attempt-07/cursor-file-observer.py",
+    "sha256": "6b163eae5823ed283a4b9e979b45e08752d6cb6ac7a02d6cf82e5689f87014b7"
+  },
+  "per_case_observation_timeout_seconds": 240,
+  "port": null,
+  "source_lock_hash": "1a471686c5b1e89e6838957161a8ae4c6787d46d227420d8644636062da90d30",
+  "source_modified": false,
+  "source_revision": 36,
+  "status": "prepared-ten-interactive-fault-cases"
+}

@@ -1,0 +1,46 @@
+{
+  "comparison": "exact-UTC-ticks",
+  "identity_checks": [
+    {
+      "expected": "2026-10-05T06:00:58.6741380Z",
+      "pid": 53576,
+      "current": "2026-10-05T06:00:58.6741380Z"
+    },
+    {
+      "expected": "2026-10-05T06:01:47.6696500Z",
+      "pid": 17316,
+      "current": "2026-10-05T06:01:47.6696500Z"
+    },
+    {
+      "expected": "2026-10-05T06:01:47.7992220Z",
+      "pid": 57404,
+      "current": "2026-10-05T06:01:47.7992220Z"
+    },
+    {
+      "expected": "2026-10-05T06:01:49.7209000Z",
+      "pid": 49332,
+      "current": "2026-10-05T06:01:49.7209000Z"
+    },
+    {
+      "expected": "2026-10-05T06:01:49.7547070Z",
+      "pid": 5144,
+      "current": "2026-10-05T06:01:49.7547070Z"
+    }
+  ],
+  "root_pid": 53576,
+  "output": [
+    "ERROR: The process with PID 5144 (child process of PID 49332) could not be terminated.",
+    "Reason: This process can only be terminated forcefully (with /F option).",
+    "ERROR: The process with PID 49332 (child process of PID 57404) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 57404 (child process of PID 17316) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 17316 (child process of PID 53576) could not be terminated.",
+    "Reason: One or more child processes of this process were still running.",
+    "ERROR: The process with PID 53576 (child process of PID 37548) could not be terminated.",
+    "Reason: One or more child processes of this process were still running."
+  ],
+  "exit_code": 128,
+  "method": "graceful-taskkill-after-native-exit-requests",
+  "timestamp_utc": "2026-10-05T06:35:24.0916690Z"
+}

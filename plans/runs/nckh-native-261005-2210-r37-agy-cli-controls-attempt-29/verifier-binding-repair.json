@@ -1,0 +1,13 @@
+{
+  "failed_verifier_chunk": "d5e127",
+  "exit_code": 1,
+  "error_type": "KeyError",
+  "missing_field": "prompt_sha256",
+  "cause": "existing collector overwrites running attempt receipt; final record does not retain prompt hash",
+  "before_sha256": "4ad7e8a9e71672a1ccb2946caca8ea0871529c510cb15e769afd2163a8b1210b",
+  "after_sha256": "e7d74a30f49f4d4423bb1676e483aec2f6cf68927e3bf27514f2535a61c97767",
+  "repair": "derive prompt hash from immutable native command argv and verify frozen tool, target and content instructions",
+  "model_resubmission": false,
+  "oracle_changed": false,
+  "native_evidence_changed": false
+}
