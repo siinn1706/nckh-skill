@@ -1,6 +1,6 @@
 # Repository publication and cleanup
 
-Status: in progress. Target: existing `siinn1706/nckh-skill` repository, main.
+Status: completed. Data/evidence publication commit [`65cf5aa`](https://github.com/siinn1706/nckh-skill/commit/65cf5aa71c7a095afe821f02404dfb58cb231b62) is on `main`; see the [publication and cleanup report](../../reports/cleanup-261006-2312-repository-publication.md). Target: existing `siinn1706/nckh-skill` repository, main.
 
 ## Outcome and constraints
 
