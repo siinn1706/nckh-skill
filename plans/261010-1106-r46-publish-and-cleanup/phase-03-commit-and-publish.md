@@ -1,6 +1,6 @@
 # Commit and publish
 
-Status: reviewed public tree prepared; final audit and publication in progress.
+Status: published; remote and local main verified after closeout.
 
 ## Context and files
 
@@ -22,9 +22,14 @@ keeps immutable historical raw evidence local.
 1. Review the complete outgoing commit range and exact staged files for secrets,
    private paths, local-only content and accidental generated test workspaces.
 2. Run the publication audit and check changed documentation links.
-3. Create conventional commits for the reviewed r46 source/packages and records.
-4. Push normally to `origin/main`; do not force-push.
-5. Verify remote HEAD equals local HEAD and retain the result in the delivery record.
+3. Create the conventional publication commit
+   `defe679c0396a93702cf4ff70347e61552214898` with parent
+   `fa3c5224d2dfb48d04e4145bb7668f0717587f34`.
+4. Push normally to `origin/main`; GitHub verified `main` at the publication
+   commit. No force-push was used.
+5. Update the reviewed evidence and delivery records in a documentation
+   closeout commit, then align local `main` and its normal index with expected
+   old-value and mixed/read-tree operations while retaining the private backup.
 
 ## Risk and rollback
 

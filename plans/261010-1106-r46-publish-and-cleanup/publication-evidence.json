@@ -157,7 +157,7 @@
     ]
   },
   "publication": {
-    "status": "ready-for-final-audit",
+    "status": "published",
     "repository": "siinn1706/nckh-skill",
     "branch": "main",
     "base_commit": "fa3c5224d2dfb48d04e4145bb7668f0717587f34",
@@ -167,6 +167,8 @@
       "unpublished_commits_retained_locally": 5
     },
     "strategy": "Clean public tree on verified remote parent; ordinary push; retain local files",
+    "publication_commit": "defe679c0396a93702cf4ff70347e61552214898",
+    "publication_parent": "fa3c5224d2dfb48d04e4145bb7668f0717587f34",
     "preflight": {
       "changed_blob_count": 6761,
       "secrets": 0,
@@ -190,7 +192,19 @@
       "inherited_full_tree_broken_links": 161,
       "inherited_full_tree_note": "Historical Markdown in the verified remote base retains 161 missing local evidence links; no changed Markdown file adds a broken link."
     },
-    "remote_verification": "pending"
+    "remote_verification": {
+      "status": "pass",
+      "repository": "siinn1706/nckh-skill",
+      "branch": "main",
+      "head": "defe679c0396a93702cf4ff70347e61552214898",
+      "matches_publication_commit": true,
+      "issue_state": "no open or closed issues returned"
+    },
+    "local_alignment": {
+      "status": "verified-after-closeout",
+      "method": "expected-old-value ref update plus mixed/read-tree index alignment",
+      "private_history_retained": true
+    }
   },
   "process_evidence": {
     "status": "all listed child processes completed and reaped",

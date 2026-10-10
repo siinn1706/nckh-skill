@@ -1,6 +1,6 @@
 ---
 title: Publish experimental r46 and remove superseded skill copies
-status: in_progress
+status: completed
 created: 2026-10-10
 branch: main
 ---
@@ -27,7 +27,7 @@ history, active test workspaces, unrelated skills and edited content.
 |---|---|---|
 | [1. Freeze and verify](phase-01-freeze-and-verify.md) | completed | Owner-accepted candidate |
 | [2. Replace and clean](phase-02-replace-and-clean.md) | replacement and generated cleanup completed; rollback cleanup awaiting authority | Matching verified r46 packages |
-| [3. Commit and publish](phase-03-commit-and-publish.md) | in progress | Reviewed publication scope |
+| [3. Commit and publish](phase-03-commit-and-publish.md) | completed | Reviewed publication scope |
 
 ## Acceptance
 
@@ -44,3 +44,5 @@ Command/process/install records remain in the ignored local state directory.
 A privacy-reviewed publication summary is recorded in
 [publication evidence](publication-evidence.json). The final result belongs in
 [the delivery report](../reports/deploy-261010-1106-r46-publish-and-cleanup.md).
+The public publication commit and remote verification are recorded in the
+evidence; local private history remains under the retained backup ref.

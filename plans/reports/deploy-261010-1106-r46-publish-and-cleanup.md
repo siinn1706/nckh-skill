@@ -1,7 +1,7 @@
 # Xuất bản NCKH r46 và dọn bản skill cũ
 
-Ngày: 10/10/2026. Trạng thái: đã xác minh package và bản cài; đang hoàn tất audit
-và push GitHub. Bản phát hành giữ nhãn **experimental**.
+Ngày: 10/10/2026. Trạng thái: đã audit, push và đối chiếu local/remote; bản phát
+hành giữ nhãn **experimental**.
 
 ## Phạm vi và quyền thực hiện
 
@@ -79,13 +79,18 @@ tại, các helper cần thiết, tài liệu sở hữu và summary của đợ
 và file local được giữ trong lúc chuẩn bị. Rà soát 6.761 changed blob ban đầu
 không tìm thấy credential, đường dẫn máy riêng, raw-output filename, restricted
 prefix hoặc file vượt giới hạn kích thước GitHub. Sau khi thêm summary records,
-exact staged tree có 27.367 file, 817.724.785 bytes và publication audit pass với
+exact staged tree có 27.367 file, 817.725.632 bytes và publication audit pass với
 0 finding. Link check trên 2.165 Markdown file thay đổi đã kiểm 9.964 link và
 pass; full tree kế thừa 161 link evidence cũ bị thiếu, không nằm trong file thay
 đổi của đợt này.
 
-Commit/push và đối chiếu remote vẫn đang được thực hiện; SHA cuối sẽ bổ sung sau
-khi remote được xác minh.
+Publication commit là
+`defe679c0396a93702cf4ff70347e61552214898`, có parent remote
+`fa3c5224d2dfb48d04e4145bb7668f0717587f34`. Push thường thành công và
+`gh api`/`git ls-remote` cùng trả về publication SHA trên `origin/main`; issue
+list của repository không trả về issue nào. Documentation closeout và local
+alignment dùng thao tác mixed/read-tree có kiểm tra expected old value. Năm
+commit local cùng backup ref vẫn được giữ nguyên.
 
 Push dùng đường thông thường. Không rewrite remote history hoặc force-push.
 Rollback publication dùng revert/new commit đã review; phục hồi bản cài dùng
