@@ -218,7 +218,7 @@ def main():
     except (ContractError, OSError, ValueError, ET.ParseError) as error:
         print(json.dumps({"status": "unavailable", "reason": str(error), "fallback": False}))
         return 1
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    print(json.dumps(result, ensure_ascii=True, indent=2))
     return 0
 
 

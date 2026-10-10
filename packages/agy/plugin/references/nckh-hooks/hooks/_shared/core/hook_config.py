@@ -222,6 +222,12 @@ def preview_config(project, host, payload, *, action="apply", events=None,
         raise ContractError("controller-selected Python unavailable")
     context_path = contained(project, context_reference)
     context_hash = _hash(_bytes(context_path))
+    # Report, never create, a missing controller context: only the controller owns it.
+    context_status = "present" if context_hash is not None else "missing"
+    warnings = []
+    if action == "apply" and context_status == "missing":
+        warnings.append("controller context missing: " + ("advisory hooks will record degraded-no-context receipts"
+            if mode == "advisory" else "enforcement activation is refused") + " until the controller writes it")
     if action == "apply":
         selected = tuple(events or (EVENTS[host][2 if host != "agy" else 0],))
         if not selected or len(set(selected)) != len(selected) or not set(selected) <= set(EVENTS[host]):
@@ -253,7 +259,7 @@ def preview_config(project, host, payload, *, action="apply", events=None,
         "resolved_parent": _parent(config_path), "before_hash": _hash(before), "ownership_hash": index_hash,
         "before": config, "after": updated, "delete_config": delete_config, "definitions": definitions,
         "payload": payload, "runtime_relative": runtime_relative, "context_reference": context_reference,
-        "context_hash": context_hash, "python_path": str(interpreter), "python_sha256": digest_file(interpreter),
+        "context_hash": context_hash, "context_status": context_status, "warnings": warnings, "python_path": str(interpreter), "python_sha256": digest_file(interpreter),
         "mode": mode, "registered": False, "enabled": False, "trusted": False, "native_qualification": "unverified"}
 
 

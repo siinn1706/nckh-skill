@@ -1,6 +1,6 @@
 ---
 name: nckh-social
-description: "Create platform-specific social drafts, strategy, calendar or moderation guidance. No automatic posting, following, direct messages or fabricated organic evidence."
+description: "Create drafts and a posting schedule for one social platform (bài đăng Facebook, lịch đăng bài, mạng xã hội, bình luận tiêu cực) or moderation guidance. Multi-channel campaigns belong to nckh-campaign, editorial programs to nckh-content, brand voice to nckh-brand. No automatic posting, DMs or fabricated organic evidence."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -10,9 +10,9 @@ metadata:
 
 ## Inputs and owned output
 
-Inputs: Platform/audience, approved facts/voice, locale, schedule constraints and moderation policy.
+Inputs: Platform/audience, approved facts/voice, locale, audience jurisdiction, schedule constraints and moderation policy.
 
-Output: Usable posts/calendar or moderation guidance with provenance and publication gates.
+Output: Usable posts/calendar or moderation guidance with provenance, disclosure, legal gate and publication gates.
 
 ## Required contracts
 
@@ -26,9 +26,13 @@ Scientific venue/ranking rules apply only when the task explicitly needs them.
 
 ## Workflow and boundaries
 
-Select the actual platform and audience from the brief; verify drift-prone constraints when required. Adapt voice, length, format, accessibility and CTA to that surface, preserving supported claims and asset rights.
+Scope is drafts and the posting schedule for a single platform. A time-bound multi-channel campaign belongs to nckh-campaign; a long-running editorial program belongs to nckh-content; positioning and brand voice come from nckh-brand and are applied here, not redefined.
 
-For calendars define purpose, owner, content/asset needs and measurement hypotheses. For moderation define response/escalation boundaries without impersonating people or sending messages.
+Select the actual platform and audience from the brief. Any statement about platform limits or policy (length, format, ad rules, targeting of minors) needs a primary source URL and access date; without both, leave the statement out. Adapt voice, length, format, accessibility and CTA to that surface, preserving supported claims and asset rights.
+
+Paid, sponsored, gifted, affiliate or KOL/KOC content carries a visible disclosure in the post itself; never hide a material connection or present it as organic. Determine the audience's jurisdiction, then apply only the sources the [acceptance profile](references/_shared/core/profiles/acceptance/personal-use.json) lists for this skill that cover it, and recheck any source whose limitations flag an unverified article. When no listed source covers the jurisdiction or rule, set the legal gate to `pending`; do not cite instrument numbers, articles or fine amounts from memory.
+
+For calendars define purpose, owner, content/asset needs and measurement hypotheses. Social images and thumbnails follow [Marketing and brand assets](references/_shared/core/policies/visual-asset-policy.md#marketing-and-brand-assets): brief only, asset gate `pending`. For moderation define response/escalation boundaries without impersonating people or sending messages.
 
 Draft in the requested language; quoted engagement/customer reactions require real authorized evidence. Proposed content is not observed organic performance.
 

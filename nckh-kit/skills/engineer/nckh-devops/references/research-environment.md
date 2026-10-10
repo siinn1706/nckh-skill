@@ -13,8 +13,8 @@ Stop only owned matching processes and close handles. Retain failed attempts/std
 stderr, exit status, output hashes and exact cleanup receipt. A file's existence does
 not establish successful execution. Do not record secrets or complete environment maps.
 
-Cook owns authorized run lifecycle, method owns reproducibility design, dataset owns
-split/rights and AIOps/statistics own metrics/readout. Deployment, fault injection,
+nckh-cook owns authorized run lifecycle, nckh-method owns reproducibility design,
+nckh-dataset owns split/rights and nckh-aiops/nckh-statistics own metrics/readout. Deployment, fault injection,
 credential/trust changes and cloud costs keep their separate grants and rollback routes.
 Local arithmetic or packaging is distinct from scientific/native/production acceptance.
 

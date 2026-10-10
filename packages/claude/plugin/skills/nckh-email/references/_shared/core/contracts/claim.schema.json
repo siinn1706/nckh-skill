@@ -3,7 +3,7 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": 1
+      "const": 2
     },
     "id": {
       "type": "string",
@@ -54,6 +54,14 @@
     "profile_revision": {
       "type": "string",
       "minLength": 1
+    },
+    "attempt_status": {
+      "enum": [
+        "existing-before-attempt",
+        "created-this-attempt",
+        "verified-this-attempt",
+        "unverified"
+      ]
     }
   },
   "required": [
@@ -66,6 +74,7 @@
     "verdict",
     "allowed_certainty",
     "counterevidence_ids",
-    "profile_revision"
+    "profile_revision",
+    "attempt_status"
   ]
 }

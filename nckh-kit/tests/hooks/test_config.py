@@ -1,3 +1,4 @@
+from tests._lab import lab_root
 import json
 import subprocess
 import sys
@@ -13,7 +14,7 @@ from core.schema import ContractError
 
 class HookConfigTests(unittest.TestCase):
     def setUp(self):
-        self.tree = temporary_tree()
+        self.tree = temporary_tree(lab_root())
         self.root = self.tree.__enter__()
         self.addCleanup(self.tree.__exit__, None, None, None)
         self.project = self.root / "project"
@@ -70,6 +71,27 @@ class HookConfigTests(unittest.TestCase):
         self.assertTrue(state["configs"]["cursor"]["enabled"])
         removal = preview_config(self.project, "cursor", self.payload("cursor"), action="remove")
         apply_config(removal, approved_hash=digest_record(removal))
+
+    def test_apply_preview_reports_missing_context(self):
+        present = self.preview()
+        self.assertEqual((present["context_status"], present["warnings"]), ("present", []))
+        context = self.project / ".nckh-state/hooks/context/current.json"
+        context.unlink()
+        for mode in ("advisory", "enforce"):
+            with self.subTest(mode=mode):
+                preview = preview_config(self.project, "codex", self.payload("codex"), mode=mode,
+                                         host_version="isolated-unit-fixture", surface="codex-cli")
+                self.assertEqual(preview["context_status"], "missing")
+                self.assertIsNone(preview["context_hash"])
+                self.assertEqual(len(preview["warnings"]), 1)
+                self.assertIn("controller context missing", preview["warnings"][0])
+                self.assertFalse(context.exists())
+        enforce = preview_config(self.project, "codex", self.payload("codex"), host_version="isolated-unit-fixture",
+                                 surface="codex-cli")
+        with self.assertRaises(ContractError):
+            self.apply(enforce)
+        self.assertFalse(context.exists())
+        self.assertFalse((self.project / TARGETS["codex"]).exists())
 
     def test_advisory_still_requires_human_confirmation(self):
         preview = preview_config(self.project, "codex", self.payload("codex"), mode="advisory")

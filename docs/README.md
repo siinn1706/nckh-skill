@@ -54,8 +54,10 @@ resource, revision hoặc bản sao cấu hình trong tài liệu workspace.
 
 ## Kế hoạch và bằng chứng theo lần chạy
 
-Lịch sử cập nhật trên máy được tóm tắt tại
-[NCKH r41 cho các agent](../plans/reports/install-261006-2154-nckh-r41-all-agents.md).
+Đợt cập nhật và xuất bản mới nhất được tóm tắt tại
+[NCKH r46 và dọn bản cũ](../plans/reports/deploy-261010-1106-r46-publish-and-cleanup.md).
+[Đợt cài r41](../plans/reports/install-261006-2154-nckh-r41-all-agents.md)
+được giữ làm lịch sử.
 State ownership hiện tại được giữ local; biên nhận cài đặt riêng và logs cũ không
 thuộc bản công khai.
 

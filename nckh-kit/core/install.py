@@ -6,6 +6,7 @@ import shutil
 import tempfile
 import tomllib
 import uuid
+import warnings
 from copy import deepcopy
 from contextlib import ExitStack, contextmanager
 from pathlib import Path
@@ -13,8 +14,8 @@ from pathlib import Path
 from core.build import closure, load_json, verify_bundle
 from core.models import PROFILES
 from core.native import agent_filename, configured_agent
-from core.paths import (atomic_json, contained, device_identity, digest_bytes, digest_file, digest_record,
-                        no_links, owned_target, skill_id)
+from core.paths import (_is_link_like, atomic_json, contained, device_identity, digest_bytes, digest_file,
+                        digest_record, no_links, owned_target, skill_id)
 from core.schema import ContractError, validate
 
 
@@ -58,23 +59,45 @@ def read_index(state_dir):
     return value
 
 
-def resolve_targets(package, surfaces, *, scope, project, home):
+def _scan_home(home):
+    """Link-free home for a project install's global-root scan, or None for the legacy scan.
+
+    Home is only read to find home-level roots; a link-like component there must not
+    block a project install, so the target falls back to the scan that classifies by
+    ``Path.home()`` and a warning names the linked component.
+    """
+    try:
+        return str(no_links(home))
+    except ContractError as error:
+        warnings.warn(f"home directory not recorded for the visibility scan ({error}); "
+                      "pass --home with a link-free path to scan its global roots", stacklevel=3)
+        return None
+
+
+def inspect_target_paths(package, surfaces, *, scope, project, home):
+    """Read unverified path specs; plan_install authenticates their bundle bytes."""
     if scope not in {"project", "global"} or not surfaces or not set(surfaces) <= SURFACE_HOST.keys():
         raise ContractError("explicit valid runtime/scope required")
     base = no_links(project if scope == "project" else home)
+    # A global install's base already is home; only a project install records it.
+    scan_home = _scan_home(home) if scope == "project" else None
     targets = []
     for surface in sorted(set(surfaces)):
         host = SURFACE_HOST[surface]
         bundle = Path(package) if (Path(package) / "manifest.json").is_file() else Path(package) / host
-        manifest = verify_bundle(bundle)
-        if manifest["host"] != host:
-            raise ContractError("bundle host does not match target runtime")
-        adapter = load_json(bundle / "adapter.json")
+        adapter = load_json(contained(bundle, "adapter.json"))
         spec = adapter["surfaces"][surface]
         root = contained(base, spec[scope])
-        targets.append({"surface": surface, "host": host, "bundle": str(no_links(bundle)),
-                        "manifest": manifest, "adapter": adapter, "root": str(root), "base": str(base)})
+        target = {"surface": surface, "host": host, "bundle": str(no_links(bundle)),
+                  "root": str(root), "base": str(base)}
+        if scan_home is not None:
+            target["home"] = scan_home
+        targets.append(target)
     return targets
+
+
+def resolve_targets(package, surfaces, *, scope, project, home):
+    return refresh_targets(inspect_target_paths(package, surfaces, scope=scope, project=project, home=home), scope)
 
 
 def install_identity(targets, scope):
@@ -82,8 +105,50 @@ def install_identity(targets, scope):
                           "roots": [t["root"] for t in targets], "scope": scope})[:24]
 
 
-def visibility_conflicts(targets, skill_ids, *, agents=False):
-    """Check parent/nested/compatibility roots, not merely the direct destination."""
+VISIBILITY_PRUNE_DIRS = frozenset({".git", "node_modules", ".venv", "venv", "site-packages",
+                                  "__pycache__", "dist", "build", ".tox", "appdata"})
+VISIBILITY_MAX_DEPTH = 8
+
+
+def linked_directory(path):
+    """Same link test as no_links: cloud placeholders are traversed, name surrogates are not."""
+    return _is_link_like(os.lstat(path))
+
+
+def nested_visibility_roots(base, roots):
+    """Visit bounded project descendants and never traverse linked/vendor trees."""
+    relatives = [Path(relative) for relative in roots]
+    def walk_error(error):
+        raise ContractError("cannot inspect project visibility: " + str(error)) from error
+    for directory, children, _ in os.walk(base, topdown=True, followlinks=False, onerror=walk_error):
+        current = Path(directory)
+        depth = len(current.relative_to(base).parts)
+        children[:] = [name for name in children
+                       if depth < VISIBILITY_MAX_DEPTH and name.casefold() not in VISIBILITY_PRUNE_DIRS
+                       and not linked_directory(current / name)]
+        for relative in relatives:
+            if (len(current.parts) >= len(relative.parts)
+                    and current.parts[-len(relative.parts):] == relative.parts):
+                yield current
+                # Definitions inside a skill/agent root cannot contain nested projects.
+                children[:] = []
+
+
+VISIBILITY_ACKNOWLEDGEABLE = frozenset({"ancestor", "global"})
+
+
+def visibility_conflicts(targets, skill_ids, *, scope="project", agents=False):
+    """Check parent/nested/compatibility roots, not merely the direct destination.
+
+    Each visible path carries its source kind: ``destination`` (written by this
+    install), ``nested`` (any other root inside or directly at the install base,
+    including a sibling home-level root beside a global destination), ``global``
+    (a root directly under the home directory seen from a project install) or
+    ``ancestor`` (a root above the install base). A project install reads home from
+    its target; when that home is not an ancestor of the project, its roots are
+    probed as ``global`` too. A target recorded without home (an older plan or
+    install) keeps the earlier scan, classifying by ``Path.home()`` only.
+    """
     target_paths = {}
     for target in targets:
         root = Path(target["agent_destination"] if agents else target["root"])
@@ -93,36 +158,65 @@ def visibility_conflicts(targets, skill_ids, *, agents=False):
     conflicts = []
     for target in targets:
         base = Path(target["base"])
+        recorded_home = target.get("home") if scope == "project" else None
+        home_path = base if scope == "global" else Path(recorded_home or Path.home())
+        home = canonical(home_path)
         roots = set(target["adapter"]["compatibility_project"])
+        roots.update(surface["global"] for surface in target["adapter"]["surfaces"].values())
         if agents:
             roots = {root.replace("/skills", "/agents") for root in roots}
         destination = Path(target["agent_destination"] if agents else target["root"])
-        candidates = {destination}
+        candidates = {canonical(destination): (destination, "destination")}
+        if scope == "project" and base.exists():
+            for root in nested_visibility_roots(base, roots):
+                candidates.setdefault(canonical(root), (root, "nested"))
         for parent in [base, *base.parents]:
+            # A global install's base is home, so other roots there are siblings of the
+            # destination and block exactly like roots at a project base.
+            if parent == base:
+                kind = "nested"
+            else:
+                kind = "global" if canonical(parent) == home else "ancestor"
             for rel in roots:
-                candidates.add(parent / rel)
-        if base.exists():
+                candidates.setdefault(canonical(parent / rel), (parent / rel, kind))
+        if recorded_home and home not in {canonical(parent) for parent in [base, *base.parents]}:
             for rel in roots:
-                for directory in base.glob("**/" + rel):
-                    candidates.add(directory)
+                candidates.setdefault(canonical(home_path / rel), (home_path / rel, "global"))
+        for root, _ in candidates.values():
+            no_links(root)
         for identity in skill_ids:
             visible = {}
             names = [identity + ".md", identity + ".toml"] if agents else [identity]
-            for root in candidates:
-                no_links(root)
+            for root, kind in candidates.values():
                 for name in names:
                     path = root / name
                     key = canonical(path)
-                    if path.exists() or path.is_symlink() or key in target_paths[identity]:
-                        visible[key] = str(path)
+                    if key in target_paths[identity]:
+                        visible[key] = (str(path), "destination")
+                    elif path.exists() or path.is_symlink():
+                        visible[key] = (str(path), kind)
             if len(visible) > 1:
-                conflicts.append({"skill": identity, "physical_paths": sorted(visible.values()),
+                rows = sorted(visible.values())
+                conflicts.append({"skill": identity, "physical_paths": [path for path, _ in rows],
+                                  "sources": [{"path": path, "source": kind} for path, kind in rows],
                                   "surface": target["surface"], "reason": "duplicate visible definitions; no native dedup proof"})
     return conflicts
 
 
+def acknowledgeable_visibility(conflict):
+    """Only a single destination plus ancestor/global copies may be accepted by the user."""
+    kinds = [row["source"] for row in conflict["sources"]]
+    return kinds.count("destination") <= 1 and set(kinds) - {"destination"} <= VISIBILITY_ACKNOWLEDGEABLE
+
+
+def _visibility_key(conflict):
+    return (conflict["skill"], conflict["surface"],
+            tuple(sorted((row["path"], row["source"]) for row in conflict["sources"])))
+
+
 def plan_install(targets, index, *, kits, mode, profile, scope, replace_skills=(), keep_edited=False,
-                 capabilities=None, operation="install", candidate_evidence=None, with_agents=False):
+                 capabilities=None, operation="install", candidate_evidence=None, with_agents=False,
+                 acknowledge_ancestor_visibility=False):
     if not kits or not set(kits) <= {"core", "engineer", "marketing"}:
         raise ContractError("explicit kit selection required")
     if mode not in {"copy", "symlink"} or profile not in PROFILES:
@@ -227,11 +321,21 @@ def plan_install(targets, index, *, kits, mode, profile, scope, replace_skills=(
                              "precedence_evidence": "unverified", "action": action, "before_hash": current}
                 desired[key] = candidate
                 entries.append(candidate)
-    duplicates = visibility_conflicts(targets, {item["skill"] for item in entries if item["kind"] == "skill"})
+    duplicates = visibility_conflicts(targets, {item["skill"] for item in entries if item["kind"] == "skill"}, scope=scope)
     if with_agents:
-        duplicates += visibility_conflicts(targets, {item["skill"] for item in entries if item["kind"] == "native-agent"}, agents=True)
-    if duplicates:
-        raise ContractError("duplicate visibility: " + json.dumps(duplicates, ensure_ascii=False))
+        duplicates += visibility_conflicts(targets, {item["skill"] for item in entries if item["kind"] == "native-agent"}, scope=scope, agents=True)
+    # Update and model configuration keep an acknowledgement already recorded for this
+    # install, but only for the identical skill, surface and source paths; any new or
+    # changed duplicate needs the flag again.
+    recorded = ({_visibility_key(row) for row in index["installs"][install_id].get("acknowledged_visibility", [])}
+                if operation in {"update", "config-models"} else set())
+    acknowledged = [row for row in duplicates if acknowledgeable_visibility(row)
+                    and (acknowledge_ancestor_visibility or _visibility_key(row) in recorded)]
+    blocking = [row for row in duplicates if row not in acknowledged]
+    if blocking:
+        raise ContractError("duplicate visibility: " + json.dumps(blocking, ensure_ascii=False)
+                            + "; remove or rename the non-destination copies listed under sources; only ancestor/global "
+                            "copies may be accepted with --acknowledge-ancestor-visibility, destination/nested duplicates never")
     provenance = [{"surface": target["surface"], "host": target["host"],
                    **{key: target["manifest"][key] for key in
                       ("package_version", "source_lock_hash", "adapter_revision", "closure_hash")},
@@ -246,9 +350,12 @@ def plan_install(targets, index, *, kits, mode, profile, scope, replace_skills=(
             "surfaces": [t["surface"] for t in targets], "entries": entries,
             "conflicts": [e["physical_path"] for e in entries if e["action"] == "conflict"],
             "index_hash": digest_record(index), "provenance": provenance,
-            "target_specs": [{key: target[key] for key in ("surface", "bundle", "root", "base")} for target in targets],
+            "target_specs": [{key: target[key] for key in ("surface", "bundle", "root", "base", "home") if key in target}
+                             for target in targets],
             "options": {"replace_skills": sorted(set(replace_skills)), "keep_edited": keep_edited,
-                        "capabilities": deepcopy(capabilities or {}), "candidate_evidence": deepcopy(candidate_evidence)},
+                        "capabilities": deepcopy(capabilities or {}), "candidate_evidence": deepcopy(candidate_evidence),
+                        "acknowledge_ancestor_visibility": bool(acknowledge_ancestor_visibility)},
+            "acknowledged_visibility": acknowledged,
             "with_agents": with_agents, "native_resolutions": resolutions,
             "model_state": "policy-configured; native model/effort applied/effective unverified",
             "plugin_state": "not-installed/not-registered/not-enabled/not-trusted", "native_smoke": "not-run"}
@@ -290,8 +397,11 @@ def refresh_targets(targets, scope):
         root = contained(base, adapter["surfaces"][surface][scope])
         if canonical(root) != canonical(target["root"]):
             raise ContractError("target root differs from its adapter and scope")
-        result.append({"surface": surface, "host": host, "bundle": str(bundle),
-                       "manifest": manifest, "adapter": adapter, "root": str(root), "base": str(base)})
+        refreshed = {"surface": surface, "host": host, "bundle": str(bundle),
+                     "manifest": manifest, "adapter": adapter, "root": str(root), "base": str(base)}
+        if scope == "project" and target.get("home") and (scan_home := _scan_home(target["home"])):
+            refreshed["home"] = scan_home
+        result.append(refreshed)
     if len({target["surface"] for target in result}) != len(result):
         raise ContractError("duplicate target surface")
     return sorted(result, key=lambda target: target["surface"])
@@ -457,7 +567,7 @@ def _write_lock(descriptor, owner):
 
 
 @contextmanager
-def target_lock(state_dir, roots=()):
+def target_lock(state_dir, roots=(), *, cleanup_empty_roots=False):
     with ExitStack() as stack:
         user_key = digest_record(canonical(Path.home()))[:16]
         shared_area = no_links(Path(tempfile.gettempdir()) / ("nckh-installer-locks-" + user_key))
@@ -465,10 +575,25 @@ def target_lock(state_dir, roots=()):
         if os.name != "nt" and shared_area.stat().st_uid != os.getuid():
             raise ContractError("installer coordination directory belongs to another user")
         stack.enter_context(exclusive_lock(shared_area / "visibility.lock"))
-        for root in sorted({canonical(root): Path(root) for root in roots}.values(), key=str):
-            stack.enter_context(exclusive_lock(root.parent / ".nckh-install.lock"))
-        stack.enter_context(exclusive_lock(Path(state_dir) / "installer.lock"))
-        yield
+        ordered = sorted({canonical(root): Path(root) for root in roots}.values(), key=str)
+        lock_paths = sorted({canonical(root.parent / ".nckh-install.lock"): root.parent / ".nckh-install.lock"
+                             for root in ordered}.values(), key=str)
+        with ExitStack() as target_stack:
+            for lock_path in lock_paths:
+                target_stack.enter_context(exclusive_lock(lock_path))
+            target_stack.enter_context(exclusive_lock(Path(state_dir) / "installer.lock"))
+            yield
+        # Root locks are closed; the shared visibility lock still serializes installers.
+        if cleanup_empty_roots:
+            for root in ordered:
+                lock = root.parent / ".nckh-install.lock"
+                if root.is_dir() and not any(root.iterdir()):
+                    root.rmdir()
+                if (not root.exists() and lock.is_file()
+                        and set(root.parent.iterdir()) == {lock}):
+                    metadata = load_json(lock)
+                    if metadata.get("lock_protocol") == "kernel-advisory-v1" and metadata.get("state") == "released":
+                        lock.unlink()
 
 
 def recover_outstanding(state_dir, roots):
@@ -628,7 +753,8 @@ def commit_install(plan, state_dir, *, fail_after=None):
                                                         "kits": plan["kits"], "roots": plan["roots"], "mode": plan["mode"],
                                                         "operation": plan["operation"], "provenance": plan["provenance"],
                                                         "candidate_evidence": retained_evidence, "with_agents": plan["with_agents"],
-                                                        "target_specs": deepcopy(plan["target_specs"])}
+                                                        "target_specs": deepcopy(plan["target_specs"]),
+                                                        "acknowledged_visibility": deepcopy(plan["acknowledged_visibility"])}
             index["policies"][plan["install_id"]] = {"profile": plan["profile"], "state": "configured",
                                                          "applied": "unverified", "effective": "unknown",
                                                          "native_resolutions": plan["native_resolutions"]}
@@ -665,7 +791,7 @@ def uninstall(state_dir, install_id, *, dry_run=True, fail_after=None):
     preflight_volumes(state_dir, install["roots"])
     if dry_run:
         return {"status": "preview", "actions": actions}
-    with target_lock(state_dir, install["roots"]):
+    with target_lock(state_dir, install["roots"], cleanup_empty_roots=True):
         recover_outstanding(state_dir, install["roots"])
         locked_roots = install["roots"]
         index = read_index(state_dir)
@@ -755,6 +881,7 @@ def doctor(state_dir):
     installs = []
     for identity, install in index["installs"].items():
         row = {"install_id": identity, "provenance": install.get("provenance", []),
+               "acknowledged_visibility": install.get("acknowledged_visibility", []),
                "native_freshness": "unverified; pinned adapters are not live host evidence"}
         if install.get("candidate_evidence"):
             try:
@@ -771,13 +898,13 @@ def doctor(state_dir):
                                "manifest_hash": digest_record(target["manifest"])} for target in targets]
                 row["candidate_integrity"] = "current" if provenance == install["provenance"] else "changed"
                 identities = {item["skill"] for item in index["items"].values() if identity in item["owners"] and item.get("kind", "skill") == "skill"}
-                row["visibility_conflicts"] = visibility_conflicts(targets, identities)
+                row["visibility_conflicts"] = visibility_conflicts(targets, identities, scope=install["scope"])
                 if install.get("with_agents"):
                     for target in targets:
                         target["agent_destination"] = str(contained(target["base"], target["adapter"].get("agent_global_root", target["adapter"]["agent_root"])
                                                                   if install["scope"] == "global" else target["adapter"]["agent_root"]))
                     agents = {item["skill"] for item in index["items"].values() if identity in item["owners"] and item.get("kind") == "native-agent"}
-                    row["visibility_conflicts"] += visibility_conflicts(targets, agents, agents=True)
+                    row["visibility_conflicts"] += visibility_conflicts(targets, agents, scope=install["scope"], agents=True)
             except (ContractError, OSError, ValueError) as error:
                 row.update(candidate_integrity="unavailable-or-invalid", error=str(error))
         else:

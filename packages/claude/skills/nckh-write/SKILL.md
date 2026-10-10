@@ -1,6 +1,6 @@
 ---
 name: nckh-write
-description: "Compatibility route for Vietnamese/English drafting, polishing or translation. Route by requested action to humanwrite or paperwrite while preserving locale, facts and legacy bilingual requests."
+description: "Compatibility route used only when nckh-write is called explicitly (soạn văn bản, viết song ngữ, công văn, Việt lẫn Anh). Prefer the owners: nckh-humanwrite for polish or translation, nckh-paperwrite for scientific authoring, nckh-copy for marketing copy, nckh-docs for repository documentation. Preserves locale, facts and legacy bilingual requests."
 argument-hint: "<action and prose/evidence brief> [--en|--vi]"
 metadata:
   version: "0.1.0"
@@ -29,7 +29,9 @@ before drafting. Route polish/translate to [humanwrite](references/_shared/skill
 including paper paragraphs; route scientific outline/section/argument/reporting/
 revision-response to [paperwrite](references/_shared/skills/core/nckh-paperwrite/SKILL.md). Decide from the
 requested action and supplied evidence, not the word "paper". Keep legacy general
-prose drafting here when neither specialized action applies. Carry the original
+prose drafting here only when called explicitly and no owner applies: new marketing
+copy goes to nckh-copy or nckh-content, and documentation for changed repository
+behavior, setup, commands or contracts goes to nckh-docs. Carry the original
 `--en`/`--vi` flags and normalized target through the handoff. Both flags conflict
 with no artifact mutation; ambiguous no-flag locale needs one clarification.
 

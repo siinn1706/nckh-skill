@@ -1,6 +1,6 @@
 ---
 name: nckh-xia
-description: "Analyze and compare source capabilities or create a challenged adaptation plan. --compare is report-only; --port and --improve are plan-only, never implementation or installation."
+description: "Analyze and compare external source capabilities (so sánh repo, học từ repo khác, port tính năng, mã nguồn mở, repo bên kia, học theo cách) or write a challenged adaptation plan. --compare is report-only; --port and --improve write the plan here and hand implementation to nckh-cook. A plan for the project's own work belongs to nckh-plan. Never implements or installs."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -33,7 +33,7 @@ Challenge fit, redundancy, permission/cost/context and rights before choosing PO
 
 --compare returns a report only and creates no implementation plan. --port is the default adaptation-plan mode; --improve plans a measured change against a pinned baseline. Both include dependencies, ownership, acceptance and rollback, with no code/install. --copy, --fast and --auto have no stable NCKH semantics.
 
-Preserve the upstream ak-xia identity; never install its alias for NCKH or overwrite it. Handoff a requested plan to plan and implementation to cook only under a separate human execution grant.
+Preserve the upstream ak-xia identity; never install its alias for NCKH or overwrite it. The --port and --improve adaptation plan is written here, not handed to another planner. Hand implementation of that plan to nckh-cook only under a separate human execution grant. A task plan for the project's own work, not derived from an external source, belongs to nckh-plan.
 
 ## References
 

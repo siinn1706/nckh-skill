@@ -1,6 +1,6 @@
 ---
 name: nckh-experiment
-description: "Design or read out an A/B experiment with valid units, randomization, metrics, stopping and uncertainty. No live traffic/budget changes without approval."
+description: "Design or read out a marketing A/B experiment (thử nghiệm A/B, thiết kế A/B test, so sánh hai phiên bản, bản nào thắng, cái nào hiệu quả hơn, chia nhóm ngẫu nhiên) with valid units, randomization, metrics, stopping and uncertainty. Scientific statistical design belongs to nckh-statistics. No live traffic/budget changes without approval."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -25,6 +25,8 @@ Output follows the brief's locale. Same-agent is the default; use
 Scientific venue/ranking rules apply only when the task explicitly needs them.
 
 ## Workflow and boundaries
+
+Scope is a marketing or product A/B experiment with an assigned treatment. Descriptive analysis of existing KPI, funnel or campaign data belongs to nckh-analytics. A scientific study needing estimands, independent units or nested designs belongs to nckh-statistics.
 
 Freeze the hypothesis, experimental unit, allocation/randomization, population/exclusions, primary metric and denominator, guardrails and analysis before a run. Specify sample/stopping rationale from supplied assumptions or validated calculation; unknown baselines/economics remain unknown.
 

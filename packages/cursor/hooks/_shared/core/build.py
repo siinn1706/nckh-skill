@@ -45,6 +45,8 @@ HOOK_SHARED_SOURCES = (
     "core/contracts/resource-provenance.schema.json", "installer/schemas/bundle.schema.json",
     "installer/schemas/bundle-v2.schema.json",
     "core/owned_resources.py", "core/research_io.py", "core/contracts/owned-resource-provenance.schema.json",
+    "core/route_hint.py", "core/edit_guard.py", "core/ledger.py", "core/registry/catalog/route-boundaries.json",
+    "core/contracts/route-boundaries.schema.json",
 )
 
 SCRIPT_REQUIREMENTS = {
@@ -56,6 +58,9 @@ SCRIPT_REQUIREMENTS = {
         "core/contracts/experiment-manifest.schema.json", "core/contracts/research-run-receipt.schema.json",
         "core/contracts/aiops-evaluation.schema.json", "core/contracts/statistical-analysis.schema.json",
         "core/contracts/dataset-manifest.schema.json", "core/contracts/split-manifest.schema.json", "core/contracts/telemetry-manifest.schema.json"],
+    "scripts/check-receipt.py": ["core/__init__.py", "core/ledger.py", "core/paths.py", "core/schema.py",
+        "core/contracts/receipt.schema.json", "core/contracts/claim.schema.json", "core/contracts/task-state.schema.json"],
+    "scripts/check-plan.py": ["core/__init__.py", "core/plan_check.py"],
 }
 
 
@@ -256,18 +261,18 @@ def reference_path(root, current, href):
         return None
     if "\\" in href or ":" in href or "?" in href:
         raise ContractError(f"invalid local reference: {href}")
-    candidate = no_links(Path(current).parent / href).resolve()
-    if not candidate.is_relative_to(root.resolve()) or not candidate.is_file():
+    candidate = no_links(Path(current).parent / href)
+    if not candidate.is_relative_to(Path(os.path.abspath(root))) or not candidate.is_file():
         raise ContractError(f"missing or escaping reference: {current}: {href}")
     return candidate
 
 
 def closure(root, initial, *, requires=None):
-    root = Path(root).resolve()
+    root = no_links(root)
     done, active = set(), set()
 
     def visit(path):
-        path = no_links(path).resolve()
+        path = no_links(path)
         if not path.is_relative_to(root) or not path.is_file():
             raise ContractError(f"missing/escaping closure member: {path}")
         if path in active:

@@ -114,7 +114,7 @@
           "permission/egress results"
         ]
       },
-      "prompt": "Map supplied authorized metrics/logs/traces with clocks, units, resources, joins and normalization quality.",
+      "prompt": "Write telemetry-manifest.json mapping each supplied metric, log and trace field to its unit, clock, resource and join key; keep missing distinct from zero, mark unknown units unknown and do not infer a root cause.",
       "receipt_reference": null,
       "schema_version": 1,
       "skill_id": "nckh-telemetry",

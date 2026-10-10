@@ -1,6 +1,6 @@
 ---
 name: nckh-telemetry
-description: "Map actual research logs, metrics and traces with explicit units, clocks, aggregation, resource/correlation identities, joins and normalization quality. Observation mapping does not infer RCA or authorize production collection."
+description: "Map actual research logs, metrics and traces (chuẩn hóa log, ánh xạ metric, gộp log và trace, gắn trace, log và metric, id tương quan) with explicit units, clocks, aggregation, resource/correlation identities, joins and normalization quality. Observation mapping does not infer RCA, which belongs to nckh-aiops, or authorize production collection."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -37,9 +37,9 @@ reads with trusted aggregate budgets; do not execute snippets, read gold as feat
 collect production signals or use ambient credentials. A non-telemetry dataset gets
 a reasoned not-applicable record with no invented modalities.
 
-Hand quality to dataset/AIOps/statistics. Correlation and topology alone do not
-identify root cause; nckh-aiops owns task evaluation, DevOps owns environment,
-and dataset owns label/split decisions.
+Hand quality to nckh-dataset/nckh-aiops/nckh-statistics. Correlation and topology
+alone do not identify root cause; nckh-aiops owns task evaluation, nckh-devops owns
+environment, and nckh-dataset owns label/split decisions.
 
 ## References
 

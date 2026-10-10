@@ -48,6 +48,7 @@ target/
 # Active native attempts are owned by the testing agents.
 /plans/runs/r41-agy-*/
 /plans/runs/r41-cursor-*/
+/plans/runs/r43-*/
 
 # Proprietary reference snapshots remain local by the owner's decision.
 /resources/claudekit-engineer-main/
@@ -70,3 +71,30 @@ target/
 /plans/reports/test-261006-2210-r41-*.md
 /docs/journals/*r41-cursor*.md
 /docs/journals/*r41-agy*.md
+
+# Reviewed test-fix evidence is shared; private preimages and disposable builds stay local.
+*.raw.*
+/plans/runs/r43-native-controller-attempt-*/
+/plans/runs/r43-agy-controller-attempt-*/
+/plans/261007-0041-r41-test-findings-fix/reports/r41-source/
+/plans/261007-0041-r41-test-findings-fix/reports/r41-packages/
+/plans/261007-0041-r41-test-findings-fix/reports/r41-dist/
+/plans/261007-0041-r41-test-findings-fix/reports/r42-source/
+/plans/261007-0041-r41-test-findings-fix/reports/r42-packages/
+/plans/261007-0041-r41-test-findings-fix/reports/r42-live-packages/
+/plans/261007-0041-r41-test-findings-fix/reports/r43-packages/
+/plans/261007-0041-r41-test-findings-fix/reports/final-packages/
+/plans/261007-0041-r41-test-findings-fix/reports/dev-attempt-*/
+/plans/261007-0041-r41-test-findings-fix/reports/publish-layout/
+/plans/261007-0041-r41-test-findings-fix/reports/r43-publish-layout/
+/plans/261007-0041-r41-test-findings-fix/reports/transactions-*.prof
+/plans/261007-0041-r41-test-findings-fix/reports/*.prof
+!/plans/runs/r41-local-261007-*/**/*.stdout.txt
+!/plans/runs/r41-local-261007-*/**/*.stderr.txt
+!/plans/261007-0041-r41-test-findings-fix/reports/*.stdout.txt
+!/plans/261007-0041-r41-test-findings-fix/reports/*.stderr.txt
+*.raw.*
+
+# r43 byte snapshots used to prove r44 preservation stay local; their manifests are tracked.
+/plans/261008-0331-nckh-kit-retest-and-fix/reports/r43-baseline/nckh-kit/
+/plans/261008-0331-nckh-kit-retest-and-fix/reports/r43-baseline/packages/

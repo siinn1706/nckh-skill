@@ -9,7 +9,8 @@ cost/context and rights. PORT adapts a bounded behavior; MERGE assigns one owner
 retaining coverage; EXTENSION remains opt-in; DROP needs a concrete scope/overlap reason.
 
 --compare: source/anatomy/dependency matrix and recommendations, report-only.
---port (default): challenged local adaptation plan with validation/rollback.
+--port (default): xia writes the challenged local adaptation plan with
+validation/rollback; implementation goes to nckh-cook under a separate grant.
 --improve: plan a measured change against pinned baseline.
 No mode implements/installs. Unknown license permits analysis but blocks copying.
 No --copy/--fast/--auto stable shortcut and no alias or shadow of ak-xia.

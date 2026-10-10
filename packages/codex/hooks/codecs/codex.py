@@ -6,6 +6,10 @@ from core.schema import ContractError
 
 EVENTS = {"SessionStart": "advisory", "UserPromptSubmit": "advisory", "PreToolUse": "preflight",
           "PostToolUse": "pre-delivery", "Stop": "stop"}
+WRITE_TOOLS = frozenset({"apply_patch"})
+# Mirrors the adapter invocation `$NAME` and its compatibility_project roots.
+SKILL_INVOCATION = "${skill}"
+SKILL_ROOTS = (".agents/skills",)
 
 
 def patch_paths(command):

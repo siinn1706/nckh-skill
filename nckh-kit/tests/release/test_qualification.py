@@ -13,7 +13,7 @@ class QualificationTests(unittest.TestCase):
         result = validate_cases(Path(__file__).resolve().parents[2])
         self.assertEqual(result["identities"], 43)
         self.assertEqual(result["skill_cases"], 172)
-        self.assertEqual(result["required_families"], 19)
+        self.assertEqual(result["required_families"], 24)
         self.assertEqual(result["rubrics"], 5)
         self.assertEqual(result["rubric_approval"], "pending")
         self.assertEqual(result["installer_acceptance_cases"], 10)

@@ -27,6 +27,15 @@ từ evidence đã có. `nckh-write` route tương thích theo action. Hai flag 
 dừng trước sửa; thiếu target rõ ràng thì resolve brief/draft rồi hỏi một câu khi
 còn mơ hồ. Ngôn ngữ đầu ra độc lập locale/domain/genre của resource.
 
+## Windows và tiếng Việt
+
+Console Windows mặc định dùng code page cũ, nên tên file và nội dung tiếng Việt dễ
+bị lỗi khi chạy công cụ. Chạy Python bằng `python -X utf8` (hoặc đặt
+`PYTHONIOENCODING=utf-8`), lấy tên file Unicode từ listing thay vì gõ lại, và giữ
+encoding, BOM, EOL gốc khi sửa file. Quy tắc đầy đủ nằm ở
+[Host shell robustness](../core/workflows/execution.md#host-shell-robustness);
+[check-receipt.py](../scripts/check-receipt.py) so hash và EOL đã ghi với file thật.
+
 ## Checklist đọc đầu ra
 
 - Đúng công việc và đúng skill đã yêu cầu.

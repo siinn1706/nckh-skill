@@ -24,6 +24,11 @@ spec.loader.exec_module(entry)
 
 
 class AgentRunnerTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        # The source lock is read-only for the whole run; hash it once for every frozen budget fixture.
+        cls.source_lock_hash = digest_record(verify_source_lock(ROOT))
+
     def recipe(self, area, *, frozen=False):
         workspace, store = area / "workspace", area / "private"
         workspace.mkdir()
@@ -35,7 +40,7 @@ class AgentRunnerTests(unittest.TestCase):
         if frozen:
             budget = area / "budget.json"
             atomic_json(budget, {"schema_version": 1, "kind": "provider-run-budget",
-                                "scope": {"source_lock_hash": digest_record(verify_source_lock(ROOT)), "case_ids": ["nckh-plan:positive"]},
+                                "scope": {"source_lock_hash": self.source_lock_hash, "case_ids": ["nckh-plan:positive"]},
                                 "mode": "time-and-case-bound-unknown-cost", "unknown_cost_accepted": True,
                                 "max_cases": 1, "max_seconds_per_case": 10,
                                 "funding_scope_reference": "owned local Python subprocess fixture only; no provider or human qualification"})

@@ -1,6 +1,6 @@
 ---
 name: nckh-statistics
-description: "Design or validate scientific statistical analysis plans and evidence-bound readouts: estimands, independent units, nesting, assumptions, pairing, missingness, uncertainty, multiplicity and stopping. Marketing KPIs and A/B campaigns remain analytics/experiment; statistical reporting alone does not establish scientific validity."
+description: "Design or validate scientific statistical analysis plans and readouts (phân tích thống kê, kiểm định thống kê, cỡ mẫu nghiên cứu, ý nghĩa thống kê): estimands, independent units, nesting, assumptions, pairing, missingness, uncertainty, multiplicity and stopping. Marketing A/B tests belong to nckh-experiment, KPIs to nckh-analytics, database work to nckh-data and research files to nckh-dataset."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -44,8 +44,10 @@ Keep descriptive, predictive, associational, causal and simulation claims separa
 Identified causal claims require the method owner's design evidence and domain
 review. Numerical contract checks do not certify scientific interpretation.
 
-Dataset owns labels/splits, telemetry owns observation mapping, AIOps owns task
-metrics, method owns design and cook owns authorized execution. Computation packages
+nckh-dataset owns labels/splits, nckh-telemetry owns observation mapping, nckh-aiops
+owns task metrics, nckh-method owns design and nckh-cook owns authorized execution.
+Database schemas and queries go to nckh-data; marketing A/B tests go to
+nckh-experiment. Statistical reporting alone does not establish scientific validity. Computation packages
 are optional task bindings. Return an analysis plan when actual data/runs are absent;
 do not launch providers, install packages or write a paper from invented results.
 

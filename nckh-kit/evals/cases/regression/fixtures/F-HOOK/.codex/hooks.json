@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -I .nckh-state/hooks/runtime/hooks/runner.py --host codex --event PreToolUse --project . --context .nckh-state/hooks/context/current.json --receipt-dir .nckh-state/hooks/events/codex --mode advisory",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}

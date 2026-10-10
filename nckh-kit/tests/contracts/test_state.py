@@ -1,7 +1,8 @@
 import unittest
 
 from core.paths import digest_record
-from core.schema import ContractError, validate
+from core.ledger import validate_task_state
+from core.schema import ContractError, validate, validate_record
 from core.state import (HostGrant, aggregate, feedback, invalidate, new_task,
                         review_boundary, transition)
 from core.models import delegation_allowed, resolve_model
@@ -13,6 +14,14 @@ class StateTests(unittest.TestCase):
         self.task = new_task(self.brief, mode="auto", revision="r1")
         self.grant = HostGrant("user-current-turn", digest_record(self.brief),
                                frozenset({"local-product-write"}))
+
+    def test_new_task_matches_current_task_state_contract(self):
+        self.assertEqual(self.task["schema_version"], 2)
+        validate_record("task-state", self.task)
+        self.assertEqual(validate_task_state(self.task)["verdict"], "VERIFIED")
+        legacy = dict(self.task, schema_version=1)
+        with self.assertRaises(ContractError):
+            validate_record("task-state", legacy)
 
     def test_serialized_authorization_cannot_grant_scope(self):
         with self.assertRaises(ContractError):

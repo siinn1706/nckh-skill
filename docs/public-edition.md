@@ -6,6 +6,13 @@ Chủ sở hữu đã cho phép đưa bộ skill lên repository public `nckh-sk
 `resource-access on` theo yêu cầu của chủ sở hữu. Các package phân phối luôn bật
 tài nguyên; verifier từ chối package bị chuyển sang `off` hoặc thiếu tài nguyên.
 
+Ngày 10/10/2026, chủ sở hữu cho phép commit/push bản mới nhất và dọn các bản skill
+cũ ở global/local. Source và bốn package hiện cùng dùng **experimental r46**,
+giữ nguyên quyền/attribution của resources và các giới hạn qualification. Quyết
+định chấp nhận candidate chỉ miễn metadata process lịch sử đã nêu; việc chia sẻ
+không xác nhận native, scientific, human hoặc stable acceptance. Xem
+[kế hoạch và evidence xuất bản](../plans/261010-1106-r46-publish-and-cleanup/plan.md).
+
 ## Nội dung được phân phối
 
 - Bốn package tự chứa instructions và references cho 43 skill.

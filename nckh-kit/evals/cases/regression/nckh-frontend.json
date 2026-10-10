@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "kind": "regression-cases",
+  "skill": "nckh-frontend",
+  "cases": [
+    {
+      "schema_version": 1,
+      "id": "nckh-frontend:positive:accessible-form-preserve-meta",
+      "skill_id": "nckh-frontend",
+      "type": "positive",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic r43 fixture (owned). Setup: copy site.html from evals/cases/regression/fixtures/r43/ into a NEW empty case workspace outside any Git repo unless stated; record SHA-256 of every file before dispatch.",
+      "input_rights": "owned",
+      "input_language": "vi",
+      "prompt": "Sửa form trong site.html cho accessible (label, kiểu email, bắt buộc nhập), giữ nguyên tiếng Việt và mấy thẻ meta.",
+      "expected_route": "nckh-frontend",
+      "expected_outcome": [
+        "MECH: parsed site.html has an <input> with type=email and required, and a <label> whose for= matches the input id (or wraps it).",
+        "MECH: html lang='vi', <title>Công cụ nghiên cứu</title>, meta robots noindex and canonical href unchanged; file decodes as UTF-8 with no mojibake."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "Fabricated screenshot",
+        "Removing robots/canonical"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer using the mechanical checks below; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "MECH: parsed site.html has an <input> with type=email and required, and a <label> whose for= matches the input id (or wraps it).",
+          "MECH: the button keeps text 'Đăng ký' and submit semantics; visual/browser check is reported as run with evidence or as pending."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results",
+          "per-command ledger: exact command line, shell (PowerShell 5.1/7, cmd, Git Bash), cwd, exit status of EACH subprocess, stdout/stderr bytes",
+          "workspace file inventory with SHA-256 before and after the session (added/changed/deleted)",
+          "claim ledger: each claim tagged existing-before-attempt | created-this-attempt | verified-this-attempt | unverified, with the command/hash that supports it"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "(?i)<input[^>]*type=[\\\"']?email"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "(?i)<input[^>]*required"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "(?i)<label"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "(?i)<html[^>]*lang=[\\\"']?vi"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "<title>Công cụ nghiên cứu</title>"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "noindex"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "https://example\\.invalid/demo"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "Đăng ký"
+          },
+          {
+            "kind": "text-absent",
+            "target": "site.html",
+            "expected": "Ã|á»|Ä‘"
+          },
+          {
+            "kind": "eol-unchanged",
+            "target": "site.html",
+            "expected": null
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/site.html",
+          "sha256": "78aa33ef2662a417a4960a5256a1705a13048255ecf750f9dbf0001c4c04e49f"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-frontend:negative:logo-near-miss",
+      "skill_id": "nckh-frontend",
+      "type": "negative",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic r43 fixture (owned). Setup: copy site.html from evals/cases/regression/fixtures/r43/ into a NEW empty case workspace outside any Git repo unless stated; record SHA-256 of every file before dispatch.",
+      "input_rights": "owned",
+      "input_language": "vi",
+      "prompt": "Thiết kế giúp mình cái logo cho công cụ nghiên cứu này để đặt lên header.",
+      "dispatch": "invoke-skill",
+      "expected_route": "reject-this-skill",
+      "expected_outcome": [
+        "Reject this skill; hand off to brand/visual design owner in the observed catalog (frontend forbids logo generation, SKILL.md line 28) (or report uncertainty) without executing its task."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "Generating a logo or artwork"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer using the mechanical checks below; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task and identify the appropriate owner (nckh-brand, the brand/visual design owner in the observed catalog (frontend forbids logo generation, SKILL.md line 28)) or missing ownership evidence.",
+          "Return a bounded handoff with the original inputs and unresolved permission/evidence gates.",
+          "Do not execute the task belonging to the other skill or perform its side effects.",
+          "MECH: site.html SHA-256 after session == 78aa33ef2662a417a4960a5256a1705a13048255ecf750f9dbf0001c4c04e49f (unchanged); no image/SVG asset created."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results",
+          "per-command ledger: exact command line, shell (PowerShell 5.1/7, cmd, Git Bash), cwd, exit status of EACH subprocess, stdout/stderr bytes",
+          "workspace file inventory with SHA-256 before and after the session (added/changed/deleted)",
+          "claim ledger: each claim tagged existing-before-attempt | created-this-attempt | verified-this-attempt | unverified, with the command/hash that supports it"
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "checks": [
+          {
+            "kind": "sha256-unchanged",
+            "target": "site.html",
+            "expected": null
+          },
+          {
+            "kind": "file-absent",
+            "target": "**",
+            "expected": []
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/site.html",
+          "sha256": "78aa33ef2662a417a4960a5256a1705a13048255ecf750f9dbf0001c4c04e49f"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-frontend:outcome:audit-only",
+      "skill_id": "nckh-frontend",
+      "type": "outcome",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic r43 fixture (owned). Setup: copy site.html from evals/cases/regression/fixtures/r43/ into a NEW empty case workspace outside any Git repo unless stated; record SHA-256 of every file before dispatch.",
+      "input_rights": "owned",
+      "input_language": "en",
+      "prompt": "Audit site.html for accessibility issues. Report only — don't change the file.",
+      "expected_route": "nckh-frontend",
+      "expected_outcome": [
+        "MECH: site.html SHA-256 after session == 78aa33ef2662a417a4960a5256a1705a13048255ecf750f9dbf0001c4c04e49f (unchanged).",
+        "Findings cite site.html line 3: unlabeled email input, missing type=email/required, and note the form has no action/method; contrast/visual items are pending without a render."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "Editing site.html under an audit request"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer using the mechanical checks below; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Findings cite site.html line 3: unlabeled email input, missing type=email/required, and note the form has no action/method; contrast/visual items are pending without a render."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results",
+          "per-command ledger: exact command line, shell (PowerShell 5.1/7, cmd, Git Bash), cwd, exit status of EACH subprocess, stdout/stderr bytes",
+          "workspace file inventory with SHA-256 before and after the session (added/changed/deleted)",
+          "claim ledger: each claim tagged existing-before-attempt | created-this-attempt | verified-this-attempt | unverified, with the command/hash that supports it"
+        ],
+        "checks": [
+          {
+            "kind": "sha256-unchanged",
+            "target": "site.html",
+            "expected": null
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/site.html",
+          "sha256": "78aa33ef2662a417a4960a5256a1705a13048255ecf750f9dbf0001c4c04e49f"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-frontend:failure:powershell-encoding-edit",
+      "skill_id": "nckh-frontend",
+      "type": "failure",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic r43 fixture (owned). Setup: copy site.html from evals/cases/regression/fixtures/r43/ into a NEW empty case workspace outside any Git repo unless stated; record SHA-256 of every file before dispatch. Windows PowerShell 5.1 is the host shell (Set-Content/Out-File default to ANSI/UTF-16).",
+      "input_rights": "owned",
+      "input_language": "vi",
+      "prompt": "Đổi chữ nút 'Đăng ký' thành 'Đăng ký nhận tin' trong site.html, dùng PowerShell cho nhanh.",
+      "expected_route": "nckh-frontend",
+      "expected_outcome": [
+        "MECH: site.html decodes as strict UTF-8, contains 'Đăng ký nhận tin' and 'Công cụ nghiên cứu' exactly, and has no UTF-16 BOM or mojibake sequences ('Ä', 'Ã´', 'á»').",
+        "MECH: only the button text changed (diff limited to line 3)."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate",
+        "Corrupting file encoding",
+        "Reformatting the whole file"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer using the mechanical checks below; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "MECH: only the button text changed (diff limited to line 3)."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results",
+          "per-command ledger: exact command line, shell (PowerShell 5.1/7, cmd, Git Bash), cwd, exit status of EACH subprocess, stdout/stderr bytes",
+          "workspace file inventory with SHA-256 before and after the session (added/changed/deleted)",
+          "claim ledger: each claim tagged existing-before-attempt | created-this-attempt | verified-this-attempt | unverified, with the command/hash that supports it"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "Đăng ký nhận tin"
+          },
+          {
+            "kind": "text-present",
+            "target": "site.html",
+            "expected": "Công cụ nghiên cứu"
+          },
+          {
+            "kind": "text-absent",
+            "target": "site.html",
+            "expected": "﻿|Ä|Ã´|á»"
+          },
+          {
+            "kind": "eol-unchanged",
+            "target": "site.html",
+            "expected": null
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/site.html",
+          "sha256": "78aa33ef2662a417a4960a5256a1705a13048255ecf750f9dbf0001c4c04e49f"
+        }
+      ],
+      "receipt_reference": null
+    }
+  ]
+}

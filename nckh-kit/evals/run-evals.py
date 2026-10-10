@@ -51,6 +51,12 @@ def main(argv=None):
         summary.update(source_lock_hash=source_hash, recorded_at=datetime.now(timezone.utc).isoformat(),
                        environment={"python": sys.version.split()[0], "platform": sys.platform})
         if args.run_deterministic:
+            from tests._lab import lab_root
+            try:
+                lab_root()
+            except ContractError:
+                summary["stage"] = "lab-preflight"
+                raise
             command = [sys.executable, "-B", "-m", "unittest", "discover", "-s", "tests", "-t", ".", "-p", "test_*.py"]
             process = subprocess.run(command, cwd=ROOT, text=True, capture_output=True, timeout=900)
             output = process.stdout + process.stderr

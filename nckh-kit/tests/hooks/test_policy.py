@@ -1,3 +1,4 @@
+from tests._lab import lab_root
 import unittest
 from copy import deepcopy
 
@@ -16,7 +17,7 @@ def event(phase="preflight", tool="Write", paths=()):
 class HookPolicyTests(unittest.TestCase):
     def test_boundaries_do_not_accept_payload_authority(self):
         context = {"schema_version": 1, "tool_operations": {"Write": "write"}, "allowed_operations": ["write"], "brief": {"mode": "auto"}}
-        with temporary_tree() as project:
+        with temporary_tree(lab_root()) as project:
             self.assertEqual(evaluate(event(), context, project=project)["decision"], "allow")
             for path in ("../outside", "private/draft.md", "holdout/data.json", ".env", "keys/private.key", ".aws/credentials"):
                 with self.subTest(path=path):
@@ -28,7 +29,7 @@ class HookPolicyTests(unittest.TestCase):
                 evaluate(broken, context, project=project)
 
     def test_unknown_shell_route_and_missing_context_remain_manual_or_pending(self):
-        with temporary_tree() as project:
+        with temporary_tree(lab_root()) as project:
             self.assertEqual(evaluate(event(tool="Bash"), {"schema_version": 1}, project=project)["decision"], "manual")
             self.assertEqual(evaluate(event(), {}, project=project)["decision"], "pending")
             context = {"schema_version": 1, "tool_operations": {"Write": "generate-visual"}, "allowed_operations": ["generate-visual"], "brief": {"domain": "research"}}
@@ -41,7 +42,7 @@ class HookPolicyTests(unittest.TestCase):
         slots = dict.fromkeys(FACT_DIMENSIONS, [])
         context = {"schema_version": 1, "fidelity": {"before": slots, "after": deepcopy(slots),
             "protected_before": ["quote"], "protected_after": ["quote"]}}
-        with temporary_tree() as project:
+        with temporary_tree(lab_root()) as project:
             (project / "draft.md").write_text("Actual diagnostic draft bytes", encoding="utf8")
             context["artifact"] = {"path": "draft.md", "sha256": digest_file(project / "draft.md")}
             final_event = {**event("pre-delivery"), "artifact_sha256": context["artifact"]["sha256"]}

@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "kind": "regression-cases",
+  "skill": "nckh-write",
+  "cases": [
+    {
+      "schema_version": 1,
+      "id": "nckh-write:positive:route-translate",
+      "skill_id": "nckh-write",
+      "type": "positive",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario; r43 fixtures copied into a disposable case workspace: evals/cases/regression/fixtures/r43/writing.txt",
+      "input_rights": "owned",
+      "input_language": "vi",
+      "prompt": "/nckh-write --vi dịch phần EN của writing.txt sang tiếng Việt, giữ glossary.",
+      "expected_route": "nckh-write",
+      "expected_outcome": [
+        "Routes to humanwrite carrying --vi; association=liên hệ, causation=quan hệ nhân quả; 12/30, [1], may preserved."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "ORACLE: TRACE_REQUIRE read of nckh-humanwrite/SKILL.md"
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "liên hệ"
+          },
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "quan hệ nhân quả"
+          },
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "\\[1\\]"
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/writing.txt",
+          "sha256": "b99d8412093546ac58c799e6e55288aba29de868f55f1f63bfa924d1a4fcb5fb"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-write:negative:new-literature",
+      "skill_id": "nckh-write",
+      "type": "negative",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario; r43 fixtures copied into a disposable case workspace: evals/cases/regression/fixtures/r43/source.txt",
+      "input_rights": "owned",
+      "input_language": "en",
+      "prompt": "Search and verify new literature for the claim.",
+      "dispatch": "invoke-skill",
+      "expected_route": "reject-this-skill",
+      "expected_outcome": [
+        "Reject; route to nckh-research / nckh-evidence."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task; name the appropriate owner nckh-research or the missing ownership evidence. Return a bounded handoff with the original inputs and unresolved permission/evidence gates. Do not execute the task belonging to the other skill or perform its side effects."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "checks": [
+          {
+            "kind": "file-absent",
+            "target": "**",
+            "expected": []
+          },
+          {
+            "kind": "sha256-unchanged",
+            "target": "source.txt",
+            "expected": null
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/source.txt",
+          "sha256": "977a3331ea369c5eb213be8087314d1167402f17c5e23fa053ea773cd997a90a"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-write:outcome:paper-word-not-authoring",
+      "skill_id": "nckh-write",
+      "type": "outcome",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario",
+      "input_rights": "owned",
+      "input_language": "en",
+      "prompt": "Polish this paper paragraph (it is from my thesis): \"Of 30 participants, 12 selected A [1].\"",
+      "expected_route": "nckh-write",
+      "expected_outcome": [
+        "Routes to humanwrite despite the word paper/thesis."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "ORACLE: TRACE_REQUIRE read of nckh-humanwrite/SKILL.md",
+          "ORACLE: TRACE_FORBID read of nckh-paperwrite/SKILL.md before routing"
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "\\[1\\]"
+          },
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "\\b12\\b"
+          },
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "\\b30\\b"
+          }
+        ]
+      },
+      "fixtures": [],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-write:failure:ambiguous-locale",
+      "skill_id": "nckh-write",
+      "type": "failure",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario",
+      "input_rights": "owned",
+      "input_language": "bilingual",
+      "prompt": "/nckh-write sửa giúp đoạn này: \"Of 30 người, 12 selected A.\"",
+      "expected_route": "nckh-write",
+      "expected_outcome": [
+        "Mixed locale with no flag: one clarification, no mutation."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Every acceptance criterion of this case is expressed in oracle.checks."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "checks": [
+          {
+            "kind": "file-absent",
+            "target": "**",
+            "expected": []
+          },
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "\\?"
+          }
+        ]
+      },
+      "fixtures": [],
+      "receipt_reference": null
+    }
+  ]
+}

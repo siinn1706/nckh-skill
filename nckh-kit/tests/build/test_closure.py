@@ -6,6 +6,7 @@ from pathlib import Path
 
 from core.build import _promote_staging, build_host, closure, freeze_sources, select_skills, source_members, verify_bundle
 from core.paths import atomic_json, contained, digest_record, temporary_tree
+from tests._bundles import copy_bundle
 from core.schema import ContractError
 
 
@@ -75,7 +76,7 @@ class BuildTests(unittest.TestCase):
     def test_real_bundle_reproducibility_and_tamper_detection(self):
         root = Path(__file__).resolve().parents[2]
         with temporary_tree() as a, temporary_tree() as b:
-            first = build_host(root, "codex", ["core"], a)
+            first = copy_bundle(a, "codex", ["core"], root=root)
             second = build_host(root, "codex", ["core"], b)
             self.assertEqual(first, second)
             (a / "skills/nckh-plan/SKILL.md").write_text("user edit", encoding="utf-8")
@@ -85,7 +86,7 @@ class BuildTests(unittest.TestCase):
     def test_manifest_skill_traversal_and_tree_metadata_rejected(self):
         root = Path(__file__).resolve().parents[2]
         with temporary_tree() as bundle:
-            original = build_host(root, "codex", ["core"], bundle)
+            original = copy_bundle(bundle, "codex", ["core"], root=root)
             for field, value in [("id", "../../private"), ("tree_hash", "0" * 64)]:
                 manifest = json.loads(json.dumps(original))
                 manifest["skills"][0][field] = value
@@ -137,7 +138,7 @@ class BuildTests(unittest.TestCase):
     def test_source_provenance_cannot_disagree_with_embedded_lock(self):
         root = Path(__file__).resolve().parents[2]
         with temporary_tree() as output:
-            manifest = build_host(root, "codex", ["core"], output)
+            manifest = copy_bundle(output, "codex", ["core"], root=root)
             manifest["files"][0]["source_sha256"] = "0" * 64
             manifest["closure_hash"] = digest_record(manifest["files"])
             atomic_json(output / "manifest.json", manifest)

@@ -5,6 +5,18 @@ same Python engine: [PowerShell](../installer/install.ps1),
 [POSIX shell](../installer/install.sh), [engine](../installer/nckh-installer.py).
 They check Python 3.11+ and never download it.
 
+Without arguments, either wrapper prints usage and examples and exits 2 before
+any installation. Python selection probes both version and executable readability
+(hook configuration hashes the selected interpreter). Windows Store execution
+aliases that cannot be read are skipped; `NCKH_PYTHON` selects an explicit usable
+interpreter. The selected executable is reported on stderr; engine JSON and exit
+status remain intact.
+
+`--package` is optional. The engine first looks for a manifest in `nckh-kit/dist`,
+then in the repository's `packages` directory, including host subdirectories.
+An explicit `--package` takes precedence; absent manifests produce an error listing
+the searched paths. Build and verification still check the selected bundle hashes.
+
 ## Build
 
 ```text
@@ -107,6 +119,55 @@ python installer/nckh-installer.py list-skills
 Doctor is read-only. It checks owned tree hashes and local reference closure,
 parses native TOML/generated frontmatter, reports configured fields, verifies
 retained candidate provenance/receipt integrity and inspects duplicate visibility.
+
+Visibility includes the destination, compatibility/global roots on each ancestor,
+and, for project installs, nested projects up to eight directory levels. Project
+scans prune `.git`, `node_modules`, `.venv`, `venv`, `site-packages`, `__pycache__`,
+`dist`, `build`, `.tox`, `AppData`, symlinks and Windows junctions/reparse points.
+Definitions inside those excluded trees are outside the nested-project scan.
+Global installs inspect destinations and ancestors only; a project below home
+does not block a global install. A project install also probes the home-level
+roots of the selected home (`--home`, default the real home), even when the
+project is outside that home. Native deduplication remains unverified.
+
+### Lối thoát khi trùng visibility
+
+Lỗi `duplicate visibility` liệt kê từng bản trùng trong `sources`, mỗi đường dẫn
+kèm nguồn: `destination` (thư mục cài đặt của transaction này), `nested` (gốc
+skill khác bên trong project, kể cả gốc tương thích ngay tại project; với
+`--scope global` là các gốc skill khác ngay dưới home, cạnh thư mục cài đặt),
+`global` (gốc ngay dưới thư mục home khi cài theo project, kể cả khi project nằm
+ngoài home) hoặc `ancestor` (gốc trên một thư mục cha của nơi cài đặt). Home là
+giá trị `--home`, mặc định là home thật của người dùng. Cách xử lý mặc định là xóa
+hoặc đổi tên bản không phải `destination` rồi chạy lại `--dry-run`.
+
+Vì vậy, khi máy đã có bản cài global cùng tên skill, cài theo project ở bất kỳ đâu,
+kể cả ngoài home (ví dụ ổ khác), sẽ dừng với `duplicate visibility` loại `global`.
+Hãy xóa bản global hoặc chấp nhận bằng cờ ở đoạn dưới. Bản cài cũ có transaction
+chưa ghi home vẫn chỉ quét theo cách trước đây; `doctor` chưa thấy bản trùng ở
+home cho tới khi chạy `update`. Nếu đường dẫn home có thành phần là link (symlink,
+junction), installer không ghi home, dùng cách quét cũ theo home thật và in cảnh
+báo nêu thành phần đó; truyền `--home` bằng đường dẫn không chứa link để quét các
+gốc global của home (xem `_scan_home` trong `core/install.py`).
+
+Nếu bản trùng thuộc người dùng và chỉ nằm ở `ancestor`/`global`, có thể chấp nhận
+bằng `--acknowledge-ancestor-visibility`. Cờ này không bao giờ bỏ qua trùng
+`nested` hay hai `destination` cùng hiển thị; `--yes` cũng không vượt qua bất kỳ
+conflict nào. Transaction ghi các mục đã chấp nhận vào `acknowledged_visibility`,
+bản ghi ownership giữ lại trường này và `doctor` hiển thị nó cùng
+`visibility_conflicts` hiện tại. `update` chỉ mang chấp nhận cũ sang khi bản ghi
+ownership có đúng cùng skill, surface và đường dẫn nguồn; bản trùng mới hoặc đã đổi
+cần truyền lại cờ. Host vẫn thấy cả hai bản; thứ tự ưu tiên giữa
+chúng chưa được kiểm chứng.
+
+Lỗi hợp đồng đối số được báo trước khi quét filesystem: `--scope global` cùng
+`--hooks advisory` (mặc định) dừng ngay với `automatic hooks require project scope`,
+nên hãy thêm `--hooks off` cho cài đặt global.
+
+After an owned uninstall, empty skill/agent roots are removed. A released root
+lock is removed only when it is the parent's sole remaining entry; user files
+and locks beside retained content are preserved. Cleanup holds the shared
+installer coordination lock after closing root locks.
 Receipt classes, input provenance and stated scopes remain separate from artifact
 integrity; a missing or changed receipt makes its qualification unverified. Edited
 YAML outside the generated subset remains unverified. Missing source bundles do
@@ -145,6 +206,19 @@ deny or prompt block. Cursor uses `failClosed=false` in this mode. Missing conte
 is reported as unavailable, never as a passed check. Host trust and native
 qualification stay separate. Skill uninstall does not remove independently owned
 hook configuration; use the hook removal transaction documented below.
+
+The installed hooks also carry two advisory nudges: a routing hint on prompt
+events and an EOL/BOM guard around write tools. They only add context, never block
+or invoke a skill, and run even without controller context; snapshots live under
+`.nckh-state/hooks/snapshots/` and are deleted after the post-tool comparison.
+Host coverage, measured hint coverage and limits are in
+[runtime support](runtime-support.md#advisory-nudge-hooks). Global installs have
+no hooks and therefore no nudges.
+
+In enforce mode, missing or invalid context fails closed only on events the host
+can gate: `PreToolUse`/`preToolUse` and `UserPromptSubmit`/`beforeSubmitPrompt`.
+`SessionStart`, `PostToolUse`, `Stop`, `PreInvocation` and `PostInvocation` return
+advisory context with exit 0.
 
 Every new bundle carries a pinned per-host hook closure under `hooks/`, with its
 local imports/contracts under `hooks/_shared/`. The manifest's typed `hooks`
@@ -245,7 +319,15 @@ backups remain conflicts; no whole-file restoration overwrites unknown edits.
 Remove deletes only matching owned definitions/files, and retains payloads still
 referenced by any known host config. Event receipts suppress repeated successful
 checks and one stop reminder per session/task/artifact/violation; failed attempts
-remain separate. Stop codecs never request another model turn. Unknown tools and
+remain separate. Missing-context receipts (`degraded-no-context`, in advisory and
+enforce mode alike) are kept once per session and nudge, under names
+`no-context-<64hex>.json`. Only files of that shape count toward a fixed cap; the
+first hit writes a `cap-reached-no-context.json` marker and later missing-context
+receipts are dropped. Checked (`checked-unreviewed`) and failed (`degraded-failed`)
+receipts are never capped. A nudge the host wire did not carry (Cursor
+`beforeSubmitPrompt`, an enforce block on `UserPromptSubmit`, an AGY EOL/BOM
+finding) is recorded with `delivered: false`. The owner is `record_once` and
+`_nudge_record` in `hooks/runner.py`. Stop codecs never request another model turn. Unknown tools and
 unqualified native surfaces retain manual/unverified coverage; no native
 preventive-enforcement claim follows from these local checks.
 

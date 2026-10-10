@@ -8,12 +8,13 @@ from core.models import resolve_model
 from core.native import configured_agent, encode_agent
 from core.paths import temporary_tree
 from core.schema import ContractError
+from tests._lab import lab_root
 
 
 class AdapterTests(unittest.TestCase):
     def test_planned_compatibility_definitions_conflict_before_creation(self):
         source = Path(__file__).resolve().parents[2]
-        with temporary_tree() as project:
+        with temporary_tree(lab_root()) as project:
             targets = []
             for host, surface in [("claude", "claude-code"), ("cursor", "cursor-cli")]:
                 adapter = json.loads((source / f"adapters/{host}/adapter.json").read_text())

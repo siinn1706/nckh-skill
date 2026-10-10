@@ -1,6 +1,6 @@
 ---
 name: nckh-paperwrite
-description: "Author outlines, sections, arguments, reporting revisions or reviewer responses for a paper, thesis, proposal or research report from existing evidence. Use for scientific authoring; prose-only polish/translation belongs to nckh-humanwrite."
+description: "Author outlines, sections, arguments, reporting revisions or reviewer responses for a paper, thesis, proposal or research report from existing evidence (viết bài báo khoa học, viết luận văn, trả lời phản biện, phần thảo luận, thư phản hồi). Prose-only polish/translation belongs to nckh-humanwrite; nckh-write is only a compatibility route."
 argument-hint: "<authoring action and evidence brief> [--en|--vi]"
 metadata:
   version: "0.1.0"
@@ -43,7 +43,8 @@ Compare factual deltas when revising existing sections.
 Select structure by genre and the chosen venue profile; do not force IMRaD or
 clinical checklists onto unrelated disciplines. Handoff paragraph polish or
 translation to `nckh-humanwrite`, carrying locale and flags.
-`nckh-taste` remains a critic. Human/domain acceptance is separate.
+`nckh-taste` remains a critic. Human/domain acceptance is separate. `nckh-write`
+is a compatibility route that hands scientific authoring here.
 
 ## Scoped resources
 

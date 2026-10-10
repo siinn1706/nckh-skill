@@ -1,6 +1,6 @@
 ---
 name: nckh-taste
-description: "Critique Vietnamese or English voice, rhythm, specificity and genre fit with located suggestions. Advisory critic only; no AI detection or fabricated human taste score."
+description: "Critique Vietnamese or English voice, rhythm, specificity and genre fit (nhận xét văn phong, góp ý giọng văn, nhận xét giọng văn, hơi sáo) with located suggestions. Advisory critic only; applying edits belongs to nckh-humanwrite. No AI detection or fabricated human taste score."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -27,7 +27,7 @@ Read the appropriate VI or EN profile and the user brief. Critique specificity, 
 
 Use licensed or user-cleared examples as references, preserve authorship/provenance and acknowledge absent samples. Do not treat a model scalar as human gold, claim AI detection, apply an absolute banned-word list or translate the Vietnamese rubric mechanically into English.
 
-Suggest concrete local edits without changing facts, certainty, citations or protected regions. Do not rewrite the whole document unless separately authorized. When a fresh critic context is useful record that benefit; same model/context critique is not independent human confirmation.
+Suggest concrete local edits without changing facts, certainty, citations or protected regions. Applying the edits belongs to nckh-humanwrite. Do not rewrite the whole document unless separately authorized. When a fresh critic context is useful record that benefit; same model/context critique is not independent human confirmation.
 
 Return prioritized recommendations and uncertainty. Human/native reviewers own personal taste acceptance; no authorized reviewer/sample protocol means that gate remains pending.
 

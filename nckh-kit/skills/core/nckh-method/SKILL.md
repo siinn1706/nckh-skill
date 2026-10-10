@@ -1,6 +1,6 @@
 ---
 name: nckh-method
-description: "Design research methods, protocols, arguments or comparison axes with explicit assumptions and limits. Does not run experiments, create results or replace domain/ethics approval."
+description: "Design research methods, protocols, arguments or comparison axes (thiết kế phương pháp, đề cương phương pháp, khung so sánh, chỉ số đánh giá) with explicit assumptions and limits. Task plans with phase files belong to nckh-plan; source discovery belongs to nckh-research. Does not run experiments, create results or replace domain/ethics approval."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -29,7 +29,7 @@ For literary/argumentative work define thesis, edition/translation/context, comp
 
 Build comparison axes that match the question and available evidence rather than choosing criteria to favor a result. State assumptions and unavailable information. Identify threats to internal/external/construct validity and which claims the design can support.
 
-Return a protocol/outline with explicit test or review oracles and required human/domain/ethics gates. Discovery remains research's owner; source support remains evidence's owner. Do not run experiments, synthesize fake results or label an unreviewed design scientifically accepted.
+Return a protocol/outline with explicit test or review oracles and required human/domain/ethics gates. Source discovery and synthesis belong to nckh-research; source support belongs to nckh-evidence; a task plan with phase files belongs to nckh-plan. Do not run experiments, synthesize fake results or label an unreviewed design scientifically accepted.
 
 ## References
 

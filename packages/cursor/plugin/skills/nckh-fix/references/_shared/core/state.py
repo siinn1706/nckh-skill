@@ -28,7 +28,7 @@ class HostGrant:
 def new_task(brief, *, mode, revision):
     if mode not in {"auto", "interactive"}:
         raise ContractError("select exactly one execution mode")
-    return {"schema_version": 1, "status": "planned", "mode": mode,
+    return {"schema_version": 2, "status": "planned", "mode": mode,
             "scope_hash": digest_record(brief), "revision": revision,
             "authorization_reference": None, "gates": [], "attempts": [],
             "review": None, "history": []}

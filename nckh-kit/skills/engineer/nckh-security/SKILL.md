@@ -1,6 +1,6 @@
 ---
 name: nckh-security
-description: "Model actual assets, threats and security-sensitive changes with concrete evidence and scoped mitigations. No unauthorized penetration testing or scanner-as-guarantee."
+description: "Model actual assets, threats and security-sensitive changes (kiểm tra bảo mật, lỗ hổng bảo mật, mô hình mối đe dọa, lưu mật khẩu) with concrete evidence and scoped mitigations. A general diff review remains nckh-code-review. No unauthorized penetration testing or scanner-as-guarantee."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -20,6 +20,9 @@ Read [Authorization](../../../core/policies/authorization-policy.md),
 [Evidence](../../../core/policies/evidence-policy.md),
 [Preservation](../../../core/policies/preservation-policy.md) and
 [Acceptance](../../../core/policies/acceptance-policy.md) before work.
+Run commands under [Command discipline](../../../core/workflows/execution.md#command-discipline) and [Host shell robustness](../../../core/workflows/execution.md#host-shell-robustness),
+label claims with the [Attempt ledger](../../../core/workflows/execution.md#attempt-ledger) and keep inputs per
+[Input preservation](../../../core/policies/preservation-policy.md#input-preservation).
 Output follows the brief's locale. Same-agent is the default. Use
 [model/context policy](../../../core/workflows/model-and-context.md) before delegation.
 

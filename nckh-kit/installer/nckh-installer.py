@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from core.build import load_json
 from core.install import (SURFACE_HOST, commit_install, doctor, install_identity,
-                          plan_install, read_index, resolve_targets, target_lock, uninstall)
+                          plan_install, read_index, inspect_target_paths, target_lock, uninstall)
 from core.models import PROFILES
 from core.paths import atomic_json, contained
 from core.schema import ContractError
@@ -35,10 +35,27 @@ def discovery():
             "model_availability": "unverified; no auth secret or trial API inspected"}
 
 
+def default_package():
+    candidates = [ROOT / "dist", ROOT.parent / "packages"]
+    for path in candidates:
+        if (path / "manifest.json").is_file() or any((path / host / "manifest.json").is_file()
+                                                     for host in sorted(set(SURFACE_HOST.values()))):
+            return path
+    raise ContractError("no default package manifest; tried " + ", ".join(map(str, candidates))
+                        + "; supply --package PATH")
+
+
 def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    if not argv:
+        print("Usage: install.ps1|install.sh OPERATION [OPTIONS]\n"
+              "Examples:\n  install.ps1 --help\n  install.ps1 list-skills\n"
+              "  install.ps1 install --runtime codex-cli --scope project --project PATH "
+              "--kits core --mode copy --models balanced --dry-run")
+        return 2
     parser = argparse.ArgumentParser(description="Offline NCKH installer: preview owned changes; never auto-trust hooks or call paid models.")
     parser.add_argument("operation", choices=["install", "update", "doctor", "config-models", "list-skills", "uninstall"])
-    parser.add_argument("--package", type=Path, default=ROOT / "dist")
+    parser.add_argument("--package", type=Path)
     parser.add_argument("--runtime", nargs="+", choices=sorted(SURFACE_HOST))
     parser.add_argument("--scope", choices=["project", "global"])
     parser.add_argument("--project", type=Path, default=Path.cwd())
@@ -55,6 +72,10 @@ def main(argv=None):
     parser.add_argument("--with-agents", action="store_true", default=None, help="Preview optional native agent files; model settings use only observed per-host mappings.")
     parser.add_argument("--hooks", choices=["advisory", "off"], default="advisory",
                         help="Project install/update enables non-blocking checks by default; off skips hook configuration.")
+    parser.add_argument("--acknowledge-ancestor-visibility", action="store_true",
+                        help="Accept same-name skills visible from ancestor roots, or home-level roots of a project "
+                             "install, and record them in the transaction; update keeps only identical recorded "
+                             "acknowledgements. Never accepts destination, nested or global-scope sibling duplicates.")
     parser.add_argument("--dry-run", action="store_true", help="Read-only JSON transaction preview.")
     parser.add_argument("--yes", action="store_true", help="Confirm a conflict-free preview; does not bypass rights, trust or user edits.")
     args = parser.parse_args(argv)
@@ -71,6 +92,9 @@ def main(argv=None):
             args.models = args.models or choose("5. Model policy (native mapping remains unverified)", sorted(PROFILES))
         if not args.scope and not (args.state_dir and args.operation in {"doctor", "uninstall"}):
             raise ContractError("--scope required; no silent global target")
+        if args.operation in {"install", "update"}:
+            # Validate the hooks/scope contract before any filesystem scan; no targets means no reads.
+            preview_install_hooks([], args.project, setting=args.hooks, scope=args.scope)
         base = args.project if args.scope == "project" else args.home
         state_dir = args.state_dir or base / ".nckh-state"
         if args.operation == "doctor":
@@ -88,7 +112,8 @@ def main(argv=None):
             return 0
         if not args.runtime:
             raise ContractError("--runtime required")
-        targets = resolve_targets(args.package, args.runtime, scope=args.scope, project=args.project, home=args.home)
+        package = args.package if args.package is not None else default_package()
+        targets = inspect_target_paths(package, args.runtime, scope=args.scope, project=args.project, home=args.home)
         if args.operation == "config-models":
             if not args.models:
                 raise ContractError("--models required")
@@ -107,13 +132,15 @@ def main(argv=None):
                             profile=args.models, scope=args.scope, replace_skills=args.replace_skill,
                             keep_edited=args.keep_edited, capabilities=capabilities, operation=args.operation,
                             candidate_evidence=load_json(args.candidate_evidence) if args.candidate_evidence else None,
-                            with_agents=bool(args.with_agents))
+                            with_agents=bool(args.with_agents),
+                            acknowledge_ancestor_visibility=args.acknowledge_ancestor_visibility)
         if args.operation == "update" and plan["install_id"] not in read_index(state_dir)["installs"]:
             raise ContractError("update requires an existing owned install; use install for a new target")
         hook_previews = (preview_install_hooks(targets, args.project, setting=args.hooks, scope=args.scope)
                          if args.operation in {"install", "update"} and not plan["conflicts"] else [])
         hook_summary = [{"host": row["host"], "target": row["target"], "mode": row["mode"],
                          "events": [item["event"] for item in row["definitions"]],
+                         "context_status": row["context_status"], "warnings": row["warnings"],
                          "native_qualification": "unverified"} for row in hook_previews]
         if args.dry_run:
             print(json.dumps({"status": "preview", "transaction": plan, "hooks": hook_summary}, ensure_ascii=False, indent=2))

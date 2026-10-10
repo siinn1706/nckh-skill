@@ -1,0 +1,46 @@
+{
+  "title": "Routing boundaries between sibling skills",
+  "description": "Each boundary names two or three easily confused skills, the single English rule that decides the owner, and Vietnamese activation cues per skill. Cross-file checks (catalog membership, cue keys, SKILL.md mentions) live in tests/build/test_skill_routing.py.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "skills": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "string",
+              "pattern": "^nckh-[a-z]+(-[a-z]+)*$"
+            }
+          },
+          "owner_rule": {
+            "type": "string",
+            "minLength": 20
+          },
+          "vi_cues": {
+            "type": "object",
+            "description": "Keys are exactly the skill IDs of this boundary; values are non-empty arrays of Vietnamese cues with diacritics."
+          }
+        },
+        "required": [
+          "skills",
+          "owner_rule",
+          "vi_cues"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "boundaries"
+  ]
+}

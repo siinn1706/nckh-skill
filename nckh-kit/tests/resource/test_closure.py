@@ -3,6 +3,8 @@ import shutil
 import subprocess
 import sys
 import unittest
+from tests._bundles import copy_bundle
+from tests._lab import lab_root
 from copy import deepcopy
 from pathlib import Path
 
@@ -76,9 +78,9 @@ class ResourceClosureTests(unittest.TestCase):
                 atomic_json(source / REGISTRY_PATH, load_json(ROOT / REGISTRY_PATH))
 
     def test_v2_bundle_and_all_installer_consumers_share_rights_validation(self):
-        with temporary_tree() as package, temporary_tree() as environment:
+        with temporary_tree() as package, temporary_tree(lab_root()) as environment:
             bundle = package / "codex"
-            manifest = build_host(ROOT, "codex", ["core", "engineer"], bundle)
+            manifest = copy_bundle(bundle, "codex", ["core", "engineer"], root=ROOT)
             self.assertEqual(manifest["schema_version"], 2)
             targets = resolve_targets(package, ["codex-cli"], scope="project", project=environment, home=environment)
             refresh_targets(targets, "project")
@@ -97,7 +99,7 @@ class ResourceClosureTests(unittest.TestCase):
 
     def test_on_off_same_source_and_instruction_policy_with_distinct_closure(self):
         with temporary_tree() as on, temporary_tree() as off:
-            enabled = build_host(ROOT, "codex", ["core", "engineer"], on)
+            enabled = copy_bundle(on, "codex", ["core", "engineer"], root=ROOT)
             disabled = build_host(ROOT, "codex", ["core", "engineer"], off, include_resources=False)
             self.assertEqual(enabled["source_lock_hash"], disabled["source_lock_hash"])
             self.assertNotEqual(enabled["closure_hash"], disabled["closure_hash"])

@@ -1,3 +1,5 @@
+from tests._bundles import copy_bundle
+from tests._lab import lab_root
 import json
 import os
 import shutil
@@ -12,26 +14,51 @@ from unittest.mock import patch
 
 from core.build import build_host, verify_bundle
 from core.install import (commit_install, doctor, plan_install, read_index,
-                          resolve_targets, rollback, target_lock, tree_hash, uninstall)
-from core.paths import atomic_json, digest_file, digest_record, temporary_tree
+                          resolve_targets, rollback, target_lock, tree_hash, uninstall,
+                          visibility_conflicts, nested_visibility_roots)
+from core.paths import atomic_json, digest_file, digest_record, temporary_tree, no_links, contained
 from core.schema import ContractError
+
+
+class RootLockTests(unittest.TestCase):
+    def test_skill_and_agent_roots_share_one_lock_and_cleanup(self):
+        with temporary_tree(lab_root()) as project:
+            roots = [project / ".cursor/skills", project / ".cursor/agents"]
+            for root in roots:
+                root.mkdir(parents=True)
+            lock = project / ".cursor/.nckh-install.lock"
+            with target_lock(project / "state", roots):
+                self.assertTrue(lock.is_file())
+                with self.assertRaises(ContractError):
+                    with target_lock(project / "other-state", roots[:1]):
+                        pass
+            self.assertEqual(json.loads(lock.read_text())["state"], "released")
+            with target_lock(project / "state", roots, cleanup_empty_roots=True):
+                pass
+            self.assertFalse(any(root.exists() for root in roots))
+            self.assertFalse(lock.exists())
 
 
 class TransactionTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.bundle_context = temporary_tree()
+        cls.bundle_context = temporary_tree(lab_root())
         cls.package = cls.bundle_context.__enter__()
         root = Path(__file__).resolve().parents[2]
-        build_host(root, "codex", ["core"], cls.package / "codex")
+        copy_bundle(cls.package / "codex", "codex", ["core"], root=root)
         build_host(root, "agy", ["core"], cls.package / "agy")
+        cls.package_hash = tree_hash(cls.package)
 
     @classmethod
     def tearDownClass(cls):
-        cls.bundle_context.__exit__(None, None, None)
+        try:
+            if tree_hash(cls.package) != cls.package_hash:
+                raise AssertionError("shared read-only package fixture changed")
+        finally:
+            cls.bundle_context.__exit__(None, None, None)
 
     def setUp(self):
-        self.context = temporary_tree()
+        self.context = temporary_tree(lab_root())
         self.root = self.context.__enter__()
         self.project = self.root / "Dự án có dấu và spaces"
         self.project.mkdir()
@@ -54,6 +81,146 @@ class TransactionTests(unittest.TestCase):
         self.assertFalse((self.project / ".agents").exists())
         self.assertEqual(doctor(self.state)["items"], [])
         self.assertFalse(self.state.exists())
+
+    def test_project_visibility_prunes_vendor_trees_and_detects_children(self):
+        for parent in ("node_modules", ".git", ".venv", "venv", "site-packages", "__pycache__", "dist", "build", ".tox", "AppData"):
+            (self.project / parent / "x/.agents/skills/nckh-plan").mkdir(parents=True)
+        self.assertEqual(visibility_conflicts(self.targets, {"nckh-plan"}, scope="project"), [])
+        child = self.project / "child/.agents/skills/nckh-plan"
+        child.mkdir(parents=True)
+        conflicts = visibility_conflicts(self.targets, {"nckh-plan"}, scope="project")
+        self.assertEqual(len(conflicts), 1)
+        self.assertIn(str(child), conflicts[0]["physical_paths"])
+
+    def test_global_visibility_ignores_children_but_detects_ancestor(self):
+        targets = resolve_targets(self.package, ["codex-cli"], scope="global", project=self.project, home=self.home)
+        (self.home / "project/.agents/skills/nckh-plan").mkdir(parents=True)
+        self.assertEqual(visibility_conflicts(targets, {"nckh-plan"}, scope="global"), [])
+        ancestor = self.root / ".agents/skills/nckh-plan"
+        ancestor.mkdir(parents=True)
+        conflicts = visibility_conflicts(targets, {"nckh-plan"}, scope="global")
+        self.assertEqual(len(conflicts), 1)
+        self.assertIn(str(ancestor), conflicts[0]["physical_paths"])
+
+    def test_project_visibility_detects_cursor_compatibility_root(self):
+        targets = deepcopy(self.targets)
+        targets[0]["adapter"]["compatibility_project"].append(".cursor/skills")
+        child = self.project / "child/.cursor/skills/nckh-plan"
+        child.mkdir(parents=True)
+        self.assertEqual(len(visibility_conflicts(targets, {"nckh-plan"}, scope="project")), 1)
+
+    def test_visibility_conflict_reports_source_kind(self):
+        ancestor = self.root / ".agents/skills/nckh-plan"
+        ancestor.mkdir(parents=True)
+        child = self.project / "child/.agents/skills/nckh-plan"
+        child.mkdir(parents=True)
+        destination = self.project / ".agents/skills/nckh-plan"
+        [conflict] = visibility_conflicts(self.targets, {"nckh-plan"}, scope="project")
+        self.assertEqual({row["path"]: row["source"] for row in conflict["sources"]},
+                         {str(destination): "destination", str(child): "nested", str(ancestor): "ancestor"})
+        self.assertEqual(conflict["physical_paths"], [row["path"] for row in conflict["sources"]])
+        targets = resolve_targets(self.package, ["agy-cli"], scope="global", project=self.project, home=self.home)
+        home_level = self.home / ".gemini/config/skills/nckh-plan"
+        home_level.mkdir(parents=True)
+        [conflict] = visibility_conflicts(targets, {"nckh-plan"}, scope="global")
+        self.assertEqual({row["path"]: row["source"] for row in conflict["sources"]},
+                         {str(self.home / ".gemini/antigravity-cli/skills/nckh-plan"): "destination",
+                          str(home_level): "nested", str(ancestor): "ancestor"})
+
+    def test_global_scope_sibling_home_root_is_never_acknowledgeable(self):
+        targets = resolve_targets(self.package, ["agy-cli"], scope="global", project=self.project, home=self.home)
+        sibling = self.home / ".gemini/config/skills/nckh-plan"
+        sibling.mkdir(parents=True)
+        (sibling / "SKILL.md").write_text("user sibling copy", encoding="utf-8")
+        with self.assertRaisesRegex(ContractError, '"source": "nested"'):
+            plan_install(targets, read_index(self.state), kits=["core"], mode="copy", profile="balanced",
+                         scope="global", acknowledge_ancestor_visibility=True)
+        self.assertFalse(self.state.exists())
+        self.assertEqual((sibling / "SKILL.md").read_text(encoding="utf-8"), "user sibling copy")
+
+    def test_update_keeps_only_identical_recorded_acknowledgements(self):
+        ancestor = self.root / ".agents/skills/nckh-plan"
+        ancestor.mkdir(parents=True)
+        (ancestor / "SKILL.md").write_text("user ancestor copy", encoding="utf-8")
+        installed = commit_install(self.plan(acknowledge_ancestor_visibility=True), self.state)
+        recorded = read_index(self.state)["installs"][installed["install_id"]]["acknowledged_visibility"]
+        self.assertEqual([row["skill"] for row in recorded], ["nckh-plan"])
+        update = self.plan(operation="update")
+        self.assertEqual(update["acknowledged_visibility"], recorded)
+        self.assertEqual(update["conflicts"], [])
+        self.assertFalse(update["options"]["acknowledge_ancestor_visibility"])
+        with self.assertRaisesRegex(ContractError, "duplicate visibility"):
+            self.plan()
+        another = self.root / ".agents/skills/nckh-cook"
+        another.mkdir(parents=True)
+        with self.assertRaisesRegex(ContractError, "duplicate visibility") as raised:
+            self.plan(operation="update")
+        self.assertIn('"skill": "nckh-cook"', str(raised.exception))
+        self.assertNotIn('"skill": "nckh-plan"', str(raised.exception))
+        update = self.plan(operation="update", acknowledge_ancestor_visibility=True)
+        self.assertEqual({row["skill"] for row in update["acknowledged_visibility"]}, {"nckh-plan", "nckh-cook"})
+
+    def test_acknowledged_ancestor_visibility_is_recorded(self):
+        ancestor = self.root / ".agents/skills/nckh-plan"
+        ancestor.mkdir(parents=True)
+        (ancestor / "SKILL.md").write_text("user ancestor copy", encoding="utf-8")
+        with self.assertRaisesRegex(ContractError, "duplicate visibility.*--acknowledge-ancestor-visibility"):
+            self.plan()
+        plan = self.plan(acknowledge_ancestor_visibility=True)
+        [acknowledged] = plan["acknowledged_visibility"]
+        self.assertEqual(acknowledged["skill"], "nckh-plan")
+        self.assertEqual({row["source"] for row in acknowledged["sources"]}, {"destination", "ancestor"})
+        self.assertTrue(plan["options"]["acknowledge_ancestor_visibility"])
+        installed = commit_install(plan, self.state)
+        record = read_index(self.state)["installs"][installed["install_id"]]
+        self.assertEqual(record["acknowledged_visibility"], plan["acknowledged_visibility"])
+        self.assertEqual(doctor(self.state)["installs"][0]["acknowledged_visibility"], plan["acknowledged_visibility"])
+        self.assertEqual((ancestor / "SKILL.md").read_text(encoding="utf-8"), "user ancestor copy")
+
+    def test_acknowledge_never_skips_destination_duplicate(self):
+        targets = resolve_targets(self.package, ["agy-cli", "codex-cli"], scope="global", project=self.project, home=self.home)
+        with self.assertRaisesRegex(ContractError, "duplicate visibility") as raised:
+            plan_install(targets, read_index(self.state), kits=["core"], mode="copy", profile="balanced",
+                         scope="global", acknowledge_ancestor_visibility=True)
+        self.assertIn('"source": "destination"', str(raised.exception))
+        child = self.project / "child/.agents/skills/nckh-plan"
+        child.mkdir(parents=True)
+        with self.assertRaisesRegex(ContractError, '"source": "nested"'):
+            self.plan(acknowledge_ancestor_visibility=True)
+        self.assertFalse(self.state.exists())
+        self.assertFalse((self.home / ".agents").exists())
+
+    def test_visibility_prunes_directory_links(self):
+        outside = self.root / "outside"
+        (outside / ".agents/skills/nckh-plan").mkdir(parents=True)
+        link = self.project / "linked"
+        if os.name == "nt":
+            process = subprocess.run(["cmd", "/c", "mklink", "/J", str(link), str(outside)], capture_output=True)
+            self.assertEqual(process.returncode, 0, process.stderr)
+        else:
+            link.symlink_to(outside, target_is_directory=True)
+        try:
+            with self.assertRaises(ContractError):
+                no_links(link / "new-file.txt")
+            with self.assertRaises(ContractError):
+                contained(self.project, "linked/new-file.txt")
+            self.assertEqual(list(nested_visibility_roots(self.project, {".agents/skills"})), [])
+            self.assertEqual(visibility_conflicts(self.targets, {"nckh-plan"}, scope="project"), [])
+        finally:
+            link.rmdir() if os.name == "nt" else link.unlink()
+
+    def test_uninstall_cleans_empty_root_lock_and_preserves_user_siblings(self):
+        for user_file in (False, True):
+            with self.subTest(user_file=user_file):
+                installed = commit_install(self.plan(), self.state)
+                parent = self.project / ".agents"
+                if user_file:
+                    (parent / "personal.txt").write_text("user content", encoding="utf-8")
+                self.assertEqual(uninstall(self.state, installed["install_id"], dry_run=False)["status"], "uninstalled")
+                self.assertFalse((parent / "skills").exists())
+                self.assertEqual((parent / ".nckh-install.lock").exists(), user_file)
+                if user_file:
+                    self.assertEqual((parent / "personal.txt").read_text(encoding="utf-8"), "user content")
 
     def test_doctor_reports_broken_closure_native_syntax_and_candidate_drift(self):
         installed = commit_install(self.plan(with_agents=True), self.state)
@@ -260,13 +427,13 @@ class TransactionTests(unittest.TestCase):
         real_lock = target_lock
 
         @contextmanager
-        def owner_added_before_lock(state_dir, roots):
+        def owner_added_before_lock(state_dir, roots, **options):
             index = read_index(state_dir)
             for item in index["items"].values():
                 item["owners"].append("second-owner-fixture")
             index["installs"]["second-owner-fixture"] = deepcopy(index["installs"][result["install_id"]])
             atomic_json(self.state / "ownership.json", index)
-            with real_lock(state_dir, roots):
+            with real_lock(state_dir, roots, **options):
                 yield
 
         with patch("core.install.target_lock", owner_added_before_lock):

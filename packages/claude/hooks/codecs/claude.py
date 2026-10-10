@@ -4,6 +4,10 @@ from hooks.codecs.common import decode_snake, encode_snake
 
 EVENTS = {"SessionStart": "advisory", "UserPromptSubmit": "advisory", "PreToolUse": "preflight",
           "PostToolUse": "pre-delivery", "Stop": "stop"}
+WRITE_TOOLS = frozenset({"Write", "Edit", "MultiEdit"})
+# Mirrors the adapter invocation `/NAME` and its compatibility_project roots.
+SKILL_INVOCATION = "/{skill}"
+SKILL_ROOTS = (".claude/skills",)
 
 
 def decode(payload, event_name):

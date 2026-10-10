@@ -1,0 +1,62 @@
+{
+  "title": "Mechanical routing prompts",
+  "description": "Natural Vietnamese prompts paired with the skill the route-hint matcher should suggest. Cross-file checks (catalog membership, split coverage, unique IDs, Vietnamese diacritics) live in core/route_hint.py validate_routing_prompts.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "kind": {
+      "const": "routing-prompts"
+    },
+    "prompts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expected": {
+            "type": "string",
+            "pattern": "^(none|nckh-[a-z0-9]+(-[a-z0-9]+)*)$"
+          },
+          "split": {
+            "enum": ["tune", "heldout"]
+          },
+          "provenance": {
+            "enum": ["authored", "blind-r44", "authored-blind"]
+          },
+          "origin": {
+            "enum": ["heldout-v1-exposed", "heldout-v2-exposed"],
+            "description": "Set on tune prompts that were once held out and have been seen; they stay byte-identical so their recorded hashes still verify."
+          },
+          "unaccented": {
+            "type": "boolean",
+            "description": "True marks a prompt typed without Vietnamese diacritics; it exercises the unaccented fold."
+          }
+        },
+        "required": [
+          "id",
+          "prompt",
+          "expected",
+          "split",
+          "provenance"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "kind",
+    "prompts"
+  ]
+}

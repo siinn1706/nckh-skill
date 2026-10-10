@@ -30,8 +30,8 @@ while no task has scoped acceptance.
 
 The candidate contains exactly the historical 37 identities, the two writer
 owners and four scientific owners: 43 identities and 172 base cases. All
-148 historical case IDs, 19 required families and 224 historical invocation cells
-remain. The 43 current negative oracles require rejection,
+148 historical case IDs, the 19 historical required families (now part of 24)
+and 224 historical invocation cells remain. The 43 current negative oracles require rejection,
 an explicit owner/handoff and no execution of another skill's task. Closed
 case, family and protocol validation checks types, identities, mappings and
 receipt states. These repairs apply to new evaluation; historical verdicts
@@ -137,11 +137,12 @@ release remains NO-GO while required gates are unresolved.
 
 ## Retained local checks
 
-Generated evidence is stored outside the source pin inventory in `evals/results/`:
+Generated evidence is stored outside the source pin inventory in `evals/results/`;
+the repository keeps retained copies under `plans/evidence/legacy-evaluations/`:
 
-- [Initial deterministic receipt](../evals/results/local-checks.json): actual suite output, exit status, environment and source-lock hash.
-- [Initial reproducibility receipt](../evals/results/reproducibility.json): two isolated builds for every host, including plugin projections.
-- [Installed candidate record](../evals/results/candidate.json): revision 14 artifact identity, file checksums and the scoped qualification decision.
+- Initial deterministic receipt (`evals/results/local-checks.json`): actual suite output, exit status, environment and source-lock hash.
+- Initial reproducibility receipt (`evals/results/reproducibility.json`): two isolated builds for every host, including plugin projections.
+- Installed candidate record (`evals/results/candidate.json`): revision 14 artifact identity, file checksums and the scoped qualification decision.
 
 The initial receipts remain attached to the installed revision 14. Later source
 changes require separate records; they cannot reuse that candidate's pass.

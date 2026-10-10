@@ -17,7 +17,8 @@ deliverables, OS or runtime scope to close a gate.
 ## Shared personal-use profile
 
 The repository-wide default is the [personal-use acceptance profile](../profiles/acceptance/personal-use.json).
-It contains the five common gates, all 37 skill-specific criteria, the official
+It contains the five common gates, one skill-specific criteria row per approved
+skill ID (the loader rejects a missing or extra row), the official
 source URLs with applicability/limitations, and the `pass | fail | pending |
 not-applicable` vocabulary. Resolve a row by exact skill ID; do not copy a
 partial row into a skill or treat the profile as a quality guarantee. The

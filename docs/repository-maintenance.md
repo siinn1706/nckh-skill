@@ -34,9 +34,18 @@ pass/fail/blocked/unverified; không biến việc xóa trace thành bằng ch�
 Evidence đã loại thông tin riêng phải được nhận diện là bản chia sẻ, không dùng
 hash của nó thay cho hash artifact gốc.
 
-Không dọn state cài đặt hiện tại: ownership và rollback cần chúng để cập nhật
-hoặc gỡ đúng file. Không thay cấu hình host và không xóa thư mục của attempt đang
+Giữ state ownership và journal hiện tại để cập nhật hoặc gỡ đúng file. Bản sao
+rollback và payload giao dịch cũ chỉ được xóa sau khi kiểm tra bản thay thế và
+có quyền xóa riêng; xóa chúng làm mất khả năng rollback về lần cài trước.
+Khi đó, phục hồi bằng package đã xác minh và một giao dịch preview/cài mới.
+Không thay cấu hình host và không xóa thư mục của attempt đang
 chạy. Thư mục bị Windows từ chối truy cập cần được ghi nhận; không đổi ACL để dọn.
+
+Đợt r46 dùng [công cụ dọn theo phạm vi](../plans/261010-1106-r46-publish-and-cleanup/tools/clean-old-copies.ps1)
+và [bản ghi triển khai](../plans/reports/deploy-261010-1106-r46-publish-and-cleanup.md).
+Công cụ mặc định chỉ chọn package build cũ, kiểm tra đường dẫn trong workspace
+và từ chối link/junction. Phạm vi `rollback-payloads` cần quyền xóa bổ sung.
+Các bản sao trong `references/_shared` thuộc closure của package đang dùng.
 
 ## Đường dẫn xuất bản
 
@@ -52,6 +61,13 @@ kế hoạch và evidence đã rà soát; không gồm credentials hay cấu hì
 Sau khi xuất bản, đối chiếu local HEAD với nhánh remote và chạy verifier từ
 source/package công khai. Dọn repo không thay các gate trong
 [release checklist](../nckh-kit/docs/release-checklist.md).
+
+Nếu lịch sử local chưa push chứa raw evidence hoặc đường dẫn cá nhân, giữ các
+commit đó dưới backup ref local. Tạo tree công khai từ remote parent đã xác minh,
+chỉ đưa source/package, tài liệu sở hữu và summary đã rà soát vào index riêng.
+Chạy [publication audit](../scripts/audit-publication.py) với index này, kiểm tra
+cả bytes được stage rồi push bình thường. Giữ nguyên file local khi căn lại HEAD
+và index; không force-push hoặc xóa file để che lịch sử riêng.
 
 ## Các phiên test được giữ nguyên
 

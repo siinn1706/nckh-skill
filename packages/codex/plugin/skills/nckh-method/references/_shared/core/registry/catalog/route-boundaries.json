@@ -1,0 +1,267 @@
+{
+  "schema_version": 1,
+  "boundaries": [
+    {
+      "skills": ["nckh-plan", "nckh-research", "nckh-method"],
+      "owner_rule": "Creating or validating a task plan with phase files belongs to nckh-plan; discovering, reading and synthesizing sources belongs to nckh-research; designing research methods, protocols or comparison axes belongs to nckh-method.",
+      "vi_cues": {
+        "nckh-plan": ["lập kế hoạch", "lên kế hoạch", "chia giai đoạn", "lên lộ trình", "chia thành các bước", "kế hoạch từng bước", "kiểm tra kế hoạch", "điều kiện hoàn thành", "file giai đoạn"],
+        "nckh-research": ["tổng quan tài liệu", "tìm tài liệu", "đọc bài báo", "tìm các nghiên cứu", "nghiên cứu gần đây", "công trình liên quan", "tìm bài báo", "tổng hợp nghiên cứu", "khoảng trống nghiên cứu", "đọc và tổng hợp"],
+        "nckh-method": ["thiết kế phương pháp", "phương pháp nghiên cứu", "đề cương phương pháp", "thiết kế thực nghiệm", "quy trình thực nghiệm", "chỉ số đánh giá", "thiết kế thí nghiệm", "phương pháp đánh giá", "khung so sánh", "tiêu chí so sánh", "so sánh các cách tiếp cận"]
+      }
+    },
+    {
+      "skills": ["nckh-debug", "nckh-fix"],
+      "owner_rule": "A request that asks for a repair belongs to nckh-fix, which may run a bounded diagnosis first. nckh-debug stops before product edits and may transfer control to nckh-fix in the same session only with a live repair grant and allowed product paths; fix rechecks authority and owns mutation and retest, while nckh-cook retains execution state. Diagnose-only, handoff-only, no-edit or missing-authority requests end before repair.",
+      "vi_cues": {
+        "nckh-debug": ["tìm nguyên nhân", "chẩn đoán lỗi", "vì sao lỗi", "tại sao bị lỗi", "nguyên nhân lỗi", "chưa cần sửa", "chỉ chẩn đoán", "bị crash"],
+        "nckh-fix": ["sửa lỗi", "sửa bug", "khắc phục lỗi", "sửa giúp", "đang fail", "fix lỗi", "fix giúp", "sửa giùm", "khắc phục giúp", "sửa cho đúng"]
+      }
+    },
+    {
+      "skills": ["nckh-test", "nckh-debug"],
+      "owner_rule": "Designing or running meaningful tests for touched behavior belongs to nckh-test; tracing why a symptom or failing test occurs belongs to nckh-debug.",
+      "vi_cues": {
+        "nckh-test": ["chạy test", "viết test", "kiểm thử", "thêm test", "bổ sung test", "độ phủ test", "kiểm thử đơn vị", "test hồi quy"],
+        "nckh-debug": ["tái hiện lỗi", "test thất bại vì sao"]
+      }
+    },
+    {
+      "skills": ["nckh-data", "nckh-dataset", "nckh-statistics"],
+      "owner_rule": "Database schemas, queries, migrations and data integrity belong to nckh-data; scientific research files with lineage, labels and splits belong to nckh-dataset; scientific statistical analysis plans and readouts belong to nckh-statistics.",
+      "vi_cues": {
+        "nckh-data": ["cơ sở dữ liệu", "truy vấn SQL", "migration dữ liệu", "thiết kế bảng", "viết migration", "thêm cột", "thiết kế cơ sở dữ liệu", "tối ưu truy vấn", "thiết kế schema", "khóa ngoại", "khóa chính"],
+        "nckh-dataset": ["bộ dữ liệu nghiên cứu", "chia tập train/test", "gán nhãn dữ liệu", "chia tập dữ liệu", "chuẩn bị bộ dữ liệu", "nguồn gốc dữ liệu", "ghi lại nguồn gốc", "làm sạch bộ dữ liệu", "bộ dữ liệu", "dữ liệu thô", "hồ sơ dữ liệu", "gán nhãn"],
+        "nckh-statistics": ["phân tích thống kê", "kiểm định thống kê", "khoảng tin cậy", "ý nghĩa thống kê", "khác biệt giữa hai nhóm", "giá trị p", "hồi quy tuyến tính", "phân tích phương sai", "cỡ mẫu", "kiểm định", "so sánh nhiều lần"]
+      }
+    },
+    {
+      "skills": ["nckh-review", "nckh-code-review"],
+      "owner_rule": "Code diffs and pull requests belong to nckh-code-review; plans, research writing and consolidated gate matrices belong to nckh-review.",
+      "vi_cues": {
+        "nckh-review": ["rà soát kế hoạch", "đánh giá bản thảo", "duyệt kết quả", "nhận xét bản thảo", "góp ý bản thảo", "đánh giá luận văn", "rà soát bản thảo"],
+        "nckh-code-review": ["review mã nguồn", "rà soát pull request", "xem lại diff", "trước khi merge", "duyệt PR", "review code giúp", "xem lại code", "pull request này", "xem phần thay đổi", "đọc phần thay đổi", "có thể gây lỗi", "pull request số", "PR số"]
+      }
+    },
+    {
+      "skills": ["nckh-git", "nckh-code-review"],
+      "owner_rule": "Git branch, commit, worktree and GitHub operations belong to nckh-git; reviewing the resulting diff for bugs and regressions belongs to nckh-code-review.",
+      "vi_cues": {
+        "nckh-git": ["tạo commit", "tạo nhánh", "đẩy lên GitHub", "mở nhánh", "tạo PR", "gộp commit", "tách nhánh", "lịch sử commit", "sang nhánh", "nhánh main", "chuyển nhánh"],
+        "nckh-code-review": ["tìm bug trong diff"]
+      }
+    },
+    {
+      "skills": ["nckh-security", "nckh-code-review"],
+      "owner_rule": "Threat modeling and security-sensitive changes belong to nckh-security; a general diff review belongs to nckh-code-review, which hands security-sensitive findings to nckh-security.",
+      "vi_cues": {
+        "nckh-security": ["kiểm tra bảo mật", "lỗ hổng bảo mật", "mô hình mối đe dọa", "rò rỉ dữ liệu", "quét lỗ hổng", "an toàn thông tin", "mối đe dọa", "giảm thiểu rủi ro", "rủi ro bảo mật", "lưu mật khẩu"],
+        "nckh-code-review": ["đánh giá thay đổi code"]
+      }
+    },
+    {
+      "skills": ["nckh-devops", "nckh-aiops"],
+      "owner_rule": "Building, deploying or operating an authorized environment belongs to nckh-devops; designing or validating scientific RCA, anomaly, forecasting or agent evaluations belongs to nckh-aiops.",
+      "vi_cues": {
+        "nckh-devops": ["triển khai lên server", "cấu hình CI/CD", "dựng môi trường", "deploy lên", "tự động deploy", "triển khai tự động", "cấu hình GitHub Actions", "đưa lên server", "quay về bản cũ", "cấu hình pipeline", "triển khai lên", "lên máy chủ", "triển khai ứng dụng"],
+        "nckh-aiops": ["đánh giá RCA", "phát hiện bất thường", "đánh giá agent", "phát hiện sự cố", "dữ liệu metric", "cảnh báo bất thường", "dự đoán sự cố", "bộ đánh giá", "đánh giá RAG", "rò rỉ đáp án"]
+      }
+    },
+    {
+      "skills": ["nckh-debug", "nckh-aiops"],
+      "owner_rule": "Diagnosing a concrete symptom in the current code belongs to nckh-debug; designing or validating a scientific RCA or anomaly-detection evaluation belongs to nckh-aiops.",
+      "vi_cues": {
+        "nckh-debug": ["gỡ lỗi"],
+        "nckh-aiops": ["thí nghiệm RCA"]
+      }
+    },
+    {
+      "skills": ["nckh-context", "nckh-handoff"],
+      "owner_rule": "Loading or retiring the minimum-sufficient context for the current session belongs to nckh-context; a durable packet for resuming later or in another session belongs to nckh-handoff.",
+      "vi_cues": {
+        "nckh-context": ["nạp ngữ cảnh", "giảm ngữ cảnh", "tóm tắt ngữ cảnh", "rút gọn ngữ cảnh", "nén ngữ cảnh", "dọn ngữ cảnh", "ngữ cảnh dài", "cuộc trò chuyện dài", "bỏ khỏi ngữ cảnh", "phiên làm việc dài", "trong ngữ cảnh", "mức dùng token"],
+        "nckh-handoff": ["bàn giao", "gói bàn giao", "tiếp tục phiên sau", "phiên làm việc sau", "tổng hợp tiến độ", "lưu tiến độ", "ghi chú bàn giao", "dừng ở đây", "mai làm tiếp", "dang dở"]
+      }
+    },
+    {
+      "skills": ["nckh-write", "nckh-humanwrite", "nckh-paperwrite"],
+      "owner_rule": "nckh-write is a compatibility route used only when called explicitly; prose polishing or translation belongs to nckh-humanwrite and scientific authoring belongs to nckh-paperwrite.",
+      "vi_cues": {
+        "nckh-write": ["viết song ngữ"],
+        "nckh-humanwrite": ["chỉnh câu chữ", "dịch sang tiếng Anh", "sửa văn cho mượt", "viết lại cho hay", "cho hay hơn", "lủng củng", "chỉnh lại câu", "cho tự nhiên hơn", "giữ nguyên ý", "trau chuốt", "sang tiếng Anh", "sang tiếng Việt", "giữ sát nghĩa"],
+        "nckh-paperwrite": ["viết bài báo khoa học", "viết luận văn", "trả lời phản biện", "viết bài báo", "phần thảo luận", "gửi hội nghị", "gửi tạp chí", "tóm tắt bài báo", "thư phản hồi", "phản hồi reviewer", "trả lời reviewer", "ý kiến phản biện"]
+      }
+    },
+    {
+      "skills": ["nckh-docs", "nckh-write"],
+      "owner_rule": "Updating the owning repository documentation for changed behavior, setup, commands or contracts belongs to nckh-docs; general prose that is not documentation routes through nckh-write to its owners.",
+      "vi_cues": {
+        "nckh-docs": ["cập nhật tài liệu", "viết README", "tài liệu hướng dẫn", "cập nhật README", "sửa README", "hướng dẫn cài đặt", "viết tài liệu", "tài liệu API", "viết hướng dẫn", "tài liệu dự án"],
+        "nckh-write": ["soạn văn bản", "soạn thảo văn bản", "công văn", "tờ trình", "đơn xin", "viết thư", "song ngữ", "Việt lẫn Anh"]
+      }
+    },
+    {
+      "skills": ["nckh-copy", "nckh-humanwrite"],
+      "owner_rule": "Light polishing or translation of existing text with minimal edits belongs to nckh-humanwrite; new copy, a changed angle or a changed CTA belongs to nckh-copy.",
+      "vi_cues": {
+        "nckh-copy": ["viết quảng cáo", "viết lại CTA", "đổi góc tiếp cận", "đoạn quảng cáo", "câu quảng cáo", "lời quảng cáo", "viết slogan", "tiêu đề quảng cáo", "trang bán hàng", "kêu gọi hành động", "tiêu đề thu hút"],
+        "nckh-humanwrite": ["sửa cho mượt", "dịch đoạn văn"]
+      }
+    },
+    {
+      "skills": ["nckh-copy", "nckh-content"],
+      "owner_rule": "Content strategy, the editorial program and reusable briefs belong to nckh-content; writing an individual conversion asset belongs to nckh-copy.",
+      "vi_cues": {
+        "nckh-copy": ["viết landing page"],
+        "nckh-content": ["chiến lược nội dung", "kế hoạch biên tập", "định hướng nội dung", "kế hoạch nội dung", "trụ cột nội dung", "nội dung blog"]
+      }
+    },
+    {
+      "skills": ["nckh-cro", "nckh-seo"],
+      "owner_rule": "Conversion friction in pages, funnels, forms or onboarding belongs to nckh-cro; search intent, crawl, canonical and index controls belong to nckh-seo, and nckh-cro hands discoverability findings to nckh-seo.",
+      "vi_cues": {
+        "nckh-cro": ["tỉ lệ chuyển đổi", "tối ưu chuyển đổi", "phễu chuyển đổi", "bỏ giỏ hàng", "tăng chuyển đổi", "tỷ lệ chuyển đổi", "tỉ lệ thoát", "bỏ ngang", "rời bỏ trang", "tỉ lệ đăng ký", "để lại thông tin"],
+        "nckh-seo": ["tối ưu SEO", "thứ hạng tìm kiếm", "kiểm tra noindex", "kiểm tra SEO", "SEO kỹ thuật", "rớt hạng", "từ khóa SEO", "lên top Google", "lập chỉ mục", "thẻ tiêu đề", "thẻ meta"]
+      }
+    },
+    {
+      "skills": ["nckh-cro", "nckh-frontend", "nckh-copy"],
+      "owner_rule": "nckh-cro diagnoses conversion friction only; authorized page or UI edits belong to nckh-frontend and copy changes belong to nckh-copy.",
+      "vi_cues": {
+        "nckh-cro": ["chẩn đoán trang đích"],
+        "nckh-frontend": ["sửa giao diện"],
+        "nckh-copy": ["sửa nội dung quảng cáo"]
+      }
+    },
+    {
+      "skills": ["nckh-content", "nckh-social", "nckh-campaign"],
+      "owner_rule": "A long-running editorial program belongs to nckh-content; a time-bound multi-channel campaign belongs to nckh-campaign; drafts and the posting schedule for a single social platform belong to nckh-social.",
+      "vi_cues": {
+        "nckh-content": ["lịch biên tập", "lịch nội dung dài hạn"],
+        "nckh-social": ["lịch đăng bài", "bài đăng Facebook", "nội dung TikTok", "đăng Facebook", "đăng Instagram", "đăng TikTok", "bài đăng", "bình luận tiêu cực", "kiểm duyệt bình luận", "trả lời bình luận"],
+        "nckh-campaign": ["chiến dịch đa kênh", "lên chiến dịch", "lịch chiến dịch", "làm chiến dịch", "chạy chiến dịch", "chiến dịch khuyến mãi", "chương trình khuyến mãi", "từng kênh"]
+      }
+    },
+    {
+      "skills": ["nckh-email", "nckh-campaign"],
+      "owner_rule": "nckh-campaign coordinates a multi-channel campaign; the content of an email sequence belongs to nckh-email.",
+      "vi_cues": {
+        "nckh-email": ["chuỗi email", "soạn email", "bản tin email", "email chăm sóc", "email chào mừng", "gửi email hàng loạt", "viết email", "chuỗi thư"],
+        "nckh-campaign": ["điều phối chiến dịch"]
+      }
+    },
+    {
+      "skills": ["nckh-launch", "nckh-campaign"],
+      "owner_rule": "Product or feature go-to-market readiness and release sequencing belong to nckh-launch; the time-bound promotional campaign around it belongs to nckh-campaign.",
+      "vi_cues": {
+        "nckh-launch": ["ra mắt sản phẩm", "kế hoạch ra mắt", "chuẩn bị ra mắt", "ngày ra mắt", "lên kệ", "ra mắt app", "sự kiện ra mắt", "ra mắt tính năng"],
+        "nckh-campaign": ["chiến dịch quảng bá"]
+      }
+    },
+    {
+      "skills": ["nckh-brand", "nckh-social"],
+      "owner_rule": "Positioning, brand voice and message hierarchy belong to nckh-brand; platform-specific social drafts that apply that voice belong to nckh-social.",
+      "vi_cues": {
+        "nckh-brand": ["giọng thương hiệu", "định vị thương hiệu", "nhận diện thương hiệu", "bộ nhận diện", "màu sắc chủ đạo", "giọng điệu thương hiệu", "đặt tên thương hiệu", "câu chuyện thương hiệu"],
+        "nckh-social": ["mạng xã hội"]
+      }
+    },
+    {
+      "skills": ["nckh-analytics", "nckh-experiment"],
+      "owner_rule": "Analyzing actual KPI, funnel or campaign data belongs to nckh-analytics; A/B test design, randomization and causal readout belong to nckh-experiment.",
+      "vi_cues": {
+        "nckh-analytics": ["phân tích số liệu", "báo cáo KPI", "đọc dashboard", "đọc số liệu", "phân tích doanh thu", "kênh nào hiệu quả", "chỉ số hiệu quả", "báo cáo hiệu quả", "so sánh chỉ số", "định nghĩa KPI", "số liệu phễu", "so với tháng trước", "báo cáo số liệu"],
+        "nckh-experiment": ["thử nghiệm A/B", "thiết kế A/B test", "cái nào hiệu quả hơn", "phiên bản nào tốt hơn", "thử nghiệm hai", "chia nhóm thử nghiệm", "chia nhóm ngẫu nhiên", "bản nào thắng"]
+      }
+    },
+    {
+      "skills": ["nckh-experiment", "nckh-statistics"],
+      "owner_rule": "Marketing A/B experiments belong to nckh-experiment; scientific statistical design with estimands, independent units or nesting belongs to nckh-statistics.",
+      "vi_cues": {
+        "nckh-experiment": ["so sánh hai phiên bản"],
+        "nckh-statistics": ["thiết kế thống kê", "cỡ mẫu nghiên cứu"]
+      }
+    },
+    {
+      "skills": ["nckh-market-research", "nckh-research"],
+      "owner_rule": "Scientific literature belongs to nckh-research; market, customer and competitor questions belong to nckh-market-research.",
+      "vi_cues": {
+        "nckh-market-research": ["nghiên cứu thị trường", "phân tích đối thủ", "khảo sát khách hàng", "tìm hiểu thị trường", "đối thủ chính", "đối thủ cạnh tranh", "quy mô thị trường", "khảo sát thị trường", "khách hàng mục tiêu", "so sánh với đối thủ", "app đối thủ"],
+        "nckh-research": ["tài liệu khoa học", "nghiên cứu tài liệu"]
+      }
+    },
+    {
+      "skills": ["nckh-marketing-plan", "nckh-plan"],
+      "owner_rule": "A marketing strategy with hypotheses, channels, KPIs and budget constraints belongs to nckh-marketing-plan; a task plan with phase files belongs to nckh-plan.",
+      "vi_cues": {
+        "nckh-marketing-plan": ["kế hoạch marketing", "chiến lược marketing", "ngân sách marketing", "kế hoạch tiếp thị", "chiến lược tiếp thị", "ngân sách tiếp thị"],
+        "nckh-plan": ["kế hoạch triển khai"]
+      }
+    },
+    {
+      "skills": ["nckh-scout", "nckh-plan"],
+      "owner_rule": "Locating code owners, symbols, callers and repository flows belongs to nckh-scout; deciding a design or task plan belongs to nckh-plan.",
+      "vi_cues": {
+        "nckh-scout": ["tìm trong code", "code nằm ở đâu", "tìm file xử lý", "ở file nào", "file nào trong repo", "hàm này nằm ở", "chỗ nào trong code", "được định nghĩa ở đâu", "trong repo này", "luồng chạy", "chỗ định nghĩa", "nơi dùng tới", "ai gọi hàm"],
+        "nckh-plan": ["kế hoạch thực hiện"]
+      }
+    },
+    {
+      "skills": ["nckh-frontend", "nckh-visuals", "nckh-brand"],
+      "owner_rule": "Authorized UI design and build belong to nckh-frontend; research charts and scientific illustrations belong to nckh-visuals; logos and identity or design briefs belong to nckh-brand, which stops at a brief while no permitted asset engine exists.",
+      "vi_cues": {
+        "nckh-frontend": ["giao diện", "làm UI", "dựng trang web", "làm trang", "hiển thị trên điện thoại", "giao diện người dùng", "dựng giao diện"],
+        "nckh-visuals": ["vẽ biểu đồ", "hình minh họa khoa học", "sơ đồ nghiên cứu", "biểu đồ cột", "vẽ đồ thị", "vẽ hình", "biểu đồ đường", "làm biểu đồ"],
+        "nckh-brand": ["thiết kế logo", "brief thiết kế"]
+      }
+    },
+    {
+      "skills": ["nckh-xia", "nckh-plan"],
+      "owner_rule": "Comparing or porting capabilities from an external source and writing that adaptation plan belongs to nckh-xia, which hands implementation to nckh-cook; a task plan for the project's own work belongs to nckh-plan.",
+      "vi_cues": {
+        "nckh-xia": ["so sánh repo", "học từ repo khác", "port tính năng", "repo bên kia", "đưa sang dự án", "lấy tính năng từ", "tham khảo repo", "mã nguồn mở", "so sánh với dự án", "công cụ bên ngoài", "học theo cách", "chuyển thể cho dự án"],
+        "nckh-plan": ["kế hoạch dự án"]
+      }
+    },
+    {
+      "skills": ["nckh-cook", "nckh-plan"],
+      "owner_rule": "Executing an authorized task or accepted plan belongs to nckh-cook; planning does not authorize implementation and belongs to nckh-plan.",
+      "vi_cues": {
+        "nckh-cook": ["thực hiện kế hoạch", "làm theo plan", "bắt tay làm", "triển khai phase", "thực hiện phase", "làm theo kế hoạch", "triển khai theo plan", "code theo kế hoạch", "kế hoạch duyệt", "làm theo từng bước", "triển khai giai đoạn", "làm nốt", "giai đoạn còn lại"],
+        "nckh-plan": ["chỉ lập kế hoạch"]
+      }
+    },
+    {
+      "skills": ["nckh-evidence", "nckh-research"],
+      "owner_rule": "Verifying a specific claim, quotation, citation or statistic against its source belongs to nckh-evidence; discovering and synthesizing sources belongs to nckh-research.",
+      "vi_cues": {
+        "nckh-evidence": ["kiểm chứng trích dẫn", "kiểm tra nguồn", "xác minh số liệu", "kiểm tra trích dẫn", "trích sai nguồn", "bịa số liệu", "kiểm tra số liệu", "đối chiếu nguồn", "nguyên văn", "có trong nguồn", "soát nhận định", "kiểm tra nhận định", "tài liệu ủng hộ"],
+        "nckh-research": ["tìm nguồn tham khảo"]
+      }
+    },
+    {
+      "skills": ["nckh-taste", "nckh-humanwrite"],
+      "owner_rule": "Critiquing voice, rhythm and genre fit without editing belongs to nckh-taste; applying minimal prose edits belongs to nckh-humanwrite.",
+      "vi_cues": {
+        "nckh-taste": ["nhận xét văn phong", "góp ý giọng văn", "đánh giá văn phong", "nhận xét giọng văn", "góp ý văn phong", "chấm văn phong", "sáo rỗng", "hơi sáo", "nghe giả", "nghe gượng"],
+        "nckh-humanwrite": ["chỉnh văn phong"]
+      }
+    },
+    {
+      "skills": ["nckh-telemetry", "nckh-aiops"],
+      "owner_rule": "Mapping research logs, metrics and traces with explicit units and joins belongs to nckh-telemetry; RCA, anomaly or evaluation inference over them belongs to nckh-aiops.",
+      "vi_cues": {
+        "nckh-telemetry": ["chuẩn hóa log", "ánh xạ metric", "gộp log và trace", "gộp log", "thu thập log", "gắn trace", "định dạng log", "log và metric", "ghép log", "id tương quan", "nối trace", "chuẩn hóa độ trễ"],
+        "nckh-aiops": ["phân tích nguyên nhân gốc"]
+      }
+    },
+    {
+      "skills": ["nckh-backend", "nckh-data"],
+      "owner_rule": "APIs, services and auth boundaries belong to nckh-backend; schema migrations, queries and data integrity belong to nckh-data.",
+      "vi_cues": {
+        "nckh-backend": ["viết API", "xây dựng backend", "xác thực đăng nhập", "xây dựng endpoint", "viết endpoint", "phân quyền người dùng", "kiểm tra quyền", "xây dựng API", "thêm endpoint", "đăng nhập bằng token", "dữ liệu đầu vào"],
+        "nckh-data": ["sửa schema"]
+      }
+    }
+  ]
+}

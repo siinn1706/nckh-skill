@@ -1,6 +1,6 @@
 ---
 name: nckh-content
-description: "Design a content strategy, editorial program, calendar and reusable briefs. Content planning does not automatically write every asset or publish."
+description: "Design a long-running content strategy (chiến lược nội dung, kế hoạch biên tập, lịch nội dung dài hạn, nội dung blog, lịch biên tập, trụ cột nội dung), editorial program, calendar and reusable briefs. Conversion assets belong to nckh-copy, time-bound campaigns to nckh-campaign, single-platform posts to nckh-social. Does not write every asset or publish."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -26,13 +26,13 @@ Scientific venue/ranking rules apply only when the task explicitly needs them.
 
 ## Workflow and boundaries
 
-Research visual handoffs use the shared research-purpose preflight: question/object/role/evidence and source-to-mark mappings are mandatory. Do not generate logos, banners, ads, thumbnails or generic artwork, including a research logo. Actual computation/simulation plots need verified run provenance and a non-observed label. This indirect route is instruction-only/manual/not-callable until its event/engine is qualified; missing or denied preflight stops generation. Drafting/analysis/UI inspection remains with this owner.
-
-Map audience intent and decision stages to content pillars using supplied/customer/search evidence. Distinguish researched needs from hypotheses. Define each brief's purpose, audience, message, supporting sources, format, channel, owner and acceptance.
+Map audience intent and decision stages to content pillars using supplied/customer/search evidence. Distinguish researched needs from hypotheses. Define each brief's purpose, audience, message, supporting sources, format, channel, owner and acceptance. Label figures as the [Attempt ledger](references/_shared/core/workflows/execution.md#attempt-ledger) requires: a number carried over from an earlier artifact or user restatement without a locator in this attempt's inputs is `unverified` and never stated as fact.
 
 Plan a realistic editorial calendar with capacities and dependencies. Retain provenance, rights, attribution and factual scope in reused content. Adapt locale/register to the channel; do not mechanically translate every artifact.
 
-Conversion copy belongs to copy; general/scientific prose belongs to write. A small content request should yield its requested usable draft/brief rather than expanding into campaign operations.
+nckh-content owns the long-running editorial program. Writing an individual conversion asset belongs to nckh-copy; a time-bound multi-channel campaign belongs to nckh-campaign; drafts and the posting schedule for a single social platform belong to nckh-social. General prose goes to nckh-humanwrite and scientific prose to nckh-paperwrite. A small content request should yield its requested usable draft/brief rather than expanding into campaign operations.
+
+Thumbnails, banners and other visuals follow [Marketing and brand assets](references/_shared/core/policies/visual-asset-policy.md#marketing-and-brand-assets): brief only, asset gate `pending`.
 
 Return the editorial program/briefs and decisions. No automatic scheduling, contact upload, account access or publication, and no invented production/results data.
 

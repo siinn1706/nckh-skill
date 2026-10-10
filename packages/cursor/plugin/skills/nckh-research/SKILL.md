@@ -1,6 +1,6 @@
 ---
 name: nckh-research
-description: "Discover and read sources, perform bounded literature review and synthesize evidence or gaps. Use narrative, scoping or systematic mode; novelty and claim support require evidence."
+description: "Discover and read scientific sources, perform bounded literature review (tổng quan tài liệu, tìm tài liệu, đọc bài báo, tìm bài báo, tìm các nghiên cứu) and synthesize evidence or gaps in narrative, scoping or systematic mode. Market, customer and competitor questions belong to nckh-market-research; task plans to nckh-plan; method design to nckh-method; claim verification to nckh-evidence."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -27,7 +27,7 @@ Choose narrative, scoping or systematic review from the brief. Narrative work ma
 
 Record queries, database/source, as-of, inclusion/exclusion and actual access. Discovery services and ranking hints identify candidates, not verified findings. Read the available source version, keep exact locators and context, and state metadata-only or abstract-only limits.
 
-Create reader cards with question, methods/data/argument, observed results, limits and counterevidence. Literary studies preserve edition, translator, original quotation and historical/contextual scope. Method design belongs to method; claim/quote support is recorded under evidence.
+Create reader cards with question, methods/data/argument, observed results, limits and counterevidence. Literary studies preserve edition, translator, original quotation and historical/contextual scope. Method design belongs to nckh-method; claim/quote support is verified by nckh-evidence. Market, customer and competitor questions go to nckh-market-research; a task plan with phase files goes to nckh-plan.
 
 Synthesize only after mapping source -> evidence -> claims. Distinguish agreement, contradiction, insufficient access and hypothesis. A gap is bounded by the observed search; do not invent novelty from absent results. Q1/Q2 filters require system/category/year evidence and are task-specific. Preserve venue isolation.
 

@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+import stat
 import tempfile
 import shutil
 import uuid
@@ -26,15 +27,42 @@ def digest_record(record):
                                   separators=(",", ":"), allow_nan=False).encode("utf-8"))
 
 
+# Windows reparse tags with this bit redirect the name to another path
+# (symlink, junction/mount point, WSL LX symlink, ...).
+_NAME_SURROGATE = 0x20000000
+
+
+def _is_link_like(metadata):
+    """True for a symlink or any name-surrogate reparse point.
+
+    Non-surrogate reparse tags (OneDrive/cloud placeholders, deduplication) keep
+    the object at its own path, so they cannot redirect containment and stay allowed.
+    """
+    if stat.S_ISLNK(metadata.st_mode):
+        return True
+    tag = getattr(metadata, "st_reparse_tag", 0) or 0
+    return bool(tag & _NAME_SURROGATE)
+
+
 def no_links(path):
+    """Reject a path when it or any existing ancestor is link-like."""
     path = Path(os.path.abspath(path))
     for current in (path, *path.parents):
-        if current.is_symlink() or getattr(current, "is_junction", lambda: False)():
+        try:
+            metadata = os.lstat(current)
+        except (FileNotFoundError, NotADirectoryError):
+            continue
+        if _is_link_like(metadata):
             raise ContractError(f"linked path is not allowed: {current}")
     return path
 
 
 def contained(root, relative):
+    """Join a validated relative path under root.
+
+    The lexical prefix check is sound only because no_links has already rejected
+    every link-like component of both root and target.
+    """
     relative = str(relative)
     part = PurePosixPath(relative)
     if not relative or "\\" in relative or part.is_absolute() or ":" in relative:
@@ -43,7 +71,7 @@ def contained(root, relative):
         raise ContractError(f"path traversal: {relative}")
     root = no_links(root)
     target = no_links(root.joinpath(*part.parts))
-    if not target.resolve().is_relative_to(root.resolve()):
+    if not target.is_relative_to(root):
         raise ContractError(f"path escapes root: {relative}")
     return target
 
@@ -81,7 +109,7 @@ def unique_paths(paths):
 @contextmanager
 def temporary_tree(parent=None):
     """Inherit Windows ACLs; Python's private-directory mode rejects sandbox access."""
-    parent = no_links(parent or tempfile.gettempdir())
+    parent = no_links(parent or os.environ.get("NCKH_TEST_ROOT") or tempfile.gettempdir())
     path = parent / ("nckh-" + uuid.uuid4().hex)
     path.mkdir(mode=0o777 if os.name == "nt" else 0o700)
     try:

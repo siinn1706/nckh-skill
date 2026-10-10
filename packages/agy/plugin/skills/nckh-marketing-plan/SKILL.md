@@ -1,6 +1,6 @@
 ---
 name: nckh-marketing-plan
-description: "Create a marketing strategy with hypotheses, channels, KPI definitions and budget constraints. Strategy does not authorize spend or own task orchestration."
+description: "Create a marketing strategy (kế hoạch marketing, chiến lược marketing, ngân sách marketing, kế hoạch tiếp thị, chiến lược tiếp thị) with hypotheses, channels, KPI definitions and budget constraints. A task plan with phase files belongs to nckh-plan. Strategy does not authorize spend or own task orchestration."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -32,7 +32,7 @@ Define KPIs with numerators/denominators, attribution windows, data sources, qua
 
 Plan sequencing, responsibilities, experiment hypotheses and review gates. Preserve the user's explicit spending/threshold decisions. Do not claim a forecast is observed lift or fabricate ROI.
 
-Return strategy as a usable artifact. Core plan turns an approved strategy into executable phases, and cook owns execution state. No ad account write, spend increase, campaign launch or publication follows merely from a strategy request.
+Return strategy as a usable artifact. nckh-plan turns an approved strategy into a task plan with phase files, and nckh-cook owns execution state. No ad account write, spend increase, campaign launch or publication follows merely from a strategy request.
 
 ## References
 

@@ -3,7 +3,7 @@
   "additionalProperties": false,
   "properties": {
     "schema_version": {
-      "const": 1
+      "const": 2
     },
     "id": {
       "type": "string",
@@ -154,6 +154,138 @@
     "closure_hash": {
       "type": "string",
       "pattern": "^[a-f0-9]{64}$"
+    },
+    "command_results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "command": {
+            "type": "string",
+            "minLength": 1
+          },
+          "shell": {
+            "type": "string",
+            "minLength": 1
+          },
+          "cwd": {
+            "type": "string",
+            "minLength": 1
+          },
+          "exit_status": {
+            "type": "integer"
+          },
+          "stdout_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "stderr_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "segment_exit_statuses": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "expected_nonzero": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "command",
+          "shell",
+          "cwd",
+          "exit_status",
+          "stdout_sha256",
+          "stderr_sha256",
+          "expected_nonzero"
+        ]
+      }
+    },
+    "input_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256_before": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "sha256_after": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "eol_before": {
+            "enum": [
+              "none",
+              "lf",
+              "crlf",
+              "cr",
+              "mixed"
+            ]
+          },
+          "eol_after": {
+            "enum": [
+              "none",
+              "lf",
+              "crlf",
+              "cr",
+              "mixed"
+            ]
+          },
+          "mutation": {
+            "enum": [
+              "none",
+              "authorized-with-preimage"
+            ]
+          },
+          "preimage_path": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "path",
+          "sha256_before",
+          "sha256_after",
+          "eol_before",
+          "eol_after",
+          "mutation"
+        ]
+      }
+    },
+    "output_files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "created_this_attempt": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "path",
+          "sha256",
+          "created_this_attempt"
+        ]
+      }
     }
   },
   "required": [
@@ -188,6 +320,9 @@
     "output_hashes",
     "checks",
     "limitations",
-    "closure_hash"
+    "closure_hash",
+    "command_results",
+    "input_files",
+    "output_files"
   ]
 }

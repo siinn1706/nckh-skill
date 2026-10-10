@@ -81,7 +81,7 @@ def main():
             if args.output:
                 atomic_json(args.output, result)
             result = {"preview_hash": result["preview_hash"], "preview": {key: result["preview"][key] for key in
-                ("action", "host", "host_version", "surface", "mode", "target", "runtime_relative", "registered", "enabled", "trusted", "native_qualification")},
+                ("action", "host", "host_version", "surface", "mode", "target", "runtime_relative", "registered", "enabled", "trusted", "native_qualification", "context_status", "warnings")},
                 "private_preview_saved": bool(args.output)}
         else:
             payload = payload_from_bundle(args.package)

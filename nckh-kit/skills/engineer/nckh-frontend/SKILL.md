@@ -1,6 +1,6 @@
 ---
 name: nckh-frontend
-description: "Design, build or audit an authorized UI with UX, accessibility, state and performance evidence. Framework and asset selection follow the task."
+description: "Design, build or audit an authorized UI (giao diện, làm UI, dựng trang web, sửa giao diện, làm trang) with UX, accessibility, state and performance evidence. Conversion diagnosis remains nckh-cro, copywriting remains nckh-copy, logos and brand assets remain nckh-brand and research figures remain nckh-visuals."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -20,12 +20,15 @@ Read [Authorization](../../../core/policies/authorization-policy.md),
 [Evidence](../../../core/policies/evidence-policy.md),
 [Preservation](../../../core/policies/preservation-policy.md) and
 [Acceptance](../../../core/policies/acceptance-policy.md) before work.
+Run commands under [Command discipline](../../../core/workflows/execution.md#command-discipline) and [Host shell robustness](../../../core/workflows/execution.md#host-shell-robustness),
+label claims with the [Attempt ledger](../../../core/workflows/execution.md#attempt-ledger) and keep inputs per
+[Input preservation](../../../core/policies/preservation-policy.md#input-preservation).
 Output follows the brief's locale. Same-agent is the default. Use
 [model/context policy](../../../core/workflows/model-and-context.md) before delegation.
 
 ## Workflow and boundaries
 
-Research visual handoffs use the shared research-purpose preflight: question/object/role/evidence and source-to-mark mappings are mandatory. Do not generate logos, banners, ads, thumbnails or generic artwork, including a research logo. Actual computation/simulation plots need verified run provenance and a non-observed label. This indirect route is instruction-only/manual/not-callable until its event/engine is qualified; missing or denied preflight stops generation. Drafting/analysis/UI inspection remains with this owner.
+Research charts and scientific illustrations belong to nckh-visuals under the [Purpose preflight](../../../core/policies/visual-asset-policy.md#purpose-preflight). Logos (including a research logo), banners, ads, thumbnails and generic artwork belong to nckh-brand, which stops at a brief and keeps the final asset `pending` per [Marketing and brand assets](../../../core/policies/visual-asset-policy.md#marketing-and-brand-assets). Embed or generate an image in the UI only when the brief carries a valid `visual_purpose` and `check-visual-engine.py` reports a permitted engine binding; otherwise stop and hand the request to its owner. nckh-cro diagnoses conversion friction only; this skill applies the authorized page/UI edits from its findings, and changed copy comes from nckh-copy.
 
 Inspect the existing UI, design tokens, component boundaries and state/error flows. Reuse approved UX and the selected stack; do not force a framework or clone trademarked assets. A design-only/audit request stops at its requested artifact.
 

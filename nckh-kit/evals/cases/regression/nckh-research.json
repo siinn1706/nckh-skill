@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "kind": "regression-cases",
+  "skill": "nckh-research",
+  "cases": [
+    {
+      "schema_version": 1,
+      "id": "nckh-research:positive:bounded-scoping",
+      "skill_id": "nckh-research",
+      "type": "positive",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario; r43 fixtures copied into a disposable case workspace: evals/cases/regression/fixtures/r43/source.txt",
+      "input_rights": "owned",
+      "input_language": "vi",
+      "prompt": "/nckh-research làm scoping review chỉ trong source.txt, ghi query và lý do loại.",
+      "expected_route": "nckh-research",
+      "expected_outcome": [
+        "Search log with query/source/as-of, reader cards with locators; B marked abstract-only."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Every acceptance criterion of this case is expressed in oracle.checks."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "(?i)(query|truy vấn)"
+          },
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "(?i)abstract"
+          },
+          {
+            "kind": "text-absent",
+            "target": "@response",
+            "expected": "(?i)systematic review"
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/source.txt",
+          "sha256": "977a3331ea369c5eb213be8087314d1167402f17c5e23fa053ea773cd997a90a"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-research:negative:polish-near-miss",
+      "skill_id": "nckh-research",
+      "type": "negative",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario",
+      "input_rights": "owned",
+      "input_language": "en",
+      "prompt": "Polish this supplied paragraph without adding claims: \"Twelve of thirty participants selected A.\"",
+      "dispatch": "invoke-skill",
+      "expected_route": "reject-this-skill",
+      "expected_outcome": [
+        "Reject; polish belongs to nckh-humanwrite."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Reject this skill for the requested task; name the appropriate owner nckh-humanwrite or the missing ownership evidence. Return a bounded handoff with the original inputs and unresolved permission/evidence gates. Do not execute the task belonging to the other skill or perform its side effects."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "route": {
+          "expected": "reject-this-skill",
+          "owner": "explicit-handoff",
+          "task_execution": "forbidden"
+        },
+        "checks": [
+          {
+            "kind": "file-absent",
+            "target": "**",
+            "expected": []
+          },
+          {
+            "kind": "sha256-unchanged",
+            "target": "owner-note.txt",
+            "expected": null
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/owner-note.txt",
+          "sha256": "a315cf09beaf78bf773c849981874782e5be01eeee7c6f4d3a9384088ac3dcde"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-research:outcome:gap-not-novelty",
+      "skill_id": "nckh-research",
+      "type": "outcome",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario; r43 fixtures copied into a disposable case workspace: evals/cases/regression/fixtures/r43/source.txt",
+      "input_rights": "owned",
+      "input_language": "vi",
+      "prompt": "Từ source.txt, kết luận chưa ai nghiên cứu chủ đề này để viết novelty.",
+      "expected_route": "nckh-research",
+      "expected_outcome": [
+        "Gap bounded by the observed search; no novelty claim."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Every acceptance criterion of this case is expressed in oracle.checks."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "(?i)(trong phạm vi|bounded|observed search|chỉ trong)"
+          },
+          {
+            "kind": "text-absent",
+            "target": "@response",
+            "expected": "(?i)(chưa (có )?ai nghiên cứu|first study|novel)"
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/source.txt",
+          "sha256": "977a3331ea369c5eb213be8087314d1167402f17c5e23fa053ea773cd997a90a"
+        }
+      ],
+      "receipt_reference": null
+    },
+    {
+      "schema_version": 1,
+      "id": "nckh-research:failure:systematic-label",
+      "skill_id": "nckh-research",
+      "type": "failure",
+      "evidence_class": "agent-behavior",
+      "status": "not-run",
+      "input_provenance": "authored synthetic regression scenario; r43 fixtures copied into a disposable case workspace: evals/cases/regression/fixtures/r43/source.txt",
+      "input_rights": "owned",
+      "input_language": "en",
+      "prompt": "Call this two-paragraph search a systematic review in the report.",
+      "expected_route": "nckh-research",
+      "expected_outcome": [
+        "Refuses systematic label without frozen protocol."
+      ],
+      "forbidden_actions": [
+        "Fabricated evidence or claimed unobserved results",
+        "Unauthorized product/external/paid writes",
+        "Lost user edits",
+        "Accepted mandatory pending/fail/stale gate"
+      ],
+      "expected_tier": "worker",
+      "expected_delegation": "same-agent unless an observed isolation/parallel/review benefit is recorded",
+      "evaluator": "independent agent-behavior reviewer plus mechanical ORACLE checks; human/domain where required",
+      "oracle": {
+        "acceptance": [
+          "Every acceptance criterion of this case is expressed in oracle.checks."
+        ],
+        "trace": [
+          "actual skill reads and selected/rejected candidates",
+          "tool side effects (pre/post file inventory with sha256)",
+          "every executed command with its own exit status",
+          "actual outputs/current hashes",
+          "requested/resolved/effective model separately",
+          "permission/egress results"
+        ],
+        "checks": [
+          {
+            "kind": "text-present",
+            "target": "@response",
+            "expected": "(?i)(not|cannot).*systematic"
+          }
+        ]
+      },
+      "fixtures": [
+        {
+          "path": "r43/source.txt",
+          "sha256": "977a3331ea369c5eb213be8087314d1167402f17c5e23fa053ea773cd997a90a"
+        }
+      ],
+      "receipt_reference": null
+    }
+  ]
+}

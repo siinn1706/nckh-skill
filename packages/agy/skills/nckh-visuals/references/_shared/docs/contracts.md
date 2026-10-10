@@ -2,7 +2,7 @@
 
 This experimental kit implements the approved 43-identity design. Instructions are
 English; artifacts follow the brief's Vietnamese/English/bilingual locale.
-[Version-1 schemas](../core/contracts/brief.schema.json) reject unknown fields/versions.
+[Contract schemas](../core/contracts/brief.schema.json) pin an exact `schema_version` and reject unknown fields/versions.
 The stdlib validator implements type, properties, required, additionalProperties,
 items, enum, const, minLength, minimum, minItems and pattern, plus descriptive
 title/description/$schema. Unknown keywords fail. It is not a complete JSON Schema engine.
@@ -16,6 +16,106 @@ host authority; it is not a security boundary. Unknown model/cost/window remains
 Personal inputs, holdout labels and raw receipts live outside source/dist.
 Python 3.11+ is required for package tools, not instruction-only skills.
 No provider calls, runtime installation or paid evaluation occurs in unit tests.
+
+## Evidence ledger
+
+[Receipt](../core/contracts/receipt.schema.json), [claim](../core/contracts/claim.schema.json)
+and [task-state](../core/contracts/task-state.schema.json) contracts are version 2.
+A receipt records each command's own result plus its input and output files; a claim
+carries an attempt status; a task attempt can bind input/output hashes and the files
+it created. Rules that depend on another field's value cannot be expressed in the
+schema subset, so they live in the [ledger validator](../core/ledger.py). The agent
+rules these records serve are in [execution](../core/workflows/execution.md#attempt-ledger).
+
+- [check-receipt.py](../scripts/check-receipt.py) `inventory` records a workspace
+  before an attempt; `verify` checks a version-2 receipt against that inventory and
+  the files on disk. It never executes recorded commands.
+- [check-plan.py](../scripts/check-plan.py) checks a plan directory: index, phase
+  files, required sections, relative links and a receipt for every completed status.
+
+Both print ASCII JSON and exit 0 for VERIFIED, 1 for FAILED and 2 for a usage error.
+Version-1 records stay historical; see the Evidence ledger version 2 section of `migration.md`.
+A version-1 record fails with one explicit finding, `<kind> schema: schema_version 1
+is unsupported for <kind>; regenerate the record as schema_version 2`, rather than a
+list of field errors.
+
+A compound command needs one exit status per segment. The splitter
+(`command_segments` in the ledger validator) keeps a top-level POSIX heredoc body
+inside the segment of the command that opens it, so separators in the body never
+create extra segments; an unterminated body runs to the end of the command.
+
+## Routing boundaries
+
+[Route boundaries](../core/registry/catalog/route-boundaries.json), closed by their
+[schema](../core/contracts/route-boundaries.schema.json), are the single source for
+sibling skills that are easy to confuse: each entry holds the owner rule and the
+Vietnamese cues users type. The routing test (`tests/build/test_skill_routing.py`)
+requires each SKILL.md to name its siblings by full ID and each description to carry
+one of its cues within the length limit. Skill text cites these rules; it does not
+redefine them.
+
+The same cues drive the advisory routing hint (`core/route_hint.py`, used by the
+hook runner and by the routing eval). Routing prompt files in `evals/cases/routing/`
+carry `kind: routing-prompts` under their
+[schema](../core/contracts/routing-prompts.schema.json): natural Vietnamese prompts
+labelled with the expected skill or `none`, split into tune and held-out sets. The
+case validator counts them separately as `routing_prompts`; they are neither base
+nor regression cases and do not change those counts. The thresholds and the measured
+held-out result are owned by `tests/release/test_routing_prompts.py`. A mechanical
+cue match measures hint coverage only, not host routing.
+
+## Evaluation cases
+
+The base case loader in [evaluation](../core/evaluation.py) rejects an outcome prompt
+that repeats the positive prompt, and a prompt with Vietnamese diacritics unless its
+`input_language` is `vi` or `bilingual`. Required families in `evals/cases/required-families.json`
+are exactly 24 under their [schema](../core/contracts/required-families.schema.json);
+a family can list regression case IDs in `family_cases`, and the loader checks that
+they exist. Every catalog skill belongs to at least one family
+(`tests/release/test_family_coverage.py`).
+
+The regression suite in `evals/cases/regression/` is separate from the base cases,
+which it leaves unchanged. Each per-skill manifest follows the
+[regression schema](../core/contracts/regression-cases.schema.json): hashed fixtures
+and mechanical oracle checks, with every case `not-run` and no receipt until an
+observed run. A `file-absent` check concerns files created during the attempt, not
+files that already existed. [check-case-oracle.py](../scripts/check-case-oracle.py)
+scores one case against a finished workspace and a `check-receipt.py inventory`
+taken before the attempt; it calls no model and never edits the manifest. A
+mechanical pass covers only the listed checks; criteria in its
+`reviewer_acceptance` output still need a reviewer.
+
+A case's optional `dispatch` field fixes how its prompt is sent. `natural` (the
+default) sends the prompt unchanged, so host routing is part of the attempt.
+`invoke-skill` prefixes the host invocation of the case's skill (`/nckh-x`, Codex
+`$nckh-x`), because the oracle assumes that skill was called. Every negative
+near-miss case must use `invoke-skill`, and its prompt must not already contain an
+invocation. `dispatch_prompt` in [evaluation](../core/evaluation.py) is the single
+source of the sent prompt; runners read it through
+`check-case-oracle.py --case-id ID --print-prompt [--invocation TEMPLATE]`, which
+prints the case ID, dispatch mode and exact prompt without scoring.
+
+`file-absent` ignores new files only when they have the exact shapes the kit's own
+hooks write in a project install: event receipts, their locks and the cap marker
+under `.nckh-state/hooks/events/<host>/`, pre-edit snapshots under
+`.nckh-state/hooks/snapshots/<host>/<session>/`, and the atomic-write temporaries
+in those directories. `HOOK_RUNTIME_STATE` in [evaluation](../core/evaluation.py)
+owns the patterns. Any other file, including a differently named file inside those
+directories, still counts. When the finished workspace
+holds a link that the before inventory lacks, scoring adds a failing
+`links-created` row, whatever the listed checks say.
+
+An `exit-status` check runs the manifest argv, never the agent's own commands, on a
+fresh copy of the workspace in a temporary directory outside it, then deletes the
+copy, so the scored workspace stays byte-identical. The command gets only `PATH`,
+`SYSTEMROOT`, `TEMP` and `TMP` from the operator's environment, plus a scratch
+`HOME`/`USERPROFILE`, UTF-8 Python settings and git settings that stop git at the
+copy (`GIT_CEILING_DIRECTORIES`), skip system config and turn off fsmonitor and
+hooks. A git check on a workspace without its own `.git` is `BLOCKED`, not scored.
+This is filesystem isolation only, not a security sandbox: the command still
+imports agent-written code and runs as the operator's user with network and
+process access, and the copied repository's own git config still applies. Score
+untrusted workspaces inside a disposable VM or container.
 
 ## Selected resources and rights
 

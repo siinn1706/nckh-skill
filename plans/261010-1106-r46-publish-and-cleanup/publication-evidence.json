@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "evidence_class": "curated-summary",
+  "date": "2026-10-10",
+  "scope": "Experimental r46 publication, verified owned installation replacement and obsolete generated package cleanup",
+  "source": {
+    "revision": "46",
+    "pins": 430,
+    "source_lock_sha256": "1e653c71bc600e197e0f2676776ef058328cc05200f282a065c250e94f890a5f",
+    "accepted_contract_files": [
+      {
+        "path": "nckh-kit/skills/engineer/nckh-debug/SKILL.md",
+        "sha256": "7757dd044255cb76fa303c332f4e694d42f651492c0c4e904ef309a7ca1c01e7"
+      },
+      {
+        "path": "nckh-kit/skills/engineer/nckh-fix/SKILL.md",
+        "sha256": "5d216ca987e547eb5629e76c6250ed590ffe2024d6f263bea3015317b0a46570"
+      },
+      {
+        "path": "nckh-kit/core/registry/catalog/route-boundaries.json",
+        "sha256": "7668fd4c58141df94022d89fa59cd516bd87ac50a8532254d152adb69fc8a865"
+      },
+      {
+        "path": "nckh-kit/evals/cases/regression/nckh-debug.json",
+        "sha256": "be67045db53605bed1dd104745267e34e1b43d61c47d80efd9d6b314131135d5"
+      },
+      {
+        "path": "nckh-kit/tests/release/test_regression_cases.py",
+        "sha256": "6b06d95c87a9dc625e2a46ed04a0114f5d72c9a165495207ee0fdc86f076634f"
+      },
+      {
+        "path": "nckh-kit/docs/engineer.md",
+        "sha256": "0ac1997baa954f12ecaf12de6783437f25f0d51a5de0ddd53d949bc33078482e"
+      }
+    ],
+    "open_actionable_source_findings": 0
+  },
+  "verification": {
+    "affected_tests": {
+      "status": "pass",
+      "tests": 52,
+      "initial_attempt": "failed: inherited installed-skill visibility",
+      "retry": "isolated test root"
+    },
+    "reproducible_builds": "pass for all four hosts",
+    "public_packages": {
+      "status": "pass",
+      "packages": [
+        {
+          "host": "claude",
+          "skills": 43,
+          "agents": 6,
+          "resource_access": "on",
+          "resource_types": 13,
+          "resource_bindings": 35,
+          "hook_members": 34,
+          "hook_state": "packaged-inactive",
+          "hook_install_default": "advisory",
+          "source_revision": "46",
+          "closure_hash": "560eca47742d24e1708b39437a8b639567f492900f92b82a8f19b1f9239790a7"
+        },
+        {
+          "host": "codex",
+          "skills": 43,
+          "agents": 6,
+          "resource_access": "on",
+          "resource_types": 13,
+          "resource_bindings": 35,
+          "hook_members": 34,
+          "hook_state": "packaged-inactive",
+          "hook_install_default": "advisory",
+          "source_revision": "46",
+          "closure_hash": "a7cdf96945a7086377ae9bee83c4d63f7e3163b511b47d865849fa11c33eaa40"
+        },
+        {
+          "host": "cursor",
+          "skills": 43,
+          "agents": 6,
+          "resource_access": "on",
+          "resource_types": 13,
+          "resource_bindings": 35,
+          "hook_members": 33,
+          "hook_state": "packaged-inactive",
+          "hook_install_default": "advisory",
+          "source_revision": "46",
+          "closure_hash": "5439afa1b395684fa881d68ca049dc633578d97822ffe542d2b7fd2bf46efb1b"
+        },
+        {
+          "host": "agy",
+          "skills": 43,
+          "agents": 6,
+          "resource_access": "on",
+          "resource_types": 13,
+          "resource_bindings": 35,
+          "hook_members": 33,
+          "hook_state": "packaged-inactive",
+          "hook_install_default": "advisory",
+          "source_revision": "46",
+          "closure_hash": "d8f949ed0ba3a4d897a9dc9a9618d095050817f8c7a3acf9858c1c190e3f056d"
+        }
+      ]
+    }
+  },
+  "installation": {
+    "status": "pass",
+    "source_revision": "46",
+    "global_items": 239,
+    "project_items": 49,
+    "global_skill_roots": 5,
+    "project_skill_roots": 1,
+    "skills_per_root": 43,
+    "project_hooks_mode": "advisory",
+    "project_hook_members": 34,
+    "project_hook_closure_hash": "3abb3196c94a98a4467b8b71c93ef94828317688630986ce116846d55d44c093",
+    "global_hooks": "off",
+    "native_discovery": "unverified",
+    "effective_model": "unknown",
+    "failures": []
+  },
+  "cleanup": {
+    "generated_packages": {
+      "status": "pass",
+      "roots_removed": 2,
+      "files_removed": 13505,
+      "logical_bytes_removed": 114951678,
+      "errors": 0
+    },
+    "retired_fixture": {
+      "status": "archived-and-removed-from-discovery",
+      "files": 30,
+      "hashes_verified": true,
+      "historical_verdict": "BLOCKED retained"
+    },
+    "test_root": {
+      "status": "pass",
+      "empty_test_root_removed": true,
+      "parent_retained": true
+    },
+    "rollback_payloads": {
+      "status": "awaiting-owner-authority",
+      "roots": 148,
+      "files": 16269,
+      "logical_bytes": 156554292
+    },
+    "automatic_approval_rejection": {
+      "status": "rejected-before-execution",
+      "reason": "Combined deletion included rollback backups and transaction payloads beyond the accepted cleanup scope."
+    },
+    "preserved": [
+      "current ownership and journals",
+      "source-lock history",
+      "raw failed evidence",
+      "protected active r41 test plans and attempts",
+      "github-publication compatibility tree",
+      "unrelated skills",
+      "required references/_shared package closure"
+    ]
+  },
+  "publication": {
+    "status": "ready-for-final-audit",
+    "repository": "siinn1706/nckh-skill",
+    "branch": "main",
+    "base_commit": "fa3c5224d2dfb48d04e4145bb7668f0717587f34",
+    "original_local_history": {
+      "backup_ref": "refs/backup/r46-unpublished-20261010",
+      "head": "76b0429ac3f0fbf851be3e871d9ee53b2a0a284a",
+      "unpublished_commits_retained_locally": 5
+    },
+    "strategy": "Clean public tree on verified remote parent; ordinary push; retain local files",
+    "preflight": {
+      "changed_blob_count": 6761,
+      "secrets": 0,
+      "personal_machine_paths": 0,
+      "raw_output_filenames": 0,
+      "local_only_prefixes": 0,
+      "oversized_files": 0
+    },
+    "full_audit": {
+      "status": "pass",
+      "files": 27367,
+      "bytes": 817725632,
+      "failure_count": 0
+    },
+    "link_check": {
+      "status": "pass",
+      "scope": "changed Markdown files in exact staged export",
+      "changed_markdown_files": 2165,
+      "links_checked": 9964,
+      "broken_count": 0,
+      "inherited_full_tree_broken_links": 161,
+      "inherited_full_tree_note": "Historical Markdown in the verified remote base retains 161 missing local evidence links; no changed Markdown file adds a broken link."
+    },
+    "remote_verification": "pending"
+  },
+  "process_evidence": {
+    "status": "all listed child processes completed and reaped",
+    "receipts": [
+      {
+        "label": "affected-regression",
+        "status": "completed",
+        "exit_code": 1,
+        "elapsed_seconds": 65.015,
+        "process_reaped": true,
+        "receipt_sha256": "3499ae96d3129bdce8deed505019c24a80bb8a212702c5215b171ba94f7271bb",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "931eae674004cbcaedfb7dd96bd8433e2ff15bdca91b488464fd708e6ce91398"
+      },
+      {
+        "label": "affected-regression-isolated",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 58.625,
+        "process_reaped": true,
+        "receipt_sha256": "4feea6d03684c46e964a92695dc2bb8bbdb0605504254f9754b36b0f1b645120",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "eb13ef934ed127343a7c6010f83713bab5e27ab0f88ccbff18cdd0d5e47e5662"
+      },
+      {
+        "label": "build-r46-packages",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 141.109,
+        "process_reaped": true,
+        "receipt_sha256": "baf2a8ebf16a9a0685b4516fbe72c1bf79a1e1b30a67bd0d7d0738e28636d503",
+        "stdout_sha256": "8c0b0c924b8cebb403302132b8beb411237a3b9b3d42399e8c3e78e520aab577",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "empty-test-root-cleanup",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 0.75,
+        "process_reaped": true,
+        "receipt_sha256": "1d86b4a4fc0faae7e8383515928c0eaa283e4e8fb688c206dd5f249c61556da5",
+        "stdout_sha256": "07ecf03b1d5c9e747db98173402ed727c9fe6b1471fd9d3e2c43baf834a79c16",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "freeze-source",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 1.078,
+        "process_reaped": true,
+        "receipt_sha256": "cbf9f8efea80cfce716e251f46a1a96bfa41a94d5acabb1be4d2039c108ec1e6",
+        "stdout_sha256": "feca99620a82e0819dc3938265cd6a4f585a8617bc53e6775f77cdd6b89e1e3d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "generated-packages-apply",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 8.797,
+        "process_reaped": true,
+        "receipt_sha256": "c75fc33b4fea65e6bb1ed38608caa713f664e76869140d6dc59c6c745ccd6cb3",
+        "stdout_sha256": "ffb4b7868cb5d0377e1a097198fde5404f5cf8a9e04d42fb82bd0cd804d442df",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "generated-packages-preview",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 3.344,
+        "process_reaped": true,
+        "receipt_sha256": "bce0b71cdbb8551df187d800207e2bc70cdce18aa79af8b86f0d8be7200e5825",
+        "stdout_sha256": "e66f1d36aa0cb0f00b149079e2f859945692480ad1b053995eb6e1d7aef63b5f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "global-apply",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 60.672,
+        "process_reaped": true,
+        "receipt_sha256": "ad73a67214ac5f43e95dc894eb188e695b06681c876641dae452dd9e2746b086",
+        "stdout_sha256": "197a97cf53a6198eb0a174836ddbad1efd818c5acef0c34447cc8ffd1a4e6c6d",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "global-preview",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 61.11,
+        "process_reaped": true,
+        "receipt_sha256": "8e02a59055573bbc18d372a28e89c2a7f55b5c7ea95790c8cb9c37379e64fea8",
+        "stdout_sha256": "95f58099e2e3f106e852f34a4557ffc40bc8ef38ccba0d751a7cab3f5ceae4de",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "obsolete-copies-preview",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 5.36,
+        "process_reaped": true,
+        "receipt_sha256": "9a0683aae3edede56c9360cdb3f21b1777fec15b7d2001533e38fc4c52cd116b",
+        "stdout_sha256": "a3578e48c7e3a5fcfbd26af719807bc6efdbc88da70e08b1565d3756a161f0e8",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "old-hook-remove",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.719,
+        "process_reaped": true,
+        "receipt_sha256": "244038ec930e8a6d7fd501bd7ce83a56cc67f2a781d324a41bd84928f1414df0",
+        "stdout_sha256": "49182a939f4729036988fcf8907187b0d4ae1f478eadfce41fc4b879da43684f",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "old-hook-remove-preview",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 13.578,
+        "process_reaped": true,
+        "receipt_sha256": "2be52bdc75f12267a4d0ca064a1ebf186e0b89fb8c82fb4b57d05f30ae5175c3",
+        "stdout_sha256": "0e7ebeb26f6aeffcb0a509c9a940f081f37e9b1b0b38d159fefdfe1f650598e6",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "project-apply",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 61.687,
+        "process_reaped": true,
+        "receipt_sha256": "4934e2af6cb9a2188e91da0d447d98820253602f127f9f5b0b886327a1e17f33",
+        "stdout_sha256": "5e1a6385d30c448e63a4b360cdac04dde9945b4df774b94b8c9b0d2d4aa07fc8",
+        "stderr_sha256": "d0b657551c58d50f91a56c12355bebaa766115c36bccf5340af65b339e846bc4"
+      },
+      {
+        "label": "project-preview",
+        "status": "completed",
+        "exit_code": 4,
+        "elapsed_seconds": 22.828,
+        "process_reaped": true,
+        "receipt_sha256": "d93369579e95b06481f1892f571380b803488760e584073632737f03a2798cdc",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "a29562a7719b538dc8210211c2f175644a88f6b7f4b55c774090c5243d082505"
+      },
+      {
+        "label": "project-preview-clean",
+        "status": "completed",
+        "exit_code": 4,
+        "elapsed_seconds": 23.312,
+        "process_reaped": true,
+        "receipt_sha256": "a3843f8ed764a05ddf20a8071fa669bb58b142a89199c69d3335c0cc51004131",
+        "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stderr_sha256": "e8852da1ff35763610d59ae7c6b1b2367ff5fe73f99981cccc19ff1bbbbfc7d7"
+      },
+      {
+        "label": "project-preview-ready",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 22.718,
+        "process_reaped": true,
+        "receipt_sha256": "6d428b2c14e09f1f3ab24be8724f829b3580f53dc036acbd8b908f53d9b882e2",
+        "stdout_sha256": "d7c4753fa2970e35303dcc77930c7b6470d2ffe263c839d931657711418327ff",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "promote-packages",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 38.187,
+        "process_reaped": true,
+        "receipt_sha256": "1b4510628d399d4183bf0a942d54d50d8619d48c571c280dd7dd96761000de39",
+        "stdout_sha256": "0b879d1e6225f7120fe8ae31e196c4a2ecdb91daef79a7d6bdc573fc7aa6206b",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "public-package-check",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 31.859,
+        "process_reaped": true,
+        "receipt_sha256": "2c5036e3c88515caa85cde956bad0130812136580855aa494e32ebf09b5f0fd2",
+        "stdout_sha256": "9be693f58f4621c6550b5f044eb3a34a4eb87eed9ce12e0c03d1db8fc0d4e668",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "public-package-check-after-cleanup",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 20.766,
+        "process_reaped": true,
+        "receipt_sha256": "0040a70565beaad48ab589a3ae270655415ba356e34e67824f74baaae1e65a5",
+        "stdout_sha256": "9be693f58f4621c6550b5f044eb3a34a4eb87eed9ce12e0c03d1db8fc0d4e668",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "reproducible-build",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 275.454,
+        "process_reaped": true,
+        "receipt_sha256": "ce5206da27ccdf247f76c0935acc4671912ca130666f48f9c4fc795f301c70a1",
+        "stdout_sha256": "604dbc07f4558939c1a291f893f0da4a0c33af97f27d95aeb7a34fb75328f567",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "privacy": "Absolute machine paths, process IDs and raw streams remain local; hashes identify original private receipts."
+  },
+  "qualification": {
+    "release": "experimental",
+    "stable": "NO-GO",
+    "native_discovery": "unverified",
+    "effective_model": "unknown",
+    "scientific_and_human_acceptance": "pending",
+    "historical_process_metadata": "UNVERIFIED; scoped owner waiver retained"
+  }
+}

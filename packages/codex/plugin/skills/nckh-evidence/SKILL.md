@@ -1,6 +1,6 @@
 ---
 name: nckh-evidence
-description: "Verify factual claims, quotations, citations and statistics against actual sources. Distinguish source identity/status/ranking from semantic support and human acceptance."
+description: "Verify factual claims, quotations, citations and statistics against actual sources (kiểm chứng trích dẫn, xác minh số liệu, kiểm tra nguồn, kiểm tra trích dẫn, soát nhận định). Distinguish source identity/status/ranking from semantic support and human acceptance. Discovering and synthesizing sources belongs to nckh-research."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -29,7 +29,7 @@ For each quote/value retain original text, unit/denominator/population/time, exa
 
 Evaluate whether the observed evidence supports the precise claim scope, certainty and causal language. Record supported/contradicted/insufficient/unverified separately from identity and ranking, along with counterevidence and permissible wording. Unseen methods/results cannot be supported from metadata.
 
-For a supplied draft audit factual deltas without rewriting the entire piece. Invalidate dependent claims when source/profile/version changes. Route method validity and human scientific acceptance to their owners; a semantic model judgment is not domain signoff.
+For a supplied draft audit factual deltas without rewriting the entire piece. Invalidate dependent claims when source/profile/version changes. Route source discovery and synthesis to nckh-research, method validity to nckh-method and human scientific acceptance to its human owner; a semantic model judgment is not domain signoff.
 
 Return a located ledger and bounded corrections. Do not polish unrelated prose or manufacture evidence/citations to fill a gap.
 

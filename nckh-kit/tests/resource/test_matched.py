@@ -10,6 +10,7 @@ from core.schema import ContractError
 
 
 ROOT = Path(__file__).resolve().parents[2]
+FIXTURE_ROOT = Path(__file__).parent / "fixtures/matched"
 spec = importlib.util.spec_from_file_location("matched_comparison", ROOT / "scripts/compare-matched.py")
 checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
@@ -22,10 +23,10 @@ class MatchedTests(unittest.TestCase):
         self.addCleanup(self.temporary.__exit__, None, None, None)
         copied = {}
         for name, source in {
-            "corpus": ROOT.parent / "plans/evaluation/direct-skill-tests/development-corpus.json",
-            "reviews": ROOT.parent / "plans/evaluation/direct-skill-tests/controller-reviews.json",
-            "initial": ROOT.parent / "plans/evaluation/resource-quality/initial-freeze.json",
-            "linkage": ROOT.parent / "plans/evaluation/resource-quality/direct-linkage.json",
+            "corpus": FIXTURE_ROOT / "corpus.json",
+            "reviews": FIXTURE_ROOT / "controller-reviews.json",
+            "initial": FIXTURE_ROOT / "initial-freeze.json",
+            "linkage": FIXTURE_ROOT / "direct-linkage.json",
         }.items():
             target = self.context / (name + ".json")
             shutil.copyfile(source, target)

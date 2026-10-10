@@ -12,6 +12,9 @@ from core.research_io import ArtifactReader
 from core.schema import ContractError
 
 def main():
+    # The receipt bytes are UTF-8; emit them unchanged even when the console default is a legacy code page.
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project", type=Path, required=True)
     parser.add_argument("--task", required=True)

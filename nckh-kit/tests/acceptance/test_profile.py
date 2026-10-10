@@ -22,7 +22,7 @@ class AcceptanceProfileTests(unittest.TestCase):
         identities = {row["id"]: row for row in self.catalog["skills"]}
         self.assertEqual(len(self.profile["skills"]), 43)
         self.assertEqual(set(self.profile["skills"]), set(identities))
-        self.assertEqual(len(self.profile["sources"]), 36)
+        self.assertEqual(len(self.profile["sources"]), 40)
         for identity, row in self.profile["skills"].items():
             with self.subTest(skill=identity):
                 self.assertEqual(row["kit"], identities[identity]["kit"])

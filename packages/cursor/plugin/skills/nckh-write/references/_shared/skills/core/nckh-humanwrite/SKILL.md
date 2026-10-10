@@ -1,6 +1,6 @@
 ---
 name: nckh-humanwrite
-description: "Polish, revise or translate supplied Vietnamese/English prose with minimal edits and factual-delta checks. Use for paragraph-level language work, including paper paragraphs; scientific authoring belongs to nckh-paperwrite."
+description: "Polish, revise or translate supplied Vietnamese/English prose with minimal edits and factual-delta checks (sửa văn cho mượt, chỉnh câu chữ, dịch sang tiếng Anh, lủng củng, cho hay hơn), including paper paragraphs. Scientific authoring belongs to nckh-paperwrite; new copy or a changed angle or CTA belongs to nckh-copy."
 argument-hint: "<draft and requested edit> [--en|--vi]"
 metadata:
   version: "0.1.0"
@@ -13,7 +13,9 @@ metadata:
 
 Use the supplied draft, requested edit, audience/genre, glossary and protected regions.
 Return the edited prose, a minimal edit diff and a factual-delta record. New claims,
-missing facts and unresolved fidelity remain evidence gates.
+missing facts and unresolved fidelity remain evidence gates. For file inputs follow
+[Input preservation](../../../core/policies/preservation-policy.md#input-preservation):
+keep encoding and line endings, and keep backups inside the workspace.
 
 ## Shared contracts and language
 
@@ -48,7 +50,10 @@ detection/evasion. Human taste and scientific fidelity require their own review.
 Polish and translation stay here even when the draft is from a paper. Handoff
 outline/section/argument/reporting/revision-response authoring to
 `nckh-paperwrite`, retaining the normalized locale and flags.
-Taste critique belongs to `nckh-taste`.
+Taste critique belongs to `nckh-taste`. Light polish or translation of existing
+marketing text stays here; new copy, a changed angle or a changed CTA goes to
+`nckh-copy`. `nckh-write` is a compatibility route that hands polish and
+translation here.
 
 ## Scoped resources
 

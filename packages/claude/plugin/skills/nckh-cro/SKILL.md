@@ -1,6 +1,6 @@
 ---
 name: nckh-cro
-description: "Diagnose conversion friction and page discoverability, including canonical/noindex checks, in pages, funnels, forms or onboarding. Does not guarantee uplift or launch a test."
+description: "Diagnose conversion friction (tối ưu chuyển đổi, tỉ lệ chuyển đổi, phễu chuyển đổi, bỏ ngang, bỏ giỏ hàng, tỉ lệ đăng ký) in pages, funnels, forms or onboarding and hand fixes to nckh-frontend or nckh-copy. Search intent and index controls belong to nckh-seo. Does not edit pages, guarantee uplift or launch a test."
 metadata:
   version: "0.1.0"
   status: experimental
@@ -12,7 +12,7 @@ metadata:
 
 Inputs: Actual page/funnel/form/onboarding, audience/evidence, constraints and permitted inspection.
 
-Output: Located friction diagnosis, prioritized hypotheses, UX review and experiment handoff.
+Output: Located friction diagnosis, prioritized hypotheses, UX review and handoffs for edits and experiments.
 
 ## Required contracts
 
@@ -28,13 +28,13 @@ Scientific venue/ranking rules apply only when the task explicitly needs them.
 
 Inspect the actual journey and states, including page/form/onboarding errors, trust, copy clarity, accessibility, mobile behavior and evidence of drop-off. Distinguish observed friction from an untested hypothesis; an aesthetic preference is not proven conversion loss.
 
-When a supplied or permitted page is part of the conversion journey, inspect its canonical URL and robots/noindex directives in the actual HTML or observed response headers. Locate conflicting, absent or unobserved directives and explain their possible effect on discoverability before conversion. Do not infer a live index/ranking result from markup. Preserve intentional indexing decisions; broader crawl/search analysis belongs to SEO, and implementation still requires the task's authority.
+Search intent, crawl, canonical and index controls belong to nckh-seo. If a page in the conversion journey shows a canonical or robots/noindex conflict in its actual HTML or observed headers, record it with its locator as a secondary observation and hand it to nckh-seo; do not infer live index or ranking results from markup.
 
-Use audience/analytics evidence with correct denominator/window. Preserve approved product terms/claims and privacy/consent requirements. Propose task-relevant changes with location, mechanism, evidence, expected risk and measurement oracle.
+Use audience/analytics evidence with correct denominator/window. Preserve approved product terms/claims. Session recordings, heatmaps, form captures, analytics exports and support transcripts can hold personal data: list the sources you would use and what they contain, and use them only with a recorded consent basis and authority for this purpose. Without that, work from aggregated or redacted data and keep the privacy gate `pending`. Propose task-relevant changes with location, mechanism, evidence, expected risk and measurement oracle.
 
-Rank hypotheses using explicit assumptions rather than fabricated uplift percentages. Experiment owns randomization/sample/stopping and causal readout; frontend/copy own authorized production changes.
+Rank hypotheses using explicit assumptions rather than fabricated uplift percentages. nckh-experiment owns randomization/sample/stopping and causal readout. This skill diagnoses only: authorized page or UI edits belong to nckh-frontend and copy changes belong to nckh-copy. When nckh-frontend (engineer kit) is not installed, return its part as a handoff note with that owner ID and the open decision.
 
-Return the requested diagnosis/hypotheses or scoped local implementation under authority. Do not launch tests, reallocate traffic, change budgets or promise conversion gains.
+Return the diagnosis, ranked hypotheses and handoffs (location, proposed change, owner ID). Supplied pages and files are read-only under [Input preservation](references/_shared/core/policies/preservation-policy.md#input-preservation); do not edit them here. Do not launch tests, reallocate traffic, change budgets or promise conversion gains.
 
 ## References
 

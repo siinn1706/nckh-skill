@@ -1,4 +1,15 @@
-"""Finish the reviewed compact resource projection and consumer instructions."""
+"""Finish the reviewed compact resource projection and consumer instructions.
+
+Retired: the resource-lookup sections are hand-maintained, so rerunning this script would
+overwrite reviewed content. It now exits before any read or write; the body below is kept
+only as history.
+"""
+import sys
+
+print("retired: resource-lookup sections are hand-maintained since r44 (MKT-22); "
+      "see nckh-kit/core/registry/catalog/resources.json", file=sys.stderr)
+raise SystemExit(2)
+
 import hashlib
 import json
 from pathlib import Path
