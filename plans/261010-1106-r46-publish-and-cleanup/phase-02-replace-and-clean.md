@@ -1,7 +1,6 @@
 # Replace and clean
 
-Status: installations and generated-package cleanup completed; rollback-payload
-cleanup awaits explicit additional owner authority.
+Status: installation replacement and all approved cleanup completed and verified.
 
 ## Context and files
 
@@ -27,13 +26,18 @@ the project retains advisory hooks.
 The automatic approval reviewer rejected the initial combined cleanup because
 it also included rollback backups and transaction payloads. Nothing was deleted
 by that rejected invocation. Split the inventory: generated packages can be
-removed within the original scope; rollback payloads require a separate grant.
+removed within the original scope; rollback payloads required a separate grant.
+The owner subsequently granted it directly: “Đồng ý xóa backup và payload cũ”.
+That approval covers the previously inventoried 148 obsolete rollback backup and
+transaction payload roots. The rejected invocation remains historical evidence.
 
 ## Risk and rollback
 
-Use existing transactional backup/rollback. Record Windows access or lock failures;
-do not change ACLs or stop unrelated processes. Cleanup begins only after verified
-replacement, so current files and ownership remain the recovery route.
+The approved cleanup removes the rollback bytes for superseded installations.
+Restore the current installation from verified r46 packages using ownership-aware
+transactions. Record Windows access or lock failures; do not change ACLs or stop
+unrelated processes. Cleanup follows verified replacement, and current files and
+ownership remain protected.
 
 ## Observed result
 
@@ -46,4 +50,15 @@ remains intact.
 
 Two generated-package roots were removed, containing 13,505 files and 114,951,678
 logical bytes. The disposable empty test root was removed and its parent retained.
-The separate inventory of 148 rollback/payload roots remains pending owner authority.
+After the separate owner approval, all 148 rollback/payload roots were removed:
+16,269 files and 156,554,292 logical bytes, with zero errors. The preview matched
+the approved inventory before deletion. The post-cleanup verifier exited 0 and
+confirmed every approved target is absent, all 239 global and 49 project
+destinations still match r46, and all 9,486 protected files retain their before
+hashes. Ownership, journals, source lock, hook state, hook payload and hook history
+are preserved. The preview, apply and verification processes completed and were
+reaped; the final process reconciliation found none remaining.
+
+Generated-package and rollback/payload cleanup together removed 150 roots,
+29,774 files and 271,505,970 logical bytes. The retired fixture archive and
+disposable test/export cleanup are recorded separately.

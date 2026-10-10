@@ -2,7 +2,7 @@
   "schema_version": 1,
   "evidence_class": "curated-summary",
   "date": "2026-10-10",
-  "scope": "Experimental r46 publication, verified owned installation replacement and obsolete generated package cleanup",
+  "scope": "Experimental r46 publication, verified owned installation replacement and approved obsolete skill copy cleanup",
   "source": {
     "revision": "46",
     "pins": 430,
@@ -137,10 +137,40 @@
       "parent_retained": true
     },
     "rollback_payloads": {
-      "status": "awaiting-owner-authority",
+      "status": "pass",
       "roots": 148,
       "files": 16269,
-      "logical_bytes": 156554292
+      "logical_bytes": 156554292,
+      "roots_removed": 148,
+      "files_removed": 16269,
+      "logical_bytes_removed": 156554292,
+      "errors": 0,
+      "authority": {
+        "type": "direct-human-response",
+        "answer": "Đồng ý xóa backup và payload cũ",
+        "recorded_at_utc": "2026-10-10T05:33:44.036055+00:00",
+        "scope": "The previously inventoried 148 obsolete rollback backup and transaction payload roots",
+        "approved_inventory_sha256": "2946f6368770057d43783883792bf216c13a707e3cc40a1176054a9fb107368f",
+        "record_sha256": "5212f4735bbe9739c1b5d57e924d5c57946112acd15ad7240e9a727bbb0d0eb3"
+      },
+      "applied_inventory_sha256": "da69804e55bc8105377d1d90b37f1cd4b992e20f79b8ec665c8fa6c02ffa78ae",
+      "post_cleanup_verification": {
+        "status": "pass",
+        "exit_code": 0,
+        "approved_targets_absent": 148,
+        "source_revision": "46",
+        "global_items": 239,
+        "project_items": 49,
+        "protected_files_unchanged": 9486,
+        "failures": [],
+        "record_sha256": "731159d9a6d9b0e825728f449982e78fd07d56a5368ae6990855e303ce146f9d"
+      }
+    },
+    "generated_and_rollback_totals": {
+      "roots_removed": 150,
+      "files_removed": 29774,
+      "logical_bytes_removed": 271505970,
+      "scope": "Generated-package and rollback/payload cleanup; fixture archive and disposable test/export cleanup recorded separately"
     },
     "automatic_approval_rejection": {
       "status": "rejected-before-execution",
@@ -407,6 +437,36 @@
         "process_reaped": true,
         "receipt_sha256": "ce5206da27ccdf247f76c0935acc4671912ca130666f48f9c4fc795f301c70a1",
         "stdout_sha256": "604dbc07f4558939c1a291f893f0da4a0c33af97f27d95aeb7a34fb75328f567",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "rollback-payloads-preview",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 5.516,
+        "process_reaped": true,
+        "receipt_sha256": "fe227f04264591713c49fd5d04728525ebc6b8c00c03ee2700addbb0a6bcb1b6",
+        "stdout_sha256": "131d4ab7ebad1fdd5617038f4a559d10553d84dc7c0e5b29fd36fd04977a28d2",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "rollback-payloads-apply",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 17.25,
+        "process_reaped": true,
+        "receipt_sha256": "ab70f02da281101d5924673c1d6fc20a9dc1cc4d9a8402e581f828b5792aedd0",
+        "stdout_sha256": "16f22e20fa89c39f7f2a3bd5f6634b8b817f4df45695ede00559c1e108dd1fcd",
+        "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "label": "rollback-payloads-verification",
+        "status": "completed",
+        "exit_code": 0,
+        "elapsed_seconds": 7.907,
+        "process_reaped": true,
+        "receipt_sha256": "c4e4e508274682fd86331a45bd36186158b136728e3e76cd6716402b35ac2b2b",
+        "stdout_sha256": "56c2cf3128f3cd315b7449c99eba54f74f1bcd28fdad0f87d65c1197c2354a4a",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
       }
     ],

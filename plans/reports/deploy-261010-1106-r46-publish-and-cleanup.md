@@ -57,8 +57,21 @@ test tạm đã rỗng được xóa, thư mục cha được giữ.
 
 Bộ kiểm duyệt tự động từ chối lần dọn kết hợp vì danh sách còn gồm backup
 rollback và payload giao dịch. Lệnh bị từ chối chưa chạy. Danh sách này được
-tách riêng: 148 root, 16.269 file, 156.554.292 logical bytes, đang chờ quyền xóa
-bổ sung từ chủ sở hữu.
+tách riêng: 148 root, 16.269 file, 156.554.292 logical bytes. Chủ sở hữu sau đó
+xác nhận trực tiếp: “Đồng ý xóa backup và payload cũ”. Preview khớp danh sách đã
+duyệt; lần chạy được cấp quyền đã xóa đủ 148/148 root, không có lỗi. Biên bản từ
+chối trước đó được giữ nguyên như evidence lịch sử.
+
+Kiểm tra sau xóa pass, exit 0: mọi root đã duyệt đều không còn; 239 mục global và
+49 mục project vẫn khớp r46. Cả 9.486 file được bảo vệ giữ nguyên hash, gồm current
+ownership/journal, source lock, hook state, payload và history. Ba process preview,
+apply và verification đã kết thúc và được reap; đối chiếu cuối không còn process
+của đợt dọn này.
+
+Tổng phần package build cũ và rollback/payload: 150 root, 29.774 file,
+271.505.970 logical bytes, khoảng 259 MiB. Fixture được lưu ZIP và các test/export
+tạm được ghi riêng. Các backup đã xóa không còn dùng để rollback về bản cài cũ;
+bản cài hiện tại có thể phục hồi từ package r46 đã xác minh.
 
 Giữ current ownership/journal, source-lock history, các raw failed attempt, ba
 plan test r41 cùng attempt được bảo vệ, `github-publication/`, skill không liên

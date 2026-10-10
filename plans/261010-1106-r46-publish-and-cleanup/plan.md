@@ -26,7 +26,7 @@ history, active test workspaces, unrelated skills and edited content.
 | Phase | Status | Dependency |
 |---|---|---|
 | [1. Freeze and verify](phase-01-freeze-and-verify.md) | completed | Owner-accepted candidate |
-| [2. Replace and clean](phase-02-replace-and-clean.md) | replacement and generated cleanup completed; rollback cleanup awaiting authority | Matching verified r46 packages |
+| [2. Replace and clean](phase-02-replace-and-clean.md) | completed; rollback cleanup explicitly approved and verified | Matching verified r46 packages |
 | [3. Commit and publish](phase-03-commit-and-publish.md) | completed | Reviewed publication scope |
 
 ## Acceptance
